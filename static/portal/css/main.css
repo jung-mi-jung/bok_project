@@ -1,0 +1,24 @@
+@charset "UTF-8";
+@import url("/static/portal/css/default.css");
+b,
+strong {
+font-weight: 500;
+}
+
+/*
+
+$url-img	: "/static/portal/img/";	//background: url($url-images + "폴더명/파일명.png");
+
+
+// sh
+$sh-form-height: 40px;
+$sh-bd-radius: 5px;
+
+// input
+$form-height: 40px;
+
+*/
+.red {
+color: #e24b44;
+}
+/*# sourceMappingURL=../maps/main.css.map */

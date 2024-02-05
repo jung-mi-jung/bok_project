@@ -1,0 +1,87 @@
+@media print {
+	@page {
+		size: auto; // 프린트 사이즈
+		margin: 10mm; // 프린트 여백
+	}
+	#header,
+	.page-toolbar,
+	.page-print,
+	.location,
+	#footerSet {
+		display: none !important;
+	}
+	html {
+		zoom: 90%;
+	}
+	#wrap {
+		padding: 0 !important;
+	}
+	.lnb {
+		display: none;
+	}
+	// #container > main {
+	// 	font: none;
+	// 	width: 100%;
+	// 	border-left: none;
+	// 	padding-left: 0;
+	// 	> .hgroup {
+	// 		height: auto;
+	// 		padding: 10px 0 !important;
+	// 		line-height: 1.2;
+	// 	}
+	// }
+	.navigation {
+		color: #141414;
+		background-color: #fff;
+	}
+	.popwrap {
+		height: 100%;
+		overflow: auto;
+		position: static;
+		display: block !important;
+		&__header {
+			display: none;
+		}
+		.set {
+			box-shadow: none;
+			width: 100%;
+			max-width: 100%;
+			transform: 0;
+		}
+		&__body {
+			overflow: inherit;
+			padding: 0;
+			max-height: 100% !important;
+		}
+	}
+	* {
+		-webkit-print-color-adjust: exact !important; /*Chrome, Safari */
+		color-adjust: exact !important; /*Firefox*/
+	}
+	html, 
+	body{
+		size: A4;
+		//margin: 30mm 45mm 30mm 45mm; /* margin: auto auto; 로 자동 여백 설정도 가능 */
+	}
+	
+	table {
+		display: table !important;
+		table-layout: fixed !important;
+		width: 100% !important;
+		thead {
+			display: table-header-group !important;
+		}
+		tbody {
+			display: table-row-group !important;
+		}
+	}
+	tr {
+		display: table-row !important;
+	}
+	th, td {
+		display: table-cell !important;
+	}
+	.bd-list table tbody td .only-m {
+		display: none !important;
+	}
+}

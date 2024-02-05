@@ -1,0 +1,31 @@
+//사이트 텍스트 컬러
+$body-font-color    : #000;
+
+$link-color    : #222;
+$red:        #e24b44;
+$point:      #131547;   //임시 지정
+$white:      #fff;
+$black       : #000;  //임시 지정
+
+//board list color
+$bd-top-line : 2px solid #000;
+$bd-top-color: #000;
+$bd-color : #d9d9d9;  //임시 지정
+$bd-list-head-color: #000;
+$bd-list-th-bg-color: #f9f9f9;
+$form-bd-color: #ccc;
+
+
+//임시 지정 (삭제 해도됨 form.scss)
+$form-height : 100px;
+$grayblue : blue;
+
+//board view color
+$cell-title-color: #f9f9f9;
+
+//sh
+$sh-bg-color: #eef5fb;
+
+.red {
+	color: $red;
+}

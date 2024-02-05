@@ -1,0 +1,190 @@
+//header sns
+$snslist: ("sns-youtube", "sns-instagram", "sns-facebook", "sns-twitter");
+
+[class^="sns-"] {
+	@each $item in $snslist {
+		&.#{$item} {
+			&::before {
+				background-image: url(/static/portal/img/ico/#{$item}.svg);
+			}
+		}
+	}
+}
+
+
+//hgroup sns
+$icolist: ("ico-youtube", "ico-instagram", "ico-facebook", "ico-twitter");
+
+[class^="ico-"] {
+	@each $item in $icolist {
+		&.#{$item} {
+			&::before {
+				background-image: url(/static/portal/img/ico/#{$item}.svg);
+			}
+		}
+	}
+}
+
+
+//foter sns
+$f-snslist: ("fico-youtube", "fico-instagram", "fico-facebook", "fico-twitter");
+
+[class^="fico-"] {
+	@each $item in $f-snslist {
+		&.#{$item} {
+			&::before {
+				background-image: url(/static/portal/img/ico/#{$item}.svg);
+			}
+		}
+	}
+}
+
+
+//아이콘
+.ico-home {
+	&::before {
+		@include font-ico-outline('\e88a');		
+	}
+}
+.ico-close {
+	&::before {
+		@include font-ico-outline('\e5cd');
+	}
+}
+
+.zoom-map {
+	&::before {
+		@include font-ico-outline('\e56b');
+	}
+}
+
+.ico-local {
+	&::before {
+		@include font-ico-outline('\e54b');
+	}
+}
+
+
+.ico-right {
+	&::before {
+		@include font-ico-outline('\e5cc');
+	}
+}
+
+.open-new {
+	&::before {
+		@include font-ico-outline('\e89e');
+	}
+}
+
+.ico-search {
+	&::before {
+		@include font-ico-outline('\e8b6');
+	}
+}
+
+.ico-cancel {
+	&::before {
+		@include font-ico('\e5c9');
+	}
+}
+
+
+.ico-tv {
+	&::before {
+		@include font-ico('\e639');
+	}
+}
+
+
+/*
+keyboard double arrow Right
+eac9
+
+
+keyboard double arrow Left
+eac3
+
+
+
+Manage search
+f02f
+
+
+*/
+
+
+
+.ico-error {
+	&::before {
+		@include font-ico('\e000');
+	}
+}
+
+
+.ico-check {
+	&::before {
+		@include font-ico('\e86c');
+	}
+}
+
+.ico-tune {  //name 변경예정
+	&::before {
+		@include font-ico('\e429');
+	}
+}
+
+.ico-grade {  //name 변경예정
+	&::before {
+		@include font-ico('\e885');
+	}
+}
+
+.ico-more {	
+	&::before {
+		@include font-ico-outline('\e147');
+	}
+}
+
+.ico-reset {
+	&::before {
+		@include font-ico-outline('\f053');
+	}
+}
+
+.ico-up {
+	&::before {
+		@include font-ico-outline('\e5c7');
+	}
+}
+
+.ico-down {
+	&::before {
+		@include font-ico-outline('\e5c5');
+	}
+}
+
+.ico-t-up {
+	&::before {
+		@include font-ico-outline('\e8e5');
+	}
+}
+
+.ico-t-down {
+	&::before {
+		@include font-ico-outline('\e8e3');
+	}
+}
+
+.ico-info {
+	&::before {
+		@include font-ico('\e88e');
+	}
+}
+
+.ico-check {
+	&::before {
+		@include font-ico('\e5ca');
+	}
+}
+

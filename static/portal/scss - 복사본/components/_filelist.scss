@@ -1,0 +1,182 @@
+//파일 단일
+.file-single {
+	position: relative;
+	display: inline-block !important;
+	line-height: 25px;
+	@include breakpoint($sm) {
+		margin-right: 4px;
+	}
+	i {
+		vertical-align: middle;
+	}
+	.name {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: auto;
+		padding: 4px;
+		max-width: 150px;
+		transform: all 0.3s;
+		overflow: hidden;
+		word-spacing: nowrap;
+		background-color: #141414;
+		color: #fff;
+		line-height: 1;
+		border-radius: 3px;
+		opacity: 0;
+		z-index: -1;
+	}
+}
+//3개이상 파일은 레이어에서 표시됨
+.file-group {
+	@include breakpoint($md) {
+		position: relative;
+	}
+	display: block;
+	&__ctrl {
+		width: 21px;
+		height: 21px;
+		background: url(/static/aieth/img/ico/ico-file-group.png) 50% 50% no-repeat;
+		vertical-align: middle;
+	}
+	&__set {
+		display: none;
+		width: 260px;
+		background-color: #fff;
+		&__title {
+			padding-left: 11px;
+			text-align: left;
+			color: #fff;
+			background-color: $point;
+			font-weight: 300;
+			height: 34px;
+			line-height: 34px;
+		}
+		&__body {
+			padding: 10px 0;
+		}
+		.close {
+			position: absolute;
+			right: -2px;
+			top: -2px;
+			height: 34px;
+			width: 34px;
+			&::before {
+				@include font-ico("\e5cd");
+				color: #fff;
+				font-size: 24px;
+			}
+		}
+		&.active {
+			display: block;
+			position: absolute;
+			top: 25px;
+			right: 0;
+			border: 2px solid $point;
+			border-radius: 5px;
+			min-width: 100px;
+			z-index: 9999;
+			@include breakpoint($sm) {
+				left: inherit;
+				right: 0;
+			}
+			a {
+				padding: 3px 10px;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				white-space: nowrap;
+				display: block;
+				text-align: left;
+				width: 100%;
+				i {
+					margin-right: 5px;
+				}
+			}
+			@include breakpoint($mdw) {
+				left: inherit;
+				right: 0;
+			}
+		}
+		&__item {
+			display: inline-block;
+			line-height: 25px;
+			i {
+				vertical-align: top;
+			}
+			.name {
+				display: inline;
+			}
+		}
+	}
+}
+.ico-default-etc{
+	width: 22px;
+	height: 22px;
+	background-image: url(/static/aieth/img/ico/ico-etc.svg);
+}
+
+[class^="ico-"] {
+	width: 22px;
+	height: 22px;
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-position: center center;
+
+	$ico-list: (ico-xls, ico-hwp, ico-pdf, ico-ppt, ico-word, ico-img, ico-zip, ico-etc, ico-mov);
+	@each $item in $ico-list {
+		$i: index($ico-list, $item);
+		&.#{$item} {
+			background-image: url(/static/aieth/img/ico/#{$item}.svg);
+		}
+	}
+}
+//뷰페이지 파일목록
+.file-list {
+	& + .file-add {
+		margin-top: 10px;
+	}
+	.file-add + & {
+		margin-top: 10px;
+	}
+	&__set {
+		&__item {
+			display: block;
+			& + & {
+				margin-top: 5px;
+			}
+			a {
+				display: inline-block;
+				.type-dt-length-3 &{
+					display: block;
+				}
+				i {
+					display: inline-block;
+					vertical-align: middle;
+				}
+				.name {
+					@include breakpoint($md) {
+						display: inline-block;
+					}
+				}
+				&:hover {
+					.name {
+						text-decoration: underline;
+						color: $point;
+					}					
+				}
+			}
+			.del {
+				border-radius: 3px;
+				width: 24px;
+				height: 24px;
+				background-color: $red;
+				text-align: center;
+				line-height: 24px;
+				&::before {
+					@include font-ico-outline("\e14c");
+					color: #fff;
+				}
+			}
+		}
+	}
+}

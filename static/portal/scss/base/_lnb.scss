@@ -1,0 +1,377 @@
+
+.lnb {
+	height: 48px;
+	line-height: 48px;
+	@include breakpoint($sm){
+		height: 36px;
+		line-height: 36px;
+	}
+	nav {
+		> ul {
+			display: flex;
+			border-left: 1px solid #d9d9d9;
+			> li {
+				position: relative;
+				border-right: 1px solid #d9d9d9;
+				padding: 0 26px;
+				color: #666;
+				@include breakpoint($sm){
+					width: 100%;
+					padding: 0 10px;
+					&:last-child {
+						border-right: none;
+					}
+				}
+				&.home {
+					color: #000;
+					@include breakpoint($sm){
+						width: 36px;
+						span {
+							display: none;
+						}
+					}
+					&::before {
+						@include font-ico('\e88a');
+						vertical-align: bottom;
+						font-size: 26px;
+						color: #131547;
+						margin-right: 4px;
+						@include breakpoint($sm){
+							position: absolute;
+							top: 0;
+							left: 0;
+							z-index: 9;
+							text-align: center;
+							width: 36px;
+							height: 36px;
+						}
+					}
+									
+				}
+				button {
+					&::after {
+						@include font-ico-outline('\e5c6');
+						color: #666;
+						font-size: 22px;
+						margin-left: 10px;
+						@include breakpoint($sm){
+							position: absolute;
+							top: 50%;
+							right: 10px;
+							margin-top: -7px;
+						}
+					}
+				}
+				.depth2 {
+					display: none;
+					position: absolute;
+					top: 48px;
+					left: -1px;
+					z-index: 9;
+					width: calc(100% + 2px);
+					background-color: #fff;
+					@include breakpoint($sm){
+						top: 36px;
+					}
+					ul {
+						width: 100%;
+						padding: 10px 15px;
+						line-height: 1.8;
+						border: 1px solid #d9d9d9;
+						box-shadow: 0 2px 4px rgba(127, 24, 24, 0.15);
+						li {
+							a {
+								color: #666;
+								display: block;
+								&:hover {
+									text-decoration: underline;
+								}								
+							}
+							&.on {
+								a {								
+									color: #1A1A1A;
+									font-weight: 600;
+									&::after {
+										@include font-ico-outline('\e5cc');
+										font-size: 18px;
+										margin-bottom: 2px;
+									}	
+								}
+							}
+						}
+					}
+					&.active {
+						display: block;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+.db {	
+	nav {
+		display: none;
+	}
+	@include breakpoint($lg){
+		display: block;
+		float: left;
+		width: per(204px + 35px, $pc-wide);
+		padding-right: 35px;
+		background-color: #fff;
+		height: auto;
+	}
+	&-search {
+		margin-bottom: 30px;
+		@include breakpoint($smd){
+			margin-bottom: 16px;
+		}
+		.t {
+			margin-left: 10px;
+			&::before {
+				content: "";
+				display: inline-block;
+				vertical-align: middle;
+				width: 5px;
+				height: 5px;
+				background-color: #222;
+				border-radius: 50%;
+				margin-right: 8px;
+				margin-bottom: 3px;
+			}
+			strong {
+				position: relative;
+				font-weight: 600;
+				&::before {
+					content: "";
+					display: inline-block;
+					height: 1px;
+					width: 100%;
+					background-color: #222;
+					position: absolute;
+					bottom: 0;
+					left: 0;
+				}
+			}
+		}
+		.search-box {	
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			margin-top: 6px;
+			> * {
+				margin-left: 2px;
+				margin-right: 2px;
+			}
+			.keyword {
+				flex-basis: calc(100% - 86px);
+				flex-grow: 1;
+				input {
+					width: 100%;
+					height: 40px;
+					border: 1px solid #d9d9d9;
+					border-radius: 3px;
+				}
+			}
+			.btns {	
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+				flex-basis: 82px;
+				flex-shrink: 0;
+				button {
+					width: 40px;
+					height: 40px;
+					border: 0;
+					border-radius: 3px;
+					&::before {
+						color: #fff;
+						font-size: 24px;
+					}
+					&.search {
+						background-color: #131547;
+						&::before {
+							@include font-ico-outline("\e8b6");
+						}
+					}
+					&.reset {
+						background-color: #356AB9;
+						&::before {
+							@include font-ico-outline("\f053");
+						}
+					}
+				}
+			}
+		}
+	}
+	.check-list {
+		position: relative;
+		.check-box {
+			@include breakpoint($lg){
+				display: none;
+			}
+			> span {
+				font-size: rem(13);
+				display: inline-block;
+				padding: 1px 5px;
+				color: #fff;
+				border-radius: 2px;
+				background-color: #3b63c4;
+			}
+			.ico-del {
+				&::before {
+					@include font-ico-outline('\e5cd');
+					font-size: 15px;
+				}				
+			}
+		}
+		.label-list {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: column;
+			label {
+				font-size: rem(15);
+				margin: 2px 0;
+				@include breakpoint($lg){
+					font-size: rem(18);
+				}
+				.num {
+					float: right;
+					background-color: #DFDFDF;
+					border-radius: 40px;
+					padding: 0 6px;
+					font-size: rem(12);
+					margin-top: 3px;
+					@include breakpoint($lg){
+						display: none;
+					}
+				}
+			}
+			input {
+				&:checked {
+					& + i + span {
+						position: relative;
+						color: $point;
+						font-weight: 600;
+						&::before {
+							content: "";
+							display: inline-block;
+							width: 100%;
+							height: 1px;
+							background-color: #6c6d8c;
+							position: absolute;
+							bottom: 2px;
+							left: 0;
+						}
+					}
+				}
+			}
+		}
+		.check-ctrl {			
+			@include breakpoint($lg){
+				display: none;
+			}
+			position: relative;
+			width: 100%;
+			display: block;
+			text-align: left;
+			border: 1px solid #d9d9d9;
+			padding: 7px 10px;
+			&::before {
+				@include font-ico-outline('\e5c5');
+				font-size: 24px;
+				position: absolute;
+				top: 5px;
+				right: 10px;
+				color: #131547;
+				transition: all .2s
+			}		
+			&.active {
+				&::before {
+					transform: rotate(-180deg);
+				}
+				& + .check-box + .label-list,
+				& + .label-list {
+					display: flex;
+					position: absolute;
+					top: 36px;
+					left: 0;
+					width: 100%;
+					z-index: 9;
+					background-color: #fff;
+				}
+			}
+		}
+		@include breakpoint($smd){
+			.label-list {
+				display: none;
+				border: 1px solid #d9d9d9;
+				padding: 4px;
+				flex-direction: row;
+				label {
+					flex-basis: 50%;
+					width: 50%;
+					padding: 0 4px;
+				}
+			}
+			&.details {
+				.check-ctrl  {
+					margin-top: 5px;
+				}
+			}
+		}
+	}
+	h3 {
+		position: relative;
+		font-size: 15px;
+		margin: 20px 0 10px;
+		color: #222;
+		@include breakpoint($smd){
+			display: none;
+		}
+		&::before {
+			content: "";
+			display: inline-block;
+			background-color: #e2e2e2;
+			width: calc(100% - 45px);
+			height: 1px;
+			position: absolute;
+			top: 50%;
+			right: 0;
+		}
+	}
+
+	.Keyword {
+		h3 {
+			&::before {
+				width: calc(100% - 75px);
+			}
+		}
+		ul {			
+			li {
+				display: inline-block;
+				margin: 1px 0;
+			}
+			a {				
+				display: inline-block;
+				color: #666;
+				font-size: 15px;
+				border: 1px solid #C2C2C2;
+				border-radius: 30px;
+				padding: 2px 8px;
+				&:hover {
+					color: #fff;
+					background-color: #3B63C4;
+					order: 1px solid #3B63C4;
+				}
+				 + span {
+					margin-right: 2px;
+				 }
+			}
+		}
+	}
+}

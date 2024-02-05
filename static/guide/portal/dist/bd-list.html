@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>heading</title>
+	<link rel="stylesheet" href="/static/bok/css/sub.css">
+	<link rel="stylesheet" href="/static/guide/bok/g/common/guide.css">
+	<script src="/static/jslibrary/jquery-3.5.1.min.js"></script>
+	<script>
+		$(function () {
+			nav = $('body>nav>ol')
+			i=1
+			$('h1').each(function (index, element) {
+				$(this).attr('id',`a${index}`)
+				_txt = $(this).text()
+				nav.append(`<li><a href=#a${index}>${_txt}</a></li>`)
+				
+			});
+		});
+	</script>
+</head>
+<body>
+	<nav>
+		<ol>
+		</ol>
+	</nav>
+	<div id="content">
+11122233</div>
+<script src="/static/bok/js/common.js"></script>
+</body>
+
+</html>
