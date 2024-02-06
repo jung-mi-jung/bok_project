@@ -169,10 +169,6 @@
 			@include breakpoint($smd){
 				flex-direction: row;
 				align-items: center;
-				> * {
-					margin-left: 2px;
-					margin-right: 2px;
-				}
 			}				
 			.keyword {
 				width: 100%;				
@@ -191,6 +187,9 @@
 				margin-top: 8px;
 				display: flex;
 				justify-content: space-between;
+				@include breakpoint($smd){
+					margin-top: 0;
+				}
 				button {
 					color: #fff;
 					width: calc(50% - 1px);
@@ -198,12 +197,16 @@
 					border: 0;
 					border-radius: 4px;
 					@include breakpoint($smd){
+						width: 40px;
 						height: 40px;
 					}
 					&::before {
 						vertical-align: sub;
 						font-size: 20px;
 						margin-right: 5px;
+						@include breakpoint($smd){
+							font-size: 25px;
+						}
 					}
 					&.search {
 						color: #fff;
@@ -212,14 +215,23 @@
 						&::before {
 							@include font-ico("\e8b6");
 						}
+						@include breakpoint($smd){
+							margin: 0 2px;
+						}
 					}
 					&.reset {
 						color: #3B63C4;
 						background-color: #fff;
 						border: 1px solid #3B63C4;
+						@include breakpoint($smd){
+							background-color: #3B63C4;
+						}
 						&::before {
 							color: #3B63C4;
 							@include font-ico("\f053");
+							@include breakpoint($smd){
+								color: #fff
+							}
 						}
 					}
 					@include breakpoint($smd){

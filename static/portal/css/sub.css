@@ -750,10 +750,6 @@ justify-content: space-between;
 flex-direction: row;
 align-items: center;
 }
-.db-search .search-box > * {
-margin-left: 2px;
-margin-right: 2px;
-}
 }
 .db-search .search-box .keyword {
 width: 100%;
@@ -775,6 +771,11 @@ margin-top: 8px;
 display: flex;
 justify-content: space-between;
 }
+@media (max-width: 1199px) {
+.db-search .search-box .btns {
+margin-top: 0;
+}
+}
 .db-search .search-box .btns button {
 color: #fff;
 width: calc(50% - 1px);
@@ -784,6 +785,7 @@ border-radius: 4px;
 }
 @media (max-width: 1199px) {
 .db-search .search-box .btns button {
+width: 40px;
 height: 40px;
 }
 }
@@ -791,6 +793,11 @@ height: 40px;
 vertical-align: sub;
 font-size: 20px;
 margin-right: 5px;
+}
+@media (max-width: 1199px) {
+.db-search .search-box .btns button::before {
+font-size: 25px;
+}
 }
 .db-search .search-box .btns button.search {
 color: #fff;
@@ -801,15 +808,30 @@ border: 1px solid #131547;
 content: "\e8b6";
 font-family: "Material Icons";
 }
+@media (max-width: 1199px) {
+.db-search .search-box .btns button.search {
+margin: 0 2px;
+}
+}
 .db-search .search-box .btns button.reset {
 color: #3B63C4;
 background-color: #fff;
 border: 1px solid #3B63C4;
 }
+@media (max-width: 1199px) {
+.db-search .search-box .btns button.reset {
+background-color: #3B63C4;
+}
+}
 .db-search .search-box .btns button.reset::before {
 color: #3B63C4;
 content: "\f053";
 font-family: "Material Icons";
+}
+@media (max-width: 1199px) {
+.db-search .search-box .btns button.reset::before {
+color: #fff;
+}
 }
 @media (max-width: 1199px) {
 .db-search .search-box .btns button span {

@@ -1873,7 +1873,7 @@ color: #666;
 clear: both;
 width: 1680px;
 max-width: 100%;
-min-height: calc(100vh - 380px - 184px);
+min-height: calc(100vh - 246px - 196px - 80px);
 display: block;
 }
 #main-container:before, #main-container:after {
