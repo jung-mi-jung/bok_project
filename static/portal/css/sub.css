@@ -154,9 +154,402 @@ margin-top: 0;
 color: #e24b44;
 }
 
+[class^=ico-].ico-youtube::before {
+background-image: url(/static/portal/img/ico/ico-youtube.svg);
+}
+[class^=ico-].ico-instagram::before {
+background-image: url(/static/portal/img/ico/ico-instagram.svg);
+}
+[class^=ico-].ico-facebook::before {
+background-image: url(/static/portal/img/ico/ico-facebook.svg);
+}
+[class^=ico-].ico-twitter::before {
+background-image: url(/static/portal/img/ico/ico-twitter.svg);
+}
+
+[class^=sns-].sns-youtube::before {
+background-image: url(/static/portal/img/ico/sns-youtube.svg);
+}
+[class^=sns-].sns-instagram::before {
+background-image: url(/static/portal/img/ico/sns-instagram.svg);
+}
+[class^=sns-].sns-facebook::before {
+background-image: url(/static/portal/img/ico/sns-facebook.svg);
+}
+[class^=sns-].sns-twitter::before {
+background-image: url(/static/portal/img/ico/sns-twitter.svg);
+}
+
+.ico-home::before {
+content: "\e88a";
+font-family: "Material Icons Outlined";
+font-weight: normal;
+font-style: normal;
+display: inline-block;
+line-height: 1;
+vertical-align: text-bottom;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+font-feature-settings: "liga";
+}
+
+.ico-close::before {
+content: "\e5cd";
+font-family: "Material Icons Outlined";
+font-weight: normal;
+font-style: normal;
+display: inline-block;
+line-height: 1;
+vertical-align: text-bottom;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+font-feature-settings: "liga";
+}
+
+.zoom-map::before {
+content: "\e56b";
+font-family: "Material Icons Outlined";
+font-weight: normal;
+font-style: normal;
+display: inline-block;
+line-height: 1;
+vertical-align: text-bottom;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+font-feature-settings: "liga";
+}
+
+.ico-local::before {
+content: "\e54b";
+font-family: "Material Icons Outlined";
+font-weight: normal;
+font-style: normal;
+display: inline-block;
+line-height: 1;
+vertical-align: text-bottom;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+font-feature-settings: "liga";
+}
+
+.ico-right::before {
+content: "\e5cc";
+font-family: "Material Icons Outlined";
+font-weight: normal;
+font-style: normal;
+display: inline-block;
+line-height: 1;
+vertical-align: text-bottom;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+font-feature-settings: "liga";
+}
+
+.open-new::before {
+content: "\e89e";
+font-family: "Material Icons Outlined";
+font-weight: normal;
+font-style: normal;
+display: inline-block;
+line-height: 1;
+vertical-align: text-bottom;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+font-feature-settings: "liga";
+}
+
+.ico-search::before {
+content: "\e8b6";
+font-family: "Material Icons Outlined";
+font-weight: normal;
+font-style: normal;
+display: inline-block;
+line-height: 1;
+vertical-align: text-bottom;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+font-feature-settings: "liga";
+}
+
+.ico-cancel::before {
+content: "\e5c9";
+font-family: "Material Icons";
+}
+
+.ico-tv::before {
+content: "\e639";
+font-family: "Material Icons";
+}
+
+/*
+keyboard double arrow Right
+eac9
+
+
+keyboard double arrow Left
+eac3
+
+
+
+Manage search
+f02f
+
+
+*/
+.ico-error::before {
+content: "\e000";
+font-family: "Material Icons";
+}
+
+.ico-check::before {
+content: "\e86c";
+font-family: "Material Icons";
+}
+
+.ico-tune::before {
+content: "\e429";
+font-family: "Material Icons";
+}
+
+.ico-grade::before {
+content: "\e885";
+font-family: "Material Icons";
+}
+
+.ico-more::before {
+content: "\e147";
+font-family: "Material Icons Outlined";
+font-weight: normal;
+font-style: normal;
+display: inline-block;
+line-height: 1;
+vertical-align: text-bottom;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+font-feature-settings: "liga";
+}
+
+.ico-reset::before {
+content: "\f053";
+font-family: "Material Icons Outlined";
+font-weight: normal;
+font-style: normal;
+display: inline-block;
+line-height: 1;
+vertical-align: text-bottom;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+font-feature-settings: "liga";
+}
+
+.ico-up::before {
+content: "\e5c7";
+font-family: "Material Icons Outlined";
+font-weight: normal;
+font-style: normal;
+display: inline-block;
+line-height: 1;
+vertical-align: text-bottom;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+font-feature-settings: "liga";
+}
+
+.ico-down::before {
+content: "\e5c5";
+font-family: "Material Icons Outlined";
+font-weight: normal;
+font-style: normal;
+display: inline-block;
+line-height: 1;
+vertical-align: text-bottom;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+font-feature-settings: "liga";
+}
+
+.ico-t-up::before {
+content: "\e8e5";
+font-family: "Material Icons Outlined";
+font-weight: normal;
+font-style: normal;
+display: inline-block;
+line-height: 1;
+vertical-align: text-bottom;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+font-feature-settings: "liga";
+}
+
+.ico-t-down::before {
+content: "\e8e3";
+font-family: "Material Icons Outlined";
+font-weight: normal;
+font-style: normal;
+display: inline-block;
+line-height: 1;
+vertical-align: text-bottom;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+font-feature-settings: "liga";
+}
+
+.ico-info::before {
+content: "\e88e";
+font-family: "Material Icons";
+}
+
+.ico-check::before {
+content: "\e5ca";
+font-family: "Material Icons";
+}
+
+@media print {
+@page {
+size: auto;
+margin: 10mm;
+}
+#header,
+.page-toolbar,
+.page-print,
+.location,
+#footerSet {
+display: none !important;
+}
+html {
+zoom: 90%;
+}
+#wrap {
+padding: 0 !important;
+}
 .lnb {
+display: none;
+}
+.navigation {
+color: #141414;
+background-color: #fff;
+}
+.popwrap {
+height: 100%;
+overflow: auto;
+position: static;
+display: block !important;
+}
+.popwrap__header {
+display: none;
+}
+.popwrap .set {
+box-shadow: none;
+width: 100%;
+max-width: 100%;
+transform: 0;
+}
+.popwrap__body {
+overflow: inherit;
+padding: 0;
+max-height: 100% !important;
+}
+* {
+-webkit-print-color-adjust: exact !important; /*Chrome, Safari */
+color-adjust: exact !important; /*Firefox*/
+}
+html,
+body {
+size: A4;
+}
+table {
+display: table !important;
+table-layout: fixed !important;
+width: 100% !important;
+}
+table thead {
+display: table-header-group !important;
+}
+table tbody {
+display: table-row-group !important;
+}
+tr {
+display: table-row !important;
+}
+th, td {
+display: table-cell !important;
+}
+.bd-list table tbody td .only-m {
+display: none !important;
+}
+}
+.lnb {
+position: relative;
+z-index: 1;
 height: 48px;
 line-height: 48px;
+background-color: #FCFCFC;
+border-bottom: 1px solid #E5E5E5;
 }
 @media (max-width: 749px) {
 .lnb {
@@ -166,11 +559,11 @@ line-height: 36px;
 }
 .lnb nav > ul {
 display: flex;
-border-left: 1px solid #d9d9d9;
+border-left: 1px solid #E5E5E5;
 }
 .lnb nav > ul > li {
 position: relative;
-border-right: 1px solid #d9d9d9;
+border-right: 1px solid #E5E5E5;
 padding: 0 26px;
 color: #666;
 }
@@ -244,7 +637,7 @@ margin-top: -7px;
 .lnb nav > ul > li .depth2 {
 display: none;
 position: absolute;
-top: 48px;
+top: 47px;
 left: -1px;
 z-index: 9;
 width: calc(100% + 2px);
@@ -259,8 +652,9 @@ top: 36px;
 width: 100%;
 padding: 10px 15px;
 line-height: 1.8;
-border: 1px solid #d9d9d9;
-box-shadow: 0 2px 4px rgba(127, 24, 24, 0.15);
+border: 1px solid #E5E5E5;
+border-radius: 0 0 4px 4px;
+box-shadow: 0 4px 2px rgba(127, 24, 24, 0.15);
 }
 .lnb nav > ul > li .depth2 ul li a {
 color: #666;
@@ -318,7 +712,7 @@ margin-bottom: 16px;
 }
 }
 .db-search .t {
-margin-left: 10px;
+margin-left: 2px;
 }
 .db-search .t::before {
 content: "";
@@ -346,19 +740,29 @@ bottom: 0;
 left: 0;
 }
 .db-search .search-box {
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-align-items: center;
 margin-top: 6px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+@media (max-width: 1199px) {
+.db-search .search-box {
+flex-direction: row;
+align-items: center;
 }
 .db-search .search-box > * {
 margin-left: 2px;
 margin-right: 2px;
 }
+}
+.db-search .search-box .keyword {
+width: 100%;
+}
+@media (max-width: 1199px) {
 .db-search .search-box .keyword {
 flex-basis: calc(100% - 86px);
 flex-grow: 1;
+}
 }
 .db-search .search-box .keyword input {
 width: 100%;
@@ -367,62 +771,57 @@ border: 1px solid #d9d9d9;
 border-radius: 3px;
 }
 .db-search .search-box .btns {
+margin-top: 8px;
 display: flex;
-flex-direction: row;
 justify-content: space-between;
-align-items: center;
-flex-basis: 82px;
-flex-shrink: 0;
 }
 .db-search .search-box .btns button {
-width: 40px;
-height: 40px;
+color: #fff;
+width: calc(50% - 1px);
+height: 32px;
 border: 0;
-border-radius: 3px;
+border-radius: 4px;
+}
+@media (max-width: 1199px) {
+.db-search .search-box .btns button {
+height: 40px;
+}
 }
 .db-search .search-box .btns button::before {
-color: #fff;
-font-size: 24px;
+vertical-align: sub;
+font-size: 20px;
+margin-right: 5px;
 }
 .db-search .search-box .btns button.search {
+color: #fff;
 background-color: #131547;
+border: 1px solid #131547;
 }
 .db-search .search-box .btns button.search::before {
 content: "\e8b6";
-font-family: "Material Icons Outlined";
-font-weight: normal;
-font-style: normal;
-display: inline-block;
-line-height: 1;
-vertical-align: text-bottom;
-text-transform: none;
-letter-spacing: normal;
-word-wrap: normal;
-white-space: nowrap;
--webkit-font-smoothing: antialiased;
-text-rendering: optimizeLegibility;
--moz-osx-font-smoothing: grayscale;
-font-feature-settings: "liga";
+font-family: "Material Icons";
 }
 .db-search .search-box .btns button.reset {
-background-color: #356AB9;
+color: #3B63C4;
+background-color: #fff;
+border: 1px solid #3B63C4;
 }
 .db-search .search-box .btns button.reset::before {
+color: #3B63C4;
 content: "\f053";
-font-family: "Material Icons Outlined";
-font-weight: normal;
-font-style: normal;
-display: inline-block;
-line-height: 1;
-vertical-align: text-bottom;
-text-transform: none;
-letter-spacing: normal;
-word-wrap: normal;
-white-space: nowrap;
--webkit-font-smoothing: antialiased;
-text-rendering: optimizeLegibility;
--moz-osx-font-smoothing: grayscale;
-font-feature-settings: "liga";
+font-family: "Material Icons";
+}
+@media (max-width: 1199px) {
+.db-search .search-box .btns button span {
+position: absolute;
+width: 1px;
+height: 1px;
+margin: -1px;
+padding: 0;
+overflow: hidden;
+clip: rect(0, 0, 0, 0);
+border: 0;
+}
 }
 .db .check-list {
 position: relative;
@@ -849,15 +1248,7 @@ select {
 -webkit-appearance: none;
 padding-right: 40px;
 background: #fff url(/static/portal/img/common/select-arr.png) right center no-repeat;
-background-size: auto 10px;
-background-image: url("/static/portal/img/common/select-arr.png");
-background-repeat: no-repeat;
-background-size: 36px 12px;
-}
-@media (-webkit-min-device-pixel-ratio: 2) {
-select {
-background-image: url("/static/portal/img/common/select-arr@2x.png");
-}
+background-size: auto 20px;
 }
 select::-ms-expand {
 display: none;
@@ -892,7 +1283,7 @@ margin-left: -33px;
 
 .bd-line ul li {
 position: relative;
-padding: 15px 90px 10px 15px;
+padding: 15px 15px 10px 15px;
 border-bottom: 1px solid #D9D9D9;
 }
 @media (max-width: 749px) {
@@ -900,23 +1291,8 @@ border-bottom: 1px solid #D9D9D9;
 padding: 15px 8px 10px;
 }
 }
-.bd-line ul li::before {
-content: "";
-display: inline-block;
-width: 48px;
-height: 48px;
-position: absolute;
-top: 50%;
-right: 15px;
-margin-top: -24px;
-background: url(/static/bok/img/common/arr01_off.png) 50% no-repeat;
-}
-@media (max-width: 749px) {
-.bd-line ul li::before {
-display: none;
-}
-}
 .bd-line ul li .i {
+font-size: 14px;
 display: block;
 margin-bottom: 8px;
 }
@@ -928,10 +1304,11 @@ padding: 1px 7px;
 }
 .bd-line ul li span.t1 {
 color: #fff;
-background: #3656A3;
+background: #3B63C4;
 }
 .bd-line ul li span.t2 {
-color: #356AB9;
+color: #3B63C4;
+background: #fff;
 }
 .bd-line ul li .set {
 display: flex;
@@ -1003,7 +1380,7 @@ height: 10px;
 content: "";
 display: inline-block;
 vertical-align: middle;
-background: url(/static/bok/img/common/ico-download.png);
+background: url(/static/portal/img/common/ico-download.png);
 width: 20px;
 height: 20px;
 }
@@ -1031,7 +1408,7 @@ color: #767676;
 background-color: #F2F6FA;
 }
 .bd-line ul li:hover::before {
-background: url(/static/bok/img/common/arr01_on.png) 50% no-repeat;
+background: url(/static/portal/img/common/arr01_on.png) 50% no-repeat;
 }
 .bd-line ul li:hover .btns a {
 color: #131547;
@@ -1040,7 +1417,32 @@ color: #131547;
 background: #F2F6FA;
 }
 .bd-line ul li:hover .btns .i-download::before {
-background: url(/static/bok/img/common/ico-download_on.png);
+background: url(/static/portal/img/common/ico-download_on.png);
+}
+.bd-line .b-type ul li {
+position: relative;
+padding: 15px 90px 10px 15px;
+}
+@media (max-width: 749px) {
+.bd-line .b-type ul li {
+padding: 15px 8px 10px;
+}
+}
+.bd-line .b-type ul li::before {
+content: "";
+display: inline-block;
+width: 48px;
+height: 48px;
+position: absolute;
+top: 50%;
+right: 15px;
+margin-top: -24px;
+background: url(/static/portal/img/common/arr01_off.png) 50% no-repeat;
+}
+@media (max-width: 749px) {
+.bd-line .b-type ul li::before {
+display: none;
+}
 }
 
 /* 여기까지 */
@@ -1478,332 +1880,88 @@ cursor: not-allowed;
 display: none;
 }
 
-[class^=sns-].sns-youtube::before {
-background-image: url(/static/portal/img/ico/sns-youtube.svg);
-}
-[class^=sns-].sns-instagram::before {
-background-image: url(/static/portal/img/ico/sns-instagram.svg);
-}
-[class^=sns-].sns-facebook::before {
-background-image: url(/static/portal/img/ico/sns-facebook.svg);
-}
-[class^=sns-].sns-twitter::before {
-background-image: url(/static/portal/img/ico/sns-twitter.svg);
+table {
+word-break: break-all;
+width: 100%;
+border-collapse: collapse;
+border-spacing: 0;
 }
 
-[class^=ico-].ico-youtube::before {
-background-image: url(/static/portal/img/ico/ico-youtube.svg);
+.table {
+margin-top: 15px;
 }
-[class^=ico-].ico-instagram::before {
-background-image: url(/static/portal/img/ico/ico-instagram.svg);
+@media (min-width: 750px) {
+.table.pcweb {
+display: block !important;
 }
-[class^=ico-].ico-facebook::before {
-background-image: url(/static/portal/img/ico/ico-facebook.svg);
+.table.moble {
+display: none !important;
 }
-[class^=ico-].ico-twitter::before {
-background-image: url(/static/portal/img/ico/ico-twitter.svg);
 }
-
-[class^=fico-].fico-youtube::before {
-background-image: url(/static/portal/img/ico/fico-youtube.svg);
+@media (max-width: 749px) {
+.table.pcweb {
+display: none !important;
 }
-[class^=fico-].fico-instagram::before {
-background-image: url(/static/portal/img/ico/fico-instagram.svg);
+.table.moble {
+display: block !important;
 }
-[class^=fico-].fico-facebook::before {
-background-image: url(/static/portal/img/ico/fico-facebook.svg);
+.table.moble thead th {
+color: #fff !important;
+background-color: #076bcc !important;
+border-bottom: none !important;
 }
-[class^=fico-].fico-twitter::before {
-background-image: url(/static/portal/img/ico/fico-twitter.svg);
+.table.moble tbody th {
+color: #757575;
+background-color: #fff;
+border: 1px solid #ccc;
 }
-
-.ico-home::before {
-content: "\e88a";
-font-family: "Material Icons Outlined";
-font-weight: normal;
-font-style: normal;
-display: inline-block;
-line-height: 1;
-vertical-align: text-bottom;
-text-transform: none;
-letter-spacing: normal;
-word-wrap: normal;
-white-space: nowrap;
--webkit-font-smoothing: antialiased;
-text-rendering: optimizeLegibility;
--moz-osx-font-smoothing: grayscale;
-font-feature-settings: "liga";
 }
-
-.ico-close::before {
-content: "\e5cd";
-font-family: "Material Icons Outlined";
-font-weight: normal;
-font-style: normal;
-display: inline-block;
-line-height: 1;
-vertical-align: text-bottom;
-text-transform: none;
-letter-spacing: normal;
-word-wrap: normal;
-white-space: nowrap;
--webkit-font-smoothing: antialiased;
-text-rendering: optimizeLegibility;
--moz-osx-font-smoothing: grayscale;
-font-feature-settings: "liga";
+.table table {
+width: 100%;
 }
-
-.zoom-map::before {
-content: "\e56b";
-font-family: "Material Icons Outlined";
-font-weight: normal;
-font-style: normal;
-display: inline-block;
-line-height: 1;
-vertical-align: text-bottom;
-text-transform: none;
-letter-spacing: normal;
-word-wrap: normal;
-white-space: nowrap;
--webkit-font-smoothing: antialiased;
-text-rendering: optimizeLegibility;
--moz-osx-font-smoothing: grayscale;
-font-feature-settings: "liga";
+.table table th {
+color: #fff;
+font-weight: 400;
+background-color: #131547;
+height: 50px;
+}
+.table table th + th {
+border-left: 1px solid #d9d9d9;
+}
+.table table td {
+color: #757575;
+padding: 12px 15px;
+border: 1px solid #d9d9d9;
+background-color: #fff;
+}
+.table.type2 table td {
+padding: 12px 5px;
+}
+.table.type2 table thead {
+border-top: 1px solid #ccc;
+}
+.table.type2 table thead th {
+color: #131547;
+background-color: #fff;
+border-bottom: 1px solid #fff;
+line-height: 1.2;
+}
+.table.type2 table thead th:first-child {
+color: #fff;
+background-color: #131547;
+}
+.table.type2 table thead th:last-child {
+border-right: 1px solid #ccc !important;
 }
 
-.ico-local::before {
-content: "\e54b";
-font-family: "Material Icons Outlined";
-font-weight: normal;
-font-style: normal;
-display: inline-block;
-line-height: 1;
-vertical-align: text-bottom;
-text-transform: none;
-letter-spacing: normal;
-word-wrap: normal;
-white-space: nowrap;
--webkit-font-smoothing: antialiased;
-text-rendering: optimizeLegibility;
--moz-osx-font-smoothing: grayscale;
-font-feature-settings: "liga";
+.td-tal table tbody td {
+text-align: left;
 }
-
-.ico-right::before {
-content: "\e5cc";
-font-family: "Material Icons Outlined";
-font-weight: normal;
-font-style: normal;
-display: inline-block;
-line-height: 1;
-vertical-align: text-bottom;
-text-transform: none;
-letter-spacing: normal;
-word-wrap: normal;
-white-space: nowrap;
--webkit-font-smoothing: antialiased;
-text-rendering: optimizeLegibility;
--moz-osx-font-smoothing: grayscale;
-font-feature-settings: "liga";
+.td-tac table tbody td {
+text-align: center;
 }
-
-.open-new::before {
-content: "\e89e";
-font-family: "Material Icons Outlined";
-font-weight: normal;
-font-style: normal;
-display: inline-block;
-line-height: 1;
-vertical-align: text-bottom;
-text-transform: none;
-letter-spacing: normal;
-word-wrap: normal;
-white-space: nowrap;
--webkit-font-smoothing: antialiased;
-text-rendering: optimizeLegibility;
--moz-osx-font-smoothing: grayscale;
-font-feature-settings: "liga";
-}
-
-.ico-search::before {
-content: "\e8b6";
-font-family: "Material Icons Outlined";
-font-weight: normal;
-font-style: normal;
-display: inline-block;
-line-height: 1;
-vertical-align: text-bottom;
-text-transform: none;
-letter-spacing: normal;
-word-wrap: normal;
-white-space: nowrap;
--webkit-font-smoothing: antialiased;
-text-rendering: optimizeLegibility;
--moz-osx-font-smoothing: grayscale;
-font-feature-settings: "liga";
-}
-
-.ico-cancel::before {
-content: "\e5c9";
-font-family: "Material Icons";
-}
-
-.ico-tv::before {
-content: "\e639";
-font-family: "Material Icons";
-}
-
-/*
-keyboard double arrow Right
-eac9
-
-
-keyboard double arrow Left
-eac3
-
-
-
-Manage search
-f02f
-
-
-*/
-.ico-error::before {
-content: "\e000";
-font-family: "Material Icons";
-}
-
-.ico-check::before {
-content: "\e86c";
-font-family: "Material Icons";
-}
-
-.ico-tune::before {
-content: "\e429";
-font-family: "Material Icons";
-}
-
-.ico-grade::before {
-content: "\e885";
-font-family: "Material Icons";
-}
-
-.ico-more::before {
-content: "\e147";
-font-family: "Material Icons Outlined";
-font-weight: normal;
-font-style: normal;
-display: inline-block;
-line-height: 1;
-vertical-align: text-bottom;
-text-transform: none;
-letter-spacing: normal;
-word-wrap: normal;
-white-space: nowrap;
--webkit-font-smoothing: antialiased;
-text-rendering: optimizeLegibility;
--moz-osx-font-smoothing: grayscale;
-font-feature-settings: "liga";
-}
-
-.ico-reset::before {
-content: "\f053";
-font-family: "Material Icons Outlined";
-font-weight: normal;
-font-style: normal;
-display: inline-block;
-line-height: 1;
-vertical-align: text-bottom;
-text-transform: none;
-letter-spacing: normal;
-word-wrap: normal;
-white-space: nowrap;
--webkit-font-smoothing: antialiased;
-text-rendering: optimizeLegibility;
--moz-osx-font-smoothing: grayscale;
-font-feature-settings: "liga";
-}
-
-.ico-up::before {
-content: "\e5c7";
-font-family: "Material Icons Outlined";
-font-weight: normal;
-font-style: normal;
-display: inline-block;
-line-height: 1;
-vertical-align: text-bottom;
-text-transform: none;
-letter-spacing: normal;
-word-wrap: normal;
-white-space: nowrap;
--webkit-font-smoothing: antialiased;
-text-rendering: optimizeLegibility;
--moz-osx-font-smoothing: grayscale;
-font-feature-settings: "liga";
-}
-
-.ico-down::before {
-content: "\e5c5";
-font-family: "Material Icons Outlined";
-font-weight: normal;
-font-style: normal;
-display: inline-block;
-line-height: 1;
-vertical-align: text-bottom;
-text-transform: none;
-letter-spacing: normal;
-word-wrap: normal;
-white-space: nowrap;
--webkit-font-smoothing: antialiased;
-text-rendering: optimizeLegibility;
--moz-osx-font-smoothing: grayscale;
-font-feature-settings: "liga";
-}
-
-.ico-t-up::before {
-content: "\e8e5";
-font-family: "Material Icons Outlined";
-font-weight: normal;
-font-style: normal;
-display: inline-block;
-line-height: 1;
-vertical-align: text-bottom;
-text-transform: none;
-letter-spacing: normal;
-word-wrap: normal;
-white-space: nowrap;
--webkit-font-smoothing: antialiased;
-text-rendering: optimizeLegibility;
--moz-osx-font-smoothing: grayscale;
-font-feature-settings: "liga";
-}
-
-.ico-t-down::before {
-content: "\e8e3";
-font-family: "Material Icons Outlined";
-font-weight: normal;
-font-style: normal;
-display: inline-block;
-line-height: 1;
-vertical-align: text-bottom;
-text-transform: none;
-letter-spacing: normal;
-word-wrap: normal;
-white-space: nowrap;
--webkit-font-smoothing: antialiased;
-text-rendering: optimizeLegibility;
--moz-osx-font-smoothing: grayscale;
-font-feature-settings: "liga";
-}
-
-.ico-info::before {
-content: "\e88e";
-font-family: "Material Icons";
-}
-
-.ico-check::before {
-content: "\e5ca";
-font-family: "Material Icons";
+.td-vt table tbody td {
+vertical-align: top;
 }
 
 /*
@@ -1811,7 +1969,7 @@ font-family: "Material Icons";
 @import 'components/tab';//탭메뉴
 
 @import 'components/btn';//버튼 스타일
-@import 'components/table';//테이블 스타일
+
 @import 'components/faq';//FAQ
 @import 'components/sh';//검색
 
@@ -1824,22 +1982,7 @@ font-family: "Material Icons";
 @import 'components/datepicker'; // datepicker theme
 @import 'components/content';//콘텐츠
 @import 'components/dbdata';//게시물 데이터
-@import 'components/print';//프린트
+
 @import 'components/popup';//팝업
 */
-#wrap::before {
-content: "";
-display: block;
-width: 100%;
-height: 1px;
-background: #E5E5E5;
-position: absolute;
-top: 118px;
-left: 0;
-}
-@media (max-width: 749px) {
-#wrap::before {
-top: 96px;
-}
-}
 /*# sourceMappingURL=../maps/sub.css.map */

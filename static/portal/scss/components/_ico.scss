@@ -1,17 +1,3 @@
-//header sns
-$snslist: ("sns-youtube", "sns-instagram", "sns-facebook", "sns-twitter");
-
-[class^="sns-"] {
-	@each $item in $snslist {
-		&.#{$item} {
-			&::before {
-				background-image: url(/static/portal/img/ico/#{$item}.svg);
-			}
-		}
-	}
-}
-
-
 //hgroup sns
 $icolist: ("ico-youtube", "ico-instagram", "ico-facebook", "ico-twitter");
 
@@ -27,10 +13,10 @@ $icolist: ("ico-youtube", "ico-instagram", "ico-facebook", "ico-twitter");
 
 
 //foter sns
-$f-snslist: ("fico-youtube", "fico-instagram", "fico-facebook", "fico-twitter");
+$snslist: ("sns-youtube", "sns-instagram", "sns-facebook", "sns-twitter");
 
-[class^="fico-"] {
-	@each $item in $f-snslist {
+[class^="sns-"] {
+	@each $item in $snslist {
 		&.#{$item} {
 			&::before {
 				background-image: url(/static/portal/img/ico/#{$item}.svg);

@@ -1,3 +1,11 @@
+#wrap {
+	position: relative;	
+	padding-top: $m-header-height;
+	@include breakpoint($lg){
+		padding-top: $header-height;
+	}
+}
+
 .container {
 	max-width: $pc-wide;
 	margin: 0 auto;
@@ -19,47 +27,90 @@
 	width: 100%;
 	z-index: 99;
 	background-color: #131547;
+	display: flex;
+	flex-direction: column;
 	@include breakpoint($smd){
 		border-bottom: 1px solid #d9d9d9;	
 	}
-	@include breakpoint($mdw){
-		padding-right: 70px;
-	}
+	// @include breakpoint($mdw){
+	// 	padding-right: 70px;
+	// }	
 	.container {
+		position: relative;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		height: $header-height;
+		//height: $header-height;
 		width: 100%;
 		max-width: 1920px;
+		padding-left: 50px;
+		padding-right: 146px;
 		margin: 0 auto;	
-		@include breakpoint($sm){
-			height: $m-header-height;
+		@include breakpoint($smd){
+			padding-left: 20px;
+			padding-right: 116px;
 		}
+	}	
+	.globalHeader {	
+		display: none;	
+		@include breakpoint($lg){
+			display: block;
+			ul {
+				max-width: calc(1920px - 192px);
+				display: flex;
+				flex-direction: row;
+				flex-grow: 1;
+				border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+				li {
+					& + li {
+						&::before {
+							content: "";
+							display: inline-block;
+							vertical-align: middle;
+							width: 1px;
+							height: 14px;
+							background-color: rgba(255, 255, 255, 0.2);
+						}
+					}
+					
+				}
+				a {
+					display: inline-block;
+					font-size: 14px;
+					color: rgba(255, 255, 255, 0.6);
+					padding: 6px 9px;
+					&::after {
+						@include font-ico("\e5cc");
+						font-size: 16px;
+						margin: 0 0 0 5px;
+					}
+					&[target='_blank'] {
+						&::after {
+							@include font-ico("\e89e");
+							font-size: 16px;
+							margin: 0 0 0 5px;
+						}
+					}
+					&:hover {
+						text-decoration: underline;
+					}
+					
+				}
+			}
+		}		
 	}
-	display: flex;
 	.logo {
 		display: inline-block;
 		vertical-align: middle;
-		padding-left: 80px;
-		@include breakpoint($smd){
-			//margin: 0 10px;
-			padding-left: 10px;
-		}
-		@include breakpoint($sm){
-			
-		}
 		@include breakpoint($lg 1500px){
 			padding-left: 10px;
 		}
 		a {
 			display: block;
-			background: url(/static/bok/img/common/logo.png) 50% no-repeat;
-			width: 159px;
-			height: $header-height;
+			background: url(/static/portal/img/common/logo.png) 50% no-repeat;
+			width: 127px;
+			height: 60px;
 			@include breakpoint($sm){
-				height: $m-header-height;
-				background-size: 126px auto;
 				background-position: 0 50%;
 			}
 		}
@@ -67,36 +118,12 @@
 	.g-info {
 		display: flex;
 		align-items: center;
-		white-space: nowrap;
-		height: 100%;
-		@include breakpoint($lg){
-			.sns-wrap {	
-				display: flex;
-				align-items: center;
-				padding: 0 25px;
-				background-color: #0b0d41;
-				height: 100%;
-				button {
-					width: 30px;
-					height: 30px;
-					background-color: rgba(255, 255, 255, 0.6);
-					border-radius: 50%;
-					margin: 0 2px;
-					&::before {
-						content: "";
-						display: inline-block;
-						width: 30px;
-						height: 30px;
-						background-position: 50%;
-						background-repeat: no-repeat;
-					}
-				}		
-			}
-		}
 		.search {
 			position: absolute;
 			top: 0;
 			right: 0;
+			width: $m-header-height;
+			height: $m-header-height;
 			z-index: 9;
 			background-color: #fff;
 			&::before  {
@@ -105,31 +132,20 @@
 				font-size: rem(40);
 			}
 			@include breakpoint($lg){
-				position: static;
-				width: 36px;
-				height: 36px;
-				border-radius: 50%;
-				&::before {
-					font-size: rem(22);
-				}
-			}
-			@include breakpoint($mdw){
 				width: $header-height;
 				height: $header-height;
-			}
-			@include breakpoint($sm){
-				width: $m-header-height;
-				height: $m-header-height;
+				background-color: #3B63C4;
+				top: -34px;
+				&::before {
+					color: #fff;
+					font-size: rem(24);
+				}
 			}
 		}	
 		@include breakpoint($lg){
 			.global {
 				display: flex;
 				align-items: center;
-				height: 100%;
-				background-color: #0b0d41;
-				padding-left: 25px;
-				margin-left: 40px;
 				ul {
 					display: flex;
 					align-items: center;
@@ -137,13 +153,11 @@
 					li {
 						a {
 							color: #fff;
-							&.i-eng {
-								&::before {
-									@include font-ico-outline('\e894');
-									font-size: 18px;
-									margin-right: 10px;
-									margin-bottom: 2px;
-								}
+							font-size: 15px;
+							&[target=_blank]::after {
+								@include font-ico("\e89e");
+								font-size: 16px;
+								margin: 0 0 2px 5px;
 							}
 						}
 						& + li {
@@ -154,7 +168,7 @@
 								vertical-align: middle;
 								width: 1px;
 								height: 14px;
-								background-color: rgba(255, 255, 255, 0.3);
+								background-color: #fff;
 								margin: 0 6px;
 							}
 						}
@@ -172,7 +186,7 @@
 	justify-content: space-between;
 	margin: 50px 0 30px;
 	border-bottom: 2px solid #222;
-	padding-bottom: 58px;
+	padding-bottom: 30px;
 	@include breakpoint($sm){
 		margin: 0 10px 15px;
 		padding-bottom: 0;
@@ -195,7 +209,7 @@
 		position: relative;
 		display: flex;
 		align-items: center;
-		@include breakpoint($sm){
+		@include breakpoint($smd){
 			display: none;
 		}
 		.sns-toggle {
@@ -253,18 +267,19 @@
 				}
 			}
 		}
-		.page-print {
+		.page-print {	
 			width: 48px;
 			height: 48px;
-			background: url(/static/bok/img/ico/ico-print.svg) 50% no-repeat;
+			background: url(/static/portal/img/ico/ico-print.svg) 50% no-repeat;
 			margin-left: 6px;
+			margin-right: 10px;
 		}
-		.page-rss {
+		.page-rss {	
 			width: 48px;
 			height: 48px;
 			&::before {
 				@include font-ico-outline('\e0e5');
-				font-size: 42px;
+				font-size: 40px;
 				color: #666;
 			}
 		}
@@ -300,23 +315,25 @@
 
 .total-nav {
 	display: none;
-	&.active {
-		display: block;
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		z-index: 99;
-		section {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			height: 100vh;
-			> div {
-				
+	@include breakpoint($lg){
+		&.active {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			z-index: 99;
+			section {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100vh;
+				> div {
+					
+				}
 			}
 		}
-	}	
+	}		
 }
 
 

@@ -2,26 +2,13 @@
 	ul {		
 		li {
 			position: relative;
-			padding: 15px 90px 10px 15px;
+			padding: 15px 15px 10px 15px;
 			border-bottom: 1px solid #D9D9D9;
 			@include breakpoint($sm){
 				padding: 15px 8px 10px;
 			}
-			&::before {
-				content: "";
-				display: inline-block;
-				width: 48px;
-				height: 48px;
-				position: absolute;
-				top: 50%;
-				right: 15px;
-				margin-top: -24px;
-				background: url(/static/bok/img/common/arr01_off.png) 50% no-repeat;
-				@include breakpoint($sm){
-					display: none;
-				}
-			}
 			.i {
+				font-size: 14px;
 				display: block;
 				margin-bottom: 8px;
 				>span {
@@ -33,10 +20,11 @@
 			}
 			span.t1 {
 				color: #fff;
-				background: #3656A3;
+				background: #3B63C4;
 			}
 			span.t2 {
-				color: #356AB9;
+				color: #3B63C4;
+				background: #fff;
 			}
 			.set {
 				display: flex;
@@ -90,7 +78,7 @@
 							content: "";
 							display: inline-block;
 							vertical-align: middle;
-							background: url(/static/bok/img/common/ico-download.png);
+							background: url(/static/portal/img/common/ico-download.png);
 							width: 20px;
 							height: 20px;
 							//@include font-ico-outline("\f824");
@@ -109,7 +97,7 @@
 			&:hover {
 				background-color: #F2F6FA;				
 				&::before {
-					background: url(/static/bok/img/common/arr01_on.png) 50% no-repeat;
+					background: url(/static/portal/img/common/arr01_on.png) 50% no-repeat;
 				}
 				.btns {
 					a {
@@ -120,13 +108,38 @@
 					}
 					.i-download {
 						&::before {		
-							background: url(/static/bok/img/common/ico-download_on.png);
+							background: url(/static/portal/img/common/ico-download_on.png);
 						}
 					}
 				}
 			}		
 		}
 	}
+	.b-type {
+		ul {		
+			li {
+				position: relative;
+				padding: 15px 90px 10px 15px;
+				@include breakpoint($sm){
+					padding: 15px 8px 10px;
+				}
+				&::before {
+					content: "";
+					display: inline-block;
+					width: 48px;
+					height: 48px;
+					position: absolute;
+					top: 50%;
+					right: 15px;
+					margin-top: -24px;
+					background: url(/static/portal/img/common/arr01_off.png) 50% no-repeat;
+					@include breakpoint($sm){
+						display: none;
+					}
+				}
+			}
+		}
+	}	
 }
 
 /* 여기까지 */

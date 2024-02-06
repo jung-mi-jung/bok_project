@@ -38,8 +38,8 @@
 					width: 100%;
 					color: #fff;
 					text-align: center;
-					height: 70px;
-					line-height: 70px;
+					height: 60px;
+					line-height: 60px;
 					font-size: rem(22);
 					font-weight: 500;
 					padding: 0 10%;
@@ -48,7 +48,22 @@
 				&.on,
 				&.active {
 					> a {
-						//color: $point;
+						color: #39A0FF;
+						span {
+							display: inline-block;
+							position: relative;
+							height: 60px;
+							&::before {
+								content: "";
+								display: block;
+								position: absolute;
+								bottom: 0;
+								left: 0;
+								background-color: #39A0FF;
+								width: 100%;
+								height: 3px;
+							}
+						}						
 					}
 				}
 			}

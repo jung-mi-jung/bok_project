@@ -21,7 +21,8 @@ $('td').on('click', function (e) {
         url = !!$(this).data('link')
             ? $(this).data('link')
             : `/static/guide/${SITENAME}/dist/${$(this).text().trim()}.html`;
-        window.open(url, 'page');
+ 		//debugger
+			window.open(url, 'page');
         $('.currentfocus').removeClass('currentfocus')
         $(this).addClass('currentfocus')
     }

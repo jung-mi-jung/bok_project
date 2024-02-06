@@ -188,13 +188,7 @@ select {
 	padding-right: 40px;
 	background: #fff url(/static/portal/img/common/select-arr.png) right center
 		no-repeat;
-	background-size: auto 10px;
-	@include background-image-retina(
-		'/static/portal/img/common/select-arr',
-		png,
-		36px,
-		12px
-	);
+	background-size: auto 20px;
 
 	&::-ms-expand {
 		display: none;

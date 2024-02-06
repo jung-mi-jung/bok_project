@@ -256,7 +256,6 @@ function lpopClose(target) {
 }
 
 
-// ** 접근성 개선 **
 // 링크 접근성
 $('#content a').each(function () {
 	if ($(this).attr('target') == '_blank' && $(this).attr('title') != '') {
@@ -275,18 +274,6 @@ if ($('.step-agg .on').text().trim() != '') {
 	document.title = $('.step-agg .on').text() + '단계 - ' + document.title
 }
 
-
-function siteGoCheck( fm ){
-	if (!fm.link.value)
-	{
-		alert("해당사이트를 선택해주세요");
-		return false;
-	}
-	else {
-		fm.action = fm.link.value;
-		return true;
-	}
-}
 
 // 글자수 제한
 $(function() {
@@ -307,7 +294,44 @@ $(function() {
 	});
 });
 
+// 팝업호출
+function openPop(argument) {
+	$('.js-pop, .b-pop').click(function(event) {
+		event.preventDefault();
+		// window.open(URL,name,specs,replace)
+		var size = $(this).data().size.split(',')
+		var scrollbars='';
+		if (size[2]!==undefined) {scrollbars=',scrollbars='+size[2]}
+		//var myWindow = window.open($(this).attr('href'), $(this).attr('href'),"width="+size[0]+'",height='+size[1]+scrollbars+'"');
+		var myWindow = window.open($(this).attr('href'),"newWin","status=yes,toolbar=no,location=no,width="+size[0]+",height="+size[1]+",scrollbars=" + size[2] );
+		myWindow.focus();
+	});
+}
+$(function () {
+	openPop();
+	$('label').each(function(index, el) {
+		if ($(this).attr('for')==undefined) {
+			$(this).find('input').attr('title',$.trim($(this).text()))
+		}
+	});
+	$('.js-pop').attr('title','새창열림');
+	$('.scrolly').attr('tabindex',0);
 
+	//tabs
+	var linka= $(".tabs") // 해당 탭리스트 링크 셀렉트
+	$(linka).find('a').click(function(){
+		$(this).parent().siblings().removeClass('on');
+		$(this).parent().addClass('on');
+		var k = linka.find('a').length + 1
+		for ( i =0 ; k > i ; i ++ )
+		{
+			$("#tabmenuC" + i).removeClass("in on");
+		}
+		var index = $(linka).find('a').index(this) + 1;
+		$("#tabmenuC" + index).addClass("in on")
+		return false;
+	});
+});
 
 $(function() {
 	
@@ -320,11 +344,6 @@ $(function() {
 			$(this).attr("title", "하위메뉴 열기");
 		}
 	});
-
-	// 윈도우 프린트
-	// $('.page-print').on('click', function () {
-	// 	window.print();
-	// });
 
 	//hgroup sns
 	$(".sns-toggle").click(function(){
@@ -341,9 +360,18 @@ $(function() {
 
 	//클릭시 레이어 닫기
 
-	
 
 
+	//footer 관련사이트
+	$('.site_go button').on('click', function () {
+		var _v = $(this).prev().val()
+		if(_v==null || _v==""){
+			alert('fmaily site를 선택해 주세요');
+			return false;
+		}else{
+			window.open(_v,'_blank');
+		}
+	})
 
-	
+
 });

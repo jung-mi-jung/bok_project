@@ -1,7 +1,8 @@
 $(function () {
     link = [
-		'p_200183',
-		'p_200194'
+		'200183',		
+		'200184',
+		//'200196', //예외처리
     ]
     link.forEach(element => {
         let _s = element.split('/')
@@ -24,4 +25,13 @@ $(function () {
             $('td:contains("' + element + '")').addClass('ok')
         }
     });
+
+	if ($(this).hasClass('page')) {
+        url = !!$(this).data('link')
+            ? $(this).data('link')
+            : `/static/guide/${SITENAME}/dist/${$(this).text().trim()}.html`;
+        window.open(url, 'page');
+        $('.currentfocus').removeClass('currentfocus')
+        $(this).addClass('currentfocus')
+    }
 });
