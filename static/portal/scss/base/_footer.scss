@@ -138,7 +138,10 @@
 				color: #fff;
 				font-size: 14px;
 				background-color: #3B63C4;
-				border-radius: 4px;				
+				border-radius: 4px;	
+				&:focus {
+					@include focus;
+				}			
 			}
 		}
 		.f_sns {

@@ -27,6 +27,12 @@ $snslist: ("sns-youtube", "sns-instagram", "sns-facebook", "sns-twitter");
 
 
 //아이콘
+.ico-arr-down {
+	&::before {
+		@include font-ico-outline('\e313');		
+	}
+}
+
 .ico-home {
 	&::before {
 		@include font-ico-outline('\e88a');		

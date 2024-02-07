@@ -390,3 +390,9 @@ $browser-context: 16;
 @mixin hide {
 	position:absolute; width:1px; height:1px; margin:-1px; padding:0; overflow:hidden; clip:rect(0,0,0,0); border:0
 }
+
+@mixin focus {
+	outline-color: #fff;
+	outline-style: dashed;
+	outline-offset: -1PX;
+}

@@ -9,7 +9,9 @@ hr {
 #content {
 	max-width: 1220px;
 	/* margin: 0 auto; */
-	padding-top: 50px;
+	margin: 50px 0;
+	border-right: 1px solid #eee;
+	border-bottom: 1px solid #eee;
 }
 @media screen and (min-width : 1920px) {
 	#content{

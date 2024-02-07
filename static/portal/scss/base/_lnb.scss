@@ -16,20 +16,22 @@
 			border-left: 1px solid #E5E5E5;
 			> li {
 				position: relative;
-				border-right: 1px solid #E5E5E5;
-				padding: 0 26px;
+				border-right: 1px solid #E5E5E5;				
 				color: #666;
 				@include breakpoint($sm){
 					width: 100%;
-					padding: 0 10px;
 					&:last-child {
 						border-right: none;
 					}
 				}
 				&.home {
-					color: #000;
-					@include breakpoint($sm){
+					color: #000;					
+					@include breakpoint($lg){
+						padding: 0 26px;
+					}
+					@include breakpoint($smd){
 						width: 36px;
+						text-align: center;
 						span {
 							display: none;
 						}
@@ -38,9 +40,9 @@
 						@include font-ico('\e88a');
 						vertical-align: bottom;
 						font-size: 26px;
-						color: #131547;
+						color: $point;
 						margin-right: 4px;
-						@include breakpoint($sm){
+						@include breakpoint($smd){
 							position: absolute;
 							top: 0;
 							left: 0;
@@ -48,11 +50,16 @@
 							text-align: center;
 							width: 36px;
 							height: 36px;
+							margin-right: 0;
 						}
-					}
-									
+					}									
 				}
-				button {
+				> a {
+					display: block;		
+					padding: 0 10px;			
+					@include breakpoint($lg){
+						padding: 0 26px;
+					}
 					&::after {
 						@include font-ico-outline('\e5c6');
 						color: #666;
@@ -62,7 +69,7 @@
 							position: absolute;
 							top: 50%;
 							right: 10px;
-							margin-top: -7px;
+							margin-top: -11px;
 						}
 					}
 				}
@@ -210,8 +217,13 @@
 					}
 					&.search {
 						color: #fff;
-						background-color: #131547;
-						border: 1px solid #131547;
+						background-color: $point;
+						border: 1px solid $point;
+						&:focus {
+							&:focus {
+								@include focus;
+							}
+						}
 						&::before {
 							@include font-ico("\e8b6");
 						}
@@ -270,7 +282,7 @@
 			flex-direction: column;
 			label {
 				font-size: rem(15);
-				margin: 2px 0;
+				margin: 4px 0;
 				@include breakpoint($lg){
 					font-size: rem(18);
 				}
@@ -287,21 +299,25 @@
 				}
 			}
 			input {
+				& + i + span {
+					max-width: calc(100% - 34px);
+				}
 				&:checked {
 					& + i + span {
 						position: relative;
 						color: $point;
-						font-weight: 600;
-						&::before {
-							content: "";
-							display: inline-block;
-							width: 100%;
-							height: 1px;
-							background-color: #6c6d8c;
-							position: absolute;
-							bottom: 2px;
-							left: 0;
-						}
+						font-weight: 500;
+						text-decoration: underline;
+						// &::before {
+						// 	content: "";
+						// 	display: inline-block;
+						// 	width: 100%;
+						// 	height: 1px;
+						// 	background-color: #6c6d8c;
+						// 	position: absolute;
+						// 	bottom: 2px;
+						// 	left: 0;
+						// }
 					}
 				}
 			}
@@ -322,7 +338,7 @@
 				position: absolute;
 				top: 5px;
 				right: 10px;
-				color: #131547;
+				color: $point;
 				transition: all .2s
 			}		
 			&.active {
@@ -363,8 +379,9 @@
 	h3 {
 		position: relative;
 		font-size: 15px;
-		margin: 20px 0 10px;
+		margin: 20px 0 12px;
 		color: #222;
+		font-weight: 500;
 		@include breakpoint($smd){
 			display: none;
 		}
@@ -386,18 +403,20 @@
 				width: calc(100% - 75px);
 			}
 		}
-		ul {			
+		ul {		
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row;
 			li {
-				display: inline-block;
-				margin: 1px 0;
+				margin: 1px 2px 1px 0;
 			}
 			a {				
 				display: inline-block;
 				color: #666;
-				font-size: 15px;
+				font-size: 14px;
 				border: 1px solid #C2C2C2;
 				border-radius: 30px;
-				padding: 2px 8px;
+				padding: 2px 7px;
 				&:hover {
 					color: #fff;
 					background-color: #3B63C4;

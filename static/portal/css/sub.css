@@ -180,6 +180,24 @@ background-image: url(/static/portal/img/ico/sns-facebook.svg);
 background-image: url(/static/portal/img/ico/sns-twitter.svg);
 }
 
+.ico-arr-down::before {
+content: "\e313";
+font-family: "Material Icons Outlined";
+font-weight: normal;
+font-style: normal;
+display: inline-block;
+line-height: 1;
+vertical-align: text-bottom;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+font-feature-settings: "liga";
+}
+
 .ico-home::before {
 content: "\e88a";
 font-family: "Material Icons Outlined";
@@ -542,6 +560,10 @@ display: table-cell !important;
 .bd-list table tbody td .only-m {
 display: none !important;
 }
+.pdf {
+overflow-y: hidden;
+height: auto !important;
+}
 }
 .lnb {
 position: relative;
@@ -564,13 +586,11 @@ border-left: 1px solid #E5E5E5;
 .lnb nav > ul > li {
 position: relative;
 border-right: 1px solid #E5E5E5;
-padding: 0 26px;
 color: #666;
 }
 @media (max-width: 749px) {
 .lnb nav > ul > li {
 width: 100%;
-padding: 0 10px;
 }
 .lnb nav > ul > li:last-child {
 border-right: none;
@@ -579,9 +599,15 @@ border-right: none;
 .lnb nav > ul > li.home {
 color: #000;
 }
-@media (max-width: 749px) {
+@media (min-width: 1200px) {
+.lnb nav > ul > li.home {
+padding: 0 26px;
+}
+}
+@media (max-width: 1199px) {
 .lnb nav > ul > li.home {
 width: 36px;
+text-align: center;
 }
 .lnb nav > ul > li.home span {
 display: none;
@@ -595,7 +621,7 @@ font-size: 26px;
 color: #131547;
 margin-right: 4px;
 }
-@media (max-width: 749px) {
+@media (max-width: 1199px) {
 .lnb nav > ul > li.home::before {
 position: absolute;
 top: 0;
@@ -604,9 +630,19 @@ z-index: 9;
 text-align: center;
 width: 36px;
 height: 36px;
+margin-right: 0;
 }
 }
-.lnb nav > ul > li button::after {
+.lnb nav > ul > li > a {
+display: block;
+padding: 0 10px;
+}
+@media (min-width: 1200px) {
+.lnb nav > ul > li > a {
+padding: 0 26px;
+}
+}
+.lnb nav > ul > li > a::after {
 content: "\e5c6";
 font-family: "Material Icons Outlined";
 font-weight: normal;
@@ -627,11 +663,11 @@ font-size: 22px;
 margin-left: 10px;
 }
 @media (max-width: 749px) {
-.lnb nav > ul > li button::after {
+.lnb nav > ul > li > a::after {
 position: absolute;
 top: 50%;
 right: 10px;
-margin-top: -7px;
+margin-top: -11px;
 }
 }
 .lnb nav > ul > li .depth2 {
@@ -804,6 +840,11 @@ color: #fff;
 background-color: #131547;
 border: 1px solid #131547;
 }
+.db-search .search-box .btns button.search:focus:focus {
+outline-color: #fff;
+outline-style: dashed;
+outline-offset: -1PX;
+}
 .db-search .search-box .btns button.search::before {
 content: "\e8b6";
 font-family: "Material Icons";
@@ -886,7 +927,7 @@ flex-direction: column;
 }
 .db .check-list .label-list label {
 font-size: 0.9375rem;
-margin: 2px 0;
+margin: 4px 0;
 }
 @media (min-width: 1200px) {
 .db .check-list .label-list label {
@@ -906,20 +947,14 @@ margin-top: 3px;
 display: none;
 }
 }
+.db .check-list .label-list input + i + span {
+max-width: calc(100% - 34px);
+}
 .db .check-list .label-list input:checked + i + span {
 position: relative;
 color: #131547;
-font-weight: 600;
-}
-.db .check-list .label-list input:checked + i + span::before {
-content: "";
-display: inline-block;
-width: 100%;
-height: 1px;
-background-color: #6c6d8c;
-position: absolute;
-bottom: 2px;
-left: 0;
+font-weight: 500;
+text-decoration: underline;
 }
 .db .check-list .check-ctrl {
 position: relative;
@@ -988,8 +1023,9 @@ margin-top: 5px;
 .db h3 {
 position: relative;
 font-size: 15px;
-margin: 20px 0 10px;
+margin: 20px 0 12px;
 color: #222;
+font-weight: 500;
 }
 @media (max-width: 1199px) {
 .db h3 {
@@ -1009,17 +1045,21 @@ right: 0;
 .db .Keyword h3::before {
 width: calc(100% - 75px);
 }
+.db .Keyword ul {
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+}
 .db .Keyword ul li {
-display: inline-block;
-margin: 1px 0;
+margin: 1px 2px 1px 0;
 }
 .db .Keyword ul a {
 display: inline-block;
 color: #666;
-font-size: 15px;
+font-size: 14px;
 border: 1px solid #C2C2C2;
 border-radius: 30px;
-padding: 2px 8px;
+padding: 2px 7px;
 }
 .db .Keyword ul a:hover {
 color: #fff;
@@ -1051,6 +1091,7 @@ border-radius: 3px !important;
 }
 
 label {
+display: flex;
 position: relative;
 }
 
@@ -1061,7 +1102,6 @@ position: relative;
 z-index: 1;
 width: 24px;
 height: 24px;
-border: 1px solid #dcdcdc;
 vertical-align: middle;
 }
 @media (max-width: 1199px) {
@@ -1082,14 +1122,14 @@ display: inline-block;
 vertical-align: middle;
 width: 24px;
 height: 24px;
-border: 1px solid #dcdcdc;
-background-color: #F0F0F0;
+border: 1px solid #E5E5E5;
+background-color: #FAFAFA;
 border-radius: 5px;
 text-align: center;
-margin-right: 5px;
+margin-right: 10px;
 vertical-align: middle;
 line-height: 1;
-margin-left: -20px;
+margin-left: -23px;
 }
 @media (max-width: 1199px) {
 input[type=checkbox] + i,
@@ -1127,8 +1167,8 @@ text-rendering: optimizeLegibility;
 -moz-osx-font-smoothing: grayscale;
 font-feature-settings: "liga";
 position: absolute;
-top: 6px;
-left: 11px;
+top: 3px;
+left: 5px;
 color: #fff;
 }
 @media (max-width: 1199px) {
@@ -2007,4 +2047,10 @@ vertical-align: top;
 
 @import 'components/popup';//팝업
 */
+.pdf {
+overflow-x: hidden;
+overflow-y: auto;
+width: 100%;
+height: 200px;
+}
 /*# sourceMappingURL=../maps/sub.css.map */
