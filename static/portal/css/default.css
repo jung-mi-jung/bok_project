@@ -1559,46 +1559,6 @@ font-size: 14px;
 color: rgba(255, 255, 255, 0.6);
 padding: 6px 9px;
 }
-#header .globalHeader ul a::after {
-content: "\e5cc";
-font-family: "Material Icons";
-font-weight: normal;
-font-style: normal;
-display: inline-block;
-line-height: 1;
-vertical-align: text-bottom;
-text-transform: none;
-letter-spacing: normal;
-word-wrap: normal;
-white-space: nowrap;
--webkit-font-smoothing: antialiased;
-text-rendering: optimizeLegibility;
--moz-osx-font-smoothing: grayscale;
-font-feature-settings: "liga";
--webkit-font-feature-settings: "liga";
-font-size: 16px;
-margin: 0 0 0 5px;
-}
-#header .globalHeader ul a[target=_blank]::after {
-content: "\e89e";
-font-family: "Material Icons";
-font-weight: normal;
-font-style: normal;
-display: inline-block;
-line-height: 1;
-vertical-align: text-bottom;
-text-transform: none;
-letter-spacing: normal;
-word-wrap: normal;
-white-space: nowrap;
--webkit-font-smoothing: antialiased;
-text-rendering: optimizeLegibility;
--moz-osx-font-smoothing: grayscale;
-font-feature-settings: "liga";
--webkit-font-feature-settings: "liga";
-font-size: 16px;
-margin: 0 0 0 5px;
-}
 #header .globalHeader ul a:hover {
 text-decoration: underline;
 }
@@ -1685,26 +1645,6 @@ white-space: nowrap;
 color: #fff;
 font-size: 15px;
 }
-#header .g-info .global ul li a[target=_blank]::after {
-content: "\e89e";
-font-family: "Material Icons";
-font-weight: normal;
-font-style: normal;
-display: inline-block;
-line-height: 1;
-vertical-align: text-bottom;
-text-transform: none;
-letter-spacing: normal;
-word-wrap: normal;
-white-space: nowrap;
--webkit-font-smoothing: antialiased;
-text-rendering: optimizeLegibility;
--moz-osx-font-smoothing: grayscale;
-font-feature-settings: "liga";
--webkit-font-feature-settings: "liga";
-font-size: 16px;
-margin: 0 0 2px 5px;
-}
 #header .g-info .global ul li + li {
 padding-left: 8px;
 }
@@ -1785,14 +1725,18 @@ font-feature-settings: "liga";
 font-size: 26px;
 color: #666;
 }
-.hgroup .page-toolbar .sns-wrap__set {
+.hgroup .page-toolbar .sns-wrap {
 display: none;
 }
-.hgroup .page-toolbar .sns-wrap.active .sns-wrap__set {
+.hgroup .page-toolbar .sns-wrap.active {
+display: block;
+width: 48px;
 position: absolute;
 top: 12px;
 left: 0;
 z-index: 9;
+}
+.hgroup .page-toolbar .sns-wrap.active .sns-wrap__set {
 width: 48px;
 display: flex;
 flex-wrap: wrap;
@@ -1803,7 +1747,7 @@ background-color: #fff;
 padding: 10px 0;
 }
 .hgroup .page-toolbar .sns-wrap.active .sns-wrap__set button {
-width: 36px;
+width: 48px;
 height: 36px;
 margin: 0 auto;
 }
@@ -1892,11 +1836,11 @@ padding: 0 10px;
 }
 }
 @media (min-width: 1200px) {
-#main-container .content {
+#main-container .db + .content {
 float: right;
-width: 85.7142857143%;
+width: 85.7738095238%;
 border-left: 1px solid #d9d9d9;
-padding-left: 34px;
+padding-left: 36px;
 }
 }
 

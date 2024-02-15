@@ -123,17 +123,27 @@
 
 
 
-.db {	
-	nav {
-		display: none;
-	}
+.db {
 	@include breakpoint($lg){
+		position: relative;
 		display: block;
 		float: left;
 		width: per(204px + 35px, $pc-wide);
-		padding-right: 35px;
+		padding-right: 36px;
 		background-color: #fff;
 		height: auto;
+		&::after {
+			content: "";
+			display: inline-block;
+			//border-right: 1px solid #d9d9d9;
+			background-color: #d9d9d9;
+			position: absolute;
+			top: 0;
+			right: -1px;
+			width: 1px;
+			height: 100%;
+		}
+		
 	}
 	&-search {
 		margin-bottom: 30px;

@@ -396,3 +396,19 @@ $browser-context: 16;
 	outline-style: dashed;
 	outline-offset: -1PX;
 }
+
+// Sizing shortcuts
+@mixin size($width, $height) {
+	width: $width;
+	height: $height;
+}
+@mixin square($size) {
+	@include size($size, $size);
+}
+@mixin rect($size) {
+	@include size($size, $size);
+}
+@mixin circle($size) {
+	@include size($size, $size);
+	border-radius: $size;
+}

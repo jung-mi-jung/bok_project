@@ -72,32 +72,18 @@
 							background-color: rgba(255, 255, 255, 0.2);
 						}
 					}
-					
 				}
 				a {
 					display: inline-block;
 					font-size: 14px;
 					color: rgba(255, 255, 255, 0.6);
 					padding: 6px 9px;
-					&::after {
-						@include font-ico("\e5cc");
-						font-size: 16px;
-						margin: 0 0 0 5px;
-					}
-					&[target='_blank'] {
-						&::after {
-							@include font-ico("\e89e");
-							font-size: 16px;
-							margin: 0 0 0 5px;
-						}
-					}
 					&:hover {
 						text-decoration: underline;
 					}
-					
 				}
 			}
-		}		
+		}
 	}
 	.logo {
 		display: inline-block;
@@ -157,11 +143,11 @@
 						a {
 							color: #fff;
 							font-size: 15px;
-							&[target=_blank]::after {
-								@include font-ico("\e89e");
-								font-size: 16px;
-								margin: 0 0 2px 5px;
-							}
+							// &[target=_blank]::after {
+							// 	@include font-ico("\e89e");
+							// 	font-size: 16px;
+							// 	margin: 0 0 2px 5px;
+							// }
 						}
 						& + li {
 							padding-left: 8px;
@@ -226,16 +212,16 @@
 				color: #666;
 			}
 		}
-		.sns-wrap {
-			&__set {
-				display: none;
-			}
+		.sns-wrap {	
+			display: none;		
 			&.active {
+				display: block;
+				width: 48px;
+				position: absolute;
+				top: 12px;
+				left: 0;
+				z-index: 9;
 				.sns-wrap__set {
-					position: absolute;
-					top: 12px;
-					left: 0;
-					z-index: 9;
 					width: 48px;
 					display: flex;
 					flex-wrap: wrap;
@@ -245,7 +231,7 @@
 					background-color: #fff;
 					padding: 10px 0;
 					button {
-						width: 36px;
+						width: 48px;
 						height: 36px;
 						margin: 0 auto;	
 						& + button {
@@ -305,12 +291,12 @@
 	@include breakpoint($sm){
 		padding: 0 10px;
 	}
-	.content {
+	.db + .content {
 		@include breakpoint($lg){
 			float: right;
-			width: per(1440px, $pc-wide);
+			width: per(1441px, $pc-wide);
 			border-left: 1px solid $bd-color;
-			padding-left: 34px;
+			padding-left: 36px;
 		}
 	}
 }
