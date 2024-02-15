@@ -1263,7 +1263,7 @@ padding-top: calc((100vh - 1274px) / 2 + 194px);
 .gnb-stiky #section2,
 .gnb-stiky #section3 {
 height: 100vh;
-padding: 94px 0 0;
+padding: 94px 0 10px;
 }
 }
 /*# sourceMappingURL=../maps/main.css.map */
