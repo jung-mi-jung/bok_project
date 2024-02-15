@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<title>가이드 인덱스</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <link rel="stylesheet" href="index.css"> -->
+	<link rel="stylesheet" href="/static/guide/guideindex.css">
+	<script src="/static/jslibrary/jquery-3.5.1.min.js"></script>
+	<script>
+		$(function () {
+			$('body')
+				.on('keyup', function (e) {
+					console.log(e.keyCode)
+					code = [83, 79, 76]
+					code.map((item) => {
+						if (e.keyCode == item) {
+							var openNewWindow = window.open("about:blank");
+							openNewWindow.location.href = $(`.c${e.keyCode}`).attr('href')
+						}
+					})
+				});
+                $("a").attr("target", "_blank");
+		});
+	</script>
+</head>
+
+<body>
+	<ul class="nav">
+		<li>바로가기 키보드 단축키</li>
+		<li>O : onedrive 메뉴설계도</li>
+		<li>S : 검색 가이드</li>
+		<li>B : 버튼 가이드</li>
+		<li>L : 로그인 유형</li>
+		<!-- M :  -->
+		<li>T : 통합 국문 코딩목록 </li>
+	</ul>
+    <div>
+		<h1>개발서버</h1>
+		<ul>
+			<!-- <li><a href="\static\guide\portal\pop\pop_test.html">팝업</a></li> -->		
+			<!-- <li><a href="http://112.220.85.26:38080/" target="_blank" title="새창열림" class="gogogo">개발서버</a></li> -->
+			<li><a href="http://10.40.41.140/bos/member/admin/forLogin.do" target="_blank" title="새창열림" class="gogogo">AS-IS 관리자</a></li>
+			<li><a href="http://10.40.41.140:9100/bos/member/admin/forLogin.do" target="_blank" title="새창열림" class="gogogo">TO-BE 관리자</a></li>
+		</ul>
+	</div>
+	<div>
+		<h1>게이트 (현재 링크없음)</h1>
+		<ul>
+			<li><a href="">museum 화폐박물관</a></li>
+			<li><a href="/static/site/site2.html">eng 영문</a></li>
+			<li><a href="/static/site/site3.html">imer 경제연구원</a></li>
+			<li><a href="/static/site/site4.html">imerEng 경제연구원(영문)</a></li>
+		</ul>
+	</div>
+	<div>
+		<h1>통합검색</h1>
+		<ol>
+			<li><a href="/static/guide/portal/tsh.html">통합검색</a></li>
+			<!-- <li>통합 국문 메인화면에 검색 자동완성 기능 있음.</li> -->
+		</ol>
+	</div>
+	<div>
+		<h1>통합 국문</h1>
+		<ul>
+			<li><a href="/static/guide/portal/sublayout.html">서브레이아웃</a></li>
+			<li><a href="\static\guide\portal\list.html" class="c84 custom-btn btn-7">사용자 코딩 목록</a></li>
+			<li><a class=" c77" href="/static/guide/portal/main.html"><span>main</span></a></li>
+			<!-- <li><a class="c84 custom-btn btn-7" href="/static/guide/portal/index.html"><span>전체 코딩 목록</span></a></li> -->
+		</ul>
+	</div>
+	<div>
+		<h2>서브인덱스</h2>
+		<div>
+			<ol>
+				<li><a href="/static/guide/portal/dist/PO-200001.html">서브인텍스1</a></li>
+				<li><a href="/static/guide/portal/dist/PO-200211.html">서브인텍스2</a></li>
+			</ol>
+		</div>
+	</div>
+	<div>
+		<h1>프로그램 유형(통합 국문)</h1>
+		<ol>
+			<li><a href="/static/guide/portal/common-program-list.html">프로그램 유형별</a></li>
+			<!-- <li><a href="/static/guide/portal/목록형리스트-이미지미리보기.html">목록형리스트-이미지미리보기(강태희로컬에서 확인가능)</a></li>
+			<li><a href="/static/guide/portal/민원참여형-이미지미리보기.html">민원참여형-이미지미리보기(강태희로컬에서 확인가능)</a></li>
+			<li><a href="/static/guide/portal/dist/썸네일형-게시판_목록A.html">썸네일형-게시판_목록A</a></li>
+			<li><a href="/static/guide/portal/dist/썸네일형-게시판_목록B.html">썸네일형-게시판_목록B</a></li> -->
+		</ol>
+	</div>
+	<div>
+		<h2>메일폼</h2>
+		<ol>
+			<li>
+				안내 : /mail/build/ 폴더의 메일 양식 사용
+			</li>
+			<!-- <li><a href="/static/guide/portal/mail/build/newsletter.html">뉴스레터</a></li>
+			<li><a href="/static/guide/portal/mail/build/newsletter-eng.html">뉴스레터 - eng</a></li>
+			<li><a href="/static/guide/portal/mail/build/mail-pwfind.html">비밀번호확인</a></li>
+			<li><a href="/static/guide/portal/mail/build/mail-Certified.html">인증번호 안내</a></li>
+			<li><a href="/static/guide/portal/mail/build/mail-Register.html">접수번호 안내</a></li> -->
+		</ol>
+	</div>
+	<div>
+		<h1 style="font-weight: 600;">콘텐츠 가이드(대표)</h1>
+		<ol>
+			<li><a href="/static/guide/portal/dist/etc.html">기타 샘플</a></li>
+			<!-- <li><a href="/static/guide/portal/dist/content-sample.html">콘텐츠 샘플</a></li>
+			<li><a href="/static/guide/portal/dist/검색상단.html">검색상단</a></li>
+			<li><a href="/static/guide/portal/dist/step-process.html">step-process</a></li>
+			<li><a href="/static/guide/portal/dist/box-txt-img.html">box-txt-img</a></li>
+			<li><a href="/static/guide/portal/dist/box-border.html">box-border</a></li>
+			<li><a href="/static/guide/portal/dist/box-info.html">box-info</a></li>
+			<li><a href="/static/guide/portal/dist/list-category.html">list-category</a></li>
+			<li><a href="/static/guide/portal/dist/login.html" class=c76>login 로그인</a></li>
+			<li><a href="/static/guide/portal/dist/step-agg-동의인증입력.html">동의-인증-입력 step 단계</a></li>
+			<li><a href="/static/guide/portal/dist/btn.html" class=c66>btn.html</a></li>
+			<li><a href="/static/guide/portal/dist/search-type.html" class="c83">search-type.html</a></li>
+			<li><a href="/static/guide/portal/dist/bd-list.html">bd-list.html</a></li>
+			<li><a href="/static/guide/portal/dist/bd-view.html">bd-view.html</a></li>
+			<li><a href="/static/guide/portal/dist/_reg.html">_reg.html</a></li>
+			<li><a href="/static/guide/portal/dist/약관동의.html">약관동의.html</a></li>
+			<li><a href="/static/guide/portal/dist/정보입력.html">정보입력.html</a></li>
+			<li><a href="/static/guide/portal/dist/h.html">제목 리스트</a></li>
+			<li><a href="/static/guide/portal/dist/box.html">box.html</a></li>
+			<li><a href="/static/guide/portal/g/%ED%8C%9D%EC%97%85.html">팝업</a></li>
+			<li><a href="/static/guide/portal/dist/table.html">table.html</a></li>
+			<li><a href="/static/guide/portal/dist/g.html">g.html</a></li>
+			<li><a href="/static/guide/portal/dist/filelist.html">첨부파일</a></li>
+			<li><a href="/static/guide/portal/dist/loading.html">데이터 로딩중</a></li> -->
+		</ol>
+	</div>
+	<!-- <div>
+		<h1>관리자 인덱스</h1>
+		<li><a href="/static/guide/bos/bosindex.html">static/guide/bos/bosindex.html</a></li>
+	</div> -->
+	<div>
+		<h1>기타</h1>
+		<ul>
+			<li><a href="/static/guide/comingsoon/comingsoon.html">static/guide/comingsoon/comingsoon.html</a></li>
+			<!-- <li><a href="/static/guide/comingsoon/contentinthemill.html">static/guide/comingsoon/contentinthemill.html</a></li> -->
+		</ul>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+//hgroup sns
+$icolist: ("ico-youtube", "ico-instagram", "ico-facebook", "ico-twitter");
+
+[class^="ico-"] {
+	@each $item in $icolist {
+		&.#{$item} {
+			&::before {
+				background-image: url(/static/portal/img/ico/#{$item}.svg);
+			}
+		}
+	}
+}
+
+
+//foter sns
+$snslist: ("sns-youtube", "sns-instagram", "sns-facebook", "sns-twitter");
+
+[class^="sns-"] {
+	@each $item in $snslist {
+		&.#{$item} {
+			&::before {
+				background-image: url(/static/portal/img/ico/#{$item}.svg);
+			}
+		}
+	}
+}
+
