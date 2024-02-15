@@ -1,28 +1,42 @@
 <script>
  document.title = '기타 - 가이드' ;
 </script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> -->
+
 <style>
-	.material-symbols-outlined {
-		font-size: 30px;
-		display: block;
-		padding: 3px 0;
-		width: 50%;
-		font-variation-settings:
-		'FILL' 0,
-		'wght' 400,
-		'GRAD' 0,
-		'opsz' 24
-	}
-	.material-symbols-outlined span {
-		font-family: "Spoqa Han Sans Neo", "AppleGothic", "맑은 고딕", "돋움", "dotum", Helvetica, Arial, sans-serif;
-		color: #888;
-	}
+@font-face {
+	font-family: "Material Icons";
+	font-style: normal;
+	font-weight: 400;
+	src: url("/static/font/MaterialIcons/MaterialIcons-Regular.woff") format("woff2"), url("/static/font/MaterialIcons/MaterialIcons-Regular.woff") format("woff");
+}
+@font-face {
+	font-family: "Material Icons Outlined";
+	font-style: normal;
+	font-weight: 400;
+	src: url("/static/font/MaterialIcons/MaterialIconsOutlined-Regular.woff") format("woff2"), url("/static/font/MaterialIcons/MaterialIconsOutlined-Regular.woff") format("woff");
+}
+.material-symbols-outlined {
+	font-family: "Material Icons Outlined";
+	font-size: 30px;
+	display: block;
+	padding: 3px 0;
+	width: 50%;
+	font-variation-settings:
+	'FILL' 0,
+	'wght' 400,
+	'GRAD' 0,
+	'opsz' 24
+}
+.material-symbols-outlined span {
+	font-family: "Spoqa Han Sans Neo", "AppleGothic", "맑은 고딕", "돋움", "dotum", Helvetica, Arial, sans-serif;
+	color: #888;
+}
 </style>
 
 
 <h1>1. 구글 아이콘</h1>
-
 
 <div style="display: flex;flex-wrap: wrap;">
 
@@ -51,7 +65,7 @@
 	</span>
 	
 	<span class="material-symbols-outlined">
-		Manage_search <span>f02f</span>
+		manage_search <span>f02f</span>
 	</span>
 	
 	<span class="material-symbols-outlined">
@@ -254,56 +268,7 @@
 		schedule <span>e8b5</span>
 	</span>
 </div>
-<!--
-<div class="" style="font-size: 30px;">
 
-
-	
-	<i class="ico-close">close</i>
-	<br>
-	<i class="zoom-map"></i>
-	<br>
-	<i class="ico-local">local library</i>
-	<br>
-	<i class="ico-right"></i>
-	<br>
-	<i class="open-new"></i>
-	<br>
-
-	
-	<i class="ico-tv">아이콘 live tv</i>
-	<br>
-	<i class="ico-search"></i>
-	<br>
-	<i class="ico-cancel"></i>
-
-
-	<br>
-	<i class="ico-error">error</i>
-	<br>
-	<i class="ico-check">check circle</i>
-	<br>
-	<i class="ico-tune">tune</i>
-	<br>
-	<i class="ico-grade">grade</i>
-	<br>
-	<i class="ico-more">add circle</i>
-	<br>
-	<i class="ico-reset">estart alt</i>
-	<br>
-	<i class="ico-up">arrow drop up</i>
-	<br>
-	<i class="ico-down">arrow drop down</i>
-	<br>
-	<i class="ico-t-up">trending up</i>
-	<br>
-	<i class="ico-t-down">trending down</i>
-	<br>
-	<i class="ico-info">info</i>
-	<br>
-	<i class="ico-check">check</i>
-</div>
--->
 
 <h1>2. 레이어 pdf 출력</h1>
 
