@@ -36,16 +36,15 @@ function servers() {
 	browserSync.init({
 		server: {
 			baseDir: './',
-			// routes: {
-			// 	"/eduline/static": "static"
-			// },
-			index: 'static/guide/g.html',
+			// index: 'static/guide/g.html',
+			// index: 'static/guide/museum/g.html',
+			index: 'static/guide/imer/g.html',
 		},
-		port: 1981,
+		port: 1989,
 	});
 }
-const scss = ["commons", "portal"];   // museum 화폐박물관	  eng 영문	 imer 경제연구원	 imerEng 경제연구원(영문)
-const projectlist = ["portal"]; // content, lib
+const scss = ["commons", "portal", "museum", "imer"];   // museum 화폐박물관	  eng 영문	 imer 경제연구원	 imerEng 경제연구원(영문)
+const projectlist = ["imer"]; // content, lib
 
 function scssTocss(targets) {
 	gulp.src('static/' + targets + '/scss/**/*.scss')
@@ -85,9 +84,14 @@ function waths() {
 	console.log('waths 시작');
 	// html
 	watchLibraryReload();
-	// watchLibrary('kias');
-	watchLibrary('portal');
-	watchContent('portal');
+	// watchLibrary('portal');
+	// watchContent('portal');
+	// watchLibrary('museum');
+	// watchContent('museum');
+	watchLibrary('imer');
+	watchContent('imer');
+
+	
 }
 
 function watchLibraryReload(targets) {
@@ -181,7 +185,7 @@ function tojsp(cb) {
 }
 
 function dist(cb) {
-	var targets = 'kias';
+	var targets = 'imer';
 	gulp.src('static/guide/' + targets + '/content/*.html')
 		.pipe(headerfooter.header('static/guide/' + targets + '/top.html'))
 		.pipe(headerfooter.footer('static/guide/' + targets + '/bottom.html'))
