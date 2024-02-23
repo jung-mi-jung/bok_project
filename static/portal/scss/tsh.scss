@@ -3,50 +3,6 @@
 @import 'base/variables'; //환경 설정
 @import 'base/color'; // colors
 
-.hgroup {
-	.info-box {
-		color: #666;
-		@include breakpoint($lg){
-			position: absolute;
-			top: 76px;
-			left: 0;
-			width: 100%;
-		}
-	}
-}
-
 .tsh {
-	.search-box {
-		display: flex;
-		justify-content: space-between;
-		flex-grow: 1;
-		width: 514px;
-		max-width: 100%;
-		margin: 0 auto;
-		.input-txt {
-			input {
-				width: 100%;
-			}
-		}
-		.b-sh {
-			background-color: $point;
-			border-radius: 4px;
-			&::before {
-				@include font-ico-outline('\e8b6');
-				font-size: 30px;
-				color: #fff;
-			}
-		}
-		.b-seach {
-			color: #fff;
-			background-color: #3B63C4;
-			border-radius: 4px;
-			&::before {
-				@include font-ico-outline('\e429');
-				font-size: 30px;
-				color: #fff;
-			}
-		}
-		label {}
-	}
+	
 }

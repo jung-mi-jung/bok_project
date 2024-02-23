@@ -566,8 +566,8 @@ p {
 	color: #CC6117;
 }
 
-.page::before {
+/* .page::before {
 	content: "진행중";
 	background: #CC6117;
 	color: #fff;
-}
+} */

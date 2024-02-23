@@ -10,8 +10,8 @@ hr {
 	max-width: 1220px;
 	/* margin: 0 auto; */
 	margin: 50px 0;
-	border-right: 1px solid #eee;
-	border-bottom: 1px solid #eee;
+	/* border-right: 1px solid #eee;
+	border-bottom: 1px solid #eee; */
 }
 @media screen and (min-width : 1920px) {
 	#content{
@@ -20,6 +20,7 @@ hr {
 	
 }
 h1 {
+	margin: 100px 0 20px;
 	color: #fff;
 	padding-left: 10px;
 	font-weight: 300;

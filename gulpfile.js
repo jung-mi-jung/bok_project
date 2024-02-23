@@ -111,7 +111,23 @@ function watchLibrary(targets) {
 			.pipe(gulp.dest('static/guide/' + targets + '/dist'));
 	});
 }
-function guideToDist(targets) {  //가이드용
+
+//타입별 서브 레이아웃용(국문 포털)
+function guideLayout(targets) {
+	const watcher = watch(["static/guide/portal/layout/*.html"]);
+	watcher.on("change", function (paths, stats) {
+		const file = new Vinyl({
+		path: paths,
+		});
+		gulp
+			.src(file.dirname + "/" + file.stem + file.extname)
+			.pipe(headerfooter.header('static/guide/portal/top.html'))
+			.pipe(headerfooter.footer('static/guide/portal/bottom.html'))
+			.pipe(gulp.dest("static/guide/portal"));
+		browserSync.reload();
+	});
+}
+function guideToDist(targets) {  //가이드용(국문 포털)
 	const watcher = watch(["static/guide/portal/g/*.html"]);
 	watcher.on("change", function (paths, stats) {
 		const file = new Vinyl({
@@ -281,10 +297,11 @@ function imgmin(cb) {
 }
 
 // exports.watchscss = watchscss;
-exports.default = series(parallel(servers, waths, sprite, guideToDist));
+exports.default = series(parallel(servers, waths, sprite, guideToDist, guideLayout));
 // exports.default   = series(clean, parallel(html, watchFiles));
 exports.server = series(servers);
 exports.guideToDist = guideToDist;
+exports.guideLayout = guideLayout
 exports.mail = mail;
 exports.tojsp = tojsp;
 exports.dist = dist;
