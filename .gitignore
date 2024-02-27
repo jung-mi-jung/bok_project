@@ -1,6 +1,8 @@
 node_modules
 .vscode
 static/portal/maps
+static/imer/maps
+static/museum/maps
 .css.map
 static/commons/maps
 static/commons/css/*.css.map

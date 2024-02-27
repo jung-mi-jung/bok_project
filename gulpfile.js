@@ -36,15 +36,13 @@ function servers() {
 	browserSync.init({
 		server: {
 			baseDir: './',
-			// index: 'static/guide/g.html',
-			// index: 'static/guide/museum/g.html',
-			index: 'static/guide/imer/g.html',
+			index: 'static/guide/g.html',
 		},
 		port: 1989,
 	});
 }
-const scss = ["commons", "portal", "museum", "imer"];   // museum 화폐박물관	  eng 영문	 imer 경제연구원	 imerEng 경제연구원(영문)
-const projectlist = ["imer"]; // content, lib
+const scss = ["commons", "portal", "museum", "imer", "imerEng", "eng"];   // museum 화폐박물관	  eng 영문	 imer 경제연구원	 imerEng 경제연구원(영문)
+const projectlist = ["portal", "museum", "imer", "imerEng", "eng"]; // content, lib
 
 function scssTocss(targets) {
 	gulp.src('static/' + targets + '/scss/**/*.scss')
@@ -84,12 +82,16 @@ function waths() {
 	console.log('waths 시작');
 	// html
 	watchLibraryReload();
-	// watchLibrary('portal');
-	// watchContent('portal');
-	// watchLibrary('museum');
-	// watchContent('museum');
+	watchLibrary('portal');
+	watchContent('portal');
+	watchLibrary('museum');
+	watchContent('museum');
 	watchLibrary('imer');
 	watchContent('imer');
+	watchLibrary('imerEng');
+	watchContent('imerEng');
+	watchLibrary('eng');
+	watchContent('eng');
 
 	
 }
@@ -115,7 +117,23 @@ function watchLibrary(targets) {
 			.pipe(gulp.dest('static/guide/' + targets + '/dist'));
 	});
 }
-function guideToDist(targets) {  //가이드용
+
+//타입별 서브 레이아웃용(국문 포털)
+function guideLayout(targets) {
+	const watcher = watch(["static/guide/portal/layout/*.html"]);
+	watcher.on("change", function (paths, stats) {
+		const file = new Vinyl({
+		path: paths,
+		});
+		gulp
+			.src(file.dirname + "/" + file.stem + file.extname)
+			.pipe(headerfooter.header('static/guide/portal/top.html'))
+			.pipe(headerfooter.footer('static/guide/portal/bottom.html'))
+			.pipe(gulp.dest("static/guide/portal"));
+		browserSync.reload();
+	});
+}
+function guideToDist(targets) {  //가이드용(국문 포털)
 	const watcher = watch(["static/guide/portal/g/*.html"]);
 	watcher.on("change", function (paths, stats) {
 		const file = new Vinyl({
@@ -285,10 +303,11 @@ function imgmin(cb) {
 }
 
 // exports.watchscss = watchscss;
-exports.default = series(parallel(servers, waths, sprite, guideToDist));
+exports.default = series(parallel(servers, waths, sprite, guideToDist, guideLayout));
 // exports.default   = series(clean, parallel(html, watchFiles));
 exports.server = series(servers);
 exports.guideToDist = guideToDist;
+exports.guideLayout = guideLayout
 exports.mail = mail;
 exports.tojsp = tojsp;
 exports.dist = dist;
