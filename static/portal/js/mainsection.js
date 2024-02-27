@@ -1,5 +1,5 @@
 // 휠 컨트롤
-var mainSection = $('#wrap,#section2,#section3,#section4,#footer');
+var mainSection = $('#wrap,#section2,#section3,#section4,#section5,#section6,#footer');
 3
 var whellTimer;
 var timer;

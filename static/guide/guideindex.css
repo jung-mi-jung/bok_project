@@ -5,7 +5,7 @@
 
 /* line 11, static/fss/scss/guideindex.scss */ body { background: #e0e5ec; }
 
-/* line 14, static/fss/scss/guideindex.scss */ body > div { max-width: 800px; margin: 0 auto; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-align: stretch; -ms-flex-align: stretch; align-items: stretch; }
+/* line 14, static/fss/scss/guideindex.scss */ body > div { max-width: 830px; margin: 0 auto; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-align: stretch; -ms-flex-align: stretch; align-items: stretch; }
 
 /* line 22, static/fss/scss/guideindex.scss */ body > div > * { border: 1px solid #eee; }
 
