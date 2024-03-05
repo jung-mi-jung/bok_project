@@ -1,0 +1,191 @@
+@charset "UTF-8";
+@import url("/static/imer/css/default.css");
+@font-face {
+font-family: "Material Icons";
+font-style: normal;
+font-weight: 400;
+src: url("/static/font/MaterialIcons/MaterialIcons-Regular.woff") format("woff2"), url("/static/font/MaterialIcons/MaterialIcons-Regular.woff") format("woff");
+}
+@font-face {
+font-family: "Material Icons Outlined";
+font-style: normal;
+font-weight: 400;
+src: url("/static/font/MaterialIcons/MaterialIconsOutlined-Regular.woff") format("woff2"), url("/static/font/MaterialIcons/MaterialIconsOutlined-Regular.woff") format("woff");
+}
+b,
+strong {
+font-weight: 500;
+}
+
+/*
+
+$url-img	: "/static/portal/img/";	//background: url($url-images + "폴더명/파일명.png");
+
+
+// sh
+$sh-form-height: 40px;
+$sh-bd-radius: 5px;
+
+// input
+$form-height: 40px;
+
+*/
+.red {
+color: #e24b44;
+}
+
+[class^=ico-].ico-youtube::before {
+background-image: url(/static/portal/img/ico/ico-youtube.svg);
+}
+[class^=ico-].ico-instagram::before {
+background-image: url(/static/portal/img/ico/ico-instagram.svg);
+}
+[class^=ico-].ico-facebook::before {
+background-image: url(/static/portal/img/ico/ico-facebook.svg);
+}
+[class^=ico-].ico-twitter::before {
+background-image: url(/static/portal/img/ico/ico-twitter.svg);
+}
+
+[class^=sns-].sns-youtube::before {
+background-image: url(/static/portal/img/ico/sns-youtube.svg);
+}
+[class^=sns-].sns-instagram::before {
+background-image: url(/static/portal/img/ico/sns-instagram.svg);
+}
+[class^=sns-].sns-facebook::before {
+background-image: url(/static/portal/img/ico/sns-facebook.svg);
+}
+[class^=sns-].sns-twitter::before {
+background-image: url(/static/portal/img/ico/sns-twitter.svg);
+}
+
+#header {
+position: fixed;
+width: 100%;
+background-color: #fff;
+}
+@media (min-width: 1200px) {
+#header .globalHeader ul {
+border-bottom: 1px solid #d9d9d9;
+}
+#header .globalHeader ul li a {
+position: relative;
+color: #233B76;
+}
+#header .globalHeader ul li a::before {
+content: "";
+display: block;
+position: absolute;
+width: 1px;
+height: 1em;
+background: #B1C1E7;
+top: 50%;
+right: 0;
+transform: translateY(-50%);
+}
+}
+#header .logo {
+display: inline-flex;
+align-items: center;
+}
+#header .logo a {
+height: 60px;
+background-image: url("/static/imer/img/common/logo-blue.png");
+background-repeat: no-repeat;
+background-size: auto 40px;
+}
+@media (-webkit-min-device-pixel-ratio: 2) {
+#header .logo a {
+background-image: url("/static/imer/img/common/logo-blue@2x.png");
+}
+}
+
+@media (min-width: 1200px) {
+.gnb > ul > li > a {
+color: #1A1A1A;
+}
+}
+.gnb .all-nav-toggle::before {
+color: #1C1B1F;
+}
+
+.section1-visual {
+height: 582px;
+background: url(/static/imer/img/main/main-bg.png) center center no-repeat;
+background-size: cover;
+}
+.section1-visual .section1-container {
+max-width: 1728px;
+height: 100%;
+margin: 0 auto;
+}
+.section1-visual .section1-logo > ul {
+padding-top: 48px;
+padding-bottom: 36px;
+justify-content: flex-end;
+gap: 0 12px;
+}
+.section1-visual .section1-txt__tit {
+font-size: 24px;
+font-weight: 700;
+color: #fff;
+}
+.section1-visual .section1-txt__desc {
+margin: 24px 0 94px;
+font-size: 28px;
+line-height: 1.1;
+}
+.section1-visual .section1-txt__desc em {
+font-size: 44px;
+}
+.section1-visual .swiper .swiper-slide {
+position: relative;
+background-size: cover;
+background-attachment: fixed;
+}
+.section1-visual .swiper__ctrl {
+position: absolute;
+left: 112px;
+top: 569px;
+z-index: 100;
+display: flex;
+flex-direction: row;
+align-items: center;
+}
+.section1-visual .swiper__ctrl .swiper-pagination-bullet {
+width: 20px;
+height: 20px;
+background-color: #fff;
+opacity: 1;
+transform: translateY(3px);
+}
+.section1-visual .swiper__ctrl .swiper-pagination-bullet-active {
+width: 48px;
+border-radius: 100px;
+background: var(--CI_blue, #15b4df);
+}
+.section1-visual .swiper__ctrl button {
+width: 36px;
+height: 36px;
+background-color: transparent;
+}
+.section1-visual .swiper__ctrl .section1-visual__swiper-button-stop {
+transform: translateY(3px);
+}
+.section1-visual .swiper .swiper-pagination {
+position: static;
+color: rgba(255, 255, 255, 0.7);
+font-size: 1.6875rem;
+font-weight: 300;
+}
+.section1-visual .swiper .swiper-pagination-current {
+color: #39A0FF;
+font-weight: 700;
+font-size: 2.25rem;
+}
+.section1-visual .swiper .swiper-pagination span {
+display: inline-block;
+padding: 0 10px;
+}
+/*# sourceMappingURL=../maps/main.css.map */
