@@ -5,15 +5,15 @@ $link-color    : #222;
 $red:        #e24b44;
 $point:      #131547;   //확정
 $white:      #fff;
-$black       : #000;  //임시 지정
+$black       : #1A1A1A;  //확정
 
 //board list color
-$bd-top-line : 2px solid #000;
-$bd-top-color: #000;
+$bd-top-line : 2px solid #222;  //확정
+$bd-top-color: #E5E5E5;  //
 $bd-color : #d9d9d9;  //임시 지정
 $bd-list-head-color: #000;
 $bd-list-th-bg-color: #f9f9f9;
-$form-bd-color: #ccc;
+$form-bd-color: #D9D9D9;  //확정
 
 
 //임시 지정 (삭제 해도됨 form.scss)
@@ -21,7 +21,7 @@ $form-height : 100px;
 $grayblue : blue;
 
 //board view color
-$cell-title-color: #f9f9f9;
+$cell-title-color: #E5E5E5;
 
 //sh
 $sh-bg-color: #eef5fb;

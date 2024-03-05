@@ -7,6 +7,8 @@
 	<link type="text/css" rel="stylesheet" href="/static/portal/css/sub.css">
 	<script src="/static/jslibrary/jquery-3.5.1.min.js"></script>
 	<script src="/static/jslibrary/jquery.cookie.js"></script>
+	<script src="/static/portal/js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+	<link rel="stylesheet" href="/static/portal/js/scrollbar/jquery.mCustomScrollbar.min.css" />
 	<link rel="stylesheet" href="/static/jslibrary/swiper@8/swiper-bundle.min.css">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta property="og:type"			content="website">
@@ -864,7 +866,7 @@
 
 
 
-<div class="db">
+<div class="sh-db">
 	<div class="db-search">
 		<p class="t">총 <strong>1590</strong>건</p>
 		<div class="search-box">
@@ -878,7 +880,7 @@
 		</div>
 	</div>
 	<div class="check-list">
-		<h2 class="sr-only">뉴스 및 자료 대분류 검색</h2>
+		<h2 class="sr-only">뉴스 및 자료 유형 검색</h2>
 		<h3>유형</h3>
 		<button type="button" class="check-ctrl " onclick="$(this).toggleClass('active')">유형 선택</button>
 		<div class="check-box">
@@ -887,228 +889,169 @@
 		</div>
 		<div class="label-list">
 			<label>
-				<input type="checkbox" name="" id="type1">
+				<input type="checkbox" name="" id="m-01">
 				<i></i>
 				<span>뉴스 및 의사록</span>
 			</label>
 			<label>
-				<input type="checkbox" name="" id="type2">
+				<input type="checkbox" name="" id="m-02">
 				<i></i>
 				<span>공지사항</span>
 			</label>
 			<label>
-				<input type="checkbox" name="" id="type3">
+				<input type="checkbox" name="" id="m-03">
 				<i></i>
 				<span>주요행사</span>
 			</label>
 			<label>
-				<input type="checkbox" name="" id="type4">
+				<input type="checkbox" name="" id="m-04">
 				<i></i>
 				<span>한은소식</span>
 			</label>
 			<label>
-				<input type="checkbox" name="" id="type5">
+				<input type="checkbox" name="" id="m-05">
 				<i></i>
 				<span>간행물</span>
 			</label>
 			<label>
-				<input type="checkbox" name="" id="type6">
+				<input type="checkbox" name="" id="m-06">
 				<i></i>
 				<span>연구자료</span>
 			</label>
 			<label>
-				<input type="checkbox" name="" id="type7">
+				<input type="checkbox" name="" id="m-07">
 				<i></i>
 				<span>지역연구 자료</span>
 			</label>
 			<label>
-				<input type="checkbox" name="" id="type8">
+				<input type="checkbox" name="" id="m-08">
 				<i></i>
 				<span>국외 사무소 자료</span>
 			</label>
 		</div>
 	</div>
 
-	<div class="check-list details" style="display: none;"> <!-- style="display: none;"-->
-		<h2 class="sr-only">뉴스 및 자료 소분류 검색</h2>
+	<div class="check-list details"> <!-- style="display: none;"-->
+		<h2 class="sr-only">뉴스 및 자료 분류 검색</h2>
 		<h3>분류</h3>
 		<button type="button" class="check-ctrl " onclick="$(this).toggleClass('active')">분류 선택</button>
-		<div class="label-list">
-			
-			<label>
-				<input type="checkbox" name="menu_all" id="menu_all">
-				<i></i>
-				<span>전체</span>
-				<span class="num">99</span>
-			</label>
-
+		
+		<div class="details-list">
 			<!-- 뉴스 및 의사록 -->
-			<label>
-				<input type="checkbox" name="menu01" id="">
-				<i></i>
-				<span>보도자료</span>
-				<span class="num">99</span>
-			</label>
-			<label>
-				<input type="checkbox" name="menu01" id="">
-				<i></i>
-				<span>주간보도계획</span>
-				<span class="num">99</span>
-			</label>
-			<label>
-				<input type="checkbox" name="menu01" id="">
-				<i></i>
-				<span>언론보도해명자료</span>
-				<span class="num">99</span>
-			</label>
-			<label>
-				<input type="checkbox" name="menu01" id="">
-				<i></i>
-				<span>금융통화위원회 의사록</span>
-				<span class="num">99</span>
-			</label>
-			<label>
-				<input type="checkbox" name="menu01" id="">
-				<i></i>
-				<span>금융통화위원회 의결사항</span>
-				<span class="num">99</span>
-			</label>
+			<h4 class="sr-only">뉴스 및 의사록</h4>
+			<ul class="m-01">
+				<li>
+					<button>보도자료</button>
+				</li>
+				<li>
+					<button>주간보도계획</button>
+				</li>
+				<li>
+					<button>언론보도해명자료</button>
+				</li>
+				<li>
+					<button>금융통화위원회 의사록</button>
+				</li>
+				<li>
+					<button>금융통화위원회 의결사항</button>
+				</li>
+			</ul>
 			<!-- //뉴스 및 의사록 -->
 
 			<!-- 공지사항 -->
-			<label>
-				<input type="checkbox" name="menu02" id="">
-				<i></i>
-				<span>공지사항</span>
-				<span class="num">99</span>
-			</label>
+			<h4 class="sr-only">공지사항</h4>
+			<ul class="m-02">
+				<li>
+					<button>보도자료</button>
+				</li>
+			</ul>
 			<!-- //공지사항 -->
 
-			
 			<!-- 주요행사 -->
-			<label>
-				<input type="checkbox" name="menu03" id="">
-				<i></i>
-				<span>주요행사</span>
-				<span class="num">99</span>
-			</label>
+			<h4 class="sr-only">주요행사</h4>
+			<ul class="m-03">
+				<li>
+					<button>주요행사</button>
+				</li>
+			</ul>
 			<!-- //주요행사 -->
 
 			<!-- 한은소식 -->
-			<label>
-				<input type="checkbox" name="menu04" id="">
-				<i></i>
-				<span>한은소식</span>
-				<span class="num">99</span>
-			</label>
+			<h4 class="sr-only">한은소식</h4>
+			<ul class="m-04">
+				<li>
+					<button>한은소식</button>
+				</li>
+			</ul>
 			<!-- //한은소식 -->
 
-			
 			<!-- 간행물 -->
-			<label>
-				<input type="checkbox" name="menu05" id="">
-				<i></i>
-				<span>BOK이슈노트</span>
-				<span class="num">99</span>
-			</label>
-			<label>
-				<input type="checkbox" name="menu05" id="">
-				<i></i>
-				<span>BOK경제연구</span>
-				<span class="num">99</span>
-			</label>
-			<label>
-				<input type="checkbox" name="menu05" id="">
-				<i></i>
-				<span>해외경제포커스</span>
-				<span class="num">99</span>
-			</label>
-			<label>
-				<input type="checkbox" name="menu05" id="">
-				<i></i>
-				<span>연차보고서</span>
-				<span class="num">99</span>
-			</label>
-			<label>
-				<input type="checkbox" name="menu05" id="">
-				<i></i>
-				<span>통화신용정책보고서</span>
-				<span class="num">99</span>
-			</label>
-			<label>
-				<input type="checkbox" name="menu05" id="">
-				<i></i>
-				<span>금융안정보고서</span>
-				<span class="num">99</span>
-			</label>
-			<label>
-				<input type="checkbox" name="menu05" id="">
-				<i></i>
-				<span>경제전망보고서</span>
-				<span class="num">99</span>
-			</label>
-			<label>
-				<input type="checkbox" name="menu05" id="">
-				<i></i>
-				<span>지역경제보고서</span>
-				<span class="num">99</span>
-			</label>
-			<label>
-				<input type="checkbox" name="menu05" id="">
-				<i></i>
-				<span>지급결제보고서</span>
-				<span class="num">99</span>
-			</label>
-			<label>
-				<input type="checkbox" name="menu05" id="">
-				<i></i>
-				<span>정기간행물</span>
-				<span class="num">99</span>
-			</label>
-			<label>
-				<input type="checkbox" name="menu05" id="">
-				<i></i>
-				<span>단행본</span>
-				<span class="num">99</span>
-			</label>
+			<h4 class="sr-only">간행물</h4>
+			<ul class="m-05">
+				<li>
+					<button>BOK이슈노트</button>
+				</li>
+				<li>
+					<button>BOK경제연구</button>
+				</li>
+				<li>
+					<button>해외경제포커스</button>
+				</li>
+				<li>
+					<button>연차보고서</button>
+				</li>
+				<li>
+					<button>통화신용정책보고서</button>
+				</li>
+				<li>
+					<button>금융안정보고서</button>
+				</li>
+				<li>
+					<button>경제전망보고서</button>
+				</li>
+				<li>
+					<button>지역경제보고서</button>
+				</li>
+				<li>
+					<button>지급결제보고서</button>
+				</li>
+				<li>
+					<button>정기간행물</button>
+				</li>
+				<li>
+					<button>단행본</button>
+				</li>
+			</ul>
 			<!-- //간행물 -->
 
-	
 			<!-- 연구자료 -->
-			<label>
-				<input type="checkbox" name="menu06" id="">
-				<i></i>
-				<span>통화정책</span>
-				<span class="num">99</span>
-			</label>
-			<label>
-				<input type="checkbox" name="menu06" id="">
-				<i></i>
-				<span>금융안정</span>
-				<span class="num">99</span>
-			</label>
-			<label>
-				<input type="checkbox" name="menu06" id="">
-				<i></i>
-				<span>지급결제</span>
-				<span class="num">99</span>
-			</label>
-			<label>
-				<input type="checkbox" name="menu06" id="">
-				<i></i>
-				<span>통계</span>
-				<span class="num">99</span>
-			</label>
-			<label>
-				<input type="checkbox" name="menu06" id="">
-				<i></i>
-				<span>북한경제 등</span>
-				<span class="num">99</span>
-			</label>
+			<h4 class="sr-only">연구자료</h4>
+			<ul class="m-06">
+				<li>
+					<button>통화정책</button>
+				</li>
+				<li>
+					<button>금융안정</button>
+				</li>
+				<li>
+					<button>지급결제</button>
+				</li>
+				<li>
+					<button>통계</button>
+				</li>
+				<li>
+					<button>북한경제 등</button>
+				</li>
+			</ul>
 			<!-- //연구자료 -->
-
 			
-			<!-- 지역연구 자료 -->
+		</div>
+
+
+<!--
+		<div class="label-list">
+						
+			 지역연구 자료
 			<label>
 				<input type="checkbox" name="menu07" id="">
 				<i></i>
@@ -1145,10 +1088,10 @@
 				<span>주력산업 모니터링 보고서</span>
 				<span class="num">99</span>
 			</label>
-			<!-- //지역연구 자료 -->
+			 //지역연구 자료 
 
 			
-			<!-- 국외 사무소 자료 -->
+			 국외 사무소 자료
 			<label>
 				<input type="checkbox" name="menu08" id="">
 				<i></i>
@@ -1197,15 +1140,15 @@
 				<span>상해</span>
 				<span class="num">99</span>
 			</label>
-			<!-- //국외 사무소 자료 -->
+			//국외 사무소 자료
 		
 				
 		</div>
-
+-->	
 		
 	</div>
 	<div class="Keyword">
-		<h3>Keyword</h3>
+		<h3>키워드</h3>
 		<ul>
 			<li><a href="">금리</a></li>
 			<li><a href="">한국은행</a></li>
@@ -1323,7 +1266,49 @@
 
 </div>
 
-
+<!-- 만족도 -->
+<div class="admin-set">
+	<div class="satisfact">
+		<p class="title">유용한 정보가 되었나요?</p>
+		<div class="radio-group">
+			<label for="sati1">
+				<input type="radio" name="stsfdgIdex" id="sati1">
+				<i></i>
+				<span>매우만족</span>
+			</label>
+			<label for="sati2">
+				<input type="radio" name="stsfdgIdex" id="sati2">
+				<i></i>
+				<span>만족</span>
+			</label>
+			<label for="sati3">
+				<input type="radio" name="stsfdgIdex" id="sati3">
+				<i></i>
+				<span>보통</span>
+			</label>
+			<label for="sati4">
+				<input type="radio" name="stsfdgIdex" id="sati4">
+				<i></i>
+				<span>불만족</span>
+			</label>
+			<label for="sati5">
+				<input type="radio" name="stsfdgIdex" id="sati5">
+				<i></i>
+				<span>매우불만족</span>
+			</label>
+		</div>
+		<button>확인</button>
+	</div>
+	<div class="info">
+		<dl>
+			<dt>담당부서</dt>
+			<dd>기획협력국 전략기획팀</dd>
+			<dt class="sr-only">전화번호</dt>
+			<dd>02-759-4507</dd>
+		</dl>
+	</div>
+</div>
+<!-- //만족도 -->
 
 			<!-- 내가 본 콘텐츠	-->
 			<div class="my_memo">

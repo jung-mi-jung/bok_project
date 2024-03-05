@@ -87,94 +87,271 @@
 	}
 }
 
-.bd-view {
-	@include dl-table;
-	.subject {
-		font-weight: 400;
-		font-size: 18px !important;
-		//text-align: center;
-		padding: 16px 20px;
-		margin-bottom: 0 !important;
-		border-bottom: 1px solid $bd-color;
-		background-color: $bd-list-th-bg-color;
-	}
-	&.type-dt-length-2 {
-		> dl {
-			> dt {
-				@include breakpoint($md){
-					width: 200px;
-				}				
-			}
-		}
-	}
-}
 
-// 뷰 네비게이션
-.bd-view-nav {
-	border-top: $bd-top-line;
-	border-bottom: $bd-top-line;
-	@include clearfix;
-	dl + dl {
-		border-top: 1px solid $bd-color;
-	}
-	dl {
-		height: 50px;
-		display: table;
-		table-layout: fixed;
-		width: 100%;
-		> * {
-			display: table-cell;
-			vertical-align: top;
-			line-height: 36px;
-		}
-		dt {
-			position: relative;
-			width: 130px;
-			font-size: 16px;
+@mixin dataInfoSet {	
+	display: flex;
+	justify-content: space-between;
+	margin: 10px 0 14px;
+	.dataInfo {
+		position: absolute;
+		top: -27px;
+		right: 0;
+		display: flex;
+		color: #666;
+		.ass {
+			color: #3B63C4;
 			font-weight: 500;
-			letter-spacing: -0.24px;
-			text-align: center;
-			padding: 7px 0;
-			border-right: 1px solid $bd-color;
+		}
+		.date {
 			&::before {
 				content: "";
 				display: inline-block;
 				vertical-align: middle;
-				width: 9px;
-				height: 5px;
-				margin-right: 7px;
-				background: url(/static/aieth/img/ico/bu-bd-view-nav.png);
-			}
-			@include breakpoint($sm) {
-				width: 90px;
+				width: 16px;
+				height: 16px;
+				background: url(/static/portal/img/ico/ico-date.png);
+				margin-right: 5px;
 			}
 		}
-		dd {
-			color: 
-			#757575;
-			letter-spacing: -0.24px;
-			padding: 7px 0 7px 20px;
-			span {
-				@include ellipsis;
-				width: 100%;
+		.hits {
+			&::before {
+				content: "";
+				display: inline-block;
 				vertical-align: middle;
-				font-weight: 300;
-			}
-			a {
-				color: #000;
-				@include ellipsis;
-				display: block;
-				width: calc(100% - 20px);
+				width: 14px;
+				height: 16px;
+				background: url(/static/portal/img/ico/ico-hits.png);
+				margin-right: 5px;
 			}
 		}
-		&:last-child {
-			dt::before {
-				transform: rotate(180deg);
+		dt + dd {
+			&::after {
+				content: "";
+				display: inline-block;
+				vertical-align: middle;
+				width: 1px;
+				height: 16px;
+				background-color: #D9D9D9;
+				margin: 0 16px;
+			}
+			&:last-child {
+				&::after {
+					display: none;
+				}
 			}
 		}
 	}
+	.keyword {
+		display: flex;
+		a {
+			display: inline-block;
+			padding: 1px 11px;
+			color: #666;
+			font-size: rem(14);
+			border-radius: 30px;
+			border: 1px solid #C2C2C2;
+			&:hover {
+				color: #fff;
+				background-color: #3B63C4;
+				border: 1px solid #3B63C4;
+			}
+		}
+	}
+	.user {
+		&::before {
+			content: "";
+			display: inline-block;
+			vertical-align: middle;
+			width: 18px;
+			height: 16px;
+			background: url(/static/portal/img/ico/ico-user.png);
+			margin-right: 5px;
+		}
+	}
+}
+.bd-view {
+	position: relative;
+	//@include dl-table;	
+	.subject {
+		color: $black;
+		font-weight: 400;
+		font-size: rem(36) !important;
+	}
+	.dataInfoSet {
+		@include dataInfoSet();
+	}	
+	.down {		
+		border-top: 2px solid #000;
+		background-color: #FAFAFA;
+		padding: 10px 14px;
+		border-bottom: 1px solid #E5E5E5;
+		dd {
+			display: flex;
+			justify-content: space-between;
+		}
+		a {
+			color: $black;
+			&::before {
+				content: "";
+				display: inline-block;
+				vertical-align: middle;
+				width: 15px;
+				height: 19px;
+				background: url(/static/portal/img/ico/ico-down.png) no-repeat;
+				margin-right: 5px;
+			}
+		}
+		
+	}
+	.videoSet {
+		padding: 30px 0;
+		width: 1280px;
+		max-width: 100%;
+		margin: 0 auto;
+		.video {
+			.video-js {
+				&.vjs-4-3 {
+					padding-top: 56.2%;
+				}
+				
+
+				.video-js .vjs-big-play-button
+				.vjs-big-play-button .vjs-icon-placeholder:before {
+					content: "";
+					display: inline-block;
+					width: 64px;
+					height: 64px;
+					background: url(/static/portal/img/common/video-play.png) no-repeat;
+			
+				
+				}
+				&:hover .vjs-big-play-button, 
+				.vjs-big-play-button:focus {
+					background-color: transparent;
+				}
+			}
+			&-etc {
+				padding: 18px 0 30px;
+				display: flex;
+				justify-content: space-between;
+				width: 100%;
+				.help {					
+					color: #4D4D4D;
+					&::before {
+						@include font-ico-outline('\e88e');
+						font-size: 24px;
+						margin-right: 8px;
+					}
+				}
+				.btn-go {
+					color: #3B63C4;
+					&::after {
+						@include font-ico-outline('\e315');
+						font-size: 18px;
+						color: #3B63C4;
+						margin: 0 0 1px 5px;
+					}
+				}
+			}
+		}		
+		.subtitle,
+		.detail {			
+			position: relative;
+			color: #4D4D4D;
+			border: 1px solid #E5E5E5;
+			border-radius: 8px;
+			button {
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 55px;
+				height: 48px;
+				line-height: 48px;
+				text-align: center;
+				
+				&::before {
+					@include font-ico-outline('\e5cf');
+					width: 24px;
+					height: 24px;
+					background-color: #1A1A1A;
+					border-radius: 4px;
+					font-size: 24px;
+					color: #fff;
+				}
+				&.active {
+					&::before {
+						@include font-ico("\e5cd");
+						font-size: 24px;
+						color: #354052;
+						background-color: transparent;
+					}
+					& + .con {
+						display: block;
+						border-top: 1px solid #E5E5E5; 
+						.mCustomScrollBox {
+							padding: 15px;
+							background-color: #FAFAFA;
+							border-radius: 0 0 8px 8px;
+							max-height: 360px !important;
+						}
+					}
+				}
+			}
+			h3 {
+				color: #1A1A1A;
+				font-weight: 400;
+				font-size: rem(18);
+				padding: 10px 25px;
+				
+			}	
+			.con {
+				display: none;
+			}		
+		}
+		.detail {
+			margin-top: 30px;
+		}
+		.scrollY {
+			overflow-y: auto;
+			overflow-x: hidden;
+			padding: 15px;
+			background-color: #FAFAFA;
+			border-radius: 0 0 8px 8px;
+			max-height: 360px;
+		}
+	}	
 }
 
+.bd-blog {
+	position: relative;
+	.img-box {
+		margin: 20px 0 30px;
+		.img {
+			padding-top: 21.4%;
+		}
+	}
+	.subject {
+		color: $black;
+		font-weight: 400;
+		font-size: rem(32) !important;
+	}
+	.dataInfoSet {
+		@include dataInfoSet();
+		.dataInfo {
+			top: -56px;
+		}
+	}
+	.dbdata {
+		margin-top: 30px;
+		border-top: 2px solid #000;
+	}
+}
+
+
+
+
+
+/* 아직 아래 안씀 */
 .reg {
 	@include dl-table;
 	> dl {
