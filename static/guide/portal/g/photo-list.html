@@ -51,6 +51,40 @@ $(function () {
 
 
 
+	$(".m-01 button").click(function(){
+		$("#m-01").prop("checked", true)
+		$("#m-02").prop("checked", false)
+		$("#m-03").prop("checked", false)
+
+		$(".m-02").hide()
+		$(".m-03").hide()
+	});
+
+	$(".m-02 button").click(function(){
+		$("#m-01").prop("checked", false)
+		$("#m-02").prop("checked", true)
+		$("#m-03").prop("checked", false)
+
+		$(".m-01").hide()
+		$(".m-03").hide()
+	});
+
+	$(".m-03 button").click(function(){
+		$("#m-01").prop("checked", false)
+		$("#m-02").prop("checked", false)
+		$("#m-03").prop("checked", true)
+
+		$(".m-01").hide()
+		$(".m-02").hide()
+	});
+
+	$("[class^=m-0]").click(function(){
+		$(".check-list input").attr("disabled", "disabled")
+		$(".check-list input").css("cursor", "default")
+	});
+
+
+
 	
 	//depth3 있는 경우 아이콘 추가
 	$(".details-list .sub-m").prev("button").addClass("bu")
@@ -62,8 +96,8 @@ $(function () {
 
 	$('.details-list').each(function(index) {
 		$(".details-list button").click(function(){
-			$(this).addClass("active").parents().find(".details-list").children().find(".sm-b").removeClass("active");
-			$(this).addClass("active").parents().find(".details-list").children().find(".sm-b").css("", "");			
+			$(this).addClass("active").parents().find(".details-list").children().find("button").removeClass("active");
+			$(this).addClass("active").parents().find(".details-list").children().find("button").css("", "");			
 			if ($(this).hasClass('active')){
 				$(this).attr("title", "선택됨");
 			} else {
@@ -104,8 +138,8 @@ $(function () {
 		<h3>유형</h3>
 		<button type="button" class="check-ctrl " onclick="$(this).toggleClass('active')">유형 선택</button>
 		<div class="check-box">
-			<span>간행물 <span class="ico-del"><span class="sr-only">삭제</span></span></span>
-			<span>한은소식 <span class="ico-del"><span class="sr-only">삭제</span></span></span>
+			
+			
 		</div>
 		<div class="label-list">
 			<label>
@@ -135,61 +169,61 @@ $(function () {
 			<div class="m-01">
 				<ul >
 					<li>
-						<button class="sm-b">총재기자간담회</button>
+						<button type="button">총재기자간담회</button>
 						<!--class="active"-->
 						<ul class="sub-m">
 							<li>
-								<button class="sm-b">통화정책</button>
+								<button type="button">통화정책</button>
 							</li>
 						</ul>
 					</li>
 					<li>
-						<button class="sm-b">보도자료설명회</button>
+						<button type="button">보도자료설명회</button>
 						<ul class="sub-m">
 							<li>
-								<button class="sm-b">통계</button>
+								<button type="button">통계</button>
 							</li>
 						</ul>
 					</li>
 					<li>
-						<button class="sm-b">주요 행사 및 강연</button>
+						<button type="button">주요 행사 및 강연</button>
 					</li>
 					<li>
-						<button class="sm-b">홍보기획영상</button>
+						<button type="button">홍보기획영상</button>
 					</li>
 					<li>
-						<button class="sm-b">경제교육</button>
+						<button type="button">경제교육</button>
 						<ul class="sub-m">
 							<li>
-								<button class="sm-b">어린이</button>
+								<button type="button">어린이</button>
 							</li>
 							<li>
-								<button class="sm-b">청소년</button>
+								<button type="button">청소년</button>
 							</li>
 							<li>
-								<button class="sm-b">교사</button>
+								<button type="button">교사</button>
 							</li>
 							<li>
-								<button class="sm-b">일반인</button>
+								<button type="button">일반인</button>
 							</li>
 							<li>
-								<button class="sm-b">금요강좌</button>
+								<button type="button">금요강좌</button>
 							</li>
 						</ul>
 					</li>
 					<li>
-						<button class="sm-b">공모 수상작</button>
+						<button type="button">공모 수상작</button>
 						<ul class="sub-m">
 							<li>
-								<button class="sm-b">화폐사랑 콘텐츠(동영상)</button>
+								<button type="button">화폐사랑 콘텐츠(동영상)</button>
 							</li>
 							<li>
-								<button class="sm-b">통화정책 경시대회</button>
+								<button type="button">통화정책 경시대회</button>
 							</li>
 						</ul>
 					</li>
 					<li>
-						<button class="sm-b">외환신고안내</button>
+						<button type="button">외환신고안내</button>
 					</li>
 				</ul>
 				<!-- li 가 10개 이상일 경우 전체보기 버튼 보이기 -->
@@ -202,16 +236,16 @@ $(function () {
 			<div class="m-02">
 				<ul>
 					<li>
-						<button class="sm-b">인포그래픽</button>
+						<button type="button">인포그래픽</button>
 					</li>
 					<li>
-						<button class="sm-b">화폐홍보</button>
+						<button type="button">화폐홍보</button>
 					</li>
 					<li>
-						<button class="sm-b">경제교육</button>
+						<button type="button">경제교육</button>
 					</li>
 					<li>
-						<button class="sm-b">공모 수상작</button>
+						<button type="button">공모 수상작</button>
 					</li>
 				</ul>
 				<button type="button" class="btn-view">전체보기</button>
@@ -222,7 +256,7 @@ $(function () {
 			<h4 class="sr-only">웹툰</h4>
 			<div class="m-03">
 				<ul class="">
-					<li><button class="sm-b">경제교육웹툰</button></li>
+					<li><button type="button">경제교육웹툰</button></li>
 				</ul>
 				<button type="button" class="btn-view">전체보기</button>
 			</div>

@@ -227,8 +227,8 @@ var sprite = function () {
 	watch('static/kias/img/sprite/*.png', { events: 'all' }, function (cb) {
 		// body omitted
 		// Generate our spritesheet
-		var path = 'static/kias/img/sprite/';
-		var site = 'kias';
+		var path = 'static/portal/img/sprite/';
+		var site = 'portal';
 		var spriteData = gulp.src(path + '*.png').pipe(
 			spritesmith({
 				// imgName      : 'sprite.png',
@@ -240,7 +240,7 @@ var sprite = function () {
 				// retinaImgName   : 'sprite@2x.png',
 				cssName: 'components/_sprite.scss',
 				padding: 20, //이미지와의 간격
-				imgPath: '/static/kias/img/sprite.png', //scss에서 사용하는 background-img url
+				imgPath: '/static/portal/img/sprite.png', //scss에서 사용하는 background-img url
 			})
 		);
 		// Pipe image stream through image optimizer and onto disk
