@@ -1,10 +1,12 @@
 .photo-list {
-	border-top: 2px solid $bd-color;
-	ul {		
+	border-top: 1px solid $bd-color;
+	ul {
+		margin: 0 -10px;
+		padding: 10px 0;
 		li {
 			float: left;
 			width: 33.3%;
-			padding: 10px;
+			padding: 10px 10px 40px;
 			@include breakpoint($sm){
 				width: 100%;
 				& + li {
@@ -12,56 +14,107 @@
 				}
 			}
 			a {
-				.img {
+				display: block;
+				border: 1px solid #E5E5E5;
+				border-radius: 8px;
+				padding: 6px;
+				.img-box {
+					position: relative;
 					display: block;
-					padding-top: 50%;
-					border: 1px solid #eee;
+					margin-bottom: 8px;
+					.img {
+						display: block;
+						padding-top: 56.4%;
+						border: 1px solid #E5E5E5;
+						border-radius: 8px 8px 0 0;
+						.v-ico {
+							&::before {
+								content: "";
+								display: inline-block;
+								width: 48px;
+								height: 48px;
+								background-image: url(/static/portal/img/ico/ico-play2.png);
+								position: absolute;
+								top: 50%;
+								left: 50%;
+								margin-top: -24px;
+								margin-left: -24px;
+								z-index: 1;
+							}
+						}
+					}
+					.p {
+						display: inline-block;
+						//display: flex;
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						padding: 6px 10px;
+						background-color: #fff;
+						border-radius: 0 8px 0 0;
+						color: #3B63C4;
+						font-size: rem(14);
+						i {				
+							display: inline-block;
+							&::before {
+								content: "";
+								display: inline-block;
+								vertical-align: middle;
+								width: 18px;
+								height: 18px;
+								background-position: 50%;
+								background-repeat: no-repeat;
+								margin-right: 4px;
+							}
+						}
+						$icolist: ("i-video", "i-card", "i-webtoon");
+						[class^="i-"] {
+							@each $item in $icolist {
+								&.#{$item} {
+									&::before {
+										background-image: url(/static/portal/img/ico/#{$item}.png);
+									}
+								}
+							}
+						}
+					}
 				}
+				.tit {
+					color: #4d4d4d;
+					font-size: rem(14);
+					padding: 0 10px;
+					span {
+						&.t {
+							color: #3B63C4;
+						}
+						& + span {
+							&::before {
+								content: "";
+								display: inline-block;
+								vertical-align: middle;
+								width: 1px;
+								height: 14px;
+								background-color: #E5E5E5;
+								margin: 0 10px;
+							}
+						}
+					}					
+				}		
 				.title {
 					@include ellipsis;
 					width: 100%;
-					font-size: 18px;
-					font-weight: 600;
+					font-size: rem(18);
+					font-weight: 400;
 					margin: 10px 0 0;
+					padding: 0 10px;
 				}
-			}
-			.s {
-				.g {
-					[class^=state] {
-						font-weight: 600;
-					}
-					.state1 { //접수중
-						color: #66a66c;
-					}
-					.state2 { //온라인예약
-						color: #3685ff;
-					}
-					.state3 { //현장예약
-						color: #9643ff;
-					}
-					span + span {
-						margin-left: 10px;
-					}
-					.local {
-						&::before {
-							content: "";
-							display: inline-block;
-						}
-					}
-					.type {}
+				.date {
+					color: #666;
+					font-size: rem(14);
+					padding: 0 10px;
 				}
-				.lis {
-					display: block;
-					margin-top: 10px;
-					span {
-						display: block;
-						em {
-							display: inline-block;
-							width: 80px;
-						}
-					}
-				}
-			}
+			}			
 		}
+		
 	}
 }

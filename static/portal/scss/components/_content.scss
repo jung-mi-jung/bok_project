@@ -3,6 +3,39 @@
 	font-weight: 500;
 }
 
+.img-box {
+	.img {
+		display: block;
+		height: 1px;
+		//padding-top: 50%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: 50%;
+	}
+}
+
+
+/*.scrollY {
+	.mCSB_scrollTools {
+		width: 8px;
+		.mCSB_draggerRail,
+		.mCSB_dragger .mCSB_dragger_bar {
+			width: 8px;
+		}
+		.mCSB_draggerContainer {
+			width: 8px;
+			background-color: #E5E5E5;
+			border-radius: 8px;
+		}
+	}	
+	.mCS-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+		background-color: #666;
+	}
+	.mCS-dark.mCSB_scrollTools .mCSB_draggerRail{
+		background-color: transparent;
+	}
+}*/
+
 // .swiper-container {
 // 	width: 100%;
 // 	height: auto;

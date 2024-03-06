@@ -463,7 +463,7 @@ $(function () {
 		}
 	});
 	$('.js-pop').attr('title','새창열림');
-	$('.scrolly').attr('tabindex',0);
+	$('.scrolly, .scrollY').attr('tabindex',0);
 
 	//tabs
 	var linka= $(".tabs") // 해당 탭리스트 링크 셀렉트
@@ -556,8 +556,25 @@ $(function() {
 	});
 
 
-	//연관자료 있는 서브
-	$(".refer_right").parent("#main-container").addClass("refer_wrap");
+	// *** 게시판 별도 디자인***
+	// 일반형 게시판 상세
+	$(".bd-view").parents("#content").addClass("bd-view_wrap");
+	// 블로그형 
+	$(".bd-blog").parents("#content").addClass("bd-blog_wrap");
+
+
+	//셀렉트 레이어형 검색 sh-select
+	$(".sh-select .btn_select").click(function(){
+		$(this).toggleClass("on");
+	})
+	$(".sh-select .select-set ul button").click(function(){
+		$(this).parent().parent().prev("button").removeClass("on");
+		$(this).addClass("active").parent().siblings().children("button").removeClass("active");
+	})
+
+
+	//연관자료 있는 서브 (안씀)
+	//$(".refer_right").parent("#main-container").addClass("refer_wrap");
 
 
 	//footer 관련사이트
@@ -618,7 +635,7 @@ $(function() {
 		});
 		$(this).parent().removeClass('open').next().hide();
 	});
-
+/*
 	// focus this position // 	ul>li>a[data-rel^='prettyPhoto']
 	$("[data-rel^='prettyPhoto']").each(function(n){
 		$(this).attr("data-num", n);
@@ -630,8 +647,9 @@ $(function() {
 		animation_speed:'fast', theme:'light_square', slideshow:3000, show_title:false, autoplay_slideshow:false, social_tools:false, allow_resize:false
 		// 타이틀 숨김, 확대보기 (allow_resize:true)
 	});
+*/
 });
-
+/*
 $(function() {
 	$('img').each(function(index, el) {
 		$(this).error(function() {
@@ -642,6 +660,7 @@ $(function() {
 		// console.log($(this))
 	});
 });
+*/
 
 //내가 본 콘텐츠
 $(function () {
@@ -651,8 +670,8 @@ $(function () {
 	});
 	$(".my_memo .close").click(function(){
 		$(".my_memo .swiper.active").removeClass("active");
+		$(".my_memo .btn").focus();
 	});
-
 
 	const swiper = new Swiper('.my_memo .swiper_body', {
 		slidesPerView: 1,
@@ -660,17 +679,11 @@ $(function () {
 			rows: 4,
 		},
 		init: false,
-		//autoHeight : true, // true로 설정하면 슬라이더 래퍼가 현재 활성 슬라이드의 높이에 맞게 높이를 조정합니다
 		freeMode : true, // 슬라이드 넘길 때 위치 고정 여부
-		//centeredSlides : true, // true시에 슬라이드가 가운데로 배치
 		// Optional parameters
 		loop: false,
 		spaceBetween: 0,
-		// slidesPerGroup: 4,
-		spaceBetween: 0,
-		//slidesPerView: 1,
-		// slidesPerColumn: 4,
-		//slidesPerGroup: 1,
+		slidesPerGroup: 4,	//한번에 슬라이딩될 개수
 		navigation: {
 			prevEl: '.memo-prev',
 			nextEl: '.memo-next',
@@ -687,25 +700,17 @@ $(function () {
 		a11y:{
 			enabled:true,
 		},
-		autoplay: false,
-		// autoplay: {
-		// 	delay: 3000,
-		// 	disableOnInteraction: false,
-		// },
+		autoplay: true,
+		autoplay: {
+			delay: 3000,
+			disableOnInteraction: false,
+		},
 		observer: true,
 		observeParents: true,
-		// on: {
-		// 	init: function (v) {
-		// 		var item = $('.my_memo')
-		// 		item.find('.swiper-slide-active').attr('tabindex',0).siblings().attr('tabindex',-1)
-		// 	},
-		// 	slideChangeTransitionEnd:function(){
-		// 		var item = $('.my_memo')
-		// 		item.find('.swiper-slide-active').attr('tabindex',0).siblings().attr('tabindex',-1)
-		// 	}
-		// }
 	});
-	swiper.init();//초기화
-
-	
+	swiper.init();//초기화	
 });
+
+
+// *** 자료형 검색 sh-db ***
+
