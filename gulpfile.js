@@ -41,8 +41,8 @@ function servers() {
 		port: 1989,
 	});
 }
-const scss = ["commons", "portal", "museum", "imer", "imerEng", "eng"];   // museum 화폐박물관	  eng 영문	 imer 경제연구원	 imerEng 경제연구원(영문)
-const projectlist = ["portal", "museum", "imer", "imerEng", "eng"]; // content, lib
+const scss = ["commons", "portal", "museum", "imer", "imerEng", "eng", "bos"];   // museum 화폐박물관	  eng 영문	 imer 경제연구원	 imerEng 경제연구원(영문)
+const projectlist = ["portal", "museum", "imer", "imerEng", "eng", "bos"]; // content, lib
 
 function scssTocss(targets) {
 	gulp.src('static/' + targets + '/scss/**/*.scss')
@@ -92,6 +92,8 @@ function waths() {
 	watchContent('imerEng');
 	watchLibrary('eng');
 	watchContent('eng');
+	watchLibrary('bos');
+	watchContent('bos');
 
 	
 }
@@ -217,30 +219,40 @@ function dist(cb) {
 }
 
 function htmlmerge(cb) {
-	gulp.src('static/guide/kias/lib/*.html').pipe(concat('all.html')).pipe(headerfooter.header('static/guide/kias/top.html')).pipe(headerfooter.footer('static/guide/kias/bottom.html')).pipe(gulp.dest('static/guide/kias/'));
+	gulp
+	.src('static/guide/museum/lib/*.html')
+		.pipe(concat('all.html'))
+		.pipe(headerfooter.header('static/guide/museum/top.html'))
+		.pipe(headerfooter.footer('static/guide/museum/bottom.html'))
+		.pipe(gulp.dest('static/guide/museum/'));
 	cb();
 }
 
-var sprite = function () {
+var sprite = async function () {
 	console.log('sprite watching start!');
 	// All events will be watched
-	watch('static/kias/img/sprite/*.png', { events: 'all' }, function (cb) {
+	watch('static/museum/sprite/*.png', { events: 'all' }, function (cb) {
 		// body omitted
 		// Generate our spritesheet
-		var path = 'static/kias/img/sprite/';
-		var site = 'kias';
+		var path = 'static/museum/sprite/';
+		var site = 'museum';
 		var spriteData = gulp.src(path + '*.png').pipe(
 			spritesmith({
 				// imgName      : 'sprite.png',
 				// cssName      : 'sprite.scss'
 				// This will filter out `fork@2x.png`, `github@2x.png`, ... for our retina spritesheet
 				// The normal spritesheet will now receive `fork.png`, `github.png`, ...
-				//		retinaSrcFilter : path+'*@2x.png',
-				imgName: 'sprite.png',
-				// retinaImgName   : 'sprite@2x.png',
-				cssName: 'components/_sprite.scss',
+				retinaSrcFilter: path + "*@2x.png",
+				imgName: "sprite.png",
+				retinaImgName: "sprite@2x.png",
+				cssName: "_sprite.scss",
 				padding: 20, //이미지와의 간격
-				imgPath: '/static/kias/img/sprite.png', //scss에서 사용하는 background-img url
+
+				//scss에서 사용하는 background-img url
+				imgPath: `/static/${site}/img/sprite.png`,
+
+				//scss에서 사용하는 background-img url
+				retinaImgPath: `/static/${site}/img/sprite@2x.png`,
 			})
 		);
 		// Pipe image stream through image optimizer and onto disk
@@ -262,23 +274,28 @@ var sprite = function () {
 var spriteMain = function () {
 	console.log('sprite watching start!');
 	// All events will be watched
-	watch('static/ussm/img/sprite-main/*.png', { events: 'all' }, function (cb) {
+	watch('static/museum/sprite/*.png', { events: 'all' }, function (cb) {
 		// body omitted
 		// Generate our spritesheet
-		var path = 'static/ussm/img/sprite-main/';
+		var path = 'static/museum/sprite/';
 		var site = 'ussm';
 		var spriteData = gulp.src(path + '*.png').pipe(
-			spritesmith({
+			sspritesmith({
 				// imgName      : 'sprite.png',
 				// cssName      : 'sprite.scss'
 				// This will filter out `fork@2x.png`, `github@2x.png`, ... for our retina spritesheet
 				// The normal spritesheet will now receive `fork.png`, `github.png`, ...
-				//		retinaSrcFilter : path+'*@2x.png',
-				imgName: 'sprite-main.png',
-				// retinaImgName   : 'sprite@2x.png',
-				cssName: '_sprite_main.scss',
+				retinaSrcFilter: path + "*@2x.png",
+				imgName: "sprite.png",
+				retinaImgName: "sprite@2x.png",
+				cssName: "_sprite.scss",
 				padding: 20, //이미지와의 간격
-				imgPath: '/static/ussm/img/sprite-main.png', //scss에서 사용하는 background-img url
+
+				//scss에서 사용하는 background-img url
+				imgPath: `/static/${site}/img/sprite.png`,
+
+				//scss에서 사용하는 background-img url
+				retinaImgPath: `/static/${site}/img/sprite@2x.png`,
 			})
 		);
 		// Pipe image stream through image optimizer and onto disk
