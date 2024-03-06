@@ -1,15 +1,14 @@
 $(function () {
     link = [
-		//'200183',		
-		//'200184',
-		//'200196', //예외처리
+        // '200781',
+        
     ]
     link.forEach(element => {
         let _s = element.split('/')
         if (_s.length > 1) {
             // dist 폴더에 없는 파일들에 대한 예외 처리
             $('td:contains("' + _s[1] + '")').addClass('ok')
-            url = `/static/guide/portal/${element}.html`;
+            url = `/static/guide/museum/${element}.html`;
             try {
                 $.ajax({
                     url: url,

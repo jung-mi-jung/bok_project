@@ -115,7 +115,7 @@
 			}		
 		}
 	}
-	.b-type {
+	&.b-type {
 		ul {		
 			li {
 				position: relative;
@@ -123,20 +123,27 @@
 				@include breakpoint($sm){
 					padding: 15px 8px 10px;
 				}
-				&::before {
-					content: "";
-					display: inline-block;
-					width: 48px;
-					height: 48px;
-					position: absolute;
-					top: 50%;
-					right: 15px;
-					margin-top: -24px;
-					background: url(/static/portal/img/common/arr01_off.png) 50% no-repeat;
-					@include breakpoint($sm){
-						display: none;
+				a {
+					&::before {
+						content: "";
+						display: inline-block;
+						width: 48px;
+						height: 48px;
+						position: absolute;
+						top: 50%;
+						right: 15px;
+						margin-top: -24px;
+						background: url(/static/portal/img/common/arr01_off.png) 50% no-repeat;
+						@include breakpoint($sm){
+							display: none;
+						}
 					}
-				}
+					&:hover {
+						&::before {
+							background: url(/static/portal/img/common/arr01_on.png) 50% no-repeat;
+						}
+					}
+				}				
 			}
 		}
 	}	

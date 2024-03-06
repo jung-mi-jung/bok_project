@@ -1,33 +1,13 @@
 $(function () {
+	$(".progress").addClass("first");
 
-	const section1Visual = new Swiper('.section1-visual', {
-		// Optional parameters
-		// direction: 'vertical',
-		loop: true,
-		speed: 1500,
+	//메인 비쥬얼 영역 swiper 설정
+	var section1Visual = new Swiper('.section1-visual', {
+		speed: 1000,
 		autoplay: {
-			delay: 20000, // 시간 설정
-			disableOnInteraction: false, // false-스와이프 후 자동 재생
-			loop: true, //무한반복 할지말지,
-			// loop: false, //무한반복 할지말지,
-
+			delay: 5000,
+			disableOnInteraction: false,
 		},
-		grabCursor: true,
-		effect: "creative",
-		creativeEffect: {
-			prev: {
-				shadow: true,
-				origin: "left center",
-				translate: ["-5%", 0, -200],
-				rotate: [0, 100, 0],
-			},
-			next: {
-				origin: "right center",
-				translate: ["5%", 0, -200],
-				rotate: [0, -100, 0],
-			},
-		},
-		// 
 		grabCursor: true,
 		effect: "creative",
 		creativeEffect: {
@@ -39,110 +19,248 @@ $(function () {
 				translate: ["100%", 0, 0],
 			},
 		},
-
-		// Navigation arrows
 		navigation: {
 			nextEl: '.section1-visual__swiper-button-next',
 			prevEl: '.section1-visual__swiper-button-prev',
 		},
 		pagination: {
-			el: '.swiper-pagination',
+			el: '.pagination_fraction',
 			type: "fraction",
+			formatFractionCurrent: function (number) {
+				return ('0' + number).slice(-2);
+			},
+			formatFractionTotal: function (number) {
+				return ('0' + number).slice(-2);
+			},
+			renderFraction: function (currentClass, totalClass) {
+				return '<span class="' + currentClass + '"></span>' + '<span class="' + totalClass + '"></span>';
+			}
 		},
-		/*pagination: {   // 페이저 버튼 사용자 설정
-			el: '.section1-visual-paging',  // 페이저 버튼을 담을 태그 설정
-			clickable: false,  // 버튼 클릭 여부
-			type: 'bullets', // 버튼 모양 결정 "bullets", "fraction" 
-			// renderBullet: function (index, className) {  // className이 기본값이 들어가게 필수 설정
-			//     return '<a href="#" class="' + className + '">' + (index + 1) + '</a>'
-			// },
-			renderFraction: function (currentClass, totalClass) { // type이 fraction일 때 사용
-			    return '<span class="' + currentClass + '"></span>' + '<span class="' + totalClass + '"></span>';
-			// }
-		},*/
-		// nextSlideMessage: '다음'
-		a11y: { // 웹접근성 
+		a11y: {
 			enabled: true,
 			prevSlideMessage: '이전 슬라이드',
 			nextSlideMessage: '다음 슬라이드',
 			slideLabelMessage: '총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.',
 		},
 	});
-
-	
-
-	const swiper = new Swiper('.notice-ad__swiper', {
-		// Optional parameters
-		// direction: 'vertical',
-		loop: true,
-
-
-
-		// Navigation arrows
-		navigation: {
-			nextEl: '.notice-ad__swiper-button-next',
-			prevEl: '.notice-ad__swiper-button-prev',
-		},
-		// nextSlideMessage: '다음'
-		a11y: { // 웹접근성 
-			enabled: true,
-			prevSlideMessage: '이전 슬라이드',
-			nextSlideMessage: '다음 슬라이드',
-			slideLabelMessage: '총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.',
-		},
+	//메인 비쥬얼 영역 progress 추가 설정
+	section1Visual.on('slideChange',function(){
+		$(".progress").removeClass('active first');
+		console.log($(".progress").offset());
+		$(".progress").addClass('active');
 	});
 
-});
 
-//알림판
-$(function () {
-	const swiper = new Swiper('.popup', {
-		init: false,
-		freeMode: true,
-		// Optional parameters
+//메인 2번째 섹션 영역 swiper 설정
+	var txtLength = $(".section2-txt .swiper-slide").length;
+	const section2Txt = new Swiper('.section2-txt', {
+		slidesPerView: "auto",
 		loop: true,
-		loopAdditionalSlides : 1,
-		navigation: {
-			prevEl: '.popup-prev',
-			nextEl: '.popup-next',
+		loopedSlides: 1,
+		watchSlidesProgress: true,
+		// resizeObserver: true,
+		// updateOnWindowResize: true,
+		effect: "fade",
+		fadeEffect: {
+            crossFade: true
+        },
+		touchRatio: 0,
+		speed: 1000,
+		autoplay: {
+			delay: 4000,
+			disableOnInteraction: false,
+			loop: true,
 		},
-		// And if we need scrollbar
-		scrollbar: {
-			hide:true
+		navigation: {
+			prevEl: '.section2-prev',
+			nextEl: '.section2-next',
+		},
+		pagination: {
+			el: '.pagination-fraction',
+			type: 'fraction',
+			formatFractionCurrent: function (number) {
+				return ('0' + number).slice(-2);
+			},
+			formatFractionTotal: function (number) {
+				return ('0' + number).slice(-2);
+			},
+			renderFraction: function (currentClass, totalClass) {
+				return '<span class="' + currentClass + '"></span>' +
+					' / ' +
+					'<span class="' + totalClass + '"></span>';
+			}
 		},
 		a11y:{
 			enabled:true,
 		},
-		autoplay: {
-			delay: 3000,
-			disableOnInteraction: false,
+	});
+
+	var imgLength = $(".section2-img .swiper-slide").length;
+	const section2Img = new Swiper('.section2-img', {
+		slidesPerView: "auto",
+		loop: true,
+		loopedSlides: 4,
+		watchSlidesProgress: true,
+		// resizeObserver: true,
+		// updateOnWindowResize: true,
+		speed: 1000,
+		a11y:{
+			enabled:true,
 		},
-		observer: true,
-		observeParents: true,
-		on: {
-			init: function (v) {
-				var item = $('.popup')
-				item.find('.swiper-slide-active').attr('tabindex',0).siblings().attr('tabindex',-1)
-			},
-			slideChangeTransitionEnd:function(){
-				var item = $('.popup')
-				item.find('.swiper-slide-active').attr('tabindex',0).siblings().attr('tabindex',-1)
-			}
-		}
+		autoplay: {
+			delay: 4000,
+			disableOnInteraction: false,
+			loop: true,
+		},
 	});
-	swiper.init();//초기화	
-	$('.popup .stop').on('click', function () {
-		$(this).hide().next().show().focus()
-		swiper.autoplay.stop();
+	section2Txt.controller.control = section2Img;
+	section2Img.controller.control = section2Txt;
+	
+
+	section2Txt.on('slideChange',function(){
+		//window.dispatchEvent(new Event('resize'));
+		//console.log("텍스트")
 	});
-	$('.popup .play').on('click', function () {
-		$(this).hide().prev().show().focus()
-		swiper.autoplay.start();
-	});
-	$('.popup .swiper-slide').on('mouseover', function(){
-		swiper.autoplay.stop();
-	});
-	$('.popup .swiper-slide').on('mouseout', function(){
-		swiper.autoplay.start();
-	});	
+	// section2Imgs.on('slideChange',function(){
+	// 	//window.dispatchEvent(new Event('resize'));
+	// 	console.log("이미지")
+	// });
+
+
+
+	// swiper autoplay 멈춤, 재생 이벤트
+	// $('.swiper .stop').on('click', function () {
+	// 	$(this).hide().next().show().focus()
+	// 	swiper.autoplay.stop();
+	// });
+	// $('.swiper .play').on('click', function () {
+	// 	$(this).hide().prev().show().focus()
+	// 	swiper.autoplay.start();
+	// });
+	// $('.video .swiper-slide').on('mouseover', function(){
+	// 	swiper.autoplay.stop();
+	// });
+	// $('.video .swiper-slide').on('mouseout', function(){
+	// 	swiper.autoplay.start(); 
+	// });	
+
+
+
+
+//동영상
+// $(function () {
+// 	const swiper = new Swiper('.video', {
+// 		init: false,
+// 		freeMode: true,
+// 		// Optional parameters
+// 		loop: true,
+// 		loopAdditionalSlides : 1,  // 슬라이드 반복 시
+// 		// If we need pagination
+// 		// pagination: {
+// 		// 	// enabled:false,
+// 		// 	// type: "fraction",
+// 		// 	el: '.section1-ad-page',
+// 		// 	clickable: true,	//버튼 클릭 
+// 		// },
+// 		// Navigation arrows
+// 		navigation: {
+// 			prevEl: '.video-prev',
+// 			nextEl: '.video-next',
+// 		},
+// 		// And if we need scrollbar
+// 		scrollbar: {
+// 			hide:true
+// 		},
+// 		a11y:{
+// 			enabled:true,
+// 		},
+// 		autoplay: {
+// 			delay: 3000,
+// 			disableOnInteraction: false,
+// 		},
+// 		observer: true,
+// 		observeParents: true,
+// 		on: {
+// 			init: function (v) {
+// 				var item = $('.video')
+// 				item.find('.swiper-slide-active').attr('tabindex',0).siblings().attr('tabindex',-1)
+// 			},
+// 			slideChangeTransitionEnd:function(){
+// 				var item = $('.video')
+// 				item.find('.swiper-slide-active').attr('tabindex',0).siblings().attr('tabindex',-1)
+// 			}
+// 		}
+// 	});
+// 	swiper.init();//초기화	
+// 	$('.video .stop').on('click', function () {
+// 		$(this).hide().next().show().focus()
+// 		swiper.autoplay.stop();
+// 	});
+// 	$('.video .play').on('click', function () {
+// 		$(this).hide().prev().show().focus()
+// 		swiper.autoplay.start();
+// 	});
+// 	$('.video .swiper-slide').on('mouseover', function(){
+// 		swiper.autoplay.stop();
+// 	});
+// 	$('.video .swiper-slide').on('mouseout', function(){
+// 		swiper.autoplay.start();
+// 	});	
+// });
+
+// //알림판
+// $(function () {
+// 	const swiper = new Swiper('.popup', {
+// 		init: false,
+// 		freeMode: true,
+// 		// Optional parameters
+// 		loop: true,
+// 		loopAdditionalSlides : 1,
+// 		navigation: {
+// 			prevEl: '.popup-prev',
+// 			nextEl: '.popup-next',
+// 		},
+// 		// And if we need scrollbar
+// 		scrollbar: {
+// 			hide:true
+// 		},
+// 		a11y:{
+// 			enabled:true,
+// 		},
+// 		autoplay: {
+// 			delay: 3000,
+// 			disableOnInteraction: false,
+// 		},
+// 		observer: true,
+// 		observeParents: true,
+// 		on: {
+// 			init: function (v) {
+// 				var item = $('.popup')
+// 				item.find('.swiper-slide-active').attr('tabindex',0).siblings().attr('tabindex',-1)
+// 			},
+// 			slideChangeTransitionEnd:function(){
+// 				var item = $('.popup')
+// 				item.find('.swiper-slide-active').attr('tabindex',0).siblings().attr('tabindex',-1)
+// 			}
+// 		}
+// 	});
+// 	swiper.init();//초기화	
+// 	$('.popup .stop').on('click', function () {
+// 		$(this).hide().next().show().focus()
+// 		swiper.autoplay.stop();
+// 	});
+// 	$('.popup .play').on('click', function () {
+// 		$(this).hide().prev().show().focus()
+// 		swiper.autoplay.start();
+// 	});
+// 	$('.popup .swiper-slide').on('mouseover', function(){
+// 		swiper.autoplay.stop();
+// 	});
+// 	$('.popup .swiper-slide').on('mouseout', function(){
+// 		swiper.autoplay.start();
+// 	});	
+// });
+
+
+
 });
