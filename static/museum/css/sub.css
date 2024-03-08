@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("/static/portal/css/default.css");
+@import url("/static/museum/css/default.css");
 @import url("/static/jslibrary/bootstrap-datepicker-1.9.0-dist/css/bootstrap-datepicker3.standalone.css");
 @font-face {
 font-family: "Material Icons";
@@ -178,32 +178,6 @@ margin-top: 0;
 color: #e24b44;
 }
 
-[class^=ico-].ico-youtube::before {
-background-image: url(/static/portal/img/ico/ico-youtube.svg);
-}
-[class^=ico-].ico-instagram::before {
-background-image: url(/static/portal/img/ico/ico-instagram.svg);
-}
-[class^=ico-].ico-facebook::before {
-background-image: url(/static/portal/img/ico/ico-facebook.svg);
-}
-[class^=ico-].ico-twitter::before {
-background-image: url(/static/portal/img/ico/ico-twitter.svg);
-}
-
-[class^=sns-].sns-youtube::before {
-background-image: url(/static/portal/img/ico/sns-youtube.svg);
-}
-[class^=sns-].sns-instagram::before {
-background-image: url(/static/portal/img/ico/sns-instagram.svg);
-}
-[class^=sns-].sns-facebook::before {
-background-image: url(/static/portal/img/ico/sns-facebook.svg);
-}
-[class^=sns-].sns-twitter::before {
-background-image: url(/static/portal/img/ico/sns-twitter.svg);
-}
-
 @media print {
 @page {
 size: auto;
@@ -300,17 +274,13 @@ content: "";
 display: block;
 width: 100%;
 height: 2px;
-background-color: #1A1A1A;
+background-color: #000;
 position: absolute;
 bottom: -1px;
 left: 0;
 z-index: 1;
 }
-.navigation .top-page-toolbar {
-display: none;
-}
 .nav-stiky .navigation .top-page-toolbar {
-display: block;
 float: right;
 }
 .navigation .top-page-toolbar .page-toolbar {
@@ -469,7 +439,7 @@ display: block;
 text-decoration: underline;
 }
 .navigation nav > ul > li .depth2 ul li.on a {
-color: #1A1A1A;
+color: #000;
 font-weight: 600;
 }
 .navigation nav > ul > li .depth2 ul li.on a::after {
@@ -496,7 +466,7 @@ display: block;
 }
 
 @media (min-width: 1200px) {
-.lnb {
+.lnb-nav {
 position: relative;
 display: block;
 float: left;
@@ -505,7 +475,7 @@ padding-right: 36px;
 background-color: #fff;
 height: auto;
 }
-.lnb::after {
+.lnb-nav::after {
 content: "";
 display: inline-block;
 background-color: #d9d9d9;
@@ -516,12 +486,12 @@ width: 1px;
 height: 100%;
 }
 }
-.lnb h1 {
+.lnb-nav h1 {
 color: #222;
 font-size: 1rem;
 font-weight: 500;
 }
-.lnb h1::before {
+.lnb-nav h1::before {
 content: "\e0ee";
 font-family: "Material Icons Outlined";
 font-weight: normal;
@@ -541,16 +511,16 @@ font-size: 24px;
 color: #1C1B1F;
 margin-right: 5px;
 }
-.lnb nav > ul > li > a {
+.lnb-nav > ul > li > a {
 display: block;
 padding: 6px 0;
 color: #333;
 }
-.lnb nav > ul > li.on > a {
-color: #1A1A1A;
+.lnb-nav > ul > li.on > a {
+color: #000;
 font-weight: 500;
 }
-.lnb nav > ul > li.on > a::after {
+.lnb-nav > ul > li.on > a::after {
 content: "\e313";
 font-family: "Material Icons Outlined";
 font-weight: normal;
@@ -569,20 +539,20 @@ font-feature-settings: "liga";
 font-size: 18px;
 float: right;
 }
-.lnb nav > ul > li > ul li a {
+.lnb-nav > ul > li > ul li a {
 display: block;
 padding: 4px 14px;
 color: #666;
 font-size: 0.875rem;
 }
-.lnb nav > ul > li > ul li.on a {
+.lnb-nav > ul > li > ul li.on a {
 position: relative;
 color: #2F4F9D;
 font-weight: 500;
 background-color: #F2F6FA;
 border-radius: 4px;
 }
-.lnb nav > ul > li > ul li.on a::after {
+.lnb-nav > ul > li > ul li.on a::after {
 content: "\e315";
 font-family: "Material Icons";
 font-size: 18px;
@@ -590,404 +560,6 @@ color: #2F4F9D;
 position: absolute;
 top: 2px;
 right: 8px;
-}
-.lnb .relation {
-border-top: 1px solid #E5E5E5;
-margin-top: 25px;
-padding-top: 30px;
-}
-.lnb .relation dl dt {
-color: #222;
-font-weight: 500;
-margin-bottom: 8px;
-}
-.lnb .relation dl dt::before {
-content: "";
-display: inline-block;
-vertical-align: middle;
-width: 22px;
-height: 22px;
-background: url(/static/portal/img/ico/ico-reference.png) 50% no-repeat;
-margin: 0 5px 0 2px;
-}
-.lnb .relation dl dd ul li {
-margin: 6px 0;
-}
-.lnb .relation dl dd ul li a {
-display: inline-block;
-position: relative;
-color: #666;
-font-size: 0.875rem;
-padding-left: 18px;
-}
-.lnb .relation dl dd ul li a::before {
-content: "";
-display: inline-block;
-width: 3px;
-height: 3px;
-background-color: #666;
-border-radius: 50%;
-position: absolute;
-top: 8px;
-left: 8px;
-color: #2F4F9D;
-}
-.lnb .relation dl dd ul li .img {
-display: block;
-width: 200px;
-margin-top: 10px;
-}
-
-@media (min-width: 1200px) {
-.db {
-position: relative;
-display: block;
-float: left;
-width: 14.2261904762%;
-padding-right: 36px;
-background-color: #fff;
-height: auto;
-}
-.db::after {
-content: "";
-display: inline-block;
-background-color: #d9d9d9;
-position: absolute;
-top: 0;
-right: -1px;
-width: 1px;
-height: 100%;
-}
-}
-.db-search {
-margin-bottom: 30px;
-}
-@media (max-width: 1199px) {
-.db-search {
-margin-bottom: 16px;
-}
-}
-.db-search .t {
-margin-left: 2px;
-}
-.db-search .t::before {
-content: "";
-display: inline-block;
-vertical-align: middle;
-width: 5px;
-height: 5px;
-background-color: #222;
-border-radius: 50%;
-margin-right: 8px;
-margin-bottom: 3px;
-}
-.db-search .t strong {
-position: relative;
-font-weight: 600;
-}
-.db-search .t strong::before {
-content: "";
-display: inline-block;
-height: 1px;
-width: 100%;
-background-color: #222;
-position: absolute;
-bottom: 0;
-left: 0;
-}
-.db-search .search-box {
-margin-top: 6px;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-}
-@media (max-width: 1199px) {
-.db-search .search-box {
-flex-direction: row;
-align-items: center;
-}
-}
-.db-search .search-box .keyword {
-width: 100%;
-}
-@media (max-width: 1199px) {
-.db-search .search-box .keyword {
-flex-basis: calc(100% - 86px);
-flex-grow: 1;
-}
-}
-.db-search .search-box .keyword input {
-width: 100%;
-height: 40px;
-border: 1px solid #d9d9d9;
-border-radius: 3px;
-}
-.db-search .search-box .btns {
-margin-top: 8px;
-display: flex;
-justify-content: space-between;
-}
-@media (max-width: 1199px) {
-.db-search .search-box .btns {
-margin-top: 0;
-}
-}
-.db-search .search-box .btns button {
-color: #fff;
-width: calc(50% - 1px);
-height: 32px;
-border: 0;
-border-radius: 4px;
-}
-@media (max-width: 1199px) {
-.db-search .search-box .btns button {
-width: 40px;
-height: 40px;
-}
-}
-.db-search .search-box .btns button::before {
-vertical-align: sub;
-font-size: 20px;
-margin-right: 5px;
-}
-@media (max-width: 1199px) {
-.db-search .search-box .btns button::before {
-font-size: 25px;
-}
-}
-.db-search .search-box .btns button.search {
-color: #fff;
-background-color: #131547;
-border: 1px solid #131547;
-}
-.db-search .search-box .btns button.search:focus:focus {
-outline-color: #fff;
-outline-style: dashed;
-outline-offset: -1PX;
-}
-.db-search .search-box .btns button.search::before {
-content: "\e8b6";
-font-family: "Material Icons";
-}
-@media (max-width: 1199px) {
-.db-search .search-box .btns button.search {
-margin: 0 2px;
-}
-}
-.db-search .search-box .btns button.reset {
-color: #3B63C4;
-background-color: #fff;
-border: 1px solid #3B63C4;
-}
-@media (max-width: 1199px) {
-.db-search .search-box .btns button.reset {
-background-color: #3B63C4;
-}
-}
-.db-search .search-box .btns button.reset::before {
-color: #3B63C4;
-content: "\f053";
-font-family: "Material Icons";
-}
-@media (max-width: 1199px) {
-.db-search .search-box .btns button.reset::before {
-color: #fff;
-}
-}
-@media (max-width: 1199px) {
-.db-search .search-box .btns button span {
-position: absolute;
-width: 1px;
-height: 1px;
-margin: -1px;
-padding: 0;
-overflow: hidden;
-clip: rect(0, 0, 0, 0);
-border: 0;
-}
-}
-.db .check-list {
-position: relative;
-}
-@media (min-width: 1200px) {
-.db .check-list .check-box {
-display: none;
-}
-}
-.db .check-list .check-box > span {
-font-size: 0.8125rem;
-display: inline-block;
-padding: 1px 5px;
-color: #fff;
-border-radius: 2px;
-background-color: #3b63c4;
-}
-.db .check-list .check-box .ico-del::before {
-content: "\e5cd";
-font-family: "Material Icons Outlined";
-font-weight: normal;
-font-style: normal;
-display: inline-block;
-line-height: 1;
-vertical-align: text-bottom;
-text-transform: none;
-letter-spacing: normal;
-word-wrap: normal;
-white-space: nowrap;
--webkit-font-smoothing: antialiased;
-text-rendering: optimizeLegibility;
--moz-osx-font-smoothing: grayscale;
-font-feature-settings: "liga";
-font-size: 15px;
-}
-.db .check-list .label-list {
-display: flex;
-flex-wrap: wrap;
-flex-direction: column;
-}
-.db .check-list .label-list label {
-font-size: 0.9375rem;
-margin: 4px 0;
-}
-@media (min-width: 1200px) {
-.db .check-list .label-list label {
-font-size: 1.125rem;
-}
-}
-.db .check-list .label-list label .num {
-float: right;
-background-color: #DFDFDF;
-border-radius: 40px;
-padding: 0 6px;
-font-size: 0.75rem;
-margin-top: 3px;
-}
-@media (min-width: 1200px) {
-.db .check-list .label-list label .num {
-display: none;
-}
-}
-.db .check-list .label-list input + i + span {
-max-width: calc(100% - 34px);
-}
-.db .check-list .label-list input:checked + i + span {
-position: relative;
-color: #131547;
-font-weight: 500;
-text-decoration: underline;
-}
-.db .check-list .check-ctrl {
-position: relative;
-width: 100%;
-display: block;
-text-align: left;
-border: 1px solid #d9d9d9;
-padding: 7px 10px;
-}
-@media (min-width: 1200px) {
-.db .check-list .check-ctrl {
-display: none;
-}
-}
-.db .check-list .check-ctrl::before {
-content: "\e5c5";
-font-family: "Material Icons Outlined";
-font-weight: normal;
-font-style: normal;
-display: inline-block;
-line-height: 1;
-vertical-align: text-bottom;
-text-transform: none;
-letter-spacing: normal;
-word-wrap: normal;
-white-space: nowrap;
--webkit-font-smoothing: antialiased;
-text-rendering: optimizeLegibility;
--moz-osx-font-smoothing: grayscale;
-font-feature-settings: "liga";
-font-size: 24px;
-position: absolute;
-top: 5px;
-right: 10px;
-color: #131547;
-transition: all 0.2s;
-}
-.db .check-list .check-ctrl.active::before {
-transform: rotate(-180deg);
-}
-.db .check-list .check-ctrl.active + .check-box + .label-list, .db .check-list .check-ctrl.active + .label-list {
-display: flex;
-position: absolute;
-top: 36px;
-left: 0;
-width: 100%;
-z-index: 9;
-background-color: #fff;
-}
-@media (max-width: 1199px) {
-.db .check-list .label-list {
-display: none;
-border: 1px solid #d9d9d9;
-padding: 4px;
-flex-direction: row;
-}
-.db .check-list .label-list label {
-flex-basis: 50%;
-width: 50%;
-padding: 0 4px;
-}
-.db .check-list.details .check-ctrl {
-margin-top: 5px;
-}
-}
-.db h3 {
-position: relative;
-font-size: 15px;
-margin: 20px 0 12px;
-color: #222;
-font-weight: 500;
-}
-@media (max-width: 1199px) {
-.db h3 {
-display: none;
-}
-}
-.db h3::before {
-content: "";
-display: inline-block;
-background-color: #e2e2e2;
-width: calc(100% - 45px);
-height: 1px;
-position: absolute;
-top: 50%;
-right: 0;
-}
-.db .Keyword h3::before {
-width: calc(100% - 75px);
-}
-.db .Keyword ul {
-display: flex;
-flex-wrap: wrap;
-flex-direction: row;
-}
-.db .Keyword ul li {
-margin: 1px 2px 1px 0;
-}
-.db .Keyword ul a {
-display: inline-block;
-color: #666;
-font-size: 14px;
-border: 1px solid #C2C2C2;
-border-radius: 30px;
-padding: 2px 7px;
-}
-.db .Keyword ul a:hover {
-color: #fff;
-background-color: #3B63C4;
-order: 1px solid #3B63C4;
-}
-.db .Keyword ul a + span {
-margin-right: 2px;
 }
 
 select,
@@ -2263,5 +1835,14 @@ overflow-x: hidden;
 overflow-y: auto;
 width: 100%;
 height: 200px;
+}
+
+.row {
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+justify-content: left;
+align-items: center;
+align-items: flex-start;
 }
 /*# sourceMappingURL=../maps/sub.css.map */

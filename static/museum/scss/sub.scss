@@ -1,5 +1,5 @@
 // @import url('/static/commons/css/common.css');
-@import url('/static/portal/css/default.css');
+@import url('/static/museum/css/default.css');
 
 
 @import 'base/util'; //mixins
@@ -48,4 +48,8 @@
 
 .pdf {
 	overflow-x: hidden;overflow-y: auto;width: 100%;height: 200px;
+}
+.row {
+	@include flex-row;
+	align-items: flex-start;
 }

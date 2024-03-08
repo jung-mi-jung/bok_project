@@ -90,19 +90,19 @@ $(function () {
 	});
 
 	// nav stiky
-	// function goToScroll() {
-	// 	// 주 메뉴
-	// 	var h = 53;
-	// 	if ($(window).scrollTop() > h) {
-	// 		$('body').addClass('gnb-stiky');
-	// 	} else {
-	// 		$('body').removeClass('gnb-stiky');
-	// 	}
-	// }
-	// $(window).on('scroll', function () {
-	// 	goToScroll();
-	// });
-	// goToScroll();
+	function goToScroll() {
+		// 주 메뉴
+		var h = 53;
+		if ($(window).scrollTop() > h) {
+			$('body').addClass('gnb-stiky');
+		} else {
+			$('body').removeClass('gnb-stiky');
+		}
+	}
+	$(window).on('scroll', function () {
+		goToScroll();
+	});
+	goToScroll();
 
 	//gnb
 	//pc 메뉴
@@ -485,8 +485,8 @@ $(function () {
 $(function() {
 
 	//navigation  고정용 page-toolbar
-	var toolbarhtml = $('.hgroup .page-toolbar').clone()
-	$(".top-page-toolbar").html(toolbarhtml.clone())
+	// var toolbarhtml = $('.hgroup .page-toolbar').clone()
+	// $(".top-page-toolbar").html(toolbarhtml.clone())
 
 
 	/*Variables for chache $ chaining*/
@@ -543,11 +543,11 @@ $(function() {
 	//hgroup sns
 	$(".sns-toggle").click(function(){
 		$(".sns-wrap").addClass("active");		
-		$(".sns-wrap__set").slideDown();
+		$(".sns-wrap__set").slideDown(0);
 	});
 	$(".sns-wrap .close").click(function(){
 		$(".sns-wrap").removeClass("active");	
-		$(".sns-wrap__set").slideUp();	
+		$(".sns-wrap__set").slideUp(0);	
 	});
 
 	//클릭시 레이어 닫기
