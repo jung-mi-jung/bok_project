@@ -9,6 +9,7 @@
 			padding: 10px 10px 40px;
 			@include breakpoint($sm){
 				width: 100%;
+				padding: 10px 10px 0;
 				& + li {
 					margin-top: 10px;
 				}
@@ -116,5 +117,88 @@
 			}			
 		}
 		
+	}
+}
+
+.card-photo {
+	position: relative;
+	width: 1140px;
+	max-width: 100%;
+	margin: 30px auto;
+	padding-bottom: 40px;
+	.photo-ctrl {
+		button {
+			position: absolute;
+			top: 50%;
+			border: 1px solid #666666;
+			border-radius: 50%;
+			width: 80px;
+			height: 80px;
+			margin-top: -40px;
+			&::before {
+				content: "";
+				display: inline-block;
+				width: 80px;
+				height: 80px;
+			}
+			&.prev,
+			&.next {
+				border: 1px solid $point;
+				border-radius: 50%;
+				&::before {
+					background: url(/static/portal/img/common/ctrl-btn-off.png) 50% no-repeat;
+				}
+				&:hover {
+					background-color: $point;
+					&::before {
+						background: url(/static/portal/img/common/ctrl-btn-on.png) 50% no-repeat;
+					}
+				}
+			}
+			&.prev {
+				left: -5px;
+				&:hover {
+					&::before {
+						transform: rotate(180deg);
+					}
+				}
+			}
+			&.next {
+				right: -5px;
+				&::before {
+					transform: rotate(180deg);
+				}
+				&:hover {
+					&::before {
+						transform: rotate(0);
+					}
+				}
+			}
+		}
+		.swiper-pagination {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			text-align: center;
+			color: #666;
+			&-current {
+				color: #3B63C4;
+				font-size: rem(24);
+				font-weight: 400;
+			}
+		}
+	}
+	.photo {
+		width: 960px;
+		max-width: 100%;
+		margin: 0 auto;
+	}
+	.img {
+		display: block;
+		padding-top: 100%;		
+		background-position: 50%;
+		background-repeat: no-repeat;
+		background-size: cover;
 	}
 }

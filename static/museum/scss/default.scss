@@ -25,20 +25,6 @@
 	font-style: normal;
 }
 
-// font Montserrat
-@font-face {
-	font-family: 'Montserrat';
-	src: url('/static/font/Montserrat/Montserrat-SemiBold.ttf') format('ttf');
-	font-weight: 600;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'Montserrat';
-	src: url('/static/font/Montserrat/Montserrat-Bold.ttf') format('ttf');
-	font-weight: 700;
-	font-style: normal;
-}
-
 
 @import '../../commons/scss/common.scss';
 @import 'static/commons/scss/breakpoint'; //반응형 플러그인
@@ -48,14 +34,24 @@
 @import 'base/util'; //mixins
 @import 'mixins/layerfixed'; //mixins
 @import 'base/heading'; //해딩스타일
-@import 'components/sprite'; //아이콘 스프라이트
 @import 'base/font-material';
 
-
-
+/* 스프라이트 */
+@import "components/sprite";
+@mixin retina-sprites($retina-groups) {
+	@each $retina-group in $retina-groups {
+		$sprite-name: nth($retina-group, 1);
+		.#{$sprite-name} {
+			@include retina-sprite($retina-group);
+		}	
+	}
+}
 [class^='ico-'] {
 	display: inline-block;
+	vertical-align: middle;
 }
+@include retina-sprites($retina-groups);
+
 @import 'base/layout'; //레이아웃
 @import 'base/gnb'; //메뉴
 @import 'base/footer'; //푸터
@@ -103,4 +99,7 @@ button {
 
 i {
 	font-style: normal;
+}
+img {
+	max-width: 100%;
 }

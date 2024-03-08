@@ -412,11 +412,3 @@ $browser-context: 16;
 	@include size($size, $size);
 	border-radius: $size;
 }
-
-// Flex align 
-@mixin flex($align: flex-start, $justify: flex-start, $wrap: nowrap) {
-	display: flex;
-	align-items: $align;
-	justify-content: $justify;
-	flex-wrap: $wrap;
-}

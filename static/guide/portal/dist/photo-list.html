@@ -223,6 +223,7 @@
 
 
 
+
 <script>
 
 // $('.sh-db').each(function(index){
@@ -231,10 +232,10 @@
 // 			$(this).css("border", "1px solid red")
 // 		});
 // 	});
+ 
 
-
-$(function () {
-	
+$(function () { 
+	 
 	// 	var index = 1++;
 	// var menua1 = $("#m-0"+index)
 	// var menua2 = $(".m-0"+index)
@@ -257,13 +258,17 @@ $(function () {
 	}
 	//alert(count)
 */
+ 
 
+	// 유형 선택시 분류 노출
 	$(".label-list input").click(function(e){
 		$(".sh-db .check-list.details").show();
 	})
 
-
-
+	//$("[id*=m-0]").click(function(index, el){
+	//	$("[class*=m-0]").toggleClass("on")
+	//});
+ 
 	$("#m-01").click(function(){
 		$(".m-01").toggleClass("on")
 	});
@@ -276,13 +281,20 @@ $(function () {
 
 
 
+	//var $index = $(this).index() ++;
+
+
 	$(".m-01 button").click(function(){
 		$("#m-01").prop("checked", true)
 		$("#m-02").prop("checked", false)
 		$("#m-03").prop("checked", false)
+	
+		
 
+		//$($index).hide()
 		$(".m-02").hide()
 		$(".m-03").hide()
+		
 	});
 
 	$(".m-02 button").click(function(){
@@ -304,25 +316,20 @@ $(function () {
 	});
 
 	$("[class^=m-0]").click(function(){
-		$(".check-list input").attr("disabled", "disabled")
-		$(".check-list input").css("cursor", "default")
+		$(".check-list input").attr("disabled", true);
 	});
-
-
 
 	
 	//depth3 있는 경우 아이콘 추가
 	$(".details-list .sub-m").prev("button").addClass("bu")
-	
-	$(".details-list > ul > li > button.bu").attr("disabled", "disabled")
-	
+	//depth3 있는 경우 depth2 클릭 금지
+	$(".details-list > ul > li > button.bu").attr("disabled", true);
 
-
-
+	// 분류 한가지만 클릭가능
 	$('.details-list').each(function(index) {
 		$(".details-list button").click(function(){
 			$(this).addClass("active").parents().find(".details-list").children().find("button").removeClass("active");
-			$(this).addClass("active").parents().find(".details-list").children().find("button").css("", "");			
+			$(this).addClass("active").parents().find(".details-list").children().find("button").css("", "");
 			if ($(this).hasClass('active')){
 				$(this).attr("title", "선택됨");
 			} else {
@@ -331,7 +338,17 @@ $(function () {
 		})
 	});
 	
-	//.check-list.details .btn-view
+	//분류 li 갯수 10개 이상인 경우 전체보기 버튼 노출
+	$(".details-list [class^=m-0]").each(function(){
+		var list_length = $(this).find("> ul > li").length;
+		if(list_length > 10){
+			$(this).find("ul > li").each(function(){
+				$(this).parent().next().show();
+			});
+		}
+	});
+
+	//전체보기, 접기 버튼 전환
 	$(".check-list.details .btn-view").click(function(){
 		$(this).toggleClass("active")
 		if ($(this).hasClass('active')){
@@ -339,9 +356,7 @@ $(function () {
 		} else {
 			$(this).text("전체보기");
 		}
-	})
-	
-	
+	})	
 });
 </script>
 
@@ -361,11 +376,7 @@ $(function () {
 	<div class="check-list">
 		<h2 class="sr-only">멀티콘텐츠 유형 선택</h2>
 		<h3>유형</h3>
-		<button type="button" class="check-ctrl " onclick="$(this).toggleClass('active')">유형 선택</button>
-		<div class="check-box">
-			
-			
-		</div>
+		<button type="button" class="check-ctrl ">유형 선택</button>
 		<div class="label-list">
 			<label>
 				<input type="checkbox" name="" id="m-01">
@@ -387,7 +398,7 @@ $(function () {
 	<div class="check-list details"> <!-- style="display: none;"-->
 		<h2 class="sr-only">멀티콘텐츠 분류 선택</h2>
 		<h3>분류</h3>
-		<button type="button" class="check-ctrl " onclick="$(this).toggleClass('active')">분류 선택</button>
+		<button type="button" class="check-ctrl">분류 선택</button>
 		<div class="details-list">
 			<!-- 동영상 -->
 			<h4 class="sr-only">동영상</h4>
@@ -451,7 +462,6 @@ $(function () {
 						<button type="button">외환신고안내</button>
 					</li>
 				</ul>
-				<!-- li 가 10개 이상일 경우 전체보기 버튼 보이기 -->
 				<button type="button" class="btn-view">전체보기</button>
 			</div>
 			<!-- //동영상 -->
@@ -509,26 +519,18 @@ $(function () {
 	
 	<!-- 컨텐츠 -->
 	<div class="sh-select">
-		<div class="select-set">
+		<div class="select-set select1">
 			<button type="button" class="btn_select" title="개월 선택">개월</button>
-			<!--
-				검색 결과시
-				<button type="button" class="btn_select" title="개월 선택">3개월</button>
-			-->
 			<ul>
 				<li>
 					<button type="button">3개월</button>
-					<!--
-					검색 결과 나왔을때  active
-					<button type="button" class="active">3개월</button>
-					-->
 				</li>
 				<li>
 					<button type="button">6개월</button>
 				</li>
 			</ul>
 		</div>
-		<div class="select-set">
+		<div class="select-set select2">
 			<button type="button" class="btn_select" title="정렬순서 선택">정렬</button>
 			<ul>
 				<li>
@@ -536,7 +538,7 @@ $(function () {
 				</li>
 			</ul>
 		</div>
-		<div class="select-set">
+		<div class="select-set select3">
 			<button type="button" class="btn_select" title="갯수 선택">갯수</button>
 			<ul>
 				<li>
@@ -785,8 +787,8 @@ $(function () {
 
 	<!-- //컨텐츠 -->
 
-</div></div>
+</div>
+<script src="/static/jslibrary/swiper@8/swiper-bundle.min.js"></script>
 <script src="/static/portal/js/common.js"></script>
 </body>
-
 </html>

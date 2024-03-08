@@ -1,11 +1,14 @@
-table {
+table {	
 	word-break: break-all;
 	width: 100%;
 	border-collapse: collapse;
     border-spacing: 0;
+	font-size: rem(18);
+	color: #1A1A1A;
 }
 .table {
-	margin-top: 15px;
+	clear: both;
+	border-top: 2px solid #182252;
 	@include breakpoint($md){
 		&.pcweb {
 			display: block !important;
@@ -38,43 +41,32 @@ table {
 	}
 	table {
 		width: 100%;
+		thead {
+			th {
+				border-bottom: none;
+			}
+		}
 		th {
-			color: #fff;
+			color: $black;
 			font-weight: 400;
-			background-color: $point;
-			height: 50px;
-			& + th {
-				border-left: 1px solid $bd-color;
+			background-color: #F2F6FA;			
+			border: 1px solid $bd-color;
+			padding: 14px 0;
+			// & + th {
+			// 	border-left: 1px solid $bd-color;
+			// }
+		}
+		tbody {
+			th {
+				color: #233B76;
+				background-color: #fff;
 			}
 		}
 		td {
-			color: #757575;
 			padding: 12px 15px;
+			min-height: 55px;
 			border: 1px solid $bd-color;
 			background-color: #fff;
-		}
-	}
-	&.type2 {  //th 세로형
-		table {
-			td {
-				padding: 12px 5px;
-			}
-			thead {
-				border-top: 1px solid #ccc;
-				th {
-					color: $point;
-					background-color: #fff;
-					border-bottom: 1px solid #fff;
-					line-height: 1.2;
-					&:first-child {
-						color: #fff;
-						background-color: $point;
-					}
-					&:last-child {
-						border-right: 1px solid #ccc !important;
-					}
-				}
-			}	
 		}
 	}
 }
@@ -87,5 +79,35 @@ table {
 	}
 	&-vt table tbody td {
 		vertical-align: top;
+	}
+}
+
+.table-view {
+	border-top: 2px solid #182252;
+	&.table {		
+		th {
+			text-align: left;
+			font-weight: 400;
+			color: $black;
+			background-color: #F2F6FA;
+			font-size: rem(18);
+			border: 1px solid #dee0e6;
+			padding-left: 15px;
+			padding-right: 15px
+		}	
+		td {
+			min-height: 55px;
+			border-bottom: 1px solid $bd-color;
+			padding: 7px 15px;
+		}
+	}
+	[class^=b-] {
+		font-size: rem(16);
+		height: 40px;
+		line-height: 40px;
+		vertical-align: middle;
+	}
+	label {
+		display: inline-block;
 	}
 }

@@ -3,22 +3,6 @@
 }
 .gnb {
 	display: flex;
-	// max-width: 1266px;
-	// width: 100%;;
-	//max-width: calc(100% - 500px);		
-	/*.gnb-stiky & {
-		width: 100%;
-		position: fixed;
-		top: 0;
-		z-index: 2000;
-		&::before {
-			background-color: rgba(255, 255, 255, 1);
-			box-shadow: 0 0 15px rgba(0, 0, 0, 0.13);
-		}			
-		> ul {
-			display: flex;
-		}
-	}*/
 	> ul {
 		display: none;
 		@include breakpoint($lg){
@@ -27,10 +11,10 @@
 			width: 767px;
 			display: flex;
 			flex-direction: row;
-			justify-content: space-between;
+			justify-content: space-around;
 			flex-grow: 1;
 			> li {
-				flex: auto;
+				// flex: 1;
 				> a {
 					display: block;
 					width: 100%;
@@ -38,15 +22,32 @@
 					width: 100%;
 					color: #fff;
 					text-align: center;
-					height: 60px;
-					line-height: 60px;
-					font-size: rem(22);
+					height: 72px;
+					line-height: 72px;
+					font-size: rem(24);
 					font-weight: 500;
-					padding: 0 10%;
+					// padding: 0 .75em;
 					&.on {
 						& + .depth2 {
-							display: block;
-							background-color: #fff;							
+							display: flex;
+							justify-content: space-between;
+							background-color: rgba(19, 21, 71, 0.95);
+							&::before,
+							&::after {
+								content: "";
+								display: block;
+								width: 50%;
+								height: 100%;
+								background-color: rgba(19, 21, 71, 0.95);
+								position: absolute;
+								top: 0;
+							}
+							&::before {
+								left: -50%;
+							}
+							&::after {
+								right: -50%;
+							}
 						}
 					}
 				}
@@ -72,201 +73,102 @@
 						}
 					}
 				}
-				&:first-child {
-					strong {
-						//background-image: url(/static/portal/img/common/ico_gnb_tit01.png);
-					}
-				}
-				&:nth-child(2) {
-					strong {
-						background-image: url(/static/portal/img/common/ico_gnb_tit02.png);
+				&.menu01 {
+					.depth2 {
+						> ul {
+							flex-wrap: inherit;
+							> li {
+								flex-basis: calc(100% / 6);
+							}
+						}
 					}
 				}
 				&.menu02 {
-					.depth2-set {
-						> ul {
-							width: calc(100% - 240px - 50px);
-						}
+					> ul {
+						width: calc(100% - 240px - 50px);
 					}
 				}
 			}
 			.depth2 {
 				display: none;
 				position: absolute;
-				top: 60px;
+				//top: 60px;
+				top: 72px;
 				left: 0;
-				padding: 30px 50px;
 				width: 100%;
-				z-index: 99;
-				strong {
-					display: block;
+				z-index: 99;								
+				> ul {
 					width: 100%;
-					color: $point;
-					font-size: rem(30);
-					padding-left: 46px;
-					background-image: url(/static/portal/img/common/ico_gnb_tit02.png);  //임시로 공통 지정
-					background-position: 0 50%;
-					background-repeat: no-repeat;
-				}
-				.depth2-set {
 					display: flex;
-					justify-content: space-between;
-					> ul {
-						display: flex;
-						flex-wrap: wrap;
-						flex-direction: row;
-						border-right: 1px solid #E5E5E5;
-						> li {
-							flex-basis: calc(100% / 5);
-							margin-top: 30px;
+					flex-wrap: wrap;
+					flex-direction: row;
+					padding-left: 12%;
+					margin: 15px 0;
+					> li {
+						flex-basis: calc(100% / 5);
+						padding: 15px 0;
+						> a {
+							display: inline-block;
+							font-size: rem(20);
+							font-weight: 500;
+							color: #fff;
+						}
+						&:hover,
+						&.on,
+						&.active {
 							> a {
-								display: inline-block;
-								font-size: rem(20);
-								font-weight: 500;
-								padding: 5px 0;
-								color: $point;
-								&::before {
-									content: "";
-									display: inline-block;
-									vertical-align: middle;
-									width: 4px;
-									height: 18px;
-									margin-right: 8px;
-									margin-bottom: 3px;
-									background-color: #4375ED;
-								}
-							}
-							&:hover,
-							&.on,
-							&.active {
-								> a {
-									color: $point;
-								}
+								//color: $point;
 							}
 						}
 					}
-					.e {
-						width: 240px;
-						.img {
-							display: block;
-							height: 1px;
-							background-repeat: no-repeat;
-							background-position: 50%;
-							background-size: cover;
-							&.z1 {
-								padding-top: 56.2%;
-							}
-							&.z2 {
-								padding-top: 137%;
-							}
-						}
-						.txt {
-							display: block;
-							color: #1A1A1A;
-							margin-top: 5px;
-						}
-						a {
-							display: block;
-							& + a {
-								margin-top: 20px;
-							}
+				}
+				.e {
+					width: 376px;
+					padding: 35px 48px;
+					background-color: rgba(177, 193, 231, 0.1);
+					.img {
+						padding-top: 56.2%;
+						display: block;
+						height: 1px;
+						background-repeat: no-repeat;
+						background-position: 50%;
+						background-size: cover;
+					}
+					.txt {
+						width: 100%;
+						@include ellipsis;
+						color: #fff;
+						margin-top: 8px;
+						text-align: center;
+					}
+					a {
+						display: block;
+						& + a {
+							margin-top: 20px;
 						}
 					}
-				}				
+				}
 			}
 			.depth3 {
+				padding-top: 5px;
 				> ul {
 					> li {
 						> a {
 							position: relative;
 							display: inline-block;
-							color: #333;
-							font-weight: 500;
-							padding: 4px 22px 4px 10px;
-							&::before {
-								content: "";
-								display: inline-block;
-								vertical-align: middle;
-								width: 4px;
-								height: 4px;
-								background-color: #333;
-								border-radius: 50%;
-								position: absolute;
-								top: 14px;
-								left: 0;
-							}
-							&.bu {
-								&::after {
-									@include font-ico-outline('\e313');
-									font-size: 19px;
-									color: #1C1B1F;
-									position: absolute;
-									top: 6px;
-									right: 0;
-									transition: transform .3s;
-								}
-							}
-						}
-						&.active {
-							> a {
-								color: #3B63C4;
-								font-weight: 500;
-								&::before {
-									background-color: #3B63C4;
-								}
-								&::after {
-									color: #3B63C4;
-									transform: rotate(180deg);
-								}
-							}
-							.depth4 {
-								display: block;
-								margin-bottom: 4px;
-								//transition: .3s;
-								// animation-name: slideInUp;
-								// @keyframes slideInUp {
-								// 	from {
-								// 		transform: translate3d(0, 100%, 0);
-								// 		visibility: visible;
-								// 	}
-								// 	to {
-								// 		transform: translate3d(0, 0, 0);
-								// 	}
-								// }
-								animation: 12s autoplay1 infinite;
-								@keyframes autoplay1 {
-									0% {visibility: visible}
-									100% {visibility: hidden}
-								  }
-							}
-						}
-					}
-				}
-			}
-			.depth4 {
-				display: none;					
-				> ul {
-					padding-left: 1px;
-					> li {
-						> a {
-							display: flex;
-							color: #666;
-							font-size: rem(15);
+							color: #B1C1E7;
+							font-weight: 400;
 							padding: 1px 0;
-							&::before {
-								content: "";
-								display: inline-block;
-								vertical-align: middle;
-								width: 2px;
-								height: 2px;
-								background-color: #808080;
-								margin-right: 8px;
-								margin-top: 11px;
+							&:hover,
+							&.on,
+							&.active {
+								color: #fff;
+								text-decoration: underline;
 							}
 						}
 						&.active {
 							> a {
-								color: #1A1A1A;
+								color: #fff;
 								font-weight: 500;
 								text-decoration: underline;
 							}
@@ -274,6 +176,12 @@
 					}
 				}
 			}
+		}
+	}
+	> button.all-nav-toggle {
+		padding-left: 8%;
+		@include breakpoint($md) {
+			padding-left: 4%;
 		}
 	}
 	.all-nav-toggle {
@@ -290,7 +198,7 @@
 
 @include breakpoint($lg 1500px){
 	.gnb > ul {
-		// width: 620px;
+		width: 540px;
 		> li > a {
 			font-size: rem(20);
 		}
@@ -298,7 +206,7 @@
 	#header {
 		.g-info {
 			.global {
-				margin-left: 30px;
+				// margin-left: 30px;
 				padding-left: 20px;
 			}
 		}
@@ -332,8 +240,9 @@
 			line-height: $m-header-height;
 			&::before {
 				@include font-ico('\e5cd');
-				font-size: 30px;
-				color: $point;
+				font-size: 34px;
+				color: #fff;
+				margin-top: 12px;
 			}
 		}
 		&.active {
@@ -342,12 +251,12 @@
 			left: 0;
 			display: block;
 			width: 100%;
-			background-color: #fff;
+			height: 100vh;
+			background-color: $point;
 			z-index: 99;
 			.top {
 				height: $m-header-height;
 				line-height: $m-header-height;
-				background-color: #fff;
 				span {
 					font-size: 20px;
 					display: block;
@@ -357,8 +266,64 @@
 		}
 	}	
 	&__nav {
+		position: relative;
 		> ul {
-			> li {}
+			width: 140px;
+			> li {
+				> a {
+					display: block;
+					color: #fff;
+					padding: 16px 24px;
+					font-size: rem(18);
+					border-bottom: 1px solid #233B76;
+				}
+				.depth2 {
+					display: none;
+					.e {
+						display: none;
+					}
+				}
+				&.active {
+					> a {
+						color: $point;
+						background-color: #fff;
+						border-bottom: none;
+					}
+					.depth2 {
+						display: block;
+						position: absolute;
+						top: 0;
+						right: 0;
+						width: calc(100% - 140px);
+						height: calc(100vh - 60px);
+						overflow-y: auto;
+						z-index: 9;
+						padding: 24px;
+						background-color: #fff;
+						> ul {
+							> li {
+								margin-bottom: 15px;
+								> a {
+									display: block;
+									font-weight: 500;
+									color: $point;
+									padding: 2px 0;
+								}
+							}
+						}
+					}
+					.depth3 {
+						> ul {
+							li {
+								a {
+									color: #666;
+									font-size: rem(14);
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 }

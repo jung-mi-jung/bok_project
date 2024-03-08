@@ -1,0 +1,146 @@
+<p>추가 class</p>
+<p>.post-set</p>
+<p>.email-set</p>
+<p>.tel-set</p>
+<br>
+<br>
+
+
+
+<div class="formBox">
+	<ul class="step triangle len4 line1">
+		<li>
+			<strong class="title">1</strong>
+			<span>한은금요강좌 선택</span>
+		</li>
+		<li class="on active">
+			<strong class="title">2</strong>
+			<span>수집 및 이용동의<span class="hidden">(현재단계)</span></span>
+		</li>
+		<li>
+			<strong class="title">3</strong>
+			<span>한은금요강좌 신청</span>
+		</li>
+		<li>
+			<strong class="title">4</strong>
+			<span>신청 완료</span>
+		</li>
+	</ul>
+	<div class="agreeBox">
+		<h2>필수 정보의 수집·이용 내역에 관한 안내</h2>
+		<div class="scrollarBox" tabindex="0">
+			<p>- 수집목적 : 한은금요강좌 제공, 설문 발송 및 수료증 발급
+			<br>- 수집·이용 항목 : 이름, 이메일주소, 연락처
+			<br>- 보유·이용기간 : <span style="font-weight: bold; font-size: 14pt;">수집일로부터 5년</span></p>
+			<br><p>※ 귀하는 위 개인정보 수집·이용에 동의하지 않을 수 있으나 필수정보에 대한 수집 동의 거부 시 한은금요강좌 신청이 불가합니다.</p>
+		</div>
+		<div class="agreeTxt">
+			<span class="txt1">위와 같이 개인정보 수집·이용에 동의합니다.</span>
+			<span class="txt2">
+				<label for="agreAtY1_1"><input type="radio" name="agreAt1" id="agreAtY1_1" value="Y"><i></i> 동의함</label>
+				<label for="agreAtY1_2"><input type="radio" name="agreAt1" id="agreAtY1_2" value="N"><i></i> 동의하지 않음</label>
+			</span>
+		</div>
+		<h2>선택 정보의 수집·이용 내역에 관한 안내</h2>
+		<div class="scrollarBox" tabindex="0">
+			내용
+		</div>
+		<div class="agreeTxt">
+			<span class="txt1">위와 같이 정보의 수집·이용 내역에 관한 안내에 동의합니다.</span>
+			<span class="txt2">
+				<label for="agreAtY2_1"><input type="radio" name="agreAt2" id="agreAtY2_1" value="Y"><i></i> 동의함</label>
+				<label for="agreAtY2_2"><input type="radio" name="agreAt2" id="agreAtY2_2" value="N"><i></i> 동의하지 않음</label>
+			</span>
+		</div>
+	</div>
+</div>
+
+
+
+<h3 class="h3">개인정보입력란</h3>
+<form method="post" id="indivForm" name="indivForm" action="\">
+	<fieldset>
+		<div class="table table-view">
+			<table>
+				<caption>개인정보입력란</caption>
+				<colgroup>
+					<col width="150" />
+					<col width="630" />
+				</colgroup>
+				<tbody>
+					<tr class="firTr">
+						<th scope="row" class="firCell">
+							<span class="req"><span>필수입력</span></span>
+							이름
+						</th>
+						<td><input type="text" id="qnaRegBean.name" class="inpt_txt" name="qnaRegBean.name" value="" /></td>
+					</tr>				
+					<tr>
+						<th scope="row" class="firCell">
+							<span class="req"><span>필수입력</span></span>
+							<label for="qnaRegBean.addr">주소</label>
+						</th>
+						<td>
+							<div class="post-set">
+								<input type="text" style="width:60px" id="qnaRegBean.postCode" maxlength="5" class="inpt_txt" onkeydown="number_only();" readonly="readonly" title="우편번호(자동입력)" />
+								<a href="/erms/common/postcode.action" onclick="popupPostCode(this.href, 'resultPostcode'); return false;" class="b-btn" title="새창열림">우편번호 검색</a>
+								<p class="mt5"><input type="text" id="qnaRegBean.addr" name="qnaRegBean.addr" title="기본주소(자동입력)" class="inpt_txt" readonly="readonly"/></p>
+								<p class="mt5"><input type="text" id="qnaRegBean.addrDetail" name="qnaRegBean.addrDetail" title="상세 주소" class="inpt_txt" /></p>
+							</div>
+						</td>
+					</tr>
+					
+					<tr>
+						<th scope="row" class="firCell">
+							<span class="req"><span>필수입력</span></span>
+							E-mail
+						</th>
+						<td>
+							<div class="email-set">
+								<input type="text" id="qnaRegBean.email1" name="qnaRegBean.email1" class="inpt_txt" maxlength="15" style="ime-mode:disabled" title="이메일 아이디" /> @ <input type="text" id="qnaRegBean.email2" name="qnaRegBean.email2" class="inpt_txt" title="이메일 도메인" style="ime-mode:disabled" />
+								<select id="emailItem" name="emailItem" title="이메일 도메인 선택" onchange="javascript:changeEmail('qnaRegBean.email2', this.value);">
+									<option value="">직접입력</option>
+									<option value="hanmail.net">hanmail.net</option>
+								</select>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row" class="firCell">전화번호 (택1)</th>
+						<td>
+							<div class="tel-set">
+								<select id="qnaRegBean.tel1" name="qnaRegBean.tel1" title="전화번호 앞자리">
+									<option value="">선택</option>
+									<option value="02">02</option>
+								</select>
+								-
+								<input type="text" id="qnaRegBean.tel2" name="qnaRegBean.tel2" title="전화번호 두번째 자리" maxlength="4" class="inpt_txt" onkeydown="number_only();" />
+								-
+								<input type="text" id="qnaRegBean.tel3" name="qnaRegBean.tel3" title="전화번호 세번째 자리" maxlength="4" class="inpt_txt" onkeydown="number_only();" />
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row" class="firCell">휴대폰번호 (택1)</th>
+						<td>
+							<div class="tel-set">
+								<select id="qnaRegBean.mobile1" name="qnaRegBean.mobile1" title="휴대폰번호 앞자리">
+									<option value="">선택</option>
+									<option value="010">010</option>
+								</select>
+								-
+								<input type="text" id="qnaRegBean.mobile2" name="qnaRegBean.mobile2" title="휴대폰 두번째 자리" maxlength="4" class="inpt_txt" onkeydown="number_only();" />
+								-
+								<input type="text" id="qnaRegBean.mobile3" name="qnaRegBean.mobile3" title="휴대폰 세번째 자리" maxlength="4" class="inpt_txt" onkeydown="number_only();" />
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<p class="btnSet">
+			<input type="submit" class="b-btn lg" value="확인"/>
+			<input type="button" class="b-cancel lg" value="취소"  onclick="javascript:confirm1()"/>
+		</p>
+	</fieldset>
+</form>

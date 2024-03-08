@@ -226,8 +226,33 @@ select {
 	}
 }
 textarea {
+	-webkit-appearance: none;
 	width: 100%;
-	height: auto;
+	height: 300px !important;
+}
+input[type="email"],
+input[type="number"],
+input[type="date"],
+input[type="text"],
+input[type="password"],
+input[type="file"],
+select,
+textarea {
+	border: 1px solid #ccc;
+	line-height: 20px;
+	height: $form-height;
+	//vertical-align: middle;
+	outline: none;
+	border-radius: 5px;
+	-webkit-appearance: none;
+	padding: 4px 10px;
+	&:hover,
+	&:focus,
+	&:active {
+		-webkit-box-shadow: 0 0 5px #008fd4;
+		box-shadow: 0 0 5px #008fd4;
+		border-color: #fff;
+	}
 }
 
 input {
@@ -246,5 +271,48 @@ input {
 		& + img {
 			margin-left: -33px;
 		}
+	}
+}
+
+.post-set {
+	input {
+		width: 800px;
+		max-width: 100%;
+	}
+}
+.email-set {
+	display: flex;
+	flex-basis: 0;
+	flex-grow: 1;
+	flex-shrink: 0;
+	width: 800px;
+	align-items: center;
+	margin: 0 -4px;
+	> * {
+		margin: 0 4px;
+	}
+	input { 
+		width: calc(50% - 140px); 
+	}
+	select {
+		width: 140px;
+	}
+}
+.tel-set {
+	display: flex;
+	flex-basis: 0;
+	flex-grow: 1;
+	flex-shrink: 0;
+	width: 500px;
+	align-items: center;
+	margin: 0 -4px;
+	> * {
+		margin: 0 4px;
+	}
+	select {
+		width: 100px;
+	}
+	input {
+		width: calc(50% - 110px);
 	}
 }

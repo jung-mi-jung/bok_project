@@ -51,7 +51,7 @@
 	display: inline-block;
 	vertical-align: middle;
 }
-@include retina-sprites($retina-groups);
+//@include retina-sprites($retina-groups);
 
 
 @import 'base/layout'; //레이아웃
@@ -104,4 +104,48 @@ i {
 }
 img {
 	max-width: 100%;
+}
+
+
+
+.col{float: left;width: 100%;}
+.row{margin-left:-10px;margin-right: -10px}
+.row dl{/* clear: both; */}
+.row .col{padding: 10px;}
+.no-padding{margin-left:0;margin-right: 0}
+.no-padding>.col{padding:0;}
+.padding-type>.col{padding: 0 10px;}
+
+@mixin gridGen($columns, $size: ''){
+	@for $i from 1 through $columns {
+		$width : 100% / $columns * $i;
+		@if($size == 'desktop'){
+			.l#{$i}{ width: $width; }
+			.l-offset-#{$i}{ margin-left: $width; }
+		} 
+		@else if($size == 'tablet'){
+			.m#{$i}{ width: $width; }
+			.m-offset-#{$i}{ margin-left: $width; }
+		} 
+		@else if($size == 'mobile'){
+			.s#{$i}{ width: $width; }
+			.s-offset-#{$i}{ margin-left: $width; }
+		} 
+		@else if($size == 'smobile'){
+			.x#{$i}{ width: $width; }
+			.x-offset-#{$i}{ margin-left: $width; }
+		} 
+	}
+}
+
+@include gridGen(12, 'mobile');
+
+@include breakpoint($md) {
+	@include gridGen(12, 'tablet');
+}
+@media (max-width: 600px){
+	@include gridGen(12, 'smobile');
+}
+@media (min-width: 1030px){
+	@include gridGen(12, 'desktop');
 }

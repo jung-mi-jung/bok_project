@@ -48,7 +48,7 @@
 	}
 }
 
-.content {
+#content {
 	h2 {
 		color: #131547;
 		font-size: rem(36);
@@ -69,6 +69,15 @@
 			border-radius: 30px;
 			margin-right: 10px;
 			margin-bottom: 4px;
+		}
+		&.h3 {
+			color: #3B63C4;
+			font-size: rem(20);
+			font-weight: 500;
+			margin: 40px 0 10px;
+			&::before {
+				display: none;
+			}
 		}
 	}
 	h4{

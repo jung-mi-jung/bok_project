@@ -2,15 +2,15 @@
 	color: #118DB4;
 	font-weight: 500;
 }
+.first {
+	color: #666;
+}
 
-.img-box {
-	.img {
-		display: block;
-		height: 1px;
-		//padding-top: 50%;
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: 50%;
+#org {
+	> ul {
+		> li {
+			.org1 {}
+		}
 	}
 }
 

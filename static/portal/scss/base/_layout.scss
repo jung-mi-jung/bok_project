@@ -178,10 +178,18 @@
 		border-bottom: none;
 		padding-bottom: 0;
 		margin: 40px 0 0;
+		@include breakpoint($sm){
+			margin: 0;
+			padding: 0 0 15px;
+		}
 		h1 {
 			color: $point;
 			font-size: rem(20);
 			font-weight: 700;
+			@include breakpoint($sm){
+				text-align: left;
+				margin: 0 10px;				
+			}
 		}
 		.page-toolbar {
 			display: none;
@@ -430,11 +438,17 @@
 	clear: both;
 	width: 100%;
 	padding-top: 60px;
+	@include breakpoint($smd){
+		padding-top: 20px;
+	}
 	.satisfact {
 		position: relative;		
 		display: flex;
 		border-radius: 8px;
 		border: 1px solid #BFBFBF;
+		@include breakpoint($smd){
+			display: block;
+		}
 		.title {
 			text-align: center;
 			width: 242px;
@@ -443,6 +457,15 @@
 			height: 64px;
 			line-height: 64px;
 			margin-bottom: 0;
+			@include breakpoint($smd){
+				width: 100%;
+				text-align: left;
+				height: 32px;
+				line-height: 32px;
+				padding: 0 20px;
+				border-radius: 8px 8px 0 0;
+				border-bottom: 1px solid #BFBFBF;
+			}
 			&::before {
 				content: "";
 				display: inline-block;
@@ -452,20 +475,37 @@
 				background: url(/static/portal/img/common/ico_edit_square.png) 50% no-repeat;
 				margin-right: 8px;
 				margin-bottom: 1px;
+				@include breakpoint($sm){
+					width: 15px;
+					height: 15px;
+					background-size: 15px;
+				}
 			}
 		}
 		.radio-group {
 			display: flex;
 			align-items: center;
+			@include breakpoint($smd){
+				display: block;
+				padding: 10px 0;
+			}
 			input[type=radio] {	
 				& + i + span {
 					color: #4D4D4D;
 					margin-left: 12px;
 				}
-				&:checked + i + span {
-					font-weight: 500;
-					color: $point;
-					text-decoration: underline;
+				&:checked + i {
+					& + span {
+						font-weight: 500;
+						color: $point;
+						text-decoration: underline;
+					}
+				}
+			}
+			@include breakpoint($smd){
+				label {
+					width: 100%;
+					margin: 3px 0;
 				}
 			}
 		}
@@ -478,6 +518,10 @@
 			background-color: $point;
 			border-radius: 4px;
 			padding: 4px 14px;
+			@include breakpoint($smd){
+				top: auto;
+				bottom: 10px;
+			}
 			&::before {
 				@include font-ico-outline('\e5ca');
 				font-size: 18px;
@@ -497,6 +541,9 @@
 		dl {
 			display: flex;
 			justify-content: right;
+			@include breakpoint($smd){
+				justify-content: left;
+			}
 			&::before {
 				content: "";
 				display: inline-block;
@@ -742,14 +789,12 @@
 	padding: 50px 120px;
 	background-color: #F2F6FA;
 	@include breakpoint($smd){
-		padding: 30px;
-	}
-	@include breakpoint($sm){
-		padding: 20px;
+		padding: 16px;
+		margin: 30px -10px 0;
 	}
 	&-data {
 		@include reference();
-		dl {				
+		dl {
 			dt {
 				font-weight: 500;
 				color: #222;
@@ -765,15 +810,22 @@
 				}
 			}
 			dd {
+				@include breakpoint($sm){
+					margin-right: -10px;
+				}
 				ul {
 					display: flex;
 					flex-wrap: wrap;
 					margin: -12px -12px 0;
+					@include breakpoint($smd){
+						margin: -12px 0 0 -5px;
+					}
 					li {
 						width: calc(100% / 4);
 						padding: 12px;
-						@include breakpoint($sm){
-							width: calc(100% / 2);
+						@include breakpoint($smd){
+							width: 100%;
+							padding: 3px 5px;
 						}
 					}
 				}
@@ -782,7 +834,11 @@
 					color: $black;
 					background-color: #fff;
 					border-radius: 8px;
-					padding: 15px 15px;					
+					padding: 15px 15px;		
+					@include breakpoint($smd){
+						padding: 8px 12px;
+						font-size: 12px;
+					}			
 					i {
 						&::before {
 							content: "";
@@ -790,6 +846,11 @@
 							vertical-align: middle;
 							width: 24px;
 							height: 24px;
+							@include breakpoint($smd){
+								width: 18px;
+								height: 18px;
+								background-size: cover;
+							}
 						}
 						&.m {
 							&::before {
@@ -842,7 +903,7 @@
 		margin-top: 20px;
 		padding-top: 30px;
 		border-top: 1px solid #DCE2F1;
-		@include reference();
+		@include reference();		
 		dl {
 			dt {
 				&::before {	
@@ -853,7 +914,15 @@
 				}
 			}
 			dd {
+				@include breakpoint($smd){
+					width: calc(100%  + 16px);
+					overflow-x: auto;
+					overflow-y: hidden;
+				}
 				ul {
+					@include breakpoint($smd){
+						width: max-content;
+					}
 					display: flex;
 					flex-wrap: wrap;
 					flex-direction: row;
@@ -861,8 +930,8 @@
 					li {
 						width: calc(100% / 4);
 						padding: 12px;
-						@include breakpoint($sm){
-							width: calc(100% / 2);
+						@include breakpoint($smd){
+							width: 270px;
 						}
 						a {
 							display: block;
@@ -901,7 +970,7 @@
 		border-top: 1px solid #DCE2F1;
 		@include reference();
 		margin-top: 25px;
-		padding-top: 30px;
+		padding-top: 30px;				
 		dl {
 			dt {
 				&::before {
@@ -910,17 +979,25 @@
 					margin: 0 8px 4px 0;
 				}
 			}
-			dd {				
+			dd {
+				@include breakpoint($smd){
+					width: calc(100%  + 16px);
+					overflow-x: auto;
+					overflow-y: hidden;
+				}			
 				ul {
 					padding-top: 12px;
 					display: flex;
 					flex-wrap: wrap;
 					margin: -12px -12px 0;
+					@include breakpoint($smd){
+						width: max-content;
+					}					
 					li {
 						width: calc(100% / 4);
 						padding: 12px;
-						@include breakpoint($sm){
-							width: calc(100% / 2);
+						@include breakpoint($smd){
+							width: 270px;
 						}
 						a {							
 							display: block;

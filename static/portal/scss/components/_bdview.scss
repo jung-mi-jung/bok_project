@@ -91,16 +91,29 @@
 @mixin dataInfoSet {	
 	display: flex;
 	justify-content: space-between;
-	margin: 10px 0 14px;
+	margin: 10px 0 18px;
 	.dataInfo {
 		position: absolute;
 		top: -27px;
 		right: 0;
 		display: flex;
 		color: #666;
+		@include breakpoint($sm){
+			right: auto;
+			left: 0;
+			width: 100%;
+		}
 		.ass {
 			color: #3B63C4;
 			font-weight: 500;
+			@include breakpoint($sm){
+				position: absolute;
+				top: -37px;
+				right: 0;
+				&::after {
+					display: none;
+				}
+			}
 		}
 		.date {
 			&::before {
@@ -176,6 +189,10 @@
 		color: $black;
 		font-weight: 400;
 		font-size: rem(36) !important;
+		line-height: 1.2;
+		@include breakpoint($sm){
+			font-size: rem(22) !important;
+		}
 	}
 	.dataInfoSet {
 		@include dataInfoSet();

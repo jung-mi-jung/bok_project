@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
 font-family: "Material Icons";
 font-style: normal;
@@ -16,19 +15,11 @@ strong {
 font-weight: 500;
 }
 
-/*
-
-$url-img	: "/static/portal/img/";	//background: url($url-images + "폴더명/파일명.png");
-
-
-
-
-
-// input
-$form-height: 40px;
-
-*/
 .red {
-color: #e24b44;
+color: #C81720 !important;
+}
+
+.fc_red {
+color: #C81720;
 }
 /*# sourceMappingURL=../maps/tsh.css.map */

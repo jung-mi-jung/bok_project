@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("/static/portal/css/default.css");
 @font-face {
 font-family: "Material Icons";
@@ -17,20 +16,12 @@ strong {
 font-weight: 500;
 }
 
-/*
-
-$url-img	: "/static/portal/img/";	//background: url($url-images + "폴더명/파일명.png");
-
-
-
-
-
-// input
-$form-height: 40px;
-
-*/
 .red {
-color: #e24b44;
+color: #C81720 !important;
+}
+
+.fc_red {
+color: #C81720;
 }
 
 [class^=ico-].ico-youtube::before {
@@ -57,6 +48,48 @@ background-image: url(/static/portal/img/ico/sns-facebook.svg);
 }
 [class^=sns-].sns-twitter::before {
 background-image: url(/static/portal/img/ico/sns-twitter.svg);
+}
+
+.i-fax::before {
+color: #1A1A1A;
+content: "\ead8";
+font-family: "Material Icons Outlined";
+font-weight: normal;
+font-style: normal;
+display: inline-block;
+line-height: 1;
+vertical-align: text-bottom;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+font-feature-settings: "liga";
+font-size: 24px;
+margin-right: 3px;
+}
+
+.i-email::before {
+color: #1A1A1A;
+content: "\e158";
+font-family: "Material Icons Outlined";
+font-weight: normal;
+font-style: normal;
+display: inline-block;
+line-height: 1;
+vertical-align: text-bottom;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+font-feature-settings: "liga";
+font-size: 24px;
+margin-right: 3px;
 }
 
 #wrap {

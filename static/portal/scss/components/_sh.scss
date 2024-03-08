@@ -1,5 +1,6 @@
 //자료 검색형
 .sh-db {
+	margin-bottom: 40px;
 	@include breakpoint($lg){
 		position: relative;
 		display: block;
@@ -8,6 +9,7 @@
 		padding-right: 36px;
 		background-color: #fff;
 		height: auto;
+		margin-bottom: 0;
 		&::after {
 			content: "";
 			display: inline-block;
@@ -142,11 +144,10 @@
 	}
 	.check-list {
 		position: relative;
-		.check-box {
-			@include breakpoint($lg){
+		@include breakpoint($smd){
+			h3 {
 				display: none;
 			}
-			
 		}
 		.label-list {
 			display: flex;
@@ -165,16 +166,23 @@
 				}
 				&:checked {
 					& + i {
-						// background-color: transparent;
-						// &::after {
-						// 	display: none;
-						// }
 						& + span {
 							position: relative;
 							color: $point;
 							font-weight: 500;
 							text-decoration: underline;
 						}
+					}
+				}
+				&[disabled] {
+					&:hover {
+						& + i {
+							outline: 0;
+							& + span {
+								cursor: default;
+							}
+						}
+						//cursor: default;
 					}
 				}
 			}
@@ -189,6 +197,9 @@
 			text-align: left;
 			border: 1px solid #d9d9d9;
 			padding: 7px 10px;
+			@include breakpoint($smd){
+				padding: 7px 15px;
+			}
 			&::before {
 				@include font-ico-outline('\e5c5');
 				font-size: 24px;
@@ -202,8 +213,15 @@
 				&::before {
 					transform: rotate(-180deg);
 				}
-				& + .check-box + .label-list,
-				& + .label-list {
+			}  
+		}
+		@include breakpoint($smd){ 
+			.label-list {
+				display: none;
+				border: 1px solid #d9d9d9;
+				padding: 4px;
+				flex-direction: row;
+				&.active {
 					display: flex;
 					position: absolute;
 					top: 36px;
@@ -212,18 +230,11 @@
 					z-index: 9;
 					background-color: #fff;
 				}
-			} 
-		}
-		@include breakpoint($smd){ 
-			.label-list {
-				display: none;
-				border: 1px solid #d9d9d9;
-				padding: 4px;
-				flex-direction: row;
 				label {
-					flex-basis: 50%;
-					width: 50%;
-					padding: 0 4px;
+					width: 100%;
+					// flex-basis: 50%;
+					// width: 50%;
+					// padding: 0 4px;
 					input[type=checkbox] + i {
 						margin-left: -15px;
 					}
@@ -240,6 +251,16 @@
 		}
 	}
 	.details-list {
+		@include breakpoint($smd){
+			position: absolute;
+			top: 36px;
+			left: 0;
+			width: 100%;
+			border: 1px solid #d9d9d9;
+			z-index: 9;
+			background-color: #fff;
+			padding: 4px;
+		}
 		[class^=m-0] {
 			display: none;
 			&.on {
@@ -294,10 +315,10 @@
 								border: none;
 								background-color: transparent;
 							}
-							&::after {								
+							&::after {
 								border: 1px solid #3B63C4;
 								background-color: #3B63C4;
-							}							
+							}
 							&.active {
 								&::before {
 									transform: rotate(90deg);
@@ -305,7 +326,7 @@
 								}
 								&::after {
 									display: none;
-								}								
+								}
 							}
 						}
 						&[disabled=disabled] {
@@ -352,33 +373,33 @@
 									margin: 2px 0;
 								}
 							}
-						}					
+						}
 					}
 				}
 			}
 		}
 	}
 	h3 {
-		position: relative;
-		font-size: 15px;
-		margin: 20px 0 12px;
-		color: #222;
-		font-weight: 500;
-		@include breakpoint($smd){
-			display: none;
-		}
-		&::before {
-			content: "";
-			display: inline-block;
-			background-color: #e2e2e2;
-			width: calc(100% - 45px);
-			height: 1px;
-			position: absolute;
-			top: 50%;
-			right: 0;
-		}
+		#content & {
+			position: relative;
+			font-size: 15px;
+			margin: 20px 0 12px;
+			color: #222;
+			font-weight: 500;
+			&::before {
+				content: "";
+				display: inline-block;
+				background-color: #e2e2e2;
+				width: calc(100% - 45px);
+				height: 1px;
+				position: absolute;
+				top: 50%;
+				right: 0;
+			}
+		}		
 	}
 	.btn-view {
+		display: none;
 		margin: 6px 0 18px;
 		padding: 3px 0;
 		font-size: rem(14);
@@ -398,14 +419,16 @@
 			}
 		}
 	}
-
 	.Keyword {
+		@include breakpoint($smd){
+			display: none;
+		}
 		h3 {
 			&::before {
 				width: calc(100% - 75px);
 			}
 		}
-		ul {		
+		ul {
 			display: flex;
 			flex-wrap: wrap;
 			flex-direction: row;
@@ -432,20 +455,7 @@
 	}
 }
 
-// .details-list > ul > li:first-child:nth-last-child(10), 
-// .details-list > ul > li:first-child:nth-last-child(10) ~ li {
-// 				display: block;
-// 			}
-
-
-
-.sh-select {
-	display: flex;
-	justify-content: right;
-	margin-bottom: 25px;
-	> * {
-		margin: 0 4px;
-	}
+@mixin select-set {
 	.select-set {
 		position: relative;
 		.btn_select {
@@ -457,13 +467,15 @@
 			border: 1px solid $form-bd-color;
 			border-radius: $sh-bd-radius;
 			padding: 0 36px 0 8px;
+			background-color: #fff;
 			&::after {
 				@include font-ico-outline('\e5c5');
 				font-size: 24px;
 				color: #1C1B1F;
 				position: absolute;
-				top: 3px;
+				top: 50%;
 				right: 8px;
+				margin-top: -12px;
 			}
 			&.on {
 				& + ul {
@@ -491,6 +503,16 @@
 			}
 		}
 	}
+}
+
+.sh-select {
+	display: flex;
+	justify-content: right;
+	margin-bottom: 25px;
+	> * {
+		margin: 0 4px;
+	}
+	@include select-set();
 	.submit {
 		width: 44px;
 		background-color: #3B63C4;
@@ -505,7 +527,135 @@
 }
 
 
-/* 이하 아직 안씀 */
+.sh {
+	display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+	margin-bottom: 25px;
+	background-color: #F2F6FA;
+	padding: 45px 20px;
+	font-size: rem(18);
+	@include breakpoint($sm){
+		font-size: 12px;
+		padding: 14px;
+	}
+	@include select-set();
+	.select-set {
+		.btn_select {
+			padding: 0 25px;
+			@include breakpoint($sm){
+				padding: 0 15px;
+			}
+		}
+		ul {
+			top: 56px;
+			@include breakpoint($sm){
+				top: 40px;
+			}
+			li button {
+				padding: 8px 25px;
+				@include breakpoint($sm){
+					padding: 5px 15px;
+				}
+			}
+		}
+	}
+	.c {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		justify-content: center;
+		width: 904px;
+		max-width: 100%;
+		margin: 0 auto;
+		.sh-input {
+			display: flex;
+			width: 100%;
+			> * {
+				margin: 0 2px;
+			}
+		}
+		.sh-txt {
+			display: block;
+			margin-top: 8px;
+			.help {
+				color: #4D4D4D;
+				&::before {
+					@include font-ico-outline('\e88e');
+					font-size: 24px;
+					color: #4D4D4D;
+					margin-right: 5px;
+					@include breakpoint($sm){
+						font-size: 16px;
+					}
+				}
+			}
+		}
+		.keyword-set {
+			flex-basis: calc(100% - 200px - 2px);
+			display: flex;
+			align-items: center;
+			background-color: #fff;
+			border-radius: 4px;
+			@include breakpoint($sm){
+				flex-basis: calc(100% - 120px - 2px);
+			}
+			.keyword {
+				width: calc(100% - 66px);				
+				input[type=text] {
+					width: 100%;
+					border: 0;
+					height: 56px;
+					padding: 10px 24px;
+					@include breakpoint($sm){
+						padding: 5px 15px;
+						height: 40px;
+					}
+				}
+			}		
+			.search {
+				width: 66px;
+				height: 56px;
+				text-align: center;
+				@include breakpoint($sm){
+					width: 40px;
+					height: 40px;
+				}
+				&::before {
+					@include font-ico-outline('\e8b6');
+					font-size: 26px;
+					color: #222;
+				}
+			}
+		}
+		.keyword {
+			flex-grow: 1;
+			input {
+				width: 100%;
+			}
+		}
+	}	
+	> * {
+		margin: 0 2px;		
+	}
+	.btn_select {
+		flex-basis: 200px;
+		width: 200px !important;
+		border-radius: 4px;
+		height: 56px !important;
+		border: 0 !important;
+		@include breakpoint($sm){
+			flex-basis: 120px !important;
+			width: 120px !important;
+			height: 40px !important;
+		}
+	}
+	
+	
+}
+
+/* 이하 아직 안씀
 
 .sh {
 	margin-bottom: 20px;
@@ -653,7 +803,7 @@
 		}
 	}
 }
-
+*/
 
 .date-set {
 	@include breakpoint($sm){

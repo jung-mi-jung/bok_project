@@ -1,21 +1,23 @@
 //navigation
 .navigation {
-	.nav-stiky & {
-		width: 100%;
-		position: fixed;
-		top: 0;
-		&::before {
-			content: "";
-			display: block;
+	@include breakpoint($lg){
+		.nav-stiky & {
 			width: 100%;
-			height: 2px;
-			background-color: $black;
-			position: absolute;
-			bottom: -1px;
-			left: 0;
-			z-index: 1;
+			position: fixed;
+			top: 0;
+			&::before {
+				content: "";
+				display: block;
+				width: 100%;
+				height: 2px;
+				background-color: $black;
+				position: absolute;
+				bottom: -1px;
+				left: 0;
+				z-index: 1;
+			}
 		}
-	}
+	}	
 	.top-page-toolbar {
 		display: none;
 		.nav-stiky & {

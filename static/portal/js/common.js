@@ -564,29 +564,20 @@ $(function() {
 
 
 	//셀렉트 레이어형 검색 sh-select
-	$(".sh-select .btn_select").click(function(){
+	$("[class^=sh] .btn_select").click(function(){
 		$(this).toggleClass("on");
 	})
-	$(".sh-select .select-set ul button").click(function(){
-		$(this).parent().parent().prev("button").removeClass("on");
-		$(this).addClass("active").parent().siblings().children("button").removeClass("active");
-	})
+	$(".select-set ul > li > button").each(function(index){
+		$(".select-set.select" + index +" > ul > li > button").click(function(){
+			$(this).addClass("active").parent().siblings().children("button").removeClass("active");
+			$(this).parent().parent().prev("button").removeClass("on");
+			var seletxt = $(".select-set.select" + index +" > ul > li > button.active").text()
+			$(this).parent().parent().prev().text(seletxt)
+		});
+	});
 
 
-	//연관자료 있는 서브 (안씀)
-	//$(".refer_right").parent("#main-container").addClass("refer_wrap");
-
-
-	//footer 관련사이트
-	/*$('.site_go button').on('click', function () {
-		var _v = $(this).prev().val()
-		if(_v==null || _v==""){
-			alert('fmaily site를 선택해 주세요');
-			return false;
-		}else{
-			window.open(_v,'_blank');
-		}
-	})*/
+	//풋더 사이트맵
 	$(".site_go button").click(function(){
 		$(this).next().toggleClass("active");
 		if ($(this).next().hasClass('active')){
@@ -714,3 +705,32 @@ $(function () {
 
 // *** 자료형 검색 sh-db ***
 
+
+
+$(function () {
+
+	// *** 모바일용 ***
+
+	// body 클릭시 레이어 닫기	
+	$(document).click(function(e){
+		if (!$(e.target).is('.select-set > button')) {
+			$('.select-set > button').removeClass("on");
+		}
+	});
+	/*$(document).click(function(e){
+		if (!$(e.target).is('.check-ctrl')) {
+			$(".check-ctrl").removeClass("active");
+		}
+	});*/
+
+	$(".check-ctrl").click(function(){
+		$(this).toggleClass("active");
+		$(this).next().toggleClass("active");
+	})
+
+	$(".check-list.details").click(function(){
+		$(".label-list").removeClass("active");
+	})
+	
+
+});

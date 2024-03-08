@@ -424,5 +424,3 @@ $(function () {
 		swiper.autoplay.start();
 	});	
 });
-
-

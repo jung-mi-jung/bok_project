@@ -141,12 +141,36 @@ content: "";
 color: #757575;
 }
 
-#content h2 {
-font-size: 22px;
-margin-top: 20px;
+.content h2 {
+color: #131547;
+font-size: 2.25rem;
+font-weight: 300;
+margin-bottom: 20px;
+}
+.content h3 {
+color: #131547;
+font-size: 1.75rem;
+font-weight: 500;
+}
+.content h3::before {
+content: "";
+display: inline-block;
+vertical-align: middle;
+width: 8px;
+height: 24px;
+background-color: #3B63C4;
+border-radius: 30px;
+margin-right: 10px;
+margin-bottom: 4px;
+}
+.content h4 {
+color: #3B63C4;
+font-size: 1.25rem;
+font-weight: 500;
+margin-top: 15px;
 margin-bottom: 12px;
 }
-#content h2:first-child {
+.content h4:first-child {
 margin-top: 0;
 }
 
@@ -258,7 +282,7 @@ overflow-y: hidden;
 height: auto !important;
 }
 }
-.lnb {
+.navigation {
 position: relative;
 z-index: 1;
 height: 48px;
@@ -266,56 +290,108 @@ line-height: 48px;
 background-color: #FCFCFC;
 border-bottom: 1px solid #E5E5E5;
 }
+.nav-stiky .navigation {
+width: 100%;
+position: fixed;
+top: 0;
+}
+.nav-stiky .navigation::before {
+content: "";
+display: block;
+width: 100%;
+height: 2px;
+background-color: #1A1A1A;
+position: absolute;
+bottom: -1px;
+left: 0;
+z-index: 1;
+}
+.navigation .top-page-toolbar {
+display: none;
+}
+.nav-stiky .navigation .top-page-toolbar {
+display: block;
+float: right;
+}
+.navigation .top-page-toolbar .page-toolbar {
+border: 1px solid #E5E5E5;
+border-width: 0 1px;
+}
+.navigation .top-page-toolbar .page-toolbar a::before,
+.navigation .top-page-toolbar .page-toolbar button::before {
+font-size: 30px;
+margin-bottom: -4px;
+}
+.navigation .top-page-toolbar .page-toolbar .sns-toggle {
+border: none;
+}
+.navigation .top-page-toolbar .page-toolbar .page-print {
+background-size: 30px 30px;
+border: 1px solid #E5E5E5;
+border-width: 0 1px;
+margin: 0;
+}
+.navigation .top-page-toolbar .page-toolbar .page-rss::before {
+margin-left: 9px;
+}
 @media (max-width: 749px) {
-.lnb {
+.navigation {
 height: 36px;
 line-height: 36px;
 }
 }
-.lnb nav > ul {
+@media (min-width: 1200px) {
+.navigation nav {
+display: flex;
+justify-content: space-between;
+}
+}
+.navigation nav > ul {
 display: flex;
 border-left: 1px solid #E5E5E5;
 }
-.lnb nav > ul > li {
+.navigation nav > ul > li {
 position: relative;
 border-right: 1px solid #E5E5E5;
 color: #666;
 }
 @media (max-width: 749px) {
-.lnb nav > ul > li {
+.navigation nav > ul > li {
 width: 100%;
 }
-.lnb nav > ul > li:last-child {
+.navigation nav > ul > li:last-child {
 border-right: none;
 }
 }
-.lnb nav > ul > li.home {
+.navigation nav > ul > li.home {
 color: #000;
+padding: 0 16px;
 }
 @media (min-width: 1200px) {
-.lnb nav > ul > li.home {
+.navigation nav > ul > li.home {
 padding: 0 26px;
 }
 }
 @media (max-width: 1199px) {
-.lnb nav > ul > li.home {
+.navigation nav > ul > li.home {
 width: 36px;
 text-align: center;
 }
-.lnb nav > ul > li.home span {
+.navigation nav > ul > li.home span {
 display: none;
 }
 }
-.lnb nav > ul > li.home::before {
-content: "\e88a";
-font-family: "Material Icons";
-vertical-align: bottom;
-font-size: 26px;
-color: #131547;
-margin-right: 4px;
+.navigation nav > ul > li.home::before {
+content: "";
+display: inline-block;
+width: 18px;
+height: 18px;
+background: url(/static/portal/img/ico/ico-home.svg) 50% no-repeat;
+margin-right: 6px;
+margin-bottom: -2px;
 }
 @media (max-width: 1199px) {
-.lnb nav > ul > li.home::before {
+.navigation nav > ul > li.home::before {
 position: absolute;
 top: 0;
 left: 0;
@@ -326,16 +402,16 @@ height: 36px;
 margin-right: 0;
 }
 }
-.lnb nav > ul > li > a {
+.navigation nav > ul > li > a {
 display: block;
 padding: 0 10px;
 }
 @media (min-width: 1200px) {
-.lnb nav > ul > li > a {
+.navigation nav > ul > li > a {
 padding: 0 26px;
 }
 }
-.lnb nav > ul > li > a::after {
+.navigation nav > ul > li > a::after {
 content: "\e5c6";
 font-family: "Material Icons Outlined";
 font-weight: normal;
@@ -356,14 +432,14 @@ font-size: 22px;
 margin-left: 10px;
 }
 @media (max-width: 749px) {
-.lnb nav > ul > li > a::after {
+.navigation nav > ul > li > a::after {
 position: absolute;
 top: 50%;
-right: 10px;
+right: 8px;
 margin-top: -11px;
 }
 }
-.lnb nav > ul > li .depth2 {
+.navigation nav > ul > li .depth2 {
 display: none;
 position: absolute;
 top: 47px;
@@ -373,11 +449,11 @@ width: calc(100% + 2px);
 background-color: #fff;
 }
 @media (max-width: 749px) {
-.lnb nav > ul > li .depth2 {
+.navigation nav > ul > li .depth2 {
 top: 36px;
 }
 }
-.lnb nav > ul > li .depth2 ul {
+.navigation nav > ul > li .depth2 ul {
 width: 100%;
 padding: 10px 15px;
 line-height: 1.8;
@@ -385,18 +461,18 @@ border: 1px solid #E5E5E5;
 border-radius: 0 0 4px 4px;
 box-shadow: 0 4px 2px rgba(127, 24, 24, 0.15);
 }
-.lnb nav > ul > li .depth2 ul li a {
+.navigation nav > ul > li .depth2 ul li a {
 color: #666;
 display: block;
 }
-.lnb nav > ul > li .depth2 ul li a:hover {
+.navigation nav > ul > li .depth2 ul li a:hover {
 text-decoration: underline;
 }
-.lnb nav > ul > li .depth2 ul li.on a {
+.navigation nav > ul > li .depth2 ul li.on a {
 color: #1A1A1A;
 font-weight: 600;
 }
-.lnb nav > ul > li .depth2 ul li.on a::after {
+.navigation nav > ul > li .depth2 ul li.on a::after {
 content: "\e5cc";
 font-family: "Material Icons Outlined";
 font-weight: normal;
@@ -415,8 +491,151 @@ font-feature-settings: "liga";
 font-size: 18px;
 margin-bottom: 2px;
 }
-.lnb nav > ul > li .depth2.active {
+.navigation nav > ul > li .depth2.active {
 display: block;
+}
+
+@media (min-width: 1200px) {
+.lnb {
+position: relative;
+display: block;
+float: left;
+width: 16.369047619%;
+padding-right: 36px;
+background-color: #fff;
+height: auto;
+}
+.lnb::after {
+content: "";
+display: inline-block;
+background-color: #d9d9d9;
+position: absolute;
+top: 0;
+right: -1px;
+width: 1px;
+height: 100%;
+}
+}
+.lnb h1 {
+color: #222;
+font-size: 1rem;
+font-weight: 500;
+}
+.lnb h1::before {
+content: "\e0ee";
+font-family: "Material Icons Outlined";
+font-weight: normal;
+font-style: normal;
+display: inline-block;
+line-height: 1;
+vertical-align: text-bottom;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+font-feature-settings: "liga";
+font-size: 24px;
+color: #1C1B1F;
+margin-right: 5px;
+}
+.lnb nav > ul > li > a {
+display: block;
+padding: 6px 0;
+color: #333;
+}
+.lnb nav > ul > li.on > a {
+color: #1A1A1A;
+font-weight: 500;
+}
+.lnb nav > ul > li.on > a::after {
+content: "\e313";
+font-family: "Material Icons Outlined";
+font-weight: normal;
+font-style: normal;
+display: inline-block;
+line-height: 1;
+vertical-align: text-bottom;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+font-feature-settings: "liga";
+font-size: 18px;
+float: right;
+}
+.lnb nav > ul > li > ul li a {
+display: block;
+padding: 4px 14px;
+color: #666;
+font-size: 0.875rem;
+}
+.lnb nav > ul > li > ul li.on a {
+position: relative;
+color: #2F4F9D;
+font-weight: 500;
+background-color: #F2F6FA;
+border-radius: 4px;
+}
+.lnb nav > ul > li > ul li.on a::after {
+content: "\e315";
+font-family: "Material Icons";
+font-size: 18px;
+color: #2F4F9D;
+position: absolute;
+top: 2px;
+right: 8px;
+}
+.lnb .relation {
+border-top: 1px solid #E5E5E5;
+margin-top: 25px;
+padding-top: 30px;
+}
+.lnb .relation dl dt {
+color: #222;
+font-weight: 500;
+margin-bottom: 8px;
+}
+.lnb .relation dl dt::before {
+content: "";
+display: inline-block;
+vertical-align: middle;
+width: 22px;
+height: 22px;
+background: url(/static/portal/img/ico/ico-reference.png) 50% no-repeat;
+margin: 0 5px 0 2px;
+}
+.lnb .relation dl dd ul li {
+margin: 6px 0;
+}
+.lnb .relation dl dd ul li a {
+display: inline-block;
+position: relative;
+color: #666;
+font-size: 0.875rem;
+padding-left: 18px;
+}
+.lnb .relation dl dd ul li a::before {
+content: "";
+display: inline-block;
+width: 3px;
+height: 3px;
+background-color: #666;
+border-radius: 50%;
+position: absolute;
+top: 8px;
+left: 8px;
+color: #2F4F9D;
+}
+.lnb .relation dl dd ul li .img {
+display: block;
+width: 200px;
+margin-top: 10px;
 }
 
 @media (min-width: 1200px) {
@@ -796,8 +1015,7 @@ display: flex;
 position: relative;
 }
 
-input[type=checkbox],
-input[type=radio] {
+input[type=checkbox] {
 opacity: 0;
 position: relative;
 z-index: 1;
@@ -806,19 +1024,15 @@ height: 24px;
 vertical-align: middle;
 }
 @media (max-width: 1199px) {
-input[type=checkbox],
-input[type=radio] {
+input[type=checkbox] {
 width: 16px;
 height: 16px;
 }
 }
-input[type=checkbox]:hover + i, input[type=checkbox]:focus + i,
-input[type=radio]:hover + i,
-input[type=radio]:focus + i {
+input[type=checkbox]:hover + i, input[type=checkbox]:focus + i {
 outline: dotted 1px #000;
 }
-input[type=checkbox] + i,
-input[type=radio] + i {
+input[type=checkbox] + i {
 display: inline-block;
 vertical-align: middle;
 width: 24px;
@@ -833,25 +1047,19 @@ line-height: 1;
 margin-left: -23px;
 }
 @media (max-width: 1199px) {
-input[type=checkbox] + i,
-input[type=radio] + i {
+input[type=checkbox] + i {
 width: 16px;
 height: 16px;
 }
 }
-dd input[type=checkbox] + i,
-dd input[type=radio] + i {
+dd input[type=checkbox] + i {
 vertical-align: middle;
 }
-input[type=checkbox].checked + i, input[type=checkbox]:checked + i,
-input[type=radio].checked + i,
-input[type=radio]:checked + i {
+input[type=checkbox].checked + i, input[type=checkbox]:checked + i {
 border: 1px solid #356ab9;
 background-color: #356ab9;
 }
-input[type=checkbox].checked + i::after, input[type=checkbox]:checked + i::after,
-input[type=radio].checked + i::after,
-input[type=radio]:checked + i::after {
+input[type=checkbox].checked + i::after, input[type=checkbox]:checked + i::after {
 content: "\e5ca";
 font-family: "Material Icons Outlined";
 font-weight: normal;
@@ -873,19 +1081,46 @@ left: 5px;
 color: #fff;
 }
 @media (max-width: 1199px) {
-input[type=checkbox].checked + i::after, input[type=checkbox]:checked + i::after,
-input[type=radio].checked + i::after,
-input[type=radio]:checked + i::after {
+input[type=checkbox].checked + i::after, input[type=checkbox]:checked + i::after {
 top: 3px;
 left: 4px;
 }
 }
 
+input[type=radio] {
+opacity: 0;
+position: relative;
+z-index: 1;
+width: 20px;
+height: 20px;
+vertical-align: middle;
+}
+input[type=radio]:focus + i {
+outline: dotted 1px #000;
+outline-offset: 2px;
+}
 input[type=radio] + i {
+display: inline-block;
+width: 20px;
+height: 20px;
+border: 1px solid #BFBFBF;
 border-radius: 50%;
+background-color: #FAFAFA;
+}
+input[type=radio]:checked + i {
+position: relative;
+background-color: #fff;
 }
 input[type=radio]:checked + i:before {
+content: "";
+display: inline-block;
+width: 6px;
+height: 6px;
+border: 7px solid #3B63C4;
 border-radius: 50%;
+position: absolute;
+top: -1px;
+left: -1px;
 }
 
 input[type=number],
@@ -1182,16 +1417,16 @@ background: #F2F6FA;
 .bd-line ul li:hover .btns .i-download::before {
 background: url(/static/portal/img/common/ico-download_on.png);
 }
-.bd-line .b-type ul li {
+.bd-line.b-type ul li {
 position: relative;
 padding: 15px 90px 10px 15px;
 }
 @media (max-width: 749px) {
-.bd-line .b-type ul li {
+.bd-line.b-type ul li {
 padding: 15px 8px 10px;
 }
 }
-.bd-line .b-type ul li::before {
+.bd-line.b-type ul li a::before {
 content: "";
 display: inline-block;
 width: 48px;
@@ -1203,9 +1438,12 @@ margin-top: -24px;
 background: url(/static/portal/img/common/arr01_off.png) 50% no-repeat;
 }
 @media (max-width: 749px) {
-.bd-line .b-type ul li::before {
+.bd-line.b-type ul li a::before {
 display: none;
 }
+}
+.bd-line.b-type ul li a:hover::before {
+background: url(/static/portal/img/common/arr01_on.png) 50% no-repeat;
 }
 
 /* 여기까지 */
@@ -1727,6 +1965,280 @@ text-align: center;
 vertical-align: top;
 }
 
+.fc1 {
+color: #118DB4;
+font-weight: 500;
+}
+
+/*
+.img-box {
+	border: 1px solid #d5d5d5;
+	border-radius: 10px;
+	padding: 50px 0;
+	img {
+		margin: 0 auto;
+		display: block;
+	}
+	@include breakpoint($sm){
+		padding: 40px 0;
+	}
+	picture{
+		margin:0 auto;
+		img{
+			margin: 0 auto;
+			display: block;
+		}
+		.img-mobile{
+			display: block;
+		}
+		.img-pc{
+			display: none;
+		}
+		@include breakpoint($md){
+			.img-pc{
+				display: block;
+				margin: 0 auto;
+			}
+			.img-mobile{
+				display: none;
+			}
+		}
+	}
+}
+
+
+@include breakpoint($md){
+	.img-lg {
+		position: relative;
+		&::after{
+			content: '\f0b2'; 
+			@include la;
+			display: block; 
+			position: absolute; 
+			right: 10px; 
+			top: 10px; 
+			width: 60px; 
+			height: 60px; 
+			text-align: center; 
+			background-color: rgba(0, 0, 0, 0.6); 
+			color: #fff; 
+			padding-top: 0.4375em; 
+			font-size: 1.25rem; 
+			line-height: 1; 
+			//vertical-align: top; 
+			border-radius: 0.3125em;
+		}
+		&::before {
+			content: '원본';
+			text-align: center;
+			position: absolute;
+			z-index: 2;
+			right: 10px;
+			top: 40px;
+			width: 60px;
+			text-align: center;
+			color: #fff;
+		}
+	}
+}
+
+
+.login-box {
+	border-radius: 10px;
+	background-color: #f9f9f9;
+	padding: 50px 75px;
+	text-align: center;
+	@include breakpoint($sm){
+		padding: 30px;
+	}
+	h2 {
+		font-size: 28px !important;
+		margin-bottom: 10px !important;
+	}	
+}
+
+.sitemap {
+	border: 2px solid $point;
+	border-width: 2px 0;
+	> ul {
+		display: block;
+		> li {
+			display: table;
+			table-layout: fixed;
+			width: 100%;
+			> * {
+				display: table-cell;
+				vertical-align: middle;
+			}
+			> a {
+				width: 282px;
+				font-size: 22px;
+				font-weight: 600;
+				padding: 55px 40px;
+				background-color: #eef5fb;
+			}
+			& + li {
+				border-top: 1px solid #ccc;
+			}			
+		}
+	}
+}
+
+.policy {
+	font-size: 18px;
+	h2 {
+		padding-top: 24px;
+		margin-top: 24px;
+		border-top: 1px solid #ccc;
+		font-size: 22px !important;
+		font-weight: 600;
+		&:first-child {
+			border-top: none;
+			margin-top: 0;
+		}
+	}
+	ul {
+		list-style: none;
+		ul {
+			padding: 5px 0 5px 15px;
+		}
+		&.list-num {
+			padding-left: 10px;
+			p {
+				padding: 5px 0 5px 19px;
+				font-size: 16px;
+			}
+		}
+		li + li {
+			margin-top: 5px;
+		}
+	}	
+}
+
+.download {
+	padding: 30px 0;
+	text-align: right;
+	a {
+		padding: 13px 18px;
+		color: #fff;
+		background-color: $point;
+		border-radius: 5px;
+		@include breakpoint($sm){
+			width: 100%;
+			display: block;
+			text-align: center;
+		}
+		&::after {
+			@include font-ico-outline('\e2c0');
+			font-size: 22px;
+			vertical-align: middle;
+			margin-left: 8px;
+			margin-bottom: 2px;
+		}
+	}
+}
+*/
+.datepicker {
+z-index: 10000 !important;
+}
+.datepicker table {
+table-layout: inherit;
+}
+.datepicker table td.today:hover {
+background-color: #eeeeff !important;
+}
+
+.datepicker.dropdown-menu {
+border: 2px solid #131547;
+}
+
+.datepicker.dropdown-menu th.next,
+.datepicker.dropdown-menu th.prev {
+border: 1px solid #131547;
+border-radius: 3px;
+font-size: 20px;
+}
+
+.datepicker.dropdown-menu .table-condensed {
+border-collapse: separate;
+}
+
+.datepicker table tr td.today,
+.datepicker .month.focused {
+background-color: #131547;
+color: #fff;
+}
+.datepicker table thead tr th {
+font-size: 14px;
+}
+.datepicker table thead tr:last-child {
+border-bottom: 1px solid #d9d9d9;
+margin-bottom: 5px;
+}
+
+.datepicker-dropdown {
+padding: 6px;
+}
+
+.datepicker-prev {
+font-size: 21px;
+}
+.datepicker-prev::before {
+content: "keyboard_arrow_left";
+font-family: "Material Icons Outlined";
+font-weight: normal;
+font-style: normal;
+display: inline-block;
+line-height: 1;
+vertical-align: text-bottom;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+font-feature-settings: "liga";
+vertical-align: top;
+margin-top: 5px;
+}
+
+.datepicker-next {
+font-size: 21px;
+}
+.datepicker-next::before {
+content: "keyboard_arrow_right";
+font-family: "Material Icons Outlined";
+font-weight: normal;
+font-style: normal;
+display: inline-block;
+line-height: 1;
+vertical-align: text-bottom;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+font-feature-settings: "liga";
+vertical-align: top;
+margin-top: 5px;
+}
+
+.sing-date {
+width: 200px;
+position: relative;
+}
+.sing-date input {
+width: 100%;
+}
+
+.sdate,
+.edate {
+background: url(/static/aieth/img/ico/sh-calendar.png) calc(100% - 10px) 50% no-repeat;
+}
+
 /*
 
 @import 'components/tab';//탭메뉴
@@ -1742,8 +2254,6 @@ vertical-align: top;
 
 
 @import 'components/calendar';// calendar
-@import 'components/datepicker'; // datepicker theme
-@import 'components/content';//콘텐츠
 @import 'components/dbdata';//게시물 데이터
 
 @import 'components/popup';//팝업
