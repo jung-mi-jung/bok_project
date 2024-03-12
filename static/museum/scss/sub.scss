@@ -9,6 +9,23 @@
 @import 'base/heading';//해딩스타일
 //@import 'mixins/layerfixed'; //mixins
 
+/* 스프라이트 */
+@import "components/sprite";
+@mixin retina-sprites($retina-groups) {
+	@each $retina-group in $retina-groups {
+		$sprite-name: nth($retina-group, 1);
+		.#{$sprite-name} {
+			@include retina-sprite($retina-group);
+		}	
+	}
+}
+[class^='ico-'] {
+	display: inline-block;
+	vertical-align: middle;
+}
+@include retina-sprites($retina-groups);
+
+
 @import 'base/color'; // colors
 @import 'components/ico'; // icons
 @import 'components/print';//프린트

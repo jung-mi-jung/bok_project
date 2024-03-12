@@ -4,6 +4,7 @@
 		width: 100%;
 		position: fixed;
 		top: 0;
+		z-index: 100;
 		&::before {
 			content: "";
 			display: block;
@@ -182,7 +183,7 @@
 
 
 //목차형
-.lnb-nav {
+.lnb-nav{
 	@include breakpoint($lg){
 		position: relative;
 		display: block;
@@ -203,9 +204,10 @@
 		}
 	}
 	h1 {
-		color: #222;
+		padding-bottom: 6px;
 		font-size: rem(16);
 		font-weight: 500;
+		color: #222;
 		&::before {
 			@include font-ico-outline('\e0ee');
 			font-size: 24px;
@@ -213,48 +215,106 @@
 			margin-right: 5px;
 		}
 	}	
-	> ul {
-		> li {
-			> a {
-				display: block;
-				padding: 6px 0;
-				color: #333;
-			}
-			&.on {
+	.lnb  {
+		@include breakpoint($smd) {
+			display: none;
+		}
+		ul {
+			> li {
 				> a {
-					color: $black;
-					font-weight: 500;
-					&::after {
-						@include font-ico-outline('\e313');
-						font-size: 18px;
-						float: right;
+					display: block;
+					padding: 6px 0;
+					color: #333;
+				}
+				&.on {
+					> a {
+						display: flex;
+						font-weight: 500;
+						align-items: center;
+						justify-content: space-between;
+						color: $black;
+					}
+				}
+				> ul {
+					li {
+						a {
+							display: block;
+							padding: 4px 14px;
+							color: #666;
+							font-size: rem(14);
+						}
+						&.on {
+							a {
+								position: relative;
+								color: #2F4F9D;
+								font-weight: 500;
+								background-color: #F2F6FA;
+								border-radius: 4px;
+								&::after {
+									@include font-ico('\e315');
+									font-size: 18px;
+									color: #2F4F9D;
+									position: absolute;
+									top: 2px;
+									right: 8px;
+								}
+							}
+						}
 					}
 				}
 			}
-			> ul {
-				li {
-					a {
-						display: block;
-						padding: 4px 14px;
-						color: #666;
-						font-size: rem(14);
+		}
+	}
+}
+
+//연관자료
+.lnb-reference {
+	padding: 24px 0;
+    margin: 18px 0;
+	border-top: 1px solid #E5E5E5;
+	@include breakpoint($smd) {
+		margin: 0 0 18px;
+		border-top: none;
+	}
+	h1 {
+		&::before {
+			@include background-image-retina("/static/museum/img/ico/ico-relate", png, auto, 100%);
+		}
+	}
+	ul {
+		margin-bottom: 12px;
+		li {
+			margin: 4px 0;
+			a {
+				position: relative;
+				display: flex;
+				align-items: center;
+				padding: 8px 8px 8px 36px;
+				background: #F2F6FA;
+				border-radius: 8px;
+				word-break: initial;
+				&::before {
+					content: "";
+					display: inline-block;
+					position: absolute;
+					top: 10px;
+					left: 8px;
+					width: 20px;
+					height: 20px;
+				}
+				&.reference-m {
+					&::before {
+						@include background-image-retina("/static/museum/img/ico/ico-relateM", png, auto, 100%);
 					}
-					&.on {
-						a {
-							position: relative;
-							color: #2F4F9D;
-							font-weight: 500;
-							background-color: #F2F6FA;
-							border-radius: 4px;
-							&::after {
-								@include font-ico('\e315');
-								font-size: 18px;
-								color: #2F4F9D;
-								position: absolute;
-								top: 2px;
-								right: 8px;
-							}
-						}
+				}
+				&.reference-c {
+					&::before {
+						@include background-image-retina("/static/museum/img/ico/ico-relateC", png, auto, 100%);
+					}
+				}
+				&.reference-h {
+					&::before {
+						@include background-image-retina("/static/museum/img/ico/ico-relateH", png, auto, 100%);
 					}
 				}
 			}

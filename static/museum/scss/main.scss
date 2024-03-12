@@ -436,9 +436,9 @@
 		font-size: rem(28);
 		font-weight: 500;
 		color: #1A1A1A;
-		// @include breakpoint($sm) {
-		// 	margin-bottom: 80px;
-		// }
+		@include breakpoint($sm) {
+			margin-bottom: 84px;
+		}
 	}
 }
 .section2-news {
@@ -600,15 +600,25 @@
 			margin-top: -114px;
 			margin-bottom: 72px;
 			margin-right: 15px;
+			@include breakpoint ($sm) {
+				margin-top: -134px;
+			}
 			.pagination-fraction {
 				display: flex;
 				align-items: center;
 				justify-content: flex-end;
+				@include breakpoint($sm) {
+					justify-content: flex-start;
+					color: #fff;
+				}
 				span {
 					padding: 0 8px;
 					font-size: rem(18);
 					font-weight: 300;
 					color: #1A1A1A;
+					@include breakpoint($sm) {
+						color: #fff;
+					}
 					&.swiper-pagination-current {
 						font-size: rem(28);
 						font-weight: 500;
@@ -629,8 +639,15 @@
 		}
 		.pagination-btm {
 			margin-top: 64px;
+			@include breakpoint($sm) {
+				margin-top: 30px;
+				text-align: center;
+			}
 			button {
 				margin: 0 5px;
+				@include breakpoint($sm) {
+					transform: scale(.8);
+				}
 			}
 		}
 	}

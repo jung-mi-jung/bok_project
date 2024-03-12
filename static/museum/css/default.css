@@ -1506,7 +1506,20 @@ height: 36px;
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 .btn_more_circle {
 background-image: url(/static/museum/img/sprite@2x.png);
-background-size: 268px 240px;
+background-size: 312px 240px;
+}
+}
+
+.ico-arrow-bk {
+background-image: url(/static/museum/img/sprite.png);
+background-position: -288px -88px;
+width: 20px;
+height: 20px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+.ico-arrow-bk {
+background-image: url(/static/museum/img/sprite@2x.png);
+background-size: 312px 240px;
 }
 }
 
@@ -1519,7 +1532,7 @@ height: 24px;
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 .ico-clock {
 background-image: url(/static/museum/img/sprite@2x.png);
-background-size: 268px 240px;
+background-size: 312px 240px;
 }
 }
 
@@ -1532,7 +1545,7 @@ height: 48px;
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 .ico-close {
 background-image: url(/static/museum/img/sprite@2x.png);
-background-size: 268px 240px;
+background-size: 312px 240px;
 }
 }
 
@@ -1545,33 +1558,33 @@ height: 36px;
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 .ico-facebook {
 background-image: url(/static/museum/img/sprite@2x.png);
-background-size: 268px 240px;
+background-size: 312px 240px;
 }
 }
 
 .ico-file {
 background-image: url(/static/museum/img/sprite.png);
-background-position: -188px -208px;
+background-position: -288px -128px;
 width: 20px;
 height: 20px;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 .ico-file {
 background-image: url(/static/museum/img/sprite@2x.png);
-background-size: 268px 240px;
+background-size: 312px 240px;
 }
 }
 
 .ico-info {
 background-image: url(/static/museum/img/sprite.png);
-background-position: -228px -208px;
+background-position: -288px -168px;
 width: 20px;
 height: 20px;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 .ico-info {
 background-image: url(/static/museum/img/sprite@2x.png);
-background-size: 268px 240px;
+background-size: 312px 240px;
 }
 }
 
@@ -1584,7 +1597,7 @@ height: 36px;
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 .ico-insta {
 background-image: url(/static/museum/img/sprite@2x.png);
-background-size: 268px 240px;
+background-size: 312px 240px;
 }
 }
 
@@ -1597,7 +1610,7 @@ height: 64px;
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 .ico-main-left {
 background-image: url(/static/museum/img/sprite@2x.png);
-background-size: 268px 240px;
+background-size: 312px 240px;
 }
 }
 
@@ -1610,7 +1623,7 @@ height: 32px;
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 .ico-main-menu1 {
 background-image: url(/static/museum/img/sprite@2x.png);
-background-size: 268px 240px;
+background-size: 312px 240px;
 }
 }
 
@@ -1623,7 +1636,7 @@ height: 32px;
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 .ico-main-menu2 {
 background-image: url(/static/museum/img/sprite@2x.png);
-background-size: 268px 240px;
+background-size: 312px 240px;
 }
 }
 
@@ -1636,7 +1649,7 @@ height: 32px;
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 .ico-main-menu3 {
 background-image: url(/static/museum/img/sprite@2x.png);
-background-size: 268px 240px;
+background-size: 312px 240px;
 }
 }
 
@@ -1649,7 +1662,7 @@ height: 32px;
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 .ico-main-menu4 {
 background-image: url(/static/museum/img/sprite@2x.png);
-background-size: 268px 240px;
+background-size: 312px 240px;
 }
 }
 
@@ -1662,7 +1675,7 @@ height: 32px;
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 .ico-main-menu5 {
 background-image: url(/static/museum/img/sprite@2x.png);
-background-size: 268px 240px;
+background-size: 312px 240px;
 }
 }
 
@@ -1675,7 +1688,7 @@ height: 64px;
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 .ico-main-right {
 background-image: url(/static/museum/img/sprite@2x.png);
-background-size: 268px 240px;
+background-size: 312px 240px;
 }
 }
 
@@ -1688,7 +1701,7 @@ height: 24px;
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 .ico-map {
 background-image: url(/static/museum/img/sprite@2x.png);
-background-size: 268px 240px;
+background-size: 312px 240px;
 }
 }
 
@@ -1701,7 +1714,59 @@ height: 48px;
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 .ico-overview {
 background-image: url(/static/museum/img/sprite@2x.png);
-background-size: 268px 240px;
+background-size: 312px 240px;
+}
+}
+
+.ico-relate {
+background-image: url(/static/museum/img/sprite.png);
+background-position: -188px -208px;
+width: 24px;
+height: 24px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+.ico-relate {
+background-image: url(/static/museum/img/sprite@2x.png);
+background-size: 312px 240px;
+}
+}
+
+.ico-relateC {
+background-image: url(/static/museum/img/sprite.png);
+background-position: -232px -208px;
+width: 24px;
+height: 24px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+.ico-relateC {
+background-image: url(/static/museum/img/sprite@2x.png);
+background-size: 312px 240px;
+}
+}
+
+.ico-relateH {
+background-image: url(/static/museum/img/sprite.png);
+background-position: -288px 0px;
+width: 24px;
+height: 24px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+.ico-relateH {
+background-image: url(/static/museum/img/sprite@2x.png);
+background-size: 312px 240px;
+}
+}
+
+.ico-relateM {
+background-image: url(/static/museum/img/sprite.png);
+background-position: -288px -44px;
+width: 24px;
+height: 24px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+.ico-relateM {
+background-image: url(/static/museum/img/sprite@2x.png);
+background-size: 312px 240px;
 }
 }
 
@@ -1714,7 +1779,7 @@ height: 28px;
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 .ico-srchW {
 background-image: url(/static/museum/img/sprite@2x.png);
-background-size: 268px 240px;
+background-size: 312px 240px;
 }
 }
 
@@ -1727,7 +1792,7 @@ height: 48px;
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 .ico-top {
 background-image: url(/static/museum/img/sprite@2x.png);
-background-size: 268px 240px;
+background-size: 312px 240px;
 }
 }
 
@@ -1740,7 +1805,7 @@ height: 36px;
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 .ico-x {
 background-image: url(/static/museum/img/sprite@2x.png);
-background-size: 268px 240px;
+background-size: 312px 240px;
 }
 }
 
@@ -1753,7 +1818,7 @@ height: 36px;
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 .ico-youtube {
 background-image: url(/static/museum/img/sprite@2x.png);
-background-size: 268px 240px;
+background-size: 312px 240px;
 }
 }
 
@@ -1935,7 +2000,7 @@ margin: 0 6px;
 position: relative;
 display: flex;
 justify-content: space-between;
-margin: 50px 0 30px;
+margin: 50px 0 0;
 border-bottom: 2px solid #222;
 padding-bottom: 30px;
 }
@@ -2101,10 +2166,14 @@ padding: 0 10px;
 }
 }
 @media (min-width: 1200px) {
+#main-container .lnb-nav {
+padding-top: 30px;
+}
 #main-container .lnb-nav + .content,
 #main-container .sh-db + .content {
 float: right;
 border-left: 1px solid #d9d9d9;
+padding-top: 30px;
 padding-left: 36px;
 }
 #main-container .lnb-nav + .content {
