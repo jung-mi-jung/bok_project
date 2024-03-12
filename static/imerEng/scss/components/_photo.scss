@@ -1,0 +1,67 @@
+.photo-list {
+	border-top: 2px solid $bd-color;
+	ul {		
+		li {
+			float: left;
+			width: 33.3%;
+			padding: 10px;
+			@include breakpoint($sm){
+				width: 100%;
+				& + li {
+					margin-top: 10px;
+				}
+			}
+			a {
+				.img {
+					display: block;
+					padding-top: 50%;
+					border: 1px solid #eee;
+				}
+				.title {
+					@include ellipsis;
+					width: 100%;
+					font-size: 18px;
+					font-weight: 600;
+					margin: 10px 0 0;
+				}
+			}
+			.s {
+				.g {
+					[class^=state] {
+						font-weight: 600;
+					}
+					.state1 { //접수중
+						color: #66a66c;
+					}
+					.state2 { //온라인예약
+						color: #3685ff;
+					}
+					.state3 { //현장예약
+						color: #9643ff;
+					}
+					span + span {
+						margin-left: 10px;
+					}
+					.local {
+						&::before {
+							content: "";
+							display: inline-block;
+						}
+					}
+					.type {}
+				}
+				.lis {
+					display: block;
+					margin-top: 10px;
+					span {
+						display: block;
+						em {
+							display: inline-block;
+							width: 80px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

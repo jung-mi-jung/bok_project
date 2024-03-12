@@ -203,6 +203,9 @@
 			height: 100%;
 		}
 	}
+	@include breakpoint($smd){ 
+		order: 2;
+	}
 	h1 {
 		padding-bottom: 6px;
 		font-size: rem(16);

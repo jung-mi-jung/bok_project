@@ -285,6 +285,10 @@
 	@include breakpoint($sm){
 		padding: 0 10px;
 	}
+	@include breakpoint($smd){
+		display: flex;
+		flex-direction: column;
+	}
 	@include breakpoint($lg){
 		.lnb-nav {
 			padding-top: 30px;

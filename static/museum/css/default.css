@@ -2165,6 +2165,12 @@ visibility: hidden;
 padding: 0 10px;
 }
 }
+@media (max-width: 1199px) {
+#main-container {
+display: flex;
+flex-direction: column;
+}
+}
 @media (min-width: 1200px) {
 #main-container .lnb-nav {
 padding-top: 30px;

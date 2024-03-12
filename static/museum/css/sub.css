@@ -818,6 +818,11 @@ width: 1px;
 height: 100%;
 }
 }
+@media (max-width: 1199px) {
+.lnb-nav {
+order: 2;
+}
+}
 .lnb-nav h1 {
 padding-bottom: 6px;
 font-size: 1rem;
