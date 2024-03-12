@@ -1,5 +1,5 @@
 // @import url('/static/commons/css/common.css');
-@import url('/static/portal/css/default.css');
+@import url('/static/museum/css/default.css');
 
 
 @import 'base/util'; //mixins
@@ -8,6 +8,23 @@
 @import 'components/visible';//반응형 스타일
 @import 'base/heading';//해딩스타일
 //@import 'mixins/layerfixed'; //mixins
+
+/* 스프라이트 */
+@import "components/sprite";
+@mixin retina-sprites($retina-groups) {
+	@each $retina-group in $retina-groups {
+		$sprite-name: nth($retina-group, 1);
+		.#{$sprite-name} {
+			@include retina-sprite($retina-group);
+		}	
+	}
+}
+[class^='ico-'] {
+	display: inline-block;
+	vertical-align: middle;
+}
+@include retina-sprites($retina-groups);
+
 
 @import 'base/color'; // colors
 @import 'components/ico'; // icons
@@ -48,4 +65,8 @@
 
 .pdf {
 	overflow-x: hidden;overflow-y: auto;width: 100%;height: 200px;
+}
+.row {
+	@include flex-row;
+	align-items: flex-start;
 }

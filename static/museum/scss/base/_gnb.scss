@@ -212,7 +212,6 @@
 		}
 	}
 }
-
 .mobileGnb {
 	@include breakpoint($lg){
 		display: none;
@@ -235,6 +234,7 @@
 			position: absolute;
 			top: 0;
 			right: 0;
+			// width: $m-header-height;
 			width: $m-header-height;
 			height: $m-header-height;
 			line-height: $m-header-height;

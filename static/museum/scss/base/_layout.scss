@@ -1,6 +1,7 @@
 #wrap {
 	position: relative;	
-	padding-top: $m-header-height;
+	//padding-top: $m-header-height;
+	overflow: hidden;
 	@include breakpoint($lg){
 		padding-top: $header-height;
 	}
@@ -31,6 +32,7 @@
 	flex-direction: column;
 	@include breakpoint($smd){
 		border-bottom: 1px solid #d9d9d9;	
+		box-sizing: border-box;
 	}	
 	.container {
 		position: relative;
@@ -40,13 +42,16 @@
 		//height: $header-height;
 		width: 100%;
 		max-width: 1920px;
-		padding-left: 48px;
-		padding-right: 152px;
+		padding-left: 50px;
+		padding-right: 154px;
 		margin: 0 auto;	
-		// @include breakpoint($lg){
-		// 	padding-left: 20px;
-		// 	padding-right: 124px;
-		// }
+		@include breakpoint($smd){
+			padding-left: 16px;
+			padding-right: 60px;
+		}
+		@include breakpoint($sm){
+			padding-left: 10px;
+		}
 	}	
 	.globalHeader {	
 		display: none;	
@@ -89,6 +94,9 @@
 	.logo {
 		display: inline-block;
 		vertical-align: middle;
+		@include breakpoint($smd){
+			height: 60px;
+		}
 		a {
 			display: block;
 			background: url(/static/portal/img/common/logo.png) 50% no-repeat;
@@ -112,27 +120,12 @@
 			width: $m-header-height;
 			height: $m-header-height;
 			z-index: 9;
-			background-color: #fff;
-			&::before  {
-				@include font-ico-outline("\e8b6");
-				color: $point;
-				font-size: rem(40);
-				@include breakpoint($smd){
-					font-size: rem(32);
-				}
-			}
-			&:focus {
-				@include focus;
-			}
+			background-color: #3B63C4;
 			@include breakpoint($lg){
 				width: 104px;
 				height: $header-height;
 				background-color: #3B63C4;
 				top: -42px;
-				&::before {
-					color: #fff;
-					font-size: rem(24);
-				}
 			}
 		}	
 		@include breakpoint($lg){
@@ -161,7 +154,7 @@
 								vertical-align: middle;
 								width: 1px;
 								height: 14px;
-								background-color: #fff;
+								background-color: rgba(255,255,255,0.3);
 								margin: 0 6px;
 							}
 						}
@@ -172,12 +165,11 @@
 	}
 }
 
-
 .hgroup {
 	position: relative;
 	display: flex;
 	justify-content: space-between;
-	margin: 50px 0 30px;
+	margin: 50px 0 0;
 	border-bottom: 2px solid #222;
 	padding-bottom: 30px;
 	@include breakpoint($sm){
@@ -200,12 +192,12 @@
 	}
 }
 .page-toolbar {
-	/*.nav-stiky & {
-		position: fixed;
-		top: 94px;
-		right: 0;
-		z-index: 9;
-	}*/
+	.nav-stiky & {
+		// position: fixed;
+		// top: 94px;
+		// right: 0;
+		// z-index: 9;
+	}
 	position: relative;
 	display: flex;
 	align-items: center;
@@ -227,14 +219,16 @@
 		display: none;		
 		&.active {
 			display: block;
-			width: 48px;
 			position: absolute;
-			top: 12px;
+			width: 48px;
+			height: 236px;
+			top: 60px;
 			left: 0;
 			z-index: 9;
 			.sns-wrap__set {
-				width: 48px;
 				display: flex;
+				width: 48px;
+				height: 236px;
 				flex-wrap: wrap;
 				flex-direction: column;
 				border-radius: 30px;
@@ -242,20 +236,10 @@
 				background-color: #fff;
 				padding: 10px 0;
 				button {
-					width: 48px;
-					height: 36px;
-					margin: 0 auto;	
-					& + button {
-						margin-top: 7px;
-					}
-					&::before {
-						content: "";
-						display: inline-block;
-						width: 36px;
-						height: 36px;
-						background-position: 50%;
-						background-repeat: no-repeat;
-					}
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					margin: 4px 0;
 					&.close {
 						height: 30px;
 						&::before {
@@ -302,16 +286,20 @@
 		padding: 0 10px;
 	}
 	@include breakpoint($lg){
-		.lnb + .content,
-		.db + .content {
+		.lnb-nav {
+			padding-top: 30px;
+		}
+		.lnb-nav + .content,
+		.sh-db + .content {
 			float: right;
 			border-left: 1px solid $bd-color;
+			padding-top: 30px;
 			padding-left: 36px;
 		}
-		.lnb + .content {
+		.lnb-nav + .content {
 			width: per(1405px, $pc-wide);
 		}
-		.db + .content {
+		.sh-db + .content {
 			width: per(1441px, $pc-wide);
 		}
 	}
@@ -417,7 +405,6 @@
 	}
 }
 
-
 .total-nav {
 	display: none;
 	@include breakpoint($lg){
@@ -480,6 +467,7 @@
 	bottom: 190px;
 	right: 30px;
 	z-index: 9;
+	display: none;
 	a {
 		display: block;
 		width: 40px;
@@ -496,9 +484,11 @@
 
 //만족도
 .admin-set {	
+	clear: both;
+	width: 100%;
+	padding-top: 60px;
 	.satisfact {
-		position: relative;
-		margin-top: 80px;
+		position: relative;		
 		display: flex;
 		border-radius: 8px;
 		border: 1px solid #BFBFBF;
@@ -560,7 +550,7 @@
 	}
 	.info {
 		margin-top: 10px;
-		color: #1A1A1A;
+		color: $black;
 		dl {
 			display: flex;
 			justify-content: right;
@@ -580,7 +570,7 @@
 					vertical-align: middle;
 					width: 1px;
 					height: 14px;
-					background-color: #1A1A1A;
+					background-color: $black;
 					margin: 0 14px;
 				}
 			}
@@ -629,7 +619,7 @@
 	.top {
 		margin-bottom: 10px;
 		h2 {
-			color: #1A1A1A;
+			color: $black;
 			font-size: rem(14) !important;
 			font-weight: 400;
 			display: block;
@@ -699,6 +689,9 @@
 						@include line-clamp(2);
 					}
 				}
+				&:focus {
+					outline-offset: -1px;
+				}
 			}
 		}
 		.ctrl {
@@ -732,7 +725,7 @@
 				color: #808080;
 				font-size: rem(14);
 				&-current {
-					color: #1A1A1A;
+					color: $black;
 				}
 			}
 		}
@@ -741,12 +734,14 @@
 			bottom: -53px;
 			right: 0;
 			z-index: 1;
+			min-width: 40px;
 			width: 40px;
 			height: 40px;
 			border: 1px solid #131547;
 			border-radius: 50%;
 			background: $point;
 			@include breakpoint($lg){
+				min-width: 48px;
 				width: 48px;
 				height: 48px;
 			}
@@ -767,13 +762,11 @@
 	}
 }
 
-@mixin reference {
-	margin-top: 80px;
-	padding: 24px 24px 14px;
-	background-color: #F2F6FA;
+/* 연관자료 */
+@mixin reference {	
 	dl {
 		dt {
-			color: #1A1A1A;
+			color: $black;
 			font-size: rem(18);
 			font-weight: 500;
 			margin-bottom: 6px;
@@ -783,8 +776,6 @@
 				vertical-align: middle;
 				width: 20px;
 				height: 20px;
-				//background: url(/static/portal/img/ico/ico-export_notes.svg);
-				margin-right: 6px;
 			}
 		}
 	}
@@ -803,51 +794,229 @@
 		}
 	}
 }
-
 .reference {
-	@include reference();
-	dl {
-		dt {
-			&::before {				
-				background: url(/static/portal/img/ico/ico-export_notes.svg);
+	margin-top: 30px;
+	padding: 50px 120px;
+	background-color: #F2F6FA;
+	@include breakpoint($smd){
+		padding: 30px;
+	}
+	@include breakpoint($sm){
+		padding: 20px;
+	}
+	&-data {
+		@include reference();
+		dl {				
+			dt {
+				font-weight: 500;
+				color: #222;
+				margin-bottom: 20px;
+				&::before {
+					content: "";
+					display: inline-block;
+					vertical-align: middle;
+					width: 20px;
+					height: 20px;
+					background: url(/static/portal/img/ico/ico-export_notes.svg);
+					margin: 0 6px 0 0;
+				}
+			}
+			dd {
+				ul {
+					display: flex;
+					flex-wrap: wrap;
+					margin: -12px -12px 0;
+					li {
+						width: calc(100% / 4);
+						padding: 12px;
+						@include breakpoint($sm){
+							width: calc(100% / 2);
+						}
+					}
+				}
+				a {
+					display: block;
+					color: $black;
+					background-color: #fff;
+					border-radius: 8px;
+					padding: 15px 15px;					
+					i {
+						&::before {
+							content: "";
+							display: inline-block;
+							vertical-align: middle;
+							width: 24px;
+							height: 24px;
+						}
+						&.m {
+							&::before {
+								background-image: url(/static/portal/img/ico/ico_LinkedData1.svg);
+							}
+						}
+						&.c {
+							&::before {
+								background-image: url(/static/portal/img/ico/ico_LinkedData2.svg);
+							}
+						}
+						&.h {
+							&::before {
+								background-image: url(/static/portal/img/ico/ico_LinkedData3.svg);
+							}
+						}
+					}
+				}
 			}
 		}
-		dd {
-			ul {
-				display: flex;
-				flex-wrap: wrap;
-				flex-direction: row;
-				margin: 0 -10px;
-				li {
-					width: calc(100% / 4);
-					padding: 10px;
-					a {
-						display: block;
-						padding: 20px;
-						background-color: #fff;
-						span {
+		.lnb-nav & {
+			border-top: 1px solid #E5E5E5;
+			padding-top: 26px;
+			margin-top: 28px;
+			dl {
+				dd {
+					ul {
+						margin: 0;
+						li {
+							width: 100%;
+							padding: 0;
+							a {
+								width: 100%;
+								display: block;
+								padding: 7px 8px;
+								background-color: #F2F6FA;
+								border-radius: 8px;
+								@include ellipsis;
+								i {
+									margin-right: 5px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	&-news {
+		margin-top: 20px;
+		padding-top: 30px;
+		border-top: 1px solid #DCE2F1;
+		@include reference();
+		dl {
+			dt {
+				&::before {	
+					width: 21px;
+					height: 19px;	
+					background: url(/static/portal/img/ico/ico-data.svg);
+					margin: 0 6px 0 0;					
+				}
+			}
+			dd {
+				ul {
+					display: flex;
+					flex-wrap: wrap;
+					flex-direction: row;
+					margin: 0 -12px;
+					li {
+						width: calc(100% / 4);
+						padding: 12px;
+						@include breakpoint($sm){
+							width: calc(100% / 2);
+						}
+						a {
 							display: block;
-							&.t1 {
-								color: #1A1A1A;
-								margin-bottom: 8px;
+							span {
+								display: block;
+								&.t1 {
+									color: $black;
+									margin-bottom: 8px;
+								}
+								&.t2 {
+									color: #666;
+									font-size: rem(14);
+								}
+								&.t {
+									color: #3B63C4;
+									font-size: rem(14);
+									margin-bottom: 4px;
+								}
+								&.title {
+									max-height: 72px;
+									@include line-clamp(3);
+								}
+								&.date {
+									color: #666;
+									font-size: rem(14);
+									margin-top: 10px;
+								}
 							}
-							&.t2 {
-								color: #666;
-								font-size: rem(14);
-							}
-							&.t {
-								color: #3B63C4;
-								font-size: rem(14);
-								margin-bottom: 8px;
-							}
-							&.title {
-								max-height: 72px;
-								@include line-clamp(3);
-							}
-							&.date {
-								color: #666;
-								font-size: rem(14);
-								margin-top: 20px;
+						}
+					}
+				}
+			}
+		}
+	}
+	&-media {
+		border-top: 1px solid #DCE2F1;
+		@include reference();
+		margin-top: 25px;
+		padding-top: 30px;
+		dl {
+			dt {
+				&::before {
+					@include font-ico-outline('\e8a7');
+					font-size: 22px;
+					margin: 0 8px 4px 0;
+				}
+			}
+			dd {				
+				ul {
+					padding-top: 12px;
+					display: flex;
+					flex-wrap: wrap;
+					margin: -12px -12px 0;
+					li {
+						width: calc(100% / 4);
+						padding: 12px;
+						@include breakpoint($sm){
+							width: calc(100% / 2);
+						}
+						a {							
+							display: block;
+							span {
+								display: block;
+								&.img {
+									position: relative;
+									padding-top: 62%;
+									background-position: 50%;
+									background-size: cover;
+									background-repeat: no-repeat;
+									border-radius: 8px;
+									margin-bottom: 15px;
+									&::before {
+										content: "";
+										display: inline-block;
+										width: 40px;
+										height: 40px;
+										background-image: url(/static/portal/img/ico/ico-play.svg);
+										position: absolute;
+										top: 50%;
+										left: 50%;
+										margin-left: -20px;
+										margin-top: -20px;
+									}
+								}
+								&.t {
+									color: #3B63C4;
+									font-size: rem(14);
+								}
+								&.tit {
+									color: $black;
+									@include line-clamp(2);
+									height: 48px;
+									margin: 5px 0 10px;
+								}
+								&.date {
+									color: #666;
+								}
 							}
 						}
 					}
@@ -856,54 +1025,7 @@
 		}
 	}
 }
-.reference-media {
-	@include reference();
-	margin-top: 16px;
-	dl {
-		dt {
-			&::before {
-				@include font-ico-outline('\e8a7');
-				font-size: 22px;
-				margin: 0 8px 4px 0;
-			}
-		}
-		dd {
-			.t {
-				color: #3B63C4;
-				font-size: rem(14);
-			}
-			.tit {
-				color: #1A1A1A;
-			}
-			ul {
-				padding-top: 12px;
-				display: flex;
-				flex-wrap: wrap;
-				margin: 0 -8px;
-				li {
-					width: calc(100% / 4);
-					padding: 8px;
-					a {
-						display: block;
-						padding: 16px;
-						background-color: #fff;
-						border-radius: 16px;
-						span {
-							display: block;
-							&.img {
-								padding-top: 100%;
-								background-position: 50%;
-								background-size: cover;
-								background-repeat: no-repeat;
-								margin: 10px 0;
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-}
+
 
 .search_wrap {
 	display: none;
@@ -919,6 +1041,94 @@
 		margin-bottom: 12px;
 	}	
 }
+
+
+/* 추가된 내용, hym */
+#wrap {
+	padding-top: 0;
+}
+#header {
+	position: relative;
+	background: #131547;
+	backdrop-filter: blur(4px);
+	.globalHeader {
+		@include breakpoint($lg){
+			ul {
+				border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+				li {
+					a {
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+}
+#header.family {
+	.logo {
+		> a {
+			display: inline-flex;
+			width: auto;
+			align-items: center;
+			background: transparent;
+			gap: 0 32px;
+			@include breakpoint($sm){ 
+				gap: 0 24px;
+			}
+		}
+		&-portal {
+			display: inline-block;
+			width: 128px;
+			height:  41px;
+			@include background-image-retina("/static/museum/img/common/logo-portal", png, auto, 100%);
+			background-size: cover;
+			@include breakpoint($sm){
+				width: 110px;
+				height: 36px;
+			}
+		}
+		&-museum {
+			display: inline-block;
+			position: relative;
+			width: 83px;
+			height:  37px;
+			padding-left: 24px;
+			@include background-image-retina("/static/museum/img/common/logo-museum", png, auto, 100%);
+			background-size: contain;
+			background-position: center center;
+			@include breakpoint($sm){
+				width: 72px;
+				height: 32px;
+			}
+			&::before {
+				content: '';
+				position: absolute;
+				display: inline-block;
+				left: -16px;
+				width: 1px;
+				height: 38px;
+				background: rgba(255,255,255,.2);
+				@include breakpoint($sm){ 
+					left: -12px;
+					height: 32px;
+				}
+			}
+		}
+	}
+}
+.gnb {
+	> ul {
+		@include breakpoint($lg){
+			> li {
+				> a {
+					color: #fff;
+				}
+			}
+		}
+	}
+}
+
+
 
 
 @include breakpoint($lg) {
