@@ -5,14 +5,16 @@ $(function () {
 		loop: true,
 		speed: 1500,
 		autoplay: {
-			delay: 20000, // 시간 설정
+			delay: 10000, // 시간 설정
 			disableOnInteraction: false, // false-스와이프 후 자동 재생
 			loop: true, //무한반복 할지말지,
-			// loop: false, //무한반복 할지말지,
-
 		},
 		grabCursor: true,
-		effect: "creative",
+		//effect: "creative",
+		effect: "fade",
+		fadeEffect: { 
+			crossFade: true 
+		},
 		creativeEffect: {
 			prev: {
 				shadow: true,
@@ -26,9 +28,12 @@ $(function () {
 				rotate: [0, -100, 0],
 			},
 		},
-		// 
-		grabCursor: true,
-		effect: "creative",
+		grabCursor: true,		
+		//effect: "creative",
+		/*effect: "fade",
+		fadeEffect: { 
+			crossFade: true 
+		},
 		creativeEffect: {
 			prev: {
 				shadow: true,
@@ -37,7 +42,7 @@ $(function () {
 			next: {
 				translate: ["100%", 0, 0],
 			},
-		},
+		},*/
 
 		// Navigation arrows
 		navigation: {
@@ -71,17 +76,17 @@ $(function () {
 
 	$('.section1-visual__swiper-button-stop').on('click', function () {
 		$(this).hide().next().show().focus()
-		swiper.autoplay.stop();
+		section1Visual.autoplay.stop();
 	});
 	$('.section1-visual__swiper-button-play').on('click', function () {
 		$(this).hide().prev().show().focus()
-		swiper.autoplay.start();
+		section1Visual.autoplay.start();
 	});
 	$('.section1-visual .swiper-slide').on('mouseover', function(){
-		swiper.autoplay.stop();
+		section1Visual.autoplay.stop();
 	});
 	$('.section1-visual .swiper-slide').on('mouseout', function(){
-		swiper.autoplay.start();
+		section1Visual.autoplay.start();
 	});	
 });
 
@@ -154,22 +159,12 @@ $(function () {
 });
 
 
-
-
-
-
-
-
-
-
-/* ========================  */
-
 //미디어
 $(document).ready(function () {
 	slider();
 })
 function slider(){
-	$(".slider").each(function(index){
+	$(".slider").each(function(index){//.slider
 		var $this = $(this);
 		var winW = window.innerWidth; //화면 가로사이즈
 		var swiper = undefined;
@@ -212,25 +207,22 @@ function slider(){
 			}
 			swiper = new Swiper('.slider-' + index + ' .inner', {
 				slidesPerView: viewNum,
-				initialSlide: slideInx,
-				spaceBetween: 0,
-				slidesPerGroup: 1,		
+				initialSlide :slideInx,
+				//spaceBetween: 0,
+				slidesPerGroup: 1,
 				loop: loopChk,
 				centeredSlides : true,
 				effect: 'coverflow',
-				coverflowEffect: { //
+				coverflowEffect: {
 					rotate: 0,
 					slideShadows: false,
 					stretch: -59,
 				},
-				// speed : 3000,
-				// autoplay: {
-				// 	delay: 3000,
-				// 	disableOnInteraction: false,
-				// },
 				navigation: {
-					nextEl: $('.slider-' + index).find('.next'),
-					prevEl: $('.slider-' + index).find('.prev'),
+					//nextEl: $('.slider-' + index).find('.media-next'),
+					//prevEl: $('.slider-' + index).find('.media-prev'),
+					nextEl: '.media-next',
+					prevEl: '.media-prev',
 				},
 				on: {
 					activeIndexChange: function () {
@@ -250,16 +242,9 @@ $(".tab-sns a").on('click', function () {
 	let tabid = $(this).attr("rel");
 	$("." + tabid).fadeIn();
 });
-// $(function () {
-// 	swiper = new Swiper('.slider-0 .inner', {
 
-// 		navigation: {
-// 			nextEl: '.slider-0 .next',
-// 			prevEl: '.slider-0 .prev',
-// 		}
 
-// 	});
-// });
+
 //최신 보고서
 $(function () {
 	const board1 = new Swiper('.board-list1', {
@@ -314,9 +299,8 @@ $(function () {
 	$(".board-list1 .swiper-slide").on('mouseleave', function (e) {
 		$(this).removeClass("hover");
 	});
-
-
 });
+
 
 //BOK 보도자료
 $(function () {
@@ -369,7 +353,7 @@ $(function () {
 
 //알림판
 $(function () {
-	const swiper = new Swiper('.popup', {
+	const popup = new Swiper('.popup', {
 		init: false,
 		freeMode: true,
 		// Optional parameters
@@ -408,19 +392,19 @@ $(function () {
 			}
 		}
 	});
-	swiper.init();//초기화	
+	popup.init();//초기화	
 	$('.popup-stop').on('click', function () {
 		$(this).hide().next().show().focus()
-		swiper.autoplay.stop();
+		popup.autoplay.stop();
 	});
 	$('.popup-play').on('click', function () {
 		$(this).hide().prev().show().focus()
-		swiper.autoplay.start();
+		popup.autoplay.start();
 	});
 	$('.popup .swiper-slide').on('mouseover', function(){
-		swiper.autoplay.stop();
+		popup.autoplay.stop();
 	});
 	$('.popup .swiper-slide').on('mouseout', function(){
-		swiper.autoplay.start();
+		popup.autoplay.start();
 	});	
 });

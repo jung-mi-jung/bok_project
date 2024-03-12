@@ -576,6 +576,10 @@ $(function() {
 		});
 	});
 
+	
+	//조직도
+	$(".email-s").parent().addClass("addtxt");
+
 
 	//풋더 사이트맵
 	$(".site_go button").click(function(){

@@ -84,6 +84,7 @@ input[type='radio'] {
 	width: 20px;
 	height: 20px;
 	vertical-align: middle;
+	margin-top: 2px;
 	&:focus + i {
 		outline: dotted 1px $black;
 		outline-offset: 2px;
@@ -95,9 +96,12 @@ input[type='radio'] {
 		border: 1px solid #BFBFBF;
 		border-radius: 50%;
 		background-color: #FAFAFA;
+		position: absolute;
+			top: 2px;
+			left: -1px;
 	}
 	&:checked + i {
-		position: relative;
+		//position: relative;
 		background-color: #fff;
 		&:before {
 			content: "";
@@ -106,9 +110,7 @@ input[type='radio'] {
 			height: 6px;
 			border: 7px solid #3B63C4;
 			border-radius: 50%;
-			position: absolute;
-			top: -1px;
-			left: -1px;
+			
 		}
 	}
 }

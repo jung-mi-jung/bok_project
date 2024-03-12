@@ -17,28 +17,6 @@ table {
 			display: none !important;
 		}
 	}
-	@include breakpoint($sm){
-		&.pcweb {
-			display: none !important;
-		}
-		&.moble {
-			display: block !important;
-			thead {
-				th {
-					color: #fff !important;
-					background-color: #076bcc !important;
-					border-bottom: none !important;
-				}
-			}
-			tbody {
-				th {
-					color: #757575;
-					background-color: #fff;
-					border: 1px solid #ccc;
-				}
-			}			
-		}
-	}
 	table {
 		width: 100%;
 		thead {
@@ -67,6 +45,31 @@ table {
 			min-height: 55px;
 			border: 1px solid $bd-color;
 			background-color: #fff;
+		}
+	}
+	&.m {
+		@include breakpoint($smd){
+			thead {
+				display: none;
+			}
+			tr {
+				display: block;
+				padding: 12px 0;			
+				border-bottom: 1px solid $bd-color;
+			}
+			th, td {
+				display: block;
+				border: 0;
+				text-align: left;
+				
+				min-height: auto;
+			}
+			th {
+				padding: 0;
+			}
+			td {
+				padding: 1px 0;
+			}
 		}
 	}
 }

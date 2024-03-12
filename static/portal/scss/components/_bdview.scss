@@ -122,8 +122,11 @@
 				vertical-align: middle;
 				width: 16px;
 				height: 16px;
-				background: url(/static/portal/img/ico/ico-date.png);
+				background: url(/static/portal/img/ico/ico-date.png) no-repeat;
 				margin-right: 5px;
+				@include breakpoint($sm){
+					background-size: auto 14px;
+				}
 			}
 		}
 		.hits {
@@ -133,8 +136,11 @@
 				vertical-align: middle;
 				width: 14px;
 				height: 16px;
-				background: url(/static/portal/img/ico/ico-hits.png);
+				background: url(/static/portal/img/ico/ico-hits.png) no-repeat;
 				margin-right: 5px;
+				@include breakpoint($sm){
+					background-size: auto 14px;
+				}
 			}
 		}
 		dt + dd {
@@ -146,6 +152,10 @@
 				height: 16px;
 				background-color: #D9D9D9;
 				margin: 0 16px;
+				@include breakpoint($sm){
+					height: 12px;
+					margin: 0 10px;
+				}
 			}
 			&:last-child {
 				&::after {
@@ -169,6 +179,14 @@
 				border: 1px solid #3B63C4;
 			}
 		}
+		@include breakpoint($sm){
+			& + dl {
+				position: absolute;
+				top: -5px;
+				left: 0;
+				font-size: 12px;
+			}
+		}
 	}
 	.user {
 		&::before {
@@ -177,8 +195,11 @@
 			vertical-align: middle;
 			width: 18px;
 			height: 16px;
-			background: url(/static/portal/img/ico/ico-user.png);
+			background: url(/static/portal/img/ico/ico-user.png) no-repeat;
 			margin-right: 5px;
+			@include breakpoint($sm){
+				background-size: auto 14px;
+			}
 		}
 	}
 }
@@ -187,11 +208,12 @@
 	//@include dl-table;	
 	.subject {
 		color: $black;
-		font-weight: 400;
+		font-weight: 400 !important;
 		font-size: rem(36) !important;
 		line-height: 1.2;
 		@include breakpoint($sm){
 			font-size: rem(22) !important;
+			padding-top: 22px;
 		}
 	}
 	.dataInfoSet {
@@ -218,7 +240,6 @@
 				margin-right: 5px;
 			}
 		}
-		
 	}
 	.videoSet {
 		padding: 30px 0;
@@ -226,25 +247,50 @@
 		max-width: 100%;
 		margin: 0 auto;
 		.video {
+			.vjs-icon-placeholder:before {
+				font-size: 24px;
+				margin-top: 8px;
+			}
 			.video-js {
 				&.vjs-4-3 {
 					padding-top: 56.2%;
 				}
-				
-
-				.video-js .vjs-big-play-button
-				.vjs-big-play-button .vjs-icon-placeholder:before {
-					content: "";
-					display: inline-block;
+				.vjs-big-play-button {
 					width: 64px;
 					height: 64px;
-					background: url(/static/portal/img/common/video-play.png) no-repeat;
-			
-				
+					margin-top: -32px;
+					margin-left: -32px;
+					.vjs-icon-placeholder:before {
+						content: "";
+						display: inline-block;
+						width: 64px;
+						height: 64px;
+						background: url(/static/portal/img/common/video-play.png) no-repeat;
+						margin-top: 0;
+					}
 				}
 				&:hover .vjs-big-play-button, 
 				.vjs-big-play-button:focus {
 					background-color: transparent;
+				}
+				.vjs-play-control {
+					.vjs-icon-placeholder:before {
+						@include font-ico-outline("\e5df");
+					}
+					&.vjs-playing .vjs-icon-placeholder:before {
+						@include font-ico-outline('\e034');
+					}
+				}
+				.vjs-mute-control {
+					.vjs-icon-placeholder:before {
+						@include font-ico-outline('\e050');
+					}
+					&.vjs-vol-0 .vjs-icon-placeholder:before {
+						@include font-ico-outline('\e04f');
+					}
+				}
+				.vjs-fullscreen-control .vjs-icon-placeholder:before {
+					@include font-ico-outline('\e56b');
 				}
 			}
 			&-etc {
@@ -252,7 +298,7 @@
 				display: flex;
 				justify-content: space-between;
 				width: 100%;
-				.help {					
+				.help {
 					color: #4D4D4D;
 					&::before {
 						@include font-ico-outline('\e88e');
@@ -284,8 +330,7 @@
 				width: 55px;
 				height: 48px;
 				line-height: 48px;
-				text-align: center;
-				
+				text-align: center;				
 				&::before {
 					@include font-ico-outline('\e5cf');
 					width: 24px;
@@ -316,9 +361,12 @@
 			}
 			h3 {
 				color: #1A1A1A;
-				font-weight: 400;
-				font-size: rem(18);
+				font-weight: 400 !important;
+				font-size: rem(18) !important;
 				padding: 10px 25px;
+				&::before {
+					display: none !important;
+				}
 				
 			}	
 			.con {

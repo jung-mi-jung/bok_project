@@ -230,7 +230,7 @@
 			width: 100%;
 			font-size: rem(36);
 			text-align: center;
-			padding: 30px 0 25px;
+			padding: 20px 0 18px;
 		}
 	}
 }
@@ -462,7 +462,7 @@
 				text-align: left;
 				height: 32px;
 				line-height: 32px;
-				padding: 0 20px;
+				padding: 0 18px;
 				border-radius: 8px 8px 0 0;
 				border-bottom: 1px solid #BFBFBF;
 			}
@@ -485,14 +485,25 @@
 		.radio-group {
 			display: flex;
 			align-items: center;
+			padding: 20px 30px;
 			@include breakpoint($smd){
 				display: block;
-				padding: 10px 0;
+				padding: 10px 3px;
+			}
+			label {
+				@include breakpoint($sm){
+					&:first-child {
+						margin-left: 14px;
+					}
+				}
+				& + label {
+					margin-left: 14px;
+				}
 			}
 			input[type=radio] {	
 				& + i + span {
 					color: #4D4D4D;
-					margin-left: 12px;
+					margin-left: 10px;
 				}
 				&:checked + i {
 					& + span {

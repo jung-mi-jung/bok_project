@@ -101,7 +101,7 @@
 	}
 }
 
-
+/* 안씀
 //법령 검색
 .lawTab {
 	background:#f4f5f7;
@@ -206,14 +206,31 @@
 		}
 	}
 }
+*/
 
 
-.h-group {
-	display: flex;
-	justify-content: space-between;
-	align-items: baseline;
+// 한줄에 h3 + p
+.h-group {	
 	p {
-		
+		float: right;
+		text-align: right;
+		margin-top: -37px;
+		&.addtxt {
+			@include breakpoint($sm){
+				margin-top: -62px;
+			}
+		}
+	}
+	.mr {
+		margin-right: 20px;
+		@include breakpoint($sm){
+			margin-right: 0;
+		}
+	}
+	.email-s {
+		@include breakpoint($sm){
+			display: block;
+		}		
 	}
 }
 
@@ -240,10 +257,124 @@
 		}
 	}
 	&.pad {
-		margin: 100px 0;
+		margin: 50px 0;
+		@include breakpoint($lg){
+			margin: 100px 0;
+		}
 	}	
 }
 
 mark {
 	background-color: #FFE100 !important;
+}
+
+.depart-wrap {
+	h2 {
+		font-size: rem(40) !important;
+		font-weight: 100 !important;
+		@include breakpoint($lg){
+			font-size: rem(64) !important;
+		}
+	}
+	.dept-set {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 30px;
+		@include breakpoint($smd){
+			display: block;
+		}
+		@include breakpoint($lg){
+			> * {
+				width: 50%;
+			}
+		}
+		.mr {
+			margin-right: 20px;
+		}
+	}
+	.dept-list {		
+		margin-bottom: 20px;
+		@include breakpoint($lg){
+			padding-top: 30px;
+			margin-bottom: 0;
+		}
+		ul {
+			li {
+				display: flex;
+				margin-bottom: 10px;
+				strong {
+					display: inline-block;
+					padding: 4px 0;
+					margin-right: 10px;
+					width: 80px;
+					color: #fff;
+					font-size: 12px;
+					font-weight: 400 !important;
+					background-color: #39A0FF;
+					border-radius: 99px;
+					text-align: center;
+					letter-spacing: 1.0px;
+				}
+				span {
+					font-size: rem(18);
+				}
+			}
+		}
+	}
+	.list-con {
+		ul {
+			margin-top: 8px;
+			border-top: 2px solid $black;
+			li {
+				border-bottom: 1px solid #BFBFBF;
+				padding: 20px 0;
+				@include breakpoint($lg){
+					padding: 30px 0;
+				}
+			}
+		}
+		dl {
+			width: 100%;
+			display: flex;
+			dt {
+				width: 100px;
+				font-size: rem(24);
+				font-weight: 400;
+				@include breakpoint($lg){
+					width: 180px;
+				}
+				span {
+					display: block;
+					color: #666;
+					font-size: rem(16);
+				}
+			}
+			dd {
+				width: calc(100% - 120px);
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				color: #666;
+				@include breakpoint($lg){
+					width: calc(100% - 150px);
+				}
+				span {
+					display: inline-block;
+					&.txt {
+						width: calc(100% - 120px);
+						@include breakpoint($lg){
+							width: calc(100% - 150px);
+						}
+					}
+					&.tel {
+						width: 120px;
+						text-align: center;
+						@include breakpoint($lg){
+							width: 180px;
+						}
+					}
+				}
+			}
+		}
+	}
 }

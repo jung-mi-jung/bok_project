@@ -30,65 +30,91 @@
 	</div>
 </div>
 
-<h2>기획협력국</h2>
-<div class="">
-	<div class="">
-		<ul>
-			<li>
-				<strong>Work. 01</strong>
-				<span>전략수립 및 추진, 부서간 업무 조정 및 통합</span>
-			</li>
-			<li>
-				<strong>Work. 02</strong>
-				<span>대내외 총괄 업무</span>
-			</li>
-			<li>
-				<strong>Work. 03</strong>
-				<span>민원관리업무</span>
-			</li>
-			<li>
-				<strong>Work. 04</strong>
-				<span>조직 및 인력의 관리</span>
-			</li>
-			<li>
-				<strong>Work. 05</strong>
-				<span>예산, 결산 및 회계제도에 관한 사항</span>
-			</li>
-			<li>
-				<strong>Work. 06</strong>
-				<span>전행적 리스크·업무지속계획 관리</span>
-			</li>
-		</ul>
+<div class="depart-wrap">
+	<h2>기획협력국</h2>
+	<div class="dept-set">
+		<div class="dept-list">
+			<ul>
+				<li>
+					<strong>WORK. 01</strong>
+					<span>전략수립 및 추진, 부서간 업무 조정 및 통합</span>
+				</li>
+				<li>
+					<strong>WORK. 02</strong>
+					<span>대내외 총괄 업무</span>
+				</li>
+				<li>
+					<strong>WORK. 03</strong>
+					<span>민원관리업무</span>
+				</li>
+				<li>
+					<strong>WORK. 04</strong>
+					<span>조직 및 인력의 관리</span>
+				</li>
+				<li>
+					<strong>WORK. 05</strong>
+					<span>예산, 결산 및 회계제도에 관한 사항</span>
+				</li>
+				<li>
+					<strong>WORK. 06</strong>
+					<span>전행적 리스크·업무지속계획 관리</span>
+				</li>
+			</ul>
+		</div>
+		<div class="list-con">
+			<p class="tar">
+				<span class="sr-only">이메일</span>
+				<i class="i-email"></i>
+				<a href="mailto:bokdplp@bok.or.kr" class="mr">bokdplp@bok.or.kr</a>
+				<span class="sr-only">팩스번호</span>
+				<i class="i-fax"></i>
+				02-759-4072
+			</p>
+			<ul>
+				<li>
+					<dl>
+						<dt>
+							<span>국장</span>
+							김태경
+						</dt>
+						<dd>
+							<span class="txt">국 통할</span>
+							<span class="tel">02-759-4041</span>
+						</dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt>
+							<span>부국장</span>
+							허돈구
+						</dt>
+						<dd>
+							<span class="txt">부서자체 운영리스크관리, 준법감시, 감사, 개인정보보호 업무, 민원사무 관리업무, 국내 예산, 인사, 국장 지정업무</span>
+							<span class="tel">4045</span>
+						</dd>
+					</dl>
+				</li>
+			</ul>			
+		</div>
 	</div>
-	<div class="">
-		<p class="tar">
-			<span class="sr-only">이메일</span>
-			<i class="i-email"></i>
-			<a href="mailto:bokdplp@bok.or.kr">bokdplp@bok.or.kr</a>
-			<span class="sr-only">팩스번호</span>
-			<i class="i-fax"></i>
-			02-759-4072
-		</p>
-		<dl>
-			<dt></dt>
-			<dd></dd>
-		</dl>
-	</div> 
 </div>
 
 
 <div class="h-group">
 	<h3 class="h3">전략기획팀</h3>
 	<p>
-		<span class="sr-only">이메일</span>
-		<i class="i-email"></i>
-		<a href="mailto:bokdplp@bok.or.kr">bokdplp@bok.or.kr</a>
+		<span class="email-s">
+			<span class="sr-only">이메일</span>
+			<i class="i-email"></i>
+			<a href="mailto:bokdplp@bok.or.kr" class="mr">bokdplp@bok.or.kr</a>
+		</span>
 		<span class="sr-only">팩스번호</span>
 		<i class="i-fax"></i>
 		02-759-4072
 	</p>
 </div>
-<div class="table tac">
+<div class="table m tac">
 	<table>
 		<caption>전략기획팀</caption>
 		<thead>
@@ -133,7 +159,7 @@
 		02-759-4069
 	</p>
 </div>
-<div class="table tac scrollX">
+<div class="table m tac">
 	<table>
 		<caption>전략기획팀 지역협력반</caption>
 		<thead>
@@ -170,7 +196,7 @@
 		02-759-4072
 	</p>
 </div>
-<div class="table tac">
+<div class="table m tac">
 	<table>
 		<caption>운영리스크팀</caption>
 		<thead>
@@ -210,7 +236,7 @@
 		02-759-4060
 	</p>
 </div>
-<div class="table tac">
+<div class="table m tac">
 	<table>
 		<caption>조직관리팀</caption>
 		<thead>
@@ -255,7 +281,7 @@
 		02-759-4069
 	</p>
 </div>
-<div class="table tac">
+<div class="table m tac">
 	<table>
 		<caption>예산회계팀</caption>
 		<thead>
@@ -305,19 +331,79 @@
 </div>
 <script>
 $(function() {
-	$('.sh .select-set button').each(function(index) {
+
+	//$('.sh ul button').each(function(index) {
+		$(".sh button.ck2").click(function() {
+
+			//var $x = $(".sh .keyword input");
+
+	
+
+			// var chk = $(".sh .ck2").is(".active");
+			// //var abc = $(".sh .btn_select").text("성명")
+
+			// if(chk==true){
+			// 	$(".sh .btn_select").css("border", "1px solid red")
+			// }
+			
+			if($(".sh button.ck2").hasClass("active")){
+			//if(!$('.sh button.ck2.active')){
+				$(".sh .keyword input").attr("placeholder", "성명은 팀·반장 이상 직원만 검색됩니다.");
+				$(".sh .keyword input").attr("title", "성명은 팀·반장 이상 직원만 검색됩니다.");
+				return false;
+			}
+			else {
+			    $(".sh .keyword input").removeAttr("placeholder");
+				$(".sh .keyword input").removeAttr("title");
+			}
+		});
+	//});
+
+
+
+/*
+	$('.sh button').click(function () {
+		$(this).toggleClass('active');
+
+		var chk = $(".btn_select").text("성명");
+		if(chk==true){
+			$(".sh .keyword input").attr("placeholder", "성명은 팀·반장 이상 직원만 검색됩니다.");
+			$(".sh .keyword input").attr("title", "성명은 팀·반장 이상 직원만 검색됩니다.");
+		}else{
+			 $(".sh .keyword input").removeAttr("placeholder");
+			$(".sh .keyword input").removeAttr("title");
+		}
+	});
+
+		
+		
+		//$('.sh button.ch2' + $(this).find('option:selected').attr('id')).show();
+	});
+	if($('.sh button.ck2').hasClass('active')){
+		$(".sh .keyword input").attr("placeholder", "성명은 팀·반장 이상 직원만 검색됩니다.");
+		$(".sh .keyword input").attr("title", "성명은 팀·반장 이상 직원만 검색됩니다.");
+	} else {
+	     $(".sh .keyword input").removeAttr("placeholder");
+		$(".sh .keyword input").removeAttr("title");
+	}
+*/
+
+	
+/*
+	$('.sh .ck2').each(function(index) {
 		$('.sh .ck2').click(function() {
+			$(this).addClass('active');
 			if($(this).hasClass('active')){
 				$(".sh .keyword input").attr("placeholder", "성명은 팀·반장 이상 직원만 검색됩니다.");
 				$(".sh .keyword input").attr("title", "성명은 팀·반장 이상 직원만 검색됩니다.");
-	        }
-	        else{
+				return false;
+	        } else {
 		        $(".sh .keyword input").removeAttr("placeholder");
 				$(".sh .keyword input").removeAttr("title");
+				return false;
 	        }
-
 		});
-	});
+	});*/
 });
 </script>
 
@@ -332,7 +418,7 @@ $(function() {
 
 
 <!-- 검색 결과 -->
-<div class="table tac">
+<div class="table m tac">
 	<table>
 		<caption>조직도 검색 결과</caption>
 		<thead>
