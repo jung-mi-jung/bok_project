@@ -82,7 +82,6 @@ $('.total-nav button').click(function (e) {
 
 
 $(function () {
-
 	//skip
 	$('.skip a[href="#content"]').click(function(event) {
 		$('.page-toolbar button').focus();
@@ -95,8 +94,10 @@ $(function () {
 		var h = 53;
 		if ($(window).scrollTop() > h) {
 			$('body').addClass('gnb-stiky');
+			//$(".lnb-nav, .sh-db").addClass('sticky');
 		} else {
 			$('body').removeClass('gnb-stiky');
+			//$(".lnb-nav, .sh-db").removeClass('sticky');
 		}
 	}
 	$(window).on('scroll', function () {
@@ -274,27 +275,51 @@ $(function () {
 			.attr('placeholder','연도 - 월 - 일')
 	}
 
-	// 탭 활성화
+
+	
+	// 모바일 탭 활성화
 	$(".js-tab button").on('click', function(){
 		var $parent = $(this).closest(".js-tab");
 		var index = $(this).parent().index();
-		$(this)
-			.attr("aria-pressed", true).parent().addClass("on").attr('title','선택됨')
-			.siblings().removeClass("on").find("button").attr("aria-pressed", false).removeAttr('title')
-		$parent
-			.siblings(".tab-content").find(".con").hide().eq(index).show();
+		
+		//$(this).attr("aria-pressed", true).parent().addClass("on").attr('title','선택됨').siblings().removeClass("on").find("button").attr("aria-pressed", false).removeAttr('title')
+		//$parent.siblings(".tab-content").find(".tab-pannel").hide().eq(index).show();
+
+		$parent.next().css("display", "block");
+		$parent.toggleClass("on");
+
 	});
 
 	// 탭 활성화
 	$('.tab-list').each(function (index, element) {
-		$(this).find('button')
-			.on('click', function (e) {
-				e.preventDefault();
-				$(this).attr('aria-selected', true).attr('title','선택됨').siblings().attr('aria-selected', false).removeAttr('title')
-				_id = $(this).attr('id')
-				$('[aria-labelledby="' + _id + '"]').show().siblings().hide()
-			})
+		$(this).find('a').on('click', function (e) {
+
+			//var selected = $(this).index();
+			//var selectedTxt = $('.tab-list button').eq(selected).text();
+			_id = $(this).attr('id')
+
+			$(this).attr('aria-selected', true).attr('title','선택됨').siblings().attr('aria-selected', false).removeAttr('title');
+			$('[aria-labelledby="' + _id + '"]').show().siblings().hide();
+
+			$(this).addClass("on").siblings().removeClass("on");
+			//$(".js-tab").removeClass("on").find("button").text(selectedTxt);
+		})
 	});
+
+	//콘텐츠 내부 래프트 엥커
+	$(".cont-nav li").on("click", function(){
+		var thisInx = $(this).index();
+		var thisScrollTop = $(".content-row .cont").eq(thisInx).offset().top
+
+		$(this).addClass("on").siblings().removeClass("on");
+
+		$("html, body").animate({ scrollTop: thisScrollTop - 104}, 200);
+
+		if ( $("body").hasClass("gnb-stiky")) {
+			$("html, body").animate({ scrollTop: thisScrollTop - 56}, 0);
+		}
+		return false;
+	})
 
 
 	// 이미지맵 반응형
@@ -644,6 +669,34 @@ $(function() {
 	});
 });
 
+
+// 상설전시 탭메뉴 swiper
+var section2Txt = new Swiper('.tab-list .swiper', {
+	slidesPerView: "auto",
+	// slidesPerView: 4,
+	//autoHeight: true,
+	// freeMode: true,
+	// speed: 200,
+	preventClicksPropagation: true,
+	navigation: {
+		nextEl: ".swiper-tab-next",
+        prevEl: ".swiper-tab-prev",
+	},
+});
+
+// 상설전시 swiper
+var section2Txt = new Swiper('.exhbt', {
+	slidesPerView: 1,
+	effect: "fade",
+	updateOnWindowResize: true,
+	speed: 600,
+	navigation: {
+		prevEl: '.content-prev',
+		nextEl: '.content-next',
+	},
+});
+
+
 //내가 본 콘텐츠
 $(function () {
 
@@ -710,3 +763,4 @@ $(function () {
 
 	
 });
+

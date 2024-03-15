@@ -20,14 +20,14 @@
 $btn: "[class^=b-]";
 #{$btn} {
 	border: none;
-	font-size: 1rem;
+	font-size: rem(18);
 	text-align: center;
 	min-width: 80px;
 	display: inline-block;
 	line-height: 50px;
 	color: #fff;
 	background-color: $point;
-	border-radius: 5px;
+	border-radius: 6px;
 	padding: 0 10px;
 	&:focus {
 		outline: 1px dashed #fff;
@@ -38,9 +38,9 @@ $btn: "[class^=b-]";
 		line-height: 48px;
 		justify-content: center;
 		align-items: center;
-		font-size: 1rem;
+		font-size: rem(18);
 		@include breakpoint($md) {
-			min-width: 120px;
+			min-width: 112px;
 		}
 	}
 	&.xs {
@@ -56,16 +56,15 @@ $btn: "[class^=b-]";
 			min-width: 160px;
 		}
 	}
-	&.b-allview {
+	&.b-list {
 		&::before {
 			content: "";
 			display: inline-block;
 			vertical-align: middle;
-			width: 14px;
+			width: 24px;
 			height: 14px;
-			background: url(/static/aieth/img/ico/b-allview.png);
-			margin-right: 6px;
-			margin-bottom: 2px;
+			background: url(/static/portal/img/ico/ico-b-list.svg) no-repeat;
+			margin-right: 12px;
 		}		
 	}
 	&.b-cancel {
@@ -103,10 +102,10 @@ $btn: "[class^=b-]";
 .btnSet {
 	float: none;
 	text-align: center !important;
-	margin-top: 20px;
+	margin-top: 40px;
 	[class^=b-] {
-		font-size: 16px;
-		min-width: 120px;
+		font-size: rem(18);
+		min-width: 112px;
 		& + [class^=b-] {
 			margin-left: 7px;
 		}

@@ -1,10 +1,13 @@
+// html {
+// 	scroll-behavior: smooth;
+// }
 #wrap {
 	position: relative;	
 	//padding-top: $m-header-height;
-	overflow: hidden;
-	@include breakpoint($lg){
-		padding-top: $header-height;
-	}
+	// overflow: hidden;
+	// @include breakpoint($lg){
+	// 	padding-top: $header-height;
+	// }
 }
 
 .container {
@@ -164,12 +167,94 @@
 		}
 	}
 }
+/* 추가된 내용, hym */
+#header {
+	position: relative;
+	background: #131547;
+	backdrop-filter: blur(4px);
+	.globalHeader {
+		@include breakpoint($lg){
+			ul {
+				border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+				li {
+					a {
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+}
+#header.family {
+	.logo {
+		> a {
+			display: inline-flex;
+			width: auto;
+			align-items: center;
+			background: transparent;
+			gap: 0 32px;
+			@include breakpoint($sm){ 
+				gap: 0 24px;
+			}
+		}
+		&-portal {
+			display: inline-block;
+			width: 128px;
+			height:  41px;
+			@include background-image-retina("/static/museum/img/common/logo-portal", png, auto, 100%);
+			background-size: cover;
+			@include breakpoint($sm){
+				width: 110px;
+				height: 36px;
+			}
+		}
+		&-museum {
+			display: inline-block;
+			position: relative;
+			width: 83px;
+			height:  37px;
+			padding-left: 24px;
+			@include background-image-retina("/static/museum/img/common/logo-museum", png, auto, 100%);
+			background-size: contain;
+			background-position: center center;
+			@include breakpoint($sm){
+				width: 72px;
+				height: 32px;
+			}
+			&::before {
+				content: '';
+				position: absolute;
+				display: inline-block;
+				left: -16px;
+				width: 1px;
+				height: 38px;
+				background: rgba(255,255,255,.2);
+				@include breakpoint($sm){ 
+					left: -12px;
+					height: 32px;
+				}
+			}
+		}
+	}
+}
+.gnb {
+	> ul {
+		@include breakpoint($lg){
+			> li {
+				> a {
+					color: #fff;
+				}
+			}
+		}
+	}
+}
+
 
 .hgroup {
 	position: relative;
 	display: flex;
 	justify-content: space-between;
-	margin: 50px 0 0;
+	margin: 50px 0 30px;
 	border-bottom: 2px solid #222;
 	padding-bottom: 30px;
 	@include breakpoint($sm){
@@ -290,14 +375,14 @@
 		flex-direction: column;
 	}
 	@include breakpoint($lg){
-		.lnb-nav {
-			padding-top: 30px;
-		}
+		// .lnb-nav {
+		// 	padding-top: 30px;
+		// }
 		.lnb-nav + .content,
 		.sh-db + .content {
 			float: right;
 			border-left: 1px solid $bd-color;
-			padding-top: 30px;
+			// padding-top: 30px;
 			padding-left: 36px;
 		}
 		.lnb-nav + .content {
@@ -1133,102 +1218,26 @@
 }
 
 .content {	
-	padding-top: 30px;
 	p {
 		margin-bottom: 12px;
+		white-space: pre-line;
+		em {
+			font-weight: 600;
+		}
+		& + h3 {
+			margin-top: 60px;
+		}
 	}	
 	& + .reference {
 		margin-top: 60px;
 	}
 }
-
-
-/* 추가된 내용, hym */
-#wrap {
-	padding-top: 0;
-}
-#header {
-	position: relative;
-	background: #131547;
-	backdrop-filter: blur(4px);
-	.globalHeader {
-		@include breakpoint($lg){
-			ul {
-				border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-				li {
-					a {
-						color: #fff;
-					}
-				}
-			}
-		}
+.content-row {
+	display: flex;
+	@include breakpoint($sm) {
+		display: block;
 	}
 }
-#header.family {
-	.logo {
-		> a {
-			display: inline-flex;
-			width: auto;
-			align-items: center;
-			background: transparent;
-			gap: 0 32px;
-			@include breakpoint($sm){ 
-				gap: 0 24px;
-			}
-		}
-		&-portal {
-			display: inline-block;
-			width: 128px;
-			height:  41px;
-			@include background-image-retina("/static/museum/img/common/logo-portal", png, auto, 100%);
-			background-size: cover;
-			@include breakpoint($sm){
-				width: 110px;
-				height: 36px;
-			}
-		}
-		&-museum {
-			display: inline-block;
-			position: relative;
-			width: 83px;
-			height:  37px;
-			padding-left: 24px;
-			@include background-image-retina("/static/museum/img/common/logo-museum", png, auto, 100%);
-			background-size: contain;
-			background-position: center center;
-			@include breakpoint($sm){
-				width: 72px;
-				height: 32px;
-			}
-			&::before {
-				content: '';
-				position: absolute;
-				display: inline-block;
-				left: -16px;
-				width: 1px;
-				height: 38px;
-				background: rgba(255,255,255,.2);
-				@include breakpoint($sm){ 
-					left: -12px;
-					height: 32px;
-				}
-			}
-		}
-	}
-}
-.gnb {
-	> ul {
-		@include breakpoint($lg){
-			> li {
-				> a {
-					color: #fff;
-				}
-			}
-		}
-	}
-}
-
-
 
 
 @include breakpoint($lg) {

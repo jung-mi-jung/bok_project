@@ -33,11 +33,17 @@
 @import 'base/lnb';//서브 좌측 메뉴
 @import 'components/form';//글쓰기 폼
 @import 'components/bdlist';//프로그램  리스트 공통
+@import 'components/bdview';//프로그램 뷰,수정,쓰기
+@import 'components/photo';//겔러리 타입(동영상 등)
 @import 'components/paging';//페이징
-@import 'components/table';//테이블 스타일
+@import 'components/tab';//탭메뉴
+@import 'components/sh';//검색
 
-@import 'components/content';//콘텐츠
-@import 'components/datepicker'; // datepicker theme
+@import 'components/content';
+@import 'components/dbdata';//게시물 데이터
+@import 'components/btn';//버튼 스타일
+@import 'components/box';  //box
+@import 'components/datepicker'; // datepick
 
 @import url('/static/jslibrary/bootstrap-datepicker-1.9.0-dist/css/bootstrap-datepicker3.standalone.css');
 
@@ -69,4 +75,15 @@
 .row {
 	@include flex-row;
 	align-items: flex-start;
+}
+
+.img-box {
+	.img {
+		display: block;
+		height: 1px;
+		//padding-top: 50%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: 50%;
+	}
 }

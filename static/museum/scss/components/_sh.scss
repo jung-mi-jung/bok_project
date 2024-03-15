@@ -1,235 +1,837 @@
-.sh {
-	margin-bottom: 20px;
-	padding: 20px;
-	background-color: $sh-bg-color;
-	border-radius: 5px;
-	@include breakpoint($md) {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
-		padding: 30px;
-		> * {
-			margin-left: 2px;
-			margin-right: 2px;
-		}
-	}
-	> * {
-		@include breakpoint($sm) {
-			& + * {
-				display: block;
-				margin-top: 4px;
-			}
-		}
-	}
-	label {
-		line-height: $sh-form-height;
-	}
-	select,
-	input[type="text"],
-	input[type="date"],
-	input[type="number"] {
-		width: 100%;
-		border: 1px solid $form-bd-color;
-		border-radius: 5px;
-	}
-	div > .label:first-child,
-	div > *:first-child > label > .label {
-		padding-left: 0;
-		min-width: 60px;
-		margin-right: 0 !important;
-		margin-left: 0;
-	}
-	.select {
-		flex-basis: 110px;
-	}	
-	// 키워드 구분
-	.keyword-cate {
-		@include breakpoint($md) {
-			flex-basis: 120px;
-		}
-	}
-	.input-group,
-	.select-group {
+//자료 검색형
+.sh-db {
+	margin-bottom: 40px;
+	position: sticky;
+	top: 48px;
+	// &.sticky {
+	// 	position: sticky;
+	// 	top: 78px;
+	// 	padding-top: 0;
+	// }
+	@include breakpoint($lg){
+		//position: relative;
 		display: block;
-		flex-grow: 1;
-		label {
-			display: flex;
-			flex-direction: row;
-			justify-content: space-between;
-			align-items: center;
-		}
-		.label {
-			padding-right: 10px;
-			@include breakpoint($mdw) {
-				padding-left: 0;
-				padding-right: 4px;
-			}
-			@include breakpoint($lg) {
-				padding-left: 20px;
-			}
-			&.w {
-				flex-basis: 140px;
-				flex-shrink: 0;
-				flex-grow: 1;
-			}
-		}
-		select {
-			min-width: 80px;
+		float: left;
+		width: per(204px + 35px, $pc-wide);
+		padding-right: 36px;
+		background-color: #fff;
+		height: auto;
+		margin-bottom: 0;
+		&::after {
+			content: "";
+			display: inline-block;
+			//border-right: 1px solid #d9d9d9;
+			background-color: #d9d9d9;
+			position: absolute;
+			top: 0;
+			right: -1px;
+			width: 1px;
+			height: 100%;
 		}
 	}
-	.keyword {
-		flex-grow: 1;
-		@include breakpoint($sm) {
-			display: block;
+	.db-search {
+		margin-bottom: 30px;
+		@include breakpoint($smd){
+			margin-bottom: 16px;
 		}
-	}
-	.btns {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
-		flex-basis: 104px;
-		flex-shrink: 0;
-		.search,
-		.reset {
-			width: 50px;
-			height: $form-height;
-			border-radius: $sh-bd-radius;
-		}
-		.search {			
-			background-color: $point;
+		.t {
+			margin-left: 2px;
 			&::before {
-				@include font-ico-outline('\e8b6');
-				font-size: 25px;
-				color: #fff;
+				content: "";
+				display: inline-block;
+				vertical-align: middle;
+				width: 5px;
+				height: 5px;
+				background-color: #222;
+				border-radius: 50%;
+				margin-right: 8px;
+				margin-bottom: 3px;
 			}
-			&:focus {
-				outline: 2px dashed #fff;
-				outline-offset: -2px;
-			}
-		}
-		.reset {
-			background-color: #fff;
-			border: 1px solid $point;			
-			&::before {
-				@include font-ico-outline('\e5d5');
-				font-size: 25px;
-				transform: scaleX(-1);
-				color: $point;;
-			}
-			&:focus {
-				outline: 2px dashed $point;
-				outline-offset: -2px;
-			}
-		}
-		@include breakpoint($sm) {
-			.search,
-			.reset {
-				width: calc(50% - 2px);
-			}
-		}
-	}
-	//검색버튼만 있을 경우 임시용
-	.search {
-		width: 40px;
-		height: 40px;
-		background-color: $point;
-		border-radius: 5px;
-		&::before {
-			@include font-ico-outline('\e8b6');
-			font-size: 25px;
-			color: #fff;
-		}
-	}
-}
-// 두줄 형태
-.sh.m {
-	display: block;
-	> div {
-		@include breakpoint($md) {
-			display: flex;
-			flex-direction: row;
-			justify-content: space-between;
-			align-items: center;
-			& + div {
-				margin-top: 10px;
-			}
-		}
-		> * {
-			@include breakpoint($sm) {
-				margin-top: 4px;
-			}
-			@include breakpoint($md) {
-				margin-left: 2px;
-				margin-right: 2px;
-			}
-		}
-		@include breakpoint($sm){
-			& + div {
-				margin-top: 10px;
-			}
-		}
-	}
-	.select-group {
-		.select {
-			flex-basis: 240px;
-			@include breakpoint($smd){
-				& + .select {
-					margin-top: 5px;
-					display: block;
+			strong {
+				position: relative;
+				font-weight: 600;
+				&::before {
+					content: "";
+					display: inline-block;
+					height: 1px;
+					width: 100%;
+					background-color: #222;
+					position: absolute;
+					bottom: 0;
+					left: 0;
 				}
+			}
+		}
+		.search-box {	
+			margin-top: 6px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			@include breakpoint($smd){
+				flex-direction: row;
+				align-items: center;
+			}				
+			.keyword {
+				width: 100%;				
+				@include breakpoint($smd){
+					flex-basis: calc(100% - 86px);
+					flex-grow: 1;
+				}
+				input {
+					width: 100%;
+					height: 40px;
+					border: 1px solid #d9d9d9;
+					border-radius: 3px;
+				}
+			}
+			.btns {	
+				margin-top: 8px;
+				display: flex;
+				justify-content: space-between;
+				@include breakpoint($smd){
+					margin-top: 0;
+				}
+				button {
+					color: #fff;
+					width: calc(50% - 1px);
+					height: 32px;
+					border: 0;
+					border-radius: 4px;
+					@include breakpoint($smd){
+						width: 40px;
+						height: 40px;
+					}
+					&::before {
+						vertical-align: sub;
+						font-size: 20px;
+						margin-right: 5px;
+						@include breakpoint($smd){
+							font-size: 25px;
+						}
+					}
+					&.search {
+						color: #fff;
+						background-color: $point;
+						border: 1px solid $point;
+						&:focus {
+							&:focus {
+								@include focus;
+							}
+						}
+						&::before {
+							@include font-ico("\e8b6");
+						}
+						@include breakpoint($smd){
+							margin: 0 2px;
+						}
+					}
+					&.reset {
+						color: #3B63C4;
+						background-color: #fff;
+						border: 1px solid #3B63C4;
+						@include breakpoint($smd){
+							background-color: #3B63C4;
+						}
+						&::before {
+							color: #3B63C4;
+							@include font-ico("\f053");
+							@include breakpoint($smd){
+								color: #fff
+							}
+						}
+					}
+					@include breakpoint($smd){
+						span {
+							@include hide;
+						}
+					}
+				}
+			}
+		}
+	}
+	.check-list {
+		position: relative;
+		@include breakpoint($smd){
+			h3 {
+				display: none;
+			}
+		}
+		.label-list {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: column;
+			label {
+				font-size: rem(15);
+				margin: 4px 0;
+				@include breakpoint($lg){
+					font-size: rem(18);
+				}
+			}
+			input {
+				& + i + span {
+					max-width: calc(100% - 34px);
+				}
+				&:checked {
+					& + i {
+						& + span {
+							position: relative;
+							color: $point;
+							font-weight: 500;
+							text-decoration: underline;
+						}
+					}
+				}
+				&[disabled] {
+					&:hover {
+						& + i {
+							outline: 0;
+							& + span {
+								cursor: default;
+							}
+						}
+						//cursor: default;
+					}
+				}
+			}
+		}
+		.check-ctrl {			
+			@include breakpoint($lg){
+				display: none;
+			}
+			position: relative;
+			width: 100%;
+			display: block;
+			text-align: left;
+			border: 1px solid #d9d9d9;
+			padding: 7px 10px;
+			@include breakpoint($smd){
+				padding: 7px 15px;
+			}
+			&::before {
+				@include font-ico-outline('\e5c5');
+				font-size: 24px;
+				position: absolute;
+				top: 5px;
+				right: 10px;
+				color: $point;
+				transition: all .2s
+			}		
+			&.active {
+				&::before {
+					transform: rotate(-180deg);
+				}
+			}  
+		}
+		@include breakpoint($smd){ 
+			.label-list {
+				display: none;
+				border: 1px solid #d9d9d9;
+				padding: 4px;
+				flex-direction: row;
+				&.active {
+					display: flex;
+					position: absolute;
+					top: 36px;
+					left: 0;
+					width: 100%;
+					z-index: 9;
+					background-color: #fff;
+				}
+				label {
+					width: 100%;
+					// flex-basis: 50%;
+					// width: 50%;
+					// padding: 0 4px;
+					input[type=checkbox] + i {
+						margin-left: -15px;
+					}
+				}
+			}
+			&.details {
+				.check-ctrl  {
+					margin-top: 5px;
+				}
+			}
+		}
+		&.details {
+			display: none;  //임시 주석
+		}
+	}
+	.details-list {
+		@include breakpoint($smd){
+			position: absolute;
+			top: 36px;
+			left: 0;
+			width: 100%;
+			border: 1px solid #d9d9d9;
+			z-index: 9;
+			background-color: #fff;
+			padding: 4px;
+		}
+		[class^=m-0] {
+			display: none;
+			&.on {
+				display: block;
+			}
+			> ul {
+				&.on {
+					display: block;
+				}		
+				> li {
+					//display: none;  //임시 주석
+					margin: 7px 0;
+					
+					> button {
+						position: relative;
+						display: flex;
+						text-align: left;
+						color: #4D4D4D;
+						font-size: rem(18);
+						&::before {
+							content: "";
+							display: inline-block;
+							vertical-align: middle;
+							width: 22px;
+							height: 22px;
+							border: 1px solid #E5E5E5;
+							border-radius: 3px;
+							background-color: #FAFAFA;
+							margin-right: 5px;
+							margin-bottom: 3px;
+						}
+						&.active {
+							&::before {
+								border: 1px solid #3B63C4;
+								background-color: #3B63C4;
+							}
+							&::after {
+								@include font-ico-outline("\e5ca");
+								font-size: 16px;
+								position: absolute;
+								top: 5px;
+								left: 3px;
+								color: #fff;
+							}
+						}
+						&.bu {
+							&::before {
+								@include font-ico-outline('\e5cc');
+								font-size: 22px;
+								color: #1A1A1A;
+								margin-right: 3px;
+								border: none;
+								background-color: transparent;
+							}
+							&::after {
+								border: 1px solid #3B63C4;
+								background-color: #3B63C4;
+							}
+							&.active {
+								&::before {
+									transform: rotate(90deg);
+									margin-bottom: 4px;
+								}
+								&::after {
+									display: none;
+								}
+							}
+						}
+						&[disabled=disabled] {
+							cursor: default;
+						}
+					}
+					ul.sub-m {
+						padding-left: 22px;
+						> li {
+							margin: 4px 0;
+							button {
+								display: flex;
+								text-align: left;
+								position: relative;
+								&::before {
+									content: "";
+									display: inline-block;
+									vertical-align: middle;
+									width: 18px;
+									height: 18px;
+									border: 1px solid #E5E5E5;
+									border-radius: 3px;
+									background-color: #FAFAFA;
+									margin-right: 5px;
+									margin-bottom: 2px;
+								}
+								&.active {
+									&::before {
+										border: 1px solid #3B63C4;
+										background-color: #3B63C4;
+									}
+									&::after {
+										@include font-ico-outline("\e5ca");
+										font-size: 14px;
+										position: absolute;
+										top: 5px;
+										left: 2px;
+										color: #fff;
+									}
+								}
+							}
+							ul {
+								li {
+									margin: 2px 0;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	h3 {
+		#content & {
+			position: relative;
+			font-size: 15px;
+			margin: 20px 0 12px;
+			color: #222;
+			font-weight: 500;
+			&::before {
+				content: "";
+				display: inline-block;
+				background-color: #e2e2e2;
+				width: calc(100% - 45px);
+				height: 1px;
+				position: absolute;
+				top: 50%;
+				right: 0;
+			}
+		}		
+	}
+	.btn-view {
+		display: none;
+		margin: 6px 0 18px;
+		padding: 3px 0;
+		font-size: rem(14);
+		color: #1A1A1A;
+		width: 100%;
+		background-color: #F2F2F2;
+		border-radius: 4px;
+		&::after {
+			@include font-ico-outline('\e5cf');
+			font-size: 18px;
+			color: #1A1A1A;
+			margin-left: 4px;
+		}
+		&.active {
+			&::after {
+				transform: rotate(180deg);
+			}
+		}
+	}
+	.Keyword {
+		@include breakpoint($smd){
+			display: none;
+		}
+		h3 {
+			&::before {
+				width: calc(100% - 75px);
+			}
+		}
+		ul {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row;
+			li {
+				margin: 1px 2px 1px 0;
+			}
+			a {				
+				display: inline-block;
+				color: #666;
+				font-size: 14px;
+				border: 1px solid #C2C2C2;
+				border-radius: 30px;
+				padding: 2px 7px;
+				&:hover {
+					color: #fff;
+					background-color: #3B63C4;
+					order: 1px solid #3B63C4;
+				}
+				 + span {
+					margin-right: 2px;
+				 }
 			}
 		}
 	}
 }
 
-.date-set {
-	@include breakpoint($sm){
-		display: flex;
-	}
-	@include breakpoint($mdw) {
-		flex-basis: 270px;
-		flex-shrink: 0;
-	}
-	@include breakpoint($lg) {
-		flex-basis: 300px;
-		flex-grow: 0;
-	}
-	.date,
-	.month,
-	.sdate,
-	.edate {
-		flex-basis: calc(50% - 8px) !important;
-		width: calc(50% - 8px) !important;
-		-webkit-appearance: none !important;
-	}
-	.dash {
-		width: 24px;
-		text-align: center;
-	}
-	.sh & {
-		@include breakpoint($mdw) {
-			font-size: 13px;
-		}
-	}
-	.sh.m & {
-		@include breakpoint($mdw) {
-			font-size: 16px;
-		}
-	}
-	.bd-reg & {
-		@include breakpoint($md) {
-			display: block;
-			max-width: 300px;
-		}
-	}
-}
-input.date,
-input.month,
-input.sdate,
-input.edate {
-	background: #fff url(/static/portal/img/ico/sh-calendar.png) 100% center no-repeat;
-	background-position: calc(100% - 10px) center;
-	padding: 4px 10px;
-}
+// @mixin select-set {
+// 	.select-set {
+// 		position: relative;
+// 		.btn_select {
+// 			color: #666;
+// 			position: relative;
+// 			text-align: left;
+// 			width: 135px;
+// 			height: $sh-form-height;;
+// 			border: 1px solid $form-bd-color;
+// 			border-radius: $sh-bd-radius;
+// 			padding: 0 36px 0 8px;
+// 			background-color: #fff;
+// 			&::after {
+// 				@include font-ico-outline('\e5c5');
+// 				font-size: 24px;
+// 				color: #1C1B1F;
+// 				position: absolute;
+// 				top: 50%;
+// 				right: 8px;
+// 				margin-top: -12px;
+// 			}
+// 			&.on {
+// 				& + ul {
+// 					display: block;
+// 				}
+// 			}
+// 		}
+// 		ul {
+// 			display: none;
+// 			position: absolute;
+// 			top: 31px;
+// 			left: 0;
+// 			z-index: 1;
+// 			width: 100%;
+// 			border: 1px solid $form-bd-color;
+// 			border-radius: $sh-bd-radius;
+// 			background-color: #fff;
+// 			padding: 5px 0;			
+// 			li {				
+// 				button {
+// 					text-align: left;
+// 					width: 100%;
+// 					padding: 0 8px;
+// 				}
+// 			}
+// 		}
+// 	}
+// }
+
+// .sh-select {
+// 	display: flex;
+// 	justify-content: right;
+// 	margin-bottom: 25px;
+// 	> * {
+// 		margin: 0 4px;
+// 	}
+// 	@include select-set();
+// 	.submit {
+// 		width: 44px;
+// 		background-color: #3B63C4;
+// 		border-radius: $sh-bd-radius;
+// 		&::before {
+// 			color: #fff;
+// 			@include font-ico-outline('\e5ca');
+// 			font-size: 18px;
+// 			margin-bottom: 2px;
+// 		}
+// 	}	
+// }
+
+// .sh {
+// 	display: flex;
+//     flex-direction: row;
+//     justify-content: space-between;
+//     align-items: center;
+// 	margin-bottom: 25px;
+// 	background-color: #F2F6FA;
+// 	padding: 45px 20px;
+// 	font-size: rem(18);
+// 	@include breakpoint($sm){
+// 		font-size: 12px;
+// 		padding: 14px;
+// 	}
+// 	@include select-set();
+// 	.select-set {
+// 		.btn_select {
+// 			padding: 0 25px;
+// 			@include breakpoint($sm){
+// 				padding: 0 15px;
+// 			}
+// 		}
+// 		ul {
+// 			top: 56px;
+// 			@include breakpoint($sm){
+// 				top: 40px;
+// 			}
+// 			li button {
+// 				padding: 8px 25px;
+// 				@include breakpoint($sm){
+// 					padding: 5px 15px;
+// 				}
+// 			}
+// 		}
+// 	}
+// 	.c {
+// 		display: flex;
+// 		flex-wrap: wrap;
+// 		flex-direction: column;
+// 		justify-content: center;
+// 		width: 904px;
+// 		max-width: 100%;
+// 		margin: 0 auto;
+// 		.sh-input {
+// 			display: flex;
+// 			width: 100%;
+// 			> * {
+// 				margin: 0 2px;
+// 			}
+// 		}
+// 		.sh-txt {
+// 			display: block;
+// 			margin-top: 8px;
+// 			.help {
+// 				color: #4D4D4D;
+// 				&::before {
+// 					@include font-ico-outline('\e88e');
+// 					font-size: 24px;
+// 					color: #4D4D4D;
+// 					margin-right: 5px;
+// 					@include breakpoint($sm){
+// 						font-size: 16px;
+// 					}
+// 				}
+// 			}
+// 		}
+// 		.keyword-set {
+// 			flex-basis: calc(100% - 200px - 2px);
+// 			display: flex;
+// 			align-items: center;
+// 			background-color: #fff;
+// 			border-radius: 4px;
+// 			@include breakpoint($sm){
+// 				flex-basis: calc(100% - 120px - 2px);
+// 			}
+// 			.keyword {
+// 				width: calc(100% - 66px);				
+// 				input[type=text] {
+// 					width: 100%;
+// 					border: 0;
+// 					height: 56px;
+// 					padding: 10px 24px;
+// 					@include breakpoint($sm){
+// 						padding: 5px 15px;
+// 						height: 40px;
+// 					}
+// 				}
+// 			}		
+// 			.search {
+// 				width: 66px;
+// 				height: 56px;
+// 				text-align: center;
+// 				@include breakpoint($sm){
+// 					width: 40px;
+// 					height: 40px;
+// 				}
+// 				&::before {
+// 					@include font-ico-outline('\e8b6');
+// 					font-size: 26px;
+// 					color: #222;
+// 				}
+// 			}
+// 		}
+// 		.keyword {
+// 			flex-grow: 1;
+// 			input {
+// 				width: 100%;
+// 			}
+// 		}
+// 	}	
+// 	> * {
+// 		margin: 0 2px;		
+// 	}
+// 	.btn_select {
+// 		flex-basis: 200px;
+// 		width: 200px !important;
+// 		border-radius: 4px;
+// 		height: 56px !important;
+// 		border: 0 !important;
+// 		@include breakpoint($sm){
+// 			flex-basis: 120px !important;
+// 			width: 120px !important;
+// 			height: 40px !important;
+// 		}
+// 	}
+// }
+
+
+// .sh {
+// 	display: flex;
+//     flex-direction: row;
+//     justify-content: space-between;
+//     align-items: center;
+// 	margin-bottom: 25px;
+// 	background-color: #F2F6FA;
+// 	padding: 45px 20px;
+// 	font-size: rem(18);
+// 	@include breakpoint($sm){
+// 		font-size: 12px;
+// 		padding: 14px;
+// 	}
+// 	@include select-set();
+// 	.select-set {
+// 		.btn_select {
+// 			padding: 0 25px;
+// 			@include breakpoint($sm){
+// 				padding: 0 15px;
+// 			}
+// 		}
+// 		ul {
+// 			top: 56px;
+// 			@include breakpoint($sm){
+// 				top: 40px;
+// 			}
+// 			li button {
+// 				padding: 8px 25px;
+// 				@include breakpoint($sm){
+// 					padding: 5px 15px;
+// 				}
+// 			}
+// 		}
+// 	}
+// 	.c {
+// 		display: flex;
+// 		flex-wrap: wrap;
+// 		flex-direction: column;
+// 		justify-content: center;
+// 		width: 904px;
+// 		max-width: 100%;
+// 		margin: 0 auto;
+// 		.sh-input {
+// 			display: flex;
+// 			width: 100%;
+// 			> * {
+// 				margin: 0 2px;
+// 			}
+// 		}
+// 		.sh-txt {
+// 			display: block;
+// 			margin-top: 8px;
+// 			.help {
+// 				color: #4D4D4D;
+// 				&::before {
+// 					@include font-ico-outline('\e88e');
+// 					font-size: 24px;
+// 					color: #4D4D4D;
+// 					margin-right: 5px;
+// 					@include breakpoint($sm){
+// 						font-size: 16px;
+// 					}
+// 				}
+// 			}
+// 		}
+// 		.keyword-set {
+// 			flex-basis: calc(100% - 200px - 2px);
+// 			display: flex;
+// 			align-items: center;
+// 			background-color: #fff;
+// 			border-radius: 4px;
+// 			@include breakpoint($sm){
+// 				flex-basis: calc(100% - 120px - 2px);
+// 			}
+// 			.keyword {
+// 				width: calc(100% - 66px);				
+// 				input[type=text] {
+// 					width: 100%;
+// 					border: 0;
+// 					height: 56px;
+// 					padding: 10px 24px;
+// 					@include breakpoint($sm){
+// 						padding: 5px 15px;
+// 						height: 40px;
+// 					}
+// 				}
+// 			}		
+// 			.search {
+// 				width: 66px;
+// 				height: 56px;
+// 				text-align: center;
+// 				@include breakpoint($sm){
+// 					width: 40px;
+// 					height: 40px;
+// 				}
+// 				&::before {
+// 					@include font-ico-outline('\e8b6');
+// 					font-size: 26px;
+// 					color: #222;
+// 				}
+// 			}
+// 		}
+// 		.keyword {
+// 			flex-grow: 1;
+// 			input {
+// 				width: 100%;
+// 			}
+// 		}
+// 	}	
+// 	> * {
+// 		margin: 0 2px;		
+// 	}
+// 	.btn_select {
+// 		flex-basis: 200px;
+// 		width: 200px !important;
+// 		border-radius: 4px;
+// 		height: 56px !important;
+// 		border: 0 !important;
+// 		@include breakpoint($sm){
+// 			flex-basis: 120px !important;
+// 			width: 120px !important;
+// 			height: 40px !important;
+// 		}
+// 	}
+// }
+
+// .date-set {
+// 	@include breakpoint($sm){
+// 		display: flex;
+// 	}
+// 	@include breakpoint($mdw) {
+// 		flex-basis: 270px;
+// 		flex-shrink: 0;
+// 	}
+// 	@include breakpoint($lg) {
+// 		flex-basis: 300px;
+// 		flex-grow: 0;
+// 	}
+// 	.date,
+// 	.month,
+// 	.sdate,
+// 	.edate {
+// 		flex-basis: calc(50% - 8px) !important;
+// 		width: calc(50% - 8px) !important;
+// 		-webkit-appearance: none !important;
+// 	}
+// 	.dash {
+// 		width: 24px;
+// 		text-align: center;
+// 	}
+// 	.sh & {
+// 		@include breakpoint($mdw) {
+// 			font-size: 13px;
+// 		}
+// 	}
+// 	.sh.m & {
+// 		@include breakpoint($mdw) {
+// 			font-size: 16px;
+// 		}
+// 	}
+// 	.bd-reg & {
+// 		@include breakpoint($md) {
+// 			display: block;
+// 			max-width: 300px;
+// 		}
+// 	}
+// }
+// input.date,
+// input.month,
+// input.sdate,
+// input.edate {
+// 	background: #fff url(/static/portal/img/ico/sh-calendar.png) 100% center no-repeat;
+// 	background-position: calc(100% - 10px) center;
+// 	padding: 4px 10px;
+// }
