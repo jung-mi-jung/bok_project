@@ -46,6 +46,8 @@ $btn: "[class^=b-]";
 	&.xs {
 		min-width: 0;
 		font-size: 12px;
+		line-height: inherit;
+		padding: 5px;
 	}
 	&.sm {
 		min-width: 0;
@@ -79,25 +81,27 @@ $btn: "[class^=b-]";
 	}
 	&.b-submit {}
 	&.b-confirm {}
+	&.b-link {
+		&::after {
+			@include font-ico-outline('\e941');
+			margin-left: 4px;
+		}
+	}
 
 }
-.a-link {
-	color: #fff;
-	border-radius: 5px;
-	background-color: $point;	
-	display: inline-block;
-	padding: 0 20px;
-	height: 40px;
-	line-height: 40px;
-	&::after {
-		content: "";
-		display: inline-block;
-		width: 15px;
-		height: 15px;
-		margin-left: 7px;
-		background: url(/static/aieth/img/ico/ico-a-link.png);
-	}	
+
+table,
+li {
+	.b-down {
+		&::before {
+			@include font-ico('\e258');
+			font-size: 13px;
+			margin-right: 3px;
+			vertical-align: bottom;
+		}
+	}
 }
+
 
 .btnSet {
 	float: none;

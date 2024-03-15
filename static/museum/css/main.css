@@ -17,21 +17,12 @@ strong {
 font-weight: 500;
 }
 
-/*
-
-$url-img	: "/static/portal/img/";	//background: url($url-images + "폴더명/파일명.png");
-
-
-// sh
-$sh-form-height: 40px;
-$sh-bd-radius: 5px;
-
-// input
-$form-height: 40px;
-
-*/
 .red {
-color: #e24b44;
+color: #C81720 !important;
+}
+
+.fc_red {
+color: #C81720;
 }
 
 [class^=ico-] {
@@ -253,6 +244,7 @@ font-style: normal;
 font-weight: 700;
 line-height: 110%;
 text-transform: uppercase;
+text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
 }
 @media (max-width: 749px) {
 .section1-visual .swiper-slide .s1-t1 {
@@ -267,6 +259,7 @@ font-style: normal;
 font-weight: 400;
 line-height: normal;
 text-transform: uppercase;
+text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
 }
 @media (max-width: 749px) {
 .section1-visual .swiper-slide .s1-t2 {
@@ -808,10 +801,10 @@ transform: scale(0.8);
 opacity: 0.4;
 }
 .section2-exhibit .section2-txt .pagination-btm button.section2-prev:hover > i, .section2-exhibit .section2-txt .pagination-btm button.section2-prev:focus > i {
-background-position: 0px -68px;
+background-position: 0 -136px;
 }
 .section2-exhibit .section2-txt .pagination-btm button.section2-next:hover > i, .section2-exhibit .section2-txt .pagination-btm button.section2-next:focus > i {
-background-position: -136px 0px;
+background-position: -136px -136px;
 }
 .section2-exhibit .section2-img {
 width: 44.45%;

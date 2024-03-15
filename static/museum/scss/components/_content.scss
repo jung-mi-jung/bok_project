@@ -14,11 +14,13 @@
 		@include breakpoint($sm) {
 			width: 100%;
 			margin-right: 0;
+			margin-bottom: 30px;
 		}
 		ul {
 			position: sticky;
 			top: 48px;
 			@include breakpoint($sm){
+				margin-top: 8px;
 				display: none;
 			}
 			> li {
@@ -41,16 +43,13 @@
 						font-weight: 500;
 						align-items: center;
 						justify-content: space-between;
-						color: $black;
+						color: #1A1A1A;
 						i {
 							display: inline-block;
 						}
 					}
 				}
 			}
-		}
-		.js-tab {
-			
 		}
 	}
 	.cont-right {
@@ -70,9 +69,66 @@
 				width: auto;
 				min-height: 40px;
 				box-sizing: border-box;
+				@include breakpoint($sm) {
+					min-width: 128px;
+				}
 			}
 		}
 
+	}
+}
+@include breakpoint($sm) {
+	.content-row  .js-tab {
+		display: block;
+		background: #fff;
+		border: 1px solid #E5E5E5;
+		border-radius: 0;
+		button {
+			display: flex;
+			width: 100%;
+			padding: 8px 6px;
+			font-weight: 500;
+			align-items: center;
+			justify-content: space-between;
+			color: #000;
+			i {
+				transform: rotate(90deg);
+			}
+		}
+	}
+
+	.content-row .js-tab.on {
+		button {
+			i {
+				transform: rotate(270deg);
+				transition: transform .4s;
+			}
+		}
+		+ ul {
+			display: block;
+		}
+	}
+
+	.content-row .cont-nav ul {
+		display: none;
+		> li {
+			margin-bottom: 0;
+			margin-top: -1px;
+			border: 1px solid #E5E5E5;
+			> a {
+				padding: 8px 6px;
+			}
+			&.on {
+				border-radius: 0;
+				> a {
+					padding: 8px 6px;
+					font-weight: 400;
+					i {
+						display: none;
+					}
+				}
+			}
+		}
 	}
 }
 

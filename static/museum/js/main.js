@@ -61,13 +61,9 @@ $(function () {
 		// },
 		on: {
 			slideChange: function(){
+				//마지막 인덱스가 active 됐을때
 				if ( (this.activeIndex + 1) == slideLength) {
-					//$(".section2-img").css("marginLeft", -100);
-					$(".section2-img .swiper-slide").eq(slideLength-2).css({ "opacity": 0});
-				}
-				else {
-					//$(".section2-img").css("marginLeft", 0);
-					$(".section2-img .swiper-slide").eq(slideLength-2).css({ "opacity": 1});
+					$(".section2-img .swiper-slide-visible.swiper-slide-prev").css({ "opacity": 0.6 });
 				}
 			}
 		},
@@ -117,8 +113,5 @@ $(function () {
 	});
 	section2Txt.controller.control = section2Img;
 	section2Img.controller.control = section2Txt;
-
-
-
 
 }); //doc end

@@ -1331,21 +1331,12 @@ strong {
 font-weight: 500;
 }
 
-/*
-
-$url-img	: "/static/portal/img/";	//background: url($url-images + "폴더명/파일명.png");
-
-
-// sh
-$sh-form-height: 40px;
-$sh-bd-radius: 5px;
-
-// input
-$form-height: 40px;
-
-*/
 .red {
-color: #e24b44;
+color: #C81720 !important;
+}
+
+.fc_red {
+color: #C81720;
 }
 
 @font-face {
@@ -2340,7 +2331,7 @@ flex-direction: column;
 #main-container .lnb-nav + .content,
 #main-container .sh-db + .content {
 float: right;
-border-left: 1px solid #d9d9d9;
+border-left: 1px solid #E5E5E5;
 padding-left: 36px;
 }
 #main-container .lnb-nav + .content {
@@ -2646,12 +2637,12 @@ margin-right: 5px;
 margin-bottom: 2px;
 }
 .admin-set .satisfact button:focus {
-outline: dashed 1px #000;
+outline: dashed 1px #1A1A1A;
 outline-offset: 2px;
 }
 .admin-set .info {
 margin-top: 10px;
-color: #000;
+color: #1A1A1A;
 }
 .admin-set .info dl {
 display: flex;
@@ -2677,7 +2668,7 @@ display: inline-block;
 vertical-align: middle;
 width: 1px;
 height: 14px;
-background-color: #000;
+background-color: #1A1A1A;
 margin: 0 14px;
 }
 .admin-set .info dl dd:last-child {
@@ -2726,7 +2717,7 @@ background-size: 19px 20px;
 margin-bottom: 10px;
 }
 .my_memo .top h2 {
-color: #000;
+color: #1A1A1A;
 font-size: 0.875rem !important;
 font-weight: 400;
 display: block;
@@ -2880,7 +2871,7 @@ color: #808080;
 font-size: 0.875rem;
 }
 .my_memo .swiper .ctrl .swiper-pagination-current {
-color: #000;
+color: #1A1A1A;
 }
 .my_memo .swiper .b-close {
 position: absolute;
@@ -2952,7 +2943,7 @@ margin: 30px -10px 0;
 }
 }
 .reference-data dl dt {
-color: #000;
+color: #1A1A1A;
 font-size: 1.125rem;
 font-weight: 500;
 margin-bottom: 6px;
@@ -3034,7 +3025,7 @@ padding: 3px 5px;
 }
 .reference-data dl dd a {
 display: block;
-color: #000;
+color: #1A1A1A;
 background-color: #fff;
 border-radius: 8px;
 padding: 15px 15px;
@@ -3100,7 +3091,7 @@ padding-top: 30px;
 border-top: 1px solid #DCE2F1;
 }
 .reference-news dl dt {
-color: #000;
+color: #1A1A1A;
 font-size: 1.125rem;
 font-weight: 500;
 margin-bottom: 6px;
@@ -3182,7 +3173,7 @@ display: block;
 display: block;
 }
 .reference-news dl dd ul li a span.t1 {
-color: #000;
+color: #1A1A1A;
 margin-bottom: 8px;
 }
 .reference-news dl dd ul li a span.t2 {
@@ -3219,7 +3210,7 @@ margin-top: 25px;
 padding-top: 30px;
 }
 .reference-media dl dt {
-color: #000;
+color: #1A1A1A;
 font-size: 1.125rem;
 font-weight: 500;
 margin-bottom: 6px;
@@ -3340,7 +3331,7 @@ color: #3B63C4;
 font-size: 0.875rem;
 }
 .reference-media dl dd ul li a span.tit {
-color: #000;
+color: #1A1A1A;
 overflow: hidden;
 text-overflow: ellipsis;
 display: block;
@@ -3368,10 +3359,6 @@ position: absolute;
 top: 0;
 }
 
-.content p {
-margin-bottom: 12px;
-white-space: pre-line;
-}
 .content p em {
 font-weight: 600;
 }
@@ -3536,9 +3523,6 @@ text-align: center;
 }
 .gnb > ul .depth2 .e a {
 display: block;
-}
-.gnb > ul .depth2 .e a + a {
-margin-top: 20px;
 }
 .gnb > ul .depth3 {
 padding-top: 5px;
@@ -4088,7 +4072,7 @@ font-size: 0.875rem;
 
 body {
 overflow-x: hidden;
-color: #1A1A1A;
+color: #4D4D4D;
 line-height: 1.5;
 font-family: "Spoqa Han Sans Neo", "AppleGothic", "맑은 고딕", "돋움", "dotum", Helvetica, Arial, sans-serif;
 letter-spacing: -0.015rem;

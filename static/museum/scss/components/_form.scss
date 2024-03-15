@@ -212,11 +212,10 @@ input[type='text']:disabled {
 }
 select {
 	-webkit-appearance: none;
-	padding-right: 40px;
-	background: #fff url(/static/portal/img/common/select-arr.png) right center
+	padding: 4px 30px 4px 10px !important;
+	background: #fff url(/static/portal/img/common/select-arr.png) calc(100% - 10px) center
 		no-repeat;
-	background-size: auto 20px;
-
+	//background-size: auto 20px;
 	&::-ms-expand {
 		display: none;
 	}
@@ -242,7 +241,7 @@ select,
 textarea {
 	border: 1px solid #ccc;
 	line-height: 20px;
-	height: $form-height;
+	height: 40px;
 	//vertical-align: middle;
 	outline: none;
 	border-radius: 5px;

@@ -154,10 +154,18 @@
 									</li>
 								</ul>
 								<div class="e">
-									<a href="">
-										<span class="img" style="background-image: url(/static/portal/img/img01.png);"></span>
-										<span class="txt">2024년도 제1회 금융안정포럼</span>
-									</a>
+									<div class="swiper">
+										<div class="swiper-wrapper">
+											<a href="" class="swiper-slide">
+												<span class="img" style="background-image: url(/static/portal/img/img01.png);"></span>
+												<span class="txt">2024년도 제1회 금융안정포럼11</span>
+											</a>
+											<a href="" class="swiper-slide">
+												<span class="img" style="background-image: url(/static/portal/img/img02.png);"></span>
+												<span class="txt">2024년도 제1회 금융안정포럼22</span>
+											</a>
+										</div>
+									</div>
 								</div>
 							</div>
 						</li>
@@ -779,10 +787,18 @@
 								</li>
 							</ul>
 							<div class="e">
-								<a href="">
-									<span class="img" style="background-image: url(/static/portal/img/img01.png);"></span>
-									<span class="txt">2024년도 제1회 금융안정포럼</span>
-								</a>
+								<div class="swiper">
+									<div class="swiper-wrapper">
+										<a href="" class="swiper-slide">
+											<span class="img" style="background-image: url(/static/portal/img/img01.png);"></span>
+											<span class="txt">2024년도 제1회 금융안정포럼11</span>
+										</a>
+										<a href="" class="swiper-slide">
+											<span class="img" style="background-image: url(/static/portal/img/img02.png);"></span>
+											<span class="txt">2024년도 제1회 금융안정포럼22</span>
+										</a>
+									</div>
+								</div>
 							</div>
 						</div>
 					</li>
@@ -1231,7 +1247,7 @@
 						</li>
 					</ul>
 				</div>
-				<button type="button" class="search" title="검색레이어 열기"></button>
+				<button type="button" class="search" title="검색레이어 열기"><i class="ico-srchW"></i></button>
 				<div class="search_wrap">
 					<form action="/">
 						검색 레이어 영역
@@ -1376,16 +1392,18 @@
 
 			<br><br>
 
-			<p>C_type 래프트 검색</p>
+			<p>C_type 콘텐츠 앵커이동</p>
 
 			<textarea name="" id="" cols="30" rows="10">
-			<div class="sh-db">
-				<div class="db-search"></div>
-				<div class="Keyword"></div>
+			<div class="content content-row">
+				<div class="cont-nav">
+					메뉴 목차
+				</div>
+				<div class="cont-right"></div>
 			</div>
-			<div class="content"></div>
 			</textarea>
 
+			<br><br>
 			<br><br>
 
 
@@ -1493,13 +1511,14 @@
 	<!-- //content -->
 </div>
 
+<!-- footer -->
 <footer id="footer">
 	<div class="container">
 		<div class="f_l">
 			<nav class="footer-nav">
 				<ul>
 					<li>
-						<a href="">자작권보호</a>
+						<a href="">저작권보호</a>
 					</li>
 					<li class="point">
 						<a href="">개인정보처리방침</a>
@@ -1522,14 +1541,14 @@
 			</div>
 		</div>
 		<div class="f_r">
-			<div class="site_go">
-				<button type="button" title="fmaily site 열기">fmaily site</button>
+			<div class="site_go">				
+				<button type="button" title="Family site 열기">Family site</button>
 				<ul>
 					<li>
-						<a href="/imer/main/main.do" target="_blank" title="새창열림">경제연구원</a>
+						<a href="/portal/main/main.do" target="_blank" title="새창열림">한국은행</a>
 					</li>
 					<li>
-						<a href="/museum/main/main.do" target="_blank" title="새창열림">화폐박물관</a>
+						<a href="/imer/main/main.do" target="_blank" title="새창열림">경제연구원</a>
 					</li>
 					<li>
 						<a href="">지역본부</a>
@@ -1549,10 +1568,22 @@
 				</ul>
 			</div>
 			<div class="f_sns">
-				<a href="https://www.youtube.com/thebankofkoreakr" target="_blank" title="새창열림" class="sns-youtube"><span class="sr-only">한국은행 Youtube 바로가기 (https://www.youtube.com/thebankofkoreakr)</span></a>
-				<a href="https://www.instagram.com/thebankofkorea" target="_blank" title="새창열림" class="sns-instagram"><span class="sr-only">한국은행 인스타그램  바로가기 (https://www.instagram.com/thebankofkorea)</span></a>
-				<a href="https://www.facebook.com/bankofkoreahub" target="_blank" title="새창열림" class="sns-facebook"><span class="sr-only">한국은행 Facebook 바로가기 (https://www.facebook.com/bankofkoreahub)</span></a>
-				<a href="https://www.twitter.com/bok_hub" target="_blank" title="새창열림" class="sns-twitter"><span class="sr-only">한국은행 Twitter 바로가기 (https://www.twitter.com/bok_hub)</span></a>
+				<a href="https://www.youtube.com/thebankofkoreakr" target="_blank" title="새창열림" class="sns-youtube">
+					<i class="ico-youtube"></i>
+					<span class="sr-only">한국은행 Youtube 바로가기 (https://www.youtube.com/thebankofkoreakr)</span>
+				</a>
+				<a href="https://www.instagram.com/thebankofkorea" target="_blank" title="새창열림" class="sns-instagram">
+					<i class="ico-insta"></i>
+					<span class="sr-only">한국은행 인스타그램  바로가기 (https://www.instagram.com/thebankofkorea)</span>
+				</a>
+				<a href="https://www.facebook.com/bankofkoreahub" target="_blank" title="새창열림" class="sns-facebook">
+					<i class="ico-facebook"></i>
+					<span class="sr-only">한국은행 Facebook 바로가기 (https://www.facebook.com/bankofkoreahub)</span>
+				</a>
+				<a href="https://www.twitter.com/bok_hub" target="_blank" title="새창열림" class="sns-twitter">
+					<i class="ico-x"></i>
+					<span class="sr-only">한국은행 Twitter 바로가기 (https://www.twitter.com/bok_hub)</span>
+				</a>
 			</div>
 			<div class="f_banner">
 				<a href="" title="새창열림"><img src="/static/portal/img/common/mark.png" alt="(사)한국장애인단체총연합회 한국웹접근성인증평가원 웹 접근성 우수사이트 인증마크(WA인증마크)"></a>
@@ -1560,8 +1591,10 @@
 		</div>
 	</div>
 </footer>
+<!-- //footer -->
+
 <script src="/static/jslibrary/swiper@8/swiper-bundle.min.js"></script>
-<script src="/static/portal/js/common.js"></script>
+<script src="/static/museum/js/common.js"></script>
 </body>
 </html>			</div>
 			<!-- //컨텐츠 끝 -->

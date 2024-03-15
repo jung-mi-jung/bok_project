@@ -195,6 +195,7 @@
 			font-weight: 700;
 			line-height: 110%;
 			text-transform: uppercase;
+			text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
 			@include breakpoint($sm) {
 				font-size: rem(32);
 			}
@@ -207,6 +208,7 @@
 			font-weight: 400;
 			line-height: normal;
 			text-transform: uppercase;
+			text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
 			@include breakpoint($sm) {
 				font-size: rem(16);
 			}
@@ -655,7 +657,7 @@
 					&:hover,
 					&:focus {
 						> i {
-							background-position: 0px -68px;
+							background-position: 0 -136px;
 						}
 					}
 				}
@@ -663,7 +665,7 @@
 					&:hover,
 					&:focus {
 						> i {
-							background-position: -136px 0px;
+							background-position: -136px -136px;
 						}
 					}
 				}

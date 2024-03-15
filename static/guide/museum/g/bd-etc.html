@@ -1,0 +1,226 @@
+
+<!-- 수료증발급 -->
+
+<div class="box2 type1 tac">
+	<div class="badge_type1"></div>
+	<div class="badge_txt">
+		<p class="txtType">
+			<span class="mDib">신청 강좌 : <span class="fc_red">0</span>회 </span>
+			<span class="mDib">출석(결석) 강좌 : <span class="fc_red">0/0</span>회</span>
+			<span class="mDib">유효쿠폰 수 : <span class="fc_red">0</span>회</span>
+		</p>
+		<p class="fs">※ 2015. 4월 이후 신청 후 결석이 3회 이상이면 60일간 신청이 불가능합니다.</p>
+		<p class="fs">※ 2023년까지는 최근 5년간 쿠폰수 25개 이상이면 기본수료증 발급, 50개 이상이면 전문가 수료증이 발급됩니다.</p>
+		<p class="fs">※ 2024년부터 수료증 발급기준이 변경되었습니다.</p>
+		<p class="fs">&nbsp;( ①수료증 종류 단일화/ ②쿠폰유효기간 1년/ ③20개 이상 수강시 수료증 발급)</p>
+	</div>
+</div>
+
+<div class="bdList">
+	<table class="table-hover">
+		<caption>수료증발급 목록</caption>
+		<thead>
+			<tr>
+				<th scope="col">과정명</th>
+				<th scope="col">수료증 번호</th>
+				<th scope="col">발급횟수</th>
+				<th scope="col">최종발급일</th>
+				<th scope="col">수료증</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>0</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td colspan="5"><div class="nodata">데이터가 없습니다.</div></td>
+			</tr>			
+		</tbody>
+	</table>
+</div>
+
+
+
+<br><br><hr><br><br>
+
+
+<p>경제교육 - 교육신청 200603</p>
+
+<h4>강좌내용</h4>
+<div class="view">
+	<dl>
+		<dt>강좌명</dt>
+		<dd>북한이탈주민의 건강과 남한 노동시장에서의 적응 실태</dd>
+	</dl>
+	<dl>
+		<dt>강좌일시</dt>
+		<dd>2024-03-15 14시</dd>
+	</dl>
+	<dl>
+		<dt>강의장소</dt>
+		<dd>한국은행 별관 1층 강당</dd>
+	</dl>
+</div>
+
+<h4>신청자 정보 입력</h4>
+<div class="view">
+	<dl>
+		<dt>성명 </dt>
+		<dd>홍길동<input type="hidden" name="mberSn" value=""><input type="hidden" name="reqstNm" value="홍길동"></dd>
+	</dl>
+	<dl>
+		<dt>
+			<label for="mbtlnum1">
+				<span class="req"><span>필수입력</span></span> 
+				연락처
+			</label>
+		</dt>
+		<dd>
+			<div class="tel-set">
+				<select name="mbtlnum1" id="mbtlnum1" class="input-xs" title="연락처 앞자리번호를 선택해 주세요.">
+					<option value="">선택</option>
+				
+						<option value="010">010</option>
+				
+						<option value="011">011</option>
+				
+						<option value="016">016</option>
+				
+						<option value="017">017</option>
+				
+						<option value="018">018</option>
+				
+						<option value="019">019</option>
+				
+				</select>
+				-
+				<input type="text" name="mbtlnum2" class="input-xs" value="" size="4" maxlength="4" title="연락처 중간자리를 입력해 주세요." onkeyup="this.value=check_txt(this.value)">
+				-
+				<input type="text" name="mbtlnum3" class="input-xs" value="" size="5" maxlength="4" title="연락처 끝자리를 입력해 주세요." onkeyup="this.value=check_txt(this.value)">
+			</div>
+		</dd>
+	</dl>
+	<dl>
+		<dt><label for="occpSeCd">직업 구분</label></dt>
+		<dd>
+			<select name="occpSeCd" id="occpSeCd" class="input-md">
+				<option value="">직업구분</option>
+				
+					<option value="007">대학생</option>
+				
+					<option value="009">취업준비생</option>
+				
+					<option value="008">대학원생</option>
+				
+					<option value="001">은행원</option>
+				
+					<option value="002">기타금융기관</option>
+				
+					<option value="003">기업체</option>
+				
+					<option value="004">연구소</option>
+				
+					<option value="005">경제단체</option>
+				
+					<option value="006">자영업자</option>
+				
+					<option value="999">기타</option>
+				
+			</select>
+		</dd>
+	</dl>
+	<dl>
+		<dt><label for="email1"><span class="req"><span>필수입력</span></span> 이메일</label></dt>
+		<dd>
+			<div class="email-set">
+				<input type="text" name="email1" id="email1" value="" title="이메일 아이디" class="emailId" maxlength="20">
+				@
+				<input type="text" name="email2" id="email2" value="" title="이메일 주소" readonly="readonly" class="emailAddr emailDomainForm" maxlength="20">
+				<label for="sr_email_more" class="hidden">이메일 도메인 선택</label>
+				<select id="sr_email_more" name="" class="input_select select_email_js" title="직접입력 선택시 자동활성화&amp;포커스 이동">
+					<option selected="">메일주소선택</option>
+				
+						<option value="gmail.com">gmail.com</option>
+				
+						<option value="naver.com">naver.com</option>
+				
+						<option value="hanmail.net">hanmail.net</option>
+				
+						<option value="daum.net">daum.net</option>
+				
+						<option value="hotmail.com">hotmail.com</option>
+				
+						<option value="nate.com">nate.com</option>
+				
+						<option value="yahoo.co.kr">yahoo.co.kr</option>
+				
+					<option value="emaildomain_false">직접입력</option>
+				</select>
+			</div>
+			<script type="text/javascript">
+				$(function(){
+					$('select.select_email_js').change(function() {
+						if ($(this).val()=='emaildomain_false') {
+							$('.emailDomainForm:text[name=email2]').val('');
+							$('.emailDomainForm').attr('readonly',false).focus();
+						}else{
+							$('.emailDomainForm:text[name=email2]').val('');
+							$('.emailDomainForm:text[name=email2]').val($(this).val());
+							$('.emailDomainForm').attr('readonly',true)
+						}
+					});
+				});
+			</script>
+		</dd>
+	</dl>
+</div>
+<div class="btnSet">
+	<a class="b-cancel lg" href="">취소</a>
+	<a class="b-ok lg" href="javascript:checkForm();">확인</a>
+</div>
+<script src="/static/jslibrary/miya_validator.js"></script>
+
+
+<br><br><hr><br><br>
+
+
+<div class="bdPhoto row">
+	<ul>
+		<li>
+			<div class="col m12 s12">
+				<dl>
+					<dt>
+						<span class="db">
+							컨퍼런스
+						</span>
+						<div class="h3">
+							<a href="" target="_blank" title="새창열림">2024 BOK 국제컨퍼런스 (BOK International Conference 2024)</a>
+						</div>
+					</dt>
+					<dd class="date">2024-05-30, 2024-05-31</dd>
+					<dd class="place">한국은행 2층 컨퍼런스홀</dd>
+				</dl>
+			</div>
+		</li>
+		<li>
+			<div class="col m12 s12">
+				<dl>
+					<dt>
+						<span class="db">
+							컨퍼런스
+						</span>
+						<div class="h3">
+							<a href="" target="_blank" title="새창열림">2024 BOK 국제컨퍼런스 (BOK International Conference 2024)</a>
+						</div>
+					</dt>
+					<dd class="date">2024-05-30, 2024-05-31</dd>
+					<dd class="place">한국은행 2층 컨퍼런스홀</dd>
+				</dl>
+			</div>
+		</li>
+	</ul>
+</div>

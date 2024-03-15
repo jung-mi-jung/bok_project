@@ -5,10 +5,14 @@ table {
     border-spacing: 0;
 	font-size: rem(18);
 	color: #1A1A1A;
+	p {
+		margin-bottom: 0 !important;
+	}	
 }
 .table {
 	clear: both;
 	border-top: 2px solid #182252;
+	margin-bottom: 10px;
 	@include breakpoint($md){
 		&.pcweb {
 			display: block !important;
@@ -37,7 +41,7 @@ table {
 		tbody {
 			th {
 				color: #233B76;
-				background-color: #fff;
+				background-color: #F2F6FA;	
 			}
 		}
 		td {
@@ -45,6 +49,13 @@ table {
 			min-height: 55px;
 			border: 1px solid $bd-color;
 			background-color: #fff;
+		}
+	}
+	&.type2 {
+		tbody {
+			th {
+				background-color: #fff;
+			}
 		}
 	}
 	&.m {
@@ -85,6 +96,10 @@ table {
 	}
 }
 
+.table-striped tbody > tr:nth-child(even) td{ 
+	background:#FAFAFA; 
+}
+
 .table-view {
 	border-top: 2px solid #182252;
 	&.table {		
@@ -112,5 +127,34 @@ table {
 	}
 	label {
 		display: inline-block;
+	}
+}
+
+@include breakpoint($smd){
+	.scrollX {
+		overflow: hidden;
+		overflow: auto;
+		clear: both;
+		width: 100%;
+		table {
+			min-width: 1023px;
+		}
+	}
+}
+
+
+table li {
+	position: relative;
+	padding-left: 10px;
+	&::before {
+		content: "";
+		display: inline-block;
+		position: absolute;
+		top: 11px;
+		left: 0;
+		background-color: #1A1A1A;
+		width: 4px;
+		height: 4px;
+		border-radius: 50%;
 	}
 }

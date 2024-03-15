@@ -462,376 +462,250 @@
 	}
 }
 
-// @mixin select-set {
-// 	.select-set {
-// 		position: relative;
-// 		.btn_select {
-// 			color: #666;
-// 			position: relative;
-// 			text-align: left;
-// 			width: 135px;
-// 			height: $sh-form-height;;
-// 			border: 1px solid $form-bd-color;
-// 			border-radius: $sh-bd-radius;
-// 			padding: 0 36px 0 8px;
-// 			background-color: #fff;
-// 			&::after {
-// 				@include font-ico-outline('\e5c5');
-// 				font-size: 24px;
-// 				color: #1C1B1F;
-// 				position: absolute;
-// 				top: 50%;
-// 				right: 8px;
-// 				margin-top: -12px;
-// 			}
-// 			&.on {
-// 				& + ul {
-// 					display: block;
-// 				}
-// 			}
-// 		}
-// 		ul {
-// 			display: none;
-// 			position: absolute;
-// 			top: 31px;
-// 			left: 0;
-// 			z-index: 1;
-// 			width: 100%;
-// 			border: 1px solid $form-bd-color;
-// 			border-radius: $sh-bd-radius;
-// 			background-color: #fff;
-// 			padding: 5px 0;			
-// 			li {				
-// 				button {
-// 					text-align: left;
-// 					width: 100%;
-// 					padding: 0 8px;
-// 				}
-// 			}
-// 		}
-// 	}
-// }
+@mixin select-set {
+	.select-set {
+		position: relative;
+		.btn_select {
+			color: #666;
+			position: relative;
+			text-align: left;
+			width: 135px;
+			height: $sh-form-height;;
+			border: 1px solid $form-bd-color;
+			border-radius: $sh-bd-radius;
+			padding: 0 36px 0 8px;
+			background-color: #fff;
+			@include breakpoint($sm){
+				width: auto;
+			}
+			&::after {
+				@include font-ico-outline('\e5c5');
+				font-size: 24px;
+				color: #1C1B1F;
+				position: absolute;
+				top: 50%;
+				right: 8px;
+				margin-top: -12px;
+			}
+			&.on {
+				& + ul {
+					display: block;
+				}
+			}
+		}
+		ul {
+			display: none;
+			position: absolute;
+			top: 31px;
+			left: 0;
+			z-index: 1;
+			width: 100%;
+			border: 1px solid $form-bd-color;
+			border-radius: $sh-bd-radius;
+			background-color: #fff;
+			padding: 5px 0;			
+			li {				
+				button {
+					text-align: left;
+					width: 100%;
+					padding: 0 8px;
+				}
+			}
+		}
+	}
+}
 
-// .sh-select {
-// 	display: flex;
-// 	justify-content: right;
-// 	margin-bottom: 25px;
-// 	> * {
-// 		margin: 0 4px;
-// 	}
-// 	@include select-set();
-// 	.submit {
-// 		width: 44px;
-// 		background-color: #3B63C4;
-// 		border-radius: $sh-bd-radius;
-// 		&::before {
-// 			color: #fff;
-// 			@include font-ico-outline('\e5ca');
-// 			font-size: 18px;
-// 			margin-bottom: 2px;
-// 		}
-// 	}	
-// }
+.sh-select {
+	display: flex;
+	justify-content: right;
+	margin-bottom: 25px;
+	@include breakpoint($sm){
+		justify-content: flex-start;
+	}
+	> * {
+		margin: 0 4px;
+	}
+	@include select-set();
+	.submit {
+		width: 44px;
+		background-color: #3B63C4;
+		border-radius: $sh-bd-radius;
+		&::before {
+			color: #fff;
+			@include font-ico-outline('\e5ca');
+			font-size: 18px;
+			margin-bottom: 2px;
+		}
+	}	
+}
 
-// .sh {
-// 	display: flex;
-//     flex-direction: row;
-//     justify-content: space-between;
-//     align-items: center;
-// 	margin-bottom: 25px;
-// 	background-color: #F2F6FA;
-// 	padding: 45px 20px;
-// 	font-size: rem(18);
-// 	@include breakpoint($sm){
-// 		font-size: 12px;
-// 		padding: 14px;
-// 	}
-// 	@include select-set();
-// 	.select-set {
-// 		.btn_select {
-// 			padding: 0 25px;
-// 			@include breakpoint($sm){
-// 				padding: 0 15px;
-// 			}
-// 		}
-// 		ul {
-// 			top: 56px;
-// 			@include breakpoint($sm){
-// 				top: 40px;
-// 			}
-// 			li button {
-// 				padding: 8px 25px;
-// 				@include breakpoint($sm){
-// 					padding: 5px 15px;
-// 				}
-// 			}
-// 		}
-// 	}
-// 	.c {
-// 		display: flex;
-// 		flex-wrap: wrap;
-// 		flex-direction: column;
-// 		justify-content: center;
-// 		width: 904px;
-// 		max-width: 100%;
-// 		margin: 0 auto;
-// 		.sh-input {
-// 			display: flex;
-// 			width: 100%;
-// 			> * {
-// 				margin: 0 2px;
-// 			}
-// 		}
-// 		.sh-txt {
-// 			display: block;
-// 			margin-top: 8px;
-// 			.help {
-// 				color: #4D4D4D;
-// 				&::before {
-// 					@include font-ico-outline('\e88e');
-// 					font-size: 24px;
-// 					color: #4D4D4D;
-// 					margin-right: 5px;
-// 					@include breakpoint($sm){
-// 						font-size: 16px;
-// 					}
-// 				}
-// 			}
-// 		}
-// 		.keyword-set {
-// 			flex-basis: calc(100% - 200px - 2px);
-// 			display: flex;
-// 			align-items: center;
-// 			background-color: #fff;
-// 			border-radius: 4px;
-// 			@include breakpoint($sm){
-// 				flex-basis: calc(100% - 120px - 2px);
-// 			}
-// 			.keyword {
-// 				width: calc(100% - 66px);				
-// 				input[type=text] {
-// 					width: 100%;
-// 					border: 0;
-// 					height: 56px;
-// 					padding: 10px 24px;
-// 					@include breakpoint($sm){
-// 						padding: 5px 15px;
-// 						height: 40px;
-// 					}
-// 				}
-// 			}		
-// 			.search {
-// 				width: 66px;
-// 				height: 56px;
-// 				text-align: center;
-// 				@include breakpoint($sm){
-// 					width: 40px;
-// 					height: 40px;
-// 				}
-// 				&::before {
-// 					@include font-ico-outline('\e8b6');
-// 					font-size: 26px;
-// 					color: #222;
-// 				}
-// 			}
-// 		}
-// 		.keyword {
-// 			flex-grow: 1;
-// 			input {
-// 				width: 100%;
-// 			}
-// 		}
-// 	}	
-// 	> * {
-// 		margin: 0 2px;		
-// 	}
-// 	.btn_select {
-// 		flex-basis: 200px;
-// 		width: 200px !important;
-// 		border-radius: 4px;
-// 		height: 56px !important;
-// 		border: 0 !important;
-// 		@include breakpoint($sm){
-// 			flex-basis: 120px !important;
-// 			width: 120px !important;
-// 			height: 40px !important;
-// 		}
-// 	}
-// }
-
-
-// .sh {
-// 	display: flex;
-//     flex-direction: row;
-//     justify-content: space-between;
-//     align-items: center;
-// 	margin-bottom: 25px;
-// 	background-color: #F2F6FA;
-// 	padding: 45px 20px;
-// 	font-size: rem(18);
-// 	@include breakpoint($sm){
-// 		font-size: 12px;
-// 		padding: 14px;
-// 	}
-// 	@include select-set();
-// 	.select-set {
-// 		.btn_select {
-// 			padding: 0 25px;
-// 			@include breakpoint($sm){
-// 				padding: 0 15px;
-// 			}
-// 		}
-// 		ul {
-// 			top: 56px;
-// 			@include breakpoint($sm){
-// 				top: 40px;
-// 			}
-// 			li button {
-// 				padding: 8px 25px;
-// 				@include breakpoint($sm){
-// 					padding: 5px 15px;
-// 				}
-// 			}
-// 		}
-// 	}
-// 	.c {
-// 		display: flex;
-// 		flex-wrap: wrap;
-// 		flex-direction: column;
-// 		justify-content: center;
-// 		width: 904px;
-// 		max-width: 100%;
-// 		margin: 0 auto;
-// 		.sh-input {
-// 			display: flex;
-// 			width: 100%;
-// 			> * {
-// 				margin: 0 2px;
-// 			}
-// 		}
-// 		.sh-txt {
-// 			display: block;
-// 			margin-top: 8px;
-// 			.help {
-// 				color: #4D4D4D;
-// 				&::before {
-// 					@include font-ico-outline('\e88e');
-// 					font-size: 24px;
-// 					color: #4D4D4D;
-// 					margin-right: 5px;
-// 					@include breakpoint($sm){
-// 						font-size: 16px;
-// 					}
-// 				}
-// 			}
-// 		}
-// 		.keyword-set {
-// 			flex-basis: calc(100% - 200px - 2px);
-// 			display: flex;
-// 			align-items: center;
-// 			background-color: #fff;
-// 			border-radius: 4px;
-// 			@include breakpoint($sm){
-// 				flex-basis: calc(100% - 120px - 2px);
-// 			}
-// 			.keyword {
-// 				width: calc(100% - 66px);				
-// 				input[type=text] {
-// 					width: 100%;
-// 					border: 0;
-// 					height: 56px;
-// 					padding: 10px 24px;
-// 					@include breakpoint($sm){
-// 						padding: 5px 15px;
-// 						height: 40px;
-// 					}
-// 				}
-// 			}		
-// 			.search {
-// 				width: 66px;
-// 				height: 56px;
-// 				text-align: center;
-// 				@include breakpoint($sm){
-// 					width: 40px;
-// 					height: 40px;
-// 				}
-// 				&::before {
-// 					@include font-ico-outline('\e8b6');
-// 					font-size: 26px;
-// 					color: #222;
-// 				}
-// 			}
-// 		}
-// 		.keyword {
-// 			flex-grow: 1;
-// 			input {
-// 				width: 100%;
-// 			}
-// 		}
-// 	}	
-// 	> * {
-// 		margin: 0 2px;		
-// 	}
-// 	.btn_select {
-// 		flex-basis: 200px;
-// 		width: 200px !important;
-// 		border-radius: 4px;
-// 		height: 56px !important;
-// 		border: 0 !important;
-// 		@include breakpoint($sm){
-// 			flex-basis: 120px !important;
-// 			width: 120px !important;
-// 			height: 40px !important;
-// 		}
-// 	}
-// }
-
-// .date-set {
-// 	@include breakpoint($sm){
-// 		display: flex;
-// 	}
-// 	@include breakpoint($mdw) {
-// 		flex-basis: 270px;
-// 		flex-shrink: 0;
-// 	}
-// 	@include breakpoint($lg) {
-// 		flex-basis: 300px;
-// 		flex-grow: 0;
-// 	}
-// 	.date,
-// 	.month,
-// 	.sdate,
-// 	.edate {
-// 		flex-basis: calc(50% - 8px) !important;
-// 		width: calc(50% - 8px) !important;
-// 		-webkit-appearance: none !important;
-// 	}
-// 	.dash {
-// 		width: 24px;
-// 		text-align: center;
-// 	}
-// 	.sh & {
-// 		@include breakpoint($mdw) {
-// 			font-size: 13px;
-// 		}
-// 	}
-// 	.sh.m & {
-// 		@include breakpoint($mdw) {
-// 			font-size: 16px;
-// 		}
-// 	}
-// 	.bd-reg & {
-// 		@include breakpoint($md) {
-// 			display: block;
-// 			max-width: 300px;
-// 		}
-// 	}
-// }
-// input.date,
-// input.month,
-// input.sdate,
-// input.edate {
-// 	background: #fff url(/static/portal/img/ico/sh-calendar.png) 100% center no-repeat;
-// 	background-position: calc(100% - 10px) center;
-// 	padding: 4px 10px;
-// }
+.sh {
+	display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+	margin-bottom: 25px;
+	background-color: #F2F6FA;
+	padding: 45px 20px;
+	font-size: rem(18);
+	@include breakpoint($sm){
+		font-size: 12px;
+		padding: 14px;
+	}
+	@include select-set();
+	.select-set {
+		.btn_select {
+			padding: 0 25px;
+			@include breakpoint($sm){
+				padding: 0 15px;
+			}
+		}
+		ul {
+			top: 56px;
+			@include breakpoint($sm){
+				top: 40px;
+			}
+			li button {
+				padding: 8px 25px;
+				@include breakpoint($sm){
+					padding: 5px 15px;
+				}
+			}
+		}
+	}
+	.c {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		justify-content: center;
+		width: 904px;
+		max-width: 100%;
+		margin: 0 auto;
+		.sh-input {
+			display: flex;
+			width: 100%;
+			> * {
+				margin: 0 2px;
+			}
+		}
+		.sh-txt {
+			display: block;
+			margin-top: 8px;
+			.help {
+				color: #4D4D4D;
+				&::before {
+					@include font-ico-outline('\e88e');
+					font-size: 24px;
+					color: #4D4D4D;
+					margin-right: 5px;
+					@include breakpoint($sm){
+						font-size: 16px;
+					}
+				}
+			}
+		}
+		.keyword-set {
+			flex-basis: calc(100% - 200px - 2px);
+			display: flex;
+			align-items: center;
+			background-color: #fff;
+			border-radius: 4px;
+			@include breakpoint($sm){
+				flex-basis: calc(100% - 120px - 2px);
+			}
+			.keyword {
+				width: calc(100% - 66px);				
+				input[type=text] {
+					width: 100%;
+					border: 0;
+					height: 56px;
+					padding: 10px 24px;
+					@include breakpoint($sm){
+						padding: 5px 15px;
+						height: 40px;
+					}
+				}
+			}		
+			.search {
+				width: 66px;
+				height: 56px;
+				text-align: center;
+				@include breakpoint($sm){
+					width: 40px;
+					height: 40px;
+				}
+				&::before {
+					@include font-ico-outline('\e8b6');
+					font-size: 26px;
+					color: #222;
+				}
+			}
+		}
+		.keyword {
+			flex-grow: 1;
+			input {
+				width: 100%;
+			}
+		}
+	}	
+	> * {
+		margin: 0 2px;		
+	}
+	.btn_select {
+		flex-basis: 200px;
+		width: 200px !important;
+		border-radius: 4px;
+		height: 56px !important;
+		border: 0 !important;
+		@include breakpoint($sm){
+			flex-basis: 120px !important;
+			width: 120px !important;
+			height: 40px !important;
+		}
+	}
+	&.selMenu {
+		.shArea {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			width: 200px;
+			max-width: 100%;
+			margin: 0 auto;
+			> * {
+				margin: 0 2px;
+			}
+			select {
+				width: calc(100% - 80px - 8px);
+			}
+			[class^=b-] {
+				line-height: 40px;
+			}
+		}
+	}
+	//경제용어사전
+	&.sh2 {
+		form {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 0 auto;
+			// width: 400px;
+			// max-width: 100%;
+			> * {
+				margin: 0 2px;
+			}
+		}
+		.t {
+			margin-right: 10px;
+			font-weight: 500;
+		}
+		.b-sh {
+			&::before {
+				content: "";
+				@include font-ico-outline('\e8b6');
+				font-size: 26px;
+				color: #222;
+			}
+		}
+	}
+}
