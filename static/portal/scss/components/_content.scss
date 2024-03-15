@@ -6,6 +6,277 @@
 	color: #666;
 }
 
+
+.fnote {
+	margin-top: 20px;
+	margin-bottom: 30px;
+	.title {
+		.ml25 {
+			margin-left: 29px !important;
+		}
+	}
+}
+
+//화폐
+.coinimgtxt {
+	overflow:hidden;
+	.imgtxtW {
+		overflow:hidden;
+	}
+	&.type{
+		.img {
+			border:3px solid #c9cfde;
+			background:none;
+			text-align:center;
+			&.img2 {
+				img{
+					max-width:120px;
+				}
+			}
+			&.imgType {
+				img {
+					max-width:270px !important
+				}
+			}
+			p {
+				border:0;
+				text-align:center;
+				height:152px;
+				img{
+					vertical-align:middle;
+					max-width:100%;
+				}
+			}
+		}
+	}
+	&.type1{
+		border:1px solid #ddd;
+		padding:5px 15px 15px;
+		.tabsub{
+			margin-bottom:20px;
+		}
+		h3{
+			clear:both !important;
+			margin-bottom:10px;
+		}
+	}
+	&.type2{
+		img{
+			max-width:120px;
+		}
+	}
+	.img{
+		width: 28%;  //32
+		float:left;
+		border:5px solid rgba(19, 21, 71, 0.5);
+		padding:2.5%;
+		background:#f4f5f7;
+		margin-right: 3%;
+		vertical-align:middle;
+		@include breakpoint($sm) {
+			width:100%;
+			text-align:center;
+			margin-bottom:10px;
+		}
+		&.imgType2{
+			border:0;
+			background:none;
+			p{
+				border:0;
+			}
+			.s {
+				display:inline-block;
+				margin-bottom:20px;
+				@include breakpoint($sm) {
+					margin-bottom:0;
+				}
+				strong{
+					display:block;
+					font-weight:normal;
+					color:#333 !important;
+				}
+			}
+		}
+		&.imgType3{
+			border:0;
+			background:none;
+			padding:0 4%;
+			p{
+				border:0;
+			}
+			img{
+				width:100%;
+			}
+		}
+		p{
+			vertical-align:middle;
+			background:#fff;
+			text-align:center;
+			width:100%;
+			text-align:center;
+			height:227px;
+			width:300px;
+			display:table-cell;
+			border:1px solid #b5b5b5;
+			border-width: 1px;
+			@include breakpoint($sm) {
+				width:100%;
+				height:auto;
+				text-align:center;
+				display:block;
+				padding:10px;
+			}
+		}
+	}
+	.table{
+		width: calc(100% - 28% - 3%);
+		float:left;
+		clear:none;
+		margin-top:0;
+		&.type{
+			width:100%;
+		}
+		@include breakpoint($sm) {
+			width:100%;
+		}
+		th{
+			font-weight:bold;
+		}
+	}
+}
+.dlbox {
+	background:#eee;overflow:hidden;clear:both;display:table;width:100%;
+	dt,
+	dd {
+		padding:12px 8px;display:table-cell;vertical-align:middle;border:1px solid #fff;border-width:1px 1px 0 0;
+	}
+	dt{
+		width:20%;
+		text-align:center;
+		font-weight: 600;
+		background:$point;
+		color:#fff;
+		line-height:1.3;
+		&:before{
+			@include font-ico-outline('\e855');
+			font-size: 18px;
+			margin-right: 5px;
+		}
+		@include breakpoint($sm) {
+			width:110px;
+		}
+	}
+	dd{
+		width:80%;
+		@include breakpoint($sm) {
+			width:auto;
+		}
+	}
+}
+
+
+.tab-content {
+	.tab-pane {
+		display: none;
+		&.active,
+		&.on {
+			display: block;
+		}
+	}
+}
+
+.fade {
+	opacity: 0;
+	transition: opacity 0.15s linear;
+	&.in {
+		opacity: 1;
+	}
+}
+
+
+//오시는 길
+.bokHead{
+	background:#f4f5f7;padding:15px;overflow:hidden;
+	@include breakpoint($sm){
+		.map{width:100%;}
+		.bankMap{width:100%;margin:20px 0 0 0;}
+	}
+	.map{
+		float:left;
+		width:60%;
+		@include breakpoint($sm){
+			width: 100%;
+		}
+	}
+	.bankMap{
+		float:left;
+		width:38%;
+		margin-left:2%;
+		@include breakpoint($sm){
+			width: 100%;
+			margin-left: 0;
+			margin-top: 20px;
+		}
+		font-size: rem(18);
+		&.type{
+			dt{
+				font-weight:600;color: $point;margin-top:5px;
+			}
+		}
+		dt, dd{
+			padding-left:25px;
+		}
+		dt{
+			margin-top:10px;
+			&::before {
+				font-size: 16px;
+				color:#fff;
+				position:absolute;
+				top:0;
+				left:0;
+				border-radius: 30px;
+				background:#3B63C4;
+				width: 22px;
+				height: 22px;
+				line-height: 22px;
+				text-align:center;
+				margin: 3px 3px 0 0;
+			}
+		}
+		.pic img{
+			display:inline-block;border:3px solid #fff;
+		}
+		.ad{
+			position:relative;
+			&:before{
+				@include font-ico-outline('\e0c8');
+				
+			}
+		}
+		.ph{
+			position:relative;
+			&:before{
+				@include font-ico-outline('\e0b0');
+			}
+		}
+		.fx{
+			position:relative;
+			&:before{
+				@include font-ico-outline('\ead8');
+			}
+		}
+		.em{
+			position:relative;
+			&:before{
+				content:"\f003";
+				color:#fff;font-size:13px;position:absolute;top:0;left:0;border-radius: 30px;background:#3B63C4;width:20px;height:20px;text-align:center;
+			}
+		}
+	}
+}
+
+
+
 .org {
 	margin-bottom: 180px;
 	&-desc {
@@ -636,6 +907,205 @@
 			}
 		}
 	}
+}
+
+
+
+//청탁·이해충돌 방지제도 신고
+.cheongStop {
+	background:#3c4559 url("/static/portal/img/cts/sub8/200210_1.jpg") no-repeat 75% top;
+	background-size:auto 100%;padding:2% 3% 0 3%;min-height:180px;color:#fff;letter-spacing:-1px;
+	&.bbs{
+		padding:6% 2% 0 2%; 
+		text-align:center;
+		label{
+			font-size:18px;
+			padding-right:10px;
+		}
+		select, 
+		.inpt_txt, 
+		button{
+			color:#333;
+			border:3px solid #5b79b9;
+			height:45px;line-height:45px;
+		}
+		select{min-width:120px}
+		.b-sh{color:#fff}
+	}
+	.tit{
+		//@include ns;
+		font-size:24px;
+		letter-spacing:-1px;font-weight:400;
+	}
+	.img{margin-top:46px;}
+	a{color:#fff}
+}
+
+
+//정보공개
+.referList {
+	margin-left: 10px;
+	li{text-indent:-18px; margin-left: 18px;margin-bottom:5px;background:none !important;
+		&:before{content:"";}
+		a{text-indent:0;margin-left:0;}
+		.imgSet{margin:5px 0;text-indent:0;}
+		>p{text-indent:-18px; margin-left: 18px;}
+		table{text-indent:0;
+			thead th{text-align:center;}
+		}
+	}
+	&.type{
+		>li{margin-bottom:10px;
+			>ul{margin-top:5px;}
+		}
+	}
+	&.type2{
+		li {text-indent:-28px; margin-left: 28px;}
+	}
+}
+.linkBox{
+	margin:10px 0;
+	&.bg1 { 
+		background: #fff; 
+		> ul > li:nth-child(even) { 
+			background: #fff; 
+		}
+	}
+	&.type{
+		span{
+			width:72%;
+			@include breakpoint($sm) {
+				width:auto !important;
+			}
+		}
+		span.btnStyle{
+			width:28%;
+			@include breakpoint($sm) {
+				width:140px !important;
+			}
+		}
+	}
+	>ul{
+		width:100%;
+		border-bottom:1px solid #ddd;
+		>li{
+			display:table;
+			border-collapse:collapse;
+			border-spacing:0;
+			width:100%;
+			&:nth-child(even) {
+				background:#fafafa; 
+			}
+			>div{
+				width:89%;
+			}
+			>div, 
+			>span{
+				display:table-cell;
+				padding:8px 8px 8px 20px;
+				border:1px solid #ddd;
+				border-bottom:0;
+			}
+			span.btnStyle{
+				padding:8px;
+				width:11%;
+				text-align:center;
+				min-width:100px;
+				vertical-align:middle;
+			}
+		}
+	}
+	.bu { 
+		margin-left: 0; 
+	}
+}
+
+//CBDC
+.cbdc-top {
+	padding: 38px 0;
+	position: relative;
+	text-align: center;
+	&::before {
+		content: "";
+		display: inline-block;
+		width: 100%;
+		height: 230px;
+		background-color: rgba(59, 99, 196, 0.2);
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: -1;
+		@include breakpoint($mdw){
+			height: 150px;
+		}
+		@include breakpoint($sm){
+			height: 100px;
+		}
+	}
+}
+.cbdc-set {	
+	display: block;
+	@include breakpoint($lg){
+		display: flex;
+		justify-content: space-between;
+	}
+	.retail {
+		@include breakpoint($lg){
+			width: 61.4%;
+			padding-right: 50px;
+		}		
+		p + p {
+			margin-top: 15px;
+		}
+	}
+	.videoSet {
+		padding: 0;
+		@include breakpoint($lg){
+			width: 38.6%;			
+		}		
+		.help {
+			padding-top: 14px;
+			width: 100%;
+			display: flex;			
+			&::before {
+				font-size: rem(24);
+				margin-right: 8px;
+			}
+		}
+	}
+	@include breakpoint($smd){
+		& + h3 {
+			margin-top: 20px;
+		}
+	}
+	.refer {
+		position: relative;
+		margin-top: 20px;
+		color: #2F4F9D;
+		font-size: 14px;
+		padding-left: 10px;
+		&::before {
+			content: "";
+			display: inline-block;
+			width: 4px;
+			height: 4px;
+			background-color: #2F4F9D;
+			border-radius: 50%;
+			position: absolute;
+			top: 7px;
+			left: 0;
+		}
+	}
+}
+
+
+.imgSet {
+    border: 1px solid #dee0e6;
+    clear: both;
+    position: relative;
+    margin-bottom: 10px;
+    background: #fff;
+    text-align: center;
 }
 
 

@@ -18,12 +18,9 @@
 			}
 		}
 	}	
-	.top-page-toolbar {
-		display: none;
-		.nav-stiky & {
-			display: block;
-			float: right;
-		}
+	.top-page-toolbar {		
+		display: block;
+		float: right;		
 		.page-toolbar {
 			border: 1px solid #E5E5E5;
 			border-width: 0 1px;

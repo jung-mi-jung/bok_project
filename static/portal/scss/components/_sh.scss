@@ -468,6 +468,9 @@
 			border-radius: $sh-bd-radius;
 			padding: 0 36px 0 8px;
 			background-color: #fff;
+			@include breakpoint($sm){
+				width: auto;
+			}
 			&::after {
 				@include font-ico-outline('\e5c5');
 				font-size: 24px;
@@ -509,6 +512,9 @@
 	display: flex;
 	justify-content: right;
 	margin-bottom: 25px;
+	@include breakpoint($sm){
+		justify-content: flex-start;
+	}
 	> * {
 		margin: 0 4px;
 	}
@@ -651,9 +657,98 @@
 			height: 40px !important;
 		}
 	}
-	
-	
+	&.selMenu {
+		.shArea {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			width: 200px;
+			max-width: 100%;
+			margin: 0 auto;
+			> * {
+				margin: 0 2px;
+			}
+			select {
+				width: calc(100% - 80px - 8px);
+			}
+			[class^=b-] {
+				line-height: 40px;
+			}
+		}
+	}
+	//경제용어사전
+	&.sh2 {
+		form {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 0 auto;
+			// width: 400px;
+			// max-width: 100%;
+			> * {
+				margin: 0 2px;
+			}
+		}
+		.t {
+			margin-right: 10px;
+			font-weight: 500;
+		}
+		.b-sh {
+			&::before {
+				content: "";
+				@include font-ico-outline('\e8b6');
+				font-size: 26px;
+				color: #222;
+			}
+		}
+	}
 }
+
+//경제용어사전
+.keyWordBd {
+	margin-bottom: 20px;
+	> ul {
+		> li {
+			display: flex;
+			& + li {
+				margin-top: 5px;
+			}
+			.keyWdHd {
+				width: 80px;
+				line-height: 40px;
+			}
+			.keyword {
+				display: flex;
+				flex-wrap: wrap;
+				//flex-wrap: wrap;
+				//flex-direction: row;
+				width: calc(100% - 80px);
+				li {
+					padding: 0 1px;
+				}
+			}
+			a {
+				color: $black;
+				display: inline-block;
+				text-align: center;
+				width: 40px;
+				height: 40px;
+				line-height: 40px;
+				border: 1px solid #BFBFBF;
+			}
+			&.on {
+				a {
+					color: #fff;
+					border: 1px solid $point;
+					background-color: $point;
+				}
+			}
+		}
+	}
+}
+
+
+
 
 /* 이하 아직 안씀
 .sh {
