@@ -203,6 +203,9 @@
 			height: 100%;
 		}
 	}
+	@include breakpoint($smd){ 
+		order: 2;
+	}
 	h1 {
 		padding-bottom: 6px;
 		font-size: rem(16);
@@ -268,56 +271,56 @@
 }
 
 //연관자료
-.lnb-reference {
-	padding: 24px 0;
-    margin: 18px 0;
-	border-top: 1px solid #E5E5E5;
-	@include breakpoint($smd) {
-		margin: 0 0 18px;
-		border-top: none;
-	}
-	h1 {
-		&::before {
-			@include background-image-retina("/static/museum/img/ico/ico-relate", png, auto, 100%);
-		}
-	}
-	ul {
-		margin-bottom: 12px;
-		li {
-			margin: 4px 0;
-			a {
-				position: relative;
-				display: flex;
-				align-items: center;
-				padding: 8px 8px 8px 36px;
-				background: #F2F6FA;
-				border-radius: 8px;
-				word-break: initial;
-				&::before {
-					content: "";
-					display: inline-block;
-					position: absolute;
-					top: 10px;
-					left: 8px;
-					width: 20px;
-					height: 20px;
-				}
-				&.reference-m {
-					&::before {
-						@include background-image-retina("/static/museum/img/ico/ico-relateM", png, auto, 100%);
-					}
-				}
-				&.reference-c {
-					&::before {
-						@include background-image-retina("/static/museum/img/ico/ico-relateC", png, auto, 100%);
-					}
-				}
-				&.reference-h {
-					&::before {
-						@include background-image-retina("/static/museum/img/ico/ico-relateH", png, auto, 100%);
-					}
-				}
-			}
-		}
-	}
-}
+// .lnb-reference {
+// 	padding: 24px 0;
+//     margin: 18px 0;
+// 	border-top: 1px solid #E5E5E5;
+// 	@include breakpoint($smd) {
+// 		margin: 0 0 18px;
+// 		border-top: none;
+// 	}
+// 	h1 {
+// 		&::before {
+// 			@include background-image-retina("/static/museum/img/ico/ico-relate", png, auto, 100%);
+// 		}
+// 	}
+// 	ul {
+// 		margin-bottom: 12px;
+// 		li {
+// 			margin: 4px 0;
+// 			a {
+// 				position: relative;
+// 				display: flex;
+// 				align-items: center;
+// 				padding: 8px 8px 8px 36px;
+// 				background: #F2F6FA;
+// 				border-radius: 8px;
+// 				word-break: initial;
+// 				&::before {
+// 					content: "";
+// 					display: inline-block;
+// 					position: absolute;
+// 					top: 10px;
+// 					left: 8px;
+// 					width: 20px;
+// 					height: 20px;
+// 				}
+// 				&.reference-m {
+// 					&::before {
+// 						@include background-image-retina("/static/museum/img/ico/ico-relateM", png, auto, 100%);
+// 					}
+// 				}
+// 				&.reference-c {
+// 					&::before {
+// 						@include background-image-retina("/static/museum/img/ico/ico-relateC", png, auto, 100%);
+// 					}
+// 				}
+// 				&.reference-h {
+// 					&::before {
+// 						@include background-image-retina("/static/museum/img/ico/ico-relateH", png, auto, 100%);
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// }

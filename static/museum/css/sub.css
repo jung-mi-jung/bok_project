@@ -818,6 +818,11 @@ width: 1px;
 height: 100%;
 }
 }
+@media (max-width: 1199px) {
+.lnb-nav {
+order: 2;
+}
+}
 .lnb-nav h1 {
 padding-bottom: 6px;
 font-size: 1rem;
@@ -882,82 +887,6 @@ color: #2F4F9D;
 position: absolute;
 top: 2px;
 right: 8px;
-}
-
-.lnb-reference {
-padding: 24px 0;
-margin: 18px 0;
-border-top: 1px solid #E5E5E5;
-}
-@media (max-width: 1199px) {
-.lnb-reference {
-margin: 0 0 18px;
-border-top: none;
-}
-}
-.lnb-reference h1::before {
-background-image: url("/static/museum/img/ico/ico-relate.png");
-background-repeat: no-repeat;
-background-size: auto 100%;
-}
-@media (-webkit-min-device-pixel-ratio: 2) {
-.lnb-reference h1::before {
-background-image: url("/static/museum/img/ico/ico-relate@2x.png");
-}
-}
-.lnb-reference ul {
-margin-bottom: 12px;
-}
-.lnb-reference ul li {
-margin: 4px 0;
-}
-.lnb-reference ul li a {
-position: relative;
-display: flex;
-align-items: center;
-padding: 8px 8px 8px 36px;
-background: #F2F6FA;
-border-radius: 8px;
-word-break: initial;
-}
-.lnb-reference ul li a::before {
-content: "";
-display: inline-block;
-position: absolute;
-top: 10px;
-left: 8px;
-width: 20px;
-height: 20px;
-}
-.lnb-reference ul li a.reference-m::before {
-background-image: url("/static/museum/img/ico/ico-relateM.png");
-background-repeat: no-repeat;
-background-size: auto 100%;
-}
-@media (-webkit-min-device-pixel-ratio: 2) {
-.lnb-reference ul li a.reference-m::before {
-background-image: url("/static/museum/img/ico/ico-relateM@2x.png");
-}
-}
-.lnb-reference ul li a.reference-c::before {
-background-image: url("/static/museum/img/ico/ico-relateC.png");
-background-repeat: no-repeat;
-background-size: auto 100%;
-}
-@media (-webkit-min-device-pixel-ratio: 2) {
-.lnb-reference ul li a.reference-c::before {
-background-image: url("/static/museum/img/ico/ico-relateC@2x.png");
-}
-}
-.lnb-reference ul li a.reference-h::before {
-background-image: url("/static/museum/img/ico/ico-relateH.png");
-background-repeat: no-repeat;
-background-size: auto 100%;
-}
-@media (-webkit-min-device-pixel-ratio: 2) {
-.lnb-reference ul li a.reference-h::before {
-background-image: url("/static/museum/img/ico/ico-relateH@2x.png");
-}
 }
 
 select,
