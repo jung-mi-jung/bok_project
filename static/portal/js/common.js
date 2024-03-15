@@ -484,8 +484,8 @@ $(function () {
 $(function() {
 
 	//navigation  고정용 page-toolbar
-	var toolbarhtml = $('.hgroup .page-toolbar').clone()
-	$(".top-page-toolbar").html(toolbarhtml.clone())
+	// var toolbarhtml = $('.hgroup .page-toolbar').clone()
+	// $(".top-page-toolbar").html(toolbarhtml.clone())
 
 
 	/*Variables for chache $ chaining*/
@@ -737,4 +737,109 @@ $(function () {
 	})
 	
 
+});
+
+
+
+//기존 컨텐츠
+$(function () {
+
+	$('.selBtn').bind('click', function(e){
+		var tabIndex = $('#selbox option:selected').val();
+		$('.select_Tab').each(function(){
+			var TabId = $(this).attr('id');
+			if (tabIndex == TabId) {
+				$(this).show();
+			}else{
+				$(this).hide();
+			}
+		});
+		return false;
+	});
+
+	$(".categoryOnOff>button").on("click", function(){
+		$(".category").toggleClass('on');
+		return false;
+	})
+	
+
+
+	var tabtext1 = $(".depth4Tab + .tab>ul>li.active").text();
+	var tabtext2= $(".tabsub>ul>li.active").text();
+	var tabtext3= $(".depth3Tab + .tab.dept3>ul>li.active").text();
+	$(".depth4Tab>a").text(tabtext1);
+	$(".depth4Tab>a").click(function() {
+		$(this).parent().next(".tab").slideToggle();
+		return false;
+	})
+
+	$(".depth5Tab>a").text(tabtext2);
+	$(".depth5Tab + .tabsub>ul>li>a").on("click", function(){
+		var txts = $(this).text();
+		var n = $(this).parent().index();
+		$(this).parents().parent().parent().next().find("li").eq(n).append("<h3 class='hidden'>"+txts+"</h3>");
+		return false;
+	})
+	$(".depth5Tab>a").click(function() {
+		$(this).parent().parent().find(".tabsub").slideToggle();
+		return false;
+	})
+
+	$(".depth3Tab>a").text(tabtext3);
+	$(".depth3Tab>a").click(function() {
+		$(this).parent().parent().find(".tab.dept3").slideToggle();
+		return false;
+	})
+
+	$(".tabsub.type>ul>li>a").on("click", function(){
+		$(this).parent().parent().parent().toggleClass('on');
+		return false;
+	})
+
+
+	//tabsub Content Tab
+	var linka= $(".tabsub ul li")
+	//$('.tabsub li.active a').attr('title', '선택됨');
+	$(linka).find('a').click(function(){
+		$(this).parent().siblings().removeClass('active').removeClass('title');
+		$(this).parent().addClass('active')
+
+		//안됨
+		if ($(this).parent().hasClass('active')){
+			$(this).attr("title", "선택됨");
+		} else {
+			$(this).removeAttr("title");
+		}
+
+		var k = linka.find('a').length + 1
+		var linkName = $(this).attr("href");
+		$(this).parent().parent().parent().parent().find(".tab-content .tab-pane").removeClass("fade in active");
+		$(linkName).addClass("fade in active")
+		return false;
+
+	});
+
+
+	//첨부파일
+	var filesOv = $(".fileGroupSet>a");
+	//$(filesOv).on("mouseenter keyup", function(event){
+	$(filesOv).on("click", function(event){
+		$(this).next().slideDown();
+		event.preventDefault();
+	});
+	$(".fileGroupSet").on("mouseleave", function(event){
+		$(this).find(".fileGoupBox").hide();
+		event.preventDefault();
+	});
+	/*$(".fileGoupBox ul li:last-child a").on("focusout", function(){
+		$(this).parent().parent().parent().slideUp();
+	});*/
+	$(".fileGoupBox .closeLayer").on("click focusout", function(){
+		$(this).parent().hide();
+	});
+	$(filesOv).bind('keydown', function(e){
+		if(e.shiftKey && e.keyCode == 9){
+			$(".fileGoupBox").hide();
+		}
+	})
 });

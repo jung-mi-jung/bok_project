@@ -1414,18 +1414,24 @@ content: "";
 color: #757575;
 }
 
-.content h2 {
+#main-container {
+/*.bu2 {
+	margin-top: 25px;
+}*/
+}
+#main-container h2 {
 color: #131547;
 font-size: 2.25rem;
 font-weight: 300;
 margin-bottom: 20px;
 }
-.content h3 {
+#main-container h3 {
 color: #131547;
 font-size: 1.75rem;
 font-weight: 500;
+margin: 15px 0 10px;
 }
-.content h3::before {
+#main-container h3::before {
 content: "";
 display: inline-block;
 vertical-align: middle;
@@ -1436,29 +1442,92 @@ border-radius: 30px;
 margin-right: 10px;
 margin-bottom: 4px;
 }
-.content h3.h3 {
-color: #3B63C4;
+#main-container h3.h3 {
+color: #2F4F9D;
 font-size: 1.25rem;
 font-weight: 500;
 margin: 40px 0 10px;
 }
-.content h3.h3::before {
-display: none;
+#main-container h3.h3::before {
+content: "";
+display: inline-block;
+vertical-align: middle;
+width: 16px;
+height: 16px;
+background-image: url(/static/portal/img/ico/ico-caption.png);
+background-color: transparent;
+margin-right: 5px;
+border-radius: 0;
 }
-.content .bu2,
-.content h4 {
+#main-container .bu2,
+#main-container h4 {
 color: #3B63C4;
 font-size: 1.25rem;
 font-weight: 500;
-margin-top: 15px;
-margin-bottom: 12px;
+margin-top: 18px;
+margin-bottom: 5px;
+/*&:first-child {
+	margin-top: 0;
+}*/
 }
-.content .bu2:first-child,
-.content h4:first-child {
-margin-top: 0;
+
+ul.bu > li {
+clear: both;
+position: relative;
+padding-left: 10px;
+font-size: 1.125rem;
 }
-.content .bu2 {
-margin-top: 25px;
+ul.bu > li::before {
+position: absolute;
+top: 12px;
+left: 0;
+width: 4px;
+height: 4px;
+background-color: #131547;
+border-radius: 50%;
+content: "";
+}
+ul.bu > li ul {
+font-size: 1rem;
+}
+ul.bu > li ul li {
+position: relative;
+padding-left: 9px;
+/*&:before {
+	color: #757575;
+}*/
+}
+ul.bu > li ul li::before {
+position: absolute;
+top: 14px;
+left: 0;
+width: 4px;
+height: 1px;
+background-color: #757575;
+content: "";
+}
+
+.bu-dash::before {
+display: none;
+}
+.bu-dash > li {
+position: relative;
+padding-left: 9px;
+}
+.bu-dash > li::before {
+position: absolute;
+top: 14px;
+left: 0;
+width: 4px;
+height: 1px;
+background-color: #757575;
+content: "";
+}
+
+li .b-link {
+font-size: 14px;
+line-height: inherit;
+padding: 2px 4px;
 }
 
 .material-icons {
@@ -1721,17 +1790,11 @@ text-align: left;
 margin: 0 10px;
 }
 }
-.bd-view_wrap .hgroup .page-toolbar {
-display: none;
-}
 
 .bd-blog_wrap .hgroup {
 border-bottom: none;
 padding-bottom: 0;
 margin: 40px 0 0;
-}
-.bd-blog_wrap .hgroup .page-toolbar {
-display: none;
 }
 
 .hgroup {
@@ -1769,9 +1832,6 @@ padding: 20px 0 18px;
 position: relative;
 display: flex;
 align-items: center;
-}
-.nav-stiky .page-toolbar .sns-wrap.active {
-top: 0;
 }
 @media (max-width: 1199px) {
 .page-toolbar {
@@ -2638,7 +2698,7 @@ margin: 0 -12px;
 }
 @media (max-width: 1199px) {
 .reference-news dl dd ul {
-width: -webkit-max-content;
+width: -moz-max-content;
 width: max-content;
 }
 }
@@ -2771,7 +2831,7 @@ margin: -12px -12px 0;
 }
 @media (max-width: 1199px) {
 .reference-media dl dd ul {
-width: -webkit-max-content;
+width: -moz-max-content;
 width: max-content;
 }
 }
@@ -2848,9 +2908,31 @@ top: 0;
 margin-bottom: 12px;
 }
 
+sup {
+color: #C81720;
+margin: 0 5px 0 3px;
+font-weight: 600;
+}
+
+.visible-xs,
+.visible-sm,
+.visible-md,
+.visible-lg {
+display: none !important;
+}
+
+.xs-block,
+.sm-block,
+.md-block {
+display: inline;
+}
+
 @media (min-width: 1200px) {
 .hidden-lg {
 display: none !important;
+}
+.visible-md {
+display: block !important;
 }
 }
 @media (max-width: 1199px) {
@@ -2862,7 +2944,29 @@ display: none !important;
 .hidden-sm {
 display: none !important;
 }
+.visible-sm {
+display: inline-block !important;
 }
+}
+.help::before {
+content: "\e88e";
+font-family: "Material Icons Outlined";
+font-weight: normal;
+font-style: normal;
+display: inline-block;
+line-height: 1;
+vertical-align: text-bottom;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+font-feature-settings: "liga";
+-webkit-font-feature-settings: "liga";
+}
+
 .gnb_bg {
 display: none;
 }
@@ -3382,7 +3486,7 @@ font-size: 0.875rem;
 }
 }
 #footer .f_r .site_go button::after {
-content: "\e5c7";
+content: "\e5c5";
 font-family: "Material Icons Outlined";
 font-weight: normal;
 font-style: normal;

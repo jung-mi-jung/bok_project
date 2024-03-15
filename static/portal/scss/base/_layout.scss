@@ -191,9 +191,6 @@
 				margin: 0 10px;				
 			}
 		}
-		.page-toolbar {
-			display: none;
-		}
 	}
 }
 // 블로그형
@@ -202,9 +199,6 @@
 		border-bottom: none;
 		padding-bottom: 0;
 		margin: 40px 0 0;
-		.page-toolbar {
-			display: none;
-		}
 	}
 }
 
@@ -234,12 +228,7 @@
 		}
 	}
 }
-.page-toolbar {
-	.nav-stiky & {
-		.sns-wrap.active {
-			top: 0;
-		}
-	}
+.page-toolbar {	
 	position: relative;
 	display: flex;
 	align-items: center;
@@ -1074,9 +1063,33 @@
 }
 
 
+
+sup {
+    color: $fc_red;
+    margin: 0 5px 0 3px;
+    font-weight: 600;
+}
+
+
+// visibillity
+.visible-xs, 
+.visible-sm, 
+.visible-md, 
+.visible-lg { 
+	display: none !important; 
+}
+.xs-block, 
+.sm-block, 
+.md-block { 
+	display: inline; 
+}
+
 @include breakpoint($lg) {
 	//.visible-lg { display: inline-block !important; }
 	.hidden-lg { display: none !important; }
+	.visible-md {
+		display: block !important;
+	}
 }
 @include breakpoint($smd) {
 	.hidden-smd { display: none !important; }
@@ -1084,5 +1097,23 @@
 @include breakpoint($sm) {
 	//.visible-sm { display: inline-block !important; }
 	.hidden-sm { display: none !important; }
+
+	.visible-sm {
+		display: inline-block !important;
+	}
 	//.sm-block{display: inline-block !important;}
 }
+
+.help {
+	&::before {
+		@include font-ico-outline('\e88e');
+	}
+}
+
+
+// @include breakpoint($xs) {
+// 	.visible-xs { display: inline-block !important; }
+// 	.hidden-xs { display: none !important; }
+// 	.xs-block{display: inline-block !important; width: 100%; }
+
+// } 

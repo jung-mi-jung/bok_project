@@ -19,9 +19,11 @@
 @import 'components/bdlist';//프로그램  리스트 공통
 @import 'components/bdview';//프로그램 뷰,수정,쓰기
 @import 'components/photo';//겔러리 타입(동영상 등)
+@import 'components/faq';//FAQ
 @import 'components/paging';//페이징
 @import 'components/tab';//탭메뉴
 @import 'components/sh';//검색
+@import 'components/filelist';//파일목록
 
 @import 'components/content';//콘텐츠
 @import 'components/dbdata';//게시물 데이터
@@ -33,10 +35,6 @@
 
 
 /*
-@import 'components/faq';//FAQ
-
-@import 'components/filelist';//파일목록
-
 @import 'components/calendar';// calendar
 @import 'components/popup';//팝업
 */
@@ -100,6 +98,35 @@
 		}
 	}
 }
+
+
+
+//경제용어사전
+.boxInfo {
+    height: 380px;
+    overflow-y: auto;
+    text-align: justify;
+    padding-left: 10px;
+	&.boxInfo.boxInfoR {
+		height: 260px;
+		margin-bottom: 20px;
+	}
+}
+#wordList {
+	li {
+		a {
+			display: block;
+			padding: 5px 10px;
+		}
+		&.on {
+			a {
+				font-weight: 600;
+				background-color: #F2F6FA;
+			}
+		}
+	}
+}
+
 
 /* 안씀
 //법령 검색
@@ -210,7 +237,7 @@
 
 
 // 한줄에 h3 + p
-.h-group {	
+.h-group {	 // 기존 class => hgroup
 	p {
 		float: right;
 		text-align: right;

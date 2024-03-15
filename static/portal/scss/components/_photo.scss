@@ -202,3 +202,136 @@
 		background-size: cover;
 	}
 }
+
+
+
+
+//기존
+.bdPhoto{
+	clear: both;float: left;margin-bottom: 30px;width:100%;
+	&.row{
+		margin-left:0;margin-right:0;
+		@include breakpoint($sm){
+			.col {
+				padding: 0;
+			}
+		}
+	}
+	.ratioSet{
+		display:block;
+	}
+	.ratioSet .badge{
+		position:absolute; right:0; z-index:10;
+	}
+	>ul>li{
+		overflow:hidden;position:relative;padding:10px;min-height:140px; border:1px solid #dbdce0;margin-bottom:10px;
+		&:hover{
+			text-decoration: none;
+			background:#F2F6FA;
+		}
+		>a{			
+			&:hover .ratioObject, 
+			&:active .ratioObject, 
+			&:focus .ratioObject {
+				opacity:1;
+			}
+			.ratioObject{
+				opacity:0.65; transition:all .5s;
+			}
+			.ratioSet{ 
+				background:#000;
+			}
+			dd{
+				display:inline-block;
+			}
+		}
+		.photo{
+			float:left;
+			width: 100%;display: inline-block; background-size: cover;
+		}
+		dl{
+			height:120px;overflow:hidden;
+			@include breakpoint($sm){
+				height: 132px;
+			}
+			dt{
+				font-weight:bold;padding:6px 0;
+				span.db{
+					line-height:20px;font-weight: 500;font-size:1.05em;color: #3B63C4;
+				}
+				a{
+					color: $black;
+					font-size: rem(20);
+					font-weight: 500;
+				}
+			}
+			dl{
+				height:auto;
+				dt {
+					padding:0
+				}
+			}
+			.cont{
+				overflow:hidden;height:57px;width:100%;
+			}
+			.date span{
+				color:#c0c0c0;padding:0 5px
+			}
+			.date{
+				color:#757575;width:auto;padding-top:4px;
+				&:before{
+					@include font-ico-outline('\e855');
+					font-size: 18px;
+					margin-right:5px;
+				}
+			}
+			.place{
+				color:#333; margin-bottom:5px;width:100%;
+				&:before{
+					@include font-ico-outline('\e0c8');
+					font-size: 18px;
+					margin-right:5px;
+				}
+			}
+			.btn{
+				padding-top:14px;overflow:hidden;
+			}
+		}
+	}
+	&.type2{
+		>ul>li{
+			min-height:130px;margin-bottom:0;
+		}
+		.dl-horizontal dd, dt {@include ellipsis; }
+		.ratioSet{display:block;}
+		
+	}
+	&.type3{
+		>ul>li{margin-bottom:0;}
+		dl {height:87px}
+		span.title {overflow:hidden;white-space:nowrap;text-overflow:ellipsis;display:block}
+	}
+	&.type4{
+		dl{height:auto;}
+		.box{display:table;float:none;
+			@include breakpoint($xs) {display:block;float:left;}
+			.col{float:none;display:table-cell;vertical-align:top;
+				@include breakpoint($xs) {display:block;float:left;}
+			}
+		}
+		.m7{position:relative;
+			.cont{margin-bottom:5px !important;height:auto;}
+			.btnSec{font-size:0;margin-top:5px;position:absolute;bottom:10px;width:90%;
+				@include breakpoint($xs) {
+					position:inherit;bottom:inherit;overflow:hidden;width:100%;
+				}
+				a{width:49%;display:inline-block;font-size:13px;text-align:center;padding:0;margin:0 0.5%;
+					span{@include ellipsis}
+				}
+			}
+		}
+	}
+	&.type5{
+		.ratioObject {border:1px solid #dee0e6;}
+	}
+}
