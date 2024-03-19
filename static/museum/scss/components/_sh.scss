@@ -466,7 +466,7 @@
 	.select-set {
 		position: relative;
 		.btn_select {
-			color: #666;
+			// color: #666;
 			position: relative;
 			text-align: left;
 			width: 135px;
@@ -539,6 +539,8 @@
 	}	
 }
 
+
+/* 검색 필드*/
 .sh {
 	display: flex;
     flex-direction: row;
@@ -653,14 +655,14 @@
 	}
 	.btn_select {
 		flex-basis: 200px;
-		width: 200px !important;
+		width: 200px ;
 		border-radius: 4px;
-		height: 56px !important;
-		border: 0 !important;
+		height: 56px ;
+		border: 0 ;
 		@include breakpoint($sm){
-			flex-basis: 120px !important;
-			width: 120px !important;
-			height: 40px !important;
+			flex-basis: 120px ;
+			width: 120px ;
+			height: 40px ;
 		}
 	}
 	&.selMenu {
@@ -708,4 +710,130 @@
 			}
 		}
 	}
+}
+.sh2 {
+	.c {
+		flex-direction: row;
+		flex-wrap: nowrap;
+		gap: 8px;
+		@include breakpoint($sm) {
+			flex-direction: column;
+		}
+ 		.sh-date {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			width: auto;
+			input{
+				max-width: 160px;
+				width: 100%;
+				border: 0;
+				height: 54px;
+				@include breakpoint($sm) {
+					max-width: 130px;
+					height: 40px;
+				}
+			}
+			span {
+				font-size: 18px;
+				color: #000;
+			}
+		}
+		.sh-input {
+			background: #fff;
+			border-radius: 4px;
+			.select-set {
+				position: relative;
+				&::before {
+					content: "";
+					display: inline-block;
+					position: absolute;
+					width: 1px;
+					height: 32px;
+					top: 50%;
+					right: 0;
+					transform: translateY(-50%);
+					background: #e5e5e5;
+					z-index: 1;
+				}
+				select {
+					max-width: 130px;
+				}
+			}
+			.keyword-set {
+				flex-basis: calc(100% - 130px - 8px);
+			}
+		}
+	}
+}
+.sh-detail {
+	.sh-input {
+		select {
+			flex: 1;
+			height: 48px;
+		}
+	}
+	.sh-radio {
+		dl {
+			display: flex;
+			align-items: center;
+		}
+		dt {
+			//max-width: ;
+			font-size: rem(18);
+			color: #808080;
+		}
+	} 
+}
+
+
+.date-set {
+	@include breakpoint($sm){
+		display: flex;
+	}
+	@include breakpoint($mdw) {
+		flex-basis: 270px;
+		flex-shrink: 0;
+	}
+	@include breakpoint($lg) {
+		flex-basis: 300px;
+		flex-grow: 0;
+	}
+	.date,
+	.month,
+	.sdate,
+	.edate {
+		flex-basis: calc(50% - 8px) !important;
+		width: calc(50% - 8px) !important;
+		-webkit-appearance: none !important;
+	}
+	.dash {
+		width: 24px;
+		text-align: center;
+	}
+	.sh & {
+		@include breakpoint($mdw) {
+			font-size: 13px;
+		}
+	}
+	.sh.m & {
+		@include breakpoint($mdw) {
+			font-size: 16px;
+		}
+	}
+	.bd-reg & {
+		@include breakpoint($md) {
+			display: block;
+			max-width: 300px;
+		}
+	}
+}
+input.date,
+input.month,
+input.sdate,
+input.edate {
+	font-size: 1rem;
+	background: #fff url(/static/museum/img/ico/ico-drop-bk.png) 100% 100% no-repeat;
+	background-position: calc(100% - 10px) center;
+	padding: 4px 10px;
 }

@@ -1,3 +1,37 @@
+.sh-BxSet {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 2px solid $black;
+	padding-bottom: 15px;
+	@include breakpoint($sm){
+		display: block;
+		.count-total {
+			margin-bottom: 10px;
+		}
+	}
+	.sh-select {
+		margin-bottom: 0;
+	}
+}
+.count-total {
+	color: $black;
+	font-size: rem(15);
+	&::before {
+		content: "";
+		display: inline-block;
+		width: 3px;
+		height: 3px;
+		background-color: $black;
+		border-radius: 50%;
+		margin: 5px 8px 0 0;
+	}
+	strong {
+		font-weight: 600;
+		text-decoration: underline;
+	}
+}
+
 .bd-line {
 	ul {		
 		li {
@@ -92,6 +126,9 @@
 				}
 			}
 			.date {
+				padding-right: 10px;
+			}
+			.date, .views{
 				color: #767676;
 			}
 			&:hover {
