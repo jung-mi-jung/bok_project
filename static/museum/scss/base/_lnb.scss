@@ -184,8 +184,16 @@
 
 //목차형
 .lnb-nav{
+	position: sticky;
+	top: 48px;
+	padding-top: 0;
+	// &.sticky {
+	// 	position: sticky;
+	// 	top: 78px;
+	// 	padding-top: 0;
+	// }
 	@include breakpoint($lg){
-		position: relative;
+		//position: relative;
 		display: block;
 		float: left;
 		width: per(240px + 35px, $pc-wide);
@@ -203,9 +211,9 @@
 			height: 100%;
 		}
 	}
-	@include breakpoint($smd){ 
-		order: 2;
-	}
+	// @include breakpoint($smd){ 
+	// 	order: 2;
+	// }
 	h1 {
 		padding-bottom: 6px;
 		font-size: rem(16);

@@ -1331,21 +1331,12 @@ strong {
 font-weight: 500;
 }
 
-/*
-
-$url-img	: "/static/portal/img/";	//background: url($url-images + "폴더명/파일명.png");
-
-
-// sh
-$sh-form-height: 40px;
-$sh-bd-radius: 5px;
-
-// input
-$form-height: 40px;
-
-*/
 .red {
-color: #e24b44;
+color: #C81720 !important;
+}
+
+.fc_red {
+color: #C81720;
 }
 
 @font-face {
@@ -1499,337 +1490,409 @@ vertical-align: middle;
 
 .btn_more_circle {
 background-image: url(/static/museum/img/sprite.png);
-background-position: -168px -68px;
+background-position: -204px -136px;
 width: 36px;
 height: 36px;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 .btn_more_circle {
 background-image: url(/static/museum/img/sprite@2x.png);
-background-size: 312px 240px;
+background-size: 344px 284px;
 }
 }
 
 .ico-arrow-bk {
 background-image: url(/static/museum/img/sprite.png);
-background-position: -288px -88px;
+background-position: -264px -260px;
 width: 20px;
 height: 20px;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 .ico-arrow-bk {
 background-image: url(/static/museum/img/sprite@2x.png);
-background-size: 312px 240px;
+background-size: 344px 284px;
 }
 }
 
 .ico-clock {
 background-image: url(/static/museum/img/sprite.png);
-background-position: -100px -208px;
+background-position: 0px -260px;
 width: 24px;
 height: 24px;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 .ico-clock {
 background-image: url(/static/museum/img/sprite@2x.png);
-background-size: 312px 240px;
+background-size: 344px 284px;
 }
 }
 
 .ico-close {
-background-image: url(/static/museum/img/sprite.png);
-background-position: 0px -84px;
-width: 48px;
-height: 48px;
-}
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-.ico-close {
-background-image: url(/static/museum/img/sprite@2x.png);
-background-size: 312px 240px;
-}
-}
-
-.ico-facebook {
-background-image: url(/static/museum/img/sprite.png);
-background-position: 0px -152px;
-width: 36px;
-height: 36px;
-}
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-.ico-facebook {
-background-image: url(/static/museum/img/sprite@2x.png);
-background-size: 312px 240px;
-}
-}
-
-.ico-file {
-background-image: url(/static/museum/img/sprite.png);
-background-position: -288px -128px;
-width: 20px;
-height: 20px;
-}
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-.ico-file {
-background-image: url(/static/museum/img/sprite@2x.png);
-background-size: 312px 240px;
-}
-}
-
-.ico-info {
-background-image: url(/static/museum/img/sprite.png);
-background-position: -288px -168px;
-width: 20px;
-height: 20px;
-}
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-.ico-info {
-background-image: url(/static/museum/img/sprite@2x.png);
-background-size: 312px 240px;
-}
-}
-
-.ico-insta {
-background-image: url(/static/museum/img/sprite.png);
-background-position: -56px -152px;
-width: 36px;
-height: 36px;
-}
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-.ico-insta {
-background-image: url(/static/museum/img/sprite@2x.png);
-background-size: 312px 240px;
-}
-}
-
-.ico-main-left {
 background-image: url(/static/museum/img/sprite.png);
 background-position: 0px 0px;
-width: 64px;
-height: 64px;
+width: 48px;
+height: 48px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+.ico-close {
+background-image: url(/static/museum/img/sprite@2x.png);
+background-size: 344px 284px;
+}
+}
+
+.ico-cont-left-w {
+background-image: url(/static/museum/img/sprite.png);
+background-position: -68px 0px;
+width: 48px;
+height: 48px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+.ico-cont-left-w {
+background-image: url(/static/museum/img/sprite@2x.png);
+background-size: 344px 284px;
+}
+}
+
+.ico-cont-left {
+background-image: url(/static/museum/img/sprite.png);
+background-position: 0px -68px;
+width: 48px;
+height: 48px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+.ico-cont-left {
+background-image: url(/static/museum/img/sprite@2x.png);
+background-size: 344px 284px;
+}
+}
+
+.ico-cont-right-w {
+background-image: url(/static/museum/img/sprite.png);
+background-position: -68px -68px;
+width: 48px;
+height: 48px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+.ico-cont-right-w {
+background-image: url(/static/museum/img/sprite@2x.png);
+background-size: 344px 284px;
+}
+}
+
+.ico-cont-right {
+background-image: url(/static/museum/img/sprite.png);
+background-position: -136px 0px;
+width: 48px;
+height: 48px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+.ico-cont-right {
+background-image: url(/static/museum/img/sprite@2x.png);
+background-size: 344px 284px;
+}
+}
+
+.ico-facebook {
+background-image: url(/static/museum/img/sprite.png);
+background-position: 0px -204px;
+width: 36px;
+height: 36px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+.ico-facebook {
+background-image: url(/static/museum/img/sprite@2x.png);
+background-size: 344px 284px;
+}
+}
+
+.ico-file {
+background-image: url(/static/museum/img/sprite.png);
+background-position: -324px 0px;
+width: 20px;
+height: 20px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+.ico-file {
+background-image: url(/static/museum/img/sprite@2x.png);
+background-size: 344px 284px;
+}
+}
+
+.ico-info {
+background-image: url(/static/museum/img/sprite.png);
+background-position: -324px -40px;
+width: 20px;
+height: 20px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+.ico-info {
+background-image: url(/static/museum/img/sprite@2x.png);
+background-size: 344px 284px;
+}
+}
+
+.ico-insta {
+background-image: url(/static/museum/img/sprite.png);
+background-position: -56px -204px;
+width: 36px;
+height: 36px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+.ico-insta {
+background-image: url(/static/museum/img/sprite@2x.png);
+background-size: 344px 284px;
+}
+}
+
+.ico-main-left-w {
+background-image: url(/static/museum/img/sprite.png);
+background-position: -136px -68px;
+width: 48px;
+height: 48px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+.ico-main-left-w {
+background-image: url(/static/museum/img/sprite@2x.png);
+background-size: 344px 284px;
+}
+}
+
+.ico-main-left {
+background-image: url(/static/museum/img/sprite.png);
+background-position: 0px -136px;
+width: 48px;
+height: 48px;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 .ico-main-left {
 background-image: url(/static/museum/img/sprite@2x.png);
-background-size: 312px 240px;
+background-size: 344px 284px;
 }
 }
 
 .ico-main-menu1 {
 background-image: url(/static/museum/img/sprite.png);
-background-position: -236px 0px;
+background-position: -272px 0px;
 width: 32px;
 height: 32px;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 .ico-main-menu1 {
 background-image: url(/static/museum/img/sprite@2x.png);
-background-size: 312px 240px;
+background-size: 344px 284px;
 }
 }
 
 .ico-main-menu2 {
 background-image: url(/static/museum/img/sprite.png);
-background-position: -236px -52px;
+background-position: -272px -52px;
 width: 32px;
 height: 32px;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 .ico-main-menu2 {
 background-image: url(/static/museum/img/sprite@2x.png);
-background-size: 312px 240px;
+background-size: 344px 284px;
 }
 }
 
 .ico-main-menu3 {
 background-image: url(/static/museum/img/sprite.png);
-background-position: -236px -104px;
+background-position: -272px -104px;
 width: 32px;
 height: 32px;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 .ico-main-menu3 {
 background-image: url(/static/museum/img/sprite@2x.png);
-background-size: 312px 240px;
+background-size: 344px 284px;
 }
 }
 
 .ico-main-menu4 {
 background-image: url(/static/museum/img/sprite.png);
-background-position: -236px -156px;
+background-position: -272px -156px;
 width: 32px;
 height: 32px;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 .ico-main-menu4 {
 background-image: url(/static/museum/img/sprite@2x.png);
-background-size: 312px 240px;
+background-size: 344px 284px;
 }
 }
 
 .ico-main-menu5 {
 background-image: url(/static/museum/img/sprite.png);
-background-position: 0px -208px;
+background-position: -272px -208px;
 width: 32px;
 height: 32px;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 .ico-main-menu5 {
 background-image: url(/static/museum/img/sprite@2x.png);
-background-size: 312px 240px;
+background-size: 344px 284px;
+}
+}
+
+.ico-main-right-w {
+background-image: url(/static/museum/img/sprite.png);
+background-position: -68px -136px;
+width: 48px;
+height: 48px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+.ico-main-right-w {
+background-image: url(/static/museum/img/sprite@2x.png);
+background-size: 344px 284px;
 }
 }
 
 .ico-main-right {
 background-image: url(/static/museum/img/sprite.png);
-background-position: -84px 0px;
-width: 64px;
-height: 64px;
+background-position: -136px -136px;
+width: 48px;
+height: 48px;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 .ico-main-right {
 background-image: url(/static/museum/img/sprite@2x.png);
-background-size: 312px 240px;
+background-size: 344px 284px;
 }
 }
 
 .ico-map {
 background-image: url(/static/museum/img/sprite.png);
-background-position: -144px -208px;
+background-position: -44px -260px;
 width: 24px;
 height: 24px;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 .ico-map {
 background-image: url(/static/museum/img/sprite@2x.png);
-background-size: 312px 240px;
+background-size: 344px 284px;
 }
 }
 
 .ico-overview {
 background-image: url(/static/museum/img/sprite.png);
-background-position: -68px -84px;
+background-position: -204px 0px;
 width: 48px;
 height: 48px;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 .ico-overview {
 background-image: url(/static/museum/img/sprite@2x.png);
-background-size: 312px 240px;
+background-size: 344px 284px;
 }
 }
 
 .ico-relate {
 background-image: url(/static/museum/img/sprite.png);
-background-position: -188px -208px;
+background-position: -88px -260px;
 width: 24px;
 height: 24px;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 .ico-relate {
 background-image: url(/static/museum/img/sprite@2x.png);
-background-size: 312px 240px;
+background-size: 344px 284px;
 }
 }
 
 .ico-relateC {
 background-image: url(/static/museum/img/sprite.png);
-background-position: -232px -208px;
+background-position: -132px -260px;
 width: 24px;
 height: 24px;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 .ico-relateC {
 background-image: url(/static/museum/img/sprite@2x.png);
-background-size: 312px 240px;
+background-size: 344px 284px;
 }
 }
 
 .ico-relateH {
 background-image: url(/static/museum/img/sprite.png);
-background-position: -288px 0px;
+background-position: -176px -260px;
 width: 24px;
 height: 24px;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 .ico-relateH {
 background-image: url(/static/museum/img/sprite@2x.png);
-background-size: 312px 240px;
+background-size: 344px 284px;
 }
 }
 
 .ico-relateM {
 background-image: url(/static/museum/img/sprite.png);
-background-position: -288px -44px;
+background-position: -220px -260px;
 width: 24px;
 height: 24px;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 .ico-relateM {
 background-image: url(/static/museum/img/sprite@2x.png);
-background-size: 312px 240px;
+background-size: 344px 284px;
 }
 }
 
 .ico-srchW {
 background-image: url(/static/museum/img/sprite.png);
-background-position: -52px -208px;
+background-position: -224px -204px;
 width: 28px;
 height: 28px;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 .ico-srchW {
 background-image: url(/static/museum/img/sprite@2x.png);
-background-size: 312px 240px;
+background-size: 344px 284px;
 }
 }
 
 .ico-top {
 background-image: url(/static/museum/img/sprite.png);
-background-position: -168px 0px;
+background-position: -204px -68px;
 width: 48px;
 height: 48px;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 .ico-top {
 background-image: url(/static/museum/img/sprite@2x.png);
-background-size: 312px 240px;
+background-size: 344px 284px;
 }
 }
 
 .ico-x {
 background-image: url(/static/museum/img/sprite.png);
-background-position: -112px -152px;
+background-position: -112px -204px;
 width: 36px;
 height: 36px;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 .ico-x {
 background-image: url(/static/museum/img/sprite@2x.png);
-background-size: 312px 240px;
+background-size: 344px 284px;
 }
 }
 
 .ico-youtube {
 background-image: url(/static/museum/img/sprite.png);
-background-position: -168px -152px;
+background-position: -168px -204px;
 width: 36px;
 height: 36px;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 .ico-youtube {
 background-image: url(/static/museum/img/sprite@2x.png);
-background-size: 312px 240px;
+background-size: 344px 284px;
 }
 }
 
 #wrap {
 position: relative;
-overflow: hidden;
-}
-@media (min-width: 1200px) {
-#wrap {
-padding-top: 114px;
-}
 }
 
 .container {
@@ -1996,11 +2059,104 @@ margin: 0 6px;
 }
 }
 
+/* 추가된 내용, hym */
+#header {
+position: relative;
+background: #131547;
+-webkit-backdrop-filter: blur(4px);
+        backdrop-filter: blur(4px);
+}
+@media (min-width: 1200px) {
+#header .globalHeader ul {
+border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+#header .globalHeader ul li a {
+color: #fff;
+}
+}
+
+#header.family .logo > a {
+display: inline-flex;
+width: auto;
+align-items: center;
+background: transparent;
+gap: 0 32px;
+}
+@media (max-width: 749px) {
+#header.family .logo > a {
+gap: 0 24px;
+}
+}
+#header.family .logo-portal {
+display: inline-block;
+width: 128px;
+height: 41px;
+background-image: url("/static/museum/img/common/logo-portal.png");
+background-repeat: no-repeat;
+background-size: auto 100%;
+background-size: cover;
+}
+@media (-webkit-min-device-pixel-ratio: 2) {
+#header.family .logo-portal {
+background-image: url("/static/museum/img/common/logo-portal@2x.png");
+}
+}
+@media (max-width: 749px) {
+#header.family .logo-portal {
+width: 110px;
+height: 36px;
+}
+}
+#header.family .logo-museum {
+display: inline-block;
+position: relative;
+width: 83px;
+height: 37px;
+padding-left: 24px;
+background-image: url("/static/museum/img/common/logo-museum.png");
+background-repeat: no-repeat;
+background-size: auto 100%;
+background-size: contain;
+background-position: center center;
+}
+@media (-webkit-min-device-pixel-ratio: 2) {
+#header.family .logo-museum {
+background-image: url("/static/museum/img/common/logo-museum@2x.png");
+}
+}
+@media (max-width: 749px) {
+#header.family .logo-museum {
+width: 72px;
+height: 32px;
+}
+}
+#header.family .logo-museum::before {
+content: "";
+position: absolute;
+display: inline-block;
+left: -16px;
+width: 1px;
+height: 38px;
+background: rgba(255, 255, 255, 0.2);
+}
+@media (max-width: 749px) {
+#header.family .logo-museum::before {
+left: -12px;
+height: 32px;
+}
+}
+
+@media (min-width: 1200px) {
+.gnb > ul > li > a {
+color: #fff;
+}
+}
+
 .hgroup {
 position: relative;
 display: flex;
 justify-content: space-between;
-margin: 50px 0 0;
+margin: 50px 0 30px;
 border-bottom: 2px solid #222;
 padding-bottom: 30px;
 }
@@ -2172,14 +2328,10 @@ flex-direction: column;
 }
 }
 @media (min-width: 1200px) {
-#main-container .lnb-nav {
-padding-top: 30px;
-}
 #main-container .lnb-nav + .content,
 #main-container .sh-db + .content {
 float: right;
-border-left: 1px solid #d9d9d9;
-padding-top: 30px;
+border-left: 1px solid #E5E5E5;
 padding-left: 36px;
 }
 #main-container .lnb-nav + .content {
@@ -2485,12 +2637,12 @@ margin-right: 5px;
 margin-bottom: 2px;
 }
 .admin-set .satisfact button:focus {
-outline: dashed 1px #000;
+outline: dashed 1px #1A1A1A;
 outline-offset: 2px;
 }
 .admin-set .info {
 margin-top: 10px;
-color: #000;
+color: #1A1A1A;
 }
 .admin-set .info dl {
 display: flex;
@@ -2516,7 +2668,7 @@ display: inline-block;
 vertical-align: middle;
 width: 1px;
 height: 14px;
-background-color: #000;
+background-color: #1A1A1A;
 margin: 0 14px;
 }
 .admin-set .info dl dd:last-child {
@@ -2565,7 +2717,7 @@ background-size: 19px 20px;
 margin-bottom: 10px;
 }
 .my_memo .top h2 {
-color: #000;
+color: #1A1A1A;
 font-size: 0.875rem !important;
 font-weight: 400;
 display: block;
@@ -2719,7 +2871,7 @@ color: #808080;
 font-size: 0.875rem;
 }
 .my_memo .swiper .ctrl .swiper-pagination-current {
-color: #000;
+color: #1A1A1A;
 }
 .my_memo .swiper .b-close {
 position: absolute;
@@ -2791,7 +2943,7 @@ margin: 30px -10px 0;
 }
 }
 .reference-data dl dt {
-color: #000;
+color: #1A1A1A;
 font-size: 1.125rem;
 font-weight: 500;
 margin-bottom: 6px;
@@ -2873,7 +3025,7 @@ padding: 3px 5px;
 }
 .reference-data dl dd a {
 display: block;
-color: #000;
+color: #1A1A1A;
 background-color: #fff;
 border-radius: 8px;
 padding: 15px 15px;
@@ -2939,7 +3091,7 @@ padding-top: 30px;
 border-top: 1px solid #DCE2F1;
 }
 .reference-news dl dt {
-color: #000;
+color: #1A1A1A;
 font-size: 1.125rem;
 font-weight: 500;
 margin-bottom: 6px;
@@ -3021,7 +3173,7 @@ display: block;
 display: block;
 }
 .reference-news dl dd ul li a span.t1 {
-color: #000;
+color: #1A1A1A;
 margin-bottom: 8px;
 }
 .reference-news dl dd ul li a span.t2 {
@@ -3058,7 +3210,7 @@ margin-top: 25px;
 padding-top: 30px;
 }
 .reference-media dl dt {
-color: #000;
+color: #1A1A1A;
 font-size: 1.125rem;
 font-weight: 500;
 margin-bottom: 6px;
@@ -3179,7 +3331,7 @@ color: #3B63C4;
 font-size: 0.875rem;
 }
 .reference-media dl dd ul li a span.tit {
-color: #000;
+color: #1A1A1A;
 overflow: hidden;
 text-overflow: ellipsis;
 display: block;
@@ -3207,110 +3359,22 @@ position: absolute;
 top: 0;
 }
 
-.content {
-padding-top: 30px;
+.content p em {
+font-weight: 600;
 }
-.content p {
-margin-bottom: 12px;
+.content p + h3 {
+margin-top: 60px;
 }
 .content + .reference {
 margin-top: 60px;
 }
 
-/* 추가된 내용, hym */
-#wrap {
-padding-top: 0;
-}
-
-#header {
-position: relative;
-background: #131547;
--webkit-backdrop-filter: blur(4px);
-        backdrop-filter: blur(4px);
-}
-@media (min-width: 1200px) {
-#header .globalHeader ul {
-border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-#header .globalHeader ul li a {
-color: #fff;
-}
-}
-
-#header.family .logo > a {
-display: inline-flex;
-width: auto;
-align-items: center;
-background: transparent;
-gap: 0 32px;
+.content-row {
+display: flex;
 }
 @media (max-width: 749px) {
-#header.family .logo > a {
-gap: 0 24px;
-}
-}
-#header.family .logo-portal {
-display: inline-block;
-width: 128px;
-height: 41px;
-background-image: url("/static/museum/img/common/logo-portal.png");
-background-repeat: no-repeat;
-background-size: auto 100%;
-background-size: cover;
-}
-@media (-webkit-min-device-pixel-ratio: 2) {
-#header.family .logo-portal {
-background-image: url("/static/museum/img/common/logo-portal@2x.png");
-}
-}
-@media (max-width: 749px) {
-#header.family .logo-portal {
-width: 110px;
-height: 36px;
-}
-}
-#header.family .logo-museum {
-display: inline-block;
-position: relative;
-width: 83px;
-height: 37px;
-padding-left: 24px;
-background-image: url("/static/museum/img/common/logo-museum.png");
-background-repeat: no-repeat;
-background-size: auto 100%;
-background-size: contain;
-background-position: center center;
-}
-@media (-webkit-min-device-pixel-ratio: 2) {
-#header.family .logo-museum {
-background-image: url("/static/museum/img/common/logo-museum@2x.png");
-}
-}
-@media (max-width: 749px) {
-#header.family .logo-museum {
-width: 72px;
-height: 32px;
-}
-}
-#header.family .logo-museum::before {
-content: "";
-position: absolute;
-display: inline-block;
-left: -16px;
-width: 1px;
-height: 38px;
-background: rgba(255, 255, 255, 0.2);
-}
-@media (max-width: 749px) {
-#header.family .logo-museum::before {
-left: -12px;
-height: 32px;
-}
-}
-
-@media (min-width: 1200px) {
-.gnb > ul > li > a {
-color: #fff;
+.content-row {
+display: block;
 }
 }
 
@@ -3459,9 +3523,6 @@ text-align: center;
 }
 .gnb > ul .depth2 .e a {
 display: block;
-}
-.gnb > ul .depth2 .e a + a {
-margin-top: 20px;
 }
 .gnb > ul .depth3 {
 padding-top: 5px;
@@ -4011,7 +4072,7 @@ font-size: 0.875rem;
 
 body {
 overflow-x: hidden;
-color: #1A1A1A;
+color: #4D4D4D;
 line-height: 1.5;
 font-family: "Spoqa Han Sans Neo", "AppleGothic", "맑은 고딕", "돋움", "dotum", Helvetica, Arial, sans-serif;
 letter-spacing: -0.015rem;
