@@ -202,6 +202,21 @@
 			}
 		}
 	}
+	.depart {
+		&::before {
+
+			content: "";
+			display: inline-block;
+			vertical-align: middle;
+			width: 20px;
+			height: 20px;
+			background: url(/static/portal/img/ico/ico-depart.png) no-repeat;
+			margin-right: 5px;
+			@include breakpoint($sm){
+				background-size: auto 14px;
+			}
+		}
+	}
 }
 .bd-view {
 	position: relative;
@@ -218,6 +233,10 @@
 	}
 	.dataInfoSet {
 		@include dataInfoSet();
+		align-items: flex-end;
+		.type2 {
+			margin-top: -21px;
+		}
 	}	
 	.down {		
 		border-top: 2px solid #000;

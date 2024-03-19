@@ -7,7 +7,7 @@
 	<link type="text/css" rel="stylesheet" href="/static/portal/css/sub.css">
 	<script src="/static/jslibrary/jquery-3.5.1.min.js"></script>
 	<script src="/static/jslibrary/jquery.cookie.js"></script>
-	<script src="/static/portal/js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="/static/jslibrary/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js"></script>
 	<link rel="stylesheet" href="/static/jslibrary/swiper@8/swiper-bundle.min.css">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta property="og:type"			content="website">
@@ -833,7 +833,26 @@
 					<a href="">보도자료</a>
 				</li>
 			</ul>
-			<div class="top-page-toolbar"></div>
+			<div class="top-page-toolbar">
+				<div class="page-toolbar">
+					<button type="button" class="sns-toggle" aria-label="SNS 공유"></button>
+					<div class="sns-wrap">
+						<div class="sns-wrap__set">
+							<button type="button" data-type="close" class="close" aria-label="SNS 공유 닫기"></button>
+							<button type="button" data-type="youtube" class="ico-youtube" aria-label="유튜브 공유 새창열림"></button>
+							<button type="button" data-type="instagram" class="ico-instagram" aria-label="인스타그램 공유 새창열림"></button>
+							<button type="button" data-type="facebook" class="ico-facebook" aria-label="페이스북 공유 새창열림"></button>
+							<button type="button" data-type="twitter" class="ico-twitter" aria-label="트위터 공유 새창열림"></button>
+						</div>
+					</div>
+					<a href="/static/view/forPrint.html" data-size="1200, 700, yes" target="_blank" title="새창열림" class="page-print b-pop">
+						<span class="sr-only">프린트</span>
+					</a>
+					<a href="/static/guide/portal/popup/rss_popup.html" data-size="800, 500, yes" class="page-rss b-pop" target="_blank" title="새창열림">
+						<span class="sr-only">rss 한국은행</span>
+					</a>
+				</div>
+			</div>
 		</nav>
 	</div>
 	<!-- //navigation -->
@@ -842,99 +861,61 @@
 	<div class="container" id="content">
 		<div class="hgroup">
 			<h1>뉴스 및 자료</h1>
-			<div class="page-toolbar">
-				<button type="button" class="sns-toggle" aria-label="SNS 공유"></button>
-				<div class="sns-wrap">
-					<div class="sns-wrap__set">
-						<button type="button" data-type="close" class="close" aria-label="SNS 공유 닫기"></button>
-						<button type="button" data-type="youtube" class="ico-youtube" aria-label="유튜브 공유 새창열림"></button>
-						<button type="button" data-type="instagram" class="ico-instagram" aria-label="인스타그램 공유 새창열림"></button>
-						<button type="button" data-type="facebook" class="ico-facebook" aria-label="페이스북 공유 새창열림"></button>
-						<button type="button" data-type="twitter" class="ico-twitter" aria-label="트위터 공유 새창열림"></button>
-					</div>
-				</div>
-				<a href="/static/view/forPrint.html" data-size="1200, 700, yes" target="_blank" title="새창열림" class="page-print b-pop">
-					<span class="sr-only">프린트</span>
-				</a>
-				<a href="/static/guide/portal/popup/rss_popup.html" data-size="800, 500, yes" class="page-rss b-pop" target="_blank" title="새창열림">
-					<span class="sr-only">rss 한국은행</span>
-				</a>
-			</div>
+			
 		</div>
 		<main id="main-container">
 
 
 
-<div class="lnb-nav">
-	<h1>목차</h1>	
-	<ul>
-		<li class="on">
-			<a href="">금융안정 개요</a>
-			<ul>
-				<li class="on">
-					<a href="">정의</a>
-				</li>
-				<li>
-					<a href="">금융시스템 불안의 요인</a>
-				</li>
-			</ul>
-		</li>
-	</ul>
-</div>
+<p>--</p> 
 
-
-<div class="content">
-
-	<h3 class="first">노동조합 관련 현황</h3>
-	<div class="table th_tac table-view"> 
-		<table>
-			<caption>노동조합 관련 현황</caption>
-			<colgroup>
-				<col style="width: 15%;">
-				<col style="width: 15%;">
-				<col>
-			</colgroup>
-			<tbody>		
-				<tr>
-					<th colspan="2" scope="row">노조가입범위</th>
-					<td>		
-						<ul>
-							<li>한국은행 직원은 자유롭게 노동조합에 가입할 수 있음</li>
-							<li>다만, 1급·G1~2급·G2&nbsp;직원 및 팀·반장 이상 직원과 본부의 인사·급여·노무·비서·감사·경영전략·조직관리·예산 담당직원은 노동조합 가입 대상에서 제외</li>
-						</ul>
-					</td>
-				</tr>
-				<tr>
-					<th colspan="2" scope="row">노조가입률</th>
-					<td>57.3% (2023년말 기준)</td>
-				</tr>
-				<tr>
-					<th colspan="2" scope="row">전임자수</th>
-					<td>4명</td>
-				</tr>
-				<tr>
-					<th colspan="2" scope="row">상급 노조</th>
-					<td>미가입</td>
-				</tr>
-				<tr>
-					<th colspan="2" scope="row">근로시간면제제도<br> 도입여부</th>
-					<td>도입</td>
-				</tr>
-				<tr>
-					<th rowspan="2" scope="row">근로시간<br>
-						면제한도</th>
-					<th scope="row">법정한도</th>
-					<td>10,000시간 이내</td>
-				</tr>
-				<tr>
-					<th scope="row">체결내용</th>
-					<td>8,000시간</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-
-
+<h3 class="first">노동조합 관련 현황</h3>
+<div class="table th_tac table-view"> 
+	<table>
+		<caption>노동조합 관련 현황</caption>
+		<colgroup>
+			<col style="width: 15%;">
+			<col style="width: 15%;">
+			<col>
+		</colgroup>
+		<tbody>		
+			<tr>
+				<th colspan="2" scope="row">노조가입범위</th>
+				<td>		
+					<ul>
+						<li>한국은행 직원은 자유롭게 노동조합에 가입할 수 있음</li>
+						<li>다만, 1급·G1~2급·G2&nbsp;직원 및 팀·반장 이상 직원과 본부의 인사·급여·노무·비서·감사·경영전략·조직관리·예산 담당직원은 노동조합 가입 대상에서 제외</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<th colspan="2" scope="row">노조가입률</th>
+				<td>57.3% (2023년말 기준)</td>
+			</tr>
+			<tr>
+				<th colspan="2" scope="row">전임자수</th>
+				<td>4명</td>
+			</tr>
+			<tr>
+				<th colspan="2" scope="row">상급 노조</th>
+				<td>미가입</td>
+			</tr>
+			<tr>
+				<th colspan="2" scope="row">근로시간면제제도<br> 도입여부</th>
+				<td>도입</td>
+			</tr>
+			<tr>
+				<th rowspan="2" scope="row">근로시간<br>
+					면제한도</th>
+				<th scope="row">법정한도</th>
+				<td>10,000시간 이내</td>
+			</tr>
+			<tr>
+				<th scope="row">체결내용</th>
+				<td>8,000시간</td>
+			</tr>
+		</tbody>
+	</table>
 </div>
 
 <!-- 만족도 -->

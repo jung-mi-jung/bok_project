@@ -1425,11 +1425,14 @@ font-size: 2.25rem;
 font-weight: 300;
 margin-bottom: 20px;
 }
+#main-container h2 + h3 {
+margin-top: 22px;
+}
 #main-container h3 {
 color: #131547;
 font-size: 1.75rem;
 font-weight: 500;
-margin: 15px 0 10px;
+margin: 40px 0 16px;
 }
 #main-container h3::before {
 content: "";
@@ -1474,12 +1477,11 @@ margin-bottom: 5px;
 ul.bu > li {
 clear: both;
 position: relative;
-padding-left: 10px;
-font-size: 1.125rem;
+padding-left: 13px;
 }
 ul.bu > li::before {
 position: absolute;
-top: 12px;
+top: 10px;
 left: 0;
 width: 4px;
 height: 4px;
@@ -1505,6 +1507,9 @@ width: 4px;
 height: 1px;
 background-color: #757575;
 content: "";
+}
+ul.bu.b > li {
+font-weight: 500;
 }
 
 .bu-dash::before {
@@ -3638,7 +3643,7 @@ display: inline;
 }
 
 a {
-color: #222;
+color: #1A1A1A;
 }
 
 html {

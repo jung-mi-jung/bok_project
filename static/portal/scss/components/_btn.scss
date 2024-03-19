@@ -87,6 +87,12 @@ $btn: "[class^=b-]";
 			margin-left: 4px;
 		}
 	}
+	&.b-go {
+		&::after {
+			@include font-ico-outline('\e315');
+			margin-left: 4px;
+		}
+	}
 
 }
 
@@ -105,7 +111,7 @@ li {
 
 .btnSet {
 	float: none;
-	text-align: center !important;
+	//text-align: center !important;
 	margin-top: 40px;
 	[class^=b-] {
 		font-size: rem(18);

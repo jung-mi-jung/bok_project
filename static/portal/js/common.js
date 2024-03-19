@@ -616,6 +616,9 @@ $(function() {
 		}
 	})
 
+	//게시판 뷰 레이아웃
+	$(".dataInfoSet .user + dt + .depart").parent().addClass("type2");
+
 	//faq
 	var article = $('.faqList dt>button');
 	article.each(function(index, el) {

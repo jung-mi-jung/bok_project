@@ -1,24 +1,15 @@
 <div class="content">
 	
 	<div class="sh">
-		<div class="c">
+		<div class="c short">
 			<div class="sh-input">
-				<div class="select-set select1">
-					<button type="button" class="btn_select" title="구분 선택">부서</button>
-					<ul>
-						<li>
-							<button type="button" class="ck1">부서</button>
-						</li>
-						<li>
-							<button type="button" class="ck2">성명</button>
-						</li>
-						<li>
-							<button type="button" class="ck3">담당업무</button>
-						</li>
-						<li>
-							<button type="button" class="ck4">전화번호</button>
-						</li>
-					</ul>
+				<div class="select-set">
+					<select name="" id="" title="구분 선택">
+						<option value="1">부서</option>
+						<option value="2">성명</option>
+						<option value="3">담당업무</option>
+						<option value="4">전화번호</option>
+					</select>
 				</div>
 				<div class="keyword-set">
 					<span class="keyword"><input type="text" title="검색어"></span>
@@ -332,79 +323,19 @@
 	</div>
 	<script>
 	$(function() {
-	
-		//$('.sh ul button').each(function(index) {
-			$(".sh button.ck2").click(function() {
-	
-				//var $x = $(".sh .keyword input");
-	
-	
-	
-				// var chk = $(".sh .ck2").is(".active");
-				// //var abc = $(".sh .btn_select").text("성명")
-	
-				// if(chk==true){
-				// 	$(".sh .btn_select").css("border", "1px solid red")
-				// }
-	
-				if($(".sh button.ck2").hasClass("active")){
-				//if(!$('.sh button.ck2.active')){
-					$(".sh .keyword input").attr("placeholder", "성명은 팀·반장 이상 직원만 검색됩니다.");
-					$(".sh .keyword input").attr("title", "성명은 팀·반장 이상 직원만 검색됩니다.");
-					return false;
-				}
-				else {
-				    $(".sh .keyword input").removeAttr("placeholder");
-					$(".sh .keyword input").removeAttr("title");
-				}
-			});
-		//});
-	
-	
-	
-	/*
-		$('.sh button').click(function () {
-			$(this).toggleClass('active');
-	
-			var chk = $(".btn_select").text("성명");
-			if(chk==true){
+		//성명 선택시 input
+		$(".select-set select").on("change", function(){
+			var result = $(".select-set option:selected").val()
+			if(result == 2){
+				//성명 선택시
 				$(".sh .keyword input").attr("placeholder", "성명은 팀·반장 이상 직원만 검색됩니다.");
 				$(".sh .keyword input").attr("title", "성명은 팀·반장 이상 직원만 검색됩니다.");
 			}else{
-				 $(".sh .keyword input").removeAttr("placeholder");
+				//성명 선택 아닐 경우
+				$(".sh .keyword input").removeAttr("placeholder");
 				$(".sh .keyword input").removeAttr("title");
 			}
 		});
-	
-	
-	
-			//$('.sh button.ch2' + $(this).find('option:selected').attr('id')).show();
-		});
-		if($('.sh button.ck2').hasClass('active')){
-			$(".sh .keyword input").attr("placeholder", "성명은 팀·반장 이상 직원만 검색됩니다.");
-			$(".sh .keyword input").attr("title", "성명은 팀·반장 이상 직원만 검색됩니다.");
-		} else {
-		     $(".sh .keyword input").removeAttr("placeholder");
-			$(".sh .keyword input").removeAttr("title");
-		}
-	*/
-	
-	
-	/*
-		$('.sh .ck2').each(function(index) {
-			$('.sh .ck2').click(function() {
-				$(this).addClass('active');
-				if($(this).hasClass('active')){
-					$(".sh .keyword input").attr("placeholder", "성명은 팀·반장 이상 직원만 검색됩니다.");
-					$(".sh .keyword input").attr("title", "성명은 팀·반장 이상 직원만 검색됩니다.");
-					return false;
-		        } else {
-			        $(".sh .keyword input").removeAttr("placeholder");
-					$(".sh .keyword input").removeAttr("title");
-					return false;
-		        }
-			});
-		});*/
 	});
 	</script>
 	
@@ -476,7 +407,7 @@
 	
 	
 	<!-- 조회 내역이 없을 경우 -->
-	<div class="ico-no-data pad">
+	<div class="i-no-data pad">
 		<p>조회  내역이 없습니다.</p>
 	</div>
 	<!-- //조회  내역이 없을 경우 -->

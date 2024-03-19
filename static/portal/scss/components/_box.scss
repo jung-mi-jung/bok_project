@@ -1,8 +1,20 @@
+.c-box {
+	color: #4D4D4D;
+	font-size: 14px;
+	padding: 12px 5px;
+	background-color: #FAFAFA;
+	margin: 8px 0;
+}
 //box
-.box{border:1px solid #ddd;float:left;width:100%;
-	&.boxpd{padding:30px;
-		.badge{display: inline-block; line-height: 30px;width: 30px;text-align: center; background-color:#4d6f9b; padding: 0;
-			&.bg_gray{background-color: #7f7f7f;}
+.box{
+	border:1px solid #ddd;float:left;width:100%;
+	&.boxpd{
+		background-color: #FAFAFA;
+		.badge{
+			display: inline-block; line-height: 30px;width: 30px;text-align: center; background-color:#4d6f9b; padding: 0;
+			&.bg_gray{
+				background-color: #7f7f7f;
+			}
 		 }
 	}
 }
@@ -18,6 +30,9 @@
 	position:relative;
 	margin-bottom:20px; 
 	clear:both; 
+	& + h2 {
+		margin-top: 50px;
+	}
 }
 .boxTopArea{
 	p{margin:0}

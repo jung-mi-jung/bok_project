@@ -1,68 +1,105 @@
 <div class="sh">
-	<div class="c">
+	<div class="c w">
 		<div class="sh-input">
-			<div class="select-set select1">
-				<button type="button" class="btn_select" title="구분 선택">전체</button>
-				<ul>
-					<li>
-						<button type="button">전체</button>
-					</li>
-					<li>
-						<button type="button">제목</button>
-					</li>
-					<li>
-						<button type="button">내용</button>
-					</li>
-				</ul>
+			<div class="date-set">
+				<input id="sdate" name="sdate" class="sdate" title="검색기간 시작일" value="" type="text" autocomplete="off">
+				<span class="dash">~</span>
+				<input id="edate" name="edate" class="edate" title="검색기간 종료일" value="" type="text" autocomplete="off">
 			</div>
-			<div class="keyword-set">
-				<span class="keyword"><input type="text" title="검색어"></span>
-				<button type="button" class="search" onclick="" aria-label="검색"></button>
+			<div class="select-box">
+				<div class="select-set">
+					<select name="" id="">
+						<option value="">제목</option>
+						<option value="">내용</option>
+						<option value="">제목 + 내용</option>
+					</select>
+				</div>
+				<div class="keyword-set">
+					<span class="keyword"><input type="text" placeholder="검색어를 입력하세요" title="검색어"></span>
+					<button type="button" class="search" onclick="" aria-label="검색"></button>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
-
 
 <div class="sh-BxSet">
-	<p class="count-total">총 <strong>1590</strong>건의 게시물이 있습니다.</p>
-	<div class="sh-select">
-		<div class="select-set select1">
-			<button type="button" class="btn_select" title="개월 선택">개월</button>
-			<ul>
-				<li>
-					<button type="button">3개월</button>
-				</li>
-				<li>
-					<button type="button">6개월</button>
-				</li>
-			</ul>
-		</div>
-		<div class="select-set select2">
-			<button type="button" class="btn_select" title="정렬순서 선택">정렬</button>
-			<ul>
-				<li>
-					<button type="button">최신순</button>
-				</li>
-			</ul>
-		</div>
-		<div class="select-set select3">
-			<button type="button" class="btn_select" title="갯수 선택">갯수</button>
-			<ul>
-				<li>
-					<button type="button">10개</button>
-				</li>
-				<li>
-					<button type="button">20개</button>
-				</li>
-			</ul>
-		</div>
-		<button type="button" class="submit" aria-label="검색"></button>
-	</div>
+	<p class="count-total">총 <strong>1590</strong>건의 게시물이 있습니다.</p>	
+</div>
+
+<div class="bdLine type2">
+	<ul>
+		<li>
+			<div class="row">
+				<span class="col m10 s10 x9 ctBx">
+					<a href="" class="secretSet">
+						<span class="title">
+							<span class="titlesub">글로벌 외환시장 행동규범 개정본</span>	
+						</span>
+					</a>
+				</span>
+				<div class="col m2 s2 x3 fileLink">
+					<div class="fileGroupSet">
+						<a href="javascript:void(0);" title="첨부파일 레이어창열기">
+							다운로드
+							<!-- <span class="icon icon-etc"><span class="hidden">첨부파일 있습니다</span></span> -->
+						</a>
+						<div class="fileGoupBox">
+							<h3>다운로드할 파일을 선택하세요.</h3>
+							<ul>
+								<li>
+									<a href="" title="글로벌 외환시장 행동규범 개정본(영문).pdf">
+										<i class="icon-down"></i> 글로벌 외환시장 행동규범 개정본(영문).pdf
+									</a>								
+								</li>								
+								<li>
+									<a href="" title="글로벌 외환시장 행동규범 개정본(번역).pdf">
+										<i class="icon-down"></i> 글로벌 외환시장 행동규범 개정본(번역).pdf
+									</a>
+								</li>
+							</ul>
+							<button class="closeLayer"><span class="hidden">레이어창 닫기</span></button>
+						</div>
+					</div>					
+				</div>
+				<div class="row">
+					<div class="col s12 dataInfo">
+						<span class="date"><span class="hidden">등록일</span>2022.05.10</span>
+						<span class="hits"><span class="hidden">조회수</span>1027</span>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="row">
+				<span class="col m10 s10 x9 ctBx">
+					<a href="" class="secretSet">
+						<span class="title">
+							<span class="titlesub">글로벌 외환시장 행동규범 개정본</span>	
+						</span>
+					</a>
+				</span>
+				<div class="col m2 s2 x3 fileLink">
+					<a href="">
+						<span class="icon icon-pdf">
+							다운로드
+							<!-- <span class="hidden">첨부파일 있습니다</span> -->
+						</span>
+					</a>			
+				</div>
+				<div class="row">
+					<div class="col s12 dataInfo">
+						<span class="date"><span class="hidden">등록일</span>2022.05.10</span>
+						<span class="hits"><span class="hidden">조회수</span>1027</span>
+					</div>
+				</div>
+			</div>
+		</li>
+	</ul>
 </div>
 
 
-<div class="bd-line">
+<!-- <div class="bd-line">
 	<ul>
 		<li>
 			<span class="i">
@@ -71,7 +108,31 @@
 			<div class="set">
 				<span class="title">2023년 3/4분기 국제투자대조표(잠정)</span>
 				<div class="btns">
-					<a href="" class="i-download">다운로드</a>
+					<div class="fileGroupSet">
+						<a href="javascript:void(0);" title="첨부파일 레이어창열기" class="i-download">
+							다운로드
+						</a>
+						<div class="fileGoupBox">
+							<h3>다운로드할 파일을 선택하세요.</h3>
+							<ul>
+								<li>
+									<a href="" class="i-download">
+										글로벌 외환시장 행동규범 개정본(영문).pdf
+									</a>
+								</li>
+								<li>
+									<a href="" class="i-download">
+										글로벌 외환시장 행동규범 개정본(번역).pdf
+									</a>
+								</li>
+							</ul>
+							<button class="closeLayer">
+								<span class="sr-only">레이어창 닫기</span>
+							</button>
+						</div>
+					</div>
+
+
 				</div>
 			</div>
 			<span class="date">2023. 11. 22</span>
@@ -126,7 +187,7 @@
 			<span class="date">2023. 11. 22</span>
 		</li>
 	</ul>
-</div>
+</div> -->
 
 <!-- pagination -->
 <div class="paginationSet">
@@ -148,3 +209,13 @@
 	</ul>
 </div>
 <!-- //pagination -->
+
+
+
+
+
+<br><br><hr><br><br>
+
+
+
+

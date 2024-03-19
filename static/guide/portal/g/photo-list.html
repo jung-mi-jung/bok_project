@@ -135,6 +135,9 @@ $(function () {
 });
 </script>
 
+
+
+
 <div class="sh-db">
 	<div class="db-search">
 		<p class="t">총 <strong>1590</strong>건</p>
@@ -293,38 +296,48 @@ $(function () {
 <div class="content">
 	
 	<!-- 컨텐츠 -->
-	<div class="sh-select">
-		<div class="select-set select1">
-			<button type="button" class="btn_select" title="개월 선택">개월</button>
-			<ul>
-				<li>
-					<button type="button">3개월</button>
-				</li>
-				<li>
-					<button type="button">6개월</button>
-				</li>
-			</ul>
+	
+	<div class="sh">
+		<div class="c short">
+			<div class="sh-input">
+				<div class="select-set select1">
+					<select name="" id="" title="구분 선택">
+						<option value="">전체</option>
+						<option value="">제목</option>
+						<option value="">내용</option>
+					</select>
+				</div>
+				<div class="keyword-set">
+					<span class="keyword"><input type="text" title="검색어"></span>
+					<button type="button" class="search" onclick="" aria-label="검색"></button>
+				</div>
+			</div>
 		</div>
-		<div class="select-set select2">
-			<button type="button" class="btn_select" title="정렬순서 선택">정렬</button>
-			<ul>
-				<li>
-					<button type="button">최신순</button>
-				</li>
-			</ul>
+	</div>
+
+
+	<div class="sh-BxSet">
+		<p class="count-total">총 <strong>1590</strong>건의 게시물이 있습니다.</p>
+		<div class="sh-select">
+			<div class="select-set">
+				<select name="" id="" title="개월 선택">
+					<option value="">3개월</option>
+					<option value="">6개월</option>
+				</select>
+			</div>
+			<div class="select-set select2">
+				<select name="" id="" title="정렬순서 선택">
+					<option value="">최신순</option>
+				</select>
+			</div>
+			<div class="select-set select3">
+				<select name="" id="" title="갯수 선택">
+					<option value="">10개</option>
+					<option value="">20개</option>
+				</select>
+			</div>
+			<button type="button" class="submit" aria-label="검색"></button>
 		</div>
-		<div class="select-set select3">
-			<button type="button" class="btn_select" title="갯수 선택">갯수</button>
-			<ul>
-				<li>
-					<button type="button">10개</button>
-				</li>
-				<li>
-					<button type="button">20개</button>
-				</li>
-			</ul>
-		</div>
-		<button type="button" class="submit" aria-label="검색"></button>
 	</div>
 	
 	<div class="photo-list">
