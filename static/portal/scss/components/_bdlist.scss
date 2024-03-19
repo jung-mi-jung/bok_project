@@ -390,7 +390,6 @@
 			top: 50%;
 			right: 15px;
 			width: 328px;
-			z-index: 9;
 			margin-top: -11px;
 			> a {
 				float: right;
@@ -404,19 +403,22 @@
 				}
 				.fileGoupBox {
 					top: 28px;
+					z-index: 9;
 					ul {
 						> li {
 							padding: 3px 0;
 							> a {						
 								&:first-child {
 									position: relative;
-									padding-right: 30px;
-									width: calc(100% - 33px);
+									width: 100%;
 									@include ellipsis();
 									.icon-down {
 										position: absolute;
 										top: 7px;
 										right: 0;
+										&::before {
+											display: none !important;
+										}
 										&::after {
 											content: "";
 											display: inline-block;
@@ -433,7 +435,7 @@
 										}
 									}
 								}
-								&.viewerLink {
+								/*&.viewerLink {
 									width: auto;
 									&::before {
 										content: "";
@@ -457,9 +459,8 @@
 											background: url(/static/portal/img/ico/ico-viewer_on.png) no-repeat;
 										}
 									}
-								}
-							}
-								
+								}*/
+							}								
 						}
 					}
 				}

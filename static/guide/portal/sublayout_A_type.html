@@ -833,7 +833,26 @@
 					<a href="">보도자료</a>
 				</li>
 			</ul>
-			<div class="top-page-toolbar"></div>
+			<div class="top-page-toolbar">
+				<div class="page-toolbar">
+					<button type="button" class="sns-toggle" aria-label="SNS 공유"></button>
+					<div class="sns-wrap">
+						<div class="sns-wrap__set">
+							<button type="button" data-type="close" class="close" aria-label="SNS 공유 닫기"></button>
+							<button type="button" data-type="youtube" class="ico-youtube" aria-label="유튜브 공유 새창열림"></button>
+							<button type="button" data-type="instagram" class="ico-instagram" aria-label="인스타그램 공유 새창열림"></button>
+							<button type="button" data-type="facebook" class="ico-facebook" aria-label="페이스북 공유 새창열림"></button>
+							<button type="button" data-type="twitter" class="ico-twitter" aria-label="트위터 공유 새창열림"></button>
+						</div>
+					</div>
+					<a href="/static/view/forPrint.html" data-size="1200, 700, yes" target="_blank" title="새창열림" class="page-print b-pop">
+						<span class="sr-only">프린트</span>
+					</a>
+					<a href="/static/guide/portal/popup/rss_popup.html" data-size="800, 500, yes" class="page-rss b-pop" target="_blank" title="새창열림">
+						<span class="sr-only">rss 한국은행</span>
+					</a>
+				</div>
+			</div>
 		</nav>
 	</div>
 	<!-- //navigation -->
@@ -842,24 +861,7 @@
 	<div class="container" id="content">
 		<div class="hgroup">
 			<h1>뉴스 및 자료</h1>
-			<div class="page-toolbar">
-				<button type="button" class="sns-toggle" aria-label="SNS 공유"></button>
-				<div class="sns-wrap">
-					<div class="sns-wrap__set">
-						<button type="button" data-type="close" class="close" aria-label="SNS 공유 닫기"></button>
-						<button type="button" data-type="youtube" class="ico-youtube" aria-label="유튜브 공유 새창열림"></button>
-						<button type="button" data-type="instagram" class="ico-instagram" aria-label="인스타그램 공유 새창열림"></button>
-						<button type="button" data-type="facebook" class="ico-facebook" aria-label="페이스북 공유 새창열림"></button>
-						<button type="button" data-type="twitter" class="ico-twitter" aria-label="트위터 공유 새창열림"></button>
-					</div>
-				</div>
-				<a href="/static/view/forPrint.html" data-size="1200, 700, yes" target="_blank" title="새창열림" class="page-print b-pop">
-					<span class="sr-only">프린트</span>
-				</a>
-				<a href="/static/guide/portal/popup/rss_popup.html" data-size="800, 500, yes" class="page-rss b-pop" target="_blank" title="새창열림">
-					<span class="sr-only">rss 한국은행</span>
-				</a>
-			</div>
+			
 		</div>
 		<main id="main-container">
 
@@ -1247,13 +1249,11 @@ $(function () {
 			<li>
 				<span class="i">
 					<span class="t1">BOK이슈노트</span>
-					<span class="t2">통화</span>
 				</span>
 				<div class="set">
 					<span class="title">2023년 3/4분기 국제투자대조표(잠정)</span>
 					<div class="btns">
 						<a href="" class="i-download">다운로드</a>
-						<a href="" class="i-view">바로보기</a>
 					</div>
 				</div>
 				<span class="date">2023. 11. 22</span>
@@ -1261,13 +1261,11 @@ $(function () {
 			<li>
 				<span class="i">
 					<span class="t1">BOK이슈노트</span>
-					<span class="t2">금융·은행</span>
 				</span>
 				<div class="set">
 					<span class="title">이창용 한국은행 총재, 국제결제은행(BIS) 글로벌금융시스템위원회 의장으로 선임</span>
 					<div class="btns">
 						<a href="" class="i-download">다운로드</a>
-						<a href="" class="i-view">바로보기</a>
 					</div>
 				</div>
 				<span class="date">2023. 11. 22</span>
@@ -1275,13 +1273,11 @@ $(function () {
 			<li>
 				<span class="i">
 					<span class="t1">BOK이슈노트</span>
-					<span class="t2">통화</span>
 				</span>
 				<div class="set">
 					<span class="title">한국은행, 「통화금융대책반 회의」 개최</span>
 					<div class="btns">
 						<a href="" class="i-download">다운로드</a>
-						<a href="" class="i-view">바로보기</a>
 					</div>
 				</div>
 				<span class="date">2023. 11. 22</span>
@@ -1289,13 +1285,11 @@ $(function () {
 			<li>
 				<span class="i">
 					<span class="t1">BOK이슈노트</span>
-					<span class="t2">통화</span>
 				</span>
 				<div class="set">
 					<span class="title">한국은행, 대한상공회의소와 공동세미나 개최</span>
 					<div class="btns">
 						<a href="" class="i-download">다운로드</a>
-						<a href="" class="i-view">바로보기</a>
 					</div>
 				</div>
 				<span class="date">2023. 11. 22</span>
@@ -1303,13 +1297,11 @@ $(function () {
 			<li>
 				<span class="i">
 					<span class="t1">BOK이슈노트</span>
-					<span class="t2">금융·은행</span>
 				</span>
 				<div class="set">
 					<span class="title">한국은행, 대한상공회의소와 공동세미나 개최 한국은행, 대한상공회의소와 공동세미나 개최 한국은행, 대한상공회의소와 공동세미나 개최 한국은행, 대한상공회의소와 공동세미나 개최</span>
 					<div class="btns">
 						<a href="" class="i-download">다운로드</a>
-						<a href="" class="i-view">바로보기</a>
 					</div>
 				</div>
 				<span class="date">2023. 11. 22</span>

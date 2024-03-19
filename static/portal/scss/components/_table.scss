@@ -3,7 +3,6 @@ table {
 	width: 100%;
 	border-collapse: collapse;
     border-spacing: 0;
-	font-size: rem(18);
 	color: #1A1A1A;
 	p {
 		margin-bottom: 0 !important;
@@ -11,7 +10,7 @@ table {
 }
 .table {
 	clear: both;
-	border-top: 2px solid #182252;
+	
 	margin-bottom: 10px;
 	@include breakpoint($md){
 		&.pcweb {
@@ -33,29 +32,37 @@ table {
 			font-weight: 400;
 			background-color: #F2F6FA;			
 			border: 1px solid $bd-color;
-			padding: 14px 0;
-			// & + th {
-			// 	border-left: 1px solid $bd-color;
-			// }
+			padding: 12px 0;
 		}
 		tbody {
-			th {
-				color: #233B76;
-				background-color: #F2F6FA;	
+			th {		
+				color: $black;		
+				background-color: #FAFAFA;	
 			}
 		}
 		td {
-			padding: 12px 15px;
+			color: #666;
+			padding: 5px 15px;
 			min-height: 55px;
 			border: 1px solid $bd-color;
 			background-color: #fff;
 		}
 	}
 	&.type2 {
+		font-size: rem(18);
+		border-top: 2px solid #182252;
+		th {
+			padding: 14px 0;
+		}
 		tbody {
 			th {
+				padding: 14px 0;
+				color: #233B76;
 				background-color: #fff;
 			}
+		}
+		td {
+			padding: 12px 15px;
 		}
 	}
 	&.m {

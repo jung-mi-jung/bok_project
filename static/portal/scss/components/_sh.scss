@@ -516,7 +516,7 @@
 		justify-content: flex-start;
 	}
 	> * {
-		margin: 0 4px;
+		margin: 0 2px;
 	}
 	@include select-set();
 	.submit {
@@ -542,12 +542,60 @@
 	background-color: #F2F6FA;
 	padding: 45px 20px;
 	font-size: rem(18);
-	@include breakpoint($sm){
-		font-size: 12px;
+	@include breakpoint($smd){
+		font-size: 13px;
 		padding: 14px;
+	}
+	@include breakpoint($sm){
+		display: block;
+	}
+	.select-box {
+		display: flex;
+		.select-set {
+			position: relative;
+			background-color: #fff;			
+			&::after {
+				content: "";
+				display: inline-block;
+				vertical-align: middle;
+				width: 1px;
+				height: 32px;
+				background-color: #E5E5E5;
+				position: absolute;
+				top: 50%;
+				right: 0;
+				margin-top: -16px;
+			}
+			select {
+				width: 150px;
+				border-radius: 5px 0 0 5px;
+				padding: 4px 40px 4px 20px !important;
+				background-position: calc(100% - 15px) 50%;
+				@include breakpoint($mdw){
+					width: 120px;
+				}
+				@include breakpoint($sm){
+					width: 100px;
+					padding: 4px 20px 4px 10px !important;
+					background-position: calc(100% - 10px) 50%;
+				}
+			}
+		}		
+		input[type=text] {
+			border-radius: 0;
+		}
 	}
 	@include select-set();
 	.select-set {
+		select {
+			width: 220px;
+			height: 56px;
+			border: 0;
+			@include breakpoint($sm){
+				width: 120px;
+				height: 40px;
+			}
+		}
 		.btn_select {
 			padding: 0 25px;
 			@include breakpoint($sm){
@@ -567,17 +615,30 @@
 			}
 		}
 	}
+	
 	.c {
 		display: flex;
 		flex-wrap: wrap;
 		flex-direction: column;
-		justify-content: center;
-		width: 904px;
+		justify-content: center;		
 		max-width: 100%;
 		margin: 0 auto;
+		@include breakpoint($sm){
+			display: block;
+		}
+		&.short {
+			width: 904px;
+			.keyword-set {
+				flex-basis: calc(100% - 200px - 2px);
+			}
+		}
 		.sh-input {
 			display: flex;
 			width: 100%;
+			justify-content: center;
+			@include breakpoint($sm){
+				display: block;
+			}
 			> * {
 				margin: 0 2px;
 			}
@@ -599,13 +660,17 @@
 			}
 		}
 		.keyword-set {
-			flex-basis: calc(100% - 200px - 2px);
+			width: 386px;
+			//flex-basis: calc(100% - 200px - 2px);
 			display: flex;
 			align-items: center;
 			background-color: #fff;
 			border-radius: 4px;
+			@include breakpoint($mdw){
+
+			}
 			@include breakpoint($sm){
-				flex-basis: calc(100% - 120px - 2px);
+				flex-basis: calc(100% - 100px - 2px);
 			}
 			.keyword {
 				width: calc(100% - 66px);				
@@ -702,7 +767,33 @@
 			}
 		}
 	}
+	//기념화폐
+	&.sh3 { 
+		.c {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			> * {
+				flex-grow: 1;
+				margin: 0 2px;
+			}
+			
+			select, input, a {
+				height: 56px;
+			}
+			[class^=b-] {
+				min-width: auto;
+				padding: 0 20px;
+			}
+			.select-box {
+				select {
+					width: 100%;
+				}
+			}
+		}		
+	}
 }
+
 
 //경제용어사전
 .keyWordBd {
@@ -902,36 +993,37 @@
 .date-set {
 	@include breakpoint($sm){
 		display: flex;
+		align-items: center;
+		margin: 0 2px 5px 2px !important;
 	}
 	@include breakpoint($mdw) {
-		flex-basis: 270px;
+		flex-basis: 250px;
 		flex-shrink: 0;
 	}
 	@include breakpoint($lg) {
-		flex-basis: 300px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-basis: 344px;
 		flex-grow: 0;
 	}
 	.date,
 	.month,
 	.sdate,
 	.edate {
-		flex-basis: calc(50% - 8px) !important;
-		width: calc(50% - 8px) !important;
+		border: 0;
+		height: 56px;
+		flex-basis: calc(50% - 12px) !important;
+		width: calc(50% - 12px) !important;
 		-webkit-appearance: none !important;
+		@include breakpoint($sm){
+			height: 40px;
+		}
 	}
 	.dash {
-		width: 24px;
-		text-align: center;
-	}
-	.sh & {
-		@include breakpoint($mdw) {
-			font-size: 13px;
-		}
-	}
-	.sh.m & {
-		@include breakpoint($mdw) {
-			font-size: 16px;
-		}
+		//display: inline-block;
+		width: 20px;
+		text-align: center
 	}
 	.bd-reg & {
 		@include breakpoint($md) {
@@ -944,7 +1036,11 @@ input.date,
 input.month,
 input.sdate,
 input.edate {
-	background: #fff url(/static/portal/img/ico/sh-calendar.png) 100% center no-repeat;
-	background-position: calc(100% - 10px) center;
-	padding: 4px 10px;
+	background: #fff url(/static/portal/img/common/select-arr.png) calc(100% - 18px) center no-repeat;
+	border-radius: 4px;
+	padding: 0 30px 0 20px;
+	@include breakpoint($smd){
+		padding: 0 20px 0 10px;
+		background-position: calc(100% - 15px) center;
+	}
 }

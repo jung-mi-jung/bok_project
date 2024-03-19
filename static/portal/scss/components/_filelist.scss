@@ -28,32 +28,10 @@
 	}
 }
 
-// .fileGroupSet {
-// 	a {
-// 		&.i-download {
-// 			&::after {
-// 				float: right;
-// 				content: "";
-// 				display: inline-block;
-// 				vertical-align: middle;
-// 				width: 16px;
-// 				height: 16px;
-// 				background: url(/static/portal/img/ico/ico-down2_off.png) no-repeat;
-// 				margin-right: 7px;
-// 				margin-top: 5px;
-// 			}
-// 			&:hover {
-// 				&::after {
-// 					background: url(/static/portal/img/ico/ico-down2_on.png) no-repeat;
-// 				}
-// 			}
-// 		}
-// 	}
-// }
 .fileGoupBox {
 	display: none;
 	position: absolute;
-	top: 30px;
+	top: 26px;
 	right: 0;
 	width: 328px;
 	background-color: $point;
@@ -82,17 +60,14 @@
 		margin: 8px 10px;
 		> li {
 			> a {
-				width: calc(100% - 36px);
+				position: relative;
+				@include ellipsis();
+				width: 100%;
 				display: inline-block;
 				vertical-align: middle;
 				font-weight: 300;
 				color: #fff !important;
-				padding: 8px 0;
-				span {
-					@include ellipsis();
-					width: calc(100% - 30px);
-					vertical-align: middle;
-				}
+				padding: 8px 20px 8px 0;
 				&:hover {
 					color: #fff;
 				}
@@ -102,16 +77,20 @@
 				// 	font-weight: 300;
 				// }	
 				&.i-download {
+					&::before {
+						display: none !important;
+					}
 					&::after {
-						float: right;
+						
 						content: "";
 						display: inline-block;
 						vertical-align: middle;
 						width: 16px;
 						height: 16px;
 						background: url(/static/portal/img/ico/ico-down2_off.png) no-repeat;
-						margin-right: 7px;
-						margin-top: 5px;
+						position: absolute;
+						top: 11px;
+						right: 0;
 					}
 					&:hover {
 						&::after {

@@ -1,0 +1,191 @@
+<div class="lnb-nav">
+	<h1>목차</h1>	
+	<ul>
+		<li class="on">
+			<a href="">금융안정 개요</a>
+			<ul>
+				<li class="on">
+					<a href="">정의</a>
+				</li>
+				<li>
+					<a href="">금융시스템 불안의 요인</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+
+
+<div class="content">
+
+
+
+<div class="box2 boxGal"> 
+	<div class="boxGalbox"> 
+		<p class="fsb_point"> 한국은행 부산본부의 화폐전시실은 우리나라의 고대&middot;근대&middot;현용 화폐 및 기념주화, 외국의 기념주화 및 지폐 등 약 1000여점의 국내외 화폐가 전시되어 있으며 근대 주화 압인기, 나도 화폐속 주인공 등 다양한 체험학습 시설을 구비하고 있습니다. </p> 
+	<div class="oh">
+	<ul> 
+	<li class="gaIco1"> <strong>관람대상 : 개인 및 단체(10인 초과)</strong> 
+		<ul class="bu_1"> 
+			<li>개인관람객 및 단체인솔자는 신분증 지참 필수</li> 
+			<li>단체관람의 경우 최소 24시간전 예약 필수</li> 
+			<li>개인도 직원의 안내를 희망하는 경우 사전 예약 권장</li> 
+		</ul> 
+	</li> 
+	<li class="gaIco2"> <strong>관람시간 : </strong> <span>10:00 ~ 16:00 평일(공휴일, 근로자의 날 제외)</span> </li> 
+	<li class="gaIco3"><strong>관람시간 : </strong><span>40분 내외</span></li> 
+	</ul> 
+	<ul> 
+	<li class="gaIco4"><strong>입장료 : </strong><span>무료</span></li> 
+	<li class="gaIco5"><strong>주차정보 : </strong><span>한국은행 부산본부 내 주차가능</span></li> 
+	<li class="gaIco6"><strong>문의 : </strong><span>051-240-3809</span></li> 
+	<li class="gaIco7"><strong>주소 : </strong><span>부산광역시 남구 문현금융로 25 한국은행 부산본부 1층</span></li> 
+	</ul> 
+	</div> 
+	</div> 
+	</div>
+	<div class="gallerySet1"> 
+		
+		<div class="gallery swiper-container"> 
+			<div class="thumbs swiper-wrapper" id="vsThumbs">
+				<div class="img4vs3 swiper-slide"> <img src="https://www.bok.or.kr/static/eng/img/cts/old/img_slide01_01.jpg" alt="부산본부 내부 전경1" data-lgurl="https://www.bok.or.kr/static/eng/img/cts/old/img_slide01_01.jpg" class="height100p"> </div>
+				<div class="img4vs3 swiper-slide"> <img src="https://www.bok.or.kr/static/eng/img/cts/old/img_slide01_02.jpg" alt="부산본부 내부 전경2" data-lgurl="https://www.bok.or.kr/static/eng/img/cts/old/img_slide01_02.jpg" class="height100p"> </div>
+				<div class="img4vs3 swiper-slide"> <img src="https://www.bok.or.kr/static/eng/img/cts/old/img_slide01_03.jpg" alt="부산본부 내부 전경3" data-lgurl="https://www.bok.or.kr/static/eng/img/cts/old/img_slide01_03.jpg" class="height100p"> </div>
+			</div> 
+		</div>
+		<div class="thumbsList swiper-container" id="thumbsList"> 
+			<div class="galleryCtrl"> 
+				<a href="javascript:void(0);" class="prevVs"><i class="fa fa-chevron-left" aria-hidden="true"></i><span class="hidden">이전 이미지 보기</span></a> 
+				<a href="javascript:void(0);" class="nextVs"><i class="fa fa-chevron-right" aria-hidden="true"></i><span class="hidden">다음 이미지 보기</span></a>
+			</div> 
+			<div class="thumbs swiper-wrapper "> 
+				<a href="#self" class="swiper-slide"><img src="https://www.bok.or.kr/static/eng/img/cts/old/img_slide01_01.jpg" alt="부산본부 내부 전경1"></a>
+				<a href="#self" class="swiper-slide"><img src="https://www.bok.or.kr/static/eng/img/cts/old/img_slide01_02.jpg" alt="부산본부 내부 전경2"></a>
+				<a href="#self" class="swiper-slide"><img src="https://www.bok.or.kr/static/eng/img/cts/old/img_slide01_03.jpg" alt="부산본부 내부 전경3"></a>
+			</div> 
+		</div> 
+	</div>
+		
+
+	<script>
+		var galleryThumbs = new Swiper(".thumbsList", {
+			spaceBetween: 0,
+			slidesPerView: 5,
+			loop: false,	// 슬라이드 반복 여부
+			loopAdditionalSlides : 1,  // 슬라이드 반복 시 마지막 슬라이드에서 다음 슬라이드가 보여지지 않는 현상 수정
+			//freeMode: true,
+			//watchSlidesProgress: true,            
+			touchEventsTarget: 'wrapper',
+			//freeMode: true, 
+			//observer: true, //처음에 보이지 않는 display: none 상태인 요소 포커스 오류 정정
+			//observeParents: true,
+			pagination : true,	//pager 여부
+			autoplay : {
+				delay : 5000,
+				disableOnInteraction : true,
+			},
+			navigation: {	// 버튼 사용자 지정
+				prevEl: ".prevVs",
+				nextEl: ".nextVs",				
+			},					
+		});
+		var galleryList = new Swiper(".thumbs", {
+			slidesPerView: 1,	// 보여지는 슬라이드 갯수
+			spaceBetween: 0,	// 마진값
+			//loop: true,	// 슬라이드 반복 여부
+			touchRatio: 0,  //드래그 금지
+			freeMode: true, 
+			thumbs: {
+				swiper: galleryThumbs,
+			},
+		});
+		galleryThumbs.init();//초기화		
+	</script>
+
+
+<!--
+
+	<link rel="stylesheet" type="text/css" href="https://www.bok.or.kr/static/jslibrary/prettyPhoto/prettyPhoto.css">
+	<link rel="stylesheet" type="text/css" href="https://www.bok.or.kr/static/jslibrary/slick/slick.css">
+	<script src="https://www.bok.or.kr/static/jslibrary/prettyPhoto/jquery.prettyPhoto.js"></script>
+	<script>
+	var photoLens = $(".img4vs3").length;
+	$(".galleryLen").text(1+" / "+photoLens);
+	
+	function diffListSetting(argument) {
+	$(function() {
+		var photoSetList = $("#vsThumbs").slick({
+		// autoplay: true,
+		autoplaySpeed:1000,
+		dots: false,
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		accessibility: true,
+		arrows:false,
+		pauseOnFocus: false,
+		fade : true,
+		asNavFor:'#thumbsList>div'
+		// draggable: false,
+		// focusOnSelect: true,
+		});
+		$('.stopVs').on('click', function() { photoSetList.slick('slickPause') });
+		$('.playVs').on('click', function() { photoSetList.slick('slickPlay') });
+		
+		// 슬라이드 변경시
+		$('#vsThumbs').on('afterChange', function(event, slick, currentSlide, nextSlide){
+		
+		var currentImg = $('#vsThumbs .slick-current img').attr('data-lgurl');
+		var currentDown = $('#vsThumbs .slick-current img').attr('data-download');
+		$("#prettyPhotoOpen").attr('href', currentImg);
+		$("#downUrl").attr('href', currentDown);
+		$("#prettyPhotoOpen").attr('href', currentImg);
+		$(".galleryLen").text((currentSlide+1)+" / "+photoLens);
+		});
+		$("#prettyPhotoOpen").prettyPhoto({animation_speed:'fast',theme:'light_square',slideshow:3000, autoplay_slideshow: false, social_tools:false});
+		
+		var thumbsList = $('#thumbsList>div').slick({
+		autoplaySpeed:1000,
+		dots: false,
+		infinite: true,
+		slidesToShow: 5,
+		slidesToScroll: 1,
+		accessibility: true,
+		prevArrow  : '.prevVs', //이전 버튼
+		nextArrow : '.nextVs',  //다음 버튼
+		pauseOnFocus: false,
+		asNavFor: '#vsThumbs',
+		vertical:false,
+		focusOnSelect: true,
+		centerMode: true,
+		responsive: [
+		{
+		breakpoint: 767,
+		settings: {
+		slidesToShow: 3,
+		vertical:false
+		}
+		},
+		{
+		breakpoint: 479,
+		settings: {
+		slidesToShow: 3,
+		vertical:false,
+		centerMode: false
+		}
+		}
+		]
+		});
+		$("#thumbsList a").attr("tabindex", "0");
+		$(window).trigger('resize')
+		});
+	}
+	$(function() {
+		$("#prettyPhotoOpen").attr('href', $('#vsThumbs img').attr('data-lgurl'));
+		$("#downUrl").attr('href', $('#vsThumbs img').attr('data-download'));
+		diffListSetting();
+	});
+	</script> 
+-->
+
+</div>

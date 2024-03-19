@@ -54,12 +54,15 @@
 		font-size: rem(36);
 		font-weight: 300;
 		margin-bottom: 20px;
+		& + h3 {
+			margin-top: 22px;
+		}
 	}
 	h3 {
 		color: #131547;
 		font-size: rem(28);
 		font-weight: 500;
-		margin: 15px 0 10px;
+		margin: 40px 0 16px;
 		&::before {
 			content: "";
 			display: inline-block;
@@ -108,11 +111,10 @@
 
 @mixin bu-dot() {
 	position: relative;
-	padding-left: 10px;
-	font-size: rem(18);
+	padding-left: 13px;
 	&::before {
 		position: absolute;
-		top: 12px;
+		top: 10px;
 		left: 0;
 		width: 4px;
 		height: 4px;
@@ -149,6 +151,11 @@ ul.bu {
 					color: #757575;
 				}*/
 			}
+		}
+	}
+	&.b {
+		> li {
+			font-weight: 500;
 		}
 	}
 }
