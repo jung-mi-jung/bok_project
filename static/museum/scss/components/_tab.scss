@@ -104,7 +104,6 @@
 		}
 	}
 }
-
 @include breakpoint($xs) {
 	.step {
 		&.len4 li {
@@ -197,13 +196,55 @@
 		}
 	}
 }
-
-
-
-
 .js-tab  {
 	display: none;
 	
+}
+
+/* 미술품 게시판 목록 탭메뉴 */
+.tab-list2 {
+	margin-bottom: 24px;
+	ul {
+		justify-content: center;
+	}
+	li {
+		position: relative;
+		font-size: rem(18);
+		color: #4d4d4d;
+		padding: 2px 0;
+		&::before {
+			content: "";
+			display: inline-block;
+			position: absolute;
+			top: 6px;
+			right: 0;
+			width: 1px;
+			height: 16px;
+
+			background: #E5E5E5;
+		}
+		a {
+			padding: 0 24px;
+			@include breakpoint($sm) {
+				padding: 0 16px;
+			}
+		}
+		&:last-of-type {
+			&::before {
+				display: none;
+			}
+		}
+		&.active {
+			color: #1A1A1A;
+			border: 2px solid #4D4D4D;
+			box-sizing: border-box;
+			border-radius: 99px;
+			&::before {
+				display: none;
+			}
+		}
+
+	}
 }
 
 

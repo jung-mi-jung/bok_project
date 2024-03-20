@@ -493,11 +493,11 @@
 
 
 <div class="bd-view">
-	<h2 class="subject">카드뉴스 게시물 제목이 나타납니다. 제목 전체 내용을 노출합니다. 제목이 긴 경우 자동 줄바뀜 처리 노출합니다.</h2>
+	<h2 class="subject">이창용 한국은행 총재, 국제결제은행(BIS) 글로벌금융시스템위원회 의장으로 선임</h2>
 	<div class="dataInfoSet">
 		<dl class="dataInfo">
 			<dt class="sr-only">구분</dt>
-			<dd class="ass">경제카드뉴스</dd>
+			<dd class="ass">통화금융</dd>
 			<dt class="sr-only">등록일</dt>
 			<dd class="date">2023. 10. 25</dd>
 			<dt class="sr-only">조회수</dt>
@@ -511,50 +511,20 @@
 				<a href="">글로벌금융</a>
 				<a href="">금융시스템</a>
 			</dd>
+		</dl>		 
+		<dl>
+			<dt class="sr-only">등록자</dt>
+			<dd class="user">정성엽</dd>
 		</dl>
 	</div>
 	<dl class="down">
 		<dt class="sr-only">첨부파일</dt>
 		<dd>
-			<a href="">BOK이슈노트_2024-5호_빅데이터와기계학습 알고리즘을 활용한 실시간 인플레이션 전망(real-timeinflation forecasting).pdf</a>
+			<a href="">[보도자료] 이창용 한국은행 총재, 글로벌경제시스템위원회 의장으로 선임.pdf</a>
 		</dd>		
 	</dl>
-	<div class="card-photo">
-		<div class="swiper-container">
-			<div class="photo-ctrl">
-				<button type="button" class="prev photo-prev"><span class="sr-only">이전 카드뉴스 보기</span></button>
-				<button type="button" class="next photo-next"><span class="sr-only">다음 카드뉴스 보기</span></button>
-				<div class="swiper-pagination"></div>
-			</div>
-			<div class="photo swiper">
-				<ul class="swiper-wrapper">
-					<li class="swiper-slide">
-						<span class="img" style="background-image: url('/static/portal/img/main/s1-v1.png');">
-							<span class="sr-only">카드뉴스 이미지1(대체텍스트)</span>
-						</span>
-					</li>
-					<li class="swiper-slide">
-						<span class="img" style="background-image: url('/static/portal/img/main/s1-v2.png');">
-							<span class="sr-only">카드뉴스 이미지2(대체텍스트)</span>
-						</span>
-					</li>
-					<li class="swiper-slide">
-						<span class="img" style="background-image: url('/static/portal/img/main/s1-v3.png');">
-							<span class="sr-only">카드뉴스 이미지3(대체텍스트)</span>
-						</span>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</div>
 	<div class="dbdata">
-		목차<br>
-		Ⅰ. 검토배경<br>
-		Ⅱ. 물가안정기의 특징<br>
-		Ⅲ. 물가안정기로의 전환 사례 분석<br>
-		Ⅳ. 물가안정기로의 진입 성공/실패 사례<br>
-		Ⅴ. 우리나라의 인플레이션 국면 진단<br>
-		Ⅵ. 시사점
+		내용
 	</div>
 </div>
 
@@ -562,46 +532,169 @@
 	<a href="" class="b-list">목록</a>
 </div>
 
-<script>
-$(function () {
-	const swiper = new Swiper('.photo', {
-		init: false,
-		freeMode: true,
-		// Optional parameters
-		loop: true,
-		loopAdditionalSlides : 1,
-		slidesPerView : '1',
-		navigation: {
-			prevEl: '.photo-prev',
-			nextEl: '.photo-next',
-		},
-		// And if we need scrollbar
-		scrollbar: {
-			hide:true
-		},
-		a11y:{
-			enabled:true,
-		},
-		pagination: {
-			el: '.card-photo .swiper-pagination',
-			type: "fraction",
-		},
-		observer: true,
-		observeParents: true,
-		on: {
-			init: function (v) {
-				var item = $('.card-photo')
-				item.find('.swiper-slide-active').attr('tabindex',0).siblings().attr('tabindex',-1)
-			},
-			slideChangeTransitionEnd:function(){
-				var item = $('.card-photo')
-				item.find('.swiper-slide-active').attr('tabindex',0).siblings().attr('tabindex',-1)
-			}
-		}
-	});
-	swiper.init();//초기화	
-});
-</script></div>
+
+
+
+
+<div class="sh">
+	<div class="c">
+		<div class="sh-input">
+			<div class="select-set select1">
+				<button type="button" class="btn_select" title="구분 선택">전체</button>
+				<ul>
+					<li>
+						<button type="button">전체</button>
+					</li>
+					<li>
+						<button type="button">제목</button>
+					</li>
+					<li>
+						<button type="button">내용</button>
+					</li>
+				</ul>
+			</div>
+			<div class="keyword-set">
+				<span class="keyword"><input type="text" title="검색어"></span>
+				<button type="button" class="search" onclick="" aria-label="검색"></button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="sh-BxSet">
+	<p class="count-total">총 <strong>1590</strong>건의 게시물이 있습니다.</p>
+	<div class="sh-select">
+		<div class="select-set select1">
+			<button type="button" class="btn_select" title="개월 선택">개월</button>
+			<ul>
+				<li>
+					<button type="button">3개월</button>
+				</li>
+				<li>
+					<button type="button">6개월</button>
+				</li>
+			</ul>
+		</div>
+		<div class="select-set select2">
+			<button type="button" class="btn_select" title="정렬순서 선택">정렬</button>
+			<ul>
+				<li>
+					<button type="button">최신순</button>
+				</li>
+			</ul>
+		</div>
+		<div class="select-set select3">
+			<button type="button" class="btn_select" title="갯수 선택">갯수</button>
+			<ul>
+				<li>
+					<button type="button">10개</button>
+				</li>
+				<li>
+					<button type="button">20개</button>
+				</li>
+			</ul>
+		</div>
+		<button type="button" class="submit" aria-label="검색"></button>
+	</div>
+</div>
+
+
+<div class="bd-line">
+	<ul>
+		<li>
+			<span class="i">
+				<span class="t1">BOK이슈노트</span>
+				<span class="t2">통화</span>
+			</span>
+			<div class="set">
+				<a href="" class="title">2023년 3/4분기 국제투자대조표(잠정)</a>
+				<div class="btns">
+					<a href="" class="i-download">다운로드</a>
+					<a href="" class="i-view">바로보기</a>
+				</div>
+			</div>
+			<span class="date">2023. 11. 22</span>
+		</li>
+		<li>
+			<span class="i">
+				<span class="t1">BOK이슈노트</span>
+				<span class="t2">금융·은행</span>
+			</span>
+			<div class="set">
+				<a href="" class="title">이창용 한국은행 총재, 국제결제은행(BIS) 글로벌금융시스템위원회 의장으로 선임</a>
+				<div class="btns">
+					<a href="" class="i-download">다운로드</a>
+					<a href="" class="i-view">바로보기</a>
+				</div>
+			</div>
+			<span class="date">2023. 11. 22</span>
+		</li>	
+		<li>
+			<span class="i">
+				<span class="t1">BOK이슈노트</span>
+				<span class="t2">통화</span>
+			</span>
+			<div class="set">
+				<a href="" class="title">한국은행, 「통화금융대책반 회의」 개최</a>
+				<div class="btns">
+					<a href="" class="i-download">다운로드</a>
+					<a href="" class="i-view">바로보기</a>
+				</div>
+			</div>
+			<span class="date">2023. 11. 22</span>
+		</li>	
+		<li>
+			<span class="i">
+				<span class="t1">BOK이슈노트</span>
+				<span class="t2">통화</span>
+			</span>
+			<div class="set">
+				<a href="" class="title">한국은행, 대한상공회의소와 공동세미나 개최</a>
+				<div class="btns">
+					<a href="" class="i-download">다운로드</a>
+					<a href="" class="i-view">바로보기</a>
+				</div>
+			</div>
+			<span class="date">2023. 11. 22</span>
+		</li>
+		<li>
+			<span class="i">
+				<span class="t1">BOK이슈노트</span>
+				<span class="t2">금융·은행</span>
+			</span>
+			<div class="set">
+				<a href="" class="title">한국은행, 대한상공회의소와 공동세미나 개최 한국은행, 대한상공회의소와 공동세미나 개최 한국은행, 대한상공회의소와 공동세미나 개최 한국은행, 대한상공회의소와 공동세미나 개최</a>
+				<div class="btns">
+					<a href="" class="i-download">다운로드</a>
+					<a href="" class="i-view">바로보기</a>
+				</div>
+			</div>
+			<span class="date">2023. 11. 22</span>
+		</li>
+	</ul>
+</div>
+
+<!-- pagination -->
+<div class="paginationSet">
+	<ul class='pagination pagination-centered'>
+		<li class='i first '><a title='처음 목록' href='javascript:fnSearch(1)'><span class='s'><span>처음 <span class='t'>목록</span></span></span></a></li>
+		<li class='i prev '><a title='이전 목록' href='javascript:fnSearch(0)'><span class='s'><span>이전 <span class='t'>목록</span></span></span></a></li>
+		<li class='active'><span><em title='현재목록'><span>1</span></em></span></li>
+		<li><a href='javascript:fnSearch(2)'><span>2</span></a></li>
+		<li><a href='javascript:fnSearch(3)'><span>3</span></a></li>
+		<li><a href='javascript:fnSearch(4)'><span>4</span></a></li>
+		<li><a href='javascript:fnSearch(5)'><span>5</span></a></li>
+		<li><a href='javascript:fnSearch(6)'><span>6</span></a></li>
+		<li><a href='javascript:fnSearch(7)'><span>7</span></a></li>
+		<li><a href='javascript:fnSearch(8)'><span>8</span></a></li>
+		<li><a href='javascript:fnSearch(9)'><span>9</span></a></li>
+		<li><a href='javascript:fnSearch(10)'><span>10</span></a></li>
+		<li class='i next'><a title='다음 목록' href='javascript:fnSearch(11)'><span class='s'><span>다음 <span class='t'>목록</span></span></span></a></li>
+		<li class='i end'><a title='마지막 목록' href='javascript:fnSearch(20)'><span class='s'><span>끝 <span class='t'>목록</span></span></span></a></li>
+	</ul>
+</div>
+<!-- //pagination --></div>
 <!-- //컨텐츠 끝 -->
 
 <!-- 내가 본 콘텐츠 -->

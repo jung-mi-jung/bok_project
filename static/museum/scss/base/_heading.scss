@@ -48,18 +48,21 @@
 	}
 }
 
-.content {
+#main-container {
 	h2 {
 		color: #131547;
 		font-size: rem(36);
 		font-weight: 300;
 		margin-bottom: 20px;
+		& + h3 {
+			margin-top: 22px;
+		}
 	}
 	h3 {
 		color: #131547;
 		font-size: rem(28);
 		font-weight: 500;
-		margin: 15px 0 10px;
+		margin: 40px 0 16px;
 		&::before {
 			content: "";
 			display: inline-block;
@@ -71,16 +74,117 @@
 			margin-right: 10px;
 			margin-bottom: 4px;
 		}
+		&.h3 {
+			color: #2F4F9D;
+			font-size: rem(20);
+			font-weight: 500;
+			margin: 40px 0 10px;
+			&::before {
+				content: "";
+				display: inline-block;
+				vertical-align: middle;
+				width: 16px;
+				height: 16px;
+				background-image: url(/static/portal/img/ico/ico-caption.png);
+				background-color: transparent;
+				margin-right: 5px;
+				border-radius: 0;
+			}
+		}
 	}
-	h4{
+	.bu2,
+	h4 {
 		color: #3B63C4;
 		font-size: rem(20);
 		font-weight: 500;
-
-		margin-top: 15px;
-		margin-bottom: 12px;
-		&:first-child {
+		margin-top: 18px;
+		margin-bottom: 5px;
+		/*&:first-child {
 			margin-top: 0;
+		}*/
+	}
+	/*.bu2 {
+		margin-top: 25px;
+	}*/
+}
+
+
+@mixin bu-dot() {
+	position: relative;
+	padding-left: 13px;
+	&::before {
+		position: absolute;
+		top: 10px;
+		left: 0;
+		width: 4px;
+		height: 4px;
+		background-color: #131547;
+		border-radius: 50%;
+		content: '';		
+	}
+}
+
+
+@mixin bu-dash() {
+	position: relative;
+	padding-left: 9px;
+	&::before{
+		position: absolute;
+		top: 14px;
+		left: 0;
+		width: 4px;
+		height: 1px;
+		background-color: #757575;
+		content: '';
+	}
+}
+
+ul.bu {
+	> li {
+		clear: both;
+		@include bu-dot;
+		ul {
+			font-size: rem(16);
+			li {
+				@include bu-dash;
+				/*&:before {
+					color: #757575;
+				}*/
+			}
 		}
 	}
+	&.b {
+		> li {
+			font-weight: 500;
+		}
+	}
+}
+
+.bu-dash {
+	&::before {
+		display: none;
+	}
+	> li {
+		@include bu-dash;
+	}	
+}
+
+li {
+	.b-link {
+		font-size: 14px;
+		line-height: inherit;
+		padding: 2px 4px;
+	}
+}
+
+
+@mixin fileload() {			
+	&::before {
+		content: "";
+		display: inline-block;
+		vertical-align: middle;
+		background: url(/static/portal/img/common/ico-download.png);
+		width: 20px;
+		height: 20px;
+	}	
 }
