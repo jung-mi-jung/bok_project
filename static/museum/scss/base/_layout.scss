@@ -557,6 +557,9 @@
 	right: 30px;
 	z-index: 9;
 	display: none;
+	@include breakpoint($sm) {
+		bottom: 30px;
+	}
 	a {
 		display: block;
 		width: 40px;
@@ -729,7 +732,10 @@
 	bottom: 250px;  //임시 위치
 	right: 30px;
 	z-index: 9;
-	width: 200px;
+	// width: 200px;
+	@include breakpoint($sm) {
+		bottom: 80px;
+	}
 	.btn {
 		float: right;
 		width: 40px;    clear: both;
@@ -790,7 +796,7 @@
 		bottom: 52px;
 		right: 0;
 		z-index: 9;
-		width: 100%;
+		width: 200px;
 		padding: 16px;
 		background-color: #fff;
 		border: 1px solid #131547;
@@ -875,6 +881,9 @@
 		}
 		.b-close {
 			position: absolute;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 			bottom: -53px;
 			right: 0;
 			z-index: 1;

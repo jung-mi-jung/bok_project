@@ -466,7 +466,7 @@
 	.select-set {
 		position: relative;
 		.btn_select {
-			color: #666;
+			// color: #666;
 			position: relative;
 			text-align: left;
 			width: 135px;
@@ -539,6 +539,8 @@
 	}	
 }
 
+
+/* 검색 필드*/
 .sh {
 	display: flex;
     flex-direction: row;
@@ -548,12 +550,69 @@
 	background-color: #F2F6FA;
 	padding: 45px 20px;
 	font-size: rem(18);
-	@include breakpoint($sm){
-		font-size: 12px;
+	@include breakpoint($smd){
+		font-size: 13px;
 		padding: 14px;
+	}
+	@include breakpoint($sm){
+		display: block;
+	}
+	.select-box {
+		display: flex;
+		// @include breakpoint($sm){
+		// 	width: calc(100% - 250px);
+		// }
+		.select-set {
+			position: relative;
+			background-color: #fff;			
+			&::after {
+				content: "";
+				display: inline-block;
+				vertical-align: middle;
+				width: 1px;
+				height: 32px;
+				background-color: #E5E5E5;
+				position: absolute;
+				top: 50%;
+				right: 0;
+				margin-top: -16px;
+			}
+			select {
+				width: 150px;
+				border-radius: 5px 0 0 5px;
+				padding: 4px 40px 4px 20px !important;
+				background-position: calc(100% - 15px) 50%;
+				@include breakpoint($mdw){
+					width: 120px;
+				}
+				@include breakpoint($sm){
+					width: 100px;
+					height: 40px;
+					padding: 4px 20px 4px 10px !important;
+					background-position: calc(100% - 10px) 50%;
+				}
+			}
+		}		
+		input[type=text] {
+			border-radius: 0;
+		}
 	}
 	@include select-set();
 	.select-set {
+		select {
+			// width: 220px;
+			width: 150px;
+			height: 56px;
+			border: 0;
+			padding: 4px 40px 4px 20px !important;
+			@include breakpoint($smd){
+				width: 120px;
+			}
+			@include breakpoint($sm){
+				width: 100px;
+				height: 40px;
+			}
+		}
 		.btn_select {
 			padding: 0 25px;
 			@include breakpoint($sm){
@@ -573,17 +632,35 @@
 			}
 		}
 	}
+	
 	.c {
 		display: flex;
 		flex-wrap: wrap;
 		flex-direction: column;
-		justify-content: center;
-		width: 904px;
-		max-width: 100%;
+		justify-content: center;		
+		// max-width: 100%;
+		width: 100%;;
+		max-width: 904px;
 		margin: 0 auto;
+		@include breakpoint($sm){
+			display: block;
+		}
+		&.short {
+			
+			.sh-input {
+				display: flex;
+			}
+			.keyword-set {
+				flex-basis: calc(100% - 100px - 2px);
+			}
+		}
 		.sh-input {
 			display: flex;
 			width: 100%;
+			justify-content: center;
+			@include breakpoint($sm){
+				display: block;
+			}
 			> * {
 				margin: 0 2px;
 			}
@@ -605,13 +682,17 @@
 			}
 		}
 		.keyword-set {
-			flex-basis: calc(100% - 200px - 2px);
+			width: 386px;
+			//flex-basis: calc(100% - 200px - 2px);
 			display: flex;
 			align-items: center;
 			background-color: #fff;
 			border-radius: 4px;
+			@include breakpoint($mdw){
+
+			}
 			@include breakpoint($sm){
-				flex-basis: calc(100% - 120px - 2px);
+				flex-basis: calc(100% - 100px - 2px);
 			}
 			.keyword {
 				width: calc(100% - 66px);				
@@ -622,7 +703,7 @@
 					padding: 10px 24px;
 					@include breakpoint($sm){
 						padding: 5px 15px;
-						height: 40px;
+						height: 40px !important;
 					}
 				}
 			}		
@@ -707,5 +788,290 @@
 				color: #222;
 			}
 		}
+	}
+	//기념화폐
+	&.sh3 { 
+		.c {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			> * {
+				flex-grow: 1;
+				margin: 0 2px;
+			}
+			
+			select, input, a {
+				height: 56px;
+			}
+			[class^=b-] {
+				min-width: auto;
+				padding: 0 20px;
+			}
+			.select-box {
+				select {
+					width: 100%;
+				}
+			}
+		}		
+	}
+}
+
+.sh-detail {
+	.c {
+		gap: 4px 0;
+		@include breakpoint($sm) {
+			display: flex;
+			flex-direction: column;
+		}
+		.select-box{
+			display: flex;
+			gap: 0 4px;
+			select {
+				height: 48px !important;
+				padding: 4px 30px 4px 24px !important;
+				flex: 1;
+			}
+		}
+		.radio-box {
+			background: #fff;
+			padding: 12px 4px;
+			border-radius: 4px;
+			@include breakpoint($sm){
+				padding: 4px 4px;
+			}
+			dl {
+				display: flex;
+				align-items: center;
+				@include breakpoint($sm) {
+					align-items: flex-start;
+					flex-direction: column;
+					gap: 4px 0;
+				}
+			
+			}
+			dt {
+				> span {
+					position: relative;
+					padding: 0 24px;
+					border-right: 1px solid #E5E5E5;
+					color: #808080;
+					@include breakpoint($sm) {
+						border-right: 0;
+					}
+					&::before {
+						content: "";
+						display: block;
+						position: absolute;
+						top: 50%;
+						left: 10px;
+						transform: translateY(-50%);
+						width: 5px;
+						height: 5px;
+						background: #808080;
+						border-radius: 50%;
+						
+					}
+				}
+			}
+			dd {
+				display: flex;
+				align-items: center;
+				.radio-group {
+					display: flex;
+					align-items: center;
+					padding: 0 30px;
+					@include breakpoint($sm){
+						// display: block;
+						padding: 0;
+					}
+					label {
+						@include breakpoint($sm){
+							&:first-child {
+								margin-left: 8px;
+							}
+						}
+						& + label {
+							margin-left: 14px;
+							@include breakpoint($sm) {
+								margin-left: 4px;
+							}
+						}
+					}
+					input[type=radio] {	
+						& + i + span {
+							color: #4D4D4D;
+							margin-left: 10px;
+							@include breakpoint($sm) {
+								margin-left: 4px;
+								margin-right: 5px;
+							}
+						}
+						&:checked + i {
+							& + span {
+								font-weight: 500;
+								color: $point;
+								text-decoration: underline;
+							}
+						}
+					}
+					@include breakpoint($smd){
+						label {
+							width: 100%;
+							margin: 3px 0;
+						}
+					}
+				}
+			}
+		}
+		.keyword-set {
+			width: 100%;
+			@include breakpoint($sm){
+				flex-basis: 100%;
+			}
+			.keyword {
+				input[type=text] {
+					height: 48px;
+				}
+			}
+		}
+	}
+	.btnSet {
+		display: flex;
+		margin-top: 20px;
+		align-items: center;
+		justify-content: center;
+		button {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			height: 32px;
+			line-height: 32px;
+			font-size: 16px;
+			border-radius: 4px;
+			&.b-search {
+				.ico-srch-w {
+					@include background-image-retina("/static/museum/img/ico/ico-srch-w", png, auto, 100%);
+					margin-right: 8px;
+				}
+			}
+			&.b-reset {
+				background: #fff;
+				border: 1px solid #3B63C4;
+				box-sizing: border-box;
+				color: #3B63C4;
+				.ico-reset {
+					@include background-image-retina("/static/museum/img/ico/ico-reset", png, auto, 100%);
+					margin-right: 8px;
+				}
+			}
+		}
+	}
+}
+
+.keyWordBd {
+	margin-bottom: 20px;
+	> ul {
+		> li {
+			display: flex;
+			& + li {
+				margin-top: 5px;
+			}
+			.keyWdHd {
+				width: 80px;
+				line-height: 40px;
+			}
+			.keyword {
+				display: flex;
+				flex-wrap: wrap;
+				//flex-wrap: wrap;
+				//flex-direction: row;
+				width: calc(100% - 80px);
+				li {
+					padding: 0 1px;
+				}
+			}
+			a {
+				color: $black;
+				display: inline-block;
+				text-align: center;
+				width: 40px;
+				height: 40px;
+				line-height: 40px;
+				border: 1px solid #BFBFBF;
+			}
+			&.on {
+				a {
+					color: #fff;
+					border: 1px solid $point;
+					background-color: $point;
+				}
+			}
+		}
+	}
+}
+
+.date-set {
+	@include breakpoint($sm){
+		display: flex;
+		align-items: center;
+		margin: 0 2px 5px 2px !important;
+	}
+	@include breakpoint($mdw) {
+		// flex-basis: 250px;
+		width: 250px;
+		flex-shrink: 0;
+	}
+	@include breakpoint($lg) {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-basis: 344px;
+		flex-grow: 0;
+	}
+	.date,
+	.month,
+	.sdate,
+	.edate {
+		border: 0;
+		height: 56px;
+		flex-basis: calc(50% - 8px) !important;
+		width: calc(50% - 8px) !important;
+		-webkit-appearance: none !important;
+		@include breakpoint($sm){
+			height: 40px;
+		}
+	}
+	.dash {
+		//display: inline-block;
+		width: 20px;
+		text-align: center
+	}
+	.bd-reg & {
+		@include breakpoint($md) {
+			display: block;
+			max-width: 300px;
+		}
+	}
+}
+.date-set + .select-box {
+	@include breakpoint($mdw) {
+		width: calc(100% - 250px - 10px);
+	}
+	.keyword-set {
+		@include breakpoint($mdw) {
+			width: calc(100% - 120px);
+		}
+	}
+}
+input.date,
+input.month,
+input.sdate,
+input.edate {
+	background: #fff url(/static/portal/img/common/select-arr.png) calc(100% - 18px) center no-repeat;
+	border-radius: 4px;
+	padding: 0 30px 0 20px;
+	@include breakpoint($smd){
+		padding: 0 20px 0 10px;
+		background-position: calc(100% - 15px) center;
 	}
 }

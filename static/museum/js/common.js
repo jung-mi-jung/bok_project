@@ -126,20 +126,6 @@ $(function () {
 	});
 
 
-	// gnb 영역 swiper
-	var gnbBanner = new Swiper('.gnb .e .swiper', {
-		slidesPerView: 1,
-		autoHeight: true,
-		observer: true, // 슬라이드 변경 관찰 활성화
-		observeParents: true, // 부모 요소의 변경도 관찰
-		navigation: {
-			nextEl: ".swiper-tab-next",
-			prevEl: ".swiper-tab-prev",
-		},
-	});
-
-
-
 	//gnb - depth4 있을 경우  depth3에 클래스 추가
 	// $("#gnb .depth4").prev().addClass("bu");
 	// $("#gnb .depth3 .bu").attr("href", "javascript:viod(0)");
@@ -291,18 +277,6 @@ $(function () {
 	}
 
 
-	// 탭 활성화  - default
-	// $(".js-tab button").on('click', function(){
-	// 	var $parent = $(this).closest(".js-tab");
-	// 	var index = $(this).parent().index();
-	// 	$(this)
-	// 		.attr("aria-pressed", true).parent().addClass("on").attr('title','선택됨')
-	// 		.siblings().removeClass("on").find("button").attr("aria-pressed", false).removeAttr('title')
-	// 	$parent
-	// 		.siblings(".tab-content").find(".con").hide().eq(index).show();
-	// });
-
-
 	// 모바일 탭 활성화
 	$(".js-tab button").on('click', function(){
 		var $parent = $(this).closest(".js-tab");
@@ -310,17 +284,6 @@ $(function () {
 
 		$parent.toggleClass("on");
 	});
-
-	// 탭 활성화 - default
-	// $('.tab-list').each(function (index, element) {
-	// 	$(this).find('button')
-	// 		.on('click', function (e) {
-	// 			e.preventDefault();
-	// 			$(this).attr('aria-selected', true).attr('title','선택됨').siblings().attr('aria-selected', false).removeAttr('title')
-	// 			_id = $(this).attr('id')
-	// 			$('[aria-labelledby="' + _id + '"]').show().siblings().hide()
-	// 		})
-	// });
 
 	// 탭 활성화
 	$('.tab-list').each(function (index, element) {

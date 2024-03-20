@@ -6,6 +6,17 @@
 	color: #666;
 }
 
+.fnote {
+	margin-top: 20px;
+	margin-bottom: 30px;
+	.title {
+		.ml25 {
+			margin-left: 29px !important;
+		}
+	}
+}
+
+
 /* 콘텐츠 내부 래프트메뉴 */
 .content-row {
 	.cont-nav {
@@ -200,189 +211,264 @@
 	}
 }
 
-
-
-
-
-// .swiper-container {
-// 	width: 100%;
-// 	height: auto;
-// 	margin-left: auto;
-// 	margin-right: auto;
-//   }
-// .swiper-slide {
-// 	width:100%;
-// 	/* Center slide text vertically */
-// 	display: flex;
-// 	justify-content: center;
-// 	align-items: center;
-// }
-
-/*
-.img-box {
-	border: 1px solid #d5d5d5;
-	border-radius: 10px;
-	padding: 50px 0;
-	img {
-		margin: 0 auto;
-		display: block;
-	}
+//오시는 길
+.bokHead{
+	background:#f4f5f7;padding:15px;overflow:hidden;
 	@include breakpoint($sm){
-		padding: 40px 0;
+		.map{width:100%;}
+		.bankMap{width:100%;margin:20px 0 0 0;}
 	}
-	picture{
-		margin:0 auto;
-		img{
-			margin: 0 auto;
-			display: block;
-		}
-		.img-mobile{
-			display: block;
-		}
-		.img-pc{
-			display: none;
-		}
-		@include breakpoint($md){
-			.img-pc{
-				display: block;
-				margin: 0 auto;
-			}
-			.img-mobile{
-				display: none;
-			}
-		}
-	}
-}
-
-
-@include breakpoint($md){
-	.img-lg {
-		position: relative;
-		&::after{
-			content: '\f0b2'; 
-			@include la;
-			display: block; 
-			position: absolute; 
-			right: 10px; 
-			top: 10px; 
-			width: 60px; 
-			height: 60px; 
-			text-align: center; 
-			background-color: rgba(0, 0, 0, 0.6); 
-			color: #fff; 
-			padding-top: 0.4375em; 
-			font-size: 1.25rem; 
-			line-height: 1; 
-			//vertical-align: top; 
-			border-radius: 0.3125em;
-		}
-		&::before {
-			content: '원본';
-			text-align: center;
-			position: absolute;
-			z-index: 2;
-			right: 10px;
-			top: 40px;
-			width: 60px;
-			text-align: center;
-			color: #fff;
-		}
-	}
-}
-
-
-.login-box {
-	border-radius: 10px;
-	background-color: #f9f9f9;
-	padding: 50px 75px;
-	text-align: center;
-	@include breakpoint($sm){
-		padding: 30px;
-	}
-	h2 {
-		font-size: 28px !important;
-		margin-bottom: 10px !important;
-	}	
-}
-
-.sitemap {
-	border: 2px solid $point;
-	border-width: 2px 0;
-	> ul {
-		display: block;
-		> li {
-			display: table;
-			table-layout: fixed;
-			width: 100%;
-			> * {
-				display: table-cell;
-				vertical-align: middle;
-			}
-			> a {
-				width: 282px;
-				font-size: 22px;
-				font-weight: 600;
-				padding: 55px 40px;
-				background-color: #eef5fb;
-			}
-			& + li {
-				border-top: 1px solid #ccc;
-			}			
-		}
-	}
-}
-
-.policy {
-	font-size: 18px;
-	h2 {
-		padding-top: 24px;
-		margin-top: 24px;
-		border-top: 1px solid #ccc;
-		font-size: 22px !important;
-		font-weight: 600;
-		&:first-child {
-			border-top: none;
-			margin-top: 0;
-		}
-	}
-	ul {
-		list-style: none;
-		ul {
-			padding: 5px 0 5px 15px;
-		}
-		&.list-num {
-			padding-left: 10px;
-			p {
-				padding: 5px 0 5px 19px;
-				font-size: 16px;
-			}
-		}
-		li + li {
-			margin-top: 5px;
-		}
-	}	
-}
-
-.download {
-	padding: 30px 0;
-	text-align: right;
-	a {
-		padding: 13px 18px;
-		color: #fff;
-		background-color: $point;
-		border-radius: 5px;
+	.map{
+		float:left;
+		width:60%;
 		@include breakpoint($sm){
 			width: 100%;
-			display: block;
-			text-align: center;
 		}
-		&::after {
-			@include font-ico-outline('\e2c0');
-			font-size: 22px;
-			vertical-align: middle;
-			margin-left: 8px;
-			margin-bottom: 2px;
+	}
+	.bankMap{
+		float:left;
+		width:38%;
+		margin-left:2%;
+		@include breakpoint($sm){
+			width: 100%;
+			margin-left: 0;
+			margin-top: 20px;
+		}
+		font-size: rem(18);
+		&.type{
+			dt{
+				font-weight:600;color: $point;margin-top:5px;
+			}
+		}
+		dt, dd{
+			padding-left:25px;
+		}
+		dt{
+			margin-top:10px;
+			&::before {
+				font-size: 16px;
+				color:#fff;
+				position:absolute;
+				top:0;
+				left:0;
+				border-radius: 30px;
+				background:#3B63C4;
+				width: 22px;
+				height: 22px;
+				line-height: 22px;
+				text-align:center;
+				margin: 3px 3px 0 0;
+			}
+		}
+		.pic img{
+			display:inline-block;border:3px solid #fff;
+		}
+		.ad{
+			position:relative;
+			&:before{
+				@include font-ico-outline('\e0c8');
+				
+			}
+		}
+		.ph{
+			position:relative;
+			&:before{
+				@include font-ico-outline('\e0b0');
+			}
+		}
+		.fx{
+			position:relative;
+			&:before{
+				@include font-ico-outline('\ead8');
+			}
+		}
+		.em{
+			position:relative;
+			&:before{
+				content:"\f003";
+				color:#fff;font-size:13px;position:absolute;top:0;left:0;border-radius: 30px;background:#3B63C4;width:20px;height:20px;text-align:center;
+			}
 		}
 	}
 }
-*/
+
+//편의시설 안내
+.posMap {
+	.m9 {
+		width: 75%;
+		padding: 10px;
+		.mr20 {
+			margin-bottom: 20px;
+		}
+		.h3 {
+			margin-bottom: 5px;
+			font-size: rem(20);
+			font-weight: 500;
+			color: #222;
+		}	
+	}
+	.m3 {
+		width: 25%;
+		padding: 10px;
+		.ratioSet {
+			width: 100%;
+			height: 0;
+			position: relative;
+			display: inline-block;
+			z-index: 1;
+			&.ratio-4x3 {
+				padding-bottom: 59%;
+			}
+			.ratioObject {
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				z-index: 100;
+				//background-size: cover;
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-position: 50% 50%;
+				z-index: 1;
+				border: 1px solid #dee0e6;
+			}
+		}
+	}
+}
+
+//관람안내
+.info_icon {
+	> div {
+		position: relative;
+		padding-left: 77px;
+		> i {
+			position: absolute;
+			display: inline-block;
+			top: 0;
+			left: 0;
+			width: 60px;
+			height: 60px;
+			font-size: 30px;
+			background-color: #f2f3f7;
+			border-radius: 50px;
+			color: #5b79b9;
+			text-align: center;
+			vertical-align: top;
+			// margin-top: 20px;
+			background-size: cover;
+			&::before {
+				content: "";
+				display: block;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				width: 30px;
+				height: 30px;
+				font-size: 30px;
+				line-height: 60px;
+				background-size: cover;
+				color: #5b79b9;
+
+			}
+		}
+		.ti-layout-slider-alt {
+			&::before {
+				background-image: url(/static/museum/img/layout-slider-alt.svg);
+				background-position: center center;
+				background-repeat: no-repeat;
+			}
+		}
+		.ti-info-alt{
+			&::before {
+				background-image: url(/static/museum/img/info-alt.svg);
+				background-position: center center;
+				background-repeat: no-repeat;
+			}
+		}
+		.ti-blackboard {
+			&::before {
+				background-image: url(/static/museum/img/blackboard.svg);
+				background-position: center center;
+				background-repeat: no-repeat;
+			}
+		}
+		.ti-bookmark-alt {
+			&::before {
+				background-image: url(/static/museum/img/bookmark-alt.svg);
+				background-position: center center;
+				background-repeat: no-repeat;
+			}
+		}
+	}
+	.bu {
+		margin-left: 10px;
+		> li {
+			position: relative;
+			padding-left: 10px;
+			margin-bottom: 5px;
+			font-size: 15px;
+			color: #333;
+			&::before {
+				content: "";
+				display: inline-block;
+				position: absolute;
+				width: 3px;
+				height: 3px;
+				top: 10px;
+				left: 0;
+				border-radius: 50%;
+				background: #333;
+			}
+			strong {
+				font-weight: bold;
+			}
+			span {
+				font-weight: bold;
+			}
+		}
+		table td {
+			text-align: center;
+		}
+	}
+	.b-go {
+		margin-top: 0;
+		font-size: 14px !important;
+		line-height: 28px;
+		background: #3B63C4;
+	}
+	.ti-new-window {
+		position: relative;
+		display: inline-block;
+		width: auto;
+		height: 60px;
+		left: 80px;
+		margin-top: 20px;
+		padding-left: 30px;
+		padding-right: 10px;
+    	line-height: 60px;
+		font-size: 14px;
+		background: #f2f3f7;
+		border-radius: 50px;
+		color: #5b79b9;
+		text-align: center;
+		vertical-align: top;
+		img {
+			vertical-align: middle;
+			padding-bottom: 3px;
+		}
+		.fz12 {
+			display: inline-flex;
+			align-items: center;
+			i {
+				margin-right: 6px;
+			}
+		}
+	}
+	.row  {
+		text-align: center;
+	}
+}

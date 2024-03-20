@@ -20,6 +20,7 @@ input[type='checkbox'] {
 
 label {
 	display: flex;
+	align-items: center;
 	position: relative;
 }
 //input[type='radio'],
@@ -239,9 +240,9 @@ input[type="password"],
 input[type="file"],
 select,
 textarea {
-	border: 1px solid #ccc;
+	border: 1px solid #D9D9D9;
 	line-height: 20px;
-	height: 40px;
+	height: $form-height;
 	//vertical-align: middle;
 	outline: none;
 	border-radius: 5px;
