@@ -143,6 +143,7 @@ margin-bottom: 20px;
 margin-top: 22px;
 }
 #main-container h3 {
+clear: both;
 color: #131547;
 font-size: 1.75rem;
 font-weight: 500;
@@ -186,6 +187,49 @@ margin-bottom: 5px;
 /*&:first-child {
 	margin-top: 0;
 }*/
+}
+#main-container h5 {
+position: relative;
+font-size: 1.125rem;
+font-weight: 500;
+padding-left: 20px;
+margin-bottom: 5px;
+}
+#main-container h5::before {
+content: "";
+display: inline-block;
+width: 16px;
+height: 16px;
+background: linear-gradient(120deg, rgb(45, 175, 216) 0%, rgb(27, 137, 172) 100%);
+border-radius: 50%;
+position: absolute;
+top: 5px;
+left: 0;
+}
+#main-container h5::after {
+content: "";
+display: inline-block;
+width: 8px;
+height: 8px;
+border-radius: 50%;
+background-color: #fff;
+position: absolute;
+top: 9px;
+left: 4px;
+}
+#main-container h6 {
+font-size: 1rem;
+font-weight: 400;
+margin-bottom: 5px;
+}
+#main-container h6::before {
+content: "";
+display: inline-block;
+width: 4px;
+height: 4px;
+background-color: #131547;
+border-radius: 50%;
+margin: 0 5px 4px 0;
 }
 
 ul.bu > li {
@@ -1111,6 +1155,7 @@ display: none !important;
 }
 .table table {
 width: 100%;
+table-layout: fixed;
 }
 .table table thead th {
 border-bottom: none;
@@ -1177,6 +1222,9 @@ text-align: left;
 .td-tac table tbody td {
 text-align: center;
 }
+.td_tac table tbody td {
+text-align: center;
+}
 .td-vt table tbody td {
 vertical-align: top;
 }
@@ -1223,6 +1271,17 @@ width: 100%;
 .scrollX table {
 min-width: 1023px;
 }
+}
+table .referList {
+margin-left: 0;
+}
+table .referList li {
+padding-left: 0;
+text-indent: -14px;
+margin-left: 14px;
+}
+table .referList li::before {
+display: none;
 }
 table li {
 position: relative;
@@ -1390,14 +1449,6 @@ background: #F2F6FA;
 }
 .bd-line > ul > li:hover .btns .i-download::before {
 background: url(/static/portal/img/common/ico-download_on.png);
-}
-.bd-line .fileGroupSet .i-download::before {
-content: "";
-display: inline-block;
-vertical-align: middle;
-background: url(/static/portal/img/common/ico-download.png);
-width: 20px;
-height: 20px;
 }
 .bd-line.b-type ul li {
 position: relative;
@@ -5106,6 +5157,20 @@ background-position: calc(100% - 15px) center;
 }
 }
 
+.bd-line .fileGroupSet,
+.table .fileGroupSet {
+position: relative;
+}
+.bd-line .fileGroupSet .i-download::before,
+.table .fileGroupSet .i-download::before {
+content: "";
+display: inline-block;
+vertical-align: middle;
+background: url(/static/portal/img/common/ico-download.png);
+width: 20px;
+height: 20px;
+}
+
 .file-single {
 position: relative;
 display: inline-block !important;
@@ -5147,6 +5212,7 @@ background-color: #131547;
 box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.15);
 border-radius: 8px;
 z-index: 9;
+text-align: left;
 }
 #main-container .fileGoupBox h3 {
 color: #fff;
@@ -5443,6 +5509,11 @@ font-feature-settings: "liga";
 color: #fff;
 }
 
+.point {
+color: #3B63C4;
+}
+
+.fc_blue,
 .fc1 {
 color: #118DB4;
 font-weight: 500;
@@ -5476,11 +5547,39 @@ font-weight: 500;
 }
 
 .fnote {
+position: relative;
+font-size: 14px;
+color: #2F4F9D;
 margin-top: 20px;
 margin-bottom: 30px;
+padding-left: 12px;
 }
-.fnote .title .ml25 {
-margin-left: 29px !important;
+.fnote::before {
+content: "";
+display: inline-block;
+width: 4px;
+height: 4px;
+background-color: #39A0FF;
+border-radius: 50%;
+position: absolute;
+top: 8px;
+left: 0;
+}
+.fnote li {
+display: flex;
+margin-left: 0;
+text-indent: 0;
+}
+.fnote li .title {
+width: 42px;
+text-align: right;
+padding-right: 2px;
+}
+.fnote li .title .ml25 {
+margin-left: 0 !important;
+}
+.fnote li .desc {
+width: calc(100% - 42px);
 }
 
 .coinimgtxt {
@@ -7257,6 +7356,93 @@ font-feature-settings: "liga";
 word-break: break-all;
 }
 
+.serType p {
+color: #3B63C4;
+font-size: 1.125rem;
+}
+
+@media (max-width: 749px) {
+.siteList {
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+}
+}
+@media (max-width: 749px) {
+.siteList > div {
+width: 50%;
+}
+}
+.siteList > div a {
+background: #E5E5E5;
+display: block;
+position: relative;
+border: 1px solid #fff;
+}
+.siteList > div a:hover {
+border: 1px solid #3B63C4;
+text-decoration: none;
+}
+.siteList > div a:hover .name {
+background: #3B63C4;
+}
+.siteList > div a span {
+display: block;
+text-align: center;
+vertical-align: middle;
+}
+.siteList > div a .img {
+margin: 10px 10px 5px 10px;
+padding-top: 10px;
+background: #fff;
+}
+.siteList > div a .img img {
+max-width: 100%;
+}
+.siteList > div a .link {
+text-decoration: underline;
+}
+.siteList > div a .link:before {
+content: "\e89e";
+font-family: "Material Icons Outlined";
+font-weight: normal;
+font-style: normal;
+display: inline-block;
+line-height: 1;
+vertical-align: text-bottom;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+font-feature-settings: "liga";
+font-size: 18px;
+margin-right: 5px;
+}
+.siteList > div a .name {
+width: 100%;
+overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+display: inline-block;
+background: #484d58;
+font-weight: 600;
+color: #fff;
+font-size: 15px;
+margin-top: 5px;
+padding: 8px 0;
+}
+
+.t-list {
+margin-top: 18px;
+}
+.t-list dt {
+font-weight: 600;
+margin-bottom: 8px;
+}
+
 /*.scrollY {
 	.mCSB_scrollTools {
 		width: 8px;
@@ -7533,6 +7719,11 @@ padding: 5px;
 [class^=b-].sm {
 min-width: 0;
 font-size: 12px;
+}
+.table [class^=b-].sm {
+line-height: inherit;
+padding: 2px 5px;
+border-radius: 4px;
 }
 @media (min-width: 1200px) {
 [class^=b-].lg {

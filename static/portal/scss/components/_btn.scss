@@ -52,6 +52,11 @@ $btn: "[class^=b-]";
 	&.sm {
 		min-width: 0;
 		font-size: 12px;
+		.table & {
+			line-height: inherit;
+			padding: 2px 5px;
+			border-radius: 4px;
+		}
 	}
 	&.lg {
 		@include breakpoint($lg) {

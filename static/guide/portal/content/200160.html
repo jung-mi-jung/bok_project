@@ -1,0 +1,68 @@
+<h2>대량수요처</h2>
+
+<!-- false -->
+<div class="sh selMenu"> 
+	<div class="shArea"> 
+	<select name="categoryTabId" title="본부 선택"> 
+	<option selected="selected" value="tab_01">한국은행 본부</option> 
+	<option value="z11">부산본부</option> 
+	<option value="z12">대구경북본부</option> 
+	<option value="z13">목포본부</option> 
+	<option value="z14">광주전남본부</option> 
+	<option value="z15">전북본부</option> 
+	<option value="z16">대전충남본부</option> 
+	<option value="z17">충북본부</option> 
+	<option value="z18">강원본부</option> 
+	<option value="z19">인천본부</option> 
+	<option value="z20">제주본부</option> 
+	<option value="z21">경기본부</option> 
+	<option value="z22">경남본부</option> 
+	<option value="z23">강릉본부</option> 
+	<option value="z24">울산본부</option> 
+	<option value="z25">포항본부</option> 
+	<option value="z01">강남본부</option> 
+	</select> </div> <input class="b-btn searchBtn" type="submit" value="이동"></div>
+	<div class="select_Tab" id="tab_01"> 
+	<h2>한국은행 본부</h2> 
+	<div class="table scrollX tac"> 
+	<table style="height: 138px;" class=""> 
+	<caption>한국은행 본부 대량수요처</caption> 
+	<thead>
+	<tr> 
+	<th class="NamoSE_border_show" style="width: 325px;" colspan="2" scope="col">소재지</th> 
+	<th class="NamoSE_border_show" scope="col">업체명</th> 
+	<th class="NamoSE_border_show" scope="col">연락처</th> 
+	<th class="NamoSE_border_show" scope="col">필요주화</th> 
+	<th class="NamoSE_border_show" scope="col">필요시기</th> 
+	</tr> 
+	</thead> 
+	<tbody> 
+	<tr> 
+	<th class="w10p NamoSE_border_show" style="width: 118px;" scope="row">강북구</th> 
+	<td class="w30p tal" style="width: 236px;">솔매로 50길 43, 1층 한국전자금융</td> 
+	<td class="w20p">나이스씨엠에스</td> 
+	<td class="w15p">02-983-4598</td> 
+	<td class="w15p">100원화, 10원화</td> 
+	<td class="w10p">수시</td> 
+	</tr> 
+	<tr> 
+	<th class="NamoSE_border_show" style="width: 118px;" scope="row">마포구</th> 
+	<td class="tal" style="width: 236px;">독막로 281(염리동) (서울지역만 취급가능)</td> 
+	<td>㈜한네트</td> 
+	<td>02-2125-6022</td> 
+	<td>라10원화</td> 
+	<td>수시</td> 
+	</tr> 
+	</tbody> 
+	</table></div></div>
+	<script>
+	$(function() {
+	$("select[name=categoryTabId]").val('tab_01');
+	$(".searchBtn").click(function() {
+	var searchBbsSeCd = $("select[name=categoryTabId]").val();
+	if (searchBbsSeCd != "tab_01") {
+	location.href = "/portal/singl/rgHqt/content02.do?menuNo=200566&searchBbsSeCd=" + searchBbsSeCd;
+	}
+	});
+	});
+	</script>

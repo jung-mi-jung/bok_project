@@ -22,6 +22,7 @@ table {
 	}
 	table {
 		width: 100%;
+		table-layout: fixed;
 		thead {
 			th {
 				border-bottom: none;
@@ -98,6 +99,9 @@ table {
 	&-tac table tbody td {
 		text-align: center;
 	}
+	&_tac table tbody td {
+		text-align: center;
+	}
 	&-vt table tbody td {
 		vertical-align: top;
 	}
@@ -150,18 +154,31 @@ table {
 }
 
 
-table li {
-	position: relative;
-	padding-left: 10px;
-	&::before {
-		content: "";
-		display: inline-block;
-		position: absolute;
-		top: 11px;
-		left: 0;
-		background-color: #1A1A1A;
-		width: 4px;
-		height: 4px;
-		border-radius: 50%;
+table {
+	.referList {
+		margin-left: 0;
+		li {
+			padding-left: 0;
+			text-indent: -14px;
+			margin-left: 14px;
+			&::before {
+				display: none;
+			}
+		}
 	}
+	li {
+		position: relative;
+		padding-left: 10px;
+		&::before {
+			content: "";
+			display: inline-block;
+			position: absolute;
+			top: 11px;
+			left: 0;
+			background-color: #1A1A1A;
+			width: 4px;
+			height: 4px;
+			border-radius: 50%;
+		}
+	}	
 }
