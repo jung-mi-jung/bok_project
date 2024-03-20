@@ -192,9 +192,12 @@ ul.bu {
 			font-size: rem(16);
 			li {
 				@include bu-dash;
-				/*&:before {
-					color: #757575;
-				}*/
+			}
+			&.referList {
+				margin-left: 0;
+				li:before {
+					display: none;
+				}
 			}
 		}
 	}
@@ -203,6 +206,9 @@ ul.bu {
 			font-weight: 500;
 		}
 	}
+}
+p.bu {
+	@include bu-dot;
 }
 
 .bu-dash {

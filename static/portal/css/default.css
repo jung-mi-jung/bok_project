@@ -1539,9 +1539,6 @@ font-size: 1rem;
 ul.bu > li ul li {
 position: relative;
 padding-left: 9px;
-/*&:before {
-	color: #757575;
-}*/
 }
 ul.bu > li ul li::before {
 position: absolute;
@@ -1552,8 +1549,29 @@ height: 1px;
 background-color: #757575;
 content: "";
 }
+ul.bu > li ul.referList {
+margin-left: 0;
+}
+ul.bu > li ul.referList li:before {
+display: none;
+}
 ul.bu.b > li {
 font-weight: 500;
+}
+
+p.bu {
+position: relative;
+padding-left: 13px;
+}
+p.bu::before {
+position: absolute;
+top: 10px;
+left: 0;
+width: 4px;
+height: 4px;
+background-color: #131547;
+border-radius: 50%;
+content: "";
 }
 
 .bu-dash::before {
