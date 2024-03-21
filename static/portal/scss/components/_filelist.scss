@@ -320,3 +320,19 @@
 		}
 	}
 }
+
+
+[class^="icon-"] {
+	width: 22px;
+	height: 22px;
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-position: center center;
+	$ico-list: (icon-xls, icon-hwp, icon-pdf, icon-ppt, icon-word, icon-img, icon-etc,);
+	@each $item in $ico-list {
+		$i: index($ico-list, $item);
+		&.#{$item} {
+			background-image: url(/static/portal/img/ico/#{$item}.svg);
+		}
+	}
+}

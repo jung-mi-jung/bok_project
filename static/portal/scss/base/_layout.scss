@@ -1114,6 +1114,16 @@ sup {
 		@include font-ico-outline('\e88e');
 	}
 }
+.help2 {
+	color: $red;
+	margin-top: 10px;
+	margin-bottom: 5px !important;
+	&::before {
+		@include font-ico-outline('\e88e');
+		font-size: 18px;
+		margin: 0 5px 2px 0;
+	}
+}
 
 
 // @include breakpoint($xs) {
