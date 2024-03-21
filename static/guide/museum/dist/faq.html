@@ -492,52 +492,44 @@
 
 
 
-<div class="category">
-	<ul>
-		<li class="on">
-			<a href="">전체</a>
-		</li>
-		<li>
-			<a href="">통화정책</a>
-		</li>
-		<li>
-			<a href="">외환</a>
-		</li>
-		<li>
-			<a href="">기업금융</a>
-		</li>
-		<li>
-			<a href="">발권출납</a>
-		</li>
-		<li>
-			<a href="">국고증권</a>
-		</li>
-		<li>
-			<a href="">경제통계</a>
-		</li>
-		<li>
-			<a href="">공통일반</a>
-		</li>
-		<li>
-			<a href="">지급결제</a>
-		</li>
-		<li>
-			<a href="">"지역화폐"</a>
-		</li>
-	</ul>
-	<div class="categoryOnOff fr">
-		<button class="b-btn">
-			<span class="ti-menu" aria-hidden="true"></span>
-			<span class="hidden">카테고리 열고 닫기</span>
-		</button>
-	</div>
+<!-- 탭 메뉴 -->
+<div class="category2">
+    <ul class="row">
+        <li class="on">
+            <a href="">전체</a>
+        </li>
+        <li>
+            <a href="">통화정책</a>
+        </li>
+        <li>
+            <a href="">외환</a>
+        </li>
+        <li>
+            <a href="">기업금융</a>
+        </li>
+        <li>
+            <a href="">발권출납</a>
+        </li>
+    </ul>
 </div>
 
-<div class="box2">
-	<ul class="bu">
-		<li><span>외환거래심사업무 FAQ</span>는 '민원·참여마당 &lt; 외환거래심사업무안내'의 해당 업무별 내용에서 확인하실 수 있습니다. <a href="/portal/main/contents.do?menuNo=200398" class="b-go xs">바로가기</a></li>
-		<li>상기의 질문에 대한 답변에 <span>찾으시는 내용이 없다면 민원신청</span>을 하시기 바랍니다. <a href="/portal/main/contents.do?menuNo=200661" class="b-go xs">바로가기</a></li>
-	</ul>
+<!-- 검색 -->
+<div class="sh">
+	<div class="c short">
+		<div class="sh-input">
+			<div class="select-set select1">
+				<select name="" id="" title="구분 선택">
+					<option value="">전체</option>
+					<option value="">제목</option>
+					<option value="">내용</option>
+				</select>
+			</div>
+			<div class="keyword-set">
+				<span class="keyword"><input type="text" title="검색어"></span>
+				<button type="button" class="search" onclick="" aria-label="검색"></button>
+			</div>
+		</div> 
+	</div>
 </div>
 
 <dl class="faqList" id="faqList">
@@ -574,8 +566,25 @@
 	</dd>
 </dl>
 
-
-<div class="paginationSet">페이징</div></div>
+<!-- pagination -->
+<div class="paginationSet">
+	<ul class="pagination pagination-centered">
+		<li class="i first "><a title="처음 목록" href="javascript:fnSearch(1)"><span class="s"><span>처음 <span class="t">목록</span></span></span></a></li>
+		<li class="i prev "><a title="이전 목록" href="javascript:fnSearch(0)"><span class="s"><span>이전 <span class="t">목록</span></span></span></a></li>
+		<li class="active"><span><em title="현재목록"><span>1</span></em></span></li>
+		<li><a href="javascript:fnSearch(2)"><span>2</span></a></li>
+		<li><a href="javascript:fnSearch(3)"><span>3</span></a></li>
+		<li><a href="javascript:fnSearch(4)"><span>4</span></a></li>
+		<li><a href="javascript:fnSearch(5)"><span>5</span></a></li>
+		<li><a href="javascript:fnSearch(6)"><span>6</span></a></li>
+		<li><a href="javascript:fnSearch(7)"><span>7</span></a></li>
+		<li><a href="javascript:fnSearch(8)"><span>8</span></a></li>
+		<li><a href="javascript:fnSearch(9)"><span>9</span></a></li>
+		<li><a href="javascript:fnSearch(10)"><span>10</span></a></li>
+		<li class="i next"><a title="다음 목록" href="javascript:fnSearch(11)"><span class="s"><span>다음 <span class="t">목록</span></span></span></a></li>
+		<li class="i end"><a title="마지막 목록" href="javascript:fnSearch(20)"><span class="s"><span>끝 <span class="t">목록</span></span></span></a></li>
+	</ul>
+</div> </div>
 <!-- //컨텐츠 끝 -->
 
 <!-- 내가 본 콘텐츠 -->

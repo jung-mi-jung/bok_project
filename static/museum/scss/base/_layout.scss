@@ -249,6 +249,35 @@
 	}
 }
 
+// 일반형 게시판 상세 페이지일 경우
+.bd-view_wrap {
+	.hgroup {
+		border-bottom: none;
+		padding-bottom: 0;
+		margin: 40px 0 0;
+		@include breakpoint($sm){
+			margin: 0;
+			padding: 0 0 15px;
+		}
+		h1 {
+			color: $point;
+			font-size: rem(20);
+			font-weight: 700;
+			@include breakpoint($sm){
+				text-align: left;
+				margin: 0 10px;				
+			}
+		}
+	}
+}
+// 블로그형
+.bd-blog_wrap {
+	.hgroup {
+		border-bottom: none;
+		padding-bottom: 0;
+		margin: 40px 0 0;
+	}
+}
 
 .hgroup {
 	position: relative;

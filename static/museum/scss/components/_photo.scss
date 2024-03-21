@@ -109,10 +109,42 @@
 					margin: 10px 0 0;
 					padding: 0 10px;
 				}
-				.date {
+				.date, .date2, .location, .year {
+					display: block;
 					color: #666;
 					font-size: rem(14);
 					padding: 0 10px;
+				}
+				.date,
+				.location {
+					display: flex;
+					align-items: center;
+					i {
+						font-size: rem(15);
+						margin-right: 4px;
+					}
+				}
+				.badge2 {
+					position: absolute;
+					top: 6px;
+					left: -6px;
+					padding: 0 6px 0 0;
+					z-index: 10;
+					width: 80px;
+					background: url(/static/commons/img/pattern/badge.png) right 0 no-repeat;
+					background-size: contain;
+					.badge{
+						display: block;
+						position: static;
+						background: #ea5a59;
+						width: 74px;
+						height: 26px;
+						line-height: 26px;
+						padding: 0;
+						text-align: center;
+						font-size: 14px;
+						color: #fff;
+					}
 				}
 			}			
 		}
@@ -120,8 +152,8 @@
 	}
 }
 /* 소장품 화폐 목록 */
-.photo-list2 {
-	ul {
+.photoList {
+	.row {
 		display: grid;
 		margin-top: 16px;
 		grid-template-columns: repeat(4, 1fr);
@@ -137,14 +169,14 @@
 		a {
 			&:hover {
 				@include breakpoint($lg) {
-					.img-desc dt, 
-					.img-desc dd {
+					.imgDesc dt, 
+					.imgDesc dd {
 						text-decoration: underline;
 					}
 				}
 			}
 		}
-		.img-box {
+		.imgBox {
 			aspect-ratio:  394/320;
 			padding: 8px;
 			background-color: #fff;
@@ -158,7 +190,7 @@
 				background-size: contain;
 			}
 		}
-		.img-desc {
+		.imgDesc {
 			margin-top: 10px;
 			dl {
 				display: flex;
@@ -207,7 +239,7 @@
 			position: absolute;
 			top: 50%;
 			border: 1px solid #666666;
-			border-radius: 50%;
+			border-radius: 50%; 
 			width: 80px;
 			height: 80px;
 			margin-top: -40px;
@@ -221,6 +253,9 @@
 			&.next {
 				border: 1px solid $point;
 				border-radius: 50%;
+				@include breakpoint($smd) {
+					display: none;
+				}
 				&::before {
 					background: url(/static/portal/img/common/ctrl-btn-off.png) 50% no-repeat;
 				}

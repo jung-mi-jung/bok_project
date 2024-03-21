@@ -1,31 +1,56 @@
 //파일 단일
 .file-single {
 	position: relative;
-	display: inline-block !important;
+	// display: inline-flex !important;
+	justify-content: right;
 	line-height: 25px;
 	@include breakpoint($sm) {
 		margin-right: 4px;
 	}
 	i {
+		display: inline-block;
+		width: 24px;
+		height: 23px;
 		vertical-align: middle;
+		&.ico-xls{
+			background-image: url(/static/commons/img/ico-xls.png);
+		}
+		&.ico-hwp{
+			background-image: url(/static/commons/img/ico-hwp.png);
+		}
+		&.ico-pdf{
+			background-image: url(/static/commons/img/ico-pdf.png);
+		}
+		&.ico-word{
+			background-image: url(/static/commons/img/ico-word.png);
+		}
+		&.ico-img{
+			background-image: url(/static/commons/img/ico-img.png);
+		}
+		&.ico-mov{
+			background-image: url(/static/commons/img/ico-mov.png);
+		}
+		&.ico-zip{
+			background-image: url(/static/commons/img/ico-zip.png);
+		}
 	}
-	.name {
-		position: absolute;
-		top: 0;
-		right: 0;
-		width: auto;
-		padding: 4px;
-		max-width: 150px;
-		transform: all 0.3s;
-		overflow: hidden;
-		word-spacing: nowrap;
-		background-color: #141414;
-		color: #fff;
-		line-height: 1;
-		border-radius: 3px;
-		opacity: 0;
-		z-index: -1;
-	}
+	// .name {
+	// 	position: absolute;
+	// 	top: 0;
+	// 	right: 0;
+	// 	width: auto;
+	// 	padding: 4px;
+	// 	max-width: 150px;
+	// 	transform: all 0.3s;
+	// 	overflow: hidden;
+	// 	word-spacing: nowrap;
+	// 	background-color: #141414;
+	// 	color: #fff;
+	// 	line-height: 1;
+	// 	border-radius: 3px;
+	// 	opacity: 0;
+	// 	z-index: -1;
+	// }
 }
 
 .fileGoupBox {
@@ -237,8 +262,8 @@
 }
 
 [class^="ico-"] {
-	width: 22px;
-	height: 22px;
+	// width: 22px;
+	// height: 22px;
 	display: inline-block;
 	background-repeat: no-repeat;
 	//background-position: center center;

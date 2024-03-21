@@ -38,7 +38,7 @@ function servers() {
 			baseDir: './',
 			index: 'static/guide/g.html',
 		},
-		port: 1981,
+		port: 1989,
 	});
 }
 const scss = ["commons", "portal", "museum", "imer", "imerEng", "eng", "bos"];   // museum 화폐박물관	  eng 영문	 imer 경제연구원	 imerEng 경제연구원(영문)
@@ -122,30 +122,30 @@ function watchLibrary(targets) {
 
 //타입별 서브 레이아웃용(국문 포털)
 function guideLayout(targets) {
-	const watcher = watch(["static/guide/portal/layout/*.html"]);
+	const watcher = watch(["static/guide/museum/layout/*.html"]);
 	watcher.on("change", function (paths, stats) {
 		const file = new Vinyl({
 		path: paths,
 		});
 		gulp
 			.src(file.dirname + "/" + file.stem + file.extname)
-			.pipe(headerfooter.header('static/guide/portal/top.html'))
-			.pipe(headerfooter.footer('static/guide/portal/bottom.html'))
-			.pipe(gulp.dest("static/guide/portal"));
+			.pipe(headerfooter.header('static/guide/museum/top.html'))
+			.pipe(headerfooter.footer('static/guide/museum/bottom.html'))
+			.pipe(gulp.dest("static/guide/museum"));
 		browserSync.reload();
 	});
 }
 function guideToDist(targets) {  //가이드용(국문 포털)
-	const watcher = watch(["static/guide/portal/g/*.html"]);
+	const watcher = watch(["static/guide/museum/g/*.html"]);
 	watcher.on("change", function (paths, stats) {
 		const file = new Vinyl({
 		path: paths,
 		});
 		gulp
 			.src(file.dirname + "/" + file.stem + file.extname)
-			.pipe(headerfooter.header("static/guide/portal/g/common/guide-top.html"))
-			.pipe(headerfooter.footer("static/guide/portal/g/common/guide-bottom.html"))
-			.pipe(gulp.dest("static/guide/portal/dist"));
+			.pipe(headerfooter.header("static/guide/museum/g/common/guide-top.html"))
+			.pipe(headerfooter.footer("static/guide/museum/g/common/guide-bottom.html"))
+			.pipe(gulp.dest("static/guide/museum/dist"));
 		browserSync.reload();
 	});
 }
@@ -207,7 +207,7 @@ function tojsp(cb) {
 }
 
 function dist(cb) {
-	var targets = 'imer';
+	var targets = 'museum';
 	gulp.src('static/guide/' + targets + '/content/*.html')
 		.pipe(headerfooter.header('static/guide/' + targets + '/top.html'))
 		.pipe(headerfooter.footer('static/guide/' + targets + '/bottom.html'))
@@ -236,8 +236,8 @@ var sprite = async function () {
 	watch('static/museum/sprite/*.png', { events: 'all' }, function (cb) {
 		// body omitted
 		// Generate our spritesheet
-		var path = 'static/portal/img/sprite/';
-		var site = 'portal';
+		var path = 'static/museum/sprite/';
+		var site = 'museum';
 		var spriteData = gulp.src(path + '*.png').pipe(
 			spritesmith({
 				// imgName      : 'sprite.png',
@@ -271,48 +271,39 @@ var sprite = async function () {
 	});
 };
 
-var spriteMain = function () {
-	console.log('sprite watching start!');
+var spriteMain = async function () {
+	console.log("sprite watching start!");
 	// All events will be watched
-	watch('static/museum/sprite/*.png', { events: 'all' }, function (cb) {
-		// body omitted
-		// Generate our spritesheet
-		var path = 'static/museum/sprite/';
-		var site = 'ussm';
-		var spriteData = gulp.src(path + '*.png').pipe(
-			sspritesmith({
-				// imgName      : 'sprite.png',
-				// cssName      : 'sprite.scss'
-				// This will filter out `fork@2x.png`, `github@2x.png`, ... for our retina spritesheet
-				// The normal spritesheet will now receive `fork.png`, `github.png`, ...
-				retinaSrcFilter: path + "*@2x.png",
-				imgName: "sprite.png",
-				retinaImgName: "sprite@2x.png",
-				cssName: "_sprite.scss",
-				padding: 20, //이미지와의 간격
-
-				//scss에서 사용하는 background-img url
-				imgPath: `/static/${site}/img/sprite.png`,
-
-				//scss에서 사용하는 background-img url
-				retinaImgPath: `/static/${site}/img/sprite@2x.png`,
-			})
-		);
-		// Pipe image stream through image optimizer and onto disk
-		var imgStream = spriteData.img
-			// DEV: We must buffer our stream into a Buffer for `imagemin`
-			// .pipe(buffer())
-			// .pipe(imagemin())
-			.pipe(gulp.dest(`static/${site}/img/`));
-		// Pipe CSS stream through CSS optimizer and onto disk
-		var cssStream = spriteData.css
-			// .pipe(csso())
-			.pipe(gulp.dest(`static/${site}/scss/`));
-		// Return a merged stream to handle both `end` events
-		// return merge(imgStream, cssStream);
-		cb();
-	});
-};
+	// watch('static/fss/img/sprite-main/*.png', { events: 'all' }, function(cb) {
+	// body omitted
+	// Generate our spritesheet
+	var path = "static/museum/img/sprite-main/";
+	var site = "museum";
+	var spriteData = gulp.src(path + "*.png").pipe(
+		spritesmith({
+		  // imgName      : 'sprite.png',
+		  // cssName      : 'sprite.scss'
+		  // This will filter out `fork@2x.png`, `github@2x.png`, ... for our retina spritesheet
+		  // The normal spritesheet will now receive `fork.png`, `github.png`, ...
+		  retinaSrcFilter: path + "*@2x.png",
+		  imgName: "sprite-main.png",
+		  retinaImgName: "sprite-main@2x.png",
+		  cssName: "_sprite_main.scss",
+		  padding: 10, //이미지와의 간격
+		  imgPath: `/static/${site}/img/sprite-main.png`, //scss에서 사용하는 background-img url
+		  retinaImgPath: `/static/${site}/img/sprite-main@2x.png`,
+		})
+	);
+	// Pipe image stream through image optimizer and onto disk
+	spriteData.img // DEV: We must buffer our stream into a Buffer for `imagemin`
+		// .pipe(buffer())
+		// .pipe(imagemin())
+		.pipe(gulp.dest(`static/${site}/img/`));
+	// Pipe CSS stream through CSS optimizer and onto disk
+	spriteData.css
+		// .pipe(csso())
+		.pipe(gulp.dest(`static/${site}/scss/`));
+  };
 
 function imgmin(cb) {
 	gulp.src('static/*/img/**').pipe(imagemin()).pipe(gulp.dest('dist/images'));
