@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>서브명 | 한국은행</title>
+	<link type="text/css" rel="stylesheet" href="/static/portal/css/sub.css">
+	<script src="/static/jslibrary/jquery-3.5.1.min.js"></script>
+	<script src="/static/jslibrary/jquery.cookie.js"></script>
+	<link rel="stylesheet" href="/static/jslibrary/swiper@8/swiper-bundle.min.css">
+	<script src="/static/jslibrary/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js"></script>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta property="og:type"			content="website">
+	<meta property="og:title"			content="${title}">
+	<meta property="og:description"		content="${title}">
+</head>
+<body>
+<div class="skip">
+	<a href="#content">본문내용 바로가기</a>
+</div>
+<div id="wrap">
+	<div class="gnb_bg"></div>
+	<!-- header -->
+	<header id="header">
+		<div class="globalHeader">
+			<div class="container">
+				<ul>
+					<li>
+						<a href="/imer/main/main.do" target="_blank" title="새창열림">경제연구원</a>
+					</li>
+					<li>
+						<a href="/museum/main/main.do" target="_blank" title="새창열림">화폐박물관</a>
+					</li>
+					<li>
+						<a href="/portal/submain/submain/rgHqt.do?menuNo=200219">지역본부</a>
+					</li>
+					<li>
+						<a href="https://ecos.bok.or.kr" target="_blank" title="새창열림">경제시스템(ecos)</a>
+					</li>
+					<li>
+						<a href="https://snapshot.bok.or.kr" target="_blank" title="새창열림">금융·경제스냅샷</a>
+					</li>
+					<li>
+						<a href="https://dl.bok.or.kr" target="_blank" title="새창열림">전자도서관</a>
+					</li>
+					<li>
+						<a href="https://apply.bok.or.kr" target="_blank" title="새창열림">채용</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="container">
+			<h1 class="logo">
+				<a href="">
+					<span class="sr-only">한국은행</span>
+				</a>
+			</h1>
+			<!-- gnb -->
+			<nav class="gnb" id="gnb">
+				<ul>
+					<li class="menu01">
+						<a href=""><span>한국은행</span></a>
+					</li>
+					<li class="menu02 active">
+						<a href=""><span>정책 및 업무</span></a>
+					</li>
+					<li class="menu03">
+						<a href=""><span>뉴스 및 자료</span></a>
+					</li>
+					<li class="menu04">
+						<a href=""><span>멀티콘텐츠</span></a>
+					</li>
+					<li class="menu05">
+						<a href=""><span>주요서비스</span></a>
+					</li>
+				</ul>
+				<!-- //gnb -->
+				<button type="button" class="all-nav-toggle" title="전체 메뉴 열기"></button>
+			</nav>
+			<nav class="mobileGnb" id="mobileGnb">
+				<button type="button" class="m-all-nav-toggle" title="전체 메뉴 열기"></button>
+				<div class="mobileGnb__set">
+					<div class="top">
+						<span>MENU</span>
+						<button type="button" class="mobileGnb-close" title="전체 메뉴 닫기"></button>
+					</div>
+					<div class="mobileGnb__nav"></div>
+				</div>
+			</nav>
+	
+			<div class="g-info">
+				<div class="global">
+					<ul>
+						<li>
+							<a href="">본인인증</a>
+						</li>
+						<li>
+							<a href="/eng/main/main.do" target="_blank" title="새창열림">English</a>
+						</li>
+					</ul>
+				</div>
+				<button type="button" class="search" title="검색레이어 열기"></button>
+				<div class="search_wrap">
+					<form action="/">
+						검색 레이어 영역
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- 전체메뉴 -->
+		<div class="total-nav">
+			<section>
+				<div>
+					<h2 class="total-nav-title">전체 메뉴</h2>
+					<div class="nav"></div>
+					<button type="button" class="ico-close"></button>
+				</div>
+			</section>
+		</div>
+		<!-- //전체메뉴 -->
+	</header>	
+	<!-- //header -->
+
+	<!-- navigation -->
+	<div class="navigation">
+		<nav class="container">
+			<ul>
+				<li class="home"><span>Home</span></li>
+				<li>
+					<a href="" title="하위메뉴 열기">뉴스 및 자료</a>
+					<div class="depth2">
+						<ul>
+							<li>
+								<a href="">BOK이슈노트</a>
+							</li>
+							<li>
+								<a href="">BOK경제연구</a>
+							</li>
+							<li>
+								<a href="">해외경제포커스</a>
+							</li>
+							<li class="on">
+								<a href="">연차보고서</a>
+							</li>
+							<li>
+								<a href="">통화신용정책보고서</a>
+							</li>
+							<li>
+								<a href="">금융안정보고서</a>
+							</li>
+							<li>
+								<a href="">경제전망보고서</a>
+							</li>
+							<li>
+								<a href="">지역경제보고서</a>
+							</li>
+							<li>
+								<a href="">지급결제보고서</a>
+							</li>
+							<li>
+								<a href="">정기간행물</a>
+							</li>
+							<li>
+								<a href="">단행본</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="" title="하위메뉴 열기">뉴스 및 의사록</a>
+					<div class="depth2">
+						<ul>
+							<li>
+								<a href="">보도자료</a>
+							</li>
+							<li>
+								<a href="">주간보도계획</a>
+							</li>
+							<li>
+								<a href="">언론보도해명자료</a>
+							</li>
+							<li>
+								<a href="">금융통화위원회 의사록</a>
+							</li>
+							<li>
+								<a href="">금융통화위원회 의결사항</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="">보도자료</a>
+				</li>
+			</ul>
+			<div class="top-page-toolbar">
+				<div class="page-toolbar">
+					<button type="button" class="sns-toggle" aria-label="SNS 공유"></button>
+					<div class="sns-wrap">
+						<div class="sns-wrap__set">
+							<button type="button" data-type="close" class="close" aria-label="SNS 공유 닫기"></button>
+							<button type="button" data-type="youtube" class="ico-youtube" aria-label="유튜브 공유 새창열림"></button>
+							<button type="button" data-type="instagram" class="ico-instagram" aria-label="인스타그램 공유 새창열림"></button>
+							<button type="button" data-type="facebook" class="ico-facebook" aria-label="페이스북 공유 새창열림"></button>
+							<button type="button" data-type="twitter" class="ico-twitter" aria-label="트위터 공유 새창열림"></button>
+						</div>
+					</div>
+					<a href="/static/view/forPrint.html" data-size="1200, 700, yes" target="_blank" title="새창열림" class="page-print b-pop">
+						<span class="sr-only">프린트</span>
+					</a>
+					<a href="/static/guide/portal/popup/rss_popup.html" data-size="800, 500, yes" class="page-rss b-pop" target="_blank" title="새창열림">
+						<span class="sr-only">rss 한국은행</span>
+					</a>
+				</div>
+			</div>
+		</nav>
+	</div>
+	<!-- //navigation -->
+
+	<!-- content -->
+	<div class="container" id="content">
+		<div class="hgroup">
+			<h1>뉴스 및 자료</h1>			
+		</div>
+		<main id="main-container">
+
+			<div class="lnb-nav">
+				<h1>목차</h1>	
+				<ul>
+					<li class="on">
+						<a href="">금융안정 개요</a>
+						<ul>
+							<li class="on">
+								<a href="">정의</a>
+							</li>
+							<li>
+								<a href="">금융시스템 불안의 요인</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="">금융안정 정책수단</a>
+						<ul>
+							<li>
+								<a href="">개요</a>
+							</li>
+							<li>
+								<a href="">예방적 정책수단</a>
+							</li>
+							<li>
+								<a href="">금융불균형 확대방지 정책수단</a>
+							</li>
+							<li>
+								<a href="">금융위기 관리 및 치유를 위한 정책수단</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="">정책당국간 역할분담</a>
+					</li>
+					<li>
+						<a href="">중앙은행과 금융안정</a>
+					</li>
+					<li>
+						<a href="">FSB와 BCBS</a>
+						<ul>
+							<li>
+								<a href="">참여 현황</a>
+							</li>
+							<li>
+								<a href="">금융안정위원회(FSB)</a>
+							</li>
+							<li>
+								<a href="">바젤은행감독위원회(BCBS)</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="">금융안정 관련 해외사이트</a>
+					</li>
+				</ul>
+			</div>
+
+			
+			<div class="content">
+
+
+<h2>운용현황</h2>
+
+<h3>자산의 운용목적별 구분운용 </h3>
+<p>한국은행은 국외운용 외화자산을 운용목적에 따라 현금성자산 및 투자자산으로, 운용주체에 따라 투자자산을 다시 직접투자자산 및 위탁자산으로 구분하고 운용목표, 투자가능상품의 범위, 리스크 허용한도 등을 별도 설정하여 운영하고 있다. 이들은 한국은행 보유 외환보유액의 자산 구분상의 명칭일 뿐, 현금성자산과 투자자산 모두 유동성과 안전성이 높은 자산으로 운용하고 있다.</p>
+<div class="imgSet"> 
+<p class="visible-md"><img alt="자산의 운용목적별 구분운용(아래 내용 첨부)" src="/static/portal/img/cts/sub1/200413_1.gif"></p> 
+<p class="visible-sm"><a title="확대보기" href="/static/portal/img/cts/sub1/200413_1.gif" data-rel="prettyPhoto"><img alt="자산의 운용목적별 구분운용(아래 내용 첨부)" src="/static/portal/img/cts/sub1/200413_1.gif"></a></p></div>
+<div class="hidden"> 
+<ul> 
+<li>현금성 자산 
+<ul> 
+<li>일상적인 대외지급수요에 대비(Short-term liquidity tranche)</li> 
+<li>단기 금융상품으로 구성</li>
+</ul></li> 
+<li>투자자산(직접투자자산) 
+<ul> 
+<li>높은 수준의 안전성과 유동성을 유지하는 가운데 안정적인 수익성 추구</li> 
+<li>주요 선진국의 신용도 높은 장&middot;단기 채권으로 구성</li>
+</ul></li> 
+<li>투자자산(위탁자산) 
+<ul> 
+<li>외부 전문성 활용, 투자방식의 다변화 등을 통한 수익성 제고</li> 
+<li>국제적인 자산운용사 및 KIC 등에 위탁 운용</li> 
+<li>신용도 높은 채권, 주식은대부분 선진국 증시에 상장된 우량주식</li>
+</ul></li> 
+</ul> </div>
+<p><strong class="fc1">현금성자산</strong>은 일상적으로 발생하는 외화자금의 빈번한 유출입 및 일시적인 외화자금 수요에 신속하게 대처하기 위한 자산이다. 현금성자산의 운용규모는 자금유출입 실적, 외화유동성 수요전망 및 현금성 자산 보유에 따르는 기회비용 등을 고려하여 결정하는 데 2022년말 현재 국외운용 외화자산의 10.0%를 차지하고 있다. 투자대상은 매각시 거래비용을 최소화할 수 있도록 미 달러화 단기국채 또는 예치금 등 단기금융상품(money market) 중심으로 운용한다.</p>
+<p><strong class="fc1">직접투자자산</strong>은 안정적인 수익획득을 위해 주요국의 중장기 채권에 투자하는 자산으로 2022년말 현재 국외운용 외화자산의 65.7%를 차지하고 있다. 투자대상은 주요 선진국 통화로 발행된 중장기 국채, 정부기관채, 회사채, 자산유동화채 등 유동성과 안전성이 높은 채권으로 구성되어 있는데 현금성자산과 함께 한국은행이 직접 운용하고 있다.&nbsp;자금유출입 등으로 현금성자산 규모가 크게 증감하는 경우에는 직접투자자산과의 자금이관을 통해 적정수준을 유지하고 있다.</p>
+<p><strong class="fc1">위탁자산</strong>은 외부 전문성 활용, 투자방식의 다변화 등을 목적으로 설정한 자산으로서 국제기구, 세계유수의 자산운용사, 한국투자공사(KIC) 등에 위탁하여 운용하는 자산을 의미한다. 유형별로는 채권 펀드, 주식 펀드 및 혼합 펀드로 구성되어 있다. 채권 펀드는 선진국 정부채, 우량 회사채와&nbsp;자산유동화채, 물가연동채 등에 투자하는 펀드로 구성된다. 주식 펀드는 대부분 선진국 주식 펀드로 구성되며, 이 외 중국 주식을 포함하고 있다. 혼합 펀드는 채권과 주식을 모두 운용하는 펀드로&nbsp;「한국투자공사법」에 의거하여 위탁 운용하고 있는 KIC 펀드, Balancing&nbsp;펀드 등이 있다.&nbsp;2022년말 현재 국외운용 외화자산의 24.3%를 차지하고 있다.</p><!-- data table1 S -->
+<div class="h-group"> 
+<h4>자산별 비중 추이</h4> 
+<p class="fr">(기말기준, %)</p></div>
+<div class="table tac"> 
+<table> 
+<caption>자산별 비중 추이</caption> 
+<thead>
+<tr> 
+<th class="w25p NamoSE_border_show" scope="col" style="width: 222px;"></th> 
+<th class="NamoSE_border_show" scope="col" style="width: 100px;">2016</th> 
+<th class="NamoSE_border_show" scope="col" style="width: 100px;">2017</th> 
+<th class="NamoSE_border_show" scope="col" style="width: 100px;">2018</th> 
+<th class="NamoSE_border_show" scope="col" style="width: 100px;">2019</th> 
+<th class="NamoSE_border_show" scope="col" style="width: 100px;">2020</th> 
+<th class="NamoSE_border_show" scope="col" style="width: 100px;">2021</th> 
+<th class="NamoSE_border_show" scope="col" style="width: 100px;">2022</th> 
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<th scope="row" style="width: 222px;">현금성자산</th> 
+<td style="width: 100px;">4.7</td> 
+<td style="width: 100px;">3.2</td> 
+<td style="width: 100px;">5.3</td> 
+<td style="width: 100px;">4.6</td> 
+<td style="width: 100px;">5.1</td> 
+<td style="width: 100px;">5.2</td> 
+<td style="width: 100px;">10.0</td> 
+</tr> 
+<tr> 
+<th scope="row" style="width: 222px;">직접투자자산</th> 
+<td style="width: 100px;">77.3</td> 
+<td style="width: 100px;">77.7</td> 
+<td style="width: 100px;">76.4</td> 
+<td style="width: 100px;">74.6</td> 
+<td style="width: 100px;">73.9</td> 
+<td style="width: 100px;">72.0</td> 
+<td style="width: 100px;">65.7</td> 
+</tr> 
+<tr> 
+<th scope="row" style="width: 222px;">위 탁 자 산</th> 
+<td style="width: 100px;">18.0</td> 
+<td style="width: 100px;">19.1</td> 
+<td style="width: 100px;">18.3</td> 
+<td style="width: 100px;">20.8</td> 
+<td style="width: 100px;">21.0</td> 
+<td style="width: 100px;">22.8</td> 
+<td style="width: 100px;">24.3</td> 
+</tr> 
+<tr> 
+<th scope="row" style="width: 222px;">합계</th> 
+<td style="width: 100px;">100.0</td> 
+<td style="width: 100px;">100.0</td> 
+<td style="width: 100px;">100.0</td> 
+<td style="width: 100px;">100.0</td> 
+<td style="width: 100px;">100.0</td> 
+<td style="width: 100px;">100.0</td> 
+<td style="width: 100px;">100.0</td> 
+</tr> 
+</tbody> 
+</table></div>
+<p class="refer">자료 : 한국은행</p>
+<h3>통화구성</h3>
+<p>외환보유액의 통화구성은 최종적인 대외지급준비자산이라는 점을 고려하여 대상국의&nbsp;국제거래 통화, 외채구성 통화 등 국별 특성과 함께 투자대상국의 자본시장 발달정도 등을 고려하여 결정하는 것이 일반적이다. 아울러 중장기적인 환율전망 등을 반영하여 통화구성을 일부 조정하나 중앙은행의 특성상 국제금융시장에 영향을 미치지 않도록 점진적으로 실행한다.</p>
+<p>한국은행도 이와 유사한 원칙에 입각하여 통화구성을 결정하고 있으며 미 달러화 외에 유로화, 일본 엔화, 영국 파운드화, 호주 달러화 및 캐나다 달러화 등 주요 6개 통화를 중심으로 분산 투자하고 있다. 또한, 2012년에는 중국의 국제적 위상 제고와 우리나라와의 경제적 연계성 증대 등을 고려하여 중국 위안화에 대한 투자를 시작하였다. 2022년말 현재 보유외환중 미 달러화 비중은 72.0%를 차지하고 있다. 이는 전세계 공적 보유외환에서 미 달러화가 차지하는 비중 58.4%를 상회하는 수준이다.</p><!-- data table2 S -->
+<div class="h-group"> 
+<h4>전세계 외환보유액 통화구성 추이</h4> 
+<p class="fr">(기말기준, %)</p></div>
+<div class="table tac"> 
+<table> 
+<caption>전세계 외환보유액 통화구성 추이</caption> 
+<thead>
+<tr> 
+<th class="w25p NamoSE_border_show" scope="col" style="width: 222px;"></th> 
+<th class="NamoSE_border_show" scope="col" style="width: 100px;">2016</th> 
+<th class="NamoSE_border_show" scope="col" style="width: 100px;">2017</th> 
+<th class="NamoSE_border_show" scope="col" style="width: 100px;">2018</th> 
+<th class="NamoSE_border_show" scope="col" style="width: 100px;">2019</th> 
+<th class="NamoSE_border_show" scope="col" style="width: 100px;">2020</th> 
+<th class="NamoSE_border_show" scope="col" style="width: 100px;">2021</th> 
+<th class="NamoSE_border_show" scope="col" style="width: 100px;">2022</th> 
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<th scope="row" style="width: 222px;">미 달러화</th> 
+<td style="width: 100px;">65.3</td> 
+<td style="width: 100px;">62.7</td> 
+<td style="width: 100px;">61.7</td> 
+<td style="width: 100px;">60.9</td> 
+<td style="width: 100px;">58.9</td> 
+<td style="width: 100px;">58.8</td> 
+<td style="width: 100px;">58.4</td> 
+</tr> 
+<tr> 
+<th scope="row" style="width: 222px;"></th> 
+<td style="width: 100px;">(70.3)</td> 
+<td style="width: 100px;">(68.1)</td> 
+<td style="width: 100px;">(69.8)</td> 
+<td style="width: 100px;">(69.1)</td> 
+<td style="width: 100px;">(67.7)</td> 
+<td style="width: 100px;">(68.3)</td> 
+<td style="width: 100px;">(72.0)</td> 
+</tr> 
+<tr> 
+<th scope="row" style="width: 222px;">유로화</th> 
+<td style="width: 100px;">19.2</td> 
+<td style="width: 100px;">20.2</td> 
+<td style="width: 100px;">20.7</td> 
+<td style="width: 100px;">20.5</td> 
+<td style="width: 100px;">21.3</td> 
+<td style="width: 100px;">20.6</td> 
+<td style="width: 100px;">20.5</td> 
+</tr> 
+<tr> 
+<th scope="row" style="width: 222px;">일본 엔화</th> 
+<td style="width: 100px;">4.0</td> 
+<td style="width: 100px;">4.9</td> 
+<td style="width: 100px;">5.2</td> 
+<td style="width: 100px;">5.7</td> 
+<td style="width: 100px;">6.0</td> 
+<td style="width: 100px;">5.5</td> 
+<td style="width: 100px;">5.5</td> 
+</tr> 
+<tr> 
+<th scope="row" style="width: 222px;">영국 파운드화</th> 
+<td style="width: 100px;">4.3</td> 
+<td style="width: 100px;">4.5</td> 
+<td style="width: 100px;">4.4</td> 
+<td style="width: 100px;">4.6</td> 
+<td style="width: 100px;">4.7</td> 
+<td style="width: 100px;">4.8</td> 
+<td style="width: 100px;">5.0</td> 
+</tr> 
+<tr> 
+<th scope="row" style="width: 222px;">기타 통화</th> 
+<td style="width: 100px;">7.2</td> 
+<td style="width: 100px;">7.7</td> 
+<td style="width: 100px;">8.0</td> 
+<td style="width: 100px;">8.3</td> 
+<td style="width: 100px;">9.0</td> 
+<td style="width: 100px;">10.2</td> 
+<td style="width: 100px;">10.6</td> 
+</tr> 
+<tr> 
+<th scope="row" style="width: 222px;">합 계</th> 
+<td style="width: 100px;">100.0</td> 
+<td style="width: 100px;">100.0</td> 
+<td style="width: 100px;">100.0</td> 
+<td style="width: 100px;">100.0</td> 
+<td style="width: 100px;">100.0</td> 
+<td style="width: 100px;">100.0</td> 
+<td style="width: 100px;">100.0</td> 
+</tr> 
+</tbody> 
+</table></div>
+<ol class="fnote"> 
+<li>주 : ( )내는 한국은행</li> 
+</ol>
+<p class="refer">자료 : IMF, 한국은행</p>
+<h3>상품구성 </h3>
+<p>중앙은행들은 외화자산을 주로 외환보유액의 특성에 부합되도록 투자적격등급 채권과 상장주식 등 금융자산 위주로 투자하고 있다. 한국은행은 외환보유액 규모 증가에 따라 외화자산의 위험분산과 수익성 제고를 위해 국채 이외에 정부기관채, 회사채, 자산유동화채 및 주식 등으로 상품구성을 꾸준히 다변화하고 있다. 2022년말 현재 한국은행은 외화자산을 정부채 39.4%, 정부기관채 14.1%, 회사채 11.0%, 자산유동화채 11.5%, 주식 11.4% 및 예치금 12.6% 등에 고루 분산 투자하고 있다.</p><!-- data table3 S -->
+<div class="h-group"> 
+<h4>상품구성 추이</h4> 
+<p class="fr">(기말기준, %)</p></div>
+<div class="table td_tac"> 
+<table> 
+<caption>상품구성 추이</caption> 
+<thead>
+<tr> 
+<th class="NamoSE_border_show" scope="col" colspan="2" style="width: 360px;"> 
+<p><br></p></th> 
+<th class="NamoSE_border_show" scope="col" style="width: 80px;">2016</th> 
+<th class="NamoSE_border_show" scope="col" style="width: 80px;">2017</th> 
+<th class="NamoSE_border_show" scope="col" style="width: 80px;">2018</th> 
+<th class="NamoSE_border_show" scope="col" style="width: 80px;" colspan="1">
+<p>2019</p></th> 
+<th class="NamoSE_border_show" scope="col" style="width: 80px;">2020</th> 
+<th class="NamoSE_border_show" scope="col" style="width: 80px;">2021</th> 
+<th class="NamoSE_border_show" scope="col" style="width: 80px;">2022</th> 
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<th class="NamoSE_border_show" colspan="2" scope="row" style="width: 360px;">예치금</th> 
+<td>6.5</td> 
+<td>6.8</td> 
+<td>5.0</td> 
+<td>5.0</td> 
+<td>7.1</td> 
+<td>6.9</td> 
+<td>12.6</td> 
+</tr> 
+<tr> 
+<th rowspan="5" scope="row">유가증권</th> 
+<th scope="row">정부채<sup title="하단 각주의 설명 참고">1)</sup></th> 
+<td>36.9</td> 
+<td>37.5</td> 
+<td>42.9</td> 
+<td>44.6</td> 
+<td>44.5</td> 
+<td>44.9</td> 
+<td>39.4</td> 
+</tr> 
+<tr> 
+<th scope="row">정부기관채</th> 
+<td>21.0</td> 
+<td>19.2</td> 
+<td>18.0</td> 
+<td>15.8</td> 
+<td>14.4</td> 
+<td>14.1</td> 
+<td>14.1</td> 
+</tr> 
+<tr> 
+<th scope="row">회사채</th> 
+<td>14.8</td> 
+<td>14.7</td> 
+<td>13.7</td> 
+<td>13.4</td> 
+<td>13.6</td> 
+<td>12.9</td> 
+<td>11.0</td> 
+</tr> 
+<tr> 
+<th scope="row">자산유동화채</th> 
+<td>13.1</td> 
+<td>13.2</td> 
+<td>12.8</td> 
+<td>12.5</td> 
+<td>11.5</td> 
+<td>10.8</td> 
+<td>11.5</td> 
+</tr> 
+<tr> 
+<th scope="row">주식</th> 
+<td>7.7</td> 
+<td>8.6</td> 
+<td>7.6</td> 
+<td>8.7</td> 
+<td>8.9</td> 
+<td>10.4</td> 
+<td>11.4</td> 
+</tr> 
+<tr> 
+<th class="NamoSE_border_show" colspan="2" scope="row" style="width: 360px;">합 계</th> 
+<td>100.0</td> 
+<td>100.0</td> 
+<td>100.0</td> 
+<td>100.0</td> 
+<td>100.0</td> 
+<td>100.0</td> 
+<td>100.0</td> 
+</tr> 
+</tbody> 
+</table></div>
+<ol class="fnote"> 
+<li><span class="title">주 : <sup title="각주 1)의 대한 설명">1) </sup></span><span class="desc">중앙정부가 발행한 국채</span></li> 
+</ol><!-- foot note E// -->
+
+<h3>외환보유액의 운용과정</h3>
+<p>한국은행의 외화자산 운용과정은 크게 연간 운용계획 수립, 투자실행, 리스크관리 및 성과평가 등으로 이루어진다. 연간 운용계획은&nbsp;외화자산 운용방향과 전략적 운용기준, 투자지침 등으로 구성된다. 동 계획은 외부 교수 및 전문가들로 구성된 외화자산운용자문위원회와 한국은행의 주요 부서장들이 참여하는 외화자산리스크위원회에서 광범위하게 의견을 수렴하고 금융통화위원회가 기본방향을 의결하는 과정을 거쳐 수립된다.</p>
+<div class="imgSet"> 
+<p class="visible-md"><img alt="외화자산 연간 운용계획 수립 과정" src="/static/portal/img/cts/attachs/img_200413.png" style="image-rendering: -webkit-optimize-contrast;"></p> 
+<p class="visible-sm"><a title="확대보기" href="/static/portal/img/cts/attachs/img_200413.png" data-rel="prettyPhoto"><img alt="외화자산 연간 운용계획 수립 과정" src="/static/portal/img/cts/attachs/img_200413.png"></a></p></div>
+<div class="hidden"> 
+<h4>외화자산 연간 운용계획 수립 과정</h4> 
+<ul> 
+<li>외화자산운용자문위원회<sup>2)</sup>(시장전망 및 투자전략 자문)</li> 
+<li>외지운용원(연간 운용계획 제안)</li> 
+<li>외화자산리스크위원회<sup>1)</sup>(연간 운용계획 심의)</li> 
+<li>금융통화위원회(연간 운용방향 등 중요사항 의결)</li> 
+<li>총재(연간 운용계획 결정)</li> 
+</ul> 
+<ol class="fnote"> 
+<li><span class="title">주 : <sup title="각주 1)의 대한 설명" class=" mr5 fc_red">1) </sup></span><span class="desc">외화자산리스크위원회는 국제국 담당 부총재보(의장), 외자운용원장, 기획협력국장, 금융시장국장, 국제국장, 국제경제부장, 투자운용1부장, 투자운용2부장, 운용지원부장 등 총9명으로 구성되어 있다.</span></li> 
+<li><span class="title"><sup title="각주 2)의 대한 설명" class=" mr5 ml25 fc_red">2) </sup></span><span class="desc">외화자산운용자문위원회는 8명의 외부전문가와 4명의 한국은행 내부인사로 교수와 금융기관 전문가들로 구성되어 있다.</span></li> 
+</ol> 
+<p>자료 : 한국은행</p></div>
+<p>연간 운용계획이 결정되면 운용계획에서 정한 투자지침 하에서 전략적 운용기준 이상의 수익을 거두기 위해 유가증권, 통화 등을 거래한다. 주요 투자전략으로 환율, 금리, 스프레드 등의 방향성을 예측하여 자산구성 등을 조정하는 top-down 전략과 개별 자산들의 상대가치분석 및 매매를 통해 수익을 추구하는 bottom-up 전략 등을 활용한다. 한편 시장여건 변화에 보다 효율적으로 대처하고 거래비용을 절감하기 위해 파생금융상품을 일부 활용하고 있다. 이들 상품은 금리, 환율 등을 기초자산으로 하는 선물, 스왑, 옵션 등 기본적인 파생금융상품들로서 전체 거래규모 및 거래상대방별 익스포저를 제한하는 등 리스크를 엄격히 관리하고 있다.</p>
+<p>유가증권, 통화 등의 거래에 따라 거래상대방, 증권보관기관 및 주 결제은행과의 전문교환을 통해 유가증권 및 자금&nbsp;결제가 이루어지며, 일별로 외화자산의 운용성과와 리스크를 평가하고, 운용지침 준수여부 등을 실시간으로 모니터링한다.</p>
+<h3>거래상대기관 선정기준 및 절차</h3>
+<p>한국은행은 유가증권, 통화(FX), 파생금융상품 및 예치금 등 다양한 금융거래를 위해 다수의 글로벌 금융회사들과 거래관계를 맺고 있다. 거래기관은 국제표준에 따라 해당거래를 위해 특정계약을 필요로 하는 개별계약기관과 계약 없이 다수의 금융회사들을 거래상대방 풀(pool)로 선정하는 일괄선정기관으로 구분된다. 거래기관은 투자적격등급 이상인 금융회사를 대상으로 국제 신용평가사들의 신용등급, 자산규모 및 건전성, 국제적 지명도 등을 기준으로 선정한다. 한편, 신용위험 관리를 위해 이들 거래기관의 신용도와 재무상황, 평판 등을 매일 점검하고, 필요시 수시로 거래기관을 조정하고 있다.</p><!-- <p><img title="거래상대기관 선정기준" alt="거래상대기관 선정기준" src="/static/portal/img/cts/old/pic2.jpg" /></p> -->
+<h4>외화자산 거래대상기관 분류 및 선정기준</h4>
+<div class="table"> 
+<table> 
+<caption>외화자산 거래대상기관 분류 및 선정기준</caption> 
+<colgroup>
+	<col style="width: 33.3%;">
+	<col style="width: 33.3%;">
+	<col style="width: 33.3%;">
+</colgroup>
+<thead>
+<tr> 
+<th class="NamoSE_border_show" scope="col">분류</th> 
+<th class="NamoSE_border_show" scope="col">거래종류</th> 
+<th class="NamoSE_border_show" scope="col">선정기준</th> 
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td class="tac">개별계약기관</td> 
+<td class="tac">환매조건부채권매매, 장내 및 장외 파생금융상품 매매,<br> 자금결제, 유가증권 보관 및 대여, 위탁운용 등</td> 
+<td rowspan="2">
+<ul> 
+<li>신용등급</li> 
+<li>자산규모 및 건전성</li> 
+<li>국제적 지명도</li> 
+</ul></td> 
+</tr> 
+<tr> 
+<td class="tac">일괄선정기관</td> 
+<td class="tac">유가증권 및 통화 매매, 정기예치 거래</td> 
+</tr> 
+</tbody> 
+</table></div>
+<p>자료 : 한국은행</p>
+<p>한국은행은 외화자산의 일부를 글로벌 자산운용사에 위탁운용하고 있는 바, 위탁운용사는 운용능력 및 과거 운용성과, 운용자산 규모, 재무상태 등을 기준으로 선정한다. 위탁운용사 선정은 먼저 제안서 요청대상 후보기관(long list)을 선정하고 접수된 제안서 심사와 현지 실사를 통해 최종후보(short list)를 선정한 후 프리젠테이션 등에 대한 선정심의위원회의 평가를 통해 최종순위를 결정하는 방식으로 이루어지는 데, 동 위원회에서는 투명성 및 객관성을 확보하기 위해 외부전문가를 포함시키고 있다. 다만, 필요한 경우 현지방문조사 등 일부 절차를 생략할 수 있다.</p><!-- <p><img alt="위탁운용사 선정과정" src="/static/portal/img/cts/old/pic2_1.jpg" /></p> -->
+<div class="imgSet"> 
+<p class="visible-md"><img alt="위탁운용사 선정과정" src="/static/portal/img/cts/sub1/200413_3.gif"></p> 
+<p class="visible-sm"><a title="확대보기" href="/static/portal/img/cts/sub1/200413_3.gif" data-rel="prettyPhoto"><img alt="위탁운용사 선정과정" src="/static/portal/img/cts/sub1/200413_3.gif"></a></p></div>
+<div class="hidden"> 
+<h4>위탁운용사 선정과정</h4> 
+<ul> 
+<li>위탁운용사 선정 계획 수립(선정기관수, 평가항목 및 배점 결정)</li> 
+<li>후보기관 선정 및 제안서 요청(과거 운용성과 및 자산운용규모 감안)</li> 
+<li>서류심사(운용규모, 신용도, 운용성과 등 정량적 평가)</li> 
+<li>현지실사(투자의사결정과정 등 정상적 평가)</li> 
+<li>프리젠테이션(위탁기관선정심의위원회의 평가)</li> 
+<li>최종순의 결정(정량적, 정성적 평가를 종합)</li> 
+<li>수수료 협상 및 계약체결(목표 수수료율 이내에서 계약 체결)</li> 
+</ul> 
+<p>자료 : 한국은행</p></div>
+<p>한국은행은 국내 증권사를 외화채권 거래기관으로 선정하고 국내 자산운용사에 일부 자산을 위탁하는 등 외환보유액 운용의 거래상대방으로 국내 금융기관을 선정하여 적극 활용하고 있다. 앞으로도 국내 증권사와의 거래를 양적, 질적으로 확대하는 한편 위탁 규모를 점진적으로 늘려 국내 자산운용사의 운용역량 강화를 실질적으로 뒷받침하는 등 우리나라 금융산업의 발전을 위한 노력을 계속해나갈 계획이다.</p>
+<h4>외화자산 운용 시 국내 금융기관 활용 현황</h4>
+<div class="table tac"> 
+<table> 
+<caption>외화자산 거래대상기관 분류 및 선정기준</caption> 
+<colgroup>
+	<col style="width: 22%;">
+	<col style="width: 25%;">
+	<col style="width: 18%;">
+	<col>
+	<col style="width: 15%;">
+</colgroup>
+<thead>
+<tr> 
+<th class="NamoSE_border_show" scope="col"> 
+<p style="text-align: center;">유형</p></th> 
+<th class="NamoSE_border_show" scope="col">
+<p style="text-align: center;">상품</p></th> 
+<th class="NamoSE_border_show" scope="col">
+<p style="text-align: center;">대상기관<sup title="하단 각주의 설명 참고">1)</sup></p></th> 
+<th class="NamoSE_border_show" scope="col" colspan="1">
+<p style="text-align: center;">규모</p></th> 
+<th class="NamoSE_border_show" scope="col" colspan="1">
+<p style="text-align: center;">개시시기</p></th> 
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td class="tac">
+<p style="text-align: center;">외화채권의&nbsp;<span style="font-size: 15px;">매매거래</span></p></td> 
+<td class="tac" style="width: 294px; height: 28px;">
+<p style="text-align: center;">정부채, 정부기관채, 회사채</p></td> 
+<td rowspan="1" style="width: 97px; height: 28px;">증권사(5)</td> 
+<td rowspan="1" style="width: 113px; height: 28px;" colspan="1">
+<p style="text-align: center;">38.4억달러<sup title="하단 각주의 설명 참고">2)</sup></p></td> 
+<td rowspan="1" style="width: 146px; height: 28px;" colspan="1">
+<p style="text-align: center;">2018.1월</p></td> 
+</tr> 
+<tr> 
+<td class="tac" style="width: 234px; height: 82px;" colspan="1" rowspan="3">
+<p style="text-align: center;">주식&middot;채권 위탁운용</p></td> 
+<td class="tac" style="width: 294px; height: 27px;">
+<p style="text-align: center;">중국 주식</p></td> 
+<td rowspan="1" style="width: 97px; height: 27px;" colspan="1">
+<p style="text-align: center;">자산운용사(3)</td> 
+<td rowspan="1" style="width: 113px; height: 27px;" colspan="1">
+<p style="text-align: center;">5.9억달러<sup title="하단 각주의 설명 참고">3)</sup></p></td> 
+<td rowspan="1" style="width: 146px; height: 27px;" colspan="1">
+<p style="text-align: center;">2012.6월</p></td> 
+</tr> 
+<tr> 
+<td class="tac" style="width: 294px; height: 32px;" rowspan="1">
+<p style="text-align: center;">선진국 주식</p></td> 
+<td rowspan="1" style="width: 97px; height: 32px;" colspan="1">
+<p style="text-align: center;">자산운용사(4)</td> 
+<td rowspan="1" style="width: 113px; height: 32px;" colspan="1">
+<p style="text-align: center;">17.5억달러<sup title="하단 각주의 설명 참고">3)</sup></p></td> 
+<td rowspan="1" style="width: 146px; height: 32px;" colspan="1">
+<p style="text-align: center;">2019.4월</p></td> 
+</tr> 
+<tr> 
+<td class="tac" style="width: 294px; height: 32px;" rowspan="1">
+<p style="text-align: center;">선진국 채권</p></td> 
+<td rowspan="1" style="width: 97px; height: 32px;" colspan="1">
+<p style="text-align: center;">자산운용사(3)</td> 
+<td rowspan="1" style="width: 113px; height: 32px;" colspan="1">
+<p style="text-align: center;">7.0억달러<sup title="하단 각주의 설명 참고">3)</sup></p></td> 
+<td rowspan="1" style="width: 146px; height: 32px;" colspan="1">
+<p style="text-align: center;">2022.1월</p></td> 
+</tr> 
+</tbody> 
+</table></div>
+<ol class="fnote"> 
+<li style="text-align: left;"><span class="title"><span style="color: rgb(102, 102, 102);">주:</span>&nbsp;<span title="각주 1)의 대한 설명" class=" mr5 fc_red" style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; font-size: 14px; vertical-align: top;">1)</span></span><span class="desc" style="color: rgb(102, 102, 102);">(&nbsp;&nbsp;) 내는 거래기관수</span></li> 
+<li style="text-align: left;"><span title="각주 2)의 대한 설명" class=" mr5 fc_red" style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; font-size: 14px; vertical-align: top;">&nbsp; &nbsp; &nbsp;2)&nbsp;</span><span style="color: rgb(102, 102, 102);">22년중 거래금액 기준</span></li> 
+<li style="text-align: left;"><span title="각주 3)의 대한 설명" class=" mr5 fc_red" style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; font-size: 14px; vertical-align: top;">&nbsp; &nbsp; &nbsp;3)&nbsp;</span><span style="color: rgb(102, 102, 102);">위탁원금 기준</span></li> 
+</ol>
+<p style="text-align: left;"><span style="font-size: 11pt; color: rgb(102, 102, 102);">자료 : 한국은행</span></p>
+</div>
+
+<script src="/static/jslibrary/swiper@8/swiper-bundle.min.js"></script>
+<script src="/static/portal/js/common.js"></script>
+</body>
+</html>

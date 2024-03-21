@@ -149,6 +149,8 @@ function guideToDist(targets) {  //가이드용(국문 포털)
 		browserSync.reload();
 	});
 }
+
+//목차형 컨텐츠 작업
 function watchContent(targets) {
 	const watcher = watch('static/guide/' + targets + '/content/*.html');
 	watcher.on('change', function (paths, stats) {
@@ -156,15 +158,15 @@ function watchContent(targets) {
 			path: paths,
 		});
 		gulp.src(file.dirname + '/' + file.stem + file.extname)
-			.pipe(headerfooter.header('static/guide/' + targets + '/top.html'))
-			.pipe(headerfooter.footer('static/guide/' + targets + '/bottom.html'))
+			.pipe(headerfooter.header('static/guide/' + targets + '/content-top.html'))
+			.pipe(headerfooter.footer('static/guide/' + targets + '/content-bottom.html'))
 			.pipe(gulp.dest('static/guide/' + targets + '/dist'));
-		if (jspOut) {
-			gulp.src(file.dirname + '/' + file.stem + file.extname)
-				.pipe(headerfooter.header('<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>'))
-				.pipe(rename({ extname: '.jsp' }))
-				.pipe(gulp.dest('WEB-INF/jsp/cts/' + targets + '/'));
-		}
+		// if (jspOut) {
+		// 	gulp.src(file.dirname + '/' + file.stem + file.extname)
+		// 		.pipe(headerfooter.header('<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>'))
+		// 		.pipe(rename({ extname: '.jsp' }))
+		// 		.pipe(gulp.dest('WEB-INF/jsp/cts/' + targets + '/'));
+		// }
 	});
 }
 
@@ -313,7 +315,7 @@ exports.default = series(parallel(servers, waths, sprite, guideToDist, guideLayo
 // exports.default   = series(clean, parallel(html, watchFiles));
 exports.server = series(servers);
 exports.guideToDist = guideToDist;
-exports.guideLayout = guideLayout
+exports.guideLayout = guideLayout;
 exports.mail = mail;
 exports.tojsp = tojsp;
 exports.dist = dist;

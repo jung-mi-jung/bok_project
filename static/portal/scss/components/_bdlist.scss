@@ -151,19 +151,7 @@
 				}
 			}		
 		}
-	}
-	.fileGroupSet {
-		.i-download {
-			&::before {
-				content: "";
-				display: inline-block;
-				vertical-align: middle;
-				background: url(/static/portal/img/common/ico-download.png);
-				width: 20px;
-				height: 20px;
-			}
-		}
-	}
+	}	
 	&.b-type {
 		ul {		
 			li {
@@ -197,7 +185,6 @@
 		}
 	}	
 }
-
 .bdList {
 	border-top: 2px solid #222;	
 	th,

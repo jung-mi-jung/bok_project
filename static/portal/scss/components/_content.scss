@@ -1,3 +1,7 @@
+.point {
+	color: $color_point;
+}
+.fc_blue,
 .fc1 {
 	color: #118DB4;
 	font-weight: 500;
@@ -29,12 +33,44 @@ p.subject {
 	}	
 }
 
+.numStyle{
+	background: #025c77;
+	border-radius: 3px;color:#fff;width:18px;line-height:1.3;text-align:center;display:inline-block;
+}
+
 .fnote {
+	position: relative;
+	font-size: 14px;
+	color: #2F4F9D;
 	margin-top: 20px;
 	margin-bottom: 30px;
-	.title {
-		.ml25 {
-			margin-left: 29px !important;
+	padding-left: 12px;	
+	&::before {
+		content: "";
+		display: inline-block;
+		width: 4px;
+		height: 4px;
+		background-color: #39A0FF;
+		border-radius: 50%;
+		position: absolute;
+		top: 8px;
+		left: 0;
+	}
+	li {
+		display: flex;
+		margin-left: 0;
+		text-indent: 0;
+		.title {
+			width: 42px;
+			text-align: right;
+			padding-right: 2px;
+			.ml25 {
+				//margin-left: 22px !important;
+				margin-left: 0 !important;
+			}
+		}
+		.desc {
+			width: calc(100% - 42px);
 		}
 	}
 }
@@ -1502,7 +1538,69 @@ p.subject {
 	}
 }
 
+//직원윤리강령
+.serType {
+    // padding-left: 60px;
+    // position: relative;
+	p {
+		color: $color-point;
+		font-size: rem(18);
+	}
+}
 
+
+//타기관 지원제도
+.siteList{	
+	@include breakpoint($sm){			
+		display: flex;
+		flex-wrap: wrap;	
+		flex-direction: row;
+	}
+	>div{		
+		@include breakpoint($sm){
+			width: 50%;
+		}
+		a{
+			background:#E5E5E5;display:block;position:relative;border:1px solid #fff;
+			&:hover{
+				border:1px solid $color-point;text-decoration:none;
+				.name{
+					background:$color-point;
+				}
+			}
+			span{
+				display:block;text-align:center;
+				vertical-align: middle;
+			}
+			.img{
+				margin:10px 10px 5px 10px;padding-top:10px;background:#fff;
+				img{
+					max-width:100%;
+				}
+			}
+			.link{
+				text-decoration: underline;
+				&:before{
+					@include font-ico-outline('\e89e');
+					font-size: 18px;
+					margin-right: 5px;
+				}
+			}
+			.name{
+				width: 100%;
+				@include ellipsis;
+				background:#484d58;font-weight:600;color:#fff;font-size:15px;margin-top:5px;padding:8px 0;
+			}
+		}
+	}
+}
+.t-list {
+	margin-top: 18px;
+	dt {
+		font-weight: 600;
+		margin-bottom: 8px;
+	}
+}
 
 
 // .userType{

@@ -1065,9 +1065,14 @@
 
 
 sup {
-    color: $fc_red;
-    margin: 0 5px 0 3px;
-    font-weight: 600;
+    top: 0;
+	font-size: 100%;
+	vertical-align: middle;	
+	.table & {
+		vertical-align: super;
+		font-size: 75%;
+		color: #39A0FF;
+	}
 }
 
 
