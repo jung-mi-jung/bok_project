@@ -18,15 +18,18 @@
 	}
 }
 $btn: "[class^=b-]";
+
 #{$btn} {
 	border: none;
 	font-size: rem(18);
 	text-align: center;
 	min-width: 80px;
-	display: inline-block;
-	line-height: 50px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	line-height: 48px;
 	color: #fff;
-	background-color: $point;
+	background-color: #3B63C4;
 	border-radius: 6px;
 	padding: 0 10px;
 	&:focus {
@@ -84,6 +87,26 @@ $btn: "[class^=b-]";
 	&.b-link {
 		&::after {
 			@include font-ico-outline('\e941');
+			margin-left: 4px;
+		}
+	}
+	&.b-go{
+		&::after {
+			content: "\e315";
+			font-family: "Material Icons Outlined";
+			font-weight: normal;
+			font-style: normal;
+			display: inline-block;
+			line-height: 1;
+			vertical-align: text-bottom;
+			text-transform: none;
+			letter-spacing: normal;
+			word-wrap: normal;
+			white-space: nowrap;
+			-webkit-font-smoothing: antialiased;
+			text-rendering: optimizeLegibility;
+			-moz-osx-font-smoothing: grayscale;
+			font-feature-settings: "liga";
 			margin-left: 4px;
 		}
 	}

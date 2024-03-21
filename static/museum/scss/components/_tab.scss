@@ -202,10 +202,13 @@
 }
 
 /* 미술품 게시판 목록 탭메뉴 */
-.tab-list2 {
+.category2 {
 	margin-bottom: 24px;
-	ul {
+	.row {
 		justify-content: center;
+		@include breakpoint($smd) {
+			flex-wrap: wrap;
+		}
 	}
 	li {
 		position: relative;
@@ -234,7 +237,7 @@
 				display: none;
 			}
 		}
-		&.active {
+		&.on {
 			color: #1A1A1A;
 			border: 2px solid #4D4D4D;
 			box-sizing: border-box;

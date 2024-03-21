@@ -2240,6 +2240,35 @@ color: #fff;
 }
 }
 
+.bd-view_wrap .hgroup {
+border-bottom: none;
+padding-bottom: 0;
+margin: 40px 0 0;
+}
+@media (max-width: 749px) {
+.bd-view_wrap .hgroup {
+margin: 0;
+padding: 0 0 15px;
+}
+}
+.bd-view_wrap .hgroup h1 {
+color: #131547;
+font-size: 1.25rem;
+font-weight: 700;
+}
+@media (max-width: 749px) {
+.bd-view_wrap .hgroup h1 {
+text-align: left;
+margin: 0 10px;
+}
+}
+
+.bd-blog_wrap .hgroup {
+border-bottom: none;
+padding-bottom: 0;
+margin: 40px 0 0;
+}
+
 .hgroup {
 position: relative;
 display: flex;

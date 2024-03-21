@@ -97,7 +97,7 @@ $(function () {
 			//$(".lnb-nav, .sh-db").addClass('sticky');
 		} else {
 			$('body').removeClass('gnb-stiky');
-			//$(".lnb-nav, .sh-db").removeClass('sticky');
+			//$(".lnb-nav, .sh-db").remo`veClass('sticky');
 		}
 	}
 	$(window).on('scroll', function () {
