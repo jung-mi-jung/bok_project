@@ -5272,37 +5272,6 @@ width: 20px;
 height: 20px;
 }
 
-.file-single {
-position: relative;
-display: inline-block !important;
-line-height: 25px;
-}
-@media (max-width: 749px) {
-.file-single {
-margin-right: 4px;
-}
-}
-.file-single i {
-vertical-align: middle;
-}
-.file-single .name {
-position: absolute;
-top: 0;
-right: 0;
-width: auto;
-padding: 4px;
-max-width: 150px;
-transform: all 0.3s;
-overflow: hidden;
-word-spacing: nowrap;
-background-color: #141414;
-color: #fff;
-line-height: 1;
-border-radius: 3px;
-opacity: 0;
-z-index: -1;
-}
-
 .fileGoupBox {
 display: none;
 position: absolute;
@@ -5420,101 +5389,6 @@ margin-top: 1px;
 font-size: 12px;
 color: #2F4F9D;
 font-weight: 600;
-}
-
-.file-group {
-display: block;
-}
-@media (min-width: 750px) {
-.file-group {
-position: relative;
-}
-}
-.file-group__ctrl {
-width: 21px;
-height: 21px;
-background: url(/static/aieth/img/ico/ico-file-group.png) 50% 50% no-repeat;
-vertical-align: middle;
-}
-.file-group__set {
-display: none;
-width: 260px;
-background-color: #fff;
-}
-.file-group__set__title {
-padding-left: 11px;
-text-align: left;
-color: #fff;
-background-color: #131547;
-font-weight: 300;
-height: 34px;
-line-height: 34px;
-}
-.file-group__set__body {
-padding: 10px 0;
-}
-.file-group__set .close {
-position: absolute;
-right: -2px;
-top: -2px;
-height: 34px;
-width: 34px;
-}
-.file-group__set .close::before {
-content: "\e5cd";
-font-family: "Material Icons";
-color: #fff;
-font-size: 24px;
-}
-.file-group__set.active {
-display: block;
-position: absolute;
-top: 25px;
-right: 0;
-border: 2px solid #131547;
-border-radius: 5px;
-min-width: 100px;
-z-index: 9999;
-}
-@media (max-width: 749px) {
-.file-group__set.active {
-left: inherit;
-right: 0;
-}
-}
-.file-group__set.active a {
-padding: 3px 10px;
-text-overflow: ellipsis;
-overflow: hidden;
-white-space: nowrap;
-display: block;
-text-align: left;
-width: 100%;
-}
-.file-group__set.active a i {
-margin-right: 5px;
-}
-@media (min-width: 750px) and (max-width: 1199px) {
-.file-group__set.active {
-left: inherit;
-right: 0;
-}
-}
-.file-group__set__item {
-display: inline-block;
-line-height: 25px;
-}
-.file-group__set__item i {
-vertical-align: top;
-}
-.file-group__set__item .name {
-display: inline;
-}
-
-.ico-default-etc {
-width: 22px;
-height: 22px;
-background-image: url(/static/aieth/img/ico/ico-etc.svg);
 }
 
 .file-list + .file-add {
