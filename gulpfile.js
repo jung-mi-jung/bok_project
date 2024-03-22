@@ -38,8 +38,8 @@ function servers() {
 			baseDir: './',
 			index: 'static/guide/g.html',
 		},
-		// port: 1981,
-		port: 1989,
+		port: 1981,
+		//port: 1989,
 	});
 }
 const scss = ["commons", "portal", "museum", "imer", "imerEng", "eng", "bos"];   // museum 화폐박물관	  eng 영문	 imer 경제연구원	 imerEng 경제연구원(영문)
@@ -96,11 +96,8 @@ function waths() {
 	watchLibrary('bos');
 	//watchContent('bos');
 
-	guideToDist('portal');	//guideToDist 가이드용
-	guideToDist('museum');	
-
-	guideLayout('portal');	//레이아웃용
-	guideLayout('museum');
+	guideToDist('portal');	//guideToDist 레이아웃용
+	guideToDist('museum');
 	
 }
 
@@ -137,7 +134,7 @@ function guideLayout(targets) {
 			.src(file.dirname + "/" + file.stem + file.extname)
 			.pipe(headerfooter.header('static/guide/' + targets + '/top.html'))
 			.pipe(headerfooter.footer('static/guide/' + targets + '/bottom.html'))
-			.pipe(gulp.dest('static/guide/' + targets));
+			.pipe(gulp.dest("static/guide/" + targets));
 		browserSync.reload();
 	});
 }
@@ -151,7 +148,6 @@ function guideToDist(targets) {  //가이드용
 			.src(file.dirname + "/" + file.stem + file.extname)
 			.pipe(headerfooter.header("static/guide/" + targets + "/g/common/guide-top.html"))
 			.pipe(headerfooter.footer("static/guide/" + targets + "/g/common/guide-bottom.html"))
-			//.pipe(gulp.dest("static/guide/" + targets));
 			.pipe(gulp.dest("static/guide/" + targets + "/dist"));
 
 		browserSync.reload();
@@ -323,7 +319,7 @@ exports.default = series(parallel(servers, waths, sprite));
 // exports.default   = series(clean, parallel(html, watchFiles));
 exports.server = series(servers);
 exports.guideToDist = guideToDist;	//가이드용 g
-exports.guideLayout = guideLayout;	//레이아웃용
+exports.guideLayout = guideLayout;
 exports.mail = mail;
 exports.tojsp = tojsp;
 exports.dist = dist;
