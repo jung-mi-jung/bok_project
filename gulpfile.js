@@ -39,6 +39,7 @@ function servers() {
 			index: 'static/guide/g.html',
 		},
 		port: 1981,
+		//port: 1989,
 	});
 }
 const scss = ["commons", "portal", "museum", "imer", "imerEng", "eng", "bos"];   // museum 화폐박물관	  eng 영문	 imer 경제연구원	 imerEng 경제연구원(영문)
@@ -148,6 +149,7 @@ function guideToDist(targets) {  //가이드용
 			.pipe(headerfooter.header("static/guide/" + targets + "/g/common/guide-top.html"))
 			.pipe(headerfooter.footer("static/guide/" + targets + "/g/common/guide-bottom.html"))
 			.pipe(gulp.dest("static/guide/" + targets + "/dist"));
+
 		browserSync.reload();
 	});
 }

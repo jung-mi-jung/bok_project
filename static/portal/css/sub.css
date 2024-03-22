@@ -215,7 +215,10 @@ margin-bottom: 5px;
 #main-container h5 {
 position: relative;
 font-size: 1.125rem;
+<<<<<<< HEAD
 color: #a1a1a1;
+=======
+>>>>>>> e35cae3b67de3506dda954862be3327755f18723
 font-weight: 500;
 padding-left: 24px;
 margin-bottom: 5px;
@@ -5572,8 +5575,13 @@ color: #fff;
 }
 
 [class^=icon-] {
+<<<<<<< HEAD
 width: 24px;
 height: 24px;
+=======
+width: 22px;
+height: 22px;
+>>>>>>> e35cae3b67de3506dda954862be3327755f18723
 display: inline-block;
 background-repeat: no-repeat;
 background-position: center center;
@@ -5599,6 +5607,7 @@ background-image: url(/static/portal/img/ico/icon-img.svg);
 [class^=icon-].icon-etc {
 background-image: url(/static/portal/img/ico/icon-etc.svg);
 }
+<<<<<<< HEAD
 [class^=icon-].icon-zip {
 background-image: url(/static/portal/img/ico/icon-zip.svg);
 }
@@ -5615,6 +5624,8 @@ background-image: url(/static/portal/img/ico/sns-facebook.svg);
 [class^=sns-].sns-twitter::before {
 background-image: url(/static/portal/img/ico/sns-twitter.svg);
 }
+=======
+>>>>>>> e35cae3b67de3506dda954862be3327755f18723
 
 .sm-txt {
 font-size: 13px;

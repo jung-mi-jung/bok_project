@@ -322,6 +322,7 @@
 }
 
 
+<<<<<<< HEAD
 $ico-list: ("icon-xls", "icon-hwp", "icon-pdf", "icon-ppt", "icon-word", "icon-img", "icon-etc", "icon-zip");
 
 [class^="icon-"] {
@@ -333,10 +334,22 @@ $ico-list: ("icon-xls", "icon-hwp", "icon-pdf", "icon-ppt", "icon-word", "icon-i
 	
 	@each $item in $ico-list {
 		
+=======
+[class^="icon-"] {
+	width: 22px;
+	height: 22px;
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-position: center center;
+	$ico-list: (icon-xls, icon-hwp, icon-pdf, icon-ppt, icon-word, icon-img, icon-etc,);
+	@each $item in $ico-list {
+		$i: index($ico-list, $item);
+>>>>>>> e35cae3b67de3506dda954862be3327755f18723
 		&.#{$item} {
 			background-image: url(/static/portal/img/ico/#{$item}.svg);
 		}
 	}
+<<<<<<< HEAD
 }
 
 
@@ -352,3 +365,6 @@ $snslist: ("sns-youtube", "sns-instagram", "sns-facebook", "sns-twitter");
 	}
 }
 
+=======
+}
+>>>>>>> e35cae3b67de3506dda954862be3327755f18723
