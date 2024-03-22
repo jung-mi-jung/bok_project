@@ -255,21 +255,6 @@
 	background-image: url(/static/aieth/img/ico/ico-etc.svg);
 }
 
-[class^="ico-"] {
-	width: 22px;
-	height: 22px;
-	display: inline-block;
-	background-repeat: no-repeat;
-	background-position: center center;
-
-	$ico-list: (ico-xls, ico-hwp, ico-pdf, ico-ppt, ico-word, ico-img, ico-zip, ico-etc, ico-mov);
-	@each $item in $ico-list {
-		$i: index($ico-list, $item);
-		&.#{$item} {
-			background-image: url(/static/aieth/img/ico/#{$item}.svg);
-		}
-	}
-}
 //뷰페이지 파일목록
 .file-list {
 	& + .file-add {
@@ -322,7 +307,6 @@
 }
 
 
-<<<<<<< HEAD
 $ico-list: ("icon-xls", "icon-hwp", "icon-pdf", "icon-ppt", "icon-word", "icon-img", "icon-etc", "icon-zip");
 
 [class^="icon-"] {
@@ -331,25 +315,11 @@ $ico-list: ("icon-xls", "icon-hwp", "icon-pdf", "icon-ppt", "icon-word", "icon-i
 	display: inline-block;
 	background-repeat: no-repeat;
 	background-position: center center;
-	
 	@each $item in $ico-list {
-		
-=======
-[class^="icon-"] {
-	width: 22px;
-	height: 22px;
-	display: inline-block;
-	background-repeat: no-repeat;
-	background-position: center center;
-	$ico-list: (icon-xls, icon-hwp, icon-pdf, icon-ppt, icon-word, icon-img, icon-etc,);
-	@each $item in $ico-list {
-		$i: index($ico-list, $item);
->>>>>>> e35cae3b67de3506dda954862be3327755f18723
 		&.#{$item} {
 			background-image: url(/static/portal/img/ico/#{$item}.svg);
 		}
 	}
-<<<<<<< HEAD
 }
 
 
@@ -364,7 +334,3 @@ $snslist: ("sns-youtube", "sns-instagram", "sns-facebook", "sns-twitter");
 		}
 	}
 }
-
-=======
-}
->>>>>>> e35cae3b67de3506dda954862be3327755f18723
