@@ -533,6 +533,18 @@
 	}
 }
 
+.pdf-cont {
+	background: #f4f5f7;
+    padding: 20px;
+	overflow-y: auto;
+    overflow-x: hidden;
+    border-radius:8px;
+    min-height: 400px;
+    max-height: 800px;
+    white-space: pre-line;
+
+}
+
 
 .bd-blog {
 	position: relative;

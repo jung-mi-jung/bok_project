@@ -2702,6 +2702,17 @@ white-space: pre-line;
 white-space: pre-line;
 }
 
+.pdf-cont {
+background: #f4f5f7;
+padding: 20px;
+overflow-y: auto;
+overflow-x: hidden;
+border-radius: 8px;
+min-height: 400px;
+max-height: 800px;
+white-space: pre-line;
+}
+
 .bd-blog {
 position: relative;
 }
@@ -3503,7 +3514,6 @@ position: relative;
 width: 1140px;
 max-width: 100%;
 margin: 30px auto;
-padding-bottom: 40px;
 }
 .card-photo .photo-ctrl button {
 position: absolute;
@@ -3577,6 +3587,11 @@ padding-top: 100%;
 background-position: 50%;
 background-repeat: no-repeat;
 background-size: cover;
+}
+.card-photo .img.border {
+background-position: center center;
+background-size: contain;
+border: 1px solid #dee0e6;
 }
 
 .category {
@@ -6470,7 +6485,6 @@ text-align: center;
 }
 
 .dbdata {
-min-height: 250px;
 padding: 32px 0;
 word-break: break-all;
 border-bottom: 1px solid #E5E5E5;
@@ -6501,9 +6515,22 @@ text-decoration: underline;
 .dbdata2 {
 width: 960px;
 margin: 0 auto;
+border-bottom: 0;
 }
 .dbdata2 .view {
 font-size: 1rem;
+}
+.dbdata2 .view ul li {
+margin: 8px 0;
+}
+.dbdata2 .view ul li .ing {
+display: inline-flex;
+align-items: center;
+margin-left: 10px;
+background: #118DB4;
+padding: 4px 12px;
+font-size: 0.875rem;
+color: #fff;
 }
 
 .btn-set {
