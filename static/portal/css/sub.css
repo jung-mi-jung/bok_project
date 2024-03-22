@@ -1486,6 +1486,20 @@ display: inline-block;
 font-size: 19px;
 margin-right: 5px;
 }
+.bd-line > ul > li .set .btns > a + a {
+position: relative;
+margin-left: 11px;
+padding-left: 13px;
+}
+.bd-line > ul > li .set .btns > a + a::after {
+content: "";
+position: absolute;
+top: 7px;
+left: 0;
+background: #666;
+width: 1px;
+height: 10px;
+}
 .bd-line > ul > li .set .btns > a.i-download::before {
 content: "";
 display: inline-block;
@@ -1493,6 +1507,27 @@ vertical-align: middle;
 background: url(/static/portal/img/common/ico-download.png);
 width: 20px;
 height: 20px;
+}
+.bd-line > ul > li .set .btns > a.i-view::before {
+content: "\e666";
+font-family: "Material Icons Outlined";
+font-weight: normal;
+font-style: normal;
+display: inline-block;
+line-height: 1;
+vertical-align: text-bottom;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+font-feature-settings: "liga";
+background-color: transparent;
+}
+.bd-line > ul > li .set .btns > a .icon {
+display: inline-block;
 }
 .bd-line > ul > li .date {
 color: #767676;
@@ -5219,6 +5254,247 @@ background-position: calc(100% - 15px) center;
 }
 }
 
+.bd-line .fileGroupSet,
+.table .fileGroupSet {
+position: relative;
+}
+.bd-line .fileGroupSet .i-download,
+.table .fileGroupSet .i-download {
+padding: 2px 0;
+}
+.bd-line .fileGroupSet .i-download::before,
+.table .fileGroupSet .i-download::before {
+content: "";
+display: inline-block;
+vertical-align: middle;
+background: url(/static/portal/img/common/ico-download.png);
+width: 20px;
+height: 20px;
+}
+
+.fileGoupBox {
+display: none;
+position: absolute;
+top: 26px;
+right: 0;
+width: 328px;
+background-color: #131547;
+box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.15);
+border-radius: 8px;
+z-index: 9;
+text-align: left;
+}
+#main-container .fileGoupBox h3 {
+color: #fff;
+font-size: 14px;
+font-weight: 300;
+background-color: #2F4F9D;
+border-radius: 8px 8px 0 0;
+margin: 0;
+padding: 9px 12px;
+}
+#main-container .fileGoupBox h3::before {
+display: none;
+}
+.fileGoupBox > ul {
+width: calc(100% - 20px);
+margin: 8px 10px;
+}
+.fileGoupBox > ul > li > a {
+position: relative;
+overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+display: inline-block;
+width: 100%;
+display: inline-block;
+vertical-align: middle;
+font-weight: 300;
+color: #fff !important;
+padding: 8px 20px 8px 0;
+}
+.fileGoupBox > ul > li > a:hover {
+color: #fff;
+}
+.fileGoupBox > ul > li > a.i-download::before {
+display: none !important;
+}
+.fileGoupBox > ul > li > a.i-download::after {
+content: "";
+display: inline-block;
+vertical-align: middle;
+width: 16px;
+height: 16px;
+background: url(/static/portal/img/ico/ico-down2_off.png) no-repeat;
+position: absolute;
+top: 11px;
+right: 0;
+}
+.fileGoupBox > ul > li > a.i-download:hover::after {
+background: url(/static/portal/img/ico/ico-down2_on.png) no-repeat;
+}
+.fileGoupBox > ul > li > a.i-view {
+width: auto;
+}
+.fileGoupBox > ul > li > a.i-view::before {
+content: "";
+display: inline-block;
+vertical-align: middle;
+width: 1px;
+height: 12px;
+background-color: rgba(255, 255, 255, 0.2);
+margin-right: 10px;
+}
+.fileGoupBox > ul > li > a.i-view::after {
+content: "";
+display: inline-block;
+vertical-align: middle;
+width: 19px;
+height: 16px;
+background: url(/static/portal/img/ico/i-viewer_off.png) no-repeat;
+}
+.fileGoupBox > ul > li > a.i-view:hover::after {
+background: url(/static/portal/img/ico/i-viewer_on.png) no-repeat;
+}
+.fileGoupBox > ul > li + li {
+border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+.fileGoupBox .closeLayer {
+position: absolute;
+top: 14px;
+right: 14px;
+width: 13px;
+height: 13px;
+background-color: #fff;
+border-radius: 50%;
+}
+.fileGoupBox .closeLayer::before {
+content: "\e5cd";
+font-family: "Material Icons Outlined";
+font-weight: normal;
+font-style: normal;
+display: inline-block;
+line-height: 1;
+vertical-align: text-bottom;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+font-feature-settings: "liga";
+vertical-align: top;
+margin-top: 1px;
+font-size: 12px;
+color: #2F4F9D;
+font-weight: 600;
+}
+
+.file-list + .file-add {
+margin-top: 10px;
+}
+.file-add + .file-list {
+margin-top: 10px;
+}
+.file-list__set__item {
+display: block;
+}
+.file-list__set__item + .file-list__set__item {
+margin-top: 5px;
+}
+.file-list__set__item a {
+display: inline-block;
+}
+.type-dt-length-3 .file-list__set__item a {
+display: block;
+}
+.file-list__set__item a i {
+display: inline-block;
+vertical-align: middle;
+}
+@media (min-width: 750px) {
+.file-list__set__item a .name {
+display: inline-block;
+}
+}
+.file-list__set__item a:hover .name {
+text-decoration: underline;
+color: #131547;
+}
+.file-list__set__item .del {
+border-radius: 3px;
+width: 24px;
+height: 24px;
+background-color: #C81720;
+text-align: center;
+line-height: 24px;
+}
+.file-list__set__item .del::before {
+content: "\e14c";
+font-family: "Material Icons Outlined";
+font-weight: normal;
+font-style: normal;
+display: inline-block;
+line-height: 1;
+vertical-align: text-bottom;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+font-feature-settings: "liga";
+color: #fff;
+}
+
+[class^=icon] {
+width: 24px;
+height: 24px;
+display: inline-block;
+vertical-align: middle;
+background-repeat: no-repeat;
+background-position: center center;
+}
+[class^=icon].icon-xls {
+background-image: url(/static/portal/img/ico/icon-xls.svg);
+}
+[class^=icon].icon-hwp {
+background-image: url(/static/portal/img/ico/icon-hwp.svg);
+}
+[class^=icon].icon-pdf {
+background-image: url(/static/portal/img/ico/icon-pdf.svg);
+}
+[class^=icon].icon-ppt {
+background-image: url(/static/portal/img/ico/icon-ppt.svg);
+}
+[class^=icon].icon-word {
+background-image: url(/static/portal/img/ico/icon-word.svg);
+}
+[class^=icon].icon-img {
+background-image: url(/static/portal/img/ico/icon-img.svg);
+}
+[class^=icon].icon-etc {
+background-image: url(/static/portal/img/ico/icon-etc.svg);
+}
+[class^=icon].icon-zip {
+background-image: url(/static/portal/img/ico/icon-zip.svg);
+}
+
+[class^=sns-].sns-youtube::before {
+background-image: url(/static/portal/img/ico/sns-youtube.svg);
+}
+[class^=sns-].sns-instagram::before {
+background-image: url(/static/portal/img/ico/sns-instagram.svg);
+}
+[class^=sns-].sns-facebook::before {
+background-image: url(/static/portal/img/ico/sns-facebook.svg);
+}
+[class^=sns-].sns-twitter::before {
+background-image: url(/static/portal/img/ico/sns-twitter.svg);
+}
+
 .sm-txt {
 font-size: 13px;
 }
@@ -6461,6 +6737,42 @@ font-size: 14px;
 padding-left: 10px;
 }
 .cbdc-set .refer::before {
+content: "";
+display: inline-block;
+width: 4px;
+height: 4px;
+background-color: #2F4F9D;
+border-radius: 50%;
+position: absolute;
+top: 7px;
+left: 0;
+}
+
+.video-wrap .videoSet {
+padding: 0;
+}
+@media (min-width: 1200px) {
+.video-wrap .videoSet {
+width: 80%;
+}
+}
+.video-wrap .videoSet .help {
+padding-top: 14px;
+width: 100%;
+display: flex;
+}
+.video-wrap .videoSet .help::before {
+font-size: 1.5rem;
+margin-right: 8px;
+}
+.video-wrap .videoSet .refer {
+position: relative;
+margin-top: 20px;
+color: #2F4F9D;
+font-size: 14px;
+padding-left: 10px;
+}
+.video-wrap .videoSet .refer::before {
 content: "";
 display: inline-block;
 width: 4px;
