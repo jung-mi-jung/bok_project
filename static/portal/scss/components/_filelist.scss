@@ -3,6 +3,7 @@
 	.fileGroupSet {
 		position: relative;		
 		.i-download {
+			padding: 2px 0;
 			&::before {
 				content: "";
 				display: inline-block;
@@ -99,8 +100,7 @@
 					&::before {
 						display: none !important;
 					}
-					&::after {
-						
+					&::after {						
 						content: "";
 						display: inline-block;
 						vertical-align: middle;
@@ -306,16 +306,15 @@
 	}
 }
 
-
-$ico-list: ("icon-xls", "icon-hwp", "icon-pdf", "icon-ppt", "icon-word", "icon-img", "icon-etc", "icon-zip");
-
-[class^="icon-"] {
+[class^="icon"] {
 	width: 24px;
 	height: 24px;
 	display: inline-block;
+	vertical-align: middle;
 	background-repeat: no-repeat;
 	background-position: center center;
-	@each $item in $ico-list {
+	$file-list: (icon-xls, icon-hwp, icon-pdf, icon-ppt, icon-word, icon-img, icon-etc, icon-zip);
+	@each $item in $file-list {
 		&.#{$item} {
 			background-image: url(/static/portal/img/ico/#{$item}.svg);
 		}

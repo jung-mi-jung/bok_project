@@ -215,10 +215,7 @@ margin-bottom: 5px;
 #main-container h5 {
 position: relative;
 font-size: 1.125rem;
-<<<<<<< HEAD
 color: #a1a1a1;
-=======
->>>>>>> e35cae3b67de3506dda954862be3327755f18723
 font-weight: 500;
 padding-left: 24px;
 margin-bottom: 5px;
@@ -1489,6 +1486,20 @@ display: inline-block;
 font-size: 19px;
 margin-right: 5px;
 }
+.bd-line > ul > li .set .btns > a + a {
+position: relative;
+margin-left: 11px;
+padding-left: 13px;
+}
+.bd-line > ul > li .set .btns > a + a::after {
+content: "";
+position: absolute;
+top: 7px;
+left: 0;
+background: #666;
+width: 1px;
+height: 10px;
+}
 .bd-line > ul > li .set .btns > a.i-download::before {
 content: "";
 display: inline-block;
@@ -1496,6 +1507,27 @@ vertical-align: middle;
 background: url(/static/portal/img/common/ico-download.png);
 width: 20px;
 height: 20px;
+}
+.bd-line > ul > li .set .btns > a.i-view::before {
+content: "\e666";
+font-family: "Material Icons Outlined";
+font-weight: normal;
+font-style: normal;
+display: inline-block;
+line-height: 1;
+vertical-align: text-bottom;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+font-feature-settings: "liga";
+background-color: transparent;
+}
+.bd-line > ul > li .set .btns > a .icon {
+display: inline-block;
 }
 .bd-line > ul > li .date {
 color: #767676;
@@ -5226,6 +5258,10 @@ background-position: calc(100% - 15px) center;
 .table .fileGroupSet {
 position: relative;
 }
+.bd-line .fileGroupSet .i-download,
+.table .fileGroupSet .i-download {
+padding: 2px 0;
+}
 .bd-line .fileGroupSet .i-download::before,
 .table .fileGroupSet .i-download::before {
 content: "";
@@ -5481,41 +5517,6 @@ height: 22px;
 background-image: url(/static/aieth/img/ico/ico-etc.svg);
 }
 
-[class^=ico-] {
-width: 22px;
-height: 22px;
-display: inline-block;
-background-repeat: no-repeat;
-background-position: center center;
-}
-[class^=ico-].ico-xls {
-background-image: url(/static/aieth/img/ico/ico-xls.svg);
-}
-[class^=ico-].ico-hwp {
-background-image: url(/static/aieth/img/ico/ico-hwp.svg);
-}
-[class^=ico-].ico-pdf {
-background-image: url(/static/aieth/img/ico/ico-pdf.svg);
-}
-[class^=ico-].ico-ppt {
-background-image: url(/static/aieth/img/ico/ico-ppt.svg);
-}
-[class^=ico-].ico-word {
-background-image: url(/static/aieth/img/ico/ico-word.svg);
-}
-[class^=ico-].ico-img {
-background-image: url(/static/aieth/img/ico/ico-img.svg);
-}
-[class^=ico-].ico-zip {
-background-image: url(/static/aieth/img/ico/ico-zip.svg);
-}
-[class^=ico-].ico-etc {
-background-image: url(/static/aieth/img/ico/ico-etc.svg);
-}
-[class^=ico-].ico-mov {
-background-image: url(/static/aieth/img/ico/ico-mov.svg);
-}
-
 .file-list + .file-add {
 margin-top: 10px;
 }
@@ -5574,41 +5575,36 @@ font-feature-settings: "liga";
 color: #fff;
 }
 
-[class^=icon-] {
-<<<<<<< HEAD
+[class^=icon] {
 width: 24px;
 height: 24px;
-=======
-width: 22px;
-height: 22px;
->>>>>>> e35cae3b67de3506dda954862be3327755f18723
 display: inline-block;
+vertical-align: middle;
 background-repeat: no-repeat;
 background-position: center center;
 }
-[class^=icon-].icon-xls {
+[class^=icon].icon-xls {
 background-image: url(/static/portal/img/ico/icon-xls.svg);
 }
-[class^=icon-].icon-hwp {
+[class^=icon].icon-hwp {
 background-image: url(/static/portal/img/ico/icon-hwp.svg);
 }
-[class^=icon-].icon-pdf {
+[class^=icon].icon-pdf {
 background-image: url(/static/portal/img/ico/icon-pdf.svg);
 }
-[class^=icon-].icon-ppt {
+[class^=icon].icon-ppt {
 background-image: url(/static/portal/img/ico/icon-ppt.svg);
 }
-[class^=icon-].icon-word {
+[class^=icon].icon-word {
 background-image: url(/static/portal/img/ico/icon-word.svg);
 }
-[class^=icon-].icon-img {
+[class^=icon].icon-img {
 background-image: url(/static/portal/img/ico/icon-img.svg);
 }
-[class^=icon-].icon-etc {
+[class^=icon].icon-etc {
 background-image: url(/static/portal/img/ico/icon-etc.svg);
 }
-<<<<<<< HEAD
-[class^=icon-].icon-zip {
+[class^=icon].icon-zip {
 background-image: url(/static/portal/img/ico/icon-zip.svg);
 }
 
@@ -5624,8 +5620,6 @@ background-image: url(/static/portal/img/ico/sns-facebook.svg);
 [class^=sns-].sns-twitter::before {
 background-image: url(/static/portal/img/ico/sns-twitter.svg);
 }
-=======
->>>>>>> e35cae3b67de3506dda954862be3327755f18723
 
 .sm-txt {
 font-size: 13px;
@@ -6869,6 +6863,42 @@ font-size: 14px;
 padding-left: 10px;
 }
 .cbdc-set .refer::before {
+content: "";
+display: inline-block;
+width: 4px;
+height: 4px;
+background-color: #2F4F9D;
+border-radius: 50%;
+position: absolute;
+top: 7px;
+left: 0;
+}
+
+.video-wrap .videoSet {
+padding: 0;
+}
+@media (min-width: 1200px) {
+.video-wrap .videoSet {
+width: 80%;
+}
+}
+.video-wrap .videoSet .help {
+padding-top: 14px;
+width: 100%;
+display: flex;
+}
+.video-wrap .videoSet .help::before {
+font-size: 1.5rem;
+margin-right: 8px;
+}
+.video-wrap .videoSet .refer {
+position: relative;
+margin-top: 20px;
+color: #2F4F9D;
+font-size: 14px;
+padding-left: 10px;
+}
+.video-wrap .videoSet .refer::before {
 content: "";
 display: inline-block;
 width: 4px;

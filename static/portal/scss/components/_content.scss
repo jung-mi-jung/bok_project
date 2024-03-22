@@ -1188,6 +1188,42 @@ p.subject {
 	}
 }
 
+//컨텐츠용 동영상
+.video-wrap {
+	.videoSet {
+		padding: 0;
+		@include breakpoint($lg){
+			width: 80%;			
+		}		
+		.help {
+			padding-top: 14px;
+			width: 100%;
+			display: flex;			
+			&::before {
+				font-size: rem(24);
+				margin-right: 8px;
+			}
+		}
+		.refer {
+			position: relative;
+			margin-top: 20px;
+			color: #2F4F9D;
+			font-size: 14px;
+			padding-left: 10px;
+			&::before {
+				content: "";
+				display: inline-block;
+				width: 4px;
+				height: 4px;
+				background-color: #2F4F9D;
+				border-radius: 50%;
+				position: absolute;
+				top: 7px;
+				left: 0;
+			}
+		}
+	}
+}
 
 .imgSet {
     border: 1px solid #dee0e6;

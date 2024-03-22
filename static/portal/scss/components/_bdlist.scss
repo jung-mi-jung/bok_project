@@ -95,20 +95,20 @@
 							font-size: 19px;
 							margin-right: 5px;
 						}
-						// & + a {
-						// 	position: relative;
-						// 	margin-left: 15px;
-						// 	padding-left: 15px;
-						// 	&::after {
-						// 		content: "";
-						// 		position: absolute;
-						// 		top: 7px;
-						// 		left: 0;
-						// 		background: #666;
-						// 		width: 1px;
-						// 		height: 10px;
-						// 	}
-						// }
+						& + a {
+							position: relative;
+							margin-left: 11px;
+							padding-left: 13px;
+							&::after {
+								content: "";
+								position: absolute;
+								top: 7px;
+								left: 0;
+								background: #666;
+								width: 1px;
+								height: 10px;
+							}
+						}
 						&.i-download {
 							&::before {
 								content: "";
@@ -119,12 +119,15 @@
 								height: 20px;
 							}
 						}
-						// &.i-view {
-						// 	&::before {
-						// 		@include font-ico-outline("\e666");
-						// 		background-color: transparent;
-						// 	}
-						// }
+						&.i-view {
+							&::before {
+								@include font-ico-outline("\e666");
+								background-color: transparent;
+							}
+						}
+						.icon {
+							display: inline-block;
+						}
 					}
 				}
 			}
