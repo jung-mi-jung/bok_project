@@ -38,7 +38,8 @@ function servers() {
 			baseDir: './',
 			index: 'static/guide/g.html',
 		},
-		port: 1989,
+		port: 1981,
+		//port: 1989,
 	});
 }
 const scss = ["commons", "portal", "museum", "imer", "imerEng", "eng", "bos"];   // museum 화폐박물관	  eng 영문	 imer 경제연구원	 imerEng 경제연구원(영문)
@@ -82,19 +83,21 @@ function waths() {
 	console.log('waths 시작');
 	// html
 	watchLibraryReload();
-	watchLibrary('portal');
-	watchContent('portal');
+	watchLibrary('portal');		//watchLibrary 기존 html
+	watchContent('portal');		//watchContent 목차형 컨텐츠
 	watchLibrary('museum');
 	watchContent('museum');
 	watchLibrary('imer');
-	watchContent('imer');
+	//watchContent('imer');
 	watchLibrary('imerEng');
-	watchContent('imerEng');
+	//watchContent('imerEng');
 	watchLibrary('eng');
-	watchContent('eng');
+	//watchContent('eng');
 	watchLibrary('bos');
-	watchContent('bos');
+	//watchContent('bos');
 
+	guideToDist('portal');	//guideToDist 레이아웃용
+	guideToDist('museum');
 	
 }
 
@@ -120,32 +123,33 @@ function watchLibrary(targets) {
 	});
 }
 
-//타입별 서브 레이아웃용(국문 포털)
+//타입별 서브 레이아웃용
 function guideLayout(targets) {
-	const watcher = watch(["static/guide/museum/layout/*.html"]);
+	const watcher = watch('static/guide/' + targets + '/layout/*.html');
 	watcher.on("change", function (paths, stats) {
 		const file = new Vinyl({
 		path: paths,
 		});
 		gulp
 			.src(file.dirname + "/" + file.stem + file.extname)
-			.pipe(headerfooter.header('static/guide/museum/top.html'))
-			.pipe(headerfooter.footer('static/guide/museum/bottom.html'))
-			.pipe(gulp.dest("static/guide/museum"));
+			.pipe(headerfooter.header('static/guide/' + targets + '/top.html'))
+			.pipe(headerfooter.footer('static/guide/' + targets + '/bottom.html'))
+			.pipe(gulp.dest("static/guide/" + targets));
 		browserSync.reload();
 	});
 }
-function guideToDist(targets) {  //가이드용(국문 포털)
-	const watcher = watch(["static/guide/museum/g/*.html"]);
+function guideToDist(targets) {  //가이드용
+	const watcher = watch('static/guide/' + targets + '/g/*.html');
 	watcher.on("change", function (paths, stats) {
 		const file = new Vinyl({
 		path: paths,
 		});
 		gulp
 			.src(file.dirname + "/" + file.stem + file.extname)
-			.pipe(headerfooter.header("static/guide/museum/g/common/guide-top.html"))
-			.pipe(headerfooter.footer("static/guide/museum/g/common/guide-bottom.html"))
-			.pipe(gulp.dest("static/guide/museum/dist"));
+			.pipe(headerfooter.header("static/guide/" + targets + "/g/common/guide-top.html"))
+			.pipe(headerfooter.footer("static/guide/" + targets + "/g/common/guide-bottom.html"))
+			.pipe(gulp.dest("static/guide/" + targets + "/dist"));
+
 		browserSync.reload();
 	});
 }
@@ -168,26 +172,6 @@ function watchContent(targets) {
 	});
 }
 
-
-//과장님 개인설정, 임시 주석
-// function watchContent(targets) {
-// 	const watcher = watch('static/guide/' + targets + '/content/*.html');
-// 	watcher.on('change', function (paths, stats) {
-// 		const file = new Vinyl({
-// 			path: paths,
-// 		});
-// 		gulp.src(file.dirname + '/' + file.stem + file.extname)
-// 			.pipe(headerfooter.header('static/guide/' + targets + '/content-top.html'))
-// 			.pipe(headerfooter.footer('static/guide/' + targets + '/content-bottom.html'))
-// 			.pipe(gulp.dest('static/guide/' + targets + '/dist'));
-// 		// if (jspOut) {
-// 		// 	gulp.src(file.dirname + '/' + file.stem + file.extname)
-// 		// 		.pipe(headerfooter.header('<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>'))
-// 		// 		.pipe(rename({ extname: '.jsp' }))
-// 		// 		.pipe(gulp.dest('WEB-INF/jsp/cts/' + targets + '/'));
-// 		// }
-// 	});
-// }
 
 
 function watchCts(targets) {
@@ -331,11 +315,11 @@ function imgmin(cb) {
 }
 
 // exports.watchscss = watchscss;
-exports.default = series(parallel(servers, waths, sprite, guideToDist, guideLayout));
+exports.default = series(parallel(servers, waths, sprite));
 // exports.default   = series(clean, parallel(html, watchFiles));
 exports.server = series(servers);
-exports.guideToDist = guideToDist;
-exports.guideLayout = guideLayout
+exports.guideToDist = guideToDist;	//가이드용 g
+exports.guideLayout = guideLayout;
 exports.mail = mail;
 exports.tojsp = tojsp;
 exports.dist = dist;
