@@ -1,6 +1,6 @@
-<div class="bd-view">
+<div class="bd-view media-view">
 	<h2 class="subject">카드뉴스 게시물 제목이 나타납니다. 제목 전체 내용을 노출합니다. 제목이 긴 경우 자동 줄바뀜 처리 노출합니다.</h2>
-	<div class="dataInfoSet">
+	<!-- <div class="dataInfoSet">
 		<dl class="dataInfo">
 			<dt class="sr-only">구분</dt>
 			<dd class="ass">경제카드뉴스</dd>
@@ -24,12 +24,12 @@
 		<dd>
 			<a href="">BOK이슈노트_2024-5호_빅데이터와기계학습 알고리즘을 활용한 실시간 인플레이션 전망(real-timeinflation forecasting).pdf</a>
 		</dd>		
-	</dl>
+	</dl> -->
 	<div class="card-photo">
 		<div class="swiper-container">
 			<div class="photo-ctrl">
-				<button type="button" class="prev photo-prev"><span class="sr-only">이전 카드뉴스 보기</span></button>
-				<button type="button" class="next photo-next"><span class="sr-only">다음 카드뉴스 보기</span></button>
+				<button type="button" class="prev photo-prev"><span class="sr-only">이전 보기</span></button>
+				<button type="button" class="next photo-next"><span class="sr-only">다음 보기</span></button>
 				<div class="swiper-pagination"></div>
 			</div>
 			<div class="photo swiper">
@@ -74,7 +74,7 @@ $(function () {
 		init: false,
 		freeMode: true,
 		// Optional parameters
-		loop: true,
+		// loop: true,
 		loopAdditionalSlides : 1,
 		slidesPerView : '1',
 		navigation: {

@@ -191,7 +191,29 @@
 			}
 		}
 	}
+	.type2 {
+		display: flex;
+		align-items: center;
+		gap: 0 20px;
+	}
+	.type3 {
+		display: flex;
+		align-items: center;
+		gap: 0 20px;
+		@include breakpoint($sm) {
+			flex-wrap: wrap;
+		}
+		dd {
+			display: flex;
+			align-items: center;
+		}
+		i {
+			margin-right: 5px;
+		}
+	}
 	.user {
+		display: flex;
+		align-items: center;
 		&::before {
 			content: "";
 			display: inline-block;
@@ -203,6 +225,19 @@
 			@include breakpoint($sm){
 				background-size: auto 14px;
 			}
+		}
+	}
+	.depart {
+		display: flex;
+		align-items: center;
+		&::before {
+			content: "";
+			display: inline-block;
+			vertical-align: middle;
+			width: 20px;
+			height: 20px;
+			background: url(/static/portal/img/ico/ico-depart.png) no-repeat;
+			margin-right: 5px;
 		}
 	}
 }
@@ -245,6 +280,16 @@
 		}
 	}		
 }
+/* 동영상, 이미지 등 콘텐츠 상세페이지 */
+.media-view {
+	.subject {
+		@include breakpoint($sm){
+			margin-top: -50px;
+		}
+	}
+}
+
+
 
 .videoSet {
 	padding: 30px 0;
@@ -321,13 +366,30 @@
 				}
 			}
 		}
-	}		
+	}	
+	.thumb {
+		padding: 4%;
+		border: 7px solid #627fa4;
+		.webzine_photo {
+			width: 100%;
+			aspect-ratio: 16/9;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: contain;
+			a {
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}	
 	.subtitle,
 	.detail {			
 		position: relative;
 		color: #4D4D4D;
 		border: 1px solid #E5E5E5;
 		border-radius: 8px;
+		margin-top: 30px;
 		button {
 			position: absolute;
 			top: 0;
@@ -379,9 +441,6 @@
 			display: none;
 		}		
 	}
-	.detail {
-		margin-top: 30px;
-	}
 	.scrollY {
 		overflow-y: auto;
 		overflow-x: hidden;
@@ -389,11 +448,91 @@
 		background-color: #FAFAFA;
 		border-radius: 0 0 8px 8px;
 		max-height: 360px;
+		white-space: pre-line;
+		> p {
+			white-space: pre-line;
+		}
 	}
 	.desc{
 		font-size: rem(16);
+		dd > *{
+			white-space: pre-line;
+		}
 	}
 }
+.summary {			
+	position: relative;
+	color: #4D4D4D;
+	border: 1px solid #E5E5E5;
+	border-radius: 8px;
+	margin-top: 30px;
+	button {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 55px;
+		height: 48px;
+		line-height: 48px;
+		text-align: center;				
+		&::before {
+			@include font-ico-outline('\e5cf');
+			width: 24px;
+			height: 24px;
+			background-color: #1A1A1A;
+			border-radius: 4px;
+			font-size: 24px;
+			color: #fff;
+		}
+		&.active {
+			&::before {
+				@include font-ico("\e5cd");
+				font-size: 24px;
+				color: #354052;
+				background-color: transparent;
+			}
+			& + .con {
+				display: block;
+				border-top: 1px solid #E5E5E5; 
+				.mCustomScrollBox {
+					padding: 15px;
+					background-color: #FAFAFA;
+					border-radius: 0 0 8px 8px;
+					max-height: 360px !important;
+				}
+			}
+		}
+	}
+	h3 {
+		color: #1A1A1A;
+		font-weight: 400 !important;
+		font-size: rem(18) !important;
+		padding: 10px 25px;
+		margin: 0 !important;
+		&::before {
+			display: none !important;
+		}
+		
+	}	
+	.con {
+		display: none;
+	}		
+}
+
+
+
+.scrollY {
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding: 15px;
+	background-color: #FAFAFA;
+	border-radius: 0 0 8px 8px;
+	max-height: 360px;
+	white-space: pre-line;
+	> p {
+		white-space: pre-line;
+	}
+}
+
 
 .bd-blog {
 	position: relative;
@@ -418,6 +557,7 @@
 		margin-top: 30px;
 		border-top: 2px solid #000;
 	}
+	
 }
 
 
