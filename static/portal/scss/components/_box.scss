@@ -159,6 +159,28 @@ h2 + .boxTop {
 
 
 //box
+.box-round {
+	border: 4px solid #E6E6E6;
+	border-radius: 16px;
+	padding: 20px;
+	margin: 32px 0;
+	color: #4D4D4D;
+	strong {
+		position: relative;
+		color: $black;
+		font-weight: 500;
+		&::before {
+			content: "";
+			display: block;
+			width: 100%;
+			height: 1px;
+			background-color: $black;
+			position: absolute;
+			bottom: 2px;
+			left: 0;
+		}
+	}
+}
 .box2{
 	background: #FAFAFA; 
 	padding:20px;margin-bottom:20px;clear:both;

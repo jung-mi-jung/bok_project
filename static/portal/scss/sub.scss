@@ -410,3 +410,23 @@ mark {
 		}
 	}
 }
+
+
+
+//본인인증
+.crtfcform {
+	background-color: #F2F6FA;
+	border-radius: 8px;
+	padding: 24px;
+	.box2 {
+		border: 2px solid $color-point;
+		border-radius: 8px;
+		padding: 20px;
+		background-color: #fff;
+		strong {
+			font-size: rem(20);
+			font-weight: 500;
+			color: $color-point;
+		}
+	}
+}

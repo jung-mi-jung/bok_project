@@ -13,6 +13,9 @@
 	.sh-select {
 		margin-bottom: 0;
 	}
+	&.n {
+		border-bottom: none;
+	}
 }
 .count-total {
 	color: $black;
@@ -371,9 +374,9 @@
 					}
 				}
 			}
-			.icon-pdf {				
-				@include fileload();
-			}			
+			// .icon-etc {	
+			// 	@include fileload();
+			// }			
 		}
 		.fileLink {
 			position: absolute;

@@ -95,9 +95,16 @@ $btn: "[class^=b-]";
 		}
 	}
 	&.b-go {
+		padding: 2px 7px 2px 13px;
+		font-weight: 300;
+		font-size: 14px;
+		background-color: $black;
+		margin-left: 5px;
 		&::after {
 			@include font-ico-outline('\e315');
 			margin-left: 4px;
+			margin-bottom: 1px;
+			font-size: 16px;
 		}
 	}
 
