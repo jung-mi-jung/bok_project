@@ -1,0 +1,25 @@
+@font-face {
+font-family: "Material Icons";
+font-style: normal;
+font-weight: 400;
+src: url("/static/font/MaterialIcons/MaterialIcons-Regular.woff") format("woff2"), url("/static/font/MaterialIcons/MaterialIcons-Regular.woff") format("woff");
+}
+@font-face {
+font-family: "Material Icons Outlined";
+font-style: normal;
+font-weight: 400;
+src: url("/static/font/MaterialIcons/MaterialIconsOutlined-Regular.woff") format("woff2"), url("/static/font/MaterialIcons/MaterialIconsOutlined-Regular.woff") format("woff");
+}
+b,
+strong {
+font-weight: 500;
+}
+
+.red {
+color: #C81720 !important;
+}
+
+.fc_red {
+color: #C81720;
+}
+/*# sourceMappingURL=../maps/test.css.map */

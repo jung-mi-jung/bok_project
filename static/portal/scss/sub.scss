@@ -1,0 +1,412 @@
+// @import url('/static/commons/css/common.css');
+@import url('/static/portal/css/default.css');
+
+
+@import 'base/util'; //mixins
+@import '../../commons/scss/breakpoint'; //반응형 플러그인
+@import 'base/variables';//환경 설정
+@import 'components/visible';//반응형 스타일
+@import 'base/heading';//해딩스타일
+//@import 'mixins/layerfixed'; //mixins
+
+@import 'base/color'; // colors
+@import 'components/ico'; // icons
+@import 'components/print';//프린트
+
+@import 'base/lnb';//서브 좌측 메뉴
+@import 'components/form';//글쓰기 폼
+@import 'components/table';//테이블 스타일
+@import 'components/bdlist';//프로그램  리스트 공통
+@import 'components/bdview';//프로그램 뷰,수정,쓰기
+@import 'components/photo';//겔러리 타입(동영상 등)
+@import 'components/faq';//FAQ
+@import 'components/paging';//페이징
+@import 'components/tab';//탭메뉴
+@import 'components/sh';//검색
+@import 'components/filelist';//파일목록
+
+@import 'components/content';//콘텐츠
+@import 'components/dbdata';//게시물 데이터
+@import 'components/btn';//버튼 스타일
+@import 'components/box';  //box
+@import 'components/datepicker'; // datepicker theme
+
+@import url('/static/jslibrary/bootstrap-datepicker-1.9.0-dist/css/bootstrap-datepicker3.standalone.css');
+
+
+/*
+@import 'components/calendar';// calendar
+@import 'components/popup';//팝업
+*/
+
+
+.pdf {
+	overflow-x: hidden;overflow-y: auto;width: 100%;height: 200px;
+}
+
+
+
+
+.img-box {
+	.img {
+		display: block;
+		height: 1px;
+		//padding-top: 50%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: 50%;
+	}
+}
+
+.agreeBox {
+	clear: both;
+	border: 4px solid $bd-color;
+	padding: 20px;
+	h2 {
+		color: $black;
+		font-size: rem(18) !important;
+		font-weight: 500 !important;
+		margin-top: 25px;
+		margin-bottom: 8px;
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+	.scrollarBox {
+		max-height: 500px;
+		overflow-y: auto;
+		overflow-x: hidden;
+		border: 1px solid $bd-color;
+		padding: 20px;
+		background-color: #FAFAFA;		
+	}
+	.agreeTxt {
+		display: flex;	
+		margin-top: 10px;
+		@include breakpoint($sm){
+			display: block;
+		}
+		span {
+			display: inline-block;
+		}
+		.txt1 {}
+		.txt2 {
+			display: flex;
+			@include breakpoint($lg){
+				margin-left: 20px;
+			}
+		}
+	}
+}
+
+
+
+//경제용어사전
+.boxInfo {
+    height: 380px;
+    overflow-y: auto;
+    text-align: justify;
+    padding-left: 10px;
+	&.boxInfo.boxInfoR {
+		height: 260px;
+		margin-bottom: 20px;
+	}
+}
+#wordList {
+	li {
+		a {
+			display: block;
+			padding: 5px 10px;
+		}
+		&.on {
+			a {
+				font-weight: 600;
+				background-color: #F2F6FA;
+			}
+		}
+	}
+}
+
+
+/* 안씀
+//법령 검색
+.lawTab {
+	background:#f4f5f7;
+	overflow:hidden;
+	margin-bottom: 20px;
+	.lawTab_d1 {
+		float:left;
+		width:40%;
+		padding:20px 25px;
+		li {
+			border-bottom:1px solid #dee0e6;
+			a {
+				display:block;
+				padding:7px 5px 7px 10px;
+				font-size:14px;
+				color:#000
+			}
+		}
+		li.active {
+			border:3px solid #5b79b9;
+			background:#fff;
+			position:relative;
+			&:after {
+				content:"";
+				display:inline-block;
+				background: url(/static/portal/img/cts/sub5/law_arr.png) no-repeat left top;
+				position:absolute;
+				top:10px;
+				right:-11px;
+				width:8px;
+				height:15px;
+			}
+			a {
+				color:#5b79b9;
+				font-weight:bold;
+			}
+		}
+		li.last {
+			border-bottom:0;
+		}
+	}
+	.lawTab_d2 {
+		float:left;
+		width:60%;
+		border:6px solid #dee0e6;
+		background:#fff;
+		height:302px;
+		overflow:auto;
+		ul {
+			padding:15px;
+			li {
+				padding:7px 5px 7px 10px;
+				border-bottom:1px solid #dee0e6;
+				&.active {
+					a {
+						font-weight:600;color:#1f497d;border-bottom:3px solid #1f497d;
+					}
+				}
+				a {
+					font-size:14px;color:#000;
+				}
+			}
+		}
+	}
+}
+@include breakpoint($sm){
+	.lawTab{
+		.lawTab_d1{
+			float:none;
+			width:100%;
+			padding:15px 15px 5px 15px;
+			overflow:hidden;
+			li {
+				float:left;
+				width:48%;
+				height:37px;
+				margin:0 1%;
+				text-align:center;
+			}
+			li.active{
+				&:after{
+					content:"";
+					display:inline-block;
+					background: url(/static/portal/img/cts/sub5/law_arr1.png) no-repeat left top;
+					position:absolute;
+					bottom:-9px;
+					top:inherit !important;
+					right:inherit !important;
+					left:47%;
+					width:12px;
+					height:6px;
+				}
+				a{
+					padding:5px;
+				}
+			}
+		}
+		.lawTab_d2{
+			float:none;
+			width:100%;
+			height:170px;
+		}
+	}
+}
+*/
+
+
+// 한줄에 h3 + p
+.h-group {	 // 기존 class => hgroup
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 40px;
+	margin-bottom: 10px;
+	h3 {
+		margin: 0 !important;
+	}
+	p {
+		&.addtxt {
+			@include breakpoint($sm){
+				margin-top: -26px;
+			}
+		}
+	}
+	.mr {
+		margin-right: 20px;
+		@include breakpoint($sm){
+			margin-right: 0;
+		}
+	}
+	.email-s {
+		@include breakpoint($sm){
+			display: block;
+		}		
+	}
+}
+
+.i-no-data {
+	display: flex;
+	justify-content: center;
+	color: $black;
+	p {
+		padding-top: 68px;
+		position: relative;
+		font-size: rem(18);
+		font-weight: 400;
+		
+		&::before {
+			@include font-ico-outline('\e88e');
+			font-size: rem(65);
+			margin-bottom: 10px;
+			position: absolute;
+			top: 0;
+			left: 50%;
+			margin-left: -32px;
+			transform: rotate(180deg);
+			color: $point;
+		}
+	}
+	&.pad {
+		margin: 50px 0;
+		@include breakpoint($lg){
+			margin: 100px 0;
+		}
+	}	
+}
+
+mark {
+	background-color: #FFE100 !important;
+}
+
+.depart-wrap {
+	h2 {
+		font-size: rem(40) !important;
+		font-weight: 100 !important;
+		@include breakpoint($lg){
+			font-size: rem(64) !important;
+		}
+	}
+	.dept-set {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 30px;
+		@include breakpoint($smd){
+			display: block;
+		}
+		@include breakpoint($lg){
+			> * {
+				width: 50%;
+			}
+		}
+		.mr {
+			margin-right: 20px;
+		}
+	}
+	.dept-list {		
+		margin-bottom: 20px;
+		@include breakpoint($lg){
+			padding-top: 30px;
+			margin-bottom: 0;
+		}
+		ul {
+			li {
+				display: flex;
+				margin-bottom: 10px;
+				strong {
+					display: inline-block;
+					padding: 4px 0;
+					margin-right: 10px;
+					width: 80px;
+					color: #fff;
+					font-size: 12px;
+					font-weight: 400 !important;
+					background-color: #39A0FF;
+					border-radius: 99px;
+					text-align: center;
+					letter-spacing: 1.0px;
+				}
+				span {
+					font-size: rem(18);
+				}
+			}
+		}
+	}
+	.list-con {
+		ul {
+			margin-top: 8px;
+			border-top: 2px solid $black;
+			li {
+				border-bottom: 1px solid #BFBFBF;
+				padding: 20px 0;
+				@include breakpoint($lg){
+					padding: 30px 0;
+				}
+			}
+		}
+		dl {
+			width: 100%;
+			display: flex;
+			dt {
+				width: 100px;
+				font-size: rem(24);
+				font-weight: 400;
+				@include breakpoint($lg){
+					width: 180px;
+				}
+				span {
+					display: block;
+					color: #666;
+					font-size: rem(16);
+				}
+			}
+			dd {
+				width: calc(100% - 120px);
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				color: #666;
+				@include breakpoint($lg){
+					width: calc(100% - 150px);
+				}
+				span {
+					display: inline-block;
+					&.txt {
+						width: calc(100% - 120px);
+						@include breakpoint($lg){
+							width: calc(100% - 150px);
+						}
+					}
+					&.tel {
+						width: 120px;
+						text-align: center;
+						@include breakpoint($lg){
+							width: 180px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

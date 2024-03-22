@@ -1,0 +1,72 @@
+// @import url('/static/commons/css/common.css');
+@import url('/static/imer/css/default.css');
+
+
+@import 'base/util'; //mixins
+@import '../../commons/scss/breakpoint'; //반응형 플러그인
+@import 'base/variables';//환경 설정
+@import 'components/visible';//반응형 스타일
+@import 'base/heading';//해딩스타일
+//@import 'mixins/layerfixed'; //mixins
+
+/* 스프라이트 */
+@import "components/sprite";
+@mixin retina-sprites($retina-groups) {
+	@each $retina-group in $retina-groups {
+		$sprite-name: nth($retina-group, 1);
+		.#{$sprite-name} {
+			@include retina-sprite($retina-group);
+		}	
+	}
+}
+[class^='ico-'] {
+	display: inline-block;
+	vertical-align: middle;
+}
+@include retina-sprites($retina-groups);
+
+
+@import 'base/color'; // colors
+@import 'components/ico'; // icons
+@import 'components/print';//프린트
+
+@import 'base/lnb';//서브 좌측 메뉴
+@import 'components/form';//글쓰기 폼
+@import 'components/bdlist';//프로그램  리스트 공통
+@import 'components/paging';//페이징
+@import 'components/table';//테이블 스타일
+
+@import 'components/content';//콘텐츠
+@import 'components/datepicker'; // datepicker theme
+
+@import url('/static/jslibrary/bootstrap-datepicker-1.9.0-dist/css/bootstrap-datepicker3.standalone.css');
+
+
+/*
+
+@import 'components/tab';//탭메뉴
+
+@import 'components/btn';//버튼 스타일
+
+@import 'components/faq';//FAQ
+@import 'components/sh';//검색
+
+@import 'components/bdview';//프로그램 뷰,수정,쓰기
+@import 'components/filelist';//파일목록
+@import 'components/photo';//겔러리 타입
+
+
+@import 'components/calendar';// calendar
+@import 'components/dbdata';//게시물 데이터
+
+@import 'components/popup';//팝업
+*/
+
+
+.pdf {
+	overflow-x: hidden;overflow-y: auto;width: 100%;height: 200px;
+}
+.row {
+	@include flex-row;
+	align-items: flex-start;
+}

@@ -1,0 +1,246 @@
+.tabsub { 
+	clear:both;
+	float: left;
+	width: 100%;
+	margin-bottom: 30px;
+	margin-bottom:30px;
+	&.dept3{
+		margin-bottom:5px;
+	}
+	ul{ 
+		float:left;
+		width:100%; 
+		background-color: #fbfbfc;
+		border:1px solid #dee0e6; 
+		li{
+			width:25%; 
+			float: left;
+			text-align: center;
+			line-height: 120%;
+			display: table-cell;
+			line-height: 40px;
+			&:nth-child(4n){
+				background: none;
+			}
+			&.active{
+				border:2px solid #3B63C4; 
+				position: relative;
+				line-height: 36px; 
+				background: #fff;
+				&:before{
+					content:"▼"; 
+					font-size: 10px;
+					position: absolute;
+					top: -17px;
+					left: 48%;
+				}
+			}
+			&.active>a,
+			&.on>a{
+				font-weight:600;
+				color: #3B63C4; 
+				text-decoration:none;
+				font-size: 14px;
+			}
+			a{
+				color:#666;
+				vertical-align: middle; 
+				text-align: center; 
+				width: 100%;
+				float: none;
+			}
+		}
+	}
+}
+.tabsub {
+	&.type {
+		float:none !important;
+		overflow:hidden;
+		ul {
+			border-bottom:1px solid #ddd;
+			border-width:0 0 1px 0 !important;
+			overflow:hidden;
+			clear:both;
+			li { 
+				background: #FBFBFC;
+				display:table;
+				line-height:17px;
+				a{
+					display:table-cell;
+					line-height:17px;
+					height:43px;
+					padding:0 5px;
+				}
+				@include breakpoint ($md) {
+					text-align:center;
+					a{
+						line-height:1em;
+						text-align:center;
+					}
+				}
+				&.active{
+					border-bottom:3px solid #5b79b9;
+					&:before{
+						color: #3B63C4;
+						content:"▼"; 
+						font-size: 10px; 
+						position: absolute;
+						top: -7px;
+						left: 48%;
+					}
+				}
+				&:first-child{
+					background:none;
+				}
+				&:nth-child(4n+1){
+					clear:both;
+					background-image:none;
+				}
+			}
+		}
+	}
+}
+
+
+.step { 
+	width: 100%; 
+	border:2px solid $bd-color; 
+	clear:both; 
+	background-color:#fff;
+	float:left;
+	margin-bottom:10px;
+	text-align:center;
+	&.len4 li { 
+		padding-left:30px; 
+		padding-right:30px; 
+	}
+	li {
+		display:inline-block; 
+		padding:20px; 
+		color:#333;
+		position:relative;
+		&.on {
+			color:#757575;
+		}
+		&.active {
+			position:relative;
+			.title{ 
+				position:relative; 
+				color:#fff;
+				padding-left:20px;
+				float:left;
+				&:after {						
+					@include font-ico-outline('\e5ca');
+					background-color:#fff;
+					color: #3B63C4;
+					position:absolute;
+					left:0;
+					top:6px;
+				}
+			}
+			span {
+				position:relative;
+				font-size:18px;
+				font-weight:600; 
+				color: #3B63C4;
+				letter-spacing:-1px;
+				&.hidden {
+					position:absolute;
+				}
+				&:before {
+					content:"";
+					width:100%; 
+					position:absolute;
+					bottom:-4px; 
+					border-bottom:2px solid #3B63C4; 
+				}
+			}
+		}
+		&:after {
+			@include font-ico-outline('\e5cc');
+			border: 2px solid $bd-color;
+			border-radius: 50%;
+			font-size: 20px;
+			position:absolute; 
+			right:-10px; 
+			top:50%;
+			margin-top:-10px; 
+			color: $point; 
+		}
+		&:last-child:after {
+			display:none;
+		}
+		.title:after {
+			content:"."; margin-right:3px
+		}
+	}
+}
+
+// @include breakpoint($xg) {
+// 	.step li { 
+// 		font-size:13px;padding:20px 8px;
+// 		.active span {
+// 			font-size:15px;
+// 		}	
+// 	} 
+// }
+
+@include breakpoint($smd) {
+	.step li {
+		padding: 20px 10px;
+		&.active {
+			span {
+				display:inline-block; 
+				font-size:14px;
+			}
+			.title {
+				border:none;
+				width:1px;
+				height:1px;
+			}
+		}
+		span {
+			display:none;
+		}	
+		.title {
+			border:1px solid $bd-color;
+			width:25px;
+			height:25px; 
+			line-height:23px;
+			display:inline-block; 
+			border-radius:25px;
+			&:after {
+				content:"";
+				 margin-right:3px;
+			}
+		}
+	}
+}
+
+@include breakpoint($xs) {
+	.step {
+		&.len4 li {
+			padding-left:10px; 
+			padding-right:10px;
+		}
+		li {
+			padding: 20px 3px;
+			.title {
+				font-size:12px;
+			}
+			&:after {
+				font-size:8px;
+				right:-8px;
+			}
+			&.active {
+				span {
+					display:inline-block; 
+					font-size:12px;
+				}
+				.title {
+					display:none;
+				}
+			}
+		}
+	}
+}

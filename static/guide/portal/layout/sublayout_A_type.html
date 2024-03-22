@@ -1,0 +1,466 @@
+<!-- bd-sh.html  동일 -->
+
+<script>
+
+$(function () { 
+
+	// 유형 선택시 분류 노출
+	$(".label-list input").click(function(e){
+		$(".sh-db .check-list.details").show();
+	})
+
+	//$("[id*=m-0]").click(function(index, el){
+	//	$("[class*=m-0]").toggleClass("on")
+	//});
+	
+	$("#m-01").click(function(){
+		$(".m-01").toggleClass("on")
+	});
+	$("#m-02").click(function(){
+		$(".m-02").toggleClass("on")
+	});
+	$("#m-03").click(function(){
+		$(".m-03").toggleClass("on")
+	});
+
+
+	$(".m-01 button").click(function(){
+		$("#m-01").prop("checked", true)
+		$("#m-02").prop("checked", false)
+		$("#m-03").prop("checked", false)
+
+		$(".m-02").hide()
+		$(".m-03").hide()		
+	});
+
+	$(".m-02 button").click(function(){
+		$("#m-01").prop("checked", false)
+		$("#m-02").prop("checked", true)
+		$("#m-03").prop("checked", false)
+
+		$(".m-01").hide()
+		$(".m-03").hide()
+	});
+
+	$(".m-03 button").click(function(){
+		$("#m-01").prop("checked", false)
+		$("#m-02").prop("checked", false)
+		$("#m-03").prop("checked", true)
+
+		$(".m-01").hide()
+		$(".m-02").hide()
+	});
+
+	$("[class^=m-0]").click(function(){
+		$(".check-list input").attr("disabled", true);
+	});
+
+	
+	//depth3 있는 경우 아이콘 추가
+	$(".details-list .sub-m").prev("button").addClass("bu")
+	//depth3 있는 경우 depth2 클릭 금지
+	$(".details-list > ul > li > button.bu").attr("disabled", true);
+
+	// 분류 한가지만 클릭가능
+	$('.details-list').each(function(index) {
+		$(".details-list button").click(function(){
+			$(this).addClass("active").parents().find(".details-list").children().find("button").removeClass("active");
+			$(this).addClass("active").parents().find(".details-list").children().find("button").css("", "");
+			if ($(this).hasClass('active')){
+				$(this).attr("title", "선택됨");
+			} else {
+				$(this).removeAttr("title");
+			}	
+		})
+	});
+	
+	//분류 li 갯수 10개 이상인 경우 전체보기 버튼 노출
+	$(".details-list [class^=m-0]").each(function(){
+		var list_length = $(this).find("> ul > li").length;
+		if(list_length > 10){
+			$(this).find("ul > li").each(function(){
+				$(this).parent().next().show();
+			});
+		}
+	});
+
+	//전체보기, 접기 버튼 전환
+	$(".check-list.details .btn-view").click(function(){
+		$(this).toggleClass("active")
+		if ($(this).hasClass('active')){
+			$(this).text("접기");
+		} else {
+			$(this).text("전체보기");
+		}
+	})	
+});
+</script>
+
+
+<div class="sh-db">
+	<div class="db-search">
+		<p class="t">총 <strong>1590</strong>건</p>
+		<div class="search-box">
+			<span class="keyword">
+				<input type="text" title="검색어" placeholder="검색어를 입력하세요">
+			</span>
+			<div class="btns">
+				<button type="button" class="search" onclick="fnSearch('1')"><span>검색</span></button>
+				<button type="button" class="reset" onclick="resetPage()"><span>초기화</span></button>
+			</div>
+		</div>
+	</div>
+	<div class="check-list">
+		<h2 class="sr-only">뉴스 및 자료 유형 검색</h2>
+		<h3>유형</h3>
+		<button type="button" class="check-ctrl">유형 선택</button>
+		<div class="label-list">
+			<label>
+				<input type="checkbox" name="" id="m-01">
+				<i></i>
+				<span>뉴스 및 의사록</span>
+			</label>
+			<label>
+				<input type="checkbox" name="" id="m-02">
+				<i></i>
+				<span>공지사항</span>
+			</label>
+			<label>
+				<input type="checkbox" name="" id="m-03">
+				<i></i>
+				<span>주요행사</span>
+			</label>
+			<label>
+				<input type="checkbox" name="" id="m-04">
+				<i></i>
+				<span>한은소식</span>
+			</label>
+			<label>
+				<input type="checkbox" name="" id="m-05">
+				<i></i>
+				<span>간행물</span>
+			</label>
+			<label>
+				<input type="checkbox" name="" id="m-06">
+				<i></i>
+				<span>연구자료</span>
+			</label>
+			<label>
+				<input type="checkbox" name="" id="m-07">
+				<i></i>
+				<span>지역연구 자료</span>
+			</label>
+			<label>
+				<input type="checkbox" name="" id="m-08">
+				<i></i>
+				<span>국외 사무소 자료</span>
+			</label>
+		</div>
+	</div>
+
+	<div class="check-list details"> <!-- style="display: none;"-->
+		<h2 class="sr-only">뉴스 및 자료 분류 검색</h2>
+		<h3>분류</h3>
+		<button type="button" class="check-ctrl">분류 선택</button>
+		
+		<div class="details-list">
+			<!-- 뉴스 및 의사록 -->
+			<h4 class="sr-only">뉴스 및 의사록</h4>
+			<div class="m-01">
+				<ul>
+					<li>
+						<button>보도자료</button>
+					</li>
+					<li>
+						<button>주간보도계획</button>
+					</li>
+					<li>
+						<button>언론보도해명자료</button>
+					</li>
+					<li>
+						<button>금융통화위원회 의사록</button>
+					</li>
+					<li>
+						<button>금융통화위원회 의결사항</button>
+					</li>
+				</ul>
+				<button type="button" class="btn-view">전체보기</button>
+			</div>
+			<!-- //뉴스 및 의사록 -->
+
+			<!-- 공지사항 -->
+			<h4 class="sr-only">공지사항</h4>
+			<div class="m-02">
+				<ul>
+					<li>
+						<button>보도자료</button>
+					</li>
+				</ul>
+				<button type="button" class="btn-view">전체보기</button>
+			</div>
+			<!-- //공지사항 -->
+
+			<!-- 주요행사 -->
+			<h4 class="sr-only">주요행사</h4>
+			<div class="m-03">
+				<ul>
+					<li>
+						<button>주요행사</button>
+					</li>
+				</ul>
+				<button type="button" class="btn-view">전체보기</button>
+			</div>
+			<!-- //주요행사 -->
+
+			<!-- 한은소식 -->
+			<h4 class="sr-only">한은소식</h4>
+			<div class="m-04">
+				<ul>
+					<li>
+						<button>한은소식</button>
+					</li>
+				</ul>
+				<button type="button" class="btn-view">전체보기</button>
+			</div>
+			<!-- //한은소식 -->
+
+			<!-- 간행물 -->
+			<h4 class="sr-only">간행물</h4>
+			<div class="m-05">
+				<ul>
+					<li>
+						<button>BOK이슈노트</button>
+					</li>
+					<li>
+						<button>BOK경제연구</button>
+					</li>
+					<li>
+						<button>해외경제포커스</button>
+					</li>
+					<li>
+						<button>연차보고서</button>
+					</li>
+					<li>
+						<button>통화신용정책보고서</button>
+					</li>
+					<li>
+						<button>금융안정보고서</button>
+					</li>
+					<li>
+						<button>경제전망보고서</button>
+					</li>
+					<li>
+						<button>지역경제보고서</button>
+					</li>
+					<li>
+						<button>지급결제보고서</button>
+					</li>
+					<li>
+						<button>정기간행물</button>
+					</li>
+					<li>
+						<button>단행본</button>
+					</li>
+				</ul>
+				<button type="button" class="btn-view">전체보기</button>
+			</div>
+			<!-- //간행물 -->
+
+			<!-- 연구자료 -->
+			<h4 class="sr-only">연구자료</h4>
+			<div class="m-06">
+				<ul>
+					<li>
+						<button>통화정책</button>
+					</li>
+					<li>
+						<button>금융안정</button>
+					</li>
+					<li>
+						<button>지급결제</button>
+					</li>
+					<li>
+						<button>통계</button>
+					</li>
+					<li>
+						<button>북한경제 등</button>
+					</li>
+				</ul>
+				<button type="button" class="btn-view">전체보기</button>
+			</div>
+			<!-- //연구자료 -->
+			
+		</div>
+
+	</div>
+	<div class="Keyword">
+		<h3>키워드</h3>
+		<ul>
+			<li><a href="">금리</a></li>
+			<li><a href="">한국은행</a></li>
+			<li><a href="">2024경제전망</a></li>
+			<li><a href="">환율</a></li>
+			<li><a href="">금융시장</a></li>
+		</ul>
+	</div>
+	
+	
+</div>
+
+<div class="content">
+
+
+
+
+	<div class="sh">
+		<div class="c">
+			<div class="sh-input">
+				<div class="select-set select1">
+					<button type="button" class="btn_select" title="구분 선택">전체</button>
+					<ul>
+						<li>
+							<button type="button">전체</button>
+						</li>
+						<li>
+							<button type="button">제목</button>
+						</li>
+						<li>
+							<button type="button">내용</button>
+						</li>
+					</ul>
+				</div>
+				<div class="keyword-set">
+					<span class="keyword"><input type="text" title="검색어"></span>
+					<button type="button" class="search" onclick="" aria-label="검색"></button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<div class="sh-BxSet">
+		<p class="count-total">총 <strong>1590</strong>건의 게시물이 있습니다.</p>
+		<div class="sh-select">
+			<div class="select-set select1">
+				<button type="button" class="btn_select" title="개월 선택">개월</button>
+				<ul>
+					<li>
+						<button type="button">3개월</button>
+					</li>
+					<li>
+						<button type="button">6개월</button>
+					</li>
+				</ul>
+			</div>
+			<div class="select-set select2">
+				<button type="button" class="btn_select" title="정렬순서 선택">정렬</button>
+				<ul>
+					<li>
+						<button type="button">최신순</button>
+					</li>
+				</ul>
+			</div>
+			<div class="select-set select3">
+				<button type="button" class="btn_select" title="갯수 선택">갯수</button>
+				<ul>
+					<li>
+						<button type="button">10개</button>
+					</li>
+					<li>
+						<button type="button">20개</button>
+					</li>
+				</ul>
+			</div>
+			<button type="button" class="submit" aria-label="검색"></button>
+		</div>
+	</div>
+	
+	<div class="bd-line">
+		<ul>
+			<li>
+				<span class="i">
+					<span class="t1">BOK이슈노트</span>
+				</span>
+				<div class="set">
+					<span class="title">2023년 3/4분기 국제투자대조표(잠정)</span>
+					<div class="btns">
+						<a href="" class="i-download">다운로드</a>
+					</div>
+				</div>
+				<span class="date">2023. 11. 22</span>
+			</li>
+			<li>
+				<span class="i">
+					<span class="t1">BOK이슈노트</span>
+				</span>
+				<div class="set">
+					<span class="title">이창용 한국은행 총재, 국제결제은행(BIS) 글로벌금융시스템위원회 의장으로 선임</span>
+					<div class="btns">
+						<a href="" class="i-download">다운로드</a>
+					</div>
+				</div>
+				<span class="date">2023. 11. 22</span>
+			</li>	
+			<li>
+				<span class="i">
+					<span class="t1">BOK이슈노트</span>
+				</span>
+				<div class="set">
+					<span class="title">한국은행, 「통화금융대책반 회의」 개최</span>
+					<div class="btns">
+						<a href="" class="i-download">다운로드</a>
+					</div>
+				</div>
+				<span class="date">2023. 11. 22</span>
+			</li>	
+			<li>
+				<span class="i">
+					<span class="t1">BOK이슈노트</span>
+				</span>
+				<div class="set">
+					<span class="title">한국은행, 대한상공회의소와 공동세미나 개최</span>
+					<div class="btns">
+						<a href="" class="i-download">다운로드</a>
+					</div>
+				</div>
+				<span class="date">2023. 11. 22</span>
+			</li>
+			<li>
+				<span class="i">
+					<span class="t1">BOK이슈노트</span>
+				</span>
+				<div class="set">
+					<span class="title">한국은행, 대한상공회의소와 공동세미나 개최 한국은행, 대한상공회의소와 공동세미나 개최 한국은행, 대한상공회의소와 공동세미나 개최 한국은행, 대한상공회의소와 공동세미나 개최</span>
+					<div class="btns">
+						<a href="" class="i-download">다운로드</a>
+					</div>
+				</div>
+				<span class="date">2023. 11. 22</span>
+			</li>
+		</ul>
+	</div>
+
+	<!-- pagination -->
+	<div class="pagination-set">
+		<ul class='pagination pagination-centered'>
+			<li class='i first '><a title='처음 목록' href='javascript:fnSearch(1)'><span class='s'><span>처음 <span class='t'>목록</span></span></span></a></li>
+			<li class='i prev '><a title='이전 목록' href='javascript:fnSearch(0)'><span class='s'><span>이전 <span class='t'>목록</span></span></span></a></li>
+			<li class='active'><span><em title='현재목록'><span>1</span></em></span></li>
+			<li><a href='javascript:fnSearch(2)'><span>2</span></a></li>
+			<li><a href='javascript:fnSearch(3)'><span>3</span></a></li>
+			<li><a href='javascript:fnSearch(4)'><span>4</span></a></li>
+			<li><a href='javascript:fnSearch(5)'><span>5</span></a></li>
+			<li><a href='javascript:fnSearch(6)'><span>6</span></a></li>
+			<li><a href='javascript:fnSearch(7)'><span>7</span></a></li>
+			<li><a href='javascript:fnSearch(8)'><span>8</span></a></li>
+			<li><a href='javascript:fnSearch(9)'><span>9</span></a></li>
+			<li><a href='javascript:fnSearch(10)'><span>10</span></a></li>
+			<li class='i next'><a title='다음 목록' href='javascript:fnSearch(11)'><span class='s'><span>다음 <span class='t'>목록</span></span></span></a></li>
+			<li class='i end'><a title='마지막 목록' href='javascript:fnSearch(20)'><span class='s'><span>끝 <span class='t'>목록</span></span></span></a></li>
+		</ul>
+	</div>
+	<!-- //pagination -->
+
+
+
+</div>

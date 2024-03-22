@@ -1,0 +1,577 @@
+
+<script>
+
+// $('.sh-db').each(function(index){
+// 		$("#m-0" + index).click(function(){
+// 			$(".m-0" + index).toggleClass("on")
+// 			$(this).css("border", "1px solid red")
+// 		});
+// 	});
+ 
+
+$(function () { 
+	 
+	// 	var index = 1++;
+	// var menua1 = $("#m-0"+index)
+	// var menua2 = $(".m-0"+index)
+
+	// $('.sh-db').each(function(index, el) {
+	// 	menua1.click(function(){
+	// 		menua2.toggleClass("on")
+	// 	});
+	// });
+
+/*
+	var arr = $("#m-01 ul.sub-m > li");
+
+	// 배열에서 'a' 개수 구하기
+	let count = 0;
+	for(let i=0; i < arr.length; i++) {
+		if(arr[i] === 'a')  {
+			count++;
+		}
+	}
+	//alert(count)
+*/
+ 
+
+	// 유형 선택시 분류 노출
+	$(".label-list input").click(function(e){
+		$(".sh-db .check-list.details").show();
+	})
+
+	//$("[id*=m-0]").click(function(index, el){
+	//	$("[class*=m-0]").toggleClass("on")
+	//});
+ 
+	$("#m-01").click(function(){
+		$(".m-01").toggleClass("on")
+	});
+	$("#m-02").click(function(){
+		$(".m-02").toggleClass("on")
+	});
+	$("#m-03").click(function(){
+		$(".m-03").toggleClass("on")
+	});
+
+
+
+	//var $index = $(this).index() ++;
+
+
+	$(".m-01 button").click(function(){
+		$("#m-01").prop("checked", true)
+		$("#m-02").prop("checked", false)
+		$("#m-03").prop("checked", false)
+	
+		
+
+		//$($index).hide()
+		$(".m-02").hide()
+		$(".m-03").hide()
+		
+	});
+
+	$(".m-02 button").click(function(){
+		$("#m-01").prop("checked", false)
+		$("#m-02").prop("checked", true)
+		$("#m-03").prop("checked", false)
+
+		$(".m-01").hide()
+		$(".m-03").hide()
+	});
+
+	$(".m-03 button").click(function(){
+		$("#m-01").prop("checked", false)
+		$("#m-02").prop("checked", false)
+		$("#m-03").prop("checked", true)
+
+		$(".m-01").hide()
+		$(".m-02").hide()
+	});
+
+	$("[class^=m-0]").click(function(){
+		$(".check-list input").attr("disabled", true);
+	});
+
+	
+	//depth3 있는 경우 아이콘 추가
+	$(".details-list .sub-m").prev("button").addClass("bu")
+	//depth3 있는 경우 depth2 클릭 금지
+	$(".details-list > ul > li > button.bu").attr("disabled", true);
+
+	// 분류 한가지만 클릭가능
+	$('.details-list').each(function(index) {
+		$(".details-list button").click(function(){
+			$(this).addClass("active").parents().find(".details-list").children().find("button").removeClass("active");
+			$(this).addClass("active").parents().find(".details-list").children().find("button").css("", "");
+			if ($(this).hasClass('active')){
+				$(this).attr("title", "선택됨");
+			} else {
+				$(this).removeAttr("title");
+			}	
+		})
+	});
+	
+	//분류 li 갯수 10개 이상인 경우 전체보기 버튼 노출
+	$(".details-list [class^=m-0]").each(function(){
+		var list_length = $(this).find("> ul > li").length;
+		if(list_length > 10){
+			$(this).find("ul > li").each(function(){
+				$(this).parent().next().show();
+			});
+		}
+	});
+
+	//전체보기, 접기 버튼 전환
+	$(".check-list.details .btn-view").click(function(){
+		$(this).toggleClass("active")
+		if ($(this).hasClass('active')){
+			$(this).text("접기");
+		} else {
+			$(this).text("전체보기");
+		}
+	})	
+});
+</script>
+
+
+
+
+<div class="sh-db">
+	<div class="db-search">
+		<p class="t">총 <strong>1590</strong>건</p>
+		<div class="search-box">
+			<span class="keyword">
+				<input type="text" title="검색어" placeholder="검색어를 입력하세요">
+			</span>
+			<div class="btns">
+				<button type="button" class="search" onclick="fnSearch('1')"><span>검색</span></button>
+				<button type="button" class="reset" onclick="resetPage()"><span>초기화</span></button>
+			</div>
+		</div>
+	</div>
+	<div class="check-list">
+		<h2 class="sr-only">멀티콘텐츠 유형 선택</h2>
+		<h3>유형</h3>
+		<button type="button" class="check-ctrl ">유형 선택</button>
+		<div class="label-list">
+			<label>
+				<input type="checkbox" name="" id="m-01">
+				<i></i>
+				<span>동영상</span>
+			</label>
+			<label>
+				<input type="checkbox" name="" id="m-02">
+				<i></i>
+				<span>카드뉴스</span>
+			</label>
+			<label>
+				<input type="checkbox" name="" id="m-03">
+				<i></i>
+				<span>웹툰</span>
+			</label>
+		</div>
+	</div>
+	<div class="check-list details"> <!-- style="display: none;"-->
+		<h2 class="sr-only">멀티콘텐츠 분류 선택</h2>
+		<h3>분류</h3>
+		<button type="button" class="check-ctrl">분류 선택</button>
+		<div class="details-list">
+			<!-- 동영상 -->
+			<h4 class="sr-only">동영상</h4>
+			<div class="m-01">
+				<ul >
+					<li>
+						<button type="button">총재기자간담회</button>
+						<!--class="active"-->
+						<ul class="sub-m">
+							<li>
+								<button type="button">통화정책</button>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<button type="button">보도자료설명회</button>
+						<ul class="sub-m">
+							<li>
+								<button type="button">통계</button>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<button type="button">주요 행사 및 강연</button>
+					</li>
+					<li>
+						<button type="button">홍보기획영상</button>
+					</li>
+					<li>
+						<button type="button">경제교육</button>
+						<ul class="sub-m">
+							<li>
+								<button type="button">어린이</button>
+							</li>
+							<li>
+								<button type="button">청소년</button>
+							</li>
+							<li>
+								<button type="button">교사</button>
+							</li>
+							<li>
+								<button type="button">일반인</button>
+							</li>
+							<li>
+								<button type="button">금요강좌</button>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<button type="button">공모 수상작</button>
+						<ul class="sub-m">
+							<li>
+								<button type="button">화폐사랑 콘텐츠(동영상)</button>
+							</li>
+							<li>
+								<button type="button">통화정책 경시대회</button>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<button type="button">외환신고안내</button>
+					</li>
+				</ul>
+				<button type="button" class="btn-view">전체보기</button>
+			</div>
+			<!-- //동영상 -->
+
+			<!-- 카드뉴스 -->
+			<h4 class="sr-only">카드뉴스</h4>
+			<div class="m-02">
+				<ul>
+					<li>
+						<button type="button">인포그래픽</button>
+					</li>
+					<li>
+						<button type="button">화폐홍보</button>
+					</li>
+					<li>
+						<button type="button">경제교육</button>
+					</li>
+					<li>
+						<button type="button">공모 수상작</button>
+					</li>
+				</ul>
+				<button type="button" class="btn-view">전체보기</button>
+			</div>
+			<!-- //카드뉴스 -->
+
+			<!-- 웹툰 -->
+			<h4 class="sr-only">웹툰</h4>
+			<div class="m-03">
+				<ul class="">
+					<li><button type="button">경제교육웹툰</button></li>
+				</ul>
+				<button type="button" class="btn-view">전체보기</button>
+			</div>
+			<!-- //웹툰 -->
+		</div>
+	</div>
+
+	<!-- 키워드 -->
+	<div class="Keyword">
+		<h3>키워드</h3>
+		<ul>
+			<li><a href="">금리</a></li>
+			<li><a href="">한국은행</a></li>
+			<li><a href="">2024경제전망</a></li>
+			<li><a href="">환율</a></li>
+			<li><a href="">금융시장</a></li>
+		</ul>
+	</div>
+	<!-- //키워드 -->
+</div>
+
+
+
+<div class="content">
+	
+	<!-- 컨텐츠 -->
+	
+	<div class="sh">
+		<div class="c short">
+			<div class="sh-input">
+				<div class="select-set select1">
+					<select name="" id="" title="구분 선택">
+						<option value="">전체</option>
+						<option value="">제목</option>
+						<option value="">내용</option>
+					</select>
+				</div>
+				<div class="keyword-set">
+					<span class="keyword"><input type="text" title="검색어"></span>
+					<button type="button" class="search" onclick="" aria-label="검색"></button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="sh-BxSet">
+		<p class="count-total">총 <strong>1590</strong>건의 게시물이 있습니다.</p>
+		<div class="sh-select">
+			<div class="select-set">
+				<select name="" id="" title="개월 선택">
+					<option value="">3개월</option>
+					<option value="">6개월</option>
+				</select>
+			</div>
+			<div class="select-set select2">
+				<select name="" id="" title="정렬순서 선택">
+					<option value="">최신순</option>
+				</select>
+			</div>
+			<div class="select-set select3">
+				<select name="" id="" title="갯수 선택">
+					<option value="">10개</option>
+					<option value="">20개</option>
+				</select>
+			</div>
+			<button type="button" class="submit" aria-label="검색"></button>
+		</div>
+	</div>
+	
+	<div class="photo-list">
+		<ul>
+			<li>
+				<a href="">
+					<span class="img-box">
+						<span class="img" style="background-image: url('/static/portal/img/main/img_board01.png');">
+							<i class="v-ico"></i> <!-- 동영상인 경우 플레이 아이콘 -->
+						</span>
+						<span class="p">
+							<i class="i-video"></i>
+							동영상
+						</span>
+					</span>
+					<span class="tit">
+						<span class="t">총재기자간담회</span>
+						<span>통화정책</span>
+					</span>
+					<span class="title">[알기 쉬운 경제이야기] (10편) 물가와 인플레이션</span>
+					<span class="date">2024. 03. 10</span>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<span class="img-box">
+						<span class="img" style="background-image: url('/static/portal/img/img_card02.png');"></span>
+						<span class="p">
+							<i class="i-card"></i>
+							카드뉴스
+						</span>
+					</span>
+					<span class="tit">
+						<span class="t">총재기자간담회</span>
+						<span>통화정책</span>
+					</span>
+					<span class="title">[알기 쉬운 경제이야기] (10편) 물가와 인플레이션</span>
+					<span class="date">2024. 03. 10</span>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<span class="img-box">
+						<span class="img" style="background-image: url('/static/portal/img/img_card03.png');"></span>
+						<span class="p">
+							<i class="i-webtoon"></i>
+							웹툰
+						</span>
+					</span>
+					<span class="tit">
+						<span class="t">총재기자간담회</span>
+						<span>통화정책</span>
+					</span>
+					<span class="title">[알기 쉬운 경제이야기] (10편) 물가와 인플레이션</span>
+					<span class="date">2024. 03. 10</span>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<span class="img-box">
+						<span class="img" style="background-image: url('/static/portal/img/main/img_board01.png');">
+							<i class="v-ico"></i><span class="sr-only">동영상</span>
+						</span>
+						<span class="p">
+							<i class="i-video"></i>
+							동영상
+						</span>
+					</span>
+					<span class="tit">
+						<span class="t">총재기자간담회</span>
+						<span>통화정책</span>
+					</span>
+					<span class="title">[알기 쉬운 경제이야기] (10편) 물가와 인플레이션</span>
+					<span class="date">2024. 03. 10</span>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<span class="img-box">
+						<span class="img" style="background-image: url('/static/portal/img/main/img_board01.png');">
+							<i class="v-ico"></i><span class="sr-only">동영상</span>
+						</span>
+						<span class="p">
+							<i class="i-video"></i>
+							동영상
+						</span>
+					</span>
+					<span class="tit">
+						<span class="t">총재기자간담회</span>
+						<span>통화정책</span>
+					</span>
+					<span class="title">[알기 쉬운 경제이야기] (10편) 물가와 인플레이션</span>
+					<span class="date">2024. 03. 10</span>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<span class="img-box">
+						<span class="img" style="background-image: url('/static/portal/img/main/img_board01.png');">
+							<i class="v-ico"></i><span class="sr-only">동영상</span>
+						</span>
+						<span class="p">
+							<i class="i-video"></i>
+							동영상
+						</span>
+					</span>
+					<span class="tit">
+						<span class="t">총재기자간담회</span>
+						<span>통화정책</span>
+					</span>
+					<span class="title">[알기 쉬운 경제이야기] (10편) 물가와 인플레이션</span>
+					<span class="date">2024. 03. 10</span>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<span class="img-box">
+						<span class="img" style="background-image: url('/static/portal/img/main/img_board01.png');">
+							<i class="v-ico"></i><span class="sr-only">동영상</span>
+						</span>
+						<span class="p">
+							<i class="i-video"></i>
+							동영상
+						</span>
+					</span>
+					<span class="tit">
+						<span class="t">총재기자간담회</span>
+						<span>통화정책</span>
+					</span>
+					<span class="title">[알기 쉬운 경제이야기] (10편) 물가와 인플레이션</span>
+					<span class="date">2024. 03. 10</span>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<span class="img-box">
+						<span class="img" style="background-image: url('/static/portal/img/main/img_board01.png');">
+							<i class="v-ico"></i><span class="sr-only">동영상</span>
+						</span>
+						<span class="p">
+							<i class="i-video"></i>
+							동영상
+						</span>
+					</span>
+					<span class="tit">
+						<span class="t">총재기자간담회</span>
+						<span>통화정책</span>
+					</span>
+					<span class="title">[알기 쉬운 경제이야기] (10편) 물가와 인플레이션</span>
+					<span class="date">2024. 03. 10</span>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<span class="img-box">
+						<span class="img" style="background-image: url('/static/portal/img/main/img_board02.png');">
+							<i class="v-ico"></i><span class="sr-only">동영상</span>
+						</span>
+						<span class="p">
+							<i class="i-video"></i>
+							동영상
+						</span>
+					</span>
+					<span class="tit">
+						<span class="t">총재기자간담회</span>
+						<span>통화정책</span>
+					</span>
+					<span class="title">[알기 쉬운 경제이야기] (10편) 물가와 인플레이션</span>
+					<span class="date">2024. 03. 10</span>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<span class="img-box">
+						<span class="img" style="background-image: url('/static/portal/img/main/img_board03.png');">
+							<i class="v-ico"></i><span class="sr-only">동영상</span>
+						</span>
+						<span class="p">
+							<i class="i-video"></i>
+							동영상
+						</span>
+					</span>
+					<span class="tit">
+						<span class="t">총재기자간담회</span>
+						<span>통화정책</span>
+					</span>
+					<span class="title">[알기 쉬운 경제이야기] (10편) 물가와 인플레이션</span>
+					<span class="date">2024. 03. 10</span>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<span class="img-box">
+						<span class="img" style="background-image: url('/static/portal/img/main/img_board03.png');">
+							<i class="v-ico"></i><span class="sr-only">동영상</span>
+						</span>
+						<span class="p">
+							<i class="i-video"></i>
+							동영상
+						</span>
+					</span>
+					<span class="tit">
+						<span class="t">총재기자간담회</span>
+						<span>통화정책</span>
+					</span>
+					<span class="title">[알기 쉬운 경제이야기] (10편) 물가와 인플레이션</span>
+					<span class="date">2024. 03. 10</span>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<span class="img-box">
+						<span class="img" style="background-image: url('/static/portal/img/main/img_board02.png');">
+							<i class="v-ico"></i><span class="sr-only">동영상</span>
+						</span>
+						<span class="p">
+							<i class="i-video"></i>
+							동영상
+						</span>
+					</span>
+					<span class="tit">
+						<span class="t">총재기자간담회</span>
+						<span>통화정책</span>
+					</span>
+					<span class="title">[알기 쉬운 경제이야기] (10편) 물가와 인플레이션</span>
+					<span class="date">2024. 03. 10</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+	
+	<div class="pagination-set">
+		페이징
+	</div>
+
+	<!-- //컨텐츠 -->
+

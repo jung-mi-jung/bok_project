@@ -1,0 +1,91 @@
+<div class="cbdc-top">
+	<img src="/static/portal/img/cts/img_cbdc_bg.png" alt="CBDC 중앙은행 디지털화폐">
+</div>
+
+<h3>CBDC란?</h3>
+<div class="cbdc-set">
+	<div class="retail">
+		<p>CBDC는 "Central Bank Digital Currency"의 약자로, 중앙은행이 발행하는 디지털 화폐입니다. CBDC는 현금과 동일한 효력을 가지는 법정화폐이면서, 디지털 지급수단으로의 기능도 가지고 있습니다.</p>
+		<p>한국은행은 현재까지 CBDC의 도입 여부를 결정하지 않았지만 향후 CBDC가 필요한 경우를 대비하여 철저히 준비하고 있습니다.</p>
+	</div>
+	<div class="videoSet">
+		<span class="hidden">유튜브 동영상</span>
+		<div class="video">
+			<video id="bokPlayer" class="video-js vjs-4-3 vjs-default-skin" controls="controls" 
+				data-setup='{"techOrder":["youtube"], "source":[{"type":"video/youtube", "src":"https://youtu.be/uAWUIi4UHGo"}]}'>
+			</video>	
+		</div>
+		<p class="help">이 동영상은 범용(retail) CBDC*를 중심으로 CBDC의 기본개념, 특징 등을 이해하기 쉽게 소개하고 있습니다.</p>
+		<p class="refer">범용(retail) CBDC : 가계, 기업 등 경제주체들이 현금과 마찬가지로 일상생활에서 사용 가능한 CBDC</p>
+	</div>
+</div>
+
+
+<h3>CBDC 활용성 테스트</h3>
+<div class="cbdc-set">
+	<div class="retail">
+		<p>CBDC 활용성 테스트는 기관용(wholesale) CBDC*를 기반으로 하여 미래형 디지털통화의 다양한 활용 사례를 테스트 참가자들이 직접 경험할 수 있는 연구입니다.</p>
+		<p>이번 테스트에서 금융기관은 한국은행이 발행하는 기관용 CBDC를 기반으로 예금 토큰을 발행합니다. 테스트 참가자들은 금융기관이 발행한 민간 디지털통화를 통해 CBDC의 프로그래밍 기능을 활용한 혁신적 지급 서비스를 체감할 수 있습니다.</p>
+		<p class="refer">기관용(wholesale) CBDC : 금융기관에 발행되어 금융기관간 자금거래, 최종 결제 등에 활용되는 CBDC</p>
+	</div>
+	<div class="videoSet">
+		<span class="hidden">유튜브 동영상</span>
+		<div class="video">				
+			<video id="bok2Player" class="video-js vjs-4-3 vjs-default-skin" controls="controls" 
+				data-setup='{"techOrder":["youtube"], "source":[{"type":"video/youtube", "src":"https://youtu.be/KQ2T3ANK5M4"}]}'>
+			</video>
+		</div>
+	</div>
+</div>
+
+<link href="https://www.bok.or.kr/static/jslibrary/videojs/video-js.css" rel="stylesheet">
+<script src="https://www.bok.or.kr/static/jslibrary/videojs/video.js"></script>
+<script src="https://www.bok.or.kr/static/jslibrary/videojs/flash/videojs-flash.min.js"></script>
+<script src="https://www.bok.or.kr/static/jslibrary/videojs/videojs-contrib-hls.min.js"></script>
+<script src="https://www.bok.or.kr/static/jslibrary/videojs/Youtube.min.js"></script>
+
+
+<script>
+	/* var player = videojs('bokPlayer');
+	player.play(); */
+	
+	var player, play_type;
+	var options = {hls:{
+		withCredentials:false
+	}}
+	
+		play_type = "video/youtube";
+		player = videojs('bokPlayer');
+		player = videojs('bokPlayer',{flash:options, html5:options});
+	
+	
+	player.ready(function(){
+		this.src({
+			src:"https://youtu.be/uAWUIi4UHGo",
+			type:play_type
+		});
+	});
+	
+	var player2
+	var options = {hls:{
+		withCredentials:false
+	}}
+	
+		player2 = videojs('bok2Player');
+		player2 = videojs('bok2Player',{flash:options, html5:options});
+	
+	
+	player2.ready(function(){
+		this.src({
+			src:"https://youtu.be/KQ2T3ANK5M4",
+			type:play_type
+		});
+	});
+	
+	function getExtensionOfFilename(filename){
+		var _fileLen = filename.length;
+		var _lastDot = filename.lastIndexOf('.');
+		var _fileExt = filename.substring(_lastDot, _fileLen).toLowerCase();
+		return _fileExt;
+	}
+</script>

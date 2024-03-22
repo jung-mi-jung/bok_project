@@ -1,0 +1,45 @@
+//hgroup sns
+$icolist: ("ico-youtube", "ico-instagram", "ico-facebook", "ico-twitter");
+
+[class^="ico-"] {
+	@each $item in $icolist {
+		&.#{$item} {
+			&::before {
+				background-image: url(/static/portal/img/ico/#{$item}.svg);
+			}
+		}
+	}
+}
+
+
+//foter sns
+$snslist: ("sns-youtube", "sns-instagram", "sns-facebook", "sns-twitter");
+
+[class^="sns-"] {
+	@each $item in $snslist {
+		&.#{$item} {
+			&::before {
+				background-image: url(/static/portal/img/ico/#{$item}.svg);
+			}
+		}
+	}
+}
+
+
+//조직도 등
+.i-fax {
+	&::before {
+		color: $black;
+		@include font-ico-outline('\ead8');
+		font-size: 24px;
+		margin-right: 3px;
+	}
+}
+.i-email {	
+	&::before {
+		color: $black;
+		@include font-ico-outline('\e158');
+		font-size: 24px;
+		margin-right: 3px;
+	}
+}

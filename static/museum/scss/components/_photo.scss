@@ -1,0 +1,315 @@
+.photo-list {
+	border-top: 1px solid $bd-color;
+	ul {
+		margin: 0 -10px;
+		padding: 10px 0;
+		li {
+			float: left;
+			width: 33.3%;
+			padding: 10px 10px 40px;
+			@include breakpoint($sm){
+				width: 100%;
+				padding: 10px 10px 0;
+				& + li {
+					margin-top: 10px;
+				}
+			}
+			a {
+				display: block;
+				border: 1px solid #E5E5E5;
+				border-radius: 8px;
+				padding: 6px;
+				.img-box {
+					position: relative;
+					display: block;
+					margin-bottom: 8px;
+					.img {
+						display: block;
+						padding-top: 56.4%;
+						border: 1px solid #E5E5E5;
+						border-radius: 8px 8px 0 0;
+						.v-ico {
+							&::before {
+								content: "";
+								display: inline-block;
+								width: 48px;
+								height: 48px;
+								background-image: url(/static/portal/img/ico/ico-play2.png);
+								position: absolute;
+								top: 50%;
+								left: 50%;
+								margin-top: -24px;
+								margin-left: -24px;
+								z-index: 1;
+							}
+						}
+					}
+					.p {
+						display: inline-block;
+						//display: flex;
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						padding: 6px 10px;
+						background-color: #fff;
+						border-radius: 0 8px 0 0;
+						color: #3B63C4;
+						font-size: rem(14);
+						i {				
+							display: inline-block;
+							&::before {
+								content: "";
+								display: inline-block;
+								vertical-align: middle;
+								width: 18px;
+								height: 18px;
+								background-position: 50%;
+								background-repeat: no-repeat;
+								margin-right: 4px;
+							}
+						}
+						$icolist: ("i-video", "i-card", "i-webtoon");
+						[class^="i-"] {
+							@each $item in $icolist {
+								&.#{$item} {
+									&::before {
+										background-image: url(/static/portal/img/ico/#{$item}.png);
+									}
+								}
+							}
+						}
+					}
+				}
+				.tit {
+					color: #4d4d4d;
+					font-size: rem(14);
+					padding: 0 10px;
+					span {
+						&.t {
+							color: #3B63C4;
+						}
+						& + span {
+							&::before {
+								content: "";
+								display: inline-block;
+								vertical-align: middle;
+								width: 1px;
+								height: 14px;
+								background-color: #E5E5E5;
+								margin: 0 10px;
+							}
+						}
+					}					
+				}		
+				.title {
+					@include ellipsis;
+					width: 100%;
+					font-size: rem(18);
+					font-weight: 400;
+					margin: 10px 0 0;
+					padding: 0 10px;
+				}
+				.date, .date2, .location, .year {
+					display: block;
+					color: #666;
+					font-size: rem(14);
+					padding: 0 10px;
+				}
+				.date,
+				.location {
+					display: flex;
+					align-items: center;
+					i {
+						font-size: rem(15);
+						margin-right: 4px;
+					}
+				}
+				.badge2 {
+					position: absolute;
+					top: 6px;
+					left: -6px;
+					padding: 0 6px 0 0;
+					z-index: 10;
+					width: 80px;
+					background: url(/static/commons/img/pattern/badge.png) right 0 no-repeat;
+					background-size: contain;
+					.badge{
+						display: block;
+						position: static;
+						background: #ea5a59;
+						width: 74px;
+						height: 26px;
+						line-height: 26px;
+						padding: 0;
+						text-align: center;
+						font-size: 14px;
+						color: #fff;
+					}
+				}
+			}			
+		}
+		
+	}
+}
+/* 소장품 화폐 목록 */
+.photoList {
+	.row {
+		display: grid;
+		margin-top: 16px;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 32px 32px;
+		@include breakpoint($smd) {
+			grid-template-columns: repeat(3, 1fr);
+			gap: 20px 20px;
+		}
+		@include breakpoint($sm) {
+			grid-template-columns: repeat(1, 1fr);
+			gap: 20px 0;
+		}
+		a {
+			&:hover {
+				@include breakpoint($lg) {
+					.imgDesc dt, 
+					.imgDesc dd {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+		.imgBox {
+			aspect-ratio:  394/320;
+			padding: 8px;
+			background-color: #fff;
+			border: 1px solid #E5E5E5;
+			border-radius: 8px;
+			box-sizing: border-box;
+			span {
+				display: block;
+				width: 100%;
+				height: 100%;
+				background-size: contain;
+			}
+		}
+		.imgDesc {
+			margin-top: 10px;
+			dl {
+				display: flex;
+				position: relative;
+				width: 100%;
+				align-items: flex-start;
+				gap: 0 8px;
+				&::before {
+					content: "";
+					display: inline-block;
+					position: absolute;
+					left: 8px;
+					top: 9px;
+					width: 4px;
+					height: 4px;
+					border-radius: 50%;
+					background: #4D4D4D;
+					@include breakpoint($sm) {
+						top: 8px;
+					}
+				}
+
+				dt {
+					width: 88px;
+					padding-left: 24px;
+					box-sizing: border-box;
+					color: #4D4D4D;
+				}
+				dd {
+					width: calc(100% - 88px);
+					color: #1A1A1A;
+				}
+			}
+		}
+	}
+}
+
+.card-photo {
+	position: relative;
+	width: 1140px;
+	max-width: 100%;
+	margin: 30px auto;
+	padding-bottom: 40px;
+	.photo-ctrl {
+		button {
+			position: absolute;
+			top: 50%;
+			border: 1px solid #666666;
+			border-radius: 50%; 
+			width: 80px;
+			height: 80px;
+			margin-top: -40px;
+			&::before {
+				content: "";
+				display: inline-block;
+				width: 80px;
+				height: 80px;
+			}
+			&.prev,
+			&.next {
+				border: 1px solid $point;
+				border-radius: 50%;
+				@include breakpoint($smd) {
+					display: none;
+				}
+				&::before {
+					background: url(/static/portal/img/common/ctrl-btn-off.png) 50% no-repeat;
+				}
+				&:hover {
+					background-color: $point;
+					&::before {
+						background: url(/static/portal/img/common/ctrl-btn-on.png) 50% no-repeat;
+					}
+				}
+			}
+			&.prev {
+				left: -5px;
+				&:hover {
+					&::before {
+						transform: rotate(180deg);
+					}
+				}
+			}
+			&.next {
+				right: -5px;
+				&::before {
+					transform: rotate(180deg);
+				}
+				&:hover {
+					&::before {
+						transform: rotate(0);
+					}
+				}
+			}
+		}
+		.swiper-pagination {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			text-align: center;
+			color: #666;
+			&-current {
+				color: #3B63C4;
+				font-size: rem(24);
+				font-weight: 400;
+			}
+		}
+	}
+	.photo {
+		width: 960px;
+		max-width: 100%;
+		margin: 0 auto;
+	}
+	.img {
+		display: block;
+		padding-top: 100%;		
+		background-position: 50%;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+}

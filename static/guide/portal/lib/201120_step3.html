@@ -1,0 +1,181 @@
+<h2>실명신고</h2>
+<h3>부패·부조리 신고</h3>
+
+
+<form id="board" name="board" method="post" enctype="multipart/form-data" action="">
+		
+	<h4>신고 제목 : 부패행위 신고</h4>
+	
+	<h4>신고자</h4>
+		<div class="view">
+			<dl>
+				<dt><span class="req"><span class="sr-only">필수입력</span></span><label for="userNm">이름</label></dt>
+				<dd>정미정</dd>						
+			</dl>
+			<dl>
+				<dt><span class="req"><span class="sr-only">필수입력</span></span><label for="adres">주소</label></dt>
+				<dd>
+					<div class="postSet">
+						<span>
+							<input type="text" name="zip" id="zip" value="" class="post" title="우편번호" readonly="readonly">
+							<a href="javascript:adresPop();" class="b-sh" title="새창열림">주소 찾기</a>
+						</span>
+						<span><input type="text" name="adres" id="adres" value="" class="w100p" title="주소" readonly="readonly"></span>
+						<span><input type="text" name="detailAdres" value="" class="w100p" title="상세주소"></span>
+					</div>														
+				</dd>
+			</dl>
+			<dl>
+				<dt><span class="req"><span class="sr-only">필수입력</span></span><label for="mbtlnum">연락처</label></dt>
+				<dd>
+					<select name="mbtlnum1" title="휴대폰 앞자리 선택">
+						<option value="">선택</option>
+						<option value="010">010</option>
+						<option value="011">011</option>
+						<option value="016">016</option>
+						<option value="017">017</option>
+						<option value="018">018</option>
+						<option value="019">019</option>
+					</select>
+					- <input type="text" name="mbtlnum2" pattern="[0-9]*" onkeyup="this.value=check_txt(this.value)" inputmode="numeric" min="0" value="" style="width:70px;height:30px;vertical-align:middle;border:1px solid gray;text-align:center" size="4" maxlength="4" title="휴대폰 가운데 4자리">
+					- <input type="text" name="mbtlnum3" pattern="[0-9]*" onkeyup="this.value=check_txt(this.value)" inputmode="numeric" min="0" value="" style="width:70px;height:30px;vertical-align:middle;border:1px solid gray;text-align:center" size="4" maxlength="4" title="휴대폰 마지막 4자리"> 
+				</dd>
+				<dt><label for="psitn">소속</label></dt>
+				<dd><input type="text" name="psitn" id="psitn" class="w70p" value=""></dd>
+			</dl>					   
+		</div>
+		<h4>피신고자</h4>
+		<div class="view">
+		<dl>
+			<dt><span class="req"><span class="sr-only">필수입력</span></span>이름</dt>
+			<dd><input type="text" name="prtctorNm" id="prtctorNm" class="w70p" value=""></dd>
+			<dt><label for="occp">소속</label></dt>
+			<dd><input type="text" name="occp" id="occp" class="w70p" value=""></dd>						
+		</dl>
+		<dl>
+			<dt><label for="prtctorAdres">주소</label></dt>
+			<dd>
+				<div class="postSet">
+					<span>
+						<input type="text" name="prtctorZip" id="prtctorZip" value="" class="post" title="우편번호" readonly="readonly">
+						<a href="javascript:prtctorAdresPop();" class="b-sh" title="새창열림">주소 찾기</a>
+					</span>
+					<span><input type="text" name="prtctorAdres" id="prtctorAdres" value="" class="w100p" title="주소" readonly="readonly"></span>
+					<span><input type="text" name="prtctorDetailAdres" value="" class="w100p" title="상세주소"></span>
+				</div>
+			</dd>
+		</dl>
+		<dl>
+			<dt><label for="optn2">직위</label></dt>
+			<dd><input type="text" name="optn2" id="optn2" class="w70p" value=""></dd>
+			<dt><label for="prtctorMbtlnum">연락처</label></dt>
+			<dd>
+				<select name="prtctorMbtlnum1" title="휴대폰 앞자리 선택">
+					<option value="">선택</option>
+					<option value="010">010</option>
+					<option value="011">011</option>
+					<option value="016">016</option>
+					<option value="017">017</option>
+					<option value="018">018</option>
+					<option value="019">019</option>
+				</select>
+				- <input type="text" name="prtctorMbtlnum2" pattern="[0-9]*" onkeyup="this.value=check_txt(this.value)" inputmode="numeric" min="0" value="" style="width:70px;height:30px;vertical-align:middle;border:1px solid gray;text-align:center" size="4" maxlength="4" title="휴대폰 가운데 4자리">
+				- <input type="text" name="prtctorMbtlnum3" pattern="[0-9]*" onkeyup="this.value=check_txt(this.value)" inputmode="numeric" min="0" value="" style="width:70px;height:30px;vertical-align:middle;border:1px solid gray;text-align:center" size="4" maxlength="4" title="휴대폰 마지막 4자리">
+			</dd>					
+		</dl>			   
+	</div>
+	<h4>신고내용</h4>
+	<div class="view">
+		<dl>
+			<dt><label for="optn5">부패신고 취지 및 이유</label></dt>
+			<dd><input type="text" class="w100p" name="optn5" id="optn5" maxlength="500" value=""></dd>
+		</dl>
+		<dl>
+			<dt>
+				<span class="req"><span class="sr-only">필수입력</span></span>
+				<label for="nttCn">부패신고내용</label>
+			</dt>
+			<dd>
+				* 개인정보 보호를 위해 신고내용 입력란에 주민등록번호, 전화번호 등 개인정보가 포함되지 않도록 주의바라며, 개인정보가 입력된 신고내용의 경우 신고자에게 통보하지 않고 관리자에 의해 삭제될 수 있음을 알려드립니다.
+				<textarea class="w100p" name="nttCn" id="nttCn" cols="30" rows="10" maxlength="3000"></textarea>
+			</dd>
+		</dl>			
+		<dl>
+			<dt>
+				증거자료 등 첨부서류
+			</dt>
+			<dd>
+				<dl class="fileFormArea">
+					<dd>
+						<div class="fileAddSet">
+									
+							<div class="row">
+								<div class="col-sm-2">
+									<button type="button" class="b-add btn-sm btnFileAdd"> 추가</button>
+								</div>
+								<div class="col-sm-10 fileList">				
+									<div class="file_set">
+										<div class="form-inline">
+											<input name="normalFile_1" type="file" id="normalFile_1" class="input_file form-control" title="첨부파일 1">
+											<button type="button" id="btn_file_del_1" class="btn btn-sm btn-danger btn_file_del" title="첨부파일 1 삭제">
+												<span class="sr-only">첨부파일 1 삭제</span>
+												<i class="fa fa-trash-o" aria-hidden="true"></i>
+											</button>
+										</div>										
+									</div>						
+								</div>
+							</div>							
+						</div>
+						<span class="col_red">※ 파일은 70MB까지 업로드 가능합니다.</span>
+					</dd>
+				</dl>
+			</dd>
+		</dl>
+		<dl>
+			<dt><label for="optn3">타기관 신고 및 쟁송여부 등</label></dt>
+			<dd>
+				<input type="hidden" name="optn3" value="">
+				<div>
+					<label for="optn3"><input type="checkbox" name="optn3Nm" id="optn3Nm1" value="1" onclick="javascript:etcCdChg()" title="감사원, 수사기관, 국민권익위원회 등에 동일한 내용을 신고한 사실이 있음"><i></i>감사원, 수사기관, 국민권익위원회 등에 동일한 내용을 신고한 사실이 있음</label><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					(신고기관 : <input type="text" class="w20p" name="optn4" id="optn4" value="">
+					신고일 : <input type="text" class="w20p" name="optn8" id="optn8" value="">
+					조치결과 : <input type="text" class="w20p" name="optn6" id="optn6" value="">)<br>
+					<label for="optn3"><input type="checkbox" name="optn3Nm" id="optn3Nm2" value="2" onclick="javascript:etcCdChg()" title="민사 형사 행정소송 또는 행정삼판 및 이에 준하는 절차 진행 중 또는 완료"><i></i>민사 형사 행정소송 또는 행정삼판 및 이에 준하는 절차 진행 중 또는 완료</label>
+					<input type="text" class="w20p" name="optn7" id="optn7" value="">
+				</div>
+			</dd>	
+		</dl>
+	</div>
+
+	<div class="view">
+		<dl>
+			<dt><span class="req"><span class="sr-only">필수입력</span></span><label for="catpchaAnswer">자동등록 방지</label></dt>
+			<dd>
+				<div class="catpchaSet">
+					<p class="help">아래 이미지의 숫자를 보이는 대로 입력하여 주세요.</p>
+					<div class="set">
+						<div class="l">
+							<div id="catpcha"><img src="/cmmn/captcha/image.do?rand=0.2625964253012085" alt=""></div>
+							<div id="audiocatpch" style="display: none;"></div>
+							<div class="b">
+								<button id="reLoad" type="button"><i class="fa fa-refresh" aria-hidden="true"></i><span class="sr-only">새로고침</span></button>
+								<button id="soundOnKor" type="button"><i class="fa fa-volume-up" aria-hidden="true"></i><span class="sr-only">한글음성</span></button>
+							</div>
+						</div>
+						<input type="text" id="catpchaAnswer" name="catpchaAnswer" value="" maxlength="5">
+					</div>
+				</div>
+			</dd>
+		</dl>
+	</div>
+
+	
+ 	<!--신고유형코드 param : 03
+    -->
+	
+	<div class="btnSet">
+		<a href="javascript:checkForm();" class="b-reg lg"><span>신청</span></a>
+		<a href="" class="b-cancel lg">취소</a>
+	</div>
+</form>

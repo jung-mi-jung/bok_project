@@ -1,0 +1,140 @@
+.btn-set {
+	margin: 30px 0;
+	text-align: right;
+	position: relative;
+	display: block;
+	> *[class^=b-] {
+		margin: 0 6px 6px 0;
+	}
+	&.c {
+		text-align: center;		
+		@include breakpoint($lg){
+			margin-top: 80px;
+		}
+	}
+	&.l {
+		text-align: left;
+		float: left;
+	}
+}
+$btn: "[class^=b-]";
+
+#{$btn} {
+	border: none;
+	font-size: rem(18);
+	text-align: center;
+	min-width: 80px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	line-height: 48px;
+	color: #fff;
+	background-color: #3B63C4;
+	border-radius: 6px;
+	padding: 0 10px;
+	&:focus {
+		outline: 1px dashed #fff;
+    	outline-offset: -2px;
+	}
+	.btn-set & {
+		height: 50px;
+		line-height: 48px;
+		justify-content: center;
+		align-items: center;
+		font-size: rem(18);
+		@include breakpoint($md) {
+			min-width: 112px;
+		}
+	}
+	&.xs {
+		min-width: 0;
+		font-size: 12px;
+		line-height: inherit;
+		padding: 5px;
+	}
+	&.sm {
+		min-width: 0;
+		font-size: 12px;
+	}
+	&.lg {
+		@include breakpoint($lg) {
+			min-width: 160px;
+		}
+	}
+	&.b-list {
+		&::before {
+			content: "";
+			display: inline-block;
+			vertical-align: middle;
+			width: 24px;
+			height: 14px;
+			background: url(/static/portal/img/ico/ico-b-list.svg) no-repeat;
+			margin-right: 12px;
+		}		
+	}
+	&.b-cancel {
+		background-color: #757575;
+	}
+	&.b-del {}	
+	&.b-edit {}
+	&.b-save {
+		border: 1px solid $point;
+		background-color: #fff;
+		color: $point;
+	}
+	&.b-submit {}
+	&.b-confirm {}
+	&.b-link {
+		&::after {
+			@include font-ico-outline('\e941');
+			margin-left: 4px;
+		}
+	}
+	&.b-go{
+		&::after {
+			content: "\e315";
+			font-family: "Material Icons Outlined";
+			font-weight: normal;
+			font-style: normal;
+			display: inline-block;
+			line-height: 1;
+			vertical-align: text-bottom;
+			text-transform: none;
+			letter-spacing: normal;
+			word-wrap: normal;
+			white-space: nowrap;
+			-webkit-font-smoothing: antialiased;
+			text-rendering: optimizeLegibility;
+			-moz-osx-font-smoothing: grayscale;
+			font-feature-settings: "liga";
+			margin-left: 4px;
+		}
+	}
+
+}
+
+table,
+li {
+	.b-down {
+		&::before {
+			@include font-ico('\e258');
+			font-size: 13px;
+			margin-right: 3px;
+			vertical-align: bottom;
+		}
+	}
+}
+
+
+.btnSet {
+	float: none;
+	text-align: center !important;
+	margin-top: 40px;
+	[class^=b-] {
+		font-size: rem(18);
+		min-width: 112px;
+		& + [class^=b-] {
+			margin-left: 7px;
+		}
+	}
+}

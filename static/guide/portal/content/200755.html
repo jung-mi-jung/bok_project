@@ -1,0 +1,160 @@
+<h2>통화정책방향 결정회의</h2>
+
+<div class="h-group">
+	<h3>2024년</h3>
+	<p class="fr select-go mb10">
+		<select name="pYear" id="pYear" title="년도를 선택해 주세요.">
+			<option value="">년도선택</option>			
+				<option value="2025" >2025년</option>			
+				<option value="2024" selected="selected">2024년</option>			
+				<option value="2023" >2023년</option>			
+				<option value="2022" >2022년</option>			
+				<option value="2021" >2021년</option>			
+				<option value="2020" >2020년</option>			
+				<option value="2019" >2019년</option>			
+				<option value="2018" >2018년</option>			
+				<option value="2017" >2017년</option>			
+				<option value="2016" >2016년</option>			
+				<option value="2015" >2015년</option>			
+				<option value="2014" >2014년</option>			
+				<option value="2013" >2013년</option>			
+				<option value="2012" >2012년</option>			
+				<option value="2011" >2011년</option>			
+				<option value="2010" >2010년</option>			
+				<option value="2009" >2009년</option>			
+				<option value="2008" >2008년</option>			
+				<option value="2007" >2007년</option>			
+				<option value="2006" >2006년</option>			
+				<option value="2005" >2005년</option>			
+				<option value="2004" >2004년</option>			
+				<option value="2003" >2003년</option>			
+				<option value="2002" >2002년</option>			
+				<option value="2001" >2001년</option>			
+				<option value="2000" >2000년</option>			
+				<option value="1999" >1999년</option>			
+		</select>
+		<button onclick="yearMove();" class="go">이동</button>
+	</p>
+</div>
+<div class="table tac mt0 scrollX1">
+	<table id="tableId">	
+		<caption>통화정책방향 회의</caption>
+		<thead>
+			<tr>
+				<th scope="col">회의일자</th>
+				<th scope="col" class="cellDown">결정문</th>
+				<th scope="col">기자간담회</th>
+				<th scope="col" class="cellDown">의사록<sup title="테이블 하단 각주설명 참고">1)</sup></th>
+				<th scope="col">금융·경제 이슈<sup title="테이블 하단 각주설명 참고">1)</sup></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th scope="row">01월 11일(목)</th>
+			
+				<td>
+					<div class="fileGroupSet">
+						<a href="javascript:void(0);" class="i-download" title="첨부파일 레이어창열기">
+							<span class="sr-only">다운로드</span>
+						</a>
+						<div class="fileGoupBox">
+							<h3>다운로드할 파일을 선택하세요.</h3>
+							<ul>
+								<li>
+									<a href="" class="i-download">
+										국문보도자료(1).pdf
+									</a>
+								</li>
+								<li>
+									<a href="" class="i-download">
+										국문보도자료(2).pdf
+									</a>
+								</li>
+							</ul>
+							<button class="closeLayer">
+								<span class="sr-only">레이어창 닫기</span>
+							</button>
+						</div>
+					</div>
+
+			
+				</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<ol class="fnote"> 
+	<li><span class="title">주 : <sup title="각주 1)의 대한 설명">1) </sup></span><span class="desc">금융·경제 이슈는 통화정책방향 결정회의 D+7일, 의사록은 회의일로부터 2주 경과 후 첫 화요일에 게시</span></li> 
+</ol>
+
+<script>
+
+$(document).ready(function(){
+	mergeCell("tableId");
+});
+
+function mergeCell(tableId) {
+  	// variable 정의
+  	var first = true;
+  	var prevRowspan1 = 1;
+  	var prevRow = null;
+  	var prevCell1 = null;
+  	var rows = $("#" + tableId + " > tbody").children();
+  	for (var i = 0; i < rows.length; i++ ) {
+  		if (first) {
+  			prevRow = rows[i];
+  			prevCell1 = $(prevRow).find("td").eq(0); // 월
+  			first = false;
+  			continue;
+  		}
+  		var row = rows[i]; // row
+  		var tdList = $(row).find("td"); // row > td 리스트
+  		var firstCell = $(tdList).eq(0); // 첫 번째 행
+  		var firstCellText = $(firstCell).text(); // 첫 번째 행 text 추출
+  		// 두 번째 row 부터 텍스트 비교
+  		if (prevCell1.text() == firstCellText) {
+  			prevRowspan1++;
+  			$(prevCell1).attr("rowspan", prevRowspan1);
+  			$(firstCell).remove();
+  		}
+  		else {
+  			prevRowspan1 = 1;
+  			prevCell1 = firstCell;
+  		}
+  	}
+}
+
+//이슈별분석내용첨부파일
+var filesOv = $(".fileGroup5Set>a");
+
+$(filesOv).on("click", function(event){
+	if ($(".fileGroup5Set").find('.fileGoup5Box').hasClass("on")) {
+		$(".fileGoup5Box").css("display","none");
+		$(".fileGroup5Set").find('.fileGoup5Box').removeClass("on");
+	}else{
+		$(this).next().slideDown();
+		$(".fileGroup5Set").find('.fileGoup5Box').addClass("on");
+	}
+	event.preventDefault();
+});
+$(".fileGroup5Set").on("mouseleave", function(event){
+	event.preventDefault();
+});
+
+$(".fileGoup5Box .closeLayer").on("click focusout", function(){
+	$(this).parent().hide();
+	$(".fileGroup5Set").find('.fileGoup5Box').removeClass("on");
+});
+$(filesOv).bind('keydown', function(e){
+	if(e.shiftKey && e.keyCode == 9){
+		$(".fileGoup5Box").hide();
+	}
+})
+
+function yearMove() {
+	location.href = '/portal/singl/crncyPolicyDrcMtg/listYear.do?mtgSe=A&menuNo=200755&pYear='+$('#pYear option:selected').val()+'#content';
+}
+</script>

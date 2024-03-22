@@ -1,0 +1,91 @@
+table {
+	word-break: break-all;
+	width: 100%;
+	border-collapse: collapse;
+    border-spacing: 0;
+}
+.table {
+	margin-top: 15px;
+	@include breakpoint($md){
+		&.pcweb {
+			display: block !important;
+		}
+		&.moble {
+			display: none !important;
+		}
+	}
+	@include breakpoint($sm){
+		&.pcweb {
+			display: none !important;
+		}
+		&.moble {
+			display: block !important;
+			thead {
+				th {
+					color: #fff !important;
+					background-color: #076bcc !important;
+					border-bottom: none !important;
+				}
+			}
+			tbody {
+				th {
+					color: #757575;
+					background-color: #fff;
+					border: 1px solid #ccc;
+				}
+			}			
+		}
+	}
+	table {
+		width: 100%;
+		th {
+			color: #fff;
+			font-weight: 400;
+			background-color: $point;
+			height: 50px;
+			& + th {
+				border-left: 1px solid $bd-color;
+			}
+		}
+		td {
+			color: #757575;
+			padding: 12px 15px;
+			border: 1px solid $bd-color;
+			background-color: #fff;
+		}
+	}
+	&.type2 {  //th 세로형
+		table {
+			td {
+				padding: 12px 5px;
+			}
+			thead {
+				border-top: 1px solid #ccc;
+				th {
+					color: $point;
+					background-color: #fff;
+					border-bottom: 1px solid #fff;
+					line-height: 1.2;
+					&:first-child {
+						color: #fff;
+						background-color: $point;
+					}
+					&:last-child {
+						border-right: 1px solid #ccc !important;
+					}
+				}
+			}	
+		}
+	}
+}
+.td {
+	&-tal table tbody td {
+		text-align: left;
+	}
+	&-tac table tbody td {
+		text-align: center;
+	}
+	&-vt table tbody td {
+		vertical-align: top;
+	}
+}

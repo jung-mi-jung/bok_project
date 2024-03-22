@@ -1,0 +1,101 @@
+<h2>대량공급처</h2>
+
+<div class="h-group mt20">
+	<h3>한국은행 본부</h3>
+	<div class="select-go">
+		<select name="categoryTabId" title="본부 선택">
+			<option selected="selected" value="tab_01">한국은행 본부</option>
+			<option value="z11">부산본부</option>
+			<option value="z12">대구경북본부</option>
+			<option value="z13">목포본부</option>
+			<option value="z14">광주전남본부</option>
+			<option value="z15">전북본부</option>
+			<option value="z16">대전충남본부</option>
+			<option value="z17">충북본부</option>
+			<option value="z18">강원본부</option>
+			<option value="z19">인천본부</option>
+			<option value="z20">제주본부</option>
+			<option value="z21">경기본부</option>
+			<option value="z22">경남본부</option>
+			<option value="z23">강릉본부</option>
+			<option value="z24">울산본부</option>
+			<option value="z25">포항본부</option>
+			<option value="z01">강남본부</option>
+		</select>
+		<button type="button" class="go searchBtn">이동</button>
+	</div>
+</div>
+
+<div class="select_Tab" id="tab_01"> 
+	<div class="table scrollX tac">
+		<table>
+			<caption>한국은행 본부 대량공급처</caption>
+			<colgroup>
+				<col>
+				<col style="width: 30%;">
+				<col>
+				<col>
+				<col>
+				<col>
+			</colgroup>
+			<thead>
+				<tr>
+					<th colspan="2" scope="col">소재지</th>
+					<th scope="col">업체명</th>
+					<th scope="col">연락처</th>
+					<th scope="col">공급주화</th>
+					<th scope="col">공급시기</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+				<th scope="row">중랑구</th>
+				<td class="tal">상봉중앙로1길 78(상봉동)</td>
+				<td>상봉동 새마을금고</td>
+				<td>02-2208-6677</td>
+				<td>모든주화</td>
+				<td>수시</td>
+				</tr>
+				<tr>
+				<th scope="row">
+				<p>중랑구</p></th>
+				<td class="tal">
+				<p>사가정로72길 26(면목동)</p></td>
+				<td>
+				<p>(주)레디플레이어원</p></td>
+				<td>
+				<p>010-2985-7018</p></td>
+				<td>
+				<p>모든주화</p></td>
+				<td>
+				<p>수시</p></td>
+				</tr>
+				<tr>
+				<th scope="row">
+				<p>마포구</p></th>
+				<td class="tal">
+				<p>독막로 281(염리동) (서울지역만 취급가능)</p></td>
+				<td>
+				<p>(주)한네트</p></td>
+				<td>
+				<p>02-2125-6022</p></td>
+				<td>
+				<p>50원화</p></td>
+				<td>
+				<p>수시</p></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+<script>
+$(function() {
+	$("select[name=categoryTabId]").val('tab_01');
+	$(".searchBtn").click(function() {
+		var searchBbsSeCd = $("select[name=categoryTabId]").val();
+		if (searchBbsSeCd != "tab_01") {
+			location.href = "/portal/singl/rgHqt/content01.do?menuNo=200565&searchBbsSeCd=" + searchBbsSeCd;
+		}
+	});
+});
+</script>
