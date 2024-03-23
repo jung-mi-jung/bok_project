@@ -233,7 +233,7 @@
 	width: 1140px;
 	max-width: 100%;
 	margin: 30px auto;
-	padding-bottom: 40px;
+	// padding-bottom: 40px;
 	.photo-ctrl {
 		button {
 			position: absolute;
@@ -311,5 +311,10 @@
 		background-position: 50%;
 		background-repeat: no-repeat;
 		background-size: cover;
+		&.border{
+			background-position: center center;
+			background-size: contain;
+			border: 1px solid #dee0e6;
+		}
 	}
 }
