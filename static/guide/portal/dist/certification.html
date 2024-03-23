@@ -266,25 +266,64 @@
 	<h2>한은 금요강좌</h2>
 
 	<div class="formBox">
-		<ul class="step triangle len4 line1">
-			<li class="on active">
-				<strong class="title">1</strong>
-				<span>한은금요강좌 선택<span class="hidden">(현재단계)</span></span>
+		<ul class="step">
+			
+			<li class="active ic-certi">
+				<div class="s">
+					<strong class="title">STEP 1</strong>
+					<span>본인인증<span class="hidden">(현재단계)</span></span>
+				</div>
 			</li>
-			<li>
-				<strong class="title">2</strong>
-				<span>수집 및 이용동의 </span>
+			<li class="ic-agree">
+				<div class="s ">
+					<strong class="title">STEP 2</strong>
+					<span>수집 및 이용동의</span>
+				</div>
 			</li>
-			<li>
-				<strong class="title">3</strong>
-				<span>한은금요강좌 신청</span>
+			<li class="ic-app">
+				<div class="s">
+					<strong class="title">STEP 3</strong>
+					<span>정보입력</span>
+				</div>
 			</li>
-			<li>
-				<strong class="title">4</strong>
-				<span>신청 완료</span>
+			<li class="ic-end">
+				<div class="s ">
+					<strong class="title">STEP 4</strong>
+					<span>신청 완료</span>
+				</div>
 			</li>
 		</ul>
 	</div>
+
+	<!--<div class="formBox">
+		<ul class="step">
+			<li class="active ic-choice">
+				<div class="s">
+					<strong class="title">STEP 1</strong>
+					<span>강좌 선택<span class="hidden">(현재단계)</span></span>
+				</div>
+			</li>
+			<li class="ic-agree">
+				<div class="s ">
+					<strong class="title">STEP 2</strong>
+					<span>수집 및 이용동의 </span>
+				</div>
+			</li>
+			<li class="ic-app">
+				<div class="s ">
+					<strong class="title">STEP 3</strong>
+					<span>강좌 신청</span>
+				</div>
+			</li>
+			<li class="ic-end">
+				<div class="s ">
+					<strong class="title">STEP 4</strong>
+					<span>신청 완료</span>
+				</div>
+			</li>
+		</ul>
+	</div>-->
+
 
 	<h3>이용자 구분</h3>
 	<form action="" name="crtfcForm" method="post">
@@ -292,27 +331,31 @@
 			<div class="sh1">
 				<label for="userTyCd0">
 					<input type="radio" name="prtctorAt" value="N" id="userTyCd0" checked="checked">
-					<i></i> 일반사용자(만 14세 이상)
+					<i></i> 
+					<span>일반사용자(만 14세 이상)</span>
 				</label>
 				<label for="userTyCd1">
 					<input type="radio" name="prtctorAt" value="Y" id="userTyCd1">
-					<i></i> 어린이 이용자(만 14세 미만)
+					<i></i> 
+					<span>어린이 이용자(만 14세 미만)</span>
 				</label>
 			</div>
 			<div class="childTySet userType">
-				<div class="box2 mb0">
+				<div class="box2">
 					<div>
-						<p><strong class="fc_black">만 14세 미만 이용자의 법정대리인 동의</strong></p>
-						<p class="help">만 14세 미만 이용자는 부모 또는 보호자(법정대리인)의 동의가 필요합니다.</p>
+						<div class="txt">
+							<p><strong class="fc_black">만 14세 미만 이용자의 법정대리인 동의</strong></p>
+							<p class="help">만 14세 미만 이용자는 부모 또는 보호자(법정대리인)의 동의가 필요합니다.</p>
+						</div>
 			
 						<h5>부모 및 법정대리인 동의 관련 안내</h5>
-						<ul class="referList">
+						<ul>
 							<li>&nbsp;1. 동일한 정보를 입력해도 실패하는 경우 한국신용평가정보로 문의하시기 바랍니다.(전화:1600-1522)</li>
 							<li>&nbsp;2. 부모 또는 법정대리인이 아닌 자가 본인 또는 타인의 명의를 이용하여 동의를 조작하는 경우 관련 법률에 따라 처벌을 받을 수&nbsp;있습니다.</li>
 						</ul>
-						<div class="row tac">
+						<div class="input-txt">
 							<label for="mberNm" class="mr10">
-								<strong>* 만 14세 미만 이용자 성명 : </strong>
+								<span class="bu">만 14세 미만 이용자 성명 : </span>
 							</label>
 							<input type="text" name="mberNm" id="mberNm" value="" title="만 14세 미만 이용자 성명을 입력하세요.">
 						</div>
@@ -325,39 +368,32 @@
 
 	<h3>법정대리인(부모님 등 보호자) 실명확인</h3>
 	<div class="userType userType1">
-		<div class="auth row">
-			<div class=" col s6 x12">
-				<div class="LogBox bg1">
-					<h4>휴대폰 본인인증</h4>
+		<div class="auth">
+			<div class="col">
+				<a href="" id="handphoneLoginBtn" title="새창열림">
+					<strong>휴대폰 본인인증</strong>
+					<i class="ico-certi1"></i>
 					<div class="info">
 						<p>본인명의 휴대폰으로 인증번호를 발송하여 본인인증을 합니다.</p>
-						<p class="refer">※ 휴대폰본인확인(문자) 클릭 후 정보 입력</p>
-						<p class="refer">※ 개인실명등록 고객센터<br>☎1600-1522</p>
+						<p>휴대폰본인확인(문자) 클릭 후 정보 입력</p>
+						<p>개인실명등록 고객센터<br><em>1600-1522</em></p>
 					</div>
-					<div class="btnType">
-						<a href="#" id="handphoneLoginBtn" class="b-btn lg" title="새창열림">휴대폰 본인인증</a>
-					</div>
-				</div>
-			</div>
-	
-			<div class=" col s6 x12">
-				<div class="LogBox bg2">
-					<h4>아이핀 인증(I-PIN)</h4>
+				</a>
+			</div>	
+			<div class="col">
+				<a href="" id="ipinLoginBtn" title="새창열림">
+					<strong>아이핀 본인인증(i-pin)</strong>
+					<i class="ico-certi2"></i>
 					<div class="info">
 						<p>I-PIN이란 주민등록번호 대체수단으로 인터넷 사이트에 주민등록번호를 입력하지 않고도 가입할 수 있도록 지원합니다.</p>
 						<p>I-PIN 가입시 I-PIN 인증기관을 통해 실명인증을 받게 되므로 저희 홈페이지에는 회원님의 주민등록번호가 저장되지 않습니다.</p>
-						<p><strong>[공공 I-PIN 이용안내]</strong></p>
-						<p class="refer">※ 행정안전부공공 I-PIN 콜센터<br>☎02-818-3050</p>
 					</div>
-					<div class="btnType">
-						<a href="#" id="ipinLoginBtn" class="b-btn lg" title="새창열림">아이핀 인증</a>
-					</div>
-				</div>
+				</a>
 			</div>
 		</div>
 	</div>
 
-<!-- 잠시 주석처리
+
 	<script>
 		//<![CDATA[
 		$(function(){
@@ -467,7 +503,7 @@
 		}
 		//]]>
 		</script>
--->
+
 
 
 

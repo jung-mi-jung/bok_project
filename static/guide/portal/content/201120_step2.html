@@ -1,12 +1,35 @@
 <h2>실명신고</h2>
 <h3>부패·부조리 신고</h3>
 
-<ul class="step triangle len4 line1">
-	<li><strong class="title">1</strong><span>본인인증</span></li>
-	<li class="on active"><strong class="title">2</strong><span>신고 유형, 수집 및 이용동의<span class="hidden">(현재단계)</span></span> </li>
-	<li><strong class="title">3</strong><span>정보 입력</span> </li>
-	<li><strong class="title">4</strong><span>신청 완료</span></li>
-</ul>
+<div class="formBox">
+	<ul class="step">		
+		<li class="ic-certi">
+			<div class="s">
+				<strong class="title">STEP 1</strong>
+				<span>본인인증</span>
+			</div>
+		</li>
+		<li class="active ic-agree">
+			<div class="s ">
+				<strong class="title">STEP 2</strong>
+				<span>수집 및 이용동의<span class="hidden">(현재단계)</span></span>
+			</div>
+		</li>
+		<li class="ic-app">
+			<div class="s">
+				<strong class="title">STEP 3</strong>
+				<span>정보입력</span>
+			</div>
+		</li>
+		<li class="ic-end">
+			<div class="s ">
+				<strong class="title">STEP 4</strong>
+				<span>신청 완료</span>
+			</div>
+		</li>
+	</ul>
+</div>
+
 
 <form name="frm" id="frm" action="/portal/bbs/B0000238/forInsert.do?menuNo=201120" method="post">
 	<div class="view" style="border-bottom: 0px;">
@@ -59,7 +82,7 @@
 	</div>
 
 	<div class="btnSet">
-		<a href="javascript:checkForm();" class="btn lg" >확인</a>		
+		<a href="javascript:checkForm();" class="b-confirm lg" >확인</a>		
 		<!--<a href="/portal/bbs/B0000238/reqVerify.do?menuNo=201120" onclick="return confirm('취소하시겠습니까?');" class="b-cancel lg">취소</a>-->
 	</div>
 	

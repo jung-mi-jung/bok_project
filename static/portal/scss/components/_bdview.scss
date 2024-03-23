@@ -537,6 +537,23 @@
 	border-top: 2px solid #222;
 	border-bottom:1px solid $bd-color;
 	margin-bottom:30px;
+	[class^=b-] {
+		height: 40px;
+		line-height: 40px;
+		vertical-align: middle;
+		background-color: $color-point;
+	}
+	.btn_file_del {
+		width: 40px;
+		height: 40px;
+		border-radius: 4px;
+		background-color: $color-point;
+		&::before {
+			@include font-ico-outline('\e872');  //임시
+			font-size: 22px;
+			color: #fff;
+		}
+	}
 	.labellistup{
 		overflow:hidden;
 		line-height:26px;
@@ -634,13 +651,17 @@
 			}
 		}
 		>.l,
-		>dt{			
-			width:13%;max-width:120px;vertical-align:middle; text-align:left; position:relative; border-left:1px solid $bd-color; padding-left:20px;
+		>dt{		
+			width:13%;
+			max-width:120px;vertical-align:middle; text-align:left; position:relative; border-left:1px solid $bd-color; padding-left:20px;
 			&:first-child{
 				border-left:none;
 			}
 			@include breakpoint($sm){
 				width:80px;
+			}
+			label {
+				display: inline;
 			}
 			.req{width:0;text-indent:-10px;}
 		}

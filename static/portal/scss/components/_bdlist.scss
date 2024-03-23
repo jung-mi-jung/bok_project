@@ -191,8 +191,14 @@
 		}
 	}	
 }
+
+.sh-BxSet + .bdList {
+	//border-top: none;
+	margin-top: -20px;
+}
 .bdList {
 	border-top: 2px solid #222;	
+	text-align: center;
 	th,
 	td {
 		color: $black;
@@ -209,10 +215,72 @@
 		}
 	}
 	td {
-		
+		a {
+			&:hover {
+				color: $color-point;
+				text-decoration: underline;
+			}
+		}
+		.title {
+			text-align: left;
+		}
 	}
 	.nodata {
 		text-align: center;
+	}
+	@include breakpoint($sm){
+		table {
+			display: block;
+			overflow: hidden;
+			width: 100%;
+			background-color: #fff;
+			border-left: 1px solid #E5E5E5;
+			border-right: 1px solid #E5E5E5;
+			thead {
+				display: none;
+			}
+			tbody {
+				display: block;
+				width: 100%;
+			}
+			th, td {
+				border: none;
+				font-size: 14px;
+			}
+			tr {
+				display: block;
+				position: relative;
+				padding-left: 15%;
+				text-align: left;
+				//border-bottom: 1px solid #E5E5E5;
+				
+			}
+			td {
+				padding: 1px 5px;
+				display: block;
+				background-color: #fff;
+				border-bottom: 1px solid #E5E5E5;
+				&.no {
+					position: absolute;
+					top: 0;
+					//top: 50%;
+					left: 0;
+					width: 15%;
+					height: 100%;
+					display: flex;
+					flex-wrap: nowrap;
+					align-items: center;
+					text-align: center;
+					flex-grow: 1;
+					flex-basis: 100%;
+					background-color: #F2F6FA;
+					border-right: 1px solid #E5E5E5;
+				}
+				&.title {
+					display: block;					
+				}
+			}
+		}		
 	}
 }
 

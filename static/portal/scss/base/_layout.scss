@@ -1089,7 +1089,7 @@ sup {
 	display: inline; 
 }
 
-@include breakpoint($lg) {
+@include breakpoint($md) {
 	//.visible-lg { display: inline-block !important; }
 	.hidden-lg { display: none !important; }
 	.visible-md {
@@ -1122,6 +1122,17 @@ sup {
 		@include font-ico-outline('\e88e');
 		font-size: 18px;
 		margin: 0 5px 2px 0;
+	}
+}
+.help3 {
+	color: #4D4D4D;
+	margin-top: 10px;
+	margin-bottom: 5px !important;
+	&::before {
+		@include font-ico-outline('\e88e');
+		font-size: 24px;
+		margin-right: 8px;
+		color: #4D4D4D;
 	}
 }
 

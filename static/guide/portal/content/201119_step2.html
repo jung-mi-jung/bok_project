@@ -1,0 +1,89 @@
+<h2>청탁·이해충돌 방지제도 신고</h2>
+
+<div class="formBox">
+	<ul class="step">		
+		<li class="active ic-certi">
+			<div class="s">
+				<strong class="title">STEP 1</strong>
+				<span>본인인증<span class="hidden">(현재단계)</span></span>
+			</div>
+		</li>
+		<li class="ic-agree">
+			<div class="s ">
+				<strong class="title">STEP 2</strong>
+				<span>수집 및 이용동의</span>
+			</div>
+		</li>
+		<li class="ic-app">
+			<div class="s">
+				<strong class="title">STEP 3</strong>
+				<span>정보입력</span>
+			</div>
+		</li>
+		<li class="ic-end">
+			<div class="s ">
+				<strong class="title">STEP 4</strong>
+				<span>신청 완료</span>
+			</div>
+		</li>
+	</ul>
+</div>
+
+<dl style="margin-bottom: 10px;">
+	<dt>
+		<label for="nationCd1">신고유형</label>
+	</dt>
+	<dd>
+		<select id="optn19" name="optn19" onchange="selectBoxChange(this.value);" title="신고유형을 선택하세요.">				
+			<option value="01">부정청탁금지법 위반행위 신고(자진신고)</option>
+			<option value="11">부정청탁금지법 위반행위 신고(제3자 신고)</option>
+			<option value="02">이해충돌 방지법 위반행위 신고</option>
+		</select>
+	</dd>	
+</dl>
+
+<div class="agreeBox">
+	<h2>필수 정보의 수집·이용 내역에 관한 안내</h2>
+	<div class="scrollarLBox" tabindex="0" id="cl01" style="display:block;">
+	[개인정보의 수집 및 이용 목적]<br>
+		1. 한국은행은 <span class="fc1 fb" style="text-decoration: underline;">신고사무처리</span>를 위하여 「개인정보보호법」에 따라 필요한 최소한의 개인정보를 수집하고 있습니다. 수집된 개인정보는 정해진 제3자 제공 또는 목적 외의 용도로는 이용되지 않으며 수집 목적이 변경될 경우 사전에 알리고 동의를 받을 예정입니다.<br>
+		2. 다만, 「개인정보보호법」 또는 개별 법령에서 별도의 정함이 있는 경우 목적 외의 용도로 이용하거나 제3자에게 제공할 수 있습니다.<br><br>
+		[수집·이용하는 개인정보의 항목]<br>
+		<span class="fc1 fb" style="text-decoration: underline;">
+		1. 필수항목 : 이름, 휴대폰번호, 주소<br>
+		2. 자동수집항목 : IP주소, 쿠키, 방문일시, 서비스 이용 기록, 불량 이용 기록, 기기정보<br>
+		</span>
+		※ 서비스의 유효성 확인, 서비스 이용에 대한 통계 수집, 접속빈도 파악, 홈페이지 개선과 보안대책 수립을 위하여 자동으로 수집됩니다.<br><br>		
+		[개인정보의 보유 및 이용기간]<br>
+		한국은행은 원칙적으로 개인정보 보존기간이 경과하거나, 처리목적이 달성된 경우에는 지체 없이 개인정보를 파기합니다. 다만, 다른 법령에 따라 보존하여야 하는 경우에는 그러하지 않을 수 있습니다.<br><br>
+		<span class="fc1 fb" style="text-decoration: underline;">
+		1. 이용자 정보 : 3년<br>
+		2. 신고내용 : 3년<br>
+		3. 자동수집항목 : 1년<br><br>
+		</span>
+		[동의를 거부할 권리 및 동의 거부에 따른 불이익]<br>
+		이용자는 개인정보의 수집·이용목적에 대한 동의를 거부할 수 있으나, 최소한의 개인정보 수집동의 거부 시 홈페이지에서 제공하는 서비스가 아래와 같이 제한될 수 있습니다.<br><br>
+		- 필수항목 및 자동생성 정보 제공 동의 거부 시 : 신고접수 불가<br><br>
+		※ 한국은행의 개인정보처리방침에 대해 보다 자세히 알기 원하시면 홈페이지 하단의 ‘개인정보처리방침’을 참고하시기 바랍니다.
+	</div>
+	<div class="agreeTxt">
+		<span class="txt1" style="text-decoration: underline;font-weight:bold;">위와 같이 개인정보를 수집·이용하는데 동의하십니까?</span>
+		<span class="txt2">
+			<label for="agreAtY1_1">
+				<input type="radio" name="agreAtY1" id="agreAtY1_1" value="Y">
+				<i></i> 
+				동의함</label>
+			<label for="agreAtY1_2">
+				<input type="radio" name="agreAtY1" id="agreAtY1_2" value="N">
+				<i></i> 
+				동의하지 않음
+			</label>
+		</span>
+	</div>
+</div>
+
+<div class="btnSet">
+	<a href="javascript:checkForm();" class="b-confirm lg">확인</a>
+	
+	<!--<a href="/portal/bbs/B0000237/reqVerify.do?menuNo=201119" onclick="return confirm('취소하시겠습니까?');" class="b-cancel lg">취소</a>-->
+</div>
