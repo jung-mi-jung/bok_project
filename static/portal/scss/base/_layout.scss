@@ -1125,7 +1125,10 @@ sup {
 	}
 }
 .help3 {
+	position: relative;
+	padding-left: 30px;
 	color: #4D4D4D;
+	font-size: rem(16);
 	margin-top: 10px;
 	margin-bottom: 5px !important;
 	&::before {
@@ -1133,6 +1136,9 @@ sup {
 		font-size: 24px;
 		margin-right: 8px;
 		color: #4D4D4D;
+		position: absolute;
+		top: 1px;
+		left: 0;
 	}
 }
 

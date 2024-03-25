@@ -66,3 +66,61 @@ body > .popwrap {
 	}
 	&__footer {}
 }
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1100;
+    display: none;
+    overflow: hidden;
+	&.fade.in {
+		&::before {
+			content: "";
+			display: block;
+			background: rgba(0, 0, 0, 0.7);
+			position: fixed;
+			width: 100%;
+			z-index: 501;
+			top: 0;
+			left: 0;
+			height: 100%;
+		}
+		
+	}
+	&-dialog {
+		display: flex;
+		align-items: center;
+		position: relative;
+		z-index: 999;
+		border-radius: 16px;
+	}
+	&-header {
+		color: #fff;
+		background-color: $point;
+		h4 {
+			color: #fff;
+			margin: 0;
+		}
+		.close {
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			&::before {
+				color: #fff;		
+			}
+		}
+	}
+	&-content {
+		width: 720px;
+		max-width: 90%;
+		position: relative;
+		background-color: #fff;
+		border: 1px solid $point;
+		border-radius: 16px;
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+	}
+}

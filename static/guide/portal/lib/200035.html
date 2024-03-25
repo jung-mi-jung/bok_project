@@ -1,0 +1,335 @@
+<h2>행사일정</h2>
+<div class="calendarWrap">
+	<div class="calDate">
+		<a href="" class="calDateL fa vm"><span class="hidden">이전달</span></a>
+		<span id="yymm"><strong>2024</strong>년 <strong>03</strong>월</span>
+		<a href="" class="calDateR fa vm"><span class="hidden">다음달</span></a>
+	</div>
+	<div class="box-list">
+		<ul>
+			<li>
+				<a href="">1월</a>
+			</li>
+			<li>
+				<a href="">2월</a>
+			</li>
+			<li>
+				<a href="">3월</a>
+			</li>
+			<li class="on">
+				<a href="" title="선택됨">4월</a>
+			</li>
+			<li>
+				<a href="">5월</a>
+			</li>
+			<li>
+				<a href="">6월</a>
+			</li>
+			<li>
+				<a href="">7월</a>
+			</li>
+			<li>
+				<a href="">8월</a>
+			</li>
+			<li>
+				<a href="">9월</a>
+			</li>
+			<li>
+				<a href="">10월</a>
+			</li>
+			<li>
+				<a href="">11월</a>
+			</li>
+			<li>
+				<a href="">12월</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="calSec">
+		<div class="">
+			<i class="ico ico1 tooltipOp" title="" data-original-title="컨퍼런스">컨</i> <span class="hidden">컨퍼런스</span>
+			<i class="ico ico2 tooltipOp" title="" data-original-title="세미나">세</i> <span class="hidden">세미나</span>
+			<i class="ico ico3 tooltipOp" title="" data-original-title="중재회의">회</i> <span class="hidden">중재회의</span>
+			<i class="ico ico4 tooltipOp" title="" data-original-title="포럼">포</i> <span class="hidden">포럼</span>
+		</div>
+		<div class="calList">
+			<a href="javascript:void(0);" class="icoList1 on" title="선택됨">
+				<span class="hidden">달력으로 보기</span>
+			</a>
+			<a href="javascript:void(0);" class="icoList2 ">
+				<span class="hidden">리스트로 보기</span>
+			</a>
+		</div>
+	</div>
+
+	<div class="calendarSet">
+		<table>
+			<caption>행사일정 달력</caption>
+			<colgroup>
+				<col>
+				<col style="width: 14.2%;">
+				<col style="width: 14.2%;">
+				<col style="width: 14.2%;">
+				<col style="width: 14.2%;">
+				<col style="width: 14.2%;">
+				<col style="width: 14.2%;">
+			</colgroup>
+			<thead>
+				<tr>
+					<th class="sun">일<span>요일</span></th> 
+					<th>월<span>요일</span></th>
+					<th>화<span>요일</span></th>
+					<th>수<span>요일</span></th>
+					<th>목<span>요일</span></th>
+					<th>금<span>요일</span></th>
+					<th class="sat">토<span>요일</span></th> 
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td></td>
+					<td>1</td>
+					<td>2</td>
+					<td>3</td>
+					<td>4</td>
+					<td>5</td>
+					<td>6</td>
+				</tr>
+				<tr>
+					<td>7</td>
+					<td>8</td>
+					<td>9</td>
+					<td>10</td>
+					<td>11</td>
+					<td>12
+						<a href="javascript:void(0);" data-toggle="modal" data-target="#modalBox1" onclick="schdulPop('296', '03', '22')">							
+							<span class="ico ico3">
+								회
+								<span class="sr-only">중재회의</span>
+							</span>
+							통화정책방향 회의
+						</a>
+					</td>
+					<td>13</td>
+				</tr>
+				<tr>
+					<td>14</td>
+					<td>15</td>
+					<td>16</td>
+					<td>17</td>
+					<td>18</td>
+					<td>19</td>
+					<td>20</td>
+				</tr>
+				<tr>
+					<td>21</td>
+					<td>22</td>
+					<td>23</td>
+					<td>24</td>
+					<td>25</td>
+					<td>26</td>
+					<td>27</td>
+				</tr>
+				<tr>
+					<td>28</td>
+					<td>29</td>
+					<td>30</td>
+					<td>31</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+
+<div class="bdPhotoSet" style="display: none;">
+	<div class="sh">
+		<div class="c short">
+			<form name="frm" action="/portal/singl/mainEvent/listCldr.do">
+				<input type="hidden" name="menuNo" value="200035">
+				<input type="hidden" name="date" value="2024-02">			
+				<div class="sh-input">
+					<div class="select-set">
+						<select name="searchCnd" id="searchCnd" title="검색 영역 선택">
+							<option value="1">제목</option>
+							<option value="2">장소</option>
+						</select>
+					</div>
+					<div class="select-set">
+						<select name="eventSeCd" id="eventSeCd" title="검색 구분 선택">
+							<option value="">구분 선택</option>
+							<option value="01">컨퍼런스</option>
+							<option value="02">세미나</option>
+							<option value="03">총재회의</option>
+							<option value="04">포럼</option>
+						</select>
+					</div>
+					<div class="keyword-set">
+						<span class="keyword">
+							<input type="text" name="searchKwd" value="" id="searchWrd" class="" title="검색 키워드 입력" onkeypress="keypress1();">
+						</span>
+						<button type="button" class="search" onclick="" aria-label="검색"></button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	
+
+	<div class="bdPhoto">
+		<ul>		
+			<li>
+				<dl>
+					<dt>
+						<span class="db">
+							<i class="ico ico1">컨퍼런스</i>
+						</span>
+						<div class="h3">통화정책방향 회의</div>
+					</dt>
+					<dd class="date">2024-02-22</dd>
+				</dl>
+			</li>
+			<li>
+				<dl>
+					<dt>
+						<span class="db">
+							<i class="ico ico2">중재회의</i>
+						</span>
+						<div class="h3">통화정책방향 회의</div>
+					</dt>
+					<dd class="date">2024-02-22</dd>
+				</dl>
+			</li>
+			<li>
+				<dl>
+					<dt>
+						<span class="db">
+							<i class="ico ico3">통화정책회의</i>
+						</span>
+						<div class="h3">통화정책방향 회의</div>
+					</dt>
+					<dd class="date">2024-02-22</dd>
+				</dl>
+			</li>
+			<li>
+				<dl>
+					<dt>
+						<span class="db">
+							<i class="ico ico4">포럼</i>
+						</span>
+						<div class="h3">통화정책방향 회의</div>
+					</dt>
+					<dd class="date">2024-02-22</dd>
+				</dl>
+			</li>
+		</ul>
+	</div>	
+	<div class="listBottom">
+		<div class="paginationSet">
+			페이징
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+$(function(){
+	$(".tooltipOp").tooltip();
+	if ('1'.trim() != '' && ''.trim() != '') {
+		$(".bdPhotoSet").show();
+		$(".calendarSet").hide();
+		$('.icoList2').addClass("on").siblings().removeClass("on");
+	}
+	else {
+		$(".bdPhotoSet").hide();
+	}
+
+	$(".icoList1").on("click", function(e){
+		$(this).addClass("on").siblings().removeClass("on");
+		$(".calendarSet").show();
+		$(".bdPhotoSet").hide();
+		return false;
+	})
+	$(".icoList2").on("click", function(e){
+		$(this).addClass("on").siblings().removeClass("on");
+		$(".bdPhotoSet").show();
+		$(".calendarSet").hide();
+		return false;
+	})
+	function schdulPopFocus(){
+		$("#modalBox1 .close").focus();
+	}
+	schdulPop = function(eventSn, eventSeCd, day) {
+		day = (day < 10 ? '0' : '')+day;
+		var eventDe = '2024-02'+'-'+day;
+		$.post(
+			"/portal/singl/mainEvent/viewCldrPop.json",
+			{eventSn : eventSn, eventSeCd : eventSeCd, eventDe : eventDe},
+			function(data) {
+				schdulPopHtml(data.result, day, eventSeCd);
+				setTimeout(schdulPopFocus, 600)
+			},"json"
+		);
+	}
+
+	schdulPopHtml = function(result, day, eventSeCd) {
+		var url = '';
+		if (result.eventSeCd == '03') {
+			url = '/portal/singl/crncyPolicyDrcMtg/listYear.do?mtgSe='+result.mtgSe+'&menuNo=200755&pYear='+result.mtgDe.substring(0, 4);
+		}
+		$('#selectDate').text('('+$('#yymm').text()+(day < 10 ? '0' : '')+day+'일)');
+		var html =
+			'<ul>	<li>'+
+				'<span class="part bg'+result.eventSeCd.substring(1, 2)+'"><i class="ti-blackboard"></i><span class="hidden">'+result.eventSeCdNm+'</span></span>'+
+				'<div class="con">'+
+					'<p class="tit">'+result.eventSj+'</p>'+
+					'<span class="date">'+result.schdulData+'</span>'+
+				'</div>';
+		if (result.eventSeCd == '03') {
+			html += '<div class="b-view"><a href="'+url+'" target="_blank"><i class="fa fa-search-plus"></i> 상세보기</a></div>';
+		}
+		html += '</li></ul>';
+		$('.calView').html(html);
+	}
+
+})
+//]]>
+</script>
+
+
+<!--  layer Popup  -->
+<div class="modal fade" id="modalBox1" tabindex="-1" role="dialog" aria-labelledby="modalBox1">
+	<div class="lpop modal-dialog" role="document">
+		<div class="set modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><i class="ti-close"></i><span class="sr-only">레이어 창닫기</span></button>
+				<h4 class="modal-title" id="modal-label1">행사일정<small id="selectDate"></small></h4>
+			</div>
+			<div class="modal-body">
+				<div class="calView"></div>
+			</div>
+			<div class="tac">
+				<button type="button" class="b-btn lg" data-dismiss="modal">닫기</button>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="bgW"></div>
+<!--  //layer Popup  -->
+
+<script>
+ $(".tiNone").find("td>ul>li>a").each(function(n) {
+	if ($.trim($(this).text()) == "") {
+		$(this).closest("li").remove();
+	}
+ });
+</script>
+
+
+
+

@@ -990,12 +990,24 @@ p.subject {
 		color: $blue;
 		margin: 12px 0 18px;
 	}
-	.b-edit {
+	[class^=b-].b-edit {
 		height: 32px;
 		line-height: 32px;
 		font-size: rem(16);
 		font-weight: 300;
 		border-radius: 4px;
+		color: #fff;
+		padding: 0 12px;
+		background-color: $color-point;
+		&::before {
+			content: "";
+			display: inline-block;
+			vertical-align: middle;
+			width: 20px;
+			height: 21px;
+			background: url(/static/portal/img/ico/ico-b-edit.svg) no-repeat;
+			margin-right: 8px;
+		}
 	}	
 	&.bbs{
 		padding:6% 2% 0 2%; 

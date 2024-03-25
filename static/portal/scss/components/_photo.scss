@@ -206,28 +206,44 @@
 
 
 
-//기존
+//기존   //200035 적용
 .bdPhoto{
-	clear: both;float: left;margin-bottom: 30px;width:100%;
+	clear: both;
+	float: left;
+	margin-bottom: 30px;
+	width:100%;
 	&.row{
-		margin-left:0;margin-right:0;
+		margin-left:0
+		;margin-right:0;
 		@include breakpoint($sm){
 			.col {
 				padding: 0;
 			}
 		}
-	}
+	}	
 	.ratioSet{
 		display:block;
 	}
 	.ratioSet .badge{
-		position:absolute; right:0; z-index:10;
+		position:absolute; 
+		right:0; 
+		z-index:10;
 	}
 	>ul>li{
-		overflow:hidden;position:relative;padding:10px;min-height:140px; border:1px solid #dbdce0;margin-bottom:10px;
+		overflow: hidden;
+		position: relative;
+		padding: 8px 15px;
+		border: 1px solid #E6E6E6;
+		border-radius: 4px;
+		margin-bottom:10px;
+		.h3 {
+			font-weight: 500;
+			font-size: rem(20);
+			margin-top: 3px;
+		}
 		&:hover{
 			text-decoration: none;
-			background:#F2F6FA;
+			border-color: #1a1a1a;
 		}
 		>a{			
 			&:hover .ratioObject, 
@@ -250,7 +266,11 @@
 			width: 100%;display: inline-block; background-size: cover;
 		}
 		dl{
-			height:120px;overflow:hidden;
+			overflow:hidden;
+			.ico {
+				width: auto;
+				padding: 0 10px;
+			}
 			@include breakpoint($sm){
 				height: 132px;
 			}
@@ -272,25 +292,29 @@
 				}
 			}
 			.cont{
-				overflow:hidden;height:57px;width:100%;
-			}
-			.date span{
-				color:#c0c0c0;padding:0 5px
+				overflow:hidden;
+				height:57px;
+				width:100%;
 			}
 			.date{
-				color:#757575;width:auto;padding-top:4px;
+				color:#666;
 				&:before{
-					@include font-ico-outline('\e855');
-					font-size: 18px;
-					margin-right:5px;
+					content: "";
+					display: inline-block;
+					vertical-align: middle;
+					width: 16px;
+					height: 16px;
+					background: url(/static/portal/img/ico/ico-date.png) no-repeat;
+					margin-right: 5px;
 				}
 			}
 			.place{
-				color:#333; margin-bottom:5px;width:100%;
+				color:#666;
 				&:before{
 					@include font-ico-outline('\e0c8');
-					font-size: 18px;
+					font-size: 20px;
 					margin-right:5px;
+					color: #666;
 				}
 			}
 			.btn{

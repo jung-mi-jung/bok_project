@@ -1,10 +1,11 @@
 .bd-line,
 .table {
 	.fileGroupSet {
-		position: relative;		
-		.i-download {
+		position: relative;
+		display: inline-block;	
+		> .i-download {
 			padding: 2px 0;
-			&::before {
+			&::after {
 				content: "";
 				display: inline-block;
 				vertical-align: middle;
@@ -14,38 +15,33 @@
 			}
 		}
 	}
+	.i-goView {
+		display: inline-block;
+		position: relative;
+		padding-right: 16px;
+		&::after {
+			content: "";
+			display: inline-block;
+			vertical-align: middle;
+			width: 24px;
+			height: 24px;
+			background: url(/static/portal/img/ico/ico-goView.png) no-repeat;
+			margin-left: 9px;
+			
+		}
+		&::before {
+			content: "";
+			display: inline-block;
+			width: 1px;
+			height: 14px;
+			margin: 5px;
+			background-color: #D9D9D9;
+			position: absolute;
+			top: 2px;
+			right: 0;
+		}
+	}
 }
-
-
-// //파일 단일
-// .file-single {
-// 	position: relative;
-// 	display: inline-block !important;
-// 	line-height: 25px;
-// 	@include breakpoint($sm) {
-// 		margin-right: 4px;
-// 	}
-// 	i {
-// 		vertical-align: middle;
-// 	}
-// 	.name {
-// 		position: absolute;
-// 		top: 0;
-// 		right: 0;
-// 		width: auto;
-// 		padding: 4px;
-// 		max-width: 150px;
-// 		transform: all 0.3s;
-// 		overflow: hidden;
-// 		word-spacing: nowrap;
-// 		background-color: #141414;
-// 		color: #fff;
-// 		line-height: 1;
-// 		border-radius: 3px;
-// 		opacity: 0;
-// 		z-index: -1;
-// 	}
-// }
 
 .fileGoupBox {
 	display: none;
@@ -87,18 +83,13 @@
 				vertical-align: middle;
 				font-weight: 300;
 				color: #fff !important;
-				padding: 8px 20px 8px 0;
+				padding: 8px 20px 0 0 !important;
 				&:hover {
 					color: #fff;
 				}
-				// &::before {
-				// 	@include font-ico('\f090');
-				// 	font-size: px;
-				// 	font-weight: 300;
-				// }	
-				&.i-download {
+				&.i-download {					
 					&::before {
-						display: none !important;
+						display: none;
 					}
 					&::after {						
 						content: "";

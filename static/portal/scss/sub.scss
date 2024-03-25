@@ -30,14 +30,11 @@
 @import 'components/btn';//버튼 스타일
 @import 'components/box';  //box
 @import 'components/datepicker'; // datepicker theme
+@import 'components/popup';//팝업
+@import 'components/calendar';// calendar
 
 @import url('/static/jslibrary/bootstrap-datepicker-1.9.0-dist/css/bootstrap-datepicker3.standalone.css');
 
-
-/*
-@import 'components/calendar';// calendar
-@import 'components/popup';//팝업
-*/
 
 
 .pdf {
@@ -58,18 +55,73 @@
 	}
 }
 
+.category-type {
+	display: flex;
+	justify-content: center;	
+	align-items: center;
+	padding: 20px;
+	margin-bottom: 24px;
+	font-size: rem(18);	
+	background-color: #F2F6FA;
+	dt {
+		@include bu-dot();
+		margin-right: 15px;
+	}
+	dd {
+		select {
+			width: 100%;
+			padding: 4px 40px 4px 20px !important;
+			height: 50px;
+			background-color: #fff;
+			background-position: calc(100% - 20px);
+			border: 0;
+			@include breakpoint($lg){
+				width: 790px;
+			}
+			// @include breakpoint($sm){
+			// 	width: calc(100% - 100px);
+			// }
+		}
+	}
+}
+//이용약관
 .agreeBox {
 	clear: both;
-	border: 4px solid $bd-color;
-	padding: 20px;
-	h2 {
-		color: $black;
-		font-size: rem(18) !important;
+	border: 1px solid #E6E6E6;	
+	padding: 32px;
+	background-color: #FAFAFA;
+	h4 {
+		color: $color-point;
+		font-size: rem(20) !important;
 		font-weight: 500 !important;
 		margin-top: 25px;
 		margin-bottom: 8px;
 		&:first-child {
 			margin-top: 0;
+		}
+		& + h5 {
+			margin-top: 15px;
+		}
+	}
+	h5 {
+		margin: 25px 0 15px;
+	}
+	strong {
+		color: $point;
+		text-decoration: underline;
+	}
+	.help {
+		&::before {
+			font-size: 20px;
+			margin-right: 5px;
+			margin-bottom: 1px;
+		}
+	}
+	.bu-dot.red {
+		color: $red;
+		margin: 22px 0;
+		&::before {
+			background-color: $red;
 		}
 	}
 	.scrollarBox {
@@ -79,26 +131,35 @@
 		border: 1px solid $bd-color;
 		padding: 20px;
 		background-color: #FAFAFA;		
+	}	
+}
+.agreeTxt {
+	display: flex;	
+	margin-top: 20px;
+	font-size: rem(18);
+	color: $point;
+	@include breakpoint($lg){
+		justify-content: space-between;
 	}
-	.agreeTxt {
-		display: flex;	
-		margin-top: 10px;
-		@include breakpoint($sm){
-			display: block;
+	@include breakpoint($sm){
+		display: block;
+	}
+	span {
+		display: inline-block;
+	}
+	.txt1 {
+		@include bu-dot();
+	}
+	.txt2 {
+		display: flex;
+		@include breakpoint($lg){
+			margin-left: 20px;
 		}
-		span {
-			display: inline-block;
-		}
-		.txt1 {}
-		.txt2 {
-			display: flex;
-			@include breakpoint($lg){
-				margin-left: 20px;
-			}
-		}
+	}
+	label + label {
+		margin-left: 20px;
 	}
 }
-
 
 
 //경제용어사전
@@ -126,6 +187,10 @@
 		}
 	}
 }
+
+
+
+
 
 
 /* 안씀
@@ -427,35 +492,8 @@ mark {
 		@include breakpoint($sm){
 			display: block;
 		}
-		label {
-			color: #4D4D4D;					
-			input {
-				margin-right: 10px;
-				& + i {
-					width: 24px;
-					height: 24px;
-				}
-				&:checked {
-					& + i {
-						&::before {
-							width: 8px;
-							height: 8px;
-						}
-						& + span {
-							color: $point;
-							font-weight: 500;
-							text-decoration: underline;
-						}
-					}
-				}
-			}
-			& + label {
-				margin-left: 50px;
-				@include breakpoint($sm){
-					margin-left: 0;
-					margin-top: 10px;
-				}
-			}
+		label + label {
+			margin-left: 50px;
 		}
 	}
 	.box2 {
@@ -483,7 +521,7 @@ mark {
 					margin-right: 5px;
 					margin-bottom: -1px;
 				}
-			}		
+			}
 		}
 		.input-txt {
 			display: flex;
