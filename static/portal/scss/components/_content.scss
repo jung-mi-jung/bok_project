@@ -974,12 +974,29 @@ p.subject {
 
 //청탁·이해충돌 방지제도 신고
 .cheongStop {
-	background:#3c4559 url("/static/portal/img/cts/sub8/200210_1.jpg") no-repeat 75% top;
-	background-size:auto 100%;
-	padding:2% 3% 0 3%;
-	min-height:180px;
-	color:#fff;
-	letter-spacing:-1px;
+	background:#F2F6FA;
+	padding: 32px 48px;
+	overflow: hidden;
+	display: block;
+	p {
+		margin-bottom: 0;
+	}
+	dt{
+		color: $black;
+		font-size: rem(20);
+		font-weight: 500;
+	}
+	dd {
+		color: $blue;
+		margin: 12px 0 18px;
+	}
+	.b-edit {
+		height: 32px;
+		line-height: 32px;
+		font-size: rem(16);
+		font-weight: 300;
+		border-radius: 4px;
+	}	
 	&.bbs{
 		padding:6% 2% 0 2%; 
 		text-align:center;
@@ -1001,14 +1018,9 @@ p.subject {
 			color:#fff;
 		}
 	}
-	.tit{
-		//@include ns;
-		font-size:24px;
-		letter-spacing:-1px;
-		font-weight:400;
-	}
-	.img{margin-top:46px;}
-	a{color:#fff}
+	
+	//.img{margin-top:46px;}
+	//a{color:#fff}
 }
 
 
@@ -1225,6 +1237,18 @@ p.subject {
 	}
 }
 
+.visible-sm [data-rel^='prettyPhoto'] {
+	position: relative;
+	&:before {
+		content: "";
+		position: absolute;
+		right: 10px;
+		bottom: 10px;
+		background: url(https://www.bok.or.kr/static/jslibrary/prettyPhoto/images/prettyPhoto/light_square/zoom_in.png) no-repeat;
+		width: 80px;
+		height: 60px;
+	}
+}
 .imgSet {
     border: 1px solid #dee0e6;
     clear: both;
@@ -1234,6 +1258,18 @@ p.subject {
     text-align: center;
 }
 
+.img-set {
+	text-align: center;
+	border-radius: 16px;
+	padding: 30px;
+	background-color: #FAFAFA;
+	@include breakpoint($sm){
+		padding: 20px;
+	}
+	p {
+		margin-bottom: 0;
+	}
+}
 
 //기념화폐
 .commCoinInfoSet{	

@@ -285,45 +285,52 @@
 
 
 <h2>인건비 현황</h2>
-<h3>보수액</h3>
+<div class="h-group mt10">
+	<h3>보수액</h3>
+	
+	<div class="select-go">
+		<select name="categoryTabId" id="selbox" title="년도 선택">
+			<option value="tab_22" selected="selected">2022</option>
+			<option value="tab_21">2021</option>
+			<option value="tab_20">2020</option>
+			<option value="tab_19">2019</option>
+			<option value="tab_18">2018</option>
+			<option value="tab_17">2017</option>
+			<option value="tab_16">2016</option>
+			<option value="tab_15">2015</option>
+			<option value="tab_14">2014</option>
+			<option value="tab_13">2013</option>
+			<option value="tab_12">2012</option>
+			<option value="tab_11">2011</option>
+			<option value="tab_10">2010</option>
+			<option value="tab_09">2009</option>
+			<option value="tab_08">2008</option>
+			<option value="tab_07">2007</option>
+			<option value="tab_06">2006</option>
+		</select>
+		<button type="button" class="go selBtn">이동</button>
+	</div>
+</div>
 
-<div class="sh selMenu"> 
-	<div class="shArea"> 
-	<select name="categoryTabId" id="selbox" title="년도 선택"> 
-	<option value="tab_22" selected="selected">2022</option> 
-	<option value="tab_21">2021</option> 
-	<option value="tab_20">2020</option> 
-	<option value="tab_19">2019</option> 
-	<option value="tab_18">2018</option> 
-	<option value="tab_17">2017</option> 
-	<option value="tab_16">2016</option> 
-	<option value="tab_15">2015</option> 
-	<option value="tab_14">2014</option> 
-	<option value="tab_13">2013</option> 
-	<option value="tab_12">2012</option> 
-	<option value="tab_11">2011</option> 
-	<option value="tab_10">2010</option> 
-	<option value="tab_09">2009</option> 
-	<option value="tab_08">2008</option> 
-	<option value="tab_07">2007</option> 
-	<option value="tab_06">2006</option> 
-	</select> </div> <input type="submit" value="이동" class="b-btn selBtn vt"> </div><!-- 2022 -->
-	<div class="select_Tab" id="tab_22"> 
-	<div class="h-group"> 
+
+<!-- 2022 -->
+<div class="select_Tab" id="tab_22"> 
+	<div class="h-group">  
 	<h4>금통위원, 집행간부 및 감사 연간 보수액</h4> 
-	<p class="fr">(백만원)</p> </div> 
-	<div class="table tac scrollX"> 
-	<table style="height: 215px;" class=""> 
+	<p class="fr">(백만원)</p> 
+</div> 
+<div class="table tac scrollX"> 
+	<table> 
 	<caption> 금통위원,&nbsp;집행간부 및 감사 연간 보수액 </caption> 
 	<thead> 
 	<tr> 
-	<th scope="col" class="w12p NamoSE_border_show"></th> 
-	<th scope="col" class="w10p NamoSE_border_show">기본급</th> 
-	<th scope="col" class="w10p NamoSE_border_show">제수당</th> 
+	<th scope="col" class="w12p"></th> 
+	<th scope="col" class="w10p">기본급</th> 
+	<th scope="col" class="w10p">제수당</th> 
 	<th scope="col" class="w16p NamoSE_border_show">급여성복리후생비</th> 
 	<th scope="col" class="w16p NamoSE_border_show">경영평가상여금</th> 
 	<th scope="col" class="w16p NamoSE_border_show">기타<br> 성과상여금</th> 
-	<th scope="col" class="w10p NamoSE_border_show">합계</th> 
+	<th scope="col" class="w10p">합계</th> 
 	<th scope="col" class="NamoSE_border_show">비고</th> 
 	</tr> 
 	</thead> 
@@ -345,7 +352,7 @@
 	<td style="height: 38px;">연봉제</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">금통위원</th> 
+	<th scope="row">금통위원</th> 
 	<td> 
 	<p style="text-align: center;">285.6</p></td> 
 	<td> 
@@ -361,7 +368,7 @@
 	<td>연봉제</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">감 사</th> 
+	<th scope="row">감 사</th> 
 	<td> 
 	<p style="text-align: center;">273.2</p></td> 
 	<td> 
@@ -377,7 +384,7 @@
 	<td>연봉제</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">부총재보</th> 
+	<th scope="row">부총재보</th> 
 	<td> 
 	<p style="text-align: center;">229.8</p></td> 
 	<td> 
@@ -403,7 +410,7 @@
 	<li>기타성과상여금 :&nbsp;실적에 따라 차등지급되는 성과상여금 중 경영평가상여금을&nbsp;제외한 금액</li> 
 	</ul></li> 
 	</ul> 
-	<div class="h-group"> 
+	<div class="h-group">  
 	<h4>직원 평균 보수액</h4> 
 	<p class="fr">(천원, 년)</p> </div> 
 	<div class="table td_tac"> 
@@ -422,37 +429,37 @@
 	<p>103,312</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 기본급</th> 
+	<th scope="row">- 기본급</th> 
 	<td> 
 	<p>62,279</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 경영평가상여금</th> 
+	<th scope="row">- 경영평가상여금</th> 
 	<td> 
 	<p>-</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 기타성과상여금</th> 
+	<th scope="row">- 기타성과상여금</th> 
 	<td> 
 	<p>16,349</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 정기상여금</th> 
+	<th scope="row">- 정기상여금</th> 
 	<td> 
 	<p>19,133</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 실적수당</th> 
+	<th scope="row">- 실적수당</th> 
 	<td> 
 	<p>4,414</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 기타수당</th> 
+	<th scope="row">- 기타수당</th> 
 	<td> 
 	<p>616</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 급여성복리후생비</th> 
+	<th scope="row">- 급여성복리후생비</th> 
 	<td> 
 	<p>521</p></td> 
 	</tr> 
@@ -475,7 +482,7 @@
 	<li>평균근속년수 : 상시 종업원의 평균 근속년수</li> 
 	</ul></li> 
 	</ul> 
-	<div class="h-group"> 
+	<div class="h-group">  
 	<h4>신입직원 평균 보수액(초임)</h4> 
 	<p class="fr">(천원, 명)</p> </div> 
 	<div class="table td_tac"> 
@@ -489,35 +496,35 @@
 	</thead> 
 	<tbody> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">기본급</th> 
+	<th scope="row">기본급</th> 
 	<td>32,964</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">경영평가상여금</th> 
+	<th scope="row">경영평가상여금</th> 
 	<td>0</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">기타성과상여금</th> 
+	<th scope="row">기타성과상여금</th> 
 	<td> 
 	<p>7,005</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">정기상여금</th> 
+	<th scope="row">정기상여금</th> 
 	<td> 
 	<p>10,439</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">실적수당</th> 
+	<th scope="row">실적수당</th> 
 	<td> 
 	<p>1,071</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">기타수당</th> 
+	<th scope="row">기타수당</th> 
 	<td> 
 	<p>266</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">급여성복리후생비</th> 
+	<th scope="row">급여성복리후생비</th> 
 	<td> 
 	<p>19</p></td> 
 	</tr> 
@@ -536,7 +543,7 @@
 	<h5>공개기준</h5> 
 	<p class="buOnly ml1">신입직원 평균 보수액 : 종합기획직원(G5),&nbsp;대졸, 군미필자, 무경력자 기준</p> </div><!-- 2021 -->
 	<div class="select_Tab" id="tab_21" style="display: none;"> 
-	<div class="h-group"> 
+	<div class="h-group">  
 	<h4>금통위원, 집행간부 및 감사 연간 보수액</h4> 
 	<p class="fr">(백만원)</p> </div> 
 	<div class="table tac scrollX"> 
@@ -544,13 +551,13 @@
 	<caption> 금통위원,&nbsp;집행간부 및 감사 연간 보수액 </caption> 
 	<thead> 
 	<tr> 
-	<th scope="col" class="w12p NamoSE_border_show"></th> 
-	<th scope="col" class="w10p NamoSE_border_show">기본급</th> 
-	<th scope="col" class="w10p NamoSE_border_show">제수당</th> 
+	<th scope="col" class="w12p"></th> 
+	<th scope="col" class="w10p">기본급</th> 
+	<th scope="col" class="w10p">제수당</th> 
 	<th scope="col" class="w16p NamoSE_border_show">급여성복리후생비</th> 
 	<th scope="col" class="w16p NamoSE_border_show">경영평가상여금</th> 
 	<th scope="col" class="w16p NamoSE_border_show">기타<br> 성과상여금</th> 
-	<th scope="col" class="w10p NamoSE_border_show">합계</th> 
+	<th scope="col" class="w10p">합계</th> 
 	<th scope="col" class="NamoSE_border_show">비고</th> 
 	</tr> 
 	</thead> 
@@ -572,7 +579,7 @@
 	<td style="height: 38px;">연봉제</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">금통위원</th> 
+	<th scope="row">금통위원</th> 
 	<td> 
 	<p style="text-align: center;">278.1</p></td> 
 	<td> 
@@ -588,7 +595,7 @@
 	<td>연봉제</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">감 사</th> 
+	<th scope="row">감 사</th> 
 	<td> 
 	<p style="text-align: center;">266.0</p></td> 
 	<td> 
@@ -604,7 +611,7 @@
 	<td>연봉제</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">부총재보</th> 
+	<th scope="row">부총재보</th> 
 	<td> 
 	<p style="text-align: center;">223.7</p></td> 
 	<td> 
@@ -630,7 +637,7 @@
 	<li>기타성과상여금 :&nbsp;실적에 따라 차등지급되는 성과상여금 중 경영평가상여금을&nbsp;제외한 금액</li> 
 	</ul></li> 
 	</ul> 
-	<div class="h-group"> 
+	<div class="h-group">  
 	<h4>직원 평균 보수액</h4> 
 	<p class="fr">(천원, 년)</p> </div> 
 	<div class="table td_tac"> 
@@ -649,37 +656,37 @@
 	<p>100,342</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 기본급</th> 
+	<th scope="row">- 기본급</th> 
 	<td> 
 	<p>60,982</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 경영평가상여금</th> 
+	<th scope="row">- 경영평가상여금</th> 
 	<td> 
 	<p>-</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 기타성과상여금</th> 
+	<th scope="row">- 기타성과상여금</th> 
 	<td> 
 	<p>15,920</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 정기상여금</th> 
+	<th scope="row">- 정기상여금</th> 
 	<td> 
 	<p>18,580</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 실적수당</th> 
+	<th scope="row">- 실적수당</th> 
 	<td> 
 	<p>3,773</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 기타수당</th> 
+	<th scope="row">- 기타수당</th> 
 	<td> 
 	<p>594</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 급여성복리후생비</th> 
+	<th scope="row">- 급여성복리후생비</th> 
 	<td> 
 	<p>493</p></td> 
 	</tr> 
@@ -702,7 +709,7 @@
 	<li>평균근속년수 : 상시 종업원의 평균 근속년수</li> 
 	</ul></li> 
 	</ul> 
-	<div class="h-group"> 
+	<div class="h-group">  
 	<h4>신입직원 평균 보수액(초임)</h4> 
 	<p class="fr">(천원, 명)</p> </div> 
 	<div class="table td_tac"> 
@@ -716,35 +723,35 @@
 	</thead> 
 	<tbody> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">기본급</th> 
+	<th scope="row">기본급</th> 
 	<td>32,076</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">경영평가상여금</th> 
+	<th scope="row">경영평가상여금</th> 
 	<td>0</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">기타성과상여금</th> 
+	<th scope="row">기타성과상여금</th> 
 	<td> 
 	<p>6,772</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">정기상여금</th> 
+	<th scope="row">정기상여금</th> 
 	<td> 
 	<p>10,157</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">실적수당</th> 
+	<th scope="row">실적수당</th> 
 	<td> 
 	<p>308</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">기타수당</th> 
+	<th scope="row">기타수당</th> 
 	<td> 
 	<p>241</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">급여성복리후생비</th> 
+	<th scope="row">급여성복리후생비</th> 
 	<td> 
 	<p>29</p></td> 
 	</tr> 
@@ -763,7 +770,7 @@
 	<h5>공개기준</h5> 
 	<p class="buOnly ml1">신입직원 평균 보수액 : 종합기획직원(G5),&nbsp;대졸, 군미필자, 무경력자 기준</p> </div><!-- 2020 -->
 	<div class="select_Tab" id="tab_20" style="display: none;"> 
-	<div class="h-group"> 
+	<div class="h-group">  
 	<h4>금통위원, 집행간부 및 감사 연간 보수액</h4> 
 	<p class="fr">(백만원)</p> </div> 
 	<div class="table tac scrollX"> 
@@ -771,13 +778,13 @@
 	<caption> 금통위원,&nbsp;집행간부 및 감사 연간 보수액 </caption> 
 	<thead> 
 	<tr> 
-	<th scope="col" class="w12p NamoSE_border_show"></th> 
-	<th scope="col" class="w10p NamoSE_border_show">기본급</th> 
-	<th scope="col" class="w10p NamoSE_border_show">제수당</th> 
+	<th scope="col" class="w12p"></th> 
+	<th scope="col" class="w10p">기본급</th> 
+	<th scope="col" class="w10p">제수당</th> 
 	<th scope="col" class="w16p NamoSE_border_show">급여성복리후생비</th> 
 	<th scope="col" class="w16p NamoSE_border_show">경영평가상여금</th> 
 	<th scope="col" class="w16p NamoSE_border_show">기타<br> 성과상여금</th> 
-	<th scope="col" class="w10p NamoSE_border_show">합계</th> 
+	<th scope="col" class="w10p">합계</th> 
 	<th scope="col" class="NamoSE_border_show">비고</th> 
 	</tr> 
 	</thead> 
@@ -799,7 +806,7 @@
 	<td style="height: 38px;">연봉제</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">금통위원</th> 
+	<th scope="row">금통위원</th> 
 	<td> 
 	<p style="text-align: center;">278.1</p></td> 
 	<td> 
@@ -815,7 +822,7 @@
 	<td>연봉제</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">감 사</th> 
+	<th scope="row">감 사</th> 
 	<td> 
 	<p style="text-align: center;">266.0</p></td> 
 	<td> 
@@ -831,7 +838,7 @@
 	<td>연봉제</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">부총재보</th> 
+	<th scope="row">부총재보</th> 
 	<td> 
 	<p style="text-align: center;">223.7</p></td> 
 	<td> 
@@ -857,7 +864,7 @@
 	<li>기타성과상여금 :&nbsp;실적에 따라 차등지급되는 성과상여금 중 경영평가상여금을&nbsp;제외한 금액</li> 
 	</ul></li> 
 	</ul> 
-	<div class="h-group"> 
+	<div class="h-group">  
 	<h4>직원 평균 보수액</h4> 
 	<p class="fr">(천원, 년)</p> </div> 
 	<div class="table td_tac"> 
@@ -876,37 +883,37 @@
 	<p>100,615</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 기본급</th> 
+	<th scope="row">- 기본급</th> 
 	<td> 
 	<p>61,051</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 경영평가상여금</th> 
+	<th scope="row">- 경영평가상여금</th> 
 	<td> 
 	<p>-</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 기타성과상여금</th> 
+	<th scope="row">- 기타성과상여금</th> 
 	<td> 
 	<p>15,919</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 정기상여금</th> 
+	<th scope="row">- 정기상여금</th> 
 	<td> 
 	<p>18,591</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 실적수당</th> 
+	<th scope="row">- 실적수당</th> 
 	<td> 
 	<p>3,972</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 기타수당</th> 
+	<th scope="row">- 기타수당</th> 
 	<td> 
 	<p>608</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 급여성복리후생비</th> 
+	<th scope="row">- 급여성복리후생비</th> 
 	<td> 
 	<p>473</p></td> 
 	</tr> 
@@ -929,7 +936,7 @@
 	<li>평균근속년수 : 상시 종업원의 평균 근속년수</li> 
 	</ul></li> 
 	</ul> 
-	<div class="h-group"> 
+	<div class="h-group">  
 	<h4>신입직원 평균 보수액(초임)</h4> 
 	<p class="fr">(천원, 명)</p> </div> 
 	<div class="table td_tac"> 
@@ -943,35 +950,35 @@
 	</thead> 
 	<tbody> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">기본급</th> 
+	<th scope="row">기본급</th> 
 	<td>31,716 </td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">경영평가상여금</th> 
+	<th scope="row">경영평가상여금</th> 
 	<td>-</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">기타성과상여금</th> 
+	<th scope="row">기타성과상여금</th> 
 	<td> 
 	<p>6,625</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">정기상여금</th> 
+	<th scope="row">정기상여금</th> 
 	<td> 
 	<p>10,043</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">실적수당</th> 
+	<th scope="row">실적수당</th> 
 	<td> 
 	<p>371</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">기타수당</th> 
+	<th scope="row">기타수당</th> 
 	<td> 
 	<p>225</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">급여성복리후생비</th> 
+	<th scope="row">급여성복리후생비</th> 
 	<td> 
 	<p>17</p></td> 
 	</tr> 
@@ -990,7 +997,7 @@
 	<h5>공개기준</h5> 
 	<p class="buOnly ml1">신입직원 평균 보수액 : 종합기획직원(G5),&nbsp;대졸, 군미필자, 무경력자 기준</p> </div><!-- 2019 -->
 	<div class="select_Tab" id="tab_19" style="display: none;"> 
-	<div class="h-group"> 
+	<div class="h-group">  
 	<h4>금통위원, 집행간부 및 감사 연간 보수액</h4> 
 	<p class="fr">(백만원)</p> </div> 
 	<div class="table tac scrollX"> 
@@ -998,13 +1005,13 @@
 	<caption> 금통위원,&nbsp;집행간부 및 감사 연간 보수액 </caption> 
 	<thead> 
 	<tr> 
-	<th scope="col" class="w12p NamoSE_border_show"></th> 
-	<th scope="col" class="w10p NamoSE_border_show">기본급</th> 
-	<th scope="col" class="w10p NamoSE_border_show">제수당</th> 
+	<th scope="col" class="w12p"></th> 
+	<th scope="col" class="w10p">기본급</th> 
+	<th scope="col" class="w10p">제수당</th> 
 	<th scope="col" class="w16p NamoSE_border_show">급여성복리후생비</th> 
 	<th scope="col" class="w16p NamoSE_border_show">경영평가상여금</th> 
 	<th scope="col" class="w16p NamoSE_border_show">기타<br> 성과상여금</th> 
-	<th scope="col" class="w10p NamoSE_border_show">합계</th> 
+	<th scope="col" class="w10p">합계</th> 
 	<th scope="col" class="NamoSE_border_show">비고</th> 
 	</tr> 
 	</thead> 
@@ -1020,7 +1027,7 @@
 	<td style="height: 38px;">연봉제</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">금통위원</th> 
+	<th scope="row">금통위원</th> 
 	<td>273.1</td> 
 	<td>-</td> 
 	<td>0.2</td> 
@@ -1030,7 +1037,7 @@
 	<td>연봉제</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">감 사</th> 
+	<th scope="row">감 사</th> 
 	<td>261.3</td> 
 	<td>-</td> 
 	<td>0.0</td> 
@@ -1040,7 +1047,7 @@
 	<td>연봉제</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">부총재보</th> 
+	<th scope="row">부총재보</th> 
 	<td>219.7</td> 
 	<td>-</td> 
 	<td>1.3</td> 
@@ -1060,7 +1067,7 @@
 	<li>기타성과상여금 :&nbsp;실적에 따라 차등지급되는 성과상여금 중 경영평가상여금을&nbsp;제외한 금액</li> 
 	</ul></li> 
 	</ul> 
-	<div class="h-group"> 
+	<div class="h-group">  
 	<h4>직원 평균 보수액</h4> 
 	<p class="fr">(천원, 년)</p> </div> 
 	<div class="table td_tac"> 
@@ -1079,37 +1086,37 @@
 	<p>99,064</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 기본급</th> 
+	<th scope="row">- 기본급</th> 
 	<td> 
 	<p>59,665</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 경영평가상여금</th> 
+	<th scope="row">- 경영평가상여금</th> 
 	<td> 
 	<p>-</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 기타성과상여금</th> 
+	<th scope="row">- 기타성과상여금</th> 
 	<td> 
 	<p>15,596</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 정기상여금</th> 
+	<th scope="row">- 정기상여금</th> 
 	<td> 
 	<p>18,294</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 실적수당</th> 
+	<th scope="row">- 실적수당</th> 
 	<td> 
 	<p>3,756</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 기타수당</th> 
+	<th scope="row">- 기타수당</th> 
 	<td> 
 	<p>1,214</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 급여성복리후생비</th> 
+	<th scope="row">- 급여성복리후생비</th> 
 	<td> 
 	<p>539</p></td> 
 	</tr> 
@@ -1132,7 +1139,7 @@
 	<li>평균근속년수 : 상시 종업원의 평균 근속년수</li> 
 	</ul></li> 
 	</ul> 
-	<div class="h-group"> 
+	<div class="h-group">  
 	<h4>신입직원 평균 보수액(초임)</h4> 
 	<p class="fr">(천원, 명)</p> </div> 
 	<div class="table td_tac"> 
@@ -1146,35 +1153,35 @@
 	</thead> 
 	<tbody> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">기본급</th> 
+	<th scope="row">기본급</th> 
 	<td>30,216</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">경영평가상여금</th> 
+	<th scope="row">경영평가상여금</th> 
 	<td>-</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">기타성과상여금</th> 
+	<th scope="row">기타성과상여금</th> 
 	<td> 
 	<p>6,253</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">정기상여금</th> 
+	<th scope="row">정기상여금</th> 
 	<td> 
 	<p>9,568</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">실적수당</th> 
+	<th scope="row">실적수당</th> 
 	<td> 
 	<p>146</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">기타수당</th> 
+	<th scope="row">기타수당</th> 
 	<td> 
 	<p>375</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">급여성복리후생비</th> 
+	<th scope="row">급여성복리후생비</th> 
 	<td> 
 	<p>9</p></td> 
 	</tr> 
@@ -1193,7 +1200,7 @@
 	<h5>공개기준</h5> 
 	<p class="buOnly ml1">신입직원 평균 보수액 : 종합기획직원(G5),&nbsp;대졸, 군미필자, 무경력자 기준</p> </div><!-- 2018 -->
 	<div class="select_Tab" id="tab_18" style="display: none;"> 
-	<div class="h-group"> 
+	<div class="h-group">  
 	<h4>금통위원, 집행간부 및 감사 연간 보수액</h4> 
 	<p class="fr">(백만원)</p> </div> 
 	<div class="table tac scrollX"> 
@@ -1201,13 +1208,13 @@
 	<caption> 금통위원,&nbsp;집행간부 및 감사 연간 보수액 </caption> 
 	<thead> 
 	<tr> 
-	<th scope="col" class="w12p NamoSE_border_show"></th> 
-	<th scope="col" class="w10p NamoSE_border_show">기본급</th> 
-	<th scope="col" class="w10p NamoSE_border_show">제수당</th> 
+	<th scope="col" class="w12p"></th> 
+	<th scope="col" class="w10p">기본급</th> 
+	<th scope="col" class="w10p">제수당</th> 
 	<th scope="col" class="w16p NamoSE_border_show">급여성복리후생비</th> 
 	<th scope="col" class="w16p NamoSE_border_show">경영평가상여금</th> 
 	<th scope="col" class="w16p NamoSE_border_show">기타<br> 성과상여금</th> 
-	<th scope="col" class="w10p NamoSE_border_show">합계</th> 
+	<th scope="col" class="w10p">합계</th> 
 	<th scope="col" class="NamoSE_border_show">비고</th> 
 	</tr> 
 	</thead> 
@@ -1223,7 +1230,7 @@
 	<td style="height: 38px;">연봉제</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">금통위원</th> 
+	<th scope="row">금통위원</th> 
 	<td>271.0</td> 
 	<td>-</td> 
 	<td>0.1</td> 
@@ -1233,7 +1240,7 @@
 	<td>연봉제</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">감 사</th> 
+	<th scope="row">감 사</th> 
 	<td>259.2</td> 
 	<td>-</td> 
 	<td>0.7</td> 
@@ -1243,7 +1250,7 @@
 	<td>연봉제</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">부총재보</th> 
+	<th scope="row">부총재보</th> 
 	<td>218.0</td> 
 	<td>-</td> 
 	<td>1.3</td> 
@@ -1263,7 +1270,7 @@
 	<li>기타성과상여금 :&nbsp;실적에 따라 차등지급되는 성과상여금 중 경영평가상여금을&nbsp;제외한 금액</li> 
 	</ul></li> 
 	</ul> 
-	<div class="h-group"> 
+	<div class="h-group">  
 	<h4>직원 평균 보수액</h4> 
 	<p class="fr">(천원, 년)</p> </div> 
 	<div class="table td_tac"> 
@@ -1282,37 +1289,37 @@
 	<p>99,428</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 기본급</th> 
+	<th scope="row">- 기본급</th> 
 	<td> 
 	<p>59,743</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 경영평가상여금</th> 
+	<th scope="row">- 경영평가상여금</th> 
 	<td> 
 	<p>-</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 기타성과상여금</th> 
+	<th scope="row">- 기타성과상여금</th> 
 	<td> 
 	<p>15,519</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 정기상여금</th> 
+	<th scope="row">- 정기상여금</th> 
 	<td> 
 	<p>18,408</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 실적수당</th> 
+	<th scope="row">- 실적수당</th> 
 	<td> 
 	<p>3,849</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 기타수당</th> 
+	<th scope="row">- 기타수당</th> 
 	<td> 
 	<p>1,240</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 급여성복리후생비</th> 
+	<th scope="row">- 급여성복리후생비</th> 
 	<td> 
 	<p>669</p></td> 
 	</tr> 
@@ -1335,7 +1342,7 @@
 	<li>평균근속년수 : 상시 종업원의 평균 근속년수</li> 
 	</ul></li> 
 	</ul> 
-	<div class="h-group"> 
+	<div class="h-group">  
 	<h4>신입직원 평균 보수액(초임)</h4> 
 	<p class="fr">(천원, 명)</p> </div> 
 	<div class="table td_tac"> 
@@ -1349,35 +1356,35 @@
 	</thead> 
 	<tbody> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">기본급</th> 
+	<th scope="row">기본급</th> 
 	<td>29,964</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">경영평가상여금</th> 
+	<th scope="row">경영평가상여금</th> 
 	<td>-</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">기타성과상여금</th> 
+	<th scope="row">기타성과상여금</th> 
 	<td> 
 	<p>6,409</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">정기상여금</th> 
+	<th scope="row">정기상여금</th> 
 	<td> 
 	<p>9,489</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">실적수당</th> 
+	<th scope="row">실적수당</th> 
 	<td> 
 	<p>151</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">기타수당</th> 
+	<th scope="row">기타수당</th> 
 	<td> 
 	<p>247</p></td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">급여성복리후생비</th> 
+	<th scope="row">급여성복리후생비</th> 
 	<td> 
 	<p>52</p></td> 
 	</tr> 
@@ -1396,7 +1403,7 @@
 	<h5>공개기준</h5> 
 	<p class="buOnly ml1">신입직원 평균 보수액 : 종합기획직원(G5),&nbsp;대졸, 군미필자, 무경력자 기준</p> </div><!-- //2017 --><!-- 2016 -->
 	<div class="select_Tab" id="tab_17" style="display: none;"> 
-	<div class="h-group"> 
+	<div class="h-group">  
 	<h4>금통위원, 집행간부 및 감사 연간 보수액</h4> 
 	<p class="fr">(백만원)</p> </div> 
 	<div class="table tac scrollX"> 
@@ -1404,19 +1411,19 @@
 	<caption> 금통위원,&nbsp;집행간부 및 감사 연간 보수액 </caption> 
 	<thead> 
 	<tr> 
-	<th scope="col" class="w12p NamoSE_border_show"></th> 
-	<th scope="col" class="w10p NamoSE_border_show">기본급</th> 
-	<th scope="col" class="w10p NamoSE_border_show">제수당</th> 
+	<th scope="col" class="w12p"></th> 
+	<th scope="col" class="w10p">기본급</th> 
+	<th scope="col" class="w10p">제수당</th> 
 	<th scope="col" class="w16p NamoSE_border_show">급여성복리후생비</th> 
 	<th scope="col" class="w16p NamoSE_border_show">경영평가상여금</th> 
 	<th scope="col" class="w16p NamoSE_border_show">기타<br> 성과상여금</th> 
-	<th scope="col" class="w10p NamoSE_border_show">합계</th> 
+	<th scope="col" class="w10p">합계</th> 
 	<th scope="col" class="NamoSE_border_show">비고</th> 
 	</tr> 
 	</thead> 
 	<tbody> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">총재</th> 
+	<th scope="row">총재</th> 
 	<td>289.9</td> 
 	<td>-</td> 
 	<td>1.0</td> 
@@ -1426,7 +1433,7 @@
 	<td>연봉제</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">금통위원</th> 
+	<th scope="row">금통위원</th> 
 	<td>266.7</td> 
 	<td>-</td> 
 	<td>0.2</td> 
@@ -1436,7 +1443,7 @@
 	<td>연봉제</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">감 사</th> 
+	<th scope="row">감 사</th> 
 	<td>255.1</td> 
 	<td>-</td> 
 	<td>-</td> 
@@ -1446,7 +1453,7 @@
 	<td>연봉제</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">부총재보</th> 
+	<th scope="row">부총재보</th> 
 	<td>214.5</td> 
 	<td>-</td> 
 	<td>1.2</td> 
@@ -1466,7 +1473,7 @@
 	<li>기타성과상여금 :&nbsp;실적에 따라 차등지급되는 성과상여금 중 경영평가상여금을&nbsp;제외한 금액</li> 
 	</ul></li> 
 	</ul> 
-	<div class="h-group"> 
+	<div class="h-group">  
 	<h4>직원 평균 보수액</h4> 
 	<p class="fr">(천원, 년)</p> </div> 
 	<div class="table td_tac"> 
@@ -1484,31 +1491,31 @@
 	<td>99,692</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 기본급</th> 
+	<th scope="row">- 기본급</th> 
 	<td>59,625</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 경영평가상여금</th> 
+	<th scope="row">- 경영평가상여금</th> 
 	<td>-</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 기타성과상여금</th> 
+	<th scope="row">- 기타성과상여금</th> 
 	<td>15,879</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 정기상여금</th> 
+	<th scope="row">- 정기상여금</th> 
 	<td>18,405</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 실적수당</th> 
+	<th scope="row">- 실적수당</th> 
 	<td>3,863</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 기타수당</th> 
+	<th scope="row">- 기타수당</th> 
 	<td>1,291</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 급여성복리후생비</th> 
+	<th scope="row">- 급여성복리후생비</th> 
 	<td>629</td> 
 	</tr> 
 	<tr> 
@@ -1529,7 +1536,7 @@
 	<li>평균근속년수 : 상시 종업원의 평균 근속년수</li> 
 	</ul></li> 
 	</ul> 
-	<div class="h-group"> 
+	<div class="h-group">  
 	<h4>신입직원 평균 보수액(초임)</h4> 
 	<p class="fr">(천원, 명)</p> </div> 
 	<div class="table td_tac"> 
@@ -1543,31 +1550,31 @@
 	</thead> 
 	<tbody> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">기본급</th> 
+	<th scope="row">기본급</th> 
 	<td>29,484</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">경영평가상여금</th> 
+	<th scope="row">경영평가상여금</th> 
 	<td>-</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">기타성과상여금</th> 
+	<th scope="row">기타성과상여금</th> 
 	<td>7,289</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">정기상여금</th> 
+	<th scope="row">정기상여금</th> 
 	<td>8,354</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">실적수당</th> 
+	<th scope="row">실적수당</th> 
 	<td>158</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">기타수당</th> 
+	<th scope="row">기타수당</th> 
 	<td>268</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">급여성복리후생비</th> 
+	<th scope="row">급여성복리후생비</th> 
 	<td>38</td> 
 	</tr> 
 	<tr> 
@@ -1583,7 +1590,7 @@
 	<h5>공개기준</h5> 
 	<p class="buOnly ml1">신입직원 평균 보수액 : 종합기획직원(G5),&nbsp;대졸, 군미필자, 무경력자 기준</p> </div><!-- //2017 --><!-- 2016 -->
 	<div class="select_Tab" id="tab_16" style="display: none;"> 
-	<div class="h-group"> 
+	<div class="h-group">  
 	<h4>금통위원, 집행간부 및 감사 연간 보수액</h4> 
 	<p class="fr">(백만원)</p> </div> 
 	<div class="table tac scrollX"> 
@@ -1591,19 +1598,19 @@
 	<caption> 금통위원,&nbsp;집행간부 및 감사 연간 보수액 </caption> 
 	<thead> 
 	<tr> 
-	<th scope="col" class="w12p NamoSE_border_show"></th> 
-	<th scope="col" class="w10p NamoSE_border_show">기본급</th> 
-	<th scope="col" class="w10p NamoSE_border_show">제수당</th> 
+	<th scope="col" class="w12p"></th> 
+	<th scope="col" class="w10p">기본급</th> 
+	<th scope="col" class="w10p">제수당</th> 
 	<th scope="col" class="w16p NamoSE_border_show">급여성복리후생비</th> 
 	<th scope="col" class="w16p NamoSE_border_show">경영평가상여금</th> 
 	<th scope="col" class="w16p NamoSE_border_show">기타<br> 성과상여금</th> 
-	<th scope="col" class="w10p NamoSE_border_show">합계</th> 
+	<th scope="col" class="w10p">합계</th> 
 	<th scope="col" class="NamoSE_border_show">비고</th> 
 	</tr> 
 	</thead> 
 	<tbody> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">총재</th> 
+	<th scope="row">총재</th> 
 	<td>282.8</td> 
 	<td>-</td> 
 	<td>-</td> 
@@ -1613,7 +1620,7 @@
 	<td>연봉제</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">금통위원</th> 
+	<th scope="row">금통위원</th> 
 	<td>260.2</td> 
 	<td>-</td> 
 	<td>0.4</td> 
@@ -1623,7 +1630,7 @@
 	<td>연봉제</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">감 사</th> 
+	<th scope="row">감 사</th> 
 	<td>248.9</td> 
 	<td>-</td> 
 	<td>1.6</td> 
@@ -1633,7 +1640,7 @@
 	<td>연봉제</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">부총재보</th> 
+	<th scope="row">부총재보</th> 
 	<td>209.3</td> 
 	<td>-</td> 
 	<td>0.9</td> 
@@ -1653,7 +1660,7 @@
 	<li>기타성과상여금 :&nbsp;실적에 따라 차등지급되는 성과상여금 중 경영평가상여금을&nbsp;제외한 금액</li> 
 	</ul></li> 
 	</ul> 
-	<div class="h-group"> 
+	<div class="h-group">  
 	<h4>직원 평균 보수액</h4> 
 	<p class="fr">(천원, 년)</p> </div> 
 	<div class="table td_tac"> 
@@ -1671,31 +1678,31 @@
 	<td>98,359</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 기본급</th> 
+	<th scope="row">- 기본급</th> 
 	<td>57,723</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 경영평가상여금</th> 
+	<th scope="row">- 경영평가상여금</th> 
 	<td>-</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 기타성과상여금</th> 
+	<th scope="row">- 기타성과상여금</th> 
 	<td>1,518</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 정기상여금</th> 
+	<th scope="row">- 정기상여금</th> 
 	<td>32,102</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 실적수당</th> 
+	<th scope="row">- 실적수당</th> 
 	<td>5,037</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 기타수당</th> 
+	<th scope="row">- 기타수당</th> 
 	<td>1,329</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 급여성복리후생비</th> 
+	<th scope="row">- 급여성복리후생비</th> 
 	<td>651</td> 
 	</tr> 
 	<tr> 
@@ -1716,7 +1723,7 @@
 	<li>평균근속년수 : 상시 종업원의 평균 근속년수</li> 
 	</ul></li> 
 	</ul> 
-	<div class="h-group"> 
+	<div class="h-group">  
 	<h4>신입직원 평균 보수액(초임)</h4> 
 	<p class="fr">(천원, 명)</p> </div> 
 	<div class="table td_tac"> 
@@ -1730,31 +1737,31 @@
 	</thead> 
 	<tbody> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">기본급</th> 
+	<th scope="row">기본급</th> 
 	<td>28,752</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">경영평가상여금</th> 
+	<th scope="row">경영평가상여금</th> 
 	<td>-</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">기타성과상여금</th> 
+	<th scope="row">기타성과상여금</th> 
 	<td>240</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">정기상여금</th> 
+	<th scope="row">정기상여금</th> 
 	<td>14,950</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">실적수당</th> 
+	<th scope="row">실적수당</th> 
 	<td>573</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">기타수당</th> 
+	<th scope="row">기타수당</th> 
 	<td>224</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">급여성복리후생비</th> 
+	<th scope="row">급여성복리후생비</th> 
 	<td>51</td> 
 	</tr> 
 	<tr> 
@@ -1770,7 +1777,7 @@
 	<h5>공개기준</h5> 
 	<p class="buOnly ml1">신입직원 평균 보수액 : 대졸, 사무직, 군미필자, 무경력자 기준</p> </div><!-- //2016 --><!-- 2015 -->
 	<div class="select_Tab" id="tab_15" style="display: none;"> 
-	<div class="h-group"> 
+	<div class="h-group">  
 	<h4>금통위원, 집행간부 및 감사 연간 보수액</h4> 
 	<p class="fr">(백만원)</p> </div> 
 	<div class="table tac scrollX"> 
@@ -1778,19 +1785,19 @@
 	<caption> 금통위원,&nbsp;집행간부 및 감사 연간 보수액 </caption> 
 	<thead> 
 	<tr> 
-	<th scope="col" class="w12p NamoSE_border_show"></th> 
-	<th scope="col" class="w10p NamoSE_border_show">기본급</th> 
-	<th scope="col" class="w10p NamoSE_border_show">제수당</th> 
+	<th scope="col" class="w12p"></th> 
+	<th scope="col" class="w10p">기본급</th> 
+	<th scope="col" class="w10p">제수당</th> 
 	<th scope="col" class="w16p NamoSE_border_show">급여성복리후생비</th> 
 	<th scope="col" class="w16p NamoSE_border_show">경영평가상여금</th> 
 	<th scope="col" class="w16p NamoSE_border_show">기타<br> 성과상여금</th> 
-	<th scope="col" class="w10p NamoSE_border_show">합계</th> 
+	<th scope="col" class="w10p">합계</th> 
 	<th scope="col" class="NamoSE_border_show">비고</th> 
 	</tr> 
 	</thead> 
 	<tbody> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">총재</th> 
+	<th scope="row">총재</th> 
 	<td>277.3</td> 
 	<td>-</td> 
 	<td>2.0</td> 
@@ -1800,7 +1807,7 @@
 	<td>연봉제</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">금통위원</th> 
+	<th scope="row">금통위원</th> 
 	<td>255.1</td> 
 	<td>-</td> 
 	<td>1.6</td> 
@@ -1810,7 +1817,7 @@
 	<td>연봉제</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">감 사</th> 
+	<th scope="row">감 사</th> 
 	<td>244.0</td> 
 	<td>-</td> 
 	<td>-</td> 
@@ -1820,7 +1827,7 @@
 	<td>연봉제</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">부총재보</th> 
+	<th scope="row">부총재보</th> 
 	<td>205.2</td> 
 	<td>-</td> 
 	<td>0.5</td> 
@@ -1840,7 +1847,7 @@
 	<li>기타성과상여금 :&nbsp;실적에 따라 차등지급되는 성과상여금 중 경영평가상여금을&nbsp;제외한 금액</li> 
 	</ul></li> 
 	</ul> 
-	<div class="h-group"> 
+	<div class="h-group">  
 	<h4>직원 평균 보수액</h4> 
 	<p class="fr">(천원, 년)</p> </div> 
 	<div class="table td_tac"> 
@@ -1858,31 +1865,31 @@
 	<td>96,692</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 기본급</th> 
+	<th scope="row">- 기본급</th> 
 	<td>56,954</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 경영평가상여금</th> 
+	<th scope="row">- 경영평가상여금</th> 
 	<td>-</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 기타성과상여금</th> 
+	<th scope="row">- 기타성과상여금</th> 
 	<td>1,865</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 정기상여금</th> 
+	<th scope="row">- 정기상여금</th> 
 	<td>31,709</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 실적수당</th> 
+	<th scope="row">- 실적수당</th> 
 	<td>4,096</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 기타수당</th> 
+	<th scope="row">- 기타수당</th> 
 	<td>1,397</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 급여성복리후생비</th> 
+	<th scope="row">- 급여성복리후생비</th> 
 	<td>670</td> 
 	</tr> 
 	<tr> 
@@ -1903,7 +1910,7 @@
 	<li>평균근속년수 : 상시 종업원의 평균 근속년수</li> 
 	</ul></li> 
 	</ul> <!-- top paragraph E// --><!-- data table2 S --> 
-	<div class="h-group"> 
+	<div class="h-group">  
 	<h4>신입직원 평균 보수액(초임)</h4> 
 	<p class="fr">(천원, 명)</p> </div> 
 	<div class="table td_tac"> 
@@ -1917,31 +1924,31 @@
 	</thead> 
 	<tbody> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">기본급</th> 
+	<th scope="row">기본급</th> 
 	<td>26,592</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">경영평가상여금</th> 
+	<th scope="row">경영평가상여금</th> 
 	<td>-</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">기타성과상여금</th> 
+	<th scope="row">기타성과상여금</th> 
 	<td>222</td> 
 	</tr> 
 	<tr> 
-	<th scope="ROW" class="NamoSE_border_show">정기상여금</th> 
+	<th scope="row">정기상여금</th> 
 	<td>13,776</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">실적수당</th> 
+	<th scope="row">실적수당</th> 
 	<td>1,605</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">기타수당</th> 
+	<th scope="row">기타수당</th> 
 	<td>338</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">급여성복리후생비</th> 
+	<th scope="row">급여성복리후생비</th> 
 	<td>60</td> 
 	</tr> 
 	<tr> 
@@ -1957,7 +1964,7 @@
 	<h5>공개기준</h5> 
 	<p class="buOnly ml1">신입직원 평균 보수액 : 대졸, 사무직, 군미필자, 무경력자 기준</p> </div><!-- //2015 --><!-- 2014 -->
 	<div class="select_Tab" id="tab_14" style="display: none;"> 
-	<div class="h-group"> 
+	<div class="h-group">  
 	<h4>금통위원, 집행간부 및 감사 연간 보수액</h4> 
 	<p class="fr">(백만원)</p> </div> 
 	<div class="table tac scrollX"> 
@@ -1965,19 +1972,19 @@
 	<caption> 금통위원,&nbsp;집행간부 및 감사 연간 보수액 </caption> 
 	<thead> 
 	<tr> 
-	<th scope="col" class="w12p NamoSE_border_show"></th> 
-	<th scope="col" class="w10p NamoSE_border_show">기본급</th> 
-	<th scope="col" class="w10p NamoSE_border_show">제수당</th> 
+	<th scope="col" class="w12p"></th> 
+	<th scope="col" class="w10p">기본급</th> 
+	<th scope="col" class="w10p">제수당</th> 
 	<th scope="col" class="w16p NamoSE_border_show">급여성복리후생비</th> 
 	<th scope="col" class="w16p NamoSE_border_show">경영평가상여금</th> 
 	<th scope="col" class="w16p NamoSE_border_show">기타<br> 성과상여금</th> 
-	<th scope="col" class="w10p NamoSE_border_show">합계</th> 
+	<th scope="col" class="w10p">합계</th> 
 	<th scope="col" class="NamoSE_border_show">비고</th> 
 	</tr> 
 	</thead> 
 	<tbody> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">총재</th> 
+	<th scope="row">총재</th> 
 	<td>262.6</td> 
 	<td>-</td> 
 	<td>-</td> 
@@ -1987,7 +1994,7 @@
 	<td>연봉제</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">금통위원</th> 
+	<th scope="row">금통위원</th> 
 	<td>241.6</td> 
 	<td>-</td> 
 	<td>0.7</td> 
@@ -1997,7 +2004,7 @@
 	<td>연봉제</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">감 사</th> 
+	<th scope="row">감 사</th> 
 	<td>231.1</td> 
 	<td>-</td> 
 	<td>-</td> 
@@ -2007,7 +2014,7 @@
 	<td>연봉제</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">부총재보</th> 
+	<th scope="row">부총재보</th> 
 	<td>194.4</td> 
 	<td>-</td> 
 	<td>0.9</td> 
@@ -2027,7 +2034,7 @@
 	<li>기타성과상여금 :&nbsp;실적에 따라 차등지급되는 성과상여금 중 경영평가상여금을&nbsp;제외한 금액</li> 
 	</ul></li> 
 	</ul> 
-	<div class="h-group"> 
+	<div class="h-group">  
 	<h4>직원 평균 보수액</h4> 
 	<p class="fr">(천원, 년)</p> </div> 
 	<div class="table td_tac"> 
@@ -2045,31 +2052,31 @@
 	<td>96,223</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 기본급</th> 
+	<th scope="row">- 기본급</th> 
 	<td>56,166</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 경영평가상여금</th> 
+	<th scope="row">- 경영평가상여금</th> 
 	<td>-</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 기타성과상여금</th> 
+	<th scope="row">- 기타성과상여금</th> 
 	<td>14,070</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 정기상여금</th> 
+	<th scope="row">- 정기상여금</th> 
 	<td>18,822</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 실적수당</th> 
+	<th scope="row">- 실적수당</th> 
 	<td>5,047</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 기타수당</th> 
+	<th scope="row">- 기타수당</th> 
 	<td>1,412</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 급여성복리후생비</th> 
+	<th scope="row">- 급여성복리후생비</th> 
 	<td>705</td> 
 	</tr> 
 	<tr> 
@@ -2090,7 +2097,7 @@
 	<li>평균근속년수 : 상시 종업원의 평균 근속년수</li> 
 	</ul></li> 
 	</ul> <!-- top paragraph E// --><!-- data table2 S --> 
-	<div class="h-group"> 
+	<div class="h-group">  
 	<h4>신입직원 평균 보수액(초임)</h4> 
 	<p class="fr">(천원, 명)</p> </div> 
 	<div class="table td_tac"> 
@@ -2104,31 +2111,31 @@
 	</thead> 
 	<tbody> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">기본급</th> 
+	<th scope="row">기본급</th> 
 	<td>25,860</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">경영평가상여금</th> 
+	<th scope="row">경영평가상여금</th> 
 	<td>-</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">기타성과상여금</th> 
+	<th scope="row">기타성과상여금</th> 
 	<td>4,550</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">정기상여금</th> 
+	<th scope="row">정기상여금</th> 
 	<td>7,995</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">실적수당</th> 
+	<th scope="row">실적수당</th> 
 	<td>2,198</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">기타수당</th> 
+	<th scope="row">기타수당</th> 
 	<td>325</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">급여성복리후생비</th> 
+	<th scope="row">급여성복리후생비</th> 
 	<td>88</td> 
 	</tr> 
 	<tr> 
@@ -2144,7 +2151,7 @@
 	<h5>공개기준</h5> 
 	<p class="buOnly ml1">신입직원 평균 보수액 : 대졸, 사무직, 군미필자, 무경력자 기준</p> </div><!-- //2014 --><!-- 2013 -->
 	<div class="select_Tab" id="tab_13" style="display: none;"> 
-	<div class="h-group"> 
+	<div class="h-group">  
 	<h4>금통위원, 집행간부 및 감사 연간 보수액</h4> 
 	<p class="fr">(백만원)</p> </div> 
 	<div class="table tac scrollX"> 
@@ -2152,19 +2159,19 @@
 	<caption> 금통위원,&nbsp;집행간부 및 감사 연간 보수액 </caption> 
 	<thead> 
 	<tr> 
-	<th scope="col" class="w12p NamoSE_border_show"></th> 
-	<th scope="col" class="w10p NamoSE_border_show">기본급</th> 
-	<th scope="col" class="w10p NamoSE_border_show">제수당</th> 
+	<th scope="col" class="w12p"></th> 
+	<th scope="col" class="w10p">기본급</th> 
+	<th scope="col" class="w10p">제수당</th> 
 	<th scope="col" class="w16p NamoSE_border_show">급여성복리후생비</th> 
 	<th scope="col" class="w16p NamoSE_border_show">경영평가상여금</th> 
 	<th scope="col" class="w16p NamoSE_border_show">기타<br> 성과상여금</th> 
-	<th scope="col" class="w10p NamoSE_border_show">합계</th> 
+	<th scope="col" class="w10p">합계</th> 
 	<th scope="col" class="NamoSE_border_show">비고</th> 
 	</tr> 
 	</thead> 
 	<tbody> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">총재</th> 
+	<th scope="row">총재</th> 
 	<td>262.6</td> 
 	<td>-</td> 
 	<td>-</td> 
@@ -2174,7 +2181,7 @@
 	<td>연봉제</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">금통위원</th> 
+	<th scope="row">금통위원</th> 
 	<td>241.6</td> 
 	<td>-</td> 
 	<td>0.1</td> 
@@ -2184,7 +2191,7 @@
 	<td>연봉제</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">감 사</th> 
+	<th scope="row">감 사</th> 
 	<td>231.1</td> 
 	<td>-</td> 
 	<td>-</td> 
@@ -2194,7 +2201,7 @@
 	<td>연봉제</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">부총재보</th> 
+	<th scope="row">부총재보</th> 
 	<td>194.4</td> 
 	<td>-</td> 
 	<td>0.5</td> 
@@ -2214,7 +2221,7 @@
 	<li>기타성과상여금 :&nbsp;실적에 따라 차등지급되는 성과상여금 중 경영평가상여금을&nbsp;제외한 금액</li> 
 	</ul></li> 
 	</ul> 
-	<div class="h-group"> 
+	<div class="h-group">  
 	<h4>직원 평균 보수액</h4> 
 	<p class="fr">(천원, 년)</p> </div> 
 	<div class="table td_tac"> 
@@ -2232,31 +2239,31 @@
 	<td>95,931</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 기본급</th> 
+	<th scope="row">- 기본급</th> 
 	<td>55,584</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 경영평가상여금</th> 
+	<th scope="row">- 경영평가상여금</th> 
 	<td>-</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 기타성과상여금</th> 
+	<th scope="row">- 기타성과상여금</th> 
 	<td>14,027</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 정기상여금</th> 
+	<th scope="row">- 정기상여금</th> 
 	<td>18,752</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 실적수당</th> 
+	<th scope="row">- 실적수당</th> 
 	<td>5,394</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 기타수당</th> 
+	<th scope="row">- 기타수당</th> 
 	<td>1,435</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 급여성복리후생비</th> 
+	<th scope="row">- 급여성복리후생비</th> 
 	<td>741</td> 
 	</tr> 
 	<tr> 
@@ -2277,7 +2284,7 @@
 	<li>평균근속년수 : 상시 종업원의 평균 근속년수</li> 
 	</ul></li> 
 	</ul> <!-- top paragraph E// --><!-- data table2 S --> 
-	<div class="h-group"> 
+	<div class="h-group">  
 	<h4>신입직원 평균 보수액(초임)</h4> 
 	<p class="fr">(천원, 명)</p> </div> 
 	<div class="table td_tac"> 
@@ -2291,31 +2298,31 @@
 	</thead> 
 	<tbody> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">기본급</th> 
+	<th scope="row">기본급</th> 
 	<td>25,416</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">경영평가상여금</th> 
+	<th scope="row">경영평가상여금</th> 
 	<td>-</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">기타성과상여금</th> 
+	<th scope="row">기타성과상여금</th> 
 	<td>4,472</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">정기상여금</th> 
+	<th scope="row">정기상여금</th> 
 	<td>7,858</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">실적수당</th> 
+	<th scope="row">실적수당</th> 
 	<td>2,989</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">기타수당</th> 
+	<th scope="row">기타수당</th> 
 	<td>300</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">급여성복리후생비</th> 
+	<th scope="row">급여성복리후생비</th> 
 	<td>88</td> 
 	</tr> 
 	<tr> 
@@ -2331,7 +2338,7 @@
 	<h5>공개기준</h5> 
 	<p class="buOnly ml1">신입직원 평균 보수액 : 대졸, 사무직, 군미필자, 무경력자 기준</p> </div><!-- //2013 --><!-- 2012 -->
 	<div class="select_Tab" id="tab_12" style="display: none;"> 
-	<div class="h-group"> 
+	<div class="h-group">  
 	<h4>금통위원, 집행간부 및 감사 연간 보수액</h4> 
 	<p class="fr">(백만원)</p> </div> 
 	<div class="table tac scrollX"> 
@@ -2339,19 +2346,19 @@
 	<caption> 금통위원,&nbsp;집행간부 및 감사 연간 보수액 </caption> 
 	<thead> 
 	<tr> 
-	<th scope="col" class="w12p NamoSE_border_show"></th> 
-	<th scope="col" class="w10p NamoSE_border_show">기본급</th> 
-	<th scope="col" class="w10p NamoSE_border_show">제수당</th> 
+	<th scope="col" class="w12p"></th> 
+	<th scope="col" class="w10p">기본급</th> 
+	<th scope="col" class="w10p">제수당</th> 
 	<th scope="col" class="w16p NamoSE_border_show">급여성복리후생비</th> 
 	<th scope="col" class="w16p NamoSE_border_show">경영평가상여금</th> 
 	<th scope="col" class="w16p NamoSE_border_show">기타<br> 성과상여금</th> 
-	<th scope="col" class="w10p NamoSE_border_show">합계</th> 
+	<th scope="col" class="w10p">합계</th> 
 	<th scope="col" class="NamoSE_border_show">비고</th> 
 	</tr> 
 	</thead> 
 	<tbody> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">총재</th> 
+	<th scope="row">총재</th> 
 	<td>258.8</td> 
 	<td>-</td> 
 	<td>0.6</td> 
@@ -2361,7 +2368,7 @@
 	<td>연봉제</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">금통위원</th> 
+	<th scope="row">금통위원</th> 
 	<td>238.1</td> 
 	<td>-</td> 
 	<td>-</td> 
@@ -2371,7 +2378,7 @@
 	<td>연봉제</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">감 사</th> 
+	<th scope="row">감 사</th> 
 	<td>227.7</td> 
 	<td>-</td> 
 	<td>-</td> 
@@ -2381,7 +2388,7 @@
 	<td>연봉제</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">부총재보</th> 
+	<th scope="row">부총재보</th> 
 	<td>191.5</td> 
 	<td>-</td> 
 	<td>0.6</td> 
@@ -2401,7 +2408,7 @@
 	<li>기타성과상여금 :&nbsp;실적에 따라 차등지급되는 성과상여금 중 경영평가상여금을&nbsp;제외한 금액</li> 
 	</ul></li> 
 	</ul> 
-	<div class="h-group"> 
+	<div class="h-group">  
 	<h4>직원 평균 보수액</h4> 
 	<p class="fr">(천원, 년)</p> </div> 
 	<div class="table td_tac"> 
@@ -2419,31 +2426,31 @@
 	<td>93,894</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 기본급</th> 
+	<th scope="row">- 기본급</th> 
 	<td>54,555</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 경영평가상여금</th> 
+	<th scope="row">- 경영평가상여금</th> 
 	<td>-</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 기타성과상여금</th> 
+	<th scope="row">- 기타성과상여금</th> 
 	<td>13,846</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 정기상여금</th> 
+	<th scope="row">- 정기상여금</th> 
 	<td>18,197</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 실적수당</th> 
+	<th scope="row">- 실적수당</th> 
 	<td>5,027</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 기타수당</th> 
+	<th scope="row">- 기타수당</th> 
 	<td>1,440</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 급여성복리후생비</th> 
+	<th scope="row">- 급여성복리후생비</th> 
 	<td>830</td> 
 	</tr> 
 	<tr> 
@@ -2464,7 +2471,7 @@
 	<li>평균근속년수 : 상시 종업원의 평균 근속년수</li> 
 	</ul></li> 
 	</ul> <!-- top paragraph E// --><!-- data table2 S --> 
-	<div class="h-group"> 
+	<div class="h-group">  
 	<h4>신입직원 평균 보수액(초임)</h4> 
 	<p class="fr">(천원, 명)</p> </div> 
 	<div class="table td_tac"> 
@@ -2478,31 +2485,31 @@
 	</thead> 
 	<tbody> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">기본급</th> 
+	<th scope="row">기본급</th> 
 	<td>24,720</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">경영평가상여금</th> 
+	<th scope="row">경영평가상여금</th> 
 	<td>-</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">기타성과상여금</th> 
+	<th scope="row">기타성과상여금</th> 
 	<td>4,363</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">정기상여금</th> 
+	<th scope="row">정기상여금</th> 
 	<td>7,660</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">실적수당</th> 
+	<th scope="row">실적수당</th> 
 	<td>2,550</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">기타수당</th> 
+	<th scope="row">기타수당</th> 
 	<td>261</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">급여성복리후생비</th> 
+	<th scope="row">급여성복리후생비</th> 
 	<td>113</td> 
 	</tr> 
 	<tr> 
@@ -2518,7 +2525,7 @@
 	<h5>공개기준</h5> 
 	<p class="buOnly ml1">신입직원 평균 보수액 : 대졸, 사무직, 군미필자, 무경력자 기준</p> </div><!-- //2012 --><!-- 2011 -->
 	<div class="select_Tab" id="tab_11" style="display: none;"> 
-	<div class="h-group"> 
+	<div class="h-group">  
 	<h4>금통위원, 집행간부 및 감사 연간 보수액</h4> 
 	<p class="fr">(백만원)</p> </div> 
 	<div class="table tac scrollX"> 
@@ -2526,19 +2533,19 @@
 	<caption> 금통위원,&nbsp;집행간부 및 감사 연간 보수액 </caption> 
 	<thead> 
 	<tr> 
-	<th scope="col" class="w12p NamoSE_border_show"></th> 
-	<th scope="col" class="w10p NamoSE_border_show">기본급</th> 
-	<th scope="col" class="w10p NamoSE_border_show">제수당</th> 
+	<th scope="col" class="w12p"></th> 
+	<th scope="col" class="w10p">기본급</th> 
+	<th scope="col" class="w10p">제수당</th> 
 	<th scope="col" class="w16p NamoSE_border_show">급여성복리후생비</th> 
 	<th scope="col" class="w16p NamoSE_border_show">경영평가상여금</th> 
 	<th scope="col" class="w16p NamoSE_border_show">기타<br> 성과상여금</th> 
-	<th scope="col" class="w10p NamoSE_border_show">합계</th> 
+	<th scope="col" class="w10p">합계</th> 
 	<th scope="col" class="NamoSE_border_show">비고</th> 
 	</tr> 
 	</thead> 
 	<tbody> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">총재</th> 
+	<th scope="row">총재</th> 
 	<td>250.0</td> 
 	<td>-</td> 
 	<td>2.5</td> 
@@ -2548,7 +2555,7 @@
 	<td>연봉제</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">금통위원</th> 
+	<th scope="row">금통위원</th> 
 	<td>230.0</td> 
 	<td>-</td> 
 	<td>0.3</td> 
@@ -2558,7 +2565,7 @@
 	<td>연봉제</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">감 사</th> 
+	<th scope="row">감 사</th> 
 	<td>220.0</td> 
 	<td>-</td> 
 	<td>-</td> 
@@ -2568,7 +2575,7 @@
 	<td>연봉제</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">부총재보</th> 
+	<th scope="row">부총재보</th> 
 	<td>185.0</td> 
 	<td>-</td> 
 	<td>0.2</td> 
@@ -2588,7 +2595,7 @@
 	<li>기타성과상여금 :&nbsp;실적에 따라 차등지급되는 성과상여금 중 경영평가상여금을&nbsp;제외한 금액</li> 
 	</ul></li> 
 	</ul> 
-	<div class="h-group"> 
+	<div class="h-group">  
 	<h4>직원 평균 보수액</h4> 
 	<p class="fr">(천원, 년)</p> </div> 
 	<div class="table td_tac"> 
@@ -2606,31 +2613,31 @@
 	<td>90,285</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 기본급</th> 
+	<th scope="row">- 기본급</th> 
 	<td>52,349</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 경영평가상여금</th> 
+	<th scope="row">- 경영평가상여금</th> 
 	<td>-</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 기타성과상여금</th> 
+	<th scope="row">- 기타성과상여금</th> 
 	<td>13,388</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 정기상여금</th> 
+	<th scope="row">- 정기상여금</th> 
 	<td>17,467</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 실적수당</th> 
+	<th scope="row">- 실적수당</th> 
 	<td>4,864</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 기타수당</th> 
+	<th scope="row">- 기타수당</th> 
 	<td>1,464</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 급여성복리후생비</th> 
+	<th scope="row">- 급여성복리후생비</th> 
 	<td>753</td> 
 	</tr> 
 	<tr> 
@@ -2651,7 +2658,7 @@
 	<li>평균근속년수 : 상시 종업원의 평균 근속년수</li> 
 	</ul></li> 
 	</ul> 
-	<div class="h-group"> 
+	<div class="h-group">  
 	<h4>신입직원 평균 보수액(초임)</h4> 
 	<p class="fr">(천원, 명)</p> </div> 
 	<div class="table td_tac"> 
@@ -2665,31 +2672,31 @@
 	</thead> 
 	<tbody> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">기본급</th> 
+	<th scope="row">기본급</th> 
 	<td>21,372</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">경영평가상여금</th> 
+	<th scope="row">경영평가상여금</th> 
 	<td>-</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">기타성과상여금</th> 
+	<th scope="row">기타성과상여금</th> 
 	<td>3,846</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">정기상여금</th> 
+	<th scope="row">정기상여금</th> 
 	<td>6,625</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">실적수당</th> 
+	<th scope="row">실적수당</th> 
 	<td>1,393</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">기타수당</th> 
+	<th scope="row">기타수당</th> 
 	<td>310</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">급여성복리후생비</th> 
+	<th scope="row">급여성복리후생비</th> 
 	<td>98</td> 
 	</tr> 
 	<tr> 
@@ -2705,7 +2712,7 @@
 	<h5>공개기준</h5> 
 	<p class="buOnly ml1">신입직원 평균 보수액 : 대졸, 사무직, 군미필자, 무경력자 기준</p> </div><!-- //2011 --><!-- 2010 -->
 	<div class="select_Tab" id="tab_10" style="display: none;"> 
-	<div class="h-group"> 
+	<div class="h-group">  
 	<h4>금통위원, 집행간부 및 감사 연간 보수액</h4> 
 	<p class="fr">(백만원)</p> </div> 
 	<div class="table tac scrollX"> 
@@ -2713,19 +2720,19 @@
 	<caption> 금통위원,&nbsp;집행간부 및 감사 연간 보수액 </caption> 
 	<thead> 
 	<tr> 
-	<th scope="col" class="w12p NamoSE_border_show"></th> 
-	<th scope="col" class="w10p NamoSE_border_show">기본급</th> 
-	<th scope="col" class="w10p NamoSE_border_show">제수당</th> 
+	<th scope="col" class="w12p"></th> 
+	<th scope="col" class="w10p">기본급</th> 
+	<th scope="col" class="w10p">제수당</th> 
 	<th scope="col" class="w16p NamoSE_border_show">급여성복리후생비</th> 
 	<th scope="col" class="w16p NamoSE_border_show">경영평가상여금</th> 
 	<th scope="col" class="w16p NamoSE_border_show">기타<br> 성과상여금</th> 
-	<th scope="col" class="w10p NamoSE_border_show">합계</th> 
+	<th scope="col" class="w10p">합계</th> 
 	<th scope="col" class="NamoSE_border_show">비고</th> 
 	</tr> 
 	</thead> 
 	<tbody> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">총재</th> 
+	<th scope="row">총재</th> 
 	<td>250.0</td> 
 	<td>-</td> 
 	<td>-</td> 
@@ -2735,7 +2742,7 @@
 	<td>연봉제</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">금통위원</th> 
+	<th scope="row">금통위원</th> 
 	<td>230.0</td> 
 	<td>-</td> 
 	<td>0.5</td> 
@@ -2745,7 +2752,7 @@
 	<td>연봉제</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">감 사</th> 
+	<th scope="row">감 사</th> 
 	<td>220.0</td> 
 	<td>-</td> 
 	<td>-</td> 
@@ -2755,7 +2762,7 @@
 	<td>연봉제</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">부총재보</th> 
+	<th scope="row">부총재보</th> 
 	<td>185.0</td> 
 	<td>-</td> 
 	<td>0.1</td> 
@@ -2775,7 +2782,7 @@
 	<li>기타성과상여금 :&nbsp;실적에 따라 차등지급되는 성과상여금 중 경영평가상여금을&nbsp;제외한 금액</li> 
 	</ul></li> 
 	</ul> 
-	<div class="h-group"> 
+	<div class="h-group">  
 	<h4>직원 평균 보수액</h4> 
 	<p class="fr">(천원, 년)</p> </div> 
 	<div class="table td_tac"> 
@@ -2793,31 +2800,31 @@
 	<td>85,902</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 기본급</th> 
+	<th scope="row">- 기본급</th> 
 	<td>49,819</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 경영평가상여금</th> 
+	<th scope="row">- 경영평가상여금</th> 
 	<td>-</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 기타성과상여금</th> 
+	<th scope="row">- 기타성과상여금</th> 
 	<td>12,606</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 정기상여금</th> 
+	<th scope="row">- 정기상여금</th> 
 	<td>16,562</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 실적수당</th> 
+	<th scope="row">- 실적수당</th> 
 	<td>4,633</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 기타수당</th> 
+	<th scope="row">- 기타수당</th> 
 	<td>1,513</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 급여성복리후생비</th> 
+	<th scope="row">- 급여성복리후생비</th> 
 	<td>769</td> 
 	</tr> 
 	<tr> 
@@ -2838,7 +2845,7 @@
 	<li>평균근속년수 : 상시 종업원의 평균 근속년수</li> 
 	</ul></li> 
 	</ul> 
-	<div class="h-group"> 
+	<div class="h-group">  
 	<h4>신입직원 평균 보수액(초임)</h4> 
 	<p class="fr">(천원, 명)</p> </div> 
 	<div class="table td_tac"> 
@@ -2852,31 +2859,31 @@
 	</thead> 
 	<tbody> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">기본급</th> 
+	<th scope="row">기본급</th> 
 	<td>19,164</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">경영평가상여금</th> 
+	<th scope="row">경영평가상여금</th> 
 	<td>-</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">기타성과상여금</th> 
+	<th scope="row">기타성과상여금</th> 
 	<td>4,373</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">정기상여금</th> 
+	<th scope="row">정기상여금</th> 
 	<td>5,749</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">실적수당</th> 
+	<th scope="row">실적수당</th> 
 	<td>1,167</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">기타수당</th> 
+	<th scope="row">기타수당</th> 
 	<td>216</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">급여성복리후생비</th> 
+	<th scope="row">급여성복리후생비</th> 
 	<td>12</td> 
 	</tr> 
 	<tr> 
@@ -2892,7 +2899,7 @@
 	<h5>공개기준</h5> 
 	<p class="buOnly ml1">신입직원 평균 보수액 : 대졸, 사무직, 군미필자, 무경력자 기준</p> </div><!-- //2010 --><!-- 2009 -->
 	<div class="select_Tab" id="tab_09" style="display: none;"> 
-	<div class="h-group"> 
+	<div class="h-group">  
 	<h4>금통위원, 집행간부 및 감사 연간 보수액</h4> 
 	<p class="fr">(백만원)</p> </div> 
 	<div class="table tac scrollX"> 
@@ -2900,19 +2907,19 @@
 	<caption> 금통위원,&nbsp;집행간부 및 감사 연간 보수액 </caption> 
 	<thead> 
 	<tr> 
-	<th scope="col" class="w12p NamoSE_border_show"></th> 
-	<th scope="col" class="w10p NamoSE_border_show">기본급</th> 
-	<th scope="col" class="w10p NamoSE_border_show">제수당</th> 
+	<th scope="col" class="w12p"></th> 
+	<th scope="col" class="w10p">기본급</th> 
+	<th scope="col" class="w10p">제수당</th> 
 	<th scope="col" class="w16p NamoSE_border_show">급여성복리후생비</th> 
 	<th scope="col" class="w16p NamoSE_border_show">경영평가상여금</th> 
 	<th scope="col" class="w16p NamoSE_border_show">기타<br> 성과상여금</th> 
-	<th scope="col" class="w10p NamoSE_border_show">합계</th> 
+	<th scope="col" class="w10p">합계</th> 
 	<th scope="col" class="NamoSE_border_show">비고</th> 
 	</tr> 
 	</thead> 
 	<tbody> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">총재</th> 
+	<th scope="row">총재</th> 
 	<td>250.0</td> 
 	<td>-</td> 
 	<td>0.1</td> 
@@ -2922,7 +2929,7 @@
 	<td>연봉제</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">금통위원</th> 
+	<th scope="row">금통위원</th> 
 	<td>230.0</td> 
 	<td>-</td> 
 	<td>2.1</td> 
@@ -2932,7 +2939,7 @@
 	<td>연봉제</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">감 사</th> 
+	<th scope="row">감 사</th> 
 	<td>220.0</td> 
 	<td>-</td> 
 	<td>-</td> 
@@ -2942,7 +2949,7 @@
 	<td>연봉제</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">부총재보</th> 
+	<th scope="row">부총재보</th> 
 	<td>185.0</td> 
 	<td>-</td> 
 	<td>0.5</td> 
@@ -2962,7 +2969,7 @@
 	<li>기타성과상여금 :&nbsp;실적에 따라 차등지급되는 성과상여금 중 경영평가상여금을&nbsp;제외한 금액</li> 
 	</ul></li> 
 	</ul> 
-	<div class="h-group"> 
+	<div class="h-group">  
 	<h4>직원 평균 보수액</h4> 
 	<p class="fr">(천원, 년)</p> </div> 
 	<div class="table td_tac"> 
@@ -2980,31 +2987,31 @@
 	<td>88,754</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 기본급</th> 
+	<th scope="row">- 기본급</th> 
 	<td>51,212</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 경영평가상여금</th> 
+	<th scope="row">- 경영평가상여금</th> 
 	<td>-</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 기타성과상여금</th> 
+	<th scope="row">- 기타성과상여금</th> 
 	<td>12,801</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 정기상여금</th> 
+	<th scope="row">- 정기상여금</th> 
 	<td>16,982</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 실적수당</th> 
+	<th scope="row">- 실적수당</th> 
 	<td>5,559</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 기타수당</th> 
+	<th scope="row">- 기타수당</th> 
 	<td>1,432</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 급여성복리후생비</th> 
+	<th scope="row">- 급여성복리후생비</th> 
 	<td>768</td> 
 	</tr> 
 	<tr> 
@@ -3025,7 +3032,7 @@
 	<li>평균근속년수 : 상시 종업원의 평균 근속년수</li> 
 	</ul></li> 
 	</ul> <!-- top paragraph E// --><!-- data table2 S --> 
-	<div class="h-group"> 
+	<div class="h-group">  
 	<h4>신입직원 평균 보수액(초임)</h4> 
 	<p class="fr">(천원, 명)</p> </div> 
 	<div class="table td_tac"> 
@@ -3039,31 +3046,31 @@
 	</thead> 
 	<tbody> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">기본급</th> 
+	<th scope="row">기본급</th> 
 	<td>23,940</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">경영평가상여금</th> 
+	<th scope="row">경영평가상여금</th> 
 	<td>-</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">기타성과상여금</th> 
+	<th scope="row">기타성과상여금</th> 
 	<td>5,458</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">정기상여금</th> 
+	<th scope="row">정기상여금</th> 
 	<td>7,182</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">실적수당</th> 
+	<th scope="row">실적수당</th> 
 	<td>1,543</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">기타수당</th> 
+	<th scope="row">기타수당</th> 
 	<td>239</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">급여성복리후생비</th> 
+	<th scope="row">급여성복리후생비</th> 
 	<td>72</td> 
 	</tr> 
 	<tr> 
@@ -3079,7 +3086,7 @@
 	<h5>공개기준</h5> 
 	<p class="buOnly ml1">신입직원 평균 보수액 : 대졸, 사무직, 군미필자, 무경력자 기준</p> </div><!-- //2009 --><!-- 2008 -->
 	<div class="select_Tab" id="tab_08" style="display: none;"> 
-	<div class="h-group"> 
+	<div class="h-group">  
 	<h4>금통위원, 집행간부 및 감사 연간 보수액</h4> 
 	<p class="fr">(백만원)</p> </div> 
 	<div class="table tac scrollX"> 
@@ -3087,19 +3094,19 @@
 	<caption> 금통위원,&nbsp;집행간부 및 감사 연간 보수액 </caption> 
 	<thead> 
 	<tr> 
-	<th scope="col" class="w12p NamoSE_border_show"></th> 
-	<th scope="col" class="w10p NamoSE_border_show">기본급</th> 
-	<th scope="col" class="w10p NamoSE_border_show">제수당</th> 
+	<th scope="col" class="w12p"></th> 
+	<th scope="col" class="w10p">기본급</th> 
+	<th scope="col" class="w10p">제수당</th> 
 	<th scope="col" class="w16p NamoSE_border_show">급여성복리후생비</th> 
 	<th scope="col" class="w16p NamoSE_border_show">경영평가상여금</th> 
 	<th scope="col" class="w16p NamoSE_border_show">기타<br> 성과상여금</th> 
-	<th scope="col" class="w10p NamoSE_border_show">합계</th> 
+	<th scope="col" class="w10p">합계</th> 
 	<th scope="col" class="NamoSE_border_show">비고</th> 
 	</tr> 
 	</thead> 
 	<tbody> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">총재</th> 
+	<th scope="row">총재</th> 
 	<td>250.0</td> 
 	<td>-</td> 
 	<td>0.6</td> 
@@ -3109,7 +3116,7 @@
 	<td>연봉제</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">금통위원</th> 
+	<th scope="row">금통위원</th> 
 	<td>230.0</td> 
 	<td>-</td> 
 	<td>0.6</td> 
@@ -3119,7 +3126,7 @@
 	<td>연봉제</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">감 사</th> 
+	<th scope="row">감 사</th> 
 	<td>220.0</td> 
 	<td>-</td> 
 	<td>0.6</td> 
@@ -3129,7 +3136,7 @@
 	<td>연봉제</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">부총재보</th> 
+	<th scope="row">부총재보</th> 
 	<td>185.0</td> 
 	<td>-</td> 
 	<td>0.6</td> 
@@ -3149,7 +3156,7 @@
 	<li>기타성과상여금 :&nbsp;실적에 따라 차등지급되는 성과상여금 중 경영평가상여금을&nbsp;제외한 금액</li> 
 	</ul></li> 
 	</ul> 
-	<div class="h-group"> 
+	<div class="h-group">  
 	<h4>직원 평균 보수액</h4> 
 	<p class="fr">(천원, 년)</p> </div> 
 	<div class="table td_tac"> 
@@ -3167,31 +3174,31 @@
 	<td>88,267</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 기본급</th> 
+	<th scope="row">- 기본급</th> 
 	<td>50,844</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 경영평가상여금</th> 
+	<th scope="row">- 경영평가상여금</th> 
 	<td>-</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 기타성과상여금</th> 
+	<th scope="row">- 기타성과상여금</th> 
 	<td>12,682</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 정기상여금</th> 
+	<th scope="row">- 정기상여금</th> 
 	<td>16,809</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 실적수당</th> 
+	<th scope="row">- 실적수당</th> 
 	<td>5,741</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 기타수당</th> 
+	<th scope="row">- 기타수당</th> 
 	<td>1,418</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 급여성복리후생비</th> 
+	<th scope="row">- 급여성복리후생비</th> 
 	<td>774</td> 
 	</tr> 
 	<tr> 
@@ -3212,7 +3219,7 @@
 	<li>평균근속년수 : 상시 종업원의 평균 근속년수</li> 
 	</ul></li> 
 	</ul> 
-	<div class="h-group"> 
+	<div class="h-group">  
 	<h4>신입직원 평균 보수액(초임)</h4> 
 	<p class="fr">(천원, 명)</p> </div> 
 	<div class="table td_tac"> 
@@ -3226,31 +3233,31 @@
 	</thead> 
 	<tbody> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">기본급</th> 
+	<th scope="row">기본급</th> 
 	<td>23,940</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">경영평가상여금</th> 
+	<th scope="row">경영평가상여금</th> 
 	<td>-</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">기타성과상여금</th> 
+	<th scope="row">기타성과상여금</th> 
 	<td>5,492</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">정기상여금</th> 
+	<th scope="row">정기상여금</th> 
 	<td>7,182</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">실적수당</th> 
+	<th scope="row">실적수당</th> 
 	<td>987</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">기타수당</th> 
+	<th scope="row">기타수당</th> 
 	<td>270</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">급여성복리후생비</th> 
+	<th scope="row">급여성복리후생비</th> 
 	<td>39</td> 
 	</tr> 
 	<tr> 
@@ -3266,7 +3273,7 @@
 	<h5>공개기준</h5> 
 	<p class="buOnly ml1">신입직원 평균 보수액 : 대졸, 사무직, 군미필자, 무경력자 기준</p> </div><!-- //2008 --><!-- 2007 -->
 	<div class="select_Tab" id="tab_07" style="display: none;"> 
-	<div class="h-group"> 
+	<div class="h-group">  
 	<h4>금통위원, 집행간부 및 감사 연간 보수액</h4> 
 	<p class="fr">(백만원)</p> </div> 
 	<div class="table tac scrollX"> 
@@ -3274,19 +3281,19 @@
 	<caption> 금통위원,&nbsp;집행간부 및 감사 연간 보수액 </caption> 
 	<thead> 
 	<tr> 
-	<th scope="col" class="w12p NamoSE_border_show"></th> 
-	<th scope="col" class="w10p NamoSE_border_show">기본급</th> 
-	<th scope="col" class="w10p NamoSE_border_show">제수당</th> 
+	<th scope="col" class="w12p"></th> 
+	<th scope="col" class="w10p">기본급</th> 
+	<th scope="col" class="w10p">제수당</th> 
 	<th scope="col" class="w16p NamoSE_border_show">급여성복리후생비</th> 
 	<th scope="col" class="w16p NamoSE_border_show">경영평가상여금</th> 
 	<th scope="col" class="w16p NamoSE_border_show">기타<br> 성과상여금</th> 
-	<th scope="col" class="w10p NamoSE_border_show">합계</th> 
+	<th scope="col" class="w10p">합계</th> 
 	<th scope="col" class="NamoSE_border_show">비고</th> 
 	</tr> 
 	</thead> 
 	<tbody> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">총재</th> 
+	<th scope="row">총재</th> 
 	<td>250.0</td> 
 	<td>-</td> 
 	<td>3.6</td> 
@@ -3296,7 +3303,7 @@
 	<td>연봉제</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">금통위원</th> 
+	<th scope="row">금통위원</th> 
 	<td>230.0</td> 
 	<td>-</td> 
 	<td>3.6</td> 
@@ -3306,7 +3313,7 @@
 	<td>연봉제</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">감 사</th> 
+	<th scope="row">감 사</th> 
 	<td>220.0</td> 
 	<td>-</td> 
 	<td>3.6</td> 
@@ -3316,7 +3323,7 @@
 	<td>연봉제</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">부총재보</th> 
+	<th scope="row">부총재보</th> 
 	<td>185.0</td> 
 	<td>-</td> 
 	<td>3.6</td> 
@@ -3336,7 +3343,7 @@
 	<li>기타성과상여금 : 실적에 따라 차등지급되는 성과상여금 중 경영평가상여금을 제외한 금액</li> 
 	</ul></li> 
 	</ul> 
-	<div class="h-group"> 
+	<div class="h-group">  
 	<h4>직원 평균 보수액</h4> 
 	<p class="fr">(천원, 년)</p> </div> 
 	<div class="table td_tac"> 
@@ -3354,31 +3361,31 @@
 	<td>87,811</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 기본급</th> 
+	<th scope="row">- 기본급</th> 
 	<td>50,789</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 경영평가상여금</th> 
+	<th scope="row">- 경영평가상여금</th> 
 	<td>-</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 기타성과상여금</th> 
+	<th scope="row">- 기타성과상여금</th> 
 	<td>12,308</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 정기상여금</th> 
+	<th scope="row">- 정기상여금</th> 
 	<td>16,814</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 실적수당</th> 
+	<th scope="row">- 실적수당</th> 
 	<td>5,657</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 기타수당</th> 
+	<th scope="row">- 기타수당</th> 
 	<td>1,453</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">- 급여성복리후생비</th> 
+	<th scope="row">- 급여성복리후생비</th> 
 	<td>791</td> 
 	</tr> 
 	<tr> 
@@ -3399,7 +3406,7 @@
 	<li>평균근속년수 : 상시 종업원의 평균 근속년수</li> 
 	</ul></li> 
 	</ul> 
-	<div class="h-group"> 
+	<div class="h-group">  
 	<h4>신입직원 평균 보수액(초임)</h4> 
 	<p class="fr">(천원, 명)</p> </div> 
 	<div class="table td_tac"> 
@@ -3413,31 +3420,31 @@
 	</thead> 
 	<tbody> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">기본급</th> 
+	<th scope="row">기본급</th> 
 	<td>23,940</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">경영평가상여금</th> 
+	<th scope="row">경영평가상여금</th> 
 	<td>-</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">기타성과상여금</th> 
+	<th scope="row">기타성과상여금</th> 
 	<td>5,438</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">정기상여금</th> 
+	<th scope="row">정기상여금</th> 
 	<td>7,182</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">실적수당</th> 
+	<th scope="row">실적수당</th> 
 	<td>761</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">기타수당</th> 
+	<th scope="row">기타수당</th> 
 	<td>506</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">급여성복리후생비</th> 
+	<th scope="row">급여성복리후생비</th> 
 	<td>35</td> 
 	</tr> 
 	<tr> 
@@ -3453,7 +3460,7 @@
 	<h5>공개기준</h5> 
 	<p class="buOnly ml1">신입직원 평균 보수액 : 대졸, 사무직, 군미필자, 무경력자 기준</p> </div><!-- //2007 --><!-- 2006 -->
 	<div class="select_Tab" id="tab_06" style="display: none;"> 
-	<div class="h-group"> 
+	<div class="h-group">  
 	<h4>금통위원, 집행간부 및 감사 연간 보수액</h4> 
 	<p class="fr">(백만원)</p> </div> 
 	<div class="table tac scrollX"> 
@@ -3461,19 +3468,19 @@
 	<caption> 금통위원,&nbsp;집행간부 및 감사 연간 보수액 </caption> 
 	<thead> 
 	<tr> 
-	<th scope="col" class="w12p NamoSE_border_show"></th> 
-	<th scope="col" class="w10p NamoSE_border_show">기본급</th> 
-	<th scope="col" class="w10p NamoSE_border_show">제수당</th> 
+	<th scope="col" class="w12p"></th> 
+	<th scope="col" class="w10p">기본급</th> 
+	<th scope="col" class="w10p">제수당</th> 
 	<th scope="col" class="w16p NamoSE_border_show">급여성복리후생비</th> 
 	<th scope="col" class="w16p NamoSE_border_show">경영평가상여금</th> 
 	<th scope="col" class="w16p NamoSE_border_show">기타<br> 성과상여금</th> 
-	<th scope="col" class="w10p NamoSE_border_show">합계</th> 
+	<th scope="col" class="w10p">합계</th> 
 	<th scope="col" class="NamoSE_border_show">비고</th> 
 	</tr> 
 	</thead> 
 	<tbody> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">총재</th> 
+	<th scope="row">총재</th> 
 	<td>250.0</td> 
 	<td>-</td> 
 	<td>2.0</td> 
@@ -3483,7 +3490,7 @@
 	<td>연봉제</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">금통위원</th> 
+	<th scope="row">금통위원</th> 
 	<td>230.0</td> 
 	<td>-</td> 
 	<td>2.0</td> 
@@ -3493,7 +3500,7 @@
 	<td>연봉제</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">감 사</th> 
+	<th scope="row">감 사</th> 
 	<td>220.0</td> 
 	<td>-</td> 
 	<td>2.0</td> 
@@ -3503,7 +3510,7 @@
 	<td>연봉제</td> 
 	</tr> 
 	<tr> 
-	<th scope="row" class="NamoSE_border_show">부총재보</th> 
+	<th scope="row">부총재보</th> 
 	<td>185.0</td> 
 	<td>-</td> 
 	<td>2.0</td> 
@@ -3522,7 +3529,8 @@
 	<li>경영평가상여금 :「공공기관의 운영에 관한 법률」제48조의 경영실적평가 결과에 따라 지급되는 상여금(한국은행은 동법의 적용대상이 아님)</li> 
 	<li>기타성과상여금 :&nbsp;실적에 따라 차등지급되는 성과상여금 중 경영평가상여금을&nbsp;제외한 금액</li> 
 	</ul></li> 
-	</ul> </div><!-- //2006 -->
+	</ul> 
+</div><!-- //2006 -->
 </div>
 
 <script src="/static/jslibrary/swiper@8/swiper-bundle.min.js"></script>

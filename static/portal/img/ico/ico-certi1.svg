@@ -1,0 +1,11 @@
+<svg width="97" height="96" viewBox="0 0 97 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11 0C6.58172 0 3 3.58172 3 8V88C3 92.4183 6.58172 96 11 96H55C59.4183 96 63 92.4183 63 88V8C63 3.58172 59.4183 0 55 0H11ZM11 4C8.79086 4 7 5.79086 7 8V88C7 90.2091 8.79086 92 11 92H55C57.2091 92 59 90.2091 59 88V8C59 5.79086 57.2091 4 55 4H11Z" fill="#BFBFBF"/>
+<rect x="11" y="15" width="44" height="73" rx="2" fill="#E6E6E6" stroke="#BFBFBF" stroke-width="2"/>
+<path d="M29 28C29 25.7909 30.7909 24 33 24H89C91.2091 24 93 25.7909 93 28V60C93 62.2091 91.2091 64 89 64H33C30.7909 64 29 62.2091 29 60V28Z" fill="#3B63C4"/>
+<path d="M39 59C39 58.4477 39.4477 58 40 58H56.2795C57.2099 58 57.6361 59.1593 56.9271 59.7619L40.6477 73.5995C39.9982 74.1516 39 73.69 39 72.8376V59Z" fill="#3B63C4"/>
+<circle cx="43" cy="44" r="4" fill="white"/>
+<circle cx="55" cy="44" r="4" fill="white"/>
+<circle cx="67" cy="44" r="4" fill="white"/>
+<circle cx="79" cy="44" r="4" fill="white"/>
+<rect x="26" y="8" width="13" height="2" rx="1" fill="#BFBFBF"/>
+</svg>

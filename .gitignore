@@ -10,7 +10,7 @@ static/portal/maps/default.css.map
 static/portal/maps/main.css.map
 static/portal/maps/sub.css.map
 static/portal/maps/tsh.css.map
-gulpfile.js
+#gulpfile.js
 package-lock.json
 .browserslistrc
 .gitignore

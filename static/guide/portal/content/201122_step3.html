@@ -1,0 +1,153 @@
+<h2>부패·부조리 신고</h2>
+
+
+
+
+
+<h3>신고양식 : 기타 부조리 신고</h3>
+<div class="view">
+	<dl>
+		<dt><span class="req"><span class="sr-only">필수입력</span></span><label for="nttSj">신고 제목</label></dt>
+		<dd><input type="text" name="nttSj" id="nttSj" class="w100p" maxlength="100" value=""></dd>
+	</dl>
+</div>
+
+<h3>신고 내용</h3>
+<div class="view">
+			
+				
+	<dl>
+		<dt><span class="sr-only">필수입력</span><label for="optn1">1.누가</label></dt>
+		<dd><input type="text" class="w100p" name="optn2" id="optn2" maxlength="200" value=""></dd>
+	</dl>
+	<dl>
+		<dt><span class="sr-only">필수입력</span><label for="optn3">2.언제</label></dt>
+		<dd><input type="text" class="w100p" name="optn3" id="optn3" maxlength="800" value=""></dd>
+	</dl>
+	<dl>
+		<dt><span class="sr-only">필수입력</span><label for="optn4">3.어디서</label></dt>
+		<dd><input type="text" class="w100p" name="optn4" id="optn4" maxlength="800" value=""></dd>
+	</dl>
+	<dl>
+		<dt><span class="sr-only">필수입력</span><label for="optn5">4.무엇을</label></dt>
+		<dd><input type="text" class="w100p" name="optn5" id="optn5" maxlength="800" value=""></dd>
+	</dl>
+	<dl>
+		<dt><span class="sr-only">필수입력</span><label for="nttCn">5.상세내용</label></dt>
+		<dd><textarea class="w100p" name="nttCn" id="nttCn" cols="30" rows="10" maxlength="1990"></textarea></dd>
+	</dl>
+	<dl>
+		<dt><span class="sr-only">필수입력</span><label for="optn6">6.해당 사항을 알게된 경위</label></dt>
+		<dd>
+			<!-- <input type="hidden" name="optn6" value="" > -->
+			<div>
+				<p style="margin:0;padding:0"><label for="optn6Nm1"><input type="radio" name="optn6" id="optn6Nm1" value="1" onclick="javascript:changeEvent(this);" title="직접 경험"><i></i> 직접 경험</label></p>
+				<p style="margin:0;padding:0"><label for="optn6Nm2"><input type="radio" name="optn6" id="optn6Nm2" value="2" onclick="javascript:changeEvent(this);" title="직접 목격"><i></i> 직접 목격</label></p>
+				<p style="margin:0;padding:0"><label for="optn6Nm3"><input type="radio" name="optn6" id="optn6Nm3" value="3" onclick="javascript:changeEvent(this);" title="타인에게 직접 들음"><i></i> 타인에게 직접 들음</label></p>
+				<p style="margin:0;padding:0"><label for="optn6Nm4"><input type="radio" name="optn6" id="optn6Nm4" value="4" onclick="javascript:changeEvent(this);" title="소문 등을 통해 간접적으로 들음"><i></i> 소문 등을 통해 간접적으로 들음</label></p>
+				<p style="margin:0;padding:0"><label for="optn6Nm5"><input type="radio" name="optn6" id="optn6Nm5" value="5" onclick="javascript:changeEvent(this);" title="기타"><i></i> 기타</label>
+				<input type="text" class="w80p" name="optn9" id="optn9" value="" disabled="">
+			</p></div>
+		</dd>
+	</dl>
+	<dl>
+		<dt><span class="sr-only">필수입력</span><label for="optn7">7.지속기간</label></dt>
+		<dd>
+			
+				<label for="optn71"><input type="radio" id="optn71" name="optn7" value="01"><i></i> 한번</label>
+			
+				<label for="optn72"><input type="radio" id="optn72" name="optn7" value="02"><i></i> 일주일</label>
+			
+				<label for="optn73"><input type="radio" id="optn73" name="optn7" value="03"><i></i> 일주일~1개월</label>
+			
+				<label for="optn74"><input type="radio" id="optn74" name="optn7" value="04"><i></i> 1개월~3개월</label>
+			
+				<label for="optn75"><input type="radio" id="optn75" name="optn7" value="05"><i></i> 3개월~6개월</label>
+			
+				<label for="optn76"><input type="radio" id="optn76" name="optn7" value="06"><i></i> 1년 이상</label>
+			
+		</dd>
+	</dl>
+	<dl>
+		<dt><span class="sr-only">필수입력</span><label for="optn8">8.확인방법</label></dt>
+		<dd><input type="text" class="w100p" name="optn8" id="optn8" maxlength="800" value=""></dd>
+	</dl>				
+</div>
+
+<div class="view">			
+	<dl>
+		<dt><span class="req"><span class="sr-only">필수입력</span></span><label for="catpchaAnswer">자동등록 방지</label></dt>
+		<dd>
+			
+
+
+<div class="catpchaSet">
+<p class="help">아래 이미지의 숫자를 보이는 대로 입력하여 주세요.</p>
+<div class="set">
+<div class="l">
+	<div id="catpcha"><img src="https://www.bok.or.kr/cmmn/captcha/image.do?rand=0.2625964253012085" alt=""></div>
+	<div id="audiocatpch" style="display: none;"></div>
+	<div class="b">
+		<button id="reLoad" type="button"><i class="fa fa-refresh" aria-hidden="true"></i><span class="sr-only">새로고침</span></button>
+		<button id="soundOnKor" type="button"><i class="fa fa-volume-up" aria-hidden="true"></i><span class="sr-only">한글음성</span></button>
+	</div>
+</div>
+<input type="text" id="catpchaAnswer" name="catpchaAnswer" value="" maxlength="5">
+</div>
+</div>
+
+<script type="text/javascript">
+var rand;
+
+//캡차 오디오 요청
+function audioCaptcha(type) {
+var kor = (type > 0) ? "lan=kor&":"";
+$.ajax({
+url: '/cmmn/captcha/sound.do',
+type: 'POST',
+dataType: 'text',
+data: 'rand=' + rand + '&ans=y',
+async: false,
+success: function(resp) {
+	//alert(resp);
+	var uAgent = navigator.userAgent;
+	var soundUrl = '/cmmn/captcha/sound.do?' + kor + 'rand=' + rand;
+	//console.log(soundUrl);
+	if (uAgent.indexOf('Trident') > -1 || uAgent.indexOf('MSIE') > -1) {
+		winPlayer(soundUrl+'&agent=msie');
+	} else if (!!document.createElement('audio').canPlayType) {
+		try { new Audio(soundUrl).play(); } catch(e) { winPlayer(soundUrl); }
+	} else window.open(soundUrl, '', 'width=1,height=1');
+}
+});
+}
+function winPlayer(objUrl) {
+$('#audiocatpch').html(' <bgsound src="' + objUrl + '">');
+}
+
+//캡차 이미지 요청 (캐쉬문제로 인해 이미지가 변경되지 않을수있으므로 요청시마다 랜덤숫자를 생성하여 요청)
+function changeCaptcha() {
+rand = Math.random();
+$('#catpcha').html('<img src="/cmmn/captcha/image.do?rand=' + rand + '" alt/>');
+}
+
+changeCaptcha(); //캡차 이미지 요청
+
+$('#reLoad').click(function(){ changeCaptcha(); }); //새로고침버튼에 클릭이벤트 등록
+/* $('#soundOn').click(function(){ audioCaptcha(0); });	*/ //음성듣기버튼에 클릭이벤트 등록
+$('#soundOnKor').click(function(){ audioCaptcha(1); }); //한글음성듣기 버튼에 클릭이벤트 등록
+</script>
+		</dd>
+	</dl>
+	
+</div>
+
+
+<div class="btnSet">
+	<p>
+		<a href="" class="b-edit">수정</a>
+		<a href="" class="b-del">삭제</a>
+		<a href="javascript:checkForm();" class="b-reg lg"><span>신청</span></a>
+		<a href="/portal/bbs/B0000355/annymtyReportType.do?cd=01&amp;menuNo=201122&amp;pageIndex=" onclick="return confirm('작성중인 글을 취소하시겠습니까?');" class="b-cancel lg">취소</a>
+	</p>
+</div>

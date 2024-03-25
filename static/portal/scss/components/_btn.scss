@@ -89,15 +89,38 @@ $btn: "[class^=b-]";
 	&.b-submit {}
 	&.b-confirm {}
 	&.b-link {
+		background-color: $black;
+		border-radius: 4px;
 		&::after {
 			@include font-ico-outline('\e941');
 			margin-left: 4px;
 		}
 	}
+	&.b-edit {
+		color: #fff;
+		padding: 0 12px;
+		background-color: $color-point;
+		&::before {
+			content: "";
+			display: inline-block;
+			vertical-align: middle;
+			width: 20px;
+			height: 21px;
+			background: url(/static/portal/img/ico/ico-b-edit.svg) no-repeat;
+			margin-right: 8px;
+		}
+	}
 	&.b-go {
+		padding: 2px 7px 2px 13px;
+		font-weight: 300;
+		font-size: 14px;
+		background-color: $black;
+		margin-left: 5px;
 		&::after {
 			@include font-ico-outline('\e315');
 			margin-left: 4px;
+			margin-bottom: 1px;
+			font-size: 16px;
 		}
 	}
 

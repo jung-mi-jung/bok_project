@@ -1365,17 +1365,17 @@ background-color: #000;
 content: "";
 }
 
-.bu-dot {
+.bu-dot > li {
 position: relative;
-padding-left: 10px;
+padding-left: 20px;
 }
-.bu-dot::before {
+.bu-dot > li::before {
 position: absolute;
-top: 12px;
-left: 0;
-width: 3px;
-height: 3px;
-background-color: #b0b0b0;
+top: 10px;
+left: 6px;
+width: 4px;
+height: 4px;
+background-color: #4D4D4D;
 border-radius: 50%;
 content: "";
 }
@@ -1399,15 +1399,15 @@ content: "";
 
 .list li {
 position: relative;
-padding-left: 10px;
+padding-left: 20px;
 }
 .list li::before {
 position: absolute;
-top: 12px;
-left: 0;
-width: 3px;
-height: 3px;
-background-color: #b0b0b0;
+top: 10px;
+left: 6px;
+width: 4px;
+height: 4px;
+background-color: #4D4D4D;
 border-radius: 50%;
 content: "";
 }
@@ -1501,7 +1501,7 @@ margin-bottom: 5px;
 #main-container h5 {
 position: relative;
 font-size: 1.125rem;
-color: #a1a1a1;
+color: #1a1a1a;
 font-weight: 500;
 padding-left: 24px;
 margin-bottom: 5px;
@@ -3040,7 +3040,7 @@ display: none !important;
 display: inline;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 750px) {
 .hidden-lg {
 display: none !important;
 }
@@ -3104,6 +3104,33 @@ font-feature-settings: "liga";
 -webkit-font-feature-settings: "liga";
 font-size: 18px;
 margin: 0 5px 2px 0;
+}
+
+.help3 {
+color: #4D4D4D;
+margin-top: 10px;
+margin-bottom: 5px !important;
+}
+.help3::before {
+content: "\e88e";
+font-family: "Material Icons Outlined";
+font-weight: normal;
+font-style: normal;
+display: inline-block;
+line-height: 1;
+vertical-align: text-bottom;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+font-feature-settings: "liga";
+-webkit-font-feature-settings: "liga";
+font-size: 24px;
+margin-right: 8px;
+color: #4D4D4D;
 }
 
 .gnb_bg {

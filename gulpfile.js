@@ -82,21 +82,29 @@ function waths() {
 	// html
 	watchLibraryReload();
 	watchLibrary('portal');		//watchLibrary 기존 html
-	watchContent('portal');		//watchContent 목차형 컨텐츠
+	//watchContent('portal');	// 안씀
 	watchLibrary('museum');
 	watchContent('museum');
 	watchLibrary('imer');
-	//watchContent('imer');
+	watchContent('imer');
 	watchLibrary('imerEng');
-	//watchContent('imerEng');
+	watchContent('imerEng');
 	watchLibrary('eng');
-	//watchContent('eng');
+	//watchContent('eng');	// 안씀
 	watchLibrary('bos');
-	//watchContent('bos');
+	watchContent('bos');
 
 	guideToDist('portal');	//guideToDist 레이아웃용
 	guideToDist('museum');
-	
+
+// 	guideToDist('portal');	//guideToDist 가이드용
+// 	guideToDist('museum');	
+
+	guideLayout('portal');	//레이아웃용
+	guideLayout('museum');
+
+	indexLayout('portal');	//indexLayout 목차형 (포털 전용)
+	indexLayout('eng');	
 }
 
 function watchLibraryReload(targets) {
@@ -151,6 +159,30 @@ function guideToDist(targets) {  //가이드용
 		browserSync.reload();
 	});
 }
+
+
+//indexLayout
+function indexLayout(targets) {  //목차형 (포털 전용)
+	const watcher = watch('static/guide/' + targets + '/content/*.html');
+	watcher.on("change", function (paths, stats) {
+		const file = new Vinyl({
+		path: paths,
+		});
+		gulp
+			.src(file.dirname + "/" + file.stem + file.extname)
+			.pipe(headerfooter.header('static/guide/' + targets + '/content-top.html'))
+			.pipe(headerfooter.footer('static/guide/' + targets + '/content-bottom.html'))
+			.pipe(gulp.dest("static/guide/" + targets + "/dist"));
+		if (jspOut) {
+			gulp.src(file.dirname + '/' + file.stem + file.extname)
+				.pipe(headerfooter.header('<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>'))
+				.pipe(rename({ extname: '.jsp' }))
+				.pipe(gulp.dest('WEB-INF/jsp/cts/' + targets + '/'));
+		}
+		browserSync.reload();
+	});
+}
+
 function watchContent(targets) {
 	const watcher = watch('static/guide/' + targets + '/content/*.html');
 	watcher.on('change', function (paths, stats) {
@@ -317,7 +349,9 @@ exports.default = series(parallel(servers, waths, sprite));
 // exports.default   = series(clean, parallel(html, watchFiles));
 exports.server = series(servers);
 exports.guideToDist = guideToDist;	//가이드용 g
-exports.guideLayout = guideLayout;
+// exports.guideLayout = guideLayout;
+exports.guideLayout = guideLayout;	//레이아웃용
+exports.indexLayout = indexLayout;	//목차형
 exports.mail = mail;
 exports.tojsp = tojsp;
 exports.dist = dist;
