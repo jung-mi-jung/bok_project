@@ -1,0 +1,192 @@
+<div class="formBox">
+	<ul class="step">
+		<li class="ic-choice">
+			<div class="s">
+				<strong class="title">STEP 1</strong>
+				<span>예약날짜 및 시간선택<span class="hidden">(현재단계)</span></span>
+			</div>
+		</li>
+		<li class="ic-certi">
+			<div class="s">
+				<strong class="title">STEP 2</strong>
+				<span>본인인증</span>
+			</div>
+		</li>
+		<li class="ic-agree">
+			<div class="s ">
+				<strong class="title">STEP 3</strong>
+				<span>개인정보수집동의</span>
+			</div>
+		</li>
+		<li class="ic-app active">
+			<div class="s ">
+				<strong class="title">STEP 4</strong>
+				<span>예약정보 입력</span>
+			</div>
+		</li>
+		<li class="ic-end">
+			<div class="s ">
+				<strong class="title">STEP 5</strong>
+				<span>예약확인/완료</span>
+			</div>
+		</li>
+	</ul>
+</div>
+
+
+<h3 class="h3">예약정보 입력</h3>
+<form method="" id="" name="" action="">
+	<div class="view">
+		<dl>
+			<dt >
+				<span class="req" aria-label="필수입력" role="img"></span>예약일자
+			</dt>
+			<dd>2024-02-05 10:00</dd>
+		</dl>	
+		<dl>
+			<dt >
+				<span class="req" aria-label="필수입력" role="img"></span>
+				<label for="aplyTeamName">예약단체명</label>
+			</dt>
+			<dd>
+				<input type="text" id="aplyTeamName" class="" name="" value="" />
+			</dd>
+		</dl>
+		<dl>
+			<dt >
+				<span class="req" aria-label="필수입력" role="img"></span>예약자명
+			</dt>
+			<dd>홍길동</dd>
+		</dl>		
+		<dl>
+			<dt >
+				<span class="req" aria-label="필수입력" role="img"></span>
+				<label for="aplyTel">자택전화</label>
+			</dt>
+			<dd>
+				<div class="tel-set">
+					<select id="aplyTel" name="" title="전화번호 앞자리">
+						<option value="">선택</option>
+						<option value="02">02</option>
+					</select>
+					-
+					<input type="text" id="" name="" title="전화번호 두번째 자리" maxlength="4" />
+					-
+					<input type="text" id="" name="" title="전화번호 세번째 자리" maxlength="4" />
+				</div>
+				<p class="help2">자택전화와 휴대폰 중 하나는 반드시 입력하서야 합니다.</p>
+			</dd>
+		</dl>
+		<dl>
+			<dt >
+				<span class="req" aria-label="필수입력" role="img"></span>
+				<label for="aplyMobile">휴대폰</label>
+			</dt>
+			<dd>
+				<div class="tel-set">
+					<select id="aplyMobile" name="qnaRegBean.mobile1" title="휴대폰번호 앞자리">
+						<option value="">선택</option>
+						<option value="010">010</option>
+					</select>
+					-
+					<input type="text" id="" name="" title="휴대폰 두번째 자리" maxlength="4" class="" />
+					-
+					<input type="text" id="" name="" title="휴대폰 세번째 자리" maxlength="4" class="" />
+				</div>
+			</dd>
+		</dl>
+		<dl>
+			<dt >
+				<span class="req" aria-label="필수입력" role="img"></span>예약인원
+			</dt>
+			<dd>
+				<ul class="aply-num">
+					<li class="row ai-center">
+						<div class="row ai-center">
+							<span>유치부</span>
+							<input type="number" id="" class="" name="" value="" />
+							<span>명</span>
+						</div>
+						<p class="help2">유치부는 전시설명 신청이 불가능합니다</p>
+					</li>
+					<li>
+						<div class="row ai-center">
+							<span>초등</span>
+							<input type="number" id="" class="" name="" value="" />
+							<span>명</span>
+						</div>
+					</li>
+					<li>
+						<div class="row ai-center">
+							<span>중등</span>
+							<input type="number" id="" class="" name="" value="" />
+							<span>명</span>
+						</div>
+					</li>
+					<li>
+						<div class="row ai-center">
+							<span>고등</span>
+							<input type="number" id="" class="" name="" value="" />
+							<span>명</span>
+						</div>
+					</li>
+					<li>
+						<div class="row ai-center">
+							<span>일반</span>
+							<input type="number" id="" class="" name="" value="" />
+							<span>명</span>
+						</div>
+					</li>
+					<li>
+						<div class="row ai-center">
+							<span>외국인</span>
+							<input type="number" id="" class="" name="" value="" />
+							<span>명</span>
+						</div>
+					</li>
+					<li>
+						<div class="row ai-center">
+							<span>합계</span>
+							<div class="row total-num">
+								<span>16명</span>
+								<span class="able-num">(가능관람자수:<em class="red">40명</em>)</span>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</dd>
+		</dl>
+		<dl>	
+			<dt >
+				<span class="req" aria-label="필수입력" role="img"></span>전시설명안내
+			</dt>
+			<dd>
+				<div class="row ai-center desc-aply">
+					<label>
+						<input type="radio" value="N">
+						<i></i>미신청
+					</label>
+					<label>
+						<input type="radio" value="Y">
+						<i></i>신청
+					</label>
+				</div>
+				<p class="help2">신청 시에만 단체 관람객에 대한 도슨트 전시설명(30분)이 가능</p>
+			</dd>
+		</dl>
+		<dl>
+			<dt >
+				<span class="req" aria-label="필수입력" role="img"></span>
+				<label for="aplyEtc">특이사항</label>
+			</dt>
+			<dd>
+				<p class="help3">장애인, 외국인이 포함되어 있는 경우 또는 기타 특이사항이 있으면 입력하여 주시기 바랍니다.</p>
+				<textarea name="" id="aplyEtc" cols="30" rows="10"></textarea>
+			</dd>
+		</dl>
+		<dlv class="btn-set">
+			<button type="button" class="b-aply">신청하기</button>
+			<button type="button" class="b-cancel">취소</button>
+		</dlv>
+	</div>
+</form>

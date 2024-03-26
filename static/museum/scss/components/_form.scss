@@ -19,7 +19,7 @@ input[type='checkbox'] {
 }
 
 label {
-	display: flex;
+	display: inline-flex;
 	align-items: center;
 	position: relative;
 }
@@ -231,6 +231,7 @@ textarea {
 	-webkit-appearance: none;
 	width: 100%;
 	height: 300px !important;
+	resize: none;
 }
 input[type="email"],
 input[type="number"],
@@ -315,6 +316,54 @@ input {
 		width: 100px;
 	}
 	input {
-		width: calc(50% - 110px);
+		// width: calc(50% - 110px);
+		width: calc(50% - 150px);
 	}
+}
+
+/* 신청하기 예약인원*/
+
+.aply-num {
+	display: flex;
+	flex-direction: column;
+	gap: 8px 0;
+	span {
+		display: inline-block;
+		width: 50px;
+		font-size: rem(16);
+	}
+	> .row.ai-center {
+		gap: 0 20px;
+		@include breakpoint($sm) {
+			align-items: flex-start;
+			flex-direction: column;
+		}
+		
+	}
+	li {
+		&::before {
+			top: 18px;
+		}
+		input {
+			max-width: 100px;
+		}
+		> .row {
+			gap: 0 6px;
+			& + .help3 {
+				margin-top: 0 !important;
+				margin-bottom: 0 !important;
+			}
+		}
+		.total-num {
+			display: inline-flex;
+			align-items: center;
+			width: calc(100% - 50px);
+		}
+		.able-num {
+			width: 100%;;
+		}
+	}
+}
+.desc-aply {
+	gap: 20px;
 }

@@ -21,6 +21,7 @@ $(function () {
         'bd-video-type2',
         'bd-blog',
         'faq',
+        '700791'
     ]
     link.forEach(element => {
         let _s = element.split('/')
