@@ -117,7 +117,7 @@
 				}
 				.date,
 				.location {
-					display: flex;
+					display: inline-flex;
 					align-items: center;
 					i {
 						font-size: rem(15);
@@ -130,7 +130,7 @@
 					left: -6px;
 					padding: 0 6px 0 0;
 					z-index: 10;
-					width: 80px;
+					width: 82px;
 					background: url(/static/commons/img/pattern/badge.png) right 0 no-repeat;
 					background-size: contain;
 					.badge{
@@ -138,8 +138,8 @@
 						position: static;
 						background: #ea5a59;
 						width: 74px;
-						height: 26px;
-						line-height: 26px;
+						height: 28px;
+						line-height: 28px;
 						padding: 0;
 						text-align: center;
 						font-size: 14px;

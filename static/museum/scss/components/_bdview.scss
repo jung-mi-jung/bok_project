@@ -253,6 +253,12 @@
 			font-size: rem(22) !important;
 			padding-top: 22px;
 		}
+		&.qna-answer {
+			font-size: rem(26) !important;
+			@include breakpoint($sm){
+				font-size: rem(18) !important;
+			}
+		}
 	}
 	.dataInfoSet {
 		@include dataInfoSet();
@@ -369,7 +375,7 @@
 	}	
 	.thumb {
 		padding: 4%;
-		border: 7px solid #627fa4;
+		border: 6px solid #e5e5e5;
 		.webzine_photo {
 			width: 100%;
 			aspect-ratio: 16/9;

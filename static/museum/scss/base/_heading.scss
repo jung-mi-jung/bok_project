@@ -141,12 +141,14 @@
 
 ul.bu {
 	> li {
+		margin: 4px 0;
 		clear: both;
 		@include bu-dot;
 		ul {
 			font-size: rem(16);
 			li {
 				@include bu-dash;
+				
 				/*&:before {
 					color: #757575;
 				}*/
