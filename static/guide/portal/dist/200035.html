@@ -1121,12 +1121,14 @@ $(function(){
 
 	$(".icoList1").on("click", function(e){
 		$(this).addClass("on").siblings().removeClass("on");
+		$(this).attr("title", "선택됨").siblings().removeAttr("title");
 		$(".calendarSet").show();
 		$(".bdPhotoSet").hide();
 		return false;
 	})
 	$(".icoList2").on("click", function(e){
 		$(this).addClass("on").siblings().removeClass("on");
+		$(this).attr("title", "선택됨").siblings().removeAttr("title");
 		$(".bdPhotoSet").show();
 		$(".calendarSet").hide();
 		return false;
@@ -1154,14 +1156,14 @@ $(function(){
 		}
 		$('#selectDate').text('('+$('#yymm').text()+(day < 10 ? '0' : '')+day+'일)');
 		var html =
-			'<ul>	<li>'+
-				'<span class="part bg'+result.eventSeCd.substring(1, 2)+'"><i class="ti-blackboard"></i><span class="hidden">'+result.eventSeCdNm+'</span></span>'+
+		'<h5>날짜</h5>'+	
+		'<ul>	<li>'+				
 				'<div class="con">'+
 					'<p class="tit">'+result.eventSj+'</p>'+
 					'<span class="date">'+result.schdulData+'</span>'+
 				'</div>';
 		if (result.eventSeCd == '03') {
-			html += '<div class="b-view"><a href="'+url+'" target="_blank"><i class="fa fa-search-plus"></i> 상세보기</a></div>';
+			html += '<div class="view-btn"><a href="'+url+'" target="_blank" title="새창열림" class=""b-view">상세보기</a></div>';
 		}
 		html += '</li></ul>';
 		$('.calView').html(html);
@@ -1178,18 +1180,43 @@ $(function(){
 		<div class="set modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal"><i class="ti-close"></i><span class="sr-only">레이어 창닫기</span></button>
-				<h4 class="modal-title" id="modal-label1">행사일정<small id="selectDate"></small></h4>
+				<h4 class="modal-title" id="modal-label1">
+					<i class="i-mon"></i>
+					행사일정<small id="selectDate"></small>
+				</h4>
 			</div>
 			<div class="modal-body">
-				<div class="calView"></div>
-			</div>
-			<div class="tac">
-				<button type="button" class="b-btn lg" data-dismiss="modal">닫기</button>
-			</div>
+				<!-- <div class="calView"></div> -->
+				<div class="calView">
+					<h5>2024년 2월 22일</h5>
+					<ul>	
+						<li>
+							<div class="con">
+								<p class="tit">통화정책방향 회의</p>
+								<span class="date">02월 22일(목)</span>
+							</div>
+							<div class="view-btn">
+								<a href="" target="_blank" title="새창열림" class="b-view">상세보기</a>
+							</div>
+						</li>
+						<li>
+							<div class="con">
+								<p class="tit">통화정책방향 회의</p>
+								<span class="date">02월 22일(목)</span>
+							</div>
+							<div class="view-btn">
+								<a href="" target="_blank" title="새창열림" class="b-view">상세보기</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="modal-bottom">
+					<button type="button" class="b-btn b-close lg" data-dismiss="modal">닫기</button>
+				</div>
+			</div>			
 		</div>
 	</div>
 </div>
-<div class="bgW"></div>
 <!--  //layer Popup  -->
 
 <script>
@@ -1199,11 +1226,6 @@ $(function(){
 	}
  });
 </script>
-
-
-
-
-
 
 <!-- 만족도 -->
 <div class="admin-set">

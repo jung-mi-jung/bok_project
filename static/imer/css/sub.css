@@ -509,6 +509,32 @@ background-size: 312px 240px;
 color: #e24b44;
 }
 
+[class^=ico-].ico-youtube::before {
+background-image: url(/static/imer/img/ico/ico-youtube.svg);
+}
+[class^=ico-].ico-instagram::before {
+background-image: url(/static/imer/img/ico/ico-instagram.svg);
+}
+[class^=ico-].ico-facebook::before {
+background-image: url(/static/imer/img/ico/ico-facebook.svg);
+}
+[class^=ico-].ico-twitter::before {
+background-image: url(/static/imer/img/ico/ico-twitter.svg);
+}
+
+[class^=sns-].sns-youtube::before {
+background-image: url(/static/imer/img/ico/sns-youtube.svg);
+}
+[class^=sns-].sns-instagram::before {
+background-image: url(/static/imer/img/ico/sns-instagram.svg);
+}
+[class^=sns-].sns-facebook::before {
+background-image: url(/static/imer/img/ico/sns-facebook.svg);
+}
+[class^=sns-].sns-twitter::before {
+background-image: url(/static/imer/img/ico/sns-twitter.svg);
+}
+
 @media print {
 @page {
 size: auto;
@@ -2228,13 +2254,6 @@ background: url(/static/aieth/img/ico/sh-calendar.png) calc(100% - 10px) 50% no-
 
 @import 'components/popup';//팝업
 */
-.pdf {
-overflow-x: hidden;
-overflow-y: auto;
-width: 100%;
-height: 200px;
-}
-
 .row {
 display: flex;
 flex-direction: row;

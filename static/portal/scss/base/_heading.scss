@@ -58,6 +58,7 @@ p.bu-dot {
 	@include bu-dot;
 }
 .bu-dot {
+	clear: both;
 	> li {
 		@include bu-dot;
 	}

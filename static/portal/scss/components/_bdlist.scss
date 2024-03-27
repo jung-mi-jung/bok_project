@@ -284,6 +284,94 @@
 	}
 }
 
+.bdList2 {
+	ul {
+		li {
+			padding: 16px;
+			border-bottom: 1px solid $bd-color;
+			a {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				&:hover {}
+				
+			}
+			.s {
+				width: calc(100% - 80px);
+				.num {
+					width: 33px;
+					height: 24px;
+					text-align: center;
+					border: 1px solid #BFBFBF;
+					border-radius: 4px;
+					display: inline-block;
+					margin-right: 4px;
+				}
+				.method {
+					font-weight: 500;
+					&.i-method1 {
+						color: #131547;
+					}
+					&.i-method2 {
+						color: #3B63C4;
+					}
+				}
+				.title {
+					width: 100%;
+					font-size: rem(20);
+					margin-top: 4px;
+					//margin: 3px 0;
+					@include ellipsis();
+				}
+				.date {
+					display: block;
+					color: #666;
+				}
+			}
+			.state {
+				width: 80px;
+				text-align: right;
+				i {
+					display: inline-block;
+					color: #666;
+					&::before {
+						content: "";
+						display: inline-block;
+						vertical-align: middle;
+						width: 21px;
+						height: 21px;
+						margin-right: 2px;
+					}
+					&.i-state1 {
+						color: #131547;
+						&::before {
+							background: url(/static/portal/img/ico/i-state1.png);
+						}
+					}
+					&.i-state2 {
+						&::before {
+							background: url(/static/portal/img/ico/i-state2.png);
+						}
+					}
+					&.i-state3 {
+						&::before {
+							background: url(/static/portal/img/ico/i-state3.png);
+						}
+					}
+				}
+			}
+			.date {
+				&::before {
+					@include font-ico-outline('\e858');
+					font-size: 20px;
+					color: #666;
+					margin-right: 4px;
+				}
+			}
+		}
+	}
+}
+
 //삭제 (법규)
 // .bdLine {
 // 	clear: both;

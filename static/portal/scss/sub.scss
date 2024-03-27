@@ -163,26 +163,91 @@
 
 
 //경제용어사전
-.boxInfo {
-    height: 380px;
-    overflow-y: auto;
-    text-align: justify;
-    padding-left: 10px;
-	&.boxInfo.boxInfoR {
-		height: 260px;
-		margin-bottom: 20px;
+.ecWordCont {
+	display: flex;
+	justify-content: space-between;
+	@include breakpoint($sm){
+		display: block;
+	}
+	.con-box {
+		width: 240px;
+		background-color: #FAFAFA;
+		border: 1px solid #E6E6E6;
+		border-radius: 16px;
+		padding: 16px;
+		line-height: 1.8;
+		@include breakpoint($sm){
+			width: 100%;
+		}
+		.box-info {
+			height: 320px;
+			overflow-y: auto;
+		}
+	}	
+	.boxInfoRt {
+		width: calc(100% - 240px);
+		padding-left: 40px;
+		@include breakpoint($sm){
+			width: 100%;
+			padding-left: 0;
+			margin-top: 20px;
+		}
+		.boxInfoR {
+			padding-left: 0;
+			margin-bottom: 20px;
+			.title {
+				margin-bottom: 15px;
+				strong {
+					font-size: rem(20);
+					color: $color-point;
+				}
+			}
+			#wordCont {
+				height: 164px;
+				overflow-y: auto;
+			}
+		}
+		.boxInfoRel{
+			padding-top: 20px;
+
+			height: 120px; 
+			overflow-y: auto; 
+			border-top: 1px solid $bd-color;
+			&.box3 {
+				
+		
+			}
+			h3{margin: 0 !important}
+			a {
+				position: relative;
+				padding-left: 12px;
+				&::before {
+					position: absolute;
+					top: 9px;
+					left: 0;
+					width: 4px;
+					height: 4px;
+					background-color: #666;
+					border-radius: 50%;
+					content: '';		
+				}
+				& + a {
+					margin-left: 15px;
+				}
+			}
+		}
 	}
 }
 #wordList {
 	li {
 		a {
 			display: block;
-			padding: 5px 10px;
 		}
 		&.on {
 			a {
-				font-weight: 600;
-				background-color: #F2F6FA;
+				color: $point;
+				text-decoration: underline;
+				font-weight: 500;
 			}
 		}
 	}

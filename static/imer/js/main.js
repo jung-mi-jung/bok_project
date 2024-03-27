@@ -43,82 +43,50 @@ $(function () {
 	});
 });
 
+
+//연구포럼 및 세미나
 $(function () {
-	//메인 박물관소식 영역 swiper 설정
-	var slideLength = $(".section2-img .swiper-slide").length;
-	var section2Img = new Swiper('.section2-img', {
-		slidesPerView: "auto",
-		//loop: true,
-		// loopedSlides: 1,
-		loopAdditionalSlide: 1,
-		watchSlidesProgress: true,
-		slideToClickedSlide: true,
-		speed: 1000,
-		resizeObserver: true,
-		// autoplay: {
-		// 	delay: 4000,
-		// 	disableOnInteraction: false,
-		// },
-		on: {
-			slideChange: function(){
-				if ( (this.activeIndex + 1) == slideLength) {
-					//$(".section2-img").css("marginLeft", -100);
-					$(".section2-img .swiper-slide").eq(slideLength-2).css({ "opacity": 0});
-				}
-				else {
-					//$(".section2-img").css("marginLeft", 0);
-					$(".section2-img .swiper-slide").eq(slideLength-2).css({ "opacity": 1});
-				}
-			}
-		},
+	const board2 = new Swiper('.board-list2', {
+		init: false,
+		//freeMode: true,
+		// Optional parameters
+		loop: false,
+		slidesPerView : '4',
+		spaceBetween : 40,
 		breakpoints: {
-			360: {
-				centeredSlides: true,
+			// window 넓이 640px ~ 767px
+			320: {
+			  slidesPerView: 1,
+			  spaceBetween: 20,
 			},
-			750: {
-				centeredSlides: false,
-			}
-		}
-	});
-
-	var section2Txt = new Swiper('.section2-txt', {
-		slidesPerView: 1,
-		//loop: true,
-		// loopedSlides: 1,
-		loopAdditionalSlide: 1,
-		watchSlidesProgress: true,
-		effect: "fade",
-		speed: 1000,
-		touchRatio: 0,
-		resizeObserver: true,
-		// autoplay: {
-		// 	delay: 4000,
-		// 	disableOnInteraction: false,
-		// },
+			// window 넓이 768px ~ 1023px
+			768: {
+			  slidesPerView: 2,
+			  spaceBetween: 20,
+			},
+			// window 넓이 1024px ~
+			1024: {
+			  slidesPerView: 4,
+			  spaceBetween: 40,
+			},
+		},
 		navigation: {
-			prevEl: '.section2-prev',
-			nextEl: '.section2-next',
+			prevEl: '#section5 .board-list-prev',
+			nextEl: '#section5 .board-list-next',
 		},
-		pagination: {
-			el: '.pagination-fraction',
-			type: 'fraction',
-			formatFractionCurrent: function (number) {
-				return ('0' + number).slice(-2);
-			},
-			formatFractionTotal: function (number) {
-				return ('0' + number).slice(-2);
-			},
-			renderFraction: function (currentClass, totalClass) {
-				return '<span class="' + currentClass + '"></span>' +
-					' / ' +
-					'<span class="' + totalClass + '"></span>';
-			}
+		// And if we need scrollbar
+		scrollbar: {
+			hide:true
 		},
+		a11y:{
+			enabled:true,
+		},
+		//autoplay: {
+		//	delay: 3000,
+		//	disableOnInteraction: false,
+		//},
+		observer: true,
+		observeParents: true,
 	});
-	section2Txt.controller.control = section2Img;
-	section2Img.controller.control = section2Txt;
-
-
-
-
-}); //doc end
+	board2.init();//초기화	
+});

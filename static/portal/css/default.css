@@ -1339,6 +1339,10 @@ color: #C81720 !important;
 color: #C81720;
 }
 
+.point2 {
+color: #3B63C4;
+}
+
 @font-face {
 font-family: "Material Icons";
 font-style: normal;
@@ -1380,6 +1384,9 @@ border-radius: 50%;
 content: "";
 }
 
+.bu-dot {
+clear: both;
+}
 .bu-dot > li {
 position: relative;
 padding-left: 20px;
@@ -3123,8 +3130,8 @@ text-rendering: optimizeLegibility;
 -moz-osx-font-smoothing: grayscale;
 font-feature-settings: "liga";
 -webkit-font-feature-settings: "liga";
-font-size: 18px;
-margin: 0 5px 2px 0;
+font-size: 23px;
+margin: 0 5px 0 0;
 }
 
 .help3 {

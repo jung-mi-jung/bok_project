@@ -1120,8 +1120,8 @@ sup {
 	margin-bottom: 5px !important;
 	&::before {
 		@include font-ico-outline('\e88e');
-		font-size: 18px;
-		margin: 0 5px 2px 0;
+		font-size: 23px;
+		margin: 0 5px 0 0;
 	}
 }
 .help3 {

@@ -38,8 +38,8 @@ function servers() {
 			baseDir: './',
 			index: 'static/guide/g.html',
 		},
-		//port: 1981,
-		port: 1989,
+		port: 1981,
+		//port: 1989,
 	});
 }
 const scss = ["commons", "portal", "museum", "imer", "imerEng", "eng", "bos"];   // museum 화폐박물관	  eng 영문	 imer 경제연구원	 imerEng 경제연구원(영문)

@@ -53,12 +53,15 @@ $btn: "[class^=b-]";
 	}
 	&.sm {
 		min-width: 0;
-		font-size: 12px;
-		.table & {
-			line-height: inherit;
-			padding: 2px 5px;
-			border-radius: 4px;
-		}
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 24px;
+		padding: 0 7px 0 13px;		
+		//padding: 3px 13px !important;
+		border-radius: 4px;
+		// .table & {
+		// 	padding: 2px 5px;
+		// }
 	}
 	&.lg {
 		@include breakpoint($lg) {
@@ -149,9 +152,9 @@ $btn: "[class^=b-]";
 		}
 	}
 	&.b-go {
-		padding: 2px 7px 2px 13px;
-		font-weight: 300;
-		font-size: 14px;
+		//padding: 2px 7px 2px 13px;
+		//font-weight: 300;
+		//font-size: 14px;
 		background-color: $black;
 		margin-left: 5px;
 		&::after {
@@ -161,7 +164,18 @@ $btn: "[class^=b-]";
 			font-size: 16px;
 		}
 	}
-
+	&.b-download {
+		&::after {
+			content: "";
+			display: inline-block;
+			vertical-align: middle;
+			width: 21px;
+			height: 20px;
+			background: url(/static/portal/img/ico/ico-b-download.svg) no-repeat;
+			margin-left: 4px;
+			margin-bottom: 3px;
+		}		
+	}
 }
 .view + .btnSet {
 	[class^=b-] {
@@ -176,17 +190,17 @@ $btn: "[class^=b-]";
 
 .a-link {
 	display: inline-block;
-	padding: 5px 8px;
+	padding: 10px 12px 10px 18px;
 	line-height: initial;
-	font-size: rem(16);
-	color: $color-point;
-	background-color: transparent;
+	font-size: rem(18);
+	color: #fff;
+	background-color: $color-point;
 	border: 1px solid $color-point;
 	border-radius: 4px;
 	&::after {
 		@include font-ico-outline('\e315');
-		font-size: 16px;
-		margin: 0 0 3px 3px;
+		font-size: 26px;
+		margin-left: 12px;
 	}
 	&:hover {
 		text-decoration: underline;

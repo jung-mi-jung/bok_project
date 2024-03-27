@@ -207,9 +207,13 @@
 
 
 //기존   //200035 적용
+.sh + .bdPhoto {
+	margin-top: 10px;
+}
 .bdPhoto{
 	clear: both;
 	float: left;
+	margin-top: 15px;
 	margin-bottom: 30px;
 	width:100%;
 	&.row{
@@ -315,6 +319,7 @@
 					font-size: 20px;
 					margin-right:5px;
 					color: #666;
+					margin-left: -3px;
 				}
 			}
 			.btn{
