@@ -37,9 +37,37 @@ $(function () {
 	});
 	//메인 비쥬얼 영역 progress 추가 설정
 	section1Visual.on('slideChange',function(){
+
+		if ( $(".section1-visual").hasClass("current-stop") ) {
+			return $(".progress").removeClass('active first');
+			
+		}
 		$(".progress").removeClass('active first');
 		console.log($(".progress").offset());
+		
 		$(".progress").addClass('active');
+	});
+
+
+	//자동 재생 멈춤
+	$('.section1-visual__swiper-button-stop').on('click', function () {
+		$(this).parents(".swiper").addClass("current-stop");
+
+		$(this).hide().next().show().focus()
+		section1Visual.autoplay.stop();
+		// $(".section1-visual .autoplay-progress .progress").css({ "animation": "none"});
+
+		$(".section1-visual .autoplay-progress .progress").removeClass("active first");
+	});
+
+	//자동 재생 플레이
+	$('.section1-visual__swiper-button-play').on('click', function () {
+		$(this).parents(".swiper").removeClass("current-stop");
+		
+		$(this).hide().prev().show().focus()
+		section1Visual.autoplay.start();
+
+		$(".section1-visual .autoplay-progress .progress").addClass("active");
 	});
 });
 
@@ -50,6 +78,7 @@ $(function () {
 		slidesPerView: "auto",
 		//loop: true,
 		// loopedSlides: 1,
+		spaceBetween: 30,
 		loopAdditionalSlide: 1,
 		watchSlidesProgress: true,
 		slideToClickedSlide: true,
@@ -62,9 +91,9 @@ $(function () {
 		on: {
 			slideChange: function(){
 				//마지막 인덱스가 active 됐을때
-				if ( (this.activeIndex + 1) == slideLength) {
-					$(".section2-img .swiper-slide-visible.swiper-slide-prev").css({ "opacity": 0.6 });
-				}
+				// if ( (this.activeIndex + 1) == slideLength) {
+				// 	$(".section2-img .swiper-slide").eq(this.activeIndex + 1).css({ "margin-left" : -30});
+				// }
 			}
 		},
 		breakpoints: {

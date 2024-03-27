@@ -19,7 +19,12 @@
 		}
 	}
 }
-
+.cont {
+	p, li {
+		margin-bottom: 4px;
+		color: #1A1A1A;
+	}
+}
 
 /* 콘텐츠 내부 래프트메뉴 */
 .content-row {
@@ -350,6 +355,9 @@
 	> div {
 		position: relative;
 		padding-left: 77px;
+		@include breakpoint($sm) {
+			padding-left: 0;
+		}
 		> i {
 			position: absolute;
 			display: inline-block;
@@ -365,6 +373,9 @@
 			vertical-align: top;
 			// margin-top: 20px;
 			background-size: cover;
+			@include breakpoint($sm) {
+				display: none;
+			}
 			&::before {
 				content: "";
 				display: block;
@@ -416,7 +427,7 @@
 			position: relative;
 			padding-left: 10px;
 			margin-bottom: 5px;
-			font-size: 15px;
+			font-size: rem(16);
 			color: #333;
 			&::before {
 				content: "";
@@ -440,6 +451,12 @@
 			text-align: center;
 		}
 	}
+	.fc1 {
+		@include breakpoint($sm) {
+			display: block;
+			font-size: rem(20);
+		}
+	}
 	.b-go {
 		margin-top: 0;
 		font-size: 14px !important;
@@ -448,7 +465,9 @@
 	}
 	.ti-new-window {
 		position: relative;
-		display: inline-block;
+		display: inline-flex;
+		flex-wrap: wrap;
+		align-items: center;
 		width: auto;
 		height: 60px;
 		left: 80px;
@@ -462,6 +481,9 @@
 		color: #5b79b9;
 		text-align: center;
 		vertical-align: top;
+		@include breakpoint($sm) {
+			left: 0;
+		}
 		img {
 			vertical-align: middle;
 			padding-bottom: 3px;
@@ -591,5 +613,37 @@
 				margin-bottom: 5px;
 			}
 		}
+	}
+}
+
+/* 큐레이터와의 대화 */
+.curator {
+	max-width: 1280px;
+	margin: 0 auto;
+	.box4 {
+		gap: 0 40px;
+		padding: 30px;
+		margin-bottom: 80px;
+		background-color: gainsboro;
+	}
+	.badge {
+		display: inline-block;
+		background-color: #3B63C4;
+		color: #fff;
+		padding: 4px 12px;
+	}
+	&-desc {
+		ul {
+			margin-bottom: 20px;
+			li {
+				em {
+					font-size: rem(18);
+					font-weight: 600;
+				}
+			}
+		}
+	}
+	.bu {
+		padding-left: 6px;
 	}
 }
