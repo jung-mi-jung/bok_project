@@ -867,15 +867,7 @@
 
 
 
-<p>추가 class</p>
-<p>.post-set</p>
-<p>.email-set</p>
-<p>.tel-set</p>
-<p>step 코딩변경</p>
-<br>
-<br>
-
-
+<h2>입력폼</h2>
 
 <div class="formBox">
 	<ul class="step">		
@@ -908,122 +900,191 @@
 
 
 <div class="agreeBox">
-	<h2>필수 정보의 수집·이용 내역에 관한 안내</h2>
-	<div class="scrollarBox" tabindex="0">
-		<p>- 수집목적 : 한은금요강좌 제공, 설문 발송 및 수료증 발급
-		<br>- 수집·이용 항목 : 이름, 이메일주소, 연락처
-		<br>- 보유·이용기간 : <span style="font-weight: bold; font-size: 14pt;">수집일로부터 5년</span></p>
-		<br><p>※ 귀하는 위 개인정보 수집·이용에 동의하지 않을 수 있으나 필수정보에 대한 수집 동의 거부 시 한은금요강좌 신청이 불가합니다.</p>
-	</div>
-	<div class="agreeTxt">
-		<span class="txt1">위와 같이 개인정보 수집·이용에 동의합니다.</span>
-		<span class="txt2">
-			<label for="agreAtY1_1"><input type="radio" name="agreAt1" id="agreAtY1_1" value="Y"><i></i> 동의함</label>
-			<label for="agreAtY1_2"><input type="radio" name="agreAt1" id="agreAtY1_2" value="N"><i></i> 동의하지 않음</label>
-		</span>
-	</div>
-	<h2>선택 정보의 수집·이용 내역에 관한 안내</h2>
-	<div class="scrollarBox" tabindex="0">
-		내용
-	</div>
-	<div class="agreeTxt">
-		<span class="txt1">위와 같이 정보의 수집·이용 내역에 관한 안내에 동의합니다.</span>
-		<span class="txt2">
-			<label for="agreAtY2_1"><input type="radio" name="agreAt2" id="agreAtY2_1" value="Y"><i></i> 동의함</label>
-			<label for="agreAtY2_2"><input type="radio" name="agreAt2" id="agreAtY2_2" value="N"><i></i> 동의하지 않음</label>
-		</span>
-	</div>
+	<h4 class="mt0">필수 정보의 수집·이용 내역에 관한 안내</h4>
+	<div class="scrollarLBox" tabindex="0" id="cl05" style="display:block;">
+		<h5>개인정보의 수집 및 이용 목적</h5>
+		<ul class="list-num">
+			<li>1. 한국은행은 <strong>신고사무처리</strong>를 위하여 「개인정보보호법」에 따라 필요한 최소한의 개인정보를 수집하고 있습니다. 수집된 개인정보는 정해진 제3자 제공 또는 목적 외의 용도로는 이용되지 않으며 수집 목적이 변경될 경우 사전에 알리고 동의를 받을 예정입니다.</li>
+			<li>2. 다만, 「개인정보보호법」 또는 개별 법령에서 별도의 정함이 있는 경우 목적 외의 용도로 이용하거나 제3자에게 제공할 수 있습니다.</li>
+		</ul>
+
+		<h5>수집·이용하는 개인정보의 항목</h5>			
+		<ul class="list-num">
+			<li>1. <strong>필수항목 : 이름, 휴대폰번호, 주소</strong></li>
+			<li>2. 자동수집항목 : IP주소, 쿠키, 방문일시, 서비스 이용 기록, 불량 이용 기록, 기기정보</li>
+		</ul>
+		<p class="help">서비스의 유효성 확인, 서비스 이용에 대한 통계 수집, 접속빈도 파악, 홈페이지 개선과 보안대책 수립을 위하여 자동으로 수집됩니다.</p>
+	
+		<h5>개인정보의 보유 및 이용기간</h5>
+		<p>한국은행은 원칙적으로 개인정보 보존기간이 경과하거나, 처리목적이 달성된 경우에는 지체 없이 개인정보를 파기합니다. 다만, 다른 법령에 따라 보존하여야 하는 경우에는 그러하지 않을 수 있습니다.</p>
+		<ul class="list-num">
+			<li>1. 이용자 정보 : 3년</li>
+			<li>2. 신고내용 : 3년</li>
+			<li>3. 자동수집항목 : 1년</li>
+		</ul>
+		
+		<h5>동의를 거부할 권리 및 동의 거부에 따른 불이익</h5>
+		<p>이용자는 개인정보의 수집·이용목적에 대한 동의를 거부할 수 있으나, 최소한의 개인정보 수집동의 거부 시 홈페이지에서 제공하는 서비스가 아래와 같이 제한될 수 있습니다.</p>
+		<p class="bu-dot red">필수항목 및 자동생성 정보 제공 동의 거부 시 : 신고접수 불가</p>
+		<p class="help mb0">한국은행의 개인정보처리방침에 대해 보다 자세히 알기 원하시면 홈페이지 하단의 ‘개인정보처리방침’을 참고하시기 바랍니다.</p>
+	</div>			
+</div>
+<div class="agreeTxt">
+	<p class="txt1">위와 같이 개인정보를 수집&middot;이용하는데 동의하십니까?</p>
+	<p class="txt2">
+		<label for="agreAtY1_1">
+			<input type="radio" name="agreAtY1" id="agreAtY1_1" value="Y" />
+			<i></i> <span>동의함</span>
+		</label>
+		<label for="agreAtY1_2">
+			<input type="radio" name="agreAtY1" id="agreAtY1_2" value="N" />
+			<i></i> <span>동의하지 않음</span>
+		</label>
+	</p>
+</div>	
+
+
+<h4 class="h-caption">피신고자</h4>
+<div class="view">
+	<dl>
+		<dt>
+			<span class="req"><span class="sr-only">필수입력</span></span>
+			<label for="prtctorNm">이름</label>
+		</dt>
+		<dd>
+			<input type="text" name="prtctorNm" id="prtctorNm" class="w70p" value="">
+		</dd>
+	</dl>
+	<dl>
+		<dt>
+			<label for="occp">소속</label>
+		</dt>
+		<dd>
+			<input type="text" name="occp" id="occp" class="" value="">
+		</dd>
+	</dl>
+	<dl>
+		<dt>
+			<label for="prtctorAdres">주소</label>
+		</dt>
+		<dd>
+			<div class="postSet">
+				<div>
+					<input type="text" name="prtctorZip" id="prtctorZip" value="" class="post" title="우편번호(자동입력)" readonly="readonly">
+					<a href="javascript:prtctorAdresPop();" class="b-sh" title="새창열림">주소 찾기</a>
+				</div>
+				<div>
+					<input type="text" name="prtctorAdres" id="prtctorAdres" value="" class="" title="기본주소" readonly="readonly">
+					<input type="text" name="prtctorDetailAdres" value="" class="" title="상세주소">
+				</div>
+			</div>
+		</dd>
+	</dl>
+	<dl>
+		<dt>
+			<label for="optn2">직위</label>
+		</dt>
+		<dd>
+			<input type="text" name="optn2" id="optn2" class="" value="">
+		</dd>
+	</dl>
+	<dl>
+		<dt>
+			<label for="prtctorMbtlnum">연락처</label>
+		</dt>
+		<dd>
+			<select name="prtctorMbtlnum1" title="휴대폰 앞자리 선택">
+				<option value="">선택</option>
+				<option value="010">010</option>
+				<option value="011">011</option>
+				<option value="016">016</option>
+				<option value="017">017</option>
+				<option value="018">018</option>
+				<option value="019">019</option>
+			</select>
+			- <input type="text" name="prtctorMbtlnum2" pattern="[0-9]*" onkeyup="this.value=check_txt(this.value)" inputmode="numeric" min="0" value="" size="4" maxlength="4" title="휴대폰 가운데 4자리">
+			- <input type="text" name="prtctorMbtlnum3" pattern="[0-9]*" onkeyup="this.value=check_txt(this.value)" inputmode="numeric" min="0" value="" size="4" maxlength="4" title="휴대폰 마지막 4자리">
+		</dd>
+	</dl>
 </div>
 
 
+<h4 class="h-caption">신고내용</h4>
+<div class="view">
+	<dl>
+		<dt>
+			<label for="optn5">부패신고 취지 및 이유</label>
+		</dt>
+		<dd>
+			<input type="text" class="w100p" name="optn5" id="optn5" maxlength="500" value="">
+		</dd>
+	</dl>
+	<dl>
+		<dt>
+			<span class="req"><span class="sr-only">필수입력</span></span>
+			<label for="nttCn">부패신고내용</label>
+		</dt>
+		<dd>
+			<p class="help3">개인정보 보호를 위해 신고내용 입력란에 주민등록번호, 전화번호 등 개인정보가 포함되지 않도록 주의바라며, 개인정보가 입력된 신고내용의 경우 신고자에게 통보하지 않고 관리자에 의해 삭제될 수 있음을 알려드립니다.</p>
+			<textarea class="w100p" name="nttCn" id="nttCn" cols="10" rows="10" maxlength="3000"></textarea>
+		</dd>
+	</dl>
+	<dl>
+		<dt>
+			증거자료 등 첨부서류
+		</dt>
+		<dd>
+			<dl class="fileFormArea">
+				<dd>
+					<div class="fileAddSet">
+						<button type="button" class="b-add btn-sm btnFileAdd"> 추가</button>
+						<div class="col-sm-10 fileList">
+							<div class="file_set">
+								<div class="form-inline">
+									<input name="normalFile_1" type="file" id="normalFile_1" class="input_file form-control" title="첨부파일 1">
+									<button type="button" id="btn_file_del_1" class="btn btn-sm btn-danger btn_file_del" title="첨부파일 1 삭제">삭제</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<span class="help3">파일은 70MB까지 업로드 가능합니다.</span>
+				</dd>
+			</dl>
+		</dd>
+	</dl>	
+</div>
 
-<h3 class="h3">개인정보입력란</h3>
-<form method="post" id="indivForm" name="indivForm" action="\">
-	<fieldset>
-		<div class="table table-view">
-			<table>
-				<caption>개인정보입력란</caption>
-				<colgroup>
-					<col width="150" />
-					<col width="630" />
-				</colgroup>
-				<tbody>
-					<tr class="firTr">
-						<th scope="row" class="firCell">
-							<span class="req"><span>필수입력</span></span>
-							이름
-						</th>
-						<td><input type="text" id="qnaRegBean.name" class="inpt_txt" name="qnaRegBean.name" value="" /></td>
-					</tr>				
-					<tr>
-						<th scope="row" class="firCell">
-							<span class="req"><span>필수입력</span></span>
-							<label for="qnaRegBean.addr">주소</label>
-						</th>
-						<td>
-							<div class="post-set">
-								<input type="text" style="width:60px" id="qnaRegBean.postCode" maxlength="5" class="inpt_txt" onkeydown="number_only();" readonly="readonly" title="우편번호(자동입력)" />
-								<a href="/erms/common/postcode.action" onclick="popupPostCode(this.href, 'resultPostcode'); return false;" class="b-btn" title="새창열림">우편번호 검색</a>
-								<p class="mt5"><input type="text" id="qnaRegBean.addr" name="qnaRegBean.addr" title="기본주소(자동입력)" class="inpt_txt" readonly="readonly"/></p>
-								<p class="mt5"><input type="text" id="qnaRegBean.addrDetail" name="qnaRegBean.addrDetail" title="상세 주소" class="inpt_txt" /></p>
-							</div>
-						</td>
-					</tr>
-					
-					<tr>
-						<th scope="row" class="firCell">
-							<span class="req"><span>필수입력</span></span>
-							E-mail
-						</th>
-						<td>
-							<div class="email-set">
-								<input type="text" id="qnaRegBean.email1" name="qnaRegBean.email1" class="inpt_txt" maxlength="15" style="ime-mode:disabled" title="이메일 아이디" /> @ <input type="text" id="qnaRegBean.email2" name="qnaRegBean.email2" class="inpt_txt" title="이메일 도메인" style="ime-mode:disabled" />
-								<select id="emailItem" name="emailItem" title="이메일 도메인 선택" onchange="javascript:changeEmail('qnaRegBean.email2', this.value);">
-									<option value="">직접입력</option>
-									<option value="hanmail.net">hanmail.net</option>
-								</select>
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<th scope="row" class="firCell">전화번호 (택1)</th>
-						<td>
-							<div class="tel-set">
-								<select id="qnaRegBean.tel1" name="qnaRegBean.tel1" title="전화번호 앞자리">
-									<option value="">선택</option>
-									<option value="02">02</option>
-								</select>
-								-
-								<input type="text" id="qnaRegBean.tel2" name="qnaRegBean.tel2" title="전화번호 두번째 자리" maxlength="4" class="inpt_txt" onkeydown="number_only();" />
-								-
-								<input type="text" id="qnaRegBean.tel3" name="qnaRegBean.tel3" title="전화번호 세번째 자리" maxlength="4" class="inpt_txt" onkeydown="number_only();" />
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<th scope="row" class="firCell">휴대폰번호 (택1)</th>
-						<td>
-							<div class="tel-set">
-								<select id="qnaRegBean.mobile1" name="qnaRegBean.mobile1" title="휴대폰번호 앞자리">
-									<option value="">선택</option>
-									<option value="010">010</option>
-								</select>
-								-
-								<input type="text" id="qnaRegBean.mobile2" name="qnaRegBean.mobile2" title="휴대폰 두번째 자리" maxlength="4" class="inpt_txt" onkeydown="number_only();" />
-								-
-								<input type="text" id="qnaRegBean.mobile3" name="qnaRegBean.mobile3" title="휴대폰 세번째 자리" maxlength="4" class="inpt_txt" onkeydown="number_only();" />
-							</div>
-						</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-		<p class="btnSet">
-			<input type="submit" class="b-btn lg" value="확인"/>
-			<input type="button" class="b-cancel lg" value="취소"  onclick="javascript:confirm1()"/>
-		</p>
-	</fieldset>
-</form>
+<div class="view">
+	<dl>
+		<dt><span class="req"><span class="sr-only">필수입력</span></span><label for="catpchaAnswer">자동등록 방지</label></dt>
+		<dd>
+			<div class="catpchaSet">
+				<p class="help3">아래 이미지의 숫자를 보이는 대로 입력하여 주세요.</p>
+				<div class="set">
+					<div class="l">
+						<div id="catpcha"><img src="https://www.bok.or.kr/cmmn/captcha/image.do?rand=0.2625964253012085" alt=""></div>
+						<div id="audiocatpch" style="display: none;"></div>
+						<div class="b">
+							<button id="reLoad" type="button"><i class="fa fa-refresh" aria-hidden="true"></i><span class="sr-only">새로고침</span></button>
+							<button id="soundOnKor" type="button"><i class="fa fa-volume-up" aria-hidden="true"></i><span class="sr-only">한글음성</span></button>
+						</div>
+					</div>
+					<input type="text" id="catpchaAnswer" name="catpchaAnswer" value="" maxlength="5" title="자동등록 방지 숫자 입력">
+				</div>
+			</div>
+		</dd>
+	</dl>
+</div>
+	
+
+<div class="btnSet">
+	<p>
+		<a href="" class="b-edit">수정</a>
+		<a href="" class="b-del">삭제</a>
+		<a href="javascript:checkForm();" class="b-reg"><span>신청</span></a>
+		<a href="" onclick="return confirm('작성중인 글을 취소하시겠습니까?');" class="b-cancel">취소</a>
+	</p>
+</div>
 
 <!-- 만족도 -->
 <div class="admin-set">

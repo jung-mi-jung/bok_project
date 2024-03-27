@@ -9,8 +9,7 @@ table {
 	}	
 }
 .table {
-	clear: both;
-	
+	clear: both;	
 	margin-bottom: 10px;
 	@include breakpoint($md){
 		&.pcweb {

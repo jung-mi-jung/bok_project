@@ -1,0 +1,270 @@
+//행사일정
+.calendarWrap {
+	.calDate {
+		color: #666;
+		font-size: rem(36);
+		font-weight: 300;
+		text-align: center;
+		margin-bottom: 15px;
+		strong {
+			color: #1a1a1a;
+			font-weight: 600;
+		}
+		#yymm {
+			display: inline-block;
+			margin: 0 12px;
+		}
+		.calDateL {
+			&::before {
+				@include font-ico-outline('\e314');
+				font-size: 50px;
+				margin-bottom: 6px;
+			}
+		}
+		.calDateR {
+			&::before {
+				@include font-ico-outline('\e315');
+				font-size: 50px;
+				margin-bottom: 6px;
+			}
+		}
+	}
+	.box-list {
+		border-radius: 16px;
+		border: 4px solid #E6E6E6;
+		padding: 20px;
+		margin-bottom: 22px;
+		ul {
+			display: flex;
+			justify-content: space-around;
+			width: 900px;
+			max-width: 100%;
+			margin: 0 auto;
+			font-size: rem(18);
+			@include breakpoint($sm){
+				flex-wrap: wrap;
+			}
+			li {
+				text-align: center;
+				@include breakpoint($sm){
+					width: 25%;
+				}
+				&.on {
+					a {						
+						color: #fff;
+						background-color: $color-point;
+						border-radius: 50%;
+					}
+				}
+				a {
+					display: inline-block;
+					width: 48px;
+					height: 48px;
+					line-height: 48px;
+					text-align: center;
+					@include breakpoint($sm){
+						width: 38px;
+						height: 38px;
+						line-height: 38px;
+					}
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}			
+		}
+	}
+	.calSec {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 15px;
+		.calList {
+			a {
+				&::after {
+					content: "";
+					display: inline-block;
+					vertical-align: middle;
+					width: 24px;
+					height: 24px;
+				}
+				&.icoList1 {
+					&::after {
+						background: url(/static/portal/img/ico/ico-calender_off.png);
+					}
+				}
+				&.icoList2 {
+					&::after {
+						background: url(/static/portal/img/ico/ico-list_off.png);
+					}
+				}
+				&.on {
+					&.icoList1 {
+						&::after {
+							background: url(/static/portal/img/ico/ico-calender.png);
+						}
+					}
+					&.icoList2 {
+						&::after {
+							background: url(/static/portal/img/ico/ico-list.png);
+						}
+					}
+				}
+				& + a {
+					&::before {
+						content: "";
+						display: inline-block;
+						vertical-align: middle;
+						width: 1px;
+						height: 16px;						
+						background-color: #E6E6E6;
+						margin: 0 10px;
+					}
+				}
+			}
+		}
+	}
+}
+.calendarSet {
+	margin-top: 15px;
+	border-top: 3px solid #1a1a1a;
+	@include breakpoint($sm){
+		overflow-x: auto;
+	}
+	table {
+		table-layout: fixed;
+		width: 100%;
+		margin-top: -1px;
+		@include breakpoint($sm){
+			width: 700px;
+		}
+	}
+	th,
+	td {
+		border: 1px solid $bd-color;
+	}
+	th {
+		padding: 14px;
+		border-bottom: none;
+		background-color: #FAFAFA;
+		&.sun {
+			background-color: #FFE8E9;
+		}
+		&.sat {
+			background-color: #F2F6FA;
+		}
+		@include breakpoint($sm){
+			span {
+				display: none;
+			}
+		}
+	}
+	td {
+		padding: 15px;
+		vertical-align: top;
+		height: 160px;
+		@include breakpoint($sm){
+			height: 109px;
+		}
+		a {
+			margin-top: 12px;
+			display: block;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	&.type2 {
+		td {
+			position: relative;
+			padding: 0;
+			vertical-align: top;
+			.date {
+				position: absolute;
+				top: 12px;
+				left: 12px;
+				color: $black;
+			}
+			.con {
+				text-align: left;
+				display: block;
+				span {
+					display: block;
+					position: relative;
+					padding-left: 20px;
+					&::before {
+						position: absolute;
+						top: 10px;
+						left: 6px;
+						width: 4px;
+						height: 4px;
+						background-color: #666;
+						border-radius: 50%;
+						content: '';		
+					}
+					
+				}
+			}
+		}
+		button {
+			width: 100%;
+			height: 100%;
+			padding: 18px;
+			&[disabled] {
+				background-color: #F5F5F5;
+			}
+		}
+	}
+}
+.calendarWrap,	//행사일정 아이콘
+.bdPhoto {
+	.ico {
+		width: 24px;
+		text-align: center;
+		color: #fff;
+		font-size: 12px;
+		border-radius: 4px;
+		display: inline-block;
+		padding: 3px 0;
+		&.ico1 {
+			background-color: #1a1a1a
+		}
+		&.ico2 {
+			background-color: #C81720;
+		}
+		&.ico3 {
+			background-color: #3B63C4;
+		}
+		&.ico4 {
+			background-color: #118DB4;
+		}
+	}
+}
+.choice-type {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	.reser-type {
+		display: flex;
+		span {
+			display: inline-block;
+			&::before {
+				content: "";
+				display: inline-block;
+				vertical-align: middle;
+				width: 24px;
+				height: 24px;
+				border: 1px solid #BFBFBF;
+				border-radius: 4px;
+				margin-right: 5px;
+				margin-bottom: 3px;
+			}			
+			&.i1 {}
+			&.i2 {
+				margin-left: 20px;
+				&::before {
+					background-color: #F5F5F5;
+				}
+			}
+		}
+	}
+}

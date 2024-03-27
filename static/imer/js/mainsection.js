@@ -1,5 +1,5 @@
 // 휠 컨트롤
-var mainSection = $('#wrap,#section2,#footer');
+var mainSection = $('#wrap, #section2, #section3, #footer');
 var whellTimer;
 var timer;
 var lastScrollTop = 0;

@@ -81,24 +81,35 @@ input[type='radio'] {
 	opacity: 0;
 	position: relative;
 	z-index: 1;
-	width: 20px;
-	height: 20px;
+	width: 24px;
+	height: 24px;
 	vertical-align: middle;
 	margin-top: 2px;
+	.admin-set & {
+		width: 20px;
+		height: 20px;
+	}
 	&:focus + i {
 		outline: dotted 1px $black;
 		outline-offset: 2px;
 	}
 	& + i {
 		display: inline-block;
-		width: 20px;
-		height: 20px;
+		width: 24px;
+		height: 24px;
 		border: 1px solid #BFBFBF;
 		border-radius: 50%;
 		background-color: #FAFAFA;
 		position: absolute;
-			top: 2px;
-			left: -1px;
+		top: 2px;
+		left: -1px;
+		.admin-set & {
+			width: 20px;
+			height: 20px;
+		}
+		& + span {
+			margin-left: 10px;
+		}
 	}
 	&:checked + i {
 		//position: relative;
@@ -106,11 +117,18 @@ input[type='radio'] {
 		&:before {
 			content: "";
 			display: inline-block;
-			width: 6px;
-			height: 6px;
+			width: 8px;
+			height: 8px;
 			border: 7px solid #3B63C4;
 			border-radius: 50%;
+			.admin-set & {
+				width: 6px;
+				height: 6px;
+			}
 			
+		}
+		& + span {
+			text-decoration: underline;
 		}
 	}
 }
@@ -129,7 +147,7 @@ textarea {
 	height: $form-height;
 	vertical-align: middle;
 	// outline: none;
-	border-radius: 5px;
+	border-radius: 4px;
 	&:hover,
 	&:focus,
 	&:active {
@@ -229,7 +247,7 @@ select {
 textarea {
 	-webkit-appearance: none;
 	width: 100%;
-	height: 300px !important;
+	height: 200px !important;
 }
 input[type="email"],
 input[type="number"],
@@ -273,6 +291,9 @@ input {
 			margin-left: -33px;
 		}
 	}
+	&[readonly] {
+		background-color: #FAFAFA;
+	}
 }
 
 .post-set {
@@ -315,5 +336,15 @@ input {
 	}
 	input {
 		width: calc(50% - 110px);
+	}
+}
+.postSet {
+	div {
+		&:nth-child(2) {
+			margin-top: 3px;
+			input {
+				width: 40%;
+			}
+		}
 	}
 }

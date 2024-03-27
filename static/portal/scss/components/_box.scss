@@ -263,11 +263,3 @@ h2 + .boxTop {
 	}
 }
 
-//디자인 안나옴
-.boxInfoRel{
-	margin-bottom: 0; height: 100px; overflow-y: auto; 
-	&.box3 {
-		padding:5px 10px;
-	}
-	h3{margin: 0 !important}
-}

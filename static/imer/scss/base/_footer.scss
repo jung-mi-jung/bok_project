@@ -5,11 +5,8 @@
 	background-color: #FAFAFA;
 	border-top: 1px solid #E5E5E5;	
 	padding: 30px 0;
-	@include breakpoint($smd) {
-		padding: 24px 0;
-	}
 	@include breakpoint($sm){
-		padding: 24px 0;
+		padding: 15px 0;
 		font-size: rem(13);
 	}
 	.container {
@@ -18,15 +15,6 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		@include breakpoint($smd) {
-			align-items: flex-start;
-			margin-left: 24px;
-			margin-right: 24px;
-		}
-		@include breakpoint($sm) {
-			margin-left: 16px;
-			margin-right: 16px;
-		}
 
 		// @include breakpoint($lg){
 		// 	display: flex;
@@ -54,8 +42,8 @@
 				//margin: 0 auto;
 			}
 			@include breakpoint($sm){
-				// max-width: 315px;
-				// justify-content: left;
+				max-width: 315px;
+				justify-content: left;
 				margin: 0 auto;
 			}
 			li {
@@ -165,7 +153,7 @@
 			}
 			button {
 				text-align: left;
-				color: #1A1A1A;
+				color: $black;
 				width: 192px;
 				height: 36px;
 				padding: 0 10px;
@@ -174,11 +162,11 @@
 				border-radius: 4px;
 				background-color: #fff;
 				@include breakpoint($sm){
-					width: 100%;
+					width: calc(100% - 32px);
 					font-size: rem(14);
 				}
 				&::after {
-					@include font-ico-outline('\e5c7');
+					@include font-ico-outline('\e5c5');
 					font-size: 22px;
 					float: right;
 				}
@@ -195,9 +183,10 @@
 				border: 1px solid #E5E5E5;
 				background-color: #fff;
 				@include breakpoint($sm){
-					left: 0;
-					// width: calc(100% - 32px);
+					left: 16px;
+					width: calc(100% - 32px);
 					top: 35px;
+					//bottom: 30px;
 				}
 				a {
 					display: block;
@@ -208,7 +197,7 @@
 						text-align: left;
 					}
 					&:hover {
-						color: #1A1A1A;
+						color: $black;
 						font-weight: 500;
 						text-decoration: underline;
 					}
@@ -222,33 +211,34 @@
 			display: flex;
 			justify-content: space-between;
 			margin: 0 35px;
-			gap: 0 8px;
 			@include breakpoint($mdw){
 				padding-top: 15px;
 				width: 192px;
-				margin: 0;
 			}
 			@include breakpoint($sm){
 				justify-content: center;
-				margin-top: 24px;
 			}
 			a {
 				display: block;
 				padding: 1px 0;
 				width: 36px;
 				height: 36px;
-				//background-color: rgba(255, 255, 255, 0.6);
+				background-color: rgba(255, 255, 255, 0.6);
 				border-radius: 50%;
 				margin: 0 2px;
-				&:focus {
-					outline-offset: 4px;
+				&::before {
+					content: "";
+					display: inline-block;
+					vertical-align: middle;
+					width: 36px;
+					height: 36px;
+					background-position: 50%;
+					background-repeat: no-repeat;
 				}
-			}
-		}
-		.f_banner {
-			display: none;
-			@include breakpoint($lg){
-				display: block;
+				&:focus {
+					outline: dashed 1px $black;
+					outline-offset: 2px;
+				}
 			}
 		}
 	}

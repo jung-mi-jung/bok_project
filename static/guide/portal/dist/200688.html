@@ -7,7 +7,8 @@
 	<link type="text/css" rel="stylesheet" href="/static/portal/css/sub.css">
 	<script src="/static/jslibrary/jquery-3.5.1.min.js"></script>
 	<script src="/static/jslibrary/jquery.cookie.js"></script>
-	<script src="/static/portal/js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="/static/jslibrary/bootstrap/bootstrap.min.js"></script>
+	<script src="/static/jslibrary/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js"></script>
 	<link rel="stylesheet" href="/static/jslibrary/swiper@8/swiper-bundle.min.css">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta property="og:type"			content="website">
@@ -867,98 +868,120 @@
 
 
 
-<h3>경제용어사전</h3>
+<h2>경제용어사전</h2>
 
-<!-- 기존 코딩에서 검색부분 코딩 수정 -->
 <div class="sh sh2">
-	<form name="wordForm" id="wordForm" method="get" action="/">
-		<span class="t">경제용어</span>
-		<div class="c">
-			<div class="keyword-set">
-				<span class="keyword">
-					<input type="text" name="query" id="query" value="" class="w50p inpt_txt" title="검색 키워드 입력" placeholder="키워드를 입력해 주세요" autocomplete="off">
-				</span>
-				<button type="button" class="search" onclick="" aria-label="검색"></button>
-			</div>
-		</div>
-	</form>
-</div>
-<!-- //기존 코딩에서 검색부분 코딩 수정 -->
-
-
-<!-- title="선택됨" 추가 -->
-<div class="box1 keyWordBd">
-	<ul>
-		<li><span class="keyWdHd">한글순</span>
-			<ul id="keyWdKor" class="inline keyword key_kor">
-				<li class="on">
-					<a id="A1" href="#A1"><input name="kKeyWord" type="hidden" value="ㄱ" title="선택됨">ㄱ</a>
-				</li>
-				<li><a id="B1" href="#B1"><input name="kKeyWord" type="hidden" value="ㄴ">ㄴ</a></li>
-				<li><a id="C1" href="#C1"><input name="kKeyWord" type="hidden" value="ㄷ">ㄷ</a></li>
-				<li><a id="D1" href="#D1"><input name="kKeyWord" type="hidden" value="ㄹ">ㄹ</a></li>
-				<li><a id="E1" href="#E1"><input name="kKeyWord" type="hidden" value="ㅁ">ㅁ</a></li>
-				<li><a id="F1" href="#F1"><input name="kKeyWord" type="hidden" value="ㅂ">ㅂ</a></li>
-				<li><a id="G1" href="#G1"><input name="kKeyWord" type="hidden" value="ㅅ">ㅅ</a></li>
-				<li><a id="H1" href="#H1"><input name="kKeyWord" type="hidden" value="ㅇ">ㅇ</a></li>
-				<li><a id="I1" href="#I1"><input name="kKeyWord" type="hidden" value="ㅈ">ㅈ</a></li>
-				<li><a id="J1" href="#J1"><input name="kKeyWord" type="hidden" value="ㅊ">ㅊ</a></li>
-				<li><a id="K1" href="#K1"><input name="kKeyWord" type="hidden" value="ㅋ">ㅋ</a></li>
-				<li><a id="L1" href="#L1"><input name="kKeyWord" type="hidden" value="ㅌ">ㅌ</a></li>
-				<li><a id="M1" href="#M1"><input name="kKeyWord" type="hidden" value="ㅍ">ㅍ</a></li>
-				<li><a id="N1" href="#N1"><input name="kKeyWord" type="hidden" value="ㅎ">ㅎ</a></li>
-			</ul>
-		</li>
-		<li><span class="keyWdHd">알파벳순</span>
-			<ul id="eKeyWord" class="inline keyword">
-				<li><a id="A" href="#A"><input name="eKeyWord" type="hidden" value="A">A</a></li>
-				<li><a id="B" href="#B"><input name="eKeyWord" type="hidden" value="B">B</a></li>
-				<li><a id="C" href="#C"><input name="eKeyWord" type="hidden" value="C">C</a></li>
-				<li><a id="D" href="#D"><input name="eKeyWord" type="hidden" value="D">D</a></li>
-				<li><a id="E" href="#E"><input name="eKeyWord" type="hidden" value="E">E</a></li>
-				<li><a id="F" href="#F"><input name="eKeyWord" type="hidden" value="F">F</a></li>
-				<li><a id="G" href="#G"><input name="eKeyWord" type="hidden" value="G">G</a></li>
-				<li><a id="H" href="#H"><input name="eKeyWord" type="hidden" value="H">H</a></li>
-				<li><a id="I" href="#I"><input name="eKeyWord" type="hidden" value="I">I</a></li>
-				<li><a id="J" href="#J"><input name="eKeyWord" type="hidden" value="J">J</a></li>
-				<li><a id="K" href="#K"><input name="eKeyWord" type="hidden" value="K">K</a></li>
-				<li><a id="L" href="#L"><input name="eKeyWord" type="hidden" value="L">L</a></li>
-				<li><a id="M" href="#M"><input name="eKeyWord" type="hidden" value="M">M</a></li>
-				<li><a id="N" href="#N"><input name="eKeyWord" type="hidden" value="N">N</a></li>
-				<li><a id="O" href="#O"><input name="eKeyWord" type="hidden" value="O">O</a></li>
-				<li><a id="P" href="#P"><input name="eKeyWord" type="hidden" value="P">P</a></li>
-				<li><a id="Q" href="#Q"><input name="eKeyWord" type="hidden" value="Q">Q</a></li>
-				<li><a id="R" href="#R"><input name="eKeyWord" type="hidden" value="R">R</a></li>
-				<li><a id="S" href="#S"><input name="eKeyWord" type="hidden" value="S">S</a></li>
-				<li><a id="T" href="#T"><input name="eKeyWord" type="hidden" value="T">T</a></li>
-				<li><a id="U" href="#U"><input name="eKeyWord" type="hidden" value="U">U</a></li>
-				<li><a id="V" href="#V"><input name="eKeyWord" type="hidden" value="V">V</a></li>
-				<li><a id="W" href="#W"><input name="eKeyWord" type="hidden" value="W">W</a></li>
-				<li><a id="X" href="#X"><input name="eKeyWord" type="hidden" value="X">X</a></li>
-				<li><a id="Y" href="#Y"><input name="eKeyWord" type="hidden" value="Y">Y</a></li>
-				<li class="last "><a id="Z" href="#Z"><input name="eKeyWord" type="hidden" value="Z">Z</a></li>
-			</ul>
-		</li>
-	</ul>
-</div>
-
-<div class="box2">
-	<p class="h3 mb0 resultTxt">"<strong>ㄱ</strong>" 검색 결과 "<strong class="fc_red">152</strong>"건의 정보가 검색되었습니다.</p>
-</div>
-
-<div class="row ecWordCont">
-	<div class="col m4 s12">
-		<div class="box1">
-			<ul class="boxInfo" id="wordList" tabindex="0">
-				<li class="on"><a class="item" href="#" data-value="1">가계부실위험지수(HDRI)</a></li><li><a class="item" href="#" data-value="2">가계수지</a></li><li><a class="item" href="#" data-value="3">가계순저축률</a></li><li><a class="item" href="#" data-value="4">가계신용통계</a></li><li><a class="item" href="#" data-value="5">가계처분가능소득</a></li><li><a class="item" href="#" data-value="6">가교은행</a></li><li><a class="item" href="#" data-value="7">가동률</a></li><li><a class="item" href="#" data-value="8">가변예치의무제도</a></li><li><a class="item" href="#" data-value="9">가산금리</a></li><li><a class="item" href="#" data-value="10">가상통화</a></li><li><a class="item" href="#" data-value="11">가상통화공개(ICO)</a></li><li><a class="item" href="#" data-value="12">간접금융/직접금융</a></li><li><a class="item" href="#" data-value="13">간접세/직접세</a></li><li><a class="item" href="#" data-value="14">감독자협의회</a></li><li><a class="item" href="#" data-value="15">감응도계수</a></li><li><a class="item" href="#" data-value="16">갑기금(Capital A)</a></li><li><a class="item" href="#" data-value="17">거시건전성 정책</a></li><li><a class="item" href="#" data-value="18">거액결제시스템</a></li><li><a class="item" href="#" data-value="19">거액익스포저 규제</a></li><li><a class="item" href="#" data-value="20">결제</a></li><li><a class="item" href="#" data-value="21">결제리스크</a></li><li><a class="item" href="#" data-value="22">결제부족자금 공동분담제</a></li><li><a class="item" href="#" data-value="23">결제완결성</a></li><li><a class="item" href="#" data-value="24">겸업주의/전업주의</a></li><li><a class="item" href="#" data-value="25">경기</a></li><li><a class="item" href="#" data-value="26">경기동향지수(경기확산지수)</a></li><li><a class="item" href="#" data-value="27">경기순응성</a></li><li><a class="item" href="#" data-value="28">경기조절정책/경제안정화정책</a></li><li><a class="item" href="#" data-value="29">경기종합지수</a></li><li><a class="item" href="#" data-value="30">경상수지</a></li><li><a class="item" href="#" data-value="31">경영실태평가/은행경영실태등급평가제도</a></li><li><a class="item" href="#" data-value="32">경영지도비율</a></li><li><a class="item" href="#" data-value="33">경영평가지표</a></li><li><a class="item" href="#" data-value="34">경제성장률</a></li><li><a class="item" href="#" data-value="35">경제심리지수</a></li><li><a class="item" href="#" data-value="36">경제협력개발기구(OECD)</a></li><li><a class="item" href="#" data-value="37">경제활동인구/비경제활동인구/경제활동참가율</a></li><li><a class="item" href="#" data-value="38">경제후생지표</a></li><li><a class="item" href="#" data-value="39">경직적 물가지수</a></li><li><a class="item" href="#" data-value="40">계절변동조정시계열</a></li><li><a class="item" href="#" data-value="41">계좌대체</a></li><li><a class="item" href="#" data-value="42">고객확인절차(KYC)</a></li><li><a class="item" href="#" data-value="43">고용률</a></li><li><a class="item" href="#" data-value="44">고용보조지표</a></li><li><a class="item" href="#" data-value="45">고용유발효과/취업유발효과</a></li><li><a class="item" href="#" data-value="46">고정금리</a></li><li><a class="item" href="#" data-value="47">고정금리부채권(SB)</a></li><li><a class="item" href="#" data-value="48">고정분류여신</a></li><li><a class="item" href="#" data-value="49">고정이하여신비율</a></li><li><a class="item" href="#" data-value="50">고정자본소모</a></li><li><a class="item" href="#" data-value="51">고정환율제도/자유변동환율제도</a></li><li><a class="item" href="#" data-value="52">고통지수</a></li><li><a class="item" href="#" data-value="53">골디락스경제</a></li><li><a class="item" href="#" data-value="54">공개시장운영</a></li><li><a class="item" href="#" data-value="55">공공재</a></li><li><a class="item" href="#" data-value="56">공급사용표(SUT)</a></li><li><a class="item" href="#" data-value="57">공급탄력성</a></li><li><a class="item" href="#" data-value="58">공매도</a></li><li><a class="item" href="#" data-value="59">관리변동환율제도</a></li><li><a class="item" href="#" data-value="60">관리통화제도</a></li><li><a class="item" href="#" data-value="61">교환사채(EB)</a></li><li><a class="item" href="#" data-value="62">교환성 통화</a></li><li><a class="item" href="#" data-value="63">구매력평가환율</a></li><li><a class="item" href="#" data-value="64">구속성예금</a></li><li><a class="item" href="#" data-value="65">구인배율</a></li><li><a class="item" href="#" data-value="66">구제금융</a></li><li><a class="item" href="#" data-value="67">구조적 이익률</a></li><li><a class="item" href="#" data-value="68">국가경쟁력지수</a></li><li><a class="item" href="#" data-value="69">국가신용등급</a></li><li><a class="item" href="#" data-value="70">국가채무</a></li><li><a class="item" href="#" data-value="71">국고금 실시간 전자이체</a></li><li><a class="item" href="#" data-value="72">국고대리점</a></li><li><a class="item" href="#" data-value="73">국고수표</a></li><li><a class="item" href="#" data-value="74">국고전산망</a></li><li><a class="item" href="#" data-value="75">국내공급물가지수</a></li><li><a class="item" href="#" data-value="76">국내신용</a></li><li><a class="item" href="#" data-value="77">국내총생산(GDP)</a></li><li><a class="item" href="#" data-value="78">국내총투자율</a></li><li><a class="item" href="#" data-value="79">국민계정체계(SNA)</a></li><li><a class="item" href="#" data-value="80">국민대차대조표</a></li><li><a class="item" href="#" data-value="81">국민부담률</a></li><li><a class="item" href="#" data-value="82">국민소득</a></li><li><a class="item" href="#" data-value="83">국민소득 3면 등가의 법칙</a></li><li><a class="item" href="#" data-value="84">국민처분가능소득</a></li><li><a class="item" href="#" data-value="85">국민총소득(GNI)</a></li><li><a class="item" href="#" data-value="86">국부펀드</a></li><li><a class="item" href="#" data-value="87">국외순수취경상이전</a></li><li><a class="item" href="#" data-value="88">국외순수취요소소득</a></li><li><a class="item" href="#" data-value="89">국외저축</a></li><li><a class="item" href="#" data-value="90">국제결제은행(BIS)</a></li><li><a class="item" href="#" data-value="91">국제금융시장</a></li><li><a class="item" href="#" data-value="92">국제금융중심지</a></li><li><a class="item" href="#" data-value="93">국제산업연관표</a></li><li><a class="item" href="#" data-value="94">국제수지(BOP)</a></li><li><a class="item" href="#" data-value="95">국제수지표</a></li><li><a class="item" href="#" data-value="96">국제원유가격</a></li><li><a class="item" href="#" data-value="97">국제통화기금(IMF)</a></li><li><a class="item" href="#" data-value="98">국제투자대조표(IIP)</a></li><li><a class="item" href="#" data-value="99">국제회계기준</a></li><li><a class="item" href="#" data-value="100">국채</a></li><li><a class="item" href="#" data-value="101">규모의 경제</a></li><li><a class="item" href="#" data-value="102">규제 샌드박스</a></li><li><a class="item" href="#" data-value="103">그램-리치-블라일리법</a></li><li><a class="item" href="#" data-value="104">그린본드</a></li><li><a class="item" href="#" data-value="105">그림자 금융</a></li><li><a class="item" href="#" data-value="106">근원인플레이션율</a></li><li><a class="item" href="#" data-value="107">글래스-스티걸법</a></li><li><a class="item" href="#" data-value="108">글로벌가치사슬(GVC)</a></li><li><a class="item" href="#" data-value="109">글로벌금융안전망</a></li><li><a class="item" href="#" data-value="110">금리선물</a></li><li><a class="item" href="#" data-value="111">금리스왑</a></li><li><a class="item" href="#" data-value="112">금리자유화</a></li><li><a class="item" href="#" data-value="113">금리평가이론</a></li><li><a class="item" href="#" data-value="114">금본위제</a></li><li><a class="item" href="#" data-value="115">금산분리</a></li><li><a class="item" href="#" data-value="116">금융 하부구조</a></li><li><a class="item" href="#" data-value="117">금융EDI</a></li><li><a class="item" href="#" data-value="118">금융공황</a></li><li><a class="item" href="#" data-value="123">금융불안지수</a></li><li><a class="item" href="#" data-value="119">금융사이클</a></li><li><a class="item" href="#" data-value="120">금융시스템 상호연계성</a></li><li><a class="item" href="#" data-value="121">금융안정</a></li><li><a class="item" href="#" data-value="122">금융안정위원회(FSB)</a></li><li><a class="item" href="#" data-value="124">금융연관비율(골드스미스비율)</a></li><li><a class="item" href="#" data-value="125">금융의 증권화</a></li><li><a class="item" href="#" data-value="126">금융의 탈중개화</a></li><li><a class="item" href="#" data-value="127">금융의 탈집중화</a></li><li><a class="item" href="#" data-value="128">금융제도</a></li><li><a class="item" href="#" data-value="129">금융중개지원대출제도</a></li><li><a class="item" href="#" data-value="130">금융지주회사</a></li><li><a class="item" href="#" data-value="131">금융채</a></li><li><a class="item" href="#" data-value="132">금융통화위원회</a></li><li><a class="item" href="#" data-value="133">금전신탁</a></li><li><a class="item" href="#" data-value="134">기대인플레이션</a></li><li><a class="item" href="#" data-value="135">기본자본(Tier 1)</a></li><li><a class="item" href="#" data-value="136">기업·개인간(B2C) 지급결제시스템</a></li><li><a class="item" href="#" data-value="137">기업간(B2B) 지급결제시스템</a></li><li><a class="item" href="#" data-value="138">기업경기실사지수(BSI)</a></li><li><a class="item" href="#" data-value="139">기업공개</a></li><li><a class="item" href="#" data-value="140">기업어음(CP)</a></li><li><a class="item" href="#" data-value="141">기저효과</a></li><li><a class="item" href="#" data-value="142">기준금리</a></li><li><a class="item" href="#" data-value="143">기준순환일</a></li><li><a class="item" href="#" data-value="144">기준환율</a></li><li><a class="item" href="#" data-value="145">기초가격</a></li><li><a class="item" href="#" data-value="146">기축통화</a></li><li><a class="item" href="#" data-value="147">기타기본자본(Additional Tier 1)</a></li><li><a class="item" href="#" data-value="148">기펜재</a></li><li><a class="item" href="#" data-value="149">기회비용</a></li><li><a class="item" href="#" data-value="150">긴급수입제한조치</a></li><li><a class="item" href="#" data-value="151">긴축정책</a></li><li><a class="item" href="#" data-value="152">꼬리위험</a></li>
-			</ul>
+	<div class="c">
+		<span class="t">경제용어</span>	
+		<div class="keyword-set">
+			<span class="keyword">
+				<input type="text" name="query" id="query" value="" class="w50p inpt_txt" title="검색 키워드 입력" placeholder="키워드를 입력해 주세요" autocomplete="off">
+			</span>
+			<button type="button" class="search" onclick="" aria-label="검색"></button>
 		</div>
 	</div>
-	<div class="col m8 s12">
-		<div class="box1 boxInfoRt">
-			<!-- <div class="boxInfo" id="wordCont" tabindex="0"><p class="refer">※ 왼쪽 경제용어를 선택해 주세요.</p></div> -->
-			<div class="boxInfo boxInfoR" id="wordCont" tabindex="0">가구의 소득 흐름은 물론 금융 및 실물 자산까지 종합적으로 고려하여 가계부채의 부실위험을 평가하는 지표로, 가계의 채무상환능력을 소득 측면에서 평가하는 원리금상환비율(DSR; Debt Service Ratio)과 자산 측면에서 평가하는 부채/자산비율(DTA; Debt To Asset Ratio)을 결합하여 산출한 지수이다. 가계부실위험지수는 가구의 DSR과 DTA가 각각 40%, 100%일 때 100의 값을 갖도록 설정되어 있으며, 동 지수가 100을 초과하는 가구를 ‘위험가구’로 분류한다. 위험가구는 소득 및 자산 측면에서 모두 취약한 ‘고위험가구’, 자산 측면에서 취약한 ‘고DTA가구’, 소득 측면에서 취약한 ‘고DSR가구’로 구분할 수 있다. 다만 위험 및 고위험 가구는 가구의 채무상환능력 취약성 정도를 평가하기 위한 것이며 이들 가구가 당장 채무상환 불이행, 즉 임계상황에 직면한 것을 의미하지 않는다.</div>
-			<div class="box3 boxInfoRel" tabindex="0"><h4>연관검색어</h4><a href="javascript:void('0');" data-value="570">총부채원리금상환비율(DSR)</a></div>
+	<div class="keyWordBd">
+		<ul>
+			<li><span class="keyWdHd">한글순</span>
+				<ul id="keyWdKor" class="inline keyword key_kor">
+					<li class="on">
+						<a id="A1" href="#A1"><input name="kKeyWord" type="hidden" value="ㄱ" title="선택됨">ㄱ</a>
+					</li>
+					<li><a id="B1" href="#B1"><input name="kKeyWord" type="hidden" value="ㄴ">ㄴ</a></li>
+					<li><a id="C1" href="#C1"><input name="kKeyWord" type="hidden" value="ㄷ">ㄷ</a></li>
+					<li><a id="D1" href="#D1"><input name="kKeyWord" type="hidden" value="ㄹ">ㄹ</a></li>
+					<li><a id="E1" href="#E1"><input name="kKeyWord" type="hidden" value="ㅁ">ㅁ</a></li>
+					<li><a id="F1" href="#F1"><input name="kKeyWord" type="hidden" value="ㅂ">ㅂ</a></li>
+					<li><a id="G1" href="#G1"><input name="kKeyWord" type="hidden" value="ㅅ">ㅅ</a></li>
+					<li><a id="H1" href="#H1"><input name="kKeyWord" type="hidden" value="ㅇ">ㅇ</a></li>
+					<li><a id="I1" href="#I1"><input name="kKeyWord" type="hidden" value="ㅈ">ㅈ</a></li>
+					<li><a id="J1" href="#J1"><input name="kKeyWord" type="hidden" value="ㅊ">ㅊ</a></li>
+					<li><a id="K1" href="#K1"><input name="kKeyWord" type="hidden" value="ㅋ">ㅋ</a></li>
+					<li><a id="L1" href="#L1"><input name="kKeyWord" type="hidden" value="ㅌ">ㅌ</a></li>
+					<li><a id="M1" href="#M1"><input name="kKeyWord" type="hidden" value="ㅍ">ㅍ</a></li>
+					<li><a id="N1" href="#N1"><input name="kKeyWord" type="hidden" value="ㅎ">ㅎ</a></li>
+				</ul>
+			</li>
+			<li><span class="keyWdHd">알파벳순</span>
+				<ul id="eKeyWord" class="inline keyword">
+					<li><a id="A" href="#A"><input name="eKeyWord" type="hidden" value="A">A</a></li>
+					<li><a id="B" href="#B"><input name="eKeyWord" type="hidden" value="B">B</a></li>
+					<li><a id="C" href="#C"><input name="eKeyWord" type="hidden" value="C">C</a></li>
+					<li><a id="D" href="#D"><input name="eKeyWord" type="hidden" value="D">D</a></li>
+					<li><a id="E" href="#E"><input name="eKeyWord" type="hidden" value="E">E</a></li>
+					<li><a id="F" href="#F"><input name="eKeyWord" type="hidden" value="F">F</a></li>
+					<li><a id="G" href="#G"><input name="eKeyWord" type="hidden" value="G">G</a></li>
+					<li><a id="H" href="#H"><input name="eKeyWord" type="hidden" value="H">H</a></li>
+					<li><a id="I" href="#I"><input name="eKeyWord" type="hidden" value="I">I</a></li>
+					<li><a id="J" href="#J"><input name="eKeyWord" type="hidden" value="J">J</a></li>
+					<li><a id="K" href="#K"><input name="eKeyWord" type="hidden" value="K">K</a></li>
+					<li><a id="L" href="#L"><input name="eKeyWord" type="hidden" value="L">L</a></li>
+					<li><a id="M" href="#M"><input name="eKeyWord" type="hidden" value="M">M</a></li>
+					<li><a id="N" href="#N"><input name="eKeyWord" type="hidden" value="N">N</a></li>
+					<li><a id="O" href="#O"><input name="eKeyWord" type="hidden" value="O">O</a></li>
+					<li><a id="P" href="#P"><input name="eKeyWord" type="hidden" value="P">P</a></li>
+					<li><a id="Q" href="#Q"><input name="eKeyWord" type="hidden" value="Q">Q</a></li>
+					<li><a id="R" href="#R"><input name="eKeyWord" type="hidden" value="R">R</a></li>
+					<li><a id="S" href="#S"><input name="eKeyWord" type="hidden" value="S">S</a></li>
+					<li><a id="T" href="#T"><input name="eKeyWord" type="hidden" value="T">T</a></li>
+					<li><a id="U" href="#U"><input name="eKeyWord" type="hidden" value="U">U</a></li>
+					<li><a id="V" href="#V"><input name="eKeyWord" type="hidden" value="V">V</a></li>
+					<li><a id="W" href="#W"><input name="eKeyWord" type="hidden" value="W">W</a></li>
+					<li><a id="X" href="#X"><input name="eKeyWord" type="hidden" value="X">X</a></li>
+					<li><a id="Y" href="#Y"><input name="eKeyWord" type="hidden" value="Y">Y</a></li>
+					<li class="last "><a id="Z" href="#Z"><input name="eKeyWord" type="hidden" value="Z">Z</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+
+
+<div class="result-box">
+	<p class="resultTxt"><strong class="fc_red">'ㄱ'</strong> 검색 결과 <strong><u>총152</u></strong>건의 정보가 검색되었습니다.</p>
+</div>
+
+<div class="ecWordCont">
+	<div class="con-box">
+		<ul class="box-info" id="wordList" tabindex="0">
+			<li class="on">
+				<a class="item" href="#" data-value="1" title="선택됨">가계부실위험지수(HDRI)</a>
+			</li>
+			<li><a class="item" href="#" data-value="2">가계수지</a></li>
+			<li><a class="item" href="#" data-value="3">가계순저축률</a></li>
+			<li><a class="item" href="#" data-value="4">가계신용통계</a></li>
+			<li><a class="item" href="#" data-value="5">가계처분가능소득</a></li>
+			<li><a class="item" href="#" data-value="6">가교은행</a></li>
+			<li><a class="item" href="#" data-value="7">가동률</a></li>
+			<li><a class="item" href="#" data-value="8">가변예치의무제도</a></li>
+			<li><a class="item" href="#" data-value="9">가산금리</a></li>
+			<li><a class="item" href="#" data-value="10">가상통화</a></li>
+			<li><a class="item" href="#" data-value="11">가상통화공개(ICO)</a></li>
+			<li><a class="item" href="#" data-value="12">간접금융/직접금융</a></li>
+			<li><a class="item" href="#" data-value="13">간접세/직접세</a></li>
+			<li><a class="item" href="#" data-value="14">감독자협의회</a></li>
+			<li><a class="item" href="#" data-value="15">감응도계수</a></li>
+			<li><a class="item" href="#" data-value="16">갑기금(Capital A)</a></li>
+			<li><a class="item" href="#" data-value="17">거시건전성 정책</a></li>
+			<li><a class="item" href="#" data-value="18">거액결제시스템</a></li>
+			<li><a class="item" href="#" data-value="19">거액익스포저 규제</a></li>
+			<li><a class="item" href="#" data-value="20">결제</a></li>
+			<li><a class="item" href="#" data-value="21">결제리스크</a></li>
+			<li><a class="item" href="#" data-value="22">결제부족자금 공동분담제</a></li>
+			<!-- <li><a class="item" href="#" data-value="23">결제완결성</a></li> -->
+		</ul>
+	</div>
+	<div class="boxInfoRt">
+		<div class="boxInfo boxInfoR" >
+			<p class="title"><strong>가계부실위험지수(HDRI)</strong></p>
+			<div id="wordCont" tabindex="0">
+				<p>가구의 소득 흐름은 물론 금융 및 실물 자산까지 종합적으로 고려하여 가계부채의 부실위험을 평가하는 지표로, 가계의 채무상환능력을 소득 측면에서 평가하는 원리금상환비율(DSR; Debt Service Ratio)과 자산 측면에서 평가하는 부채/자산비율(DTA; Debt To Asset Ratio)을 결합하여 산출한 지수이다. 가계부실위험지수는 가구의 DSR과 DTA가 각각 40%, 100%일 때 100의 값을 갖도록 설정되어 있으며, 동 지수가 100을 초과하는 가구를 ‘위험가구’로 분류한다. 위험가구는 소득 및 자산 측면에서 모두 취약한 ‘고위험가구’, 자산 측면에서 취약한 ‘고DTA가구’, 소득 측면에서 취약한 ‘고DSR가구’로 구분할 수 있다. 다만 위험 및 고위험 가구는 가구의 채무상환능력 취약성 정도를 평가하기 위한 것이며 이들 가구가 당장 채무상환 불이행, 즉 임계상황에 직면한 것을 의미하지 않는다.</p>
+			</div>
+		</div>
+		<div class="boxInfoRel" tabindex="0">
+			<h5>연관검색어</h5>
+			<a href="javascript:void('0');" data-value="570">총부채원리금상환비율(DSR)</a>
+			<a href="javascript:void('0');" data-value="570">총부채원리금상환비율(DSR)</a>
 		</div>
 	</div>
 </div>

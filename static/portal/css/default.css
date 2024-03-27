@@ -1339,6 +1339,10 @@ color: #C81720 !important;
 color: #C81720;
 }
 
+.point2 {
+color: #3B63C4;
+}
+
 @font-face {
 font-family: "Material Icons";
 font-style: normal;
@@ -1365,6 +1369,24 @@ background-color: #000;
 content: "";
 }
 
+p.bu-dot {
+position: relative;
+padding-left: 20px;
+}
+p.bu-dot::before {
+position: absolute;
+top: 10px;
+left: 6px;
+width: 4px;
+height: 4px;
+background-color: #4D4D4D;
+border-radius: 50%;
+content: "";
+}
+
+.bu-dot {
+clear: both;
+}
 .bu-dot > li {
 position: relative;
 padding-left: 20px;
@@ -1431,6 +1453,12 @@ content: "";
 color: #757575;
 }
 
+.list-num > li {
+padding-left: 18px;
+text-indent: -18px;
+margin-bottom: 5px;
+}
+
 #main-container {
 /*.bu2 {
 	margin-top: 25px;
@@ -1479,9 +1507,9 @@ width: 16px;
 height: 16px;
 background-image: url(/static/portal/img/ico/ico-caption.png);
 background-color: transparent;
-margin-right: 5px;
+margin-right: 7px;
 border-radius: 0;
-margin-top: 2px;
+margin-top: -3px;
 position: static;
 }
 #main-container h3.h3::after {
@@ -1550,9 +1578,9 @@ width: 16px;
 height: 16px;
 background-image: url(/static/portal/img/ico/ico-caption.png);
 background-color: transparent;
-margin-right: 5px;
+margin-right: 7px;
 border-radius: 0;
-margin-top: 2px;
+margin-top: -3px;
 position: static;
 }
 #main-container .h-caption::after {
@@ -2806,7 +2834,7 @@ margin: 0 -12px;
 }
 @media (max-width: 1199px) {
 .reference-news dl dd ul {
-width: -webkit-max-content;
+width: -moz-max-content;
 width: max-content;
 }
 }
@@ -2939,7 +2967,7 @@ margin: -12px -12px 0;
 }
 @media (max-width: 1199px) {
 .reference-media dl dd ul {
-width: -webkit-max-content;
+width: -moz-max-content;
 width: max-content;
 }
 }
@@ -3102,12 +3130,15 @@ text-rendering: optimizeLegibility;
 -moz-osx-font-smoothing: grayscale;
 font-feature-settings: "liga";
 -webkit-font-feature-settings: "liga";
-font-size: 18px;
-margin: 0 5px 2px 0;
+font-size: 23px;
+margin: 0 5px 0 0;
 }
 
 .help3 {
+position: relative;
+padding-left: 30px;
 color: #4D4D4D;
+font-size: 1rem;
 margin-top: 10px;
 margin-bottom: 5px !important;
 }
@@ -3131,6 +3162,9 @@ font-feature-settings: "liga";
 font-size: 24px;
 margin-right: 8px;
 color: #4D4D4D;
+position: absolute;
+top: 1px;
+left: 0;
 }
 
 .gnb_bg {
