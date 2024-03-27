@@ -3,7 +3,7 @@ table {
 	width: 100%;
 	border-collapse: collapse;
     border-spacing: 0;
-	font-size: rem(18);
+	// font-size: rem(18);
 	color: #1A1A1A;
 	p {
 		margin-bottom: 0 !important;
@@ -23,6 +23,7 @@ table {
 	}
 	table {
 		width: 100%;
+		table-layout: fixed;
 		thead {
 			th {
 				border-bottom: none;
@@ -33,29 +34,41 @@ table {
 			font-weight: 400;
 			background-color: #F2F6FA;			
 			border: 1px solid $bd-color;
-			padding: 14px 0;
+			padding: 12px 0;
 			// & + th {
 			// 	border-left: 1px solid $bd-color;
 			// }
 		}
 		tbody {
 			th {
-				color: #233B76;
+				color: $black;		
+				// color: #233B76;
 				background-color: #F2F6FA;	
 			}
 		}
 		td {
-			padding: 12px 15px;
+			padding: 5px 15px;
+			color: #666;
 			min-height: 55px;
 			border: 1px solid $bd-color;
 			background-color: #fff;
 		}
 	}
 	&.type2 {
+		font-size: rem(18);
+		border-top: 2px solid #182252;
+		th {
+			padding: 14px 0;
+		}
 		tbody {
 			th {
+				padding: 14px 0;
+				color: #233B76;
 				background-color: #fff;
 			}
+		}
+		td {
+			padding: 12px 15px;
 		}
 	}
 	&.m {
@@ -89,6 +102,9 @@ table {
 		text-align: left;
 	}
 	&-tac table tbody td {
+		text-align: center;
+	}
+	&_tac table tbody td {
 		text-align: center;
 	}
 	&-vt table tbody td {
@@ -142,19 +158,47 @@ table {
 	}
 }
 
-
-table li {
-	position: relative;
-	padding-left: 10px;
-	&::before {
-		content: "";
-		display: inline-block;
-		position: absolute;
-		top: 11px;
-		left: 0;
-		background-color: #1A1A1A;
-		width: 4px;
-		height: 4px;
-		border-radius: 50%;
+table {
+	.referList {
+		margin-left: 0;
+		li {
+			padding-left: 0;
+			text-indent: -14px;
+			margin-left: 14px;
+			&::before {
+				display: none;
+			}
+		}
 	}
+	li {
+		position: relative;
+		padding-left: 10px;
+		&::before {
+			content: "";
+			display: inline-block;
+			position: absolute;
+			top: 11px;
+			left: 0;
+			background-color: #1A1A1A;
+			width: 4px;
+			height: 4px;
+			border-radius: 50%;
+		}
+	}	
 }
+
+// table li {
+// 	position: relative;
+// 	padding-left: 10px;
+// 	&::before {
+// 		content: "";
+// 		display: inline-block;
+// 		position: absolute;
+// 		top: 11px;
+// 		left: 0;
+// 		background-color: #1A1A1A;
+// 		width: 4px;
+// 		height: 4px;
+// 		border-radius: 50%;
+// 	}
+// }

@@ -262,6 +262,10 @@
 	}
 	.dataInfoSet {
 		@include dataInfoSet();
+		align-items: flex-end;
+		.type2 {
+			margin-top: -16px;
+		}
 	}	
 	.down {		
 		border-top: 2px solid #000;
@@ -374,7 +378,7 @@
 		}
 	}	
 	.thumb {
-		padding: 4%;
+		padding: 2%;
 		border: 6px solid #e5e5e5;
 		.webzine_photo {
 			width: 100%;
@@ -455,9 +459,9 @@
 		border-radius: 0 0 8px 8px;
 		max-height: 360px;
 		white-space: pre-line;
-		> p {
-			white-space: pre-line;
-		}
+		// > p {
+		// 	white-space: pre-line;
+		// }
 	}
 	.desc{
 		font-size: rem(16);
@@ -679,6 +683,7 @@
 .view {
 	clear: both;
 	font-size: rem(18);
+	// font-size: rem(16);
 	border-top: 2px solid #222;
 	border-bottom:1px solid $bd-color;
 	margin-bottom:30px;
@@ -741,6 +746,12 @@
 		}
 		&+dl>*{
 			border-top:none;
+		}
+	}
+	.total-num {
+		margin-top: 20px;
+		em {
+			font-weight: 600;
 		}
 	}
 	textarea{
@@ -837,5 +848,48 @@
 		dt{
 			height:53px;
 		}
+	}
+}
+
+
+@include breakpoint($sm) {
+	.view > dl {
+		display: block;
+		border-collapse:inherit;
+   		table-layout: inherit;
+		dt {
+			display: block;
+			width: 100%;
+			max-width: none;
+			padding-left: 0;
+			padding: 8px 0;
+		}
+		dd {
+			display: block;
+			width: 100%;
+			max-width: none;
+			padding: 8px 0;
+			&::after {
+				display: none;
+			}
+			input[type=text] {
+				width: 100%;;
+			}
+			.tel-set {
+				select {
+					width: 90px;
+				}
+				input {
+					width: calc(50% - 160px);
+				}
+			}
+			textarea {
+				height: 200px !important;
+			}
+		}
+	}
+	.view .help3 {
+		font-size: rem(16);
+		margin-bottom: 10px !important;
 	}
 }

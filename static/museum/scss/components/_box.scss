@@ -33,6 +33,9 @@
 	margin:-7px 0 !important;
 	font-weight: 500;
 	padding:10px;
+	& + p {
+		margin: -16px 0 -7px !important;
+	}
 	@include breakpoint($sm) {
 		padding:0;
 	}
@@ -41,6 +44,9 @@
 	}
 	.type{
 		font-size:1.35em;display:block;
+	}
+	em {
+		color: #1a1a1a;
 	}
 	strong {
 		font-weight: 600;

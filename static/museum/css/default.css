@@ -1365,13 +1365,30 @@ background-color: #000;
 content: "";
 }
 
-.bu-dot {
+.bu-dot > li {
 position: relative;
 padding-left: 10px;
 }
-.bu-dot::before {
+.bu-dot > li::before {
 position: absolute;
 top: 12px;
+left: 0;
+width: 3px;
+height: 3px;
+background-color: #b0b0b0;
+border-radius: 50%;
+content: "";
+}
+
+.bu-dot2 {
+position: relative;
+padding-left: 8px;
+color: #666;
+font-size: 14px;
+}
+.bu-dot2 li::before {
+position: absolute;
+top: 9px;
 left: 0;
 width: 3px;
 height: 3px;
@@ -1414,11 +1431,6 @@ content: "";
 color: #757575;
 }
 
-#main-container {
-/*.bu2 {
-	margin-top: 25px;
-}*/
-}
 #main-container h2 {
 color: #131547;
 font-size: 2.25rem;
@@ -1429,6 +1441,7 @@ margin-bottom: 20px;
 margin-top: 22px;
 }
 #main-container h3 {
+clear: both;
 color: #131547;
 font-size: 1.75rem;
 font-weight: 500;
@@ -1446,10 +1459,12 @@ margin-right: 10px;
 margin-bottom: 4px;
 }
 #main-container h3.h3 {
+margin: 40px 0 16px;
 color: #2F4F9D;
 font-size: 1.25rem;
 font-weight: 500;
-margin: 40px 0 10px;
+margin: 20px 0 10px;
+padding-left: 0;
 }
 #main-container h3.h3::before {
 content: "";
@@ -1461,6 +1476,11 @@ background-image: url(/static/portal/img/ico/ico-caption.png);
 background-color: transparent;
 margin-right: 5px;
 border-radius: 0;
+margin-top: 2px;
+position: static;
+}
+#main-container h3.h3::after {
+display: none;
 }
 #main-container .bu2,
 #main-container h4 {
@@ -1469,13 +1489,69 @@ font-size: 1.25rem;
 font-weight: 500;
 margin-top: 18px;
 margin-bottom: 5px;
-/*&:first-child {
-	margin-top: 0;
-}*/
+}
+#main-container h5 {
+position: relative;
+font-size: 1.125rem;
+color: #1a1a1a;
+font-weight: 500;
+padding-left: 24px;
+margin-bottom: 5px;
+}
+#main-container h5::before {
+content: "";
+display: inline-block;
+width: 14px;
+height: 14px;
+background: #39A0FF;
+border-radius: 4px;
+position: absolute;
+top: 7px;
+left: 0;
+}
+#main-container h6 {
+font-size: 1rem;
+font-weight: 400;
+margin-bottom: 5px;
+}
+#main-container h6::before {
+content: "";
+display: inline-block;
+width: 4px;
+height: 4px;
+background-color: #131547;
+border-radius: 50%;
+margin: 0 5px 4px 0;
+}
+#main-container h5.h-caption::before {
+margin-top: 0 !important;
+margin-bottom: 3px;
+}
+#main-container .h-caption {
+color: #2F4F9D;
+font-size: 1.25rem;
+font-weight: 500;
+margin: 20px 0 10px;
+padding-left: 0;
+}
+#main-container .h-caption::before {
+content: "";
+display: inline-block;
+vertical-align: middle;
+width: 16px;
+height: 16px;
+background-image: url(/static/portal/img/ico/ico-caption.png);
+background-color: transparent;
+margin-right: 5px;
+border-radius: 0;
+margin-top: 2px;
+position: static;
+}
+#main-container .h-caption::after {
+display: none;
 }
 
 ul.bu > li {
-margin: 4px 0;
 clear: both;
 position: relative;
 padding-left: 13px;
@@ -1490,17 +1566,14 @@ background-color: #131547;
 border-radius: 50%;
 content: "";
 }
-ul.bu > li ul {
+ul.bu > li > ul {
 font-size: 1rem;
 }
-ul.bu > li ul li {
+ul.bu > li > ul > li {
 position: relative;
 padding-left: 9px;
-/*&:before {
-	color: #757575;
-}*/
 }
-ul.bu > li ul li::before {
+ul.bu > li > ul > li::before {
 position: absolute;
 top: 14px;
 left: 0;
@@ -1509,8 +1582,29 @@ height: 1px;
 background-color: #757575;
 content: "";
 }
+ul.bu > li > ul.referList {
+margin-left: 0;
+}
+ul.bu > li > ul.referList li:before {
+display: none;
+}
 ul.bu.b > li {
 font-weight: 500;
+}
+
+p.bu {
+position: relative;
+padding-left: 13px;
+}
+p.bu::before {
+position: absolute;
+top: 10px;
+left: 0;
+width: 4px;
+height: 4px;
+background-color: #131547;
+border-radius: 50%;
+content: "";
 }
 
 .bu-dash::before {
@@ -2148,7 +2242,7 @@ margin: 0 6px;
 }
 }
 
-/* 추가된 내용, hym */
+/* 추가된 설정 */
 #header {
 position: relative;
 background: #131547;
@@ -2459,96 +2553,6 @@ width: 83.630952381%;
 #main-container .sh-db + .content {
 width: 85.7738095238%;
 }
-}
-#main-container.refer_wrap {
-position: relative;
-}
-#main-container.refer_wrap::before {
-content: "";
-display: inline-block;
-width: 1px;
-height: calc(100% + 30px + 50px);
-background-color: #E5E5E5;
-position: absolute;
-top: -30px;
-z-index: 9;
-right: 276px;
-visibility: visible;
-}
-@media (min-width: 1200px) {
-#main-container.refer_wrap .content {
-float: left;
-width: 81.4285714286%;
-}
-}
-@media (min-width: 1200px) {
-#main-container.refer_wrap .refer_right {
-float: right;
-width: 240px;
-}
-}
-#main-container.refer_wrap .refer_right > dl dt {
-font-weight: 500;
-color: #222;
-margin-bottom: 20px;
-}
-#main-container.refer_wrap .refer_right > dl dt::before {
-content: "";
-display: inline-block;
-vertical-align: middle;
-width: 20px;
-height: 21px;
-background: url(/static/portal/img/ico/ico-reference.png);
-margin: 0 6px 0 0;
-}
-#main-container.refer_wrap .refer_right > dl dd.data {
-border-bottom: 1px solid #E5E5E5;
-padding-bottom: 16px;
-margin-bottom: 16px;
-}
-#main-container.refer_wrap .refer_right > dl dd.data a {
-color: #666;
-font-size: 0.875rem;
-}
-#main-container.refer_wrap .refer_right > dl dd.data a::before {
-content: "";
-display: inline-block;
-width: 4px;
-height: 4px;
-background-color: #666;
-border-radius: 50%;
-margin: 0 7px 2px 0;
-}
-#main-container.refer_wrap .refer_right > dl dd.file a {
-position: relative;
-color: #1A1A1A;
-font-size: 0.875rem;
-display: block;
-padding: 8px 34px 8px 12px;
-background-color: #F2F6FA;
-border-radius: 4px;
-}
-#main-container.refer_wrap .refer_right > dl dd.file a::after {
-content: "";
-display: inline-block;
-width: 12px;
-height: 17px;
-background: url(/static/portal/img/ico/ico_attach_file.png) 50% no-repeat;
-position: absolute;
-top: 50%;
-margin-top: -8px;
-right: 12px;
-}
-#main-container.refer_wrap .refer_right > dl dd.file a::before {
-content: "";
-display: inline-block;
-float: right;
-width: 1px;
-height: 100%;
-background-color: #B1C1E7;
-}
-#main-container.refer_wrap .refer_right > dl dd.file li {
-margin-bottom: 4px;
 }
 
 .total-nav {
@@ -3056,16 +3060,9 @@ outline-offset: 2px;
 
 /* 연관자료 */
 .reference {
-clear: both;
-width: 100%;
-margin-top: 60px;
+margin-top: 30px;
 padding: 50px 120px;
 background-color: #F2F6FA;
-}
-.reference::before {
-content: "";
-clear: both;
-width: 100%;
 }
 @media (max-width: 1199px) {
 .reference {
@@ -3509,9 +3506,25 @@ display: block;
 }
 }
 
-@media (min-width: 1200px) {
+.visible-xs,
+.visible-sm,
+.visible-md,
+.visible-lg {
+display: none !important;
+}
+
+.xs-block,
+.sm-block,
+.md-block {
+display: inline;
+}
+
+@media (min-width: 750px) {
 .hidden-lg {
 display: none !important;
+}
+.visible-md {
+display: block !important;
 }
 }
 @media (max-width: 1199px) {
@@ -3523,7 +3536,84 @@ display: none !important;
 .hidden-sm {
 display: none !important;
 }
+.visible-sm {
+display: inline-block !important;
 }
+}
+.help::before {
+content: "\e88e";
+font-family: "Material Icons Outlined";
+font-weight: normal;
+font-style: normal;
+display: inline-block;
+line-height: 1;
+vertical-align: text-bottom;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+font-feature-settings: "liga";
+-webkit-font-feature-settings: "liga";
+}
+
+.help2 {
+color: #C81720;
+margin-top: 10px;
+margin-bottom: 5px !important;
+font-size: 1rem;
+}
+.help2::before {
+content: "\e88e";
+font-family: "Material Icons Outlined";
+font-weight: normal;
+font-style: normal;
+display: inline-block;
+line-height: 1;
+vertical-align: text-bottom;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+font-feature-settings: "liga";
+-webkit-font-feature-settings: "liga";
+font-size: 1.125rem;
+margin: 0 5px 2px 0;
+}
+
+.help3 {
+color: #4D4D4D;
+margin-top: 10px;
+margin-bottom: 5px !important;
+font-size: 1rem;
+}
+.help3::before {
+content: "\e88e";
+font-family: "Material Icons Outlined";
+font-weight: normal;
+font-style: normal;
+display: inline-block;
+line-height: 1;
+vertical-align: text-bottom;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+font-feature-settings: "liga";
+-webkit-font-feature-settings: "liga";
+font-size: 1.125rem;
+margin: 0 5px 2px 0;
+color: #4D4D4D;
+}
+
 .gnb_bg {
 display: none;
 }
@@ -4189,7 +4279,7 @@ display: inline;
 }
 
 a {
-color: #222;
+color: #1A1A1A;
 }
 
 html {

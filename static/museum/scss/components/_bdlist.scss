@@ -39,7 +39,7 @@
 			position: relative;
 			padding: 15px 15px 10px 15px;
 			border-bottom: 1px solid #D9D9D9;
-			min-height: 113px;
+			min-height: 86px;
 			@include breakpoint($sm){
 				padding: 15px 8px 10px;
 			}
@@ -80,6 +80,15 @@
 						margin-bottom: 8px;
 						@include line-clamp(3);
 						white-space: inherit;
+					}
+					.ico-notice {
+						display: inline-block;
+						width: 24px;
+						height: 25px;	
+						margin-right: 4px;
+						@include background-image-retina("/static/museum/img/ico/ico-notice", png, auto, 100%);
+						background-repeat: no-repeat;
+						background-position-y: -3px;
 					}
 				}
 				.btns {
@@ -129,6 +138,39 @@
 						.icon {
 							display: inline-block;
 						}
+					}
+				}
+			}
+			.dataInfo {
+				align-items: center;
+				margin-top: 8px;
+				span {
+					display: inline-flex;
+					align-items: center;
+				}
+				.date {
+					color: #767676;
+					&::before {
+						content: "";
+						display: inline-block;
+						vertical-align: middle;
+						width: 16px;
+						height: 16px;
+						background: url(/static/portal/img/ico/ico-date.png) no-repeat;
+						margin-right: 5px;
+					}
+				}
+				.hits {
+					margin-left: 20px;
+					color: #767676;
+					&::before {
+						content: "";
+						display: inline-block;
+						vertical-align: middle;
+						width: 14px;
+						height: 16px;
+						background: url(/static/portal/img/ico/ico-hits.png) no-repeat;
+						margin-right: 5px;
 					}
 				}
 			}
@@ -184,7 +226,19 @@
 							background: url(/static/portal/img/common/arr01_on.png) 50% no-repeat;
 						}
 					}
-				}				
+				}
+				.set {
+					align-items: center;
+					justify-content: flex-start;
+					.ico-lock {
+						display: inline-block;
+						margin-left: 8px;
+						width: 20px;
+						height: 21px;
+						@include background-image-retina("/static/museum/img/ico/ico-lock", png, auto, 100%);
+						background-repeat: no-repeat;
+					}	
+				}			
 			}
 		}
 	}	
@@ -229,127 +283,3 @@
 		margin-left: 4px;
 	}
 }
-
-
-
-//기존 게시판
-// .bdLine {
-// 	> ul {
-// 		> li {	
-// 			position: relative;			
-// 			border-bottom: 1px solid #D9D9D9;
-// 			> .row {
-// 				padding: 15px 15px 10px 15px;
-// 			}
-// 			.row {
-				
-// 				margin-left: 0;
-// 				margin-right: 0;
-// 				.col {
-// 					padding: 0;
-// 				}
-// 			}
-// 			&:hover {
-// 				background-color: #F2F6FA;
-// 			}
-// 			.col {
-// 				float: none;
-// 			}			
-// 			.title {
-// 				color: #222;
-// 				font-size: rem(18);
-// 				width: calc(100% - 250px);
-// 				@include ellipsis();
-// 			}
-// 			.dataInfo {
-// 				margin-top: 20px;
-// 				span {
-// 					display: inline-block;
-// 				}
-// 				.date {
-// 					color: #767676;
-// 					&::before {
-// 						content: "";
-// 						display: inline-block;
-// 						vertical-align: middle;
-// 						width: 16px;
-// 						height: 16px;
-// 						background: url(/static/portal/img/ico/ico-date.png) no-repeat;
-// 						margin-right: 5px;
-// 					}
-// 				}
-// 				.hits {
-// 					margin-left: 20px;
-// 					&::before {
-// 						content: "";
-// 						display: inline-block;
-// 						vertical-align: middle;
-// 						width: 14px;
-// 						height: 16px;
-// 						background: url(/static/portal/img/ico/ico-hits.png) no-repeat;
-// 						margin-right: 5px;
-// 					}
-// 				}
-// 			}
-// 			.icon-pdf {				
-// 				@include fileload();
-// 			}			
-// 		}
-// 		.fileLink {
-// 			position: absolute;
-// 			top: 50%;
-// 			right: 15px;
-// 			width: 328px;
-// 			margin-top: -11px;
-// 			> a {
-// 				float: right;
-// 				padding: 2px 0;
-// 			}
-// 			.fileGroupSet {				
-// 				> a {
-// 					float: right;
-// 					padding: 2px 0;
-// 					@include fileload();
-// 				}
-// 				.fileGoupBox {
-// 					top: 28px;
-// 					z-index: 9;
-// 					ul {
-// 						> li {
-// 							padding: 3px 0;
-// 							> a {						
-// 								&:first-child {
-// 									position: relative;
-// 									width: 100%;
-// 									@include ellipsis();
-// 									.icon-down {
-// 										position: absolute;
-// 										top: 7px;
-// 										right: 0;
-// 										&::before {
-// 											display: none !important;
-// 										}
-// 										&::after {
-// 											content: "";
-// 											display: inline-block;
-// 											vertical-align: middle;
-// 											width: 16px;
-// 											height: 16px;
-// 											background: url(/static/portal/img/ico/ico-down2_off.png) no-repeat;
-// 											margin-right: 8px;
-// 										}
-// 										&:hover {
-// 											&::after {
-// 												background: url(/static/portal/img/ico/ico-down2_on.png) no-repeat;
-// 											}
-// 										}
-// 									}
-// 								}
-// 							}								
-// 						}
-// 					}
-// 				}
-// 			}
-// 		}			
-// 	}
-// }

@@ -29,16 +29,16 @@ $btn: "[class^=b-]";
 	justify-content: center;
 	line-height: 48px;
 	color: #fff;
-	background-color: #3B63C4;
-	border-radius: 6px;
+	background-color: #1A1A1A;
+	border-radius: 4px;
 	padding: 0 10px;
 	&:focus {
 		outline: 1px dashed #fff;
     	outline-offset: -2px;
 	}
 	.btn-set & {
-		height: 50px;
-		line-height: 48px;
+		height: 48px;
+		line-height: 46px;
 		justify-content: center;
 		align-items: center;
 		font-size: rem(18);
@@ -61,7 +61,14 @@ $btn: "[class^=b-]";
 			min-width: 160px;
 		}
 	}
+	&.b-reg,
+	&.b-ok,
+	&.b-confirm,
+	&.b-aply {
+		background: #3B63C4;
+	}
 	&.b-list {
+		background: #3B63C4;
 		&::before {
 			content: "";
 			display: inline-block;
@@ -75,13 +82,19 @@ $btn: "[class^=b-]";
 	&.b-cancel {
 		background-color: #757575;
 	}
-	&.b-del {}	
-	&.b-edit {}
-	&.b-save {
+	&.b-del {
+		background-color: #757575;
+	}	
+	&.b-edit {
 		border: 1px solid $point;
 		background-color: #fff;
 		color: $point;
 	}
+	// &.b-save {
+	// 	border: 1px solid $point;
+	// 	background-color: #fff;
+	// 	color: $point;
+	// }
 	&.b-submit {}
 	&.b-confirm {}
 	&.b-link {
