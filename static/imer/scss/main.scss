@@ -588,15 +588,78 @@
 	}
 	.info-list {
 		ul {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row;
+			justify-content: space-between;
 			li {
+				width: calc(50% - 20px);
+				margin: 20px;
 				a {
+					position: relative;
+					font-size: rem(22);
+					font-weight: 500;
+					display: block;
 					background-color: #fff;
 					border-radius: 16px;
-					padding: 40px;
-					box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.15);
+					padding: 35px;
+					line-height: 1.3;
+					//box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.15);
+					box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);					
+					&::before {
+						content: "";
+						display: inline-block;
+						width: 100px;
+						height: 100px;
+						position: absolute;
+						bottom: 30px;
+						right: 30px;
+						background-repeat: no-repeat;
+						background-position: 50%;
+					}
+					&.i1 {
+						&::before {
+							background-image: url(/static/imer/img/main/ico-info1_off.png);
+						}
+						&:hover {
+							&::before {
+								background-image: url(/static/imer/img/main/ico-info1.png);
+							}
+						}
+					}
+					&.i2 {
+						&::before {
+							background-image: url(/static/imer/img/main/ico-info2_off.png);
+						}
+						&:hover {
+							&::before {
+								background-image: url(/static/imer/img/main/ico-info2.png);
+							}
+						}
+					}
+					&.i3 {
+						&::before {
+							background-image: url(/static/imer/img/main/ico-info3_off.png);
+						}
+						&:hover {
+							&::before {
+								background-image: url(/static/imer/img/main/ico-info3.png);
+							}
+						}
+					}
+					&.i4 {
+						&::before {
+							background-image: url(/static/imer/img/main/ico-info4_off.png);
+						}
+						&:hover {
+							&::before {
+								background-image: url(/static/imer/img/main/ico-info4.png);
+							}
+						}
+					}
 					&:hover {
 						color: #fff;
-						background-color: $point;
+						background-color: $color-point;
 						box-shadow: none;
 					}
 				}

@@ -3,6 +3,503 @@
 @import 'base/variables'; //환경 설정
 @import 'base/color'; // colors
 
-.tsh {
-	
+
+.tsh-wrap {
+	position: relative;
+	margin-top: -30px;
+	.best-tsh {		
+		margin-bottom: 10px;
+		@include breakpoint($lg){
+			position: absolute;
+			top: -102px;
+			right: 0;
+			z-index: 9;
+			width: 280px;
+		}				
+		.best-txt {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 5px;
+			h2 {
+				font-size: rem(16) !important;
+				color: $black;
+				font-weight: 500 !important;
+				margin: 0 !important;
+			}
+		}
+		ul {
+			margin: -4px 0;
+			li {
+				a {
+					display: block;
+					padding: 2px 0;
+					color: #4D4D4D;
+					span {
+						font-size: 14px;
+						color: #fff;
+						font-weight: 300;
+						text-align: center;
+						display: inline-block;
+						width: 20px;
+						height: 20px;
+						border-radius: 2px;
+						background-color: #808080;
+						margin-right: 3px;
+					}
+				}
+				&:nth-child(1),
+				&:nth-child(2),
+				&:nth-child(3) {
+					a {
+						color: $black;
+						span {
+							background-color: $color-point;
+						}
+					}
+				}
+			}
+		}
+		.tab-con {
+			display: none;
+			&.tab1 {
+				display: block;
+			}
+		}
+		.best-box {			
+			position: relative;
+			height: 40px;
+			border: 1px solid #E6E6E6;
+			border-radius: 4px;
+			background-color: #fff;
+			overflow: hidden;
+			&::after {
+				@include font-ico-outline('\e5c5');
+				font-size: 20px;
+				position: absolute;
+				top: 8px;
+				right: 10px;
+			}
+			a {				
+				//line-height: 40px;
+				padding: 8px 10px;
+			}
+			
+		}	
+		.best-layer {
+			display: none;
+			padding: 10px;
+			border: 2px solid $color-point;
+			background-color: #fff;
+			border-radius: 4px;
+			position: absolute;
+			z-index: 9;
+			top: 29px;
+			left: 0;
+			width: 100%;
+			background-color: #fff;
+			
+		}
+	}
+	.tsh {
+		padding: 36px;
+		margin-bottom: 15px;
+		background-color: #F2F6FA;
+		> div {
+		width: 884px;
+		max-width: 100%;
+		margin: 0 auto;
+		}
+		input[type=radio],
+		input[type=checkbox] {
+			width: 18px;
+			height: 18px;
+			& + i {
+				width: 18px;
+				height: 18px;
+			}
+		}
+		input[type=radio] {				
+			& + i {
+				& + span {
+					margin-left: 6px;
+				}
+			}
+			&:checked {
+				& + i {
+					&:before {
+						width: 6px;
+						height: 6px;
+						border: 6px solid #3B63C4;
+					}
+					& + span {
+						color: $point;
+					}
+				}
+			}
+		}
+		input[type=checkbox] {				
+			& + i {
+				margin-left: -17px;
+				& + span {
+					margin-right: 10px;
+				}
+			}
+			&:checked {
+				& + i {
+					&:before {
+					}
+					& + span {
+						color: $point;
+					}
+					&:after {
+						top: 1px;
+						left: 3px;
+					}
+				}
+			}
+		}
+		 .input-set {
+			position: relative;
+			display: flex;
+			.keyword-set {
+				width: 769px;
+				display: flex;
+				align-items: center;
+				background-color: #fff;
+				border-radius: 4px;
+				@include breakpoint($mdw){
+		
+				}
+				@include breakpoint($sm){
+					flex-basis: calc(100% - 100px - 2px);
+				}
+				.keyword {
+					width: calc(100% - 66px);				
+					input[type=text] {
+						width: 100%;
+						border: 0;
+						height: 56px;
+						padding: 10px 24px;
+						@include breakpoint($sm){
+							padding: 5px 15px;
+							height: 40px;
+						}
+					}
+				}		
+				.search {
+					width: 66px;
+					height: 56px;
+					text-align: center;
+					@include breakpoint($sm){
+						width: 40px;
+						height: 40px;
+					}
+					&::before {
+						@include font-ico-outline('\e8b6');
+						font-size: 26px;
+						color: #222;
+					}
+				}
+			}
+			.detailSearchClose {
+				text-align: center;
+				width: 111px;
+				background: #fff;
+				border-radius: 4px;
+				line-height: 56px;
+				margin-left: 2px;
+				&::before {
+					@include font-ico-outline('\e429');
+					font-size: 20px;
+					margin-right: 6px;
+					//color: #fff;
+				}
+				&.active {
+					line-height: 54px;
+					color: $color-point;
+					border: 1px solid $color-point;
+					&::before {
+						color: $color-point;
+					}
+				}
+			}
+			.etc {
+				position: absolute;
+				top: 16px;
+				right: -140px;
+			}
+		 }		
+		.detail-box {
+			display: none;
+			margin-top: 7px;
+			background-color: #fff;
+			border-radius: 4px;
+			padding: 12px 24px 32px;
+			&.active {
+				display: block;
+			}
+			.view-list {
+				dl {
+					display: flex;
+					justify-content: space-between;
+					padding: 14px 0;
+					border-bottom: 1px solid #F1F4FA;
+					dt {
+						display: flex;
+						align-self: center;
+						width: 94px;
+						color: #808080;
+						&::before {
+							content: "";
+							display: inline-block;
+							vertical-align: middle;
+							width: 4px;
+							height: 4px;
+							border-radius: 50%;
+							background: #808080;
+							margin: 9px 11px;
+						}
+					}
+					dd {
+						font-size: 15px;
+						display: flex;
+						align-items: center;
+						color: #4D4D4D;
+						width: calc(100% - 94px);
+						label {
+							margin-right: 8px;
+							&:last-child {
+								margin-right: 0;
+							}
+						}
+						.sh-input {
+							display: flex;
+							align-items: center;
+							label {
+								align-items: center;
+							}
+							input[type=text] {
+								width: 124px !important;
+								height: 32px;
+								border: 1px solid #D9D9D9;
+								border-radius: 4px;
+								background: #fff url(/static/portal/img/ico/ico-calender-g.png) calc(100% - 6px) center no-repeat;
+								padding: 0 30px 0 8px;
+							}
+						}
+					}
+				}
+			}			
+			.tsh-btn {
+				margin-top: 32px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				button {
+					font-weight: 300;
+					border-radius: 4px;
+					min-width: 120px;
+					height: 32px;
+					line-height: 30px;
+					margin: 0 1px;
+					span {
+						vertical-align: middle;
+					}
+					&:before {
+						font-size: 22px;
+						margin-right: 4px;
+						vertical-align: middle;
+					}
+					&.search {
+						color: #fff;
+						background: $point;
+						border: 1px solid $point;
+						&::before {
+							@include font-ico-outline('\e8b6');
+							color: #fff;
+						}
+					}
+					&.reset {
+						color: $color-point;
+						border: 1px solid $color-point;
+						&::before {
+							color: $color-point;
+							@include font-ico("\f053");
+						}
+					}
+					&.close {
+						color: #fff;
+						background-color: #666;
+						&::before {
+							@include font-ico-outline('\e5cd');
+							color: #fff;
+						}
+					}
+				}			
+			}
+		}
+	}
+	.tsh-main {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		@include breakpoint($lg){
+			&::before {			
+				content: "";
+				display: inline-block;
+				width: 1px;
+				height: 100%;
+				background-color: #E6E6E6;
+				position: absolute;
+				top: 0;
+				left: 276px;
+			}
+		}
+		.search-side {
+			display: none;
+			@include breakpoint($lg){
+				display: block;
+				width: 240px;
+				margin-right: 36px;
+				.label-list {
+					label {
+						font-size: rem(18);
+						padding: 15px 0;
+						border-bottom: 1px solid #E6E6E6;
+						input[type=checkbox].checked + i::after, 
+						input[type=checkbox]:checked + i::after {
+							top: 17px;
+						}
+					}
+				}
+				.reset {
+					margin-top: 24px;
+					width: 100%;
+					padding: 4px;
+					text-align: center;
+					font-weight: 400;
+					color: #fff;
+					background-color: #4D4D4D;
+					border-radius: 4px;
+					&::before {
+						@include font-ico-outline("\f053");
+						font-size: 20px;
+						color: #fff;
+						margin-right: 4px;
+					}
+				}
+			}			
+		}
+		.search-main {
+			@include breakpoint($lg){
+				width: calc(100% - 240px - 36px - 36px);
+			}			
+			.search-hgroup {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				border-bottom: 1px solid $black;
+				padding-bottom: 15px;
+				p {
+					&::before {
+						@include font-ico-outline("\e8b6");
+						font-size: 22px;
+						margin-right: 4px;
+						color: #666;
+					}
+					.point {
+						color: #F04D1A;
+					}
+					em {
+						font-weight: 600;
+					}
+				}
+				select {
+					height: 32px;
+				}
+				.submit {
+					color: #fff;
+					background-color: $color-point;
+					border-radius: 4px;
+					height: 32px;
+					padding: 0 12px;
+					vertical-align: middle;
+					&::before {
+						@include font-ico-outline("\e5ca");
+						font-size: 18px;
+						color: #fff; 
+						margin-right: 8px;
+						margin-bottom: 2px;
+					}
+				}
+			}
+			.sh-list {
+				li {
+					padding: 17px 0;
+					border-bottom: 1px solid #C2C2C2;
+					a {
+						> * {
+							display: block;
+						}
+					}
+					.schDesc {
+						display: flex;
+						justify-content: space-between;
+						align-items: center ;
+						.badge {
+							display: inline-block;
+							padding: 3px 8px;
+							color: #fff;
+							font-size: rem(14);
+							font-weight: 300;
+							border-radius: 4px;
+							background: $color-point;
+						}
+						.date {
+							color: #666;
+							font-size: 14px;
+							&::before {
+								content: "";
+								display: inline-block;
+								vertical-align: middle;
+								width: 16px;
+								height: 16px;
+								background: url(/static/portal/img/ico/ico-date.png) no-repeat;
+								margin-right: 5px;
+							}
+						}
+					}
+					.location {
+						font-size: rem(18);
+						font-weight: 500;
+						margin: 12px 0 10px;
+					}					
+					.txt {
+						color: #4D4D4D;
+						@include line-clamp(2);
+						height: 48px;
+					}
+					.keyword {
+						margin: 15px 0;
+						span {
+							color: #666;
+							font-size: 14px;
+							display: inline-block;
+							padding: 2px 10px;
+							border: 1px solid #C2C2C2;
+							border-radius: 30px;
+						}
+					}
+					.link {
+						color: $color-point;
+						font-size: 14px;
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+	mark {
+		background-color: #FFE100;
+	}
 }
