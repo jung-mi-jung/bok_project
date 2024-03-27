@@ -1115,6 +1115,7 @@ display: block;
 }
 
 .lnb-nav {
+position: -webkit-sticky;
 position: sticky;
 top: 48px;
 padding-top: 0;
@@ -4711,6 +4712,7 @@ justify-content: center;
 
 .sh-db {
 margin-bottom: 40px;
+position: -webkit-sticky;
 position: sticky;
 top: 48px;
 }
@@ -6297,6 +6299,7 @@ margin-bottom: 30px;
 }
 }
 .content-row .cont-nav ul {
+position: -webkit-sticky;
 position: sticky;
 top: 48px;
 }
@@ -7114,9 +7117,9 @@ transform: scale(0.67);
 transform-origin: center center;
 }
 [class^=b-].b-edit {
-border: 1px solid #131547;
+border: 2px solid #3B63C4;
 background-color: #fff;
-color: #131547;
+color: #3B63C4;
 }
 [class^=b-].b-link::after {
 content: "\e941";
