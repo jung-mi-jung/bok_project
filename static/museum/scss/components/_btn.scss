@@ -2,17 +2,28 @@
 	margin: 30px 0;
 	text-align: right;
 	position: relative;
-	display: block;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	@include breakpoint($sm) {
+		flex-wrap: wrap;
+	}
 	> *[class^=b-] {
 		margin: 0 6px 6px 0;
+		i {
+			display: inline-block;
+			margin-right: 8px;
+		}
 	}
 	&.c {
+		justify-content: center;
 		text-align: center;		
 		@include breakpoint($lg){
 			margin-top: 80px;
 		}
 	}
 	&.l {
+		justify-content: flex-start;
 		text-align: left;
 		float: left;
 	}
@@ -45,6 +56,10 @@ $btn: "[class^=b-]";
 		@include breakpoint($md) {
 			min-width: 112px;
 		}
+		@include breakpoint($sm) {
+			height: 32px;
+			line-height: 30px;
+		}
 	}
 	&.xs {
 		min-width: 0;
@@ -54,7 +69,9 @@ $btn: "[class^=b-]";
 	}
 	&.sm {
 		min-width: 0;
-		font-size: 12px;
+		// font-size: 12px;
+		font-size: 14px !important;
+    	line-height: 28px;
 	}
 	&.lg {
 		@include breakpoint($lg) {
@@ -66,6 +83,14 @@ $btn: "[class^=b-]";
 	&.b-confirm,
 	&.b-aply {
 		background: #3B63C4;
+	}
+	&.b-fileAdd {
+		background: #3B63C4;
+		color: #fff;
+		height: 32px;
+		i {
+			margin-right: 8px;
+		}
 	}
 	&.b-list {
 		background: #3B63C4;
@@ -80,11 +105,24 @@ $btn: "[class^=b-]";
 		}		
 	}
 	&.b-cancel {
-		background-color: #757575;
+		background-color: #A6A6A6;
 	}
 	&.b-del {
-		background-color: #757575;
+		background: #fff;
+		border: 2px solid #C81720;
+		color: #C81720;
 	}	
+	&.b-fileDel {
+		background: #fff;
+		border: 2px solid #C81720;
+		color: #C81720;
+		height: 32px;
+		i {
+			transform: scale(0.67);
+			transform-origin: center center;
+		}
+		
+	}
 	&.b-edit {
 		border: 1px solid $point;
 		background-color: #fff;

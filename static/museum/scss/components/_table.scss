@@ -3,7 +3,7 @@ table {
 	width: 100%;
 	border-collapse: collapse;
     border-spacing: 0;
-	// font-size: rem(18);
+	font-size: rem(18);
 	color: #1A1A1A;
 	p {
 		margin-bottom: 0 !important;
@@ -41,14 +41,14 @@ table {
 		}
 		tbody {
 			th {
-				color: $black;		
-				// color: #233B76;
-				background-color: #F2F6FA;	
+				color: #1A1A1A;
+				// background-color: #F2F6FA;	
+				background-color: #FAFAFA;
 			}
 		}
 		td {
-			padding: 5px 15px;
-			color: #666;
+			padding: 10px 15px;
+			color: #1A1A1A;
 			min-height: 55px;
 			border: 1px solid $bd-color;
 			background-color: #fff;

@@ -1,0 +1,202 @@
+<div class="formBox">
+	<ul class="step">
+		<li class="ic-certi">
+			<div class="s">
+				<strong class="title">STEP 1</strong>
+				<span>본인인증</span>
+			</div>
+		</li>
+		<li class="ic-agree">
+			<div class="s ">
+				<strong class="title">STEP 2</strong>
+				<span>개인정보수집동의</span>
+			</div>
+		</li>
+		<li class="ic-app active">
+			<div class="s">
+				<strong class="title">STEP 3</strong>
+				<span>정보입력<span class="hidden">(현재단계)</span></span>
+			</div>
+		</li>
+		<li class="ic-end">
+			<div class="s ">
+				<strong class="title">STEP 4</strong>
+				<span>등록완료</span>
+			</div>
+		</li>
+	</ul>
+</div>
+
+
+<form method="" id="" name="" action="">
+	<h3 class="h3">개인정보</h3>
+	<div class="view">
+		<dl>
+			<dt>
+				<span class="req" aria-label="필수입력" role="img"></span>이름
+			</dt>
+			<dd>홍길동</dd>
+		</dl>	
+		<dl>
+			<dt>
+				<span class="req" aria-label="필수입력" role="img"></span>생년월일
+			</dt>
+			<dd>1989-08-14</dd>
+		</dl>	
+		<dl>	
+			<dt>성별</dt>
+			<dd>
+				<div class="row ai-center aply-sex">
+					<label>
+						<input type="radio" value="FM" title="여성">
+						<i></i>여성
+					</label>
+					<label>
+						<input type="radio" value="M" title="남성">
+						<i></i>남성
+					</label>
+				</div>
+			</dd>
+		</dl>
+		<dl>
+			<dt><label for="email1"><span class="req"><span>필수입력</span></span> 이메일</label></dt>
+			<dd>
+				<div class="email-set">
+					<input type="text" name="email1" id="email1" value="" title="이메일 아이디" class="emailId" maxlength="20">
+					@
+					<input type="text" name="email2" id="email2" value="" title="이메일 주소" readonly="readonly" class="emailAddr emailDomainForm" maxlength="20">
+					<label for="sr_email_more" class="hidden">이메일 도메인 선택</label>
+					<select id="sr_email_more" name="" class="input_select select_email_js" title="직접입력 선택시 자동활성화&amp;포커스 이동">
+						<option selected="">메일주소선택</option>
+					
+							<option value="gmail.com">gmail.com</option>
+					
+							<option value="naver.com">naver.com</option>
+					
+							<option value="hanmail.net">hanmail.net</option>
+					
+							<option value="daum.net">daum.net</option>
+					
+							<option value="hotmail.com">hotmail.com</option>
+					
+							<option value="nate.com">nate.com</option>
+					
+							<option value="yahoo.co.kr">yahoo.co.kr</option>
+					
+						<option value="emaildomain_false">직접입력</option>
+					</select>
+				</div>
+				
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				<span class="req" aria-label="필수입력" role="img"></span>
+				<label for="aplyMobile">휴대폰</label>
+			</dt>
+			<dd>
+				<div class="tel-set">
+					<select id="aplyMobile" name="qnaRegBean.mobile1" title="휴대폰번호 앞자리">
+						<option value="">선택</option>
+						<option value="010">010</option>
+					</select>
+					-
+					<input type="text" id="" name="" title="휴대폰 두번째 자리" maxlength="4" class="" />
+					-
+					<input type="text" id="" name="" title="휴대폰 세번째 자리" maxlength="4" class="" />
+				</div>
+			</dd>
+		</dl>
+	</div>
+
+	<h3 class="h3">신청부가정보</h3>
+	<div class="view">
+		<dl>
+			<dt>
+				<label for="aplyLcsn">자격증</label>
+			</dt>
+			<dd>
+				<div class="row ai-center">
+					<input type="text" id="aplyLcsn" />
+				</div>
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				<label for="aplyEdu">학력</label>
+			</dt>
+			<dd>
+				<div class="row ai-center">
+					<input type="text" id="aplyEdu" />
+				</div>
+			</dd>
+		</dl>
+		<dl>
+			<dt>첨부파일</dt>
+			<dd>
+				<div class="row fileSet">
+					<button type="button" class="b-fileAdd sm"><i class="ico-add"></i>추가</button>
+					<div class="row ai-center">
+						<input type="file" />
+						<button type="button" class="b-fileDel sm"><i class="ico-close-rd"></i>삭제</button>
+					</div>
+				</div>
+				<p class="help3">파일은 70MB까지 업로드 가능합니다.</p>
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				<label for="aplyReason">신청사유</label>
+			</dt>
+			<dd>
+				<textarea name="" id="aplyReason"></textarea>
+			</dd>
+		</dl>
+		<dlv class="btn-set">
+			<button type="button" class="b-cancel"><i class="ico-cancel-wh"></i>취소</button>
+			<a href="" class="b-aply"><i class="ico-check-wh"></i>신청하기</a>
+		</dlv>
+	</div>
+
+
+</form>
+
+
+
+<script type="text/javascript">
+	var fileTemp = `<div class="row ai-center">
+						<input type="file" />
+						<button type="button" class="b-fileDel sm"><i class="ico-close-rd"></i>삭제</button>
+					</div>`
+	
+
+	$(function(){
+		//이메일 셀렉트박스 이벤트
+		$('select.select_email_js').change(function() {
+			if ($(this).val()=='emaildomain_false') {
+				$('.emailDomainForm:text[name=email2]').val('');
+				$('.emailDomainForm').attr('readonly',false).focus();
+			}else{
+				$('.emailDomainForm:text[name=email2]').val('');
+				$('.emailDomainForm:text[name=email2]').val($(this).val());
+				$('.emailDomainForm').attr('readonly',true)
+			}
+		});
+
+		//첨부파일 폼 추가 이벤트
+		$(document).on("click", ".b-fileAdd", function(){
+			$(".fileSet").append(fileTemp)
+		});
+
+		//첨부파일 폼 추가 이벤트
+		$(document).on("click", ".b-fileDel", function(){
+			
+			if( $(".fileSet > .row").length > 1 ) {
+				$(this).parent(".row").remove();
+			}
+		});
+
+
+
+	});
+</script>

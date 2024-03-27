@@ -11,7 +11,6 @@
     border: 1px solid #BFBFBF;
     padding: 20px;
 }
-
 .boxTop{
 	border: 7px solid #3B63C4;
 	padding:0 12px;
@@ -37,7 +36,8 @@
 		margin: -16px 0 -7px !important;
 	}
 	@include breakpoint($sm) {
-		padding:0;
+		padding: 6px;
+		margin: -8px 0 -7px !important;
 	}
 	.point{
 		text-decoration:underline;color:#1f497d !important;
@@ -193,6 +193,10 @@
 			border-radius: 0;
 		}
 	}
+}
+.box4 {
+	background-color: gainsboro;
+	border: 6px solid #e5e5e5;
 }
 
 .boxInfoRel{margin-bottom: 0; height: 100px; overflow-y: auto; 

@@ -321,8 +321,10 @@ input {
 	}
 }
 
-/* 신청하기 예약인원*/
-
+/* 신청하기 예약인원 */
+.able-num {
+	padding-left: 8px;
+}
 .aply-num {
 	display: flex;
 	flex-direction: column;
@@ -338,7 +340,6 @@ input {
 			align-items: flex-start;
 			flex-direction: column;
 		}
-		
 	}
 	li {
 		&::before {
@@ -358,12 +359,27 @@ input {
 			display: inline-flex;
 			align-items: center;
 			width: calc(100% - 50px);
+			margin-top: 0;
 		}
 		.able-num {
-			width: 100%;;
+			width: 100%;
 		}
 	}
 }
-.desc-aply {
+.desc-aply, 
+.aply-sex {
 	gap: 20px;
+}
+
+.fileSet{
+	display: flex;	
+	flex-direction: column !important;
+	input[type=file] {
+		height: 36px;
+		font-size: 14px;
+	}
+	> .row {
+		gap: 0 4px;
+		margin-top: 4px;
+	}
 }

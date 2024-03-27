@@ -21,7 +21,13 @@ $(function () {
         'bd-video-type2',
         'bd-blog',
         'faq',
-        '700791'
+        '700791',
+        '700792',
+        '700830',
+        '700831',
+        '700833',
+        '700834',
+        '700124',
     ]
     link.forEach(element => {
         let _s = element.split('/')

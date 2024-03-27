@@ -169,7 +169,8 @@
 			top: 0;
 			width: 100%;
 			height: 100%;
-			background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 82.44%, rgba(0, 0, 0, 0.60) 94.29%);
+			// background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 82.44%, rgba(0, 0, 0, 0.60) 94.29%);
+			background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2) 100%)
 		}
 		.s1-txt-set {
 			position: relative;
@@ -177,10 +178,11 @@
 			width: 100%;
 			max-width: 1680px;
 			padding: 0 50px;
-			margin: 0 auto 300px;
+			margin: 200px auto 0;
 			box-sizing: border-box;
 			@include breakpoint($sm) {
 				padding: 0 20px;
+				margin: -300px auto 0;
 			}
 			br {
 				@include breakpoint($sm) {
@@ -210,13 +212,13 @@
 			text-transform: uppercase;
 			text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
 			@include breakpoint($sm) {
-				font-size: rem(16);
+				font-size: rem(18);
 			}
 		}
 	}
 	&__ctrl {
 		position: absolute;
-		top: 50%;
+		top: 68%;
 		left: 50%;
 		width: 100%;
 		padding: 0 50px;
@@ -229,7 +231,7 @@
 		align-items: center;
 		@include breakpoint($sm) { 
 			padding: 0 20px;
-			top: 40%;		
+			top: 44%;		
 		}
 		
 
@@ -255,6 +257,16 @@
 			transform: translateX(8px);
 			&::before {
 				@include font-ico-outline('\e034');
+				color: #fff;
+			}
+		}
+		.section1-visual__swiper-button-play {
+			display: none;
+			font-size: 24px;
+			margin-top: -8px;
+			transform: translateX(8px);
+			&::before {
+				@include font-ico-outline("\e037");
 				color: #fff;
 			}
 		}
@@ -365,7 +377,7 @@
 		gap: 0 12px;
 		@include breakpoint($smd) {
 			flex-wrap: wrap;
-			gap: 12px;
+			gap: 6px 10px;
 		}
 		i {
 			display: inline-block;
@@ -401,14 +413,13 @@
 
 }
 
-/* section1 게시판 */
+/* section2 게시판 */
 #section2 {
 	padding: 180px 0 200px;
-	overflow-x: hidden;
 	box-sizing: border-box;
 	background: #F2F6FA;
 	@include breakpoint($smd) {
-		padding: 80px 0 100px;
+		padding: 80px 0 0;
 		height: auto;
 	}
 	section {
@@ -431,6 +442,7 @@
 		box-sizing: border-box;
 		@include breakpoint($sm) {
 			padding: 0 20px;
+			margin: 0 auto 40px;
 		}
 	}
 	h3 {
@@ -438,9 +450,9 @@
 		font-size: rem(28);
 		font-weight: 500;
 		color: #1A1A1A;
-		@include breakpoint($sm) {
-			margin-bottom: 84px;
-		}
+		// @include breakpoint($sm) {
+		// 	margin-bottom: 30px;
+		// }
 	}
 }
 .section2-news {
@@ -494,6 +506,9 @@
 		width: 100%;
 		margin-top: 100px;
 	}
+	@include breakpoint($sm) {
+		margin-top: 80px;
+	}
 	.b-more {
 		// right: -50px;
 		// @include breakpoint($smd) {
@@ -509,6 +524,7 @@
 			flex-direction: column;
 			height: auto;
 			border-radius: 16px;
+			background: none;
 		}
 		&::before {
 			content: "";
@@ -523,7 +539,10 @@
 			background: #2F4F9D;
 			border-radius: 16px 0 0 16px;
 			@include breakpoint($sm) {
-				display: none;
+				// display: none;
+				top: 10px;
+				left: -20px;
+				border-radius: 0;
 			}
 		}
 	}
@@ -541,7 +560,8 @@
 		@include breakpoint($sm) {
 			order: 2;
 			width: 100%;
-			padding: 0 20px 50px;
+			margin-top: 80px;
+			padding: 0 0 50px;
 		}
 		.swiper-wrapper {
 			height: auto;
@@ -550,6 +570,7 @@
 			width: 480px;
 			@include breakpoint($sm) {
 				text-align: center;
+				width: 240px;
 			}
 			> * {
 				opacity: 0;
@@ -603,15 +624,20 @@
 			margin-bottom: 72px;
 			margin-right: 15px;
 			@include breakpoint ($sm) {
-				margin-top: -134px;
+				position: absolute;
+				top: -470px;
+				right: 0;
+				margin-top: 0;
+				margin-right: 0;
+				margin-bottom: 0;
 			}
 			.pagination-fraction {
 				display: flex;
 				align-items: center;
 				justify-content: flex-end;
 				@include breakpoint($sm) {
-					justify-content: flex-start;
 					color: #fff;
+					line-height: 1;
 				}
 				span {
 					padding: 0 8px;
@@ -620,11 +646,15 @@
 					color: #1A1A1A;
 					@include breakpoint($sm) {
 						color: #fff;
+						font-size: rem(16);
 					}
 					&.swiper-pagination-current {
 						font-size: rem(28);
 						font-weight: 500;
 						color: #39A0FF;
+						@include breakpoint($sm) {
+							font-size: rem(20);
+						}
 					}
 				}
 			}
@@ -642,6 +672,9 @@
 		.pagination-btm {
 			margin-top: 64px;
 			@include breakpoint($sm) {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
 				margin-top: 30px;
 				text-align: center;
 			}
@@ -679,17 +712,21 @@
 		@include breakpoint($sm) {
 			order: 1;
 			width: 100%;
+			margin: 60px 0 0;
 		}
 		.swiper-slide {
 			width: 330px;
 			height: 440px;
 			transform: scale(0.6363);
-			transform-origin: top;
+			transform-origin: top center;
 			opacity: 0;
 			@include breakpoint($smd) {
 				width: 264px;
 				height: 352px;
 				transform: scale(0.5);
+			}
+			@include breakpoint($sm) {
+				transform: scale(1);
 			}
 			&.swiper-slide-visible{
 				transition: opacity 0.6s, transform 0.2s;
@@ -709,9 +746,11 @@
 			}
 			&.swiper-slide-active {
 				transform: scale(1) translateY(-140px);
-				box-shadow: 0px 16.635px 19.962px 0px rgba(0, 0, 0, 0.15);
 				box-sizing: border-box;
 				opacity: 1;
+				@include breakpoint($sm) {
+					transform: scale(1) translateY(0);
+				}
 				.pdf-down {
 					display: block;
 				}
@@ -723,9 +762,13 @@
 				background-position: center center;
 				background-repeat: no-repeat;
 				background-size: contain;
+				box-shadow: 0px 16.635px 19.962px 0px rgba(0, 0, 0, 0.15);
+				// @include breakpoint($sm) {
+				// 	transform: translateX(15px);
+				// }
 			}
 			.pdf-down {
-				margin-top: 12px;
+				margin-top: 8px;
 				text-align: right;
 				display: none;
 				a {

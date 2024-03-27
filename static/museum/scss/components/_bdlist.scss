@@ -32,6 +32,7 @@
 	}
 }
 
+/* 게시판 목록 */
 .bd-line {
 	clear: both;
 	> ul {		
@@ -243,6 +244,86 @@
 		}
 	}	
 }
+.bd-line.c-type {
+	.list-num {
+		align-items: center;
+		gap:  0 8px;
+		.num {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 33px;
+			font-size: rem(14);
+			padding: 2px 4px;
+			border: 1px solid #b3b3b3;
+			border-radius: 4px;
+			box-sizing: border-box;
+			background: #fff;
+		}
+		.recruit {
+			color: #131547;
+			font-weight: 500;
+		}
+		.firstCome {
+			color: #3B63C4;
+		}
+	}
+	.list-title {
+		align-items: center;
+		justify-content: space-between;
+		gap: 0 8px;
+		margin: 8px 0; 
+		.title {
+			max-width: calc(100% - 70px - 8px); 
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			color: #1A1A1A;
+		}
+		.list-state {
+			i {
+				display: inline-block;
+				width: 20px;
+				height: 20px;
+				margin-right: 2px;
+			}
+			&.ing {
+				color: #131547;
+				text-decoration: underline;
+				i {
+					@include background-image-retina("/static/museum/img/ico/ico-ing", png, auto, 100%);
+				}
+			}
+			&.wait {
+				color: #666;
+				i {
+					@include background-image-retina("/static/museum/img/ico/ico-wait", png, auto, 100%);
+				}
+			}
+			&.done {
+				color: #666;
+				i {
+					@include background-image-retina("/static/museum/img/ico/ico-done", png, auto, 100%);
+				}
+			}
+		}
+	}
+	.alarm {
+		display: flex;
+		align-items: center;
+		gap: 0 8px;
+		color: #666666;
+		i {
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			@include background-image-retina("/static/museum/img/ico/ico-alarm", png, auto, 100%);
+		}
+	}
+}
+
+
+/* 옛날 소스 */
 .bdList {
 	border-top: 2px solid #222;	
 	th,
