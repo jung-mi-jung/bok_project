@@ -193,7 +193,6 @@
 }
 
 .sh-BxSet + .bdList {
-	//border-top: none;
 	margin-top: -20px;
 }
 .bdList {
@@ -212,6 +211,18 @@
 		border-bottom: none;
 		&.no {
 			width: 8%;
+		}
+	}
+	tbody {
+		th {
+			background-color: #FAFAFA;
+		}
+		tr {
+			&:last-child {
+				th {
+					border-bottom: 1px solid $bd-color;
+				}
+			}
 		}
 	}
 	td {

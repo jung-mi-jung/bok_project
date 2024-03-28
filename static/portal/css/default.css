@@ -3166,6 +3166,26 @@ position: absolute;
 top: 1px;
 left: 0;
 }
+.help3.red::before {
+content: "\e000";
+font-family: "Material Icons Outlined";
+font-weight: normal;
+font-style: normal;
+display: inline-block;
+line-height: 1;
+vertical-align: text-bottom;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+font-feature-settings: "liga";
+-webkit-font-feature-settings: "liga";
+color: #C81720;
+margin-top: -1px;
+}
 
 .gnb_bg {
 display: none;

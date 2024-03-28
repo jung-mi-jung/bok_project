@@ -8,46 +8,29 @@
 		@include breakpoint($lg){
 			display: flex;
 			max-width: 100%;
-			width: 767px;
+			width: 1180px;
 			display: flex;
 			flex-direction: row;
 			justify-content: space-around;
 			flex-grow: 1;
 			> li {
-				// flex: 1;
+				position: relative;
 				> a {
 					display: block;
 					width: 100%;
 					white-space:nowrap;
-					width: 100%;
 					color: #fff;
 					text-align: center;
 					height: 72px;
 					line-height: 72px;
-					font-size: rem(24);
+					font-size: rem( 24);
 					font-weight: 500;
-					// padding: 0 .75em;
 					&.on {
 						& + .depth2 {
 							display: flex;
 							justify-content: space-between;
-							background-color: rgba(19, 21, 71, 0.95);
-							&::before,
-							&::after {
-								content: "";
-								display: block;
-								width: 50%;
-								height: 100%;
-								background-color: rgba(19, 21, 71, 0.95);
-								position: absolute;
-								top: 0;
-							}
-							&::before {
-								left: -50%;
-							}
-							&::after {
-								right: -50%;
-							}
+							//background-color: rgba(19, 21, 71, 0.95);		
+							background-color: rgba(255, 255, 255, 0.1);
 						}
 					}
 				}
@@ -73,30 +56,15 @@
 						}
 					}
 				}
-				&.menu01 {
-					.depth2 {
-						> ul {
-							flex-wrap: inherit;
-							> li {
-								flex-basis: calc(100% / 6);
-							}
-						}
-					}
-				}
-				&.menu02 {
-					> ul {
-						width: calc(100% - 240px - 50px);
-					}
-				}
 			}
 			.depth2 {
 				display: none;
 				position: absolute;
-				//top: 60px;
 				top: 72px;
-				left: 0;
-				width: 100%;
-				z-index: 99;								
+				left: 50%;
+				width: 320px;
+				margin-left: -160px;
+				z-index: 999;								
 				> ul {
 					width: 100%;
 					display: flex;
@@ -105,77 +73,26 @@
 					padding-left: 12%;
 					margin: 15px 0;
 					> li {
-						flex-basis: calc(100% / 5);
-						padding: 15px 0;
+						//flex-basis: calc(100% / 5);
+						//padding: 15px 0;
 						> a {
-							display: inline-block;
+							padding: 5px 0;
+							display: block;
 							font-size: rem(20);
-							font-weight: 500;
+							font-weight: 400;
 							color: #fff;
 						}
 						&:hover,
 						&.on,
 						&.active {
 							> a {
+								text-decoration: underline;
 								//color: $point;
 							}
 						}
 					}
-				}
-				.e {
-					width: 376px;
-					padding: 35px 48px;
-					background-color: rgba(177, 193, 231, 0.1);
-					.img {
-						padding-top: 56.2%;
-						display: block;
-						height: 1px;
-						background-repeat: no-repeat;
-						background-position: 50%;
-						background-size: cover;
-					}
-					.txt {
-						width: 100%;
-						@include ellipsis;
-						color: #fff;
-						margin-top: 8px;
-						text-align: center;
-					}
-					a {
-						display: block;
-						& + a {
-							margin-top: 20px;
-						}
-					}
-				}
-			}
-			.depth3 {
-				padding-top: 5px;
-				> ul {
-					> li {
-						> a {
-							position: relative;
-							display: inline-block;
-							color: #B1C1E7;
-							font-weight: 400;
-							padding: 1px 0;
-							&:hover,
-							&.on,
-							&.active {
-								color: #fff;
-								text-decoration: underline;
-							}
-						}
-						&.active {
-							> a {
-								color: #fff;
-								font-weight: 500;
-								text-decoration: underline;
-							}
-						}
-					}
-				}
-			}
+				}				
+			}			
 		}
 	}
 	> button.all-nav-toggle {

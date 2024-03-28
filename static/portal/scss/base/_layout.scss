@@ -1140,6 +1140,13 @@ sup {
 		top: 1px;
 		left: 0;
 	}
+	&.red {
+		&::before {
+			@include font-ico-outline('\e000');
+			color: $red;
+			margin-top: -1px;
+		}
+	}
 }
 
 

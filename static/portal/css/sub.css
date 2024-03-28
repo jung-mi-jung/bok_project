@@ -1669,6 +1669,12 @@ border-bottom: none;
 .bdList th.no {
 width: 8%;
 }
+.bdList tbody th {
+background-color: #FAFAFA;
+}
+.bdList tbody tr:last-child th {
+border-bottom: 1px solid #E5E5E5;
+}
 .bdList td a:hover {
 color: #3B63C4;
 text-decoration: underline;
@@ -5410,6 +5416,117 @@ background-position: calc(100% - 15px) center;
 }
 }
 
+.moneyChoW .moneyCho {
+text-align: center;
+padding: 32px;
+background-color: #F2F6FA;
+}
+.moneyChoW .moneyCho ul {
+width: 780px;
+max-width: 100%;
+overflow: hidden;
+margin: 0 auto;
+}
+.moneyChoW .moneyCho ul li {
+text-align: center;
+float: left;
+width: 25%;
+}
+.moneyChoW .moneyCho ul li label {
+display: inline-block;
+margin-bottom: 8px;
+}
+@media (max-width: 749px) {
+.moneyChoW .moneyCho ul li {
+width: 50%;
+}
+}
+.moneyChoW .moneyCho .moneySch {
+border-top: 1px solid #B1C1E7;
+padding-top: 30px;
+margin-top: 15px;
+}
+.moneyChoW .moneyCho .moneySch div {
+width: 664px;
+max-width: 100%;
+margin: 0 auto;
+text-align: left;
+}
+.moneyChoW .moneyCho .moneySch_box {
+display: flex;
+justify-content: space-between;
+background: #fff;
+border-radius: 4px;
+}
+.moneyChoW .moneyCho .moneySch_box input {
+border: 0;
+width: calc(100% - 60px);
+height: 56px;
+padding: 0 10px;
+}
+.moneyChoW .moneyCho .moneySch_box .b-search {
+width: 60px;
+min-width: 60px;
+height: 56px;
+background: #fff;
+}
+.moneyChoW .moneyCho .moneySch_box .b-search::before {
+content: "\e8b6";
+font-family: "Material Icons Outlined";
+font-weight: normal;
+font-style: normal;
+display: inline-block;
+line-height: 1;
+vertical-align: text-bottom;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+font-feature-settings: "liga";
+font-size: 24px;
+color: #222;
+}
+.moneyChoW .moneybox {
+margin-top: 40px;
+text-align: center;
+font-size: 1.25rem;
+}
+
+.moneybox1 .money-list {
+display: flex;
+justify-content: space-between;
+}
+.moneybox1 .money-list li {
+width: calc(25% - 14px);
+}
+.moneybox1 .money-list li div {
+padding: 24px 32px;
+border-radius: 16px;
+border: 1px solid #BFBFBF;
+}
+.moneybox1 .money-list li p {
+padding: 8px;
+color: #fff;
+font-size: 1.125rem;
+font-weight: 500;
+text-align: center;
+background-color: #131547;
+border-radius: 30px;
+}
+.moneybox1 .money-list li ul {
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+justify-content: space-between;
+}
+.moneybox1 .money-list li ul li {
+width: 50%;
+letter-spacing: 1px;
+}
+
 .bd-line .fileGroupSet,
 .table .fileGroupSet {
 position: relative;
@@ -7624,6 +7741,12 @@ color: #3B63C4;
 font-size: 1.125rem;
 }
 
+.siteList {
+display: flex;
+justify-content: space-between;
+flex-grow: 1;
+margin: 0 -8px;
+}
 @media (max-width: 749px) {
 .siteList {
 display: flex;
@@ -7631,42 +7754,42 @@ flex-wrap: wrap;
 flex-direction: row;
 }
 }
+.siteList > div {
+width: 100%;
+padding: 0 4ch;
+}
 @media (max-width: 749px) {
 .siteList > div {
 width: 50%;
 }
 }
 .siteList > div a {
-background: #E5E5E5;
 display: block;
-position: relative;
-border: 1px solid #fff;
-}
-.siteList > div a:hover {
-border: 1px solid #3B63C4;
-text-decoration: none;
-}
-.siteList > div a:hover .name {
-background: #3B63C4;
+padding: 13px 13px;
+border: 2px solid #2F4F9D;
+border-radius: 6px;
+text-align: center;
 }
 .siteList > div a span {
-display: block;
-text-align: center;
-vertical-align: middle;
+position: relative;
+display: inline-block;
+color: #3B63C4;
 }
-.siteList > div a .img {
-margin: 10px 10px 5px 10px;
-padding-top: 10px;
-background: #fff;
+.siteList > div a span::before {
+content: "";
+display: inline-block;
+background-color: #3B63C4;
+position: absolute;
+bottom: 1px;
+left: 0;
+width: 100%;
+height: 1px;
 }
-.siteList > div a .img img {
-max-width: 100%;
+.siteList > div a i {
+display: inline-block;
 }
-.siteList > div a .link {
-text-decoration: underline;
-}
-.siteList > div a .link:before {
-content: "\e89e";
+.siteList > div a i::after {
+content: "\e5cc";
 font-family: "Material Icons Outlined";
 font-weight: normal;
 font-style: normal;
@@ -7681,28 +7804,18 @@ white-space: nowrap;
 text-rendering: optimizeLegibility;
 -moz-osx-font-smoothing: grayscale;
 font-feature-settings: "liga";
-font-size: 18px;
-margin-right: 5px;
-}
-.siteList > div a .name {
-width: 100%;
-overflow: hidden;
-white-space: nowrap;
-text-overflow: ellipsis;
-display: inline-block;
-background: #484d58;
-font-weight: 600;
-color: #fff;
-font-size: 15px;
-margin-top: 5px;
-padding: 8px 0;
+font-size: 19px;
+color: #3B63C4;
+margin: 0 0 2px 6px;
 }
 
 .t-list {
 margin-top: 18px;
 }
 .t-list dt {
-font-weight: 600;
+color: #3B63C4;
+font-size: 1.25rem;
+font-weight: 500;
 margin-bottom: 8px;
 }
 
@@ -7751,6 +7864,7 @@ text-align: center;
 background-color: #F2F6FA;
 border-radius: 16px;
 padding: 30px;
+margin-bottom: 30px;
 }
 .info-txt em {
 font-weight: 600;
@@ -7760,10 +7874,15 @@ position: relative;
 color: #131547;
 font-weight: 300;
 font-size: 2.25rem;
+line-height: 1.2;
+margin-bottom: 0;
+}
+.info-txt .tit.ico1 {
 padding-top: 66px;
 margin-top: 10px;
+margin-bottom: 10px;
 }
-.info-txt .tit::before {
+.info-txt .tit.ico1::before {
 content: "";
 display: inline-block;
 width: 50px;
