@@ -112,6 +112,7 @@
 						}
 					}	
 				}
+				&:last-child > span,
 				> a {
 					display: block;	
 					padding: 0 10px;
@@ -129,6 +130,14 @@
 							right: 8px;
 							margin-top: -11px;
 						}
+					}
+				}
+				&:last-child > span,
+				&:last-child > a {
+					color: $point;
+					font-weight: 500;
+					&::after {
+						color: $point;
 					}
 				}
 				.depth2 {
