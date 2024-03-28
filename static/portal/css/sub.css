@@ -653,15 +653,18 @@ height: 36px;
 margin-right: 0;
 }
 }
+.navigation nav > ul > li:last-child > span,
 .navigation nav > ul > li > a {
 display: block;
 padding: 0 10px;
 }
 @media (min-width: 1200px) {
+.navigation nav > ul > li:last-child > span,
 .navigation nav > ul > li > a {
 padding: 0 26px;
 }
 }
+.navigation nav > ul > li:last-child > span::after,
 .navigation nav > ul > li > a::after {
 content: "\e5c6";
 font-family: "Material Icons Outlined";
@@ -683,12 +686,20 @@ font-size: 22px;
 margin-left: 10px;
 }
 @media (max-width: 749px) {
+.navigation nav > ul > li:last-child > span::after,
 .navigation nav > ul > li > a::after {
 position: absolute;
 top: 50%;
 right: 8px;
 margin-top: -11px;
 }
+}
+.navigation nav > ul > li:last-child > span, .navigation nav > ul > li:last-child > a {
+color: #131547;
+font-weight: 500;
+}
+.navigation nav > ul > li:last-child > span::after, .navigation nav > ul > li:last-child > a::after {
+color: #131547;
 }
 .navigation nav > ul > li .depth2 {
 display: none;
