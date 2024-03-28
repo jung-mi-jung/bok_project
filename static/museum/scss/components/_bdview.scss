@@ -7,16 +7,26 @@
 	font-weight: 400;
 	color: #525d64;
 	&::before {
+		// content: "";
+		// display: inline-block;
+		// width: 6px;
+		// height: 6px;
+		// border-radius: 50%;
+		// background-color: #e24b44;
+		// font-weight: 600;
+		// vertical-align: middle;
+		// transform: translateY(-2px);
+		// margin-right: 2px;	
 		content: "";
 		display: inline-block;
-		width: 6px;
-		height: 6px;
+		width: 8px;
+		height: 8px;
 		border-radius: 50%;
-		background-color: #e24b44;
+		background-color: #39A0FF;
 		font-weight: 600;
 		vertical-align: middle;
 		transform: translateY(-2px);
-		margin-right: 2px;	
+		margin-right: 3px;
 		.reg & {
 			position: absolute;
 			top: 50%;
@@ -771,9 +781,9 @@
 	.viewWrap{
 		padding:20px;
 	}
-	label+label{
-		margin-left:10px;
-	}
+	// label+label{
+	// 	margin-right:10px;
+	// }
 	.subject{ 
 		font-size:24px;padding:10px 12px 1px 20px;margin:0 !important;
 		&:before{
@@ -920,6 +930,117 @@
 	// 	padding-left: 13px;
 	// 	padding-right: 10px;
 	// }
+}
+.view.type2 {
+	>dl{
+		display:table;
+		width:100%;
+		border-collapse:collapse;
+		table-layout:fixed;
+		>*,
+		>dt,
+		>dd{
+			display:table-cell;
+			padding: 15px 0;
+			vertical-align:top;
+			border-top:1px solid $bd-color;
+			vertical-align:middle;
+			font-size: rem(16);
+			line-height: 1.4;
+			&::after {
+				display: none;
+			}
+			.fr{
+				.date{
+					margin-right:15px;
+					&:before{
+						@include font-ico-outline('\e855');
+						font-size: 20px;
+						background: none;margin-right:5px;
+					}
+				}
+				.hits{
+					&:before{
+						@include font-ico-outline('\e54b');
+						font-size: px;
+						margin-right:5px;
+					}
+				}
+			}
+		}
+		>.l,
+		>dt{		
+			width: 14%;
+			max-width: 120px;			
+			text-align: center;
+			border-right: 1px solid $bd-color;
+			background-color: #F2F6FA;
+			@include breakpoint($sm){
+				width:80px;
+			}
+		}
+		>.r,
+		>dd{ 
+			position:relative;
+			padding-left: 16px;
+			padding-right: 16px;
+			@include breakpoint($sm){
+				padding-right: 0;
+				padding-left: 8px;
+			}
+			&.pos-s{
+				position:static;
+			}
+			label {
+				margin-right:20px;
+			}
+			p+p{
+				margin-top:5px;
+			}
+			input.date,
+			input.sdate,
+			input.edate {
+				max-width: 150px;
+				border: 1px solid #D9D9D9;
+				line-height: 20px;
+				height: 32px;
+				@include breakpoint($sm) {
+					max-width: 130px;
+				}
+			}
+			.date-set {
+				justify-content: flex-start;
+			}
+			.select {
+				@include breakpoint($sm) {
+					width: 100%;
+					max-width: 220px;
+				}
+			}
+			
+		}
+		&:first-child>*{
+			border-top:none;
+		}
+	}
+	i {
+		display: inline-block;
+		&.fa-refresh {
+			&::before {
+				@include font-ico-outline("\f053");
+				font-size: 20px;
+			}
+		}
+		&.fa-volume-up {
+			&::before {
+				@include font-ico-outline("\e050");
+				font-size: 20px;
+			}
+		}
+	}
+	.b {
+		margin-bottom: 10px;
+	}	
 }
 
 

@@ -494,7 +494,7 @@
 
 
 
-
+<h2 class="sr-only">단체관람 신청</h2>
 700791.html <br>
 700791_2.html <br>
 700791_3.html <br>
@@ -536,7 +536,213 @@
 	</ul>
 </div>
 
+<div class="calendarWrap">
+	<div class="calDate">
+		<a href="" class="calDateL fa vm"><span class="hidden">이전달</span></a>
+		<span id="yymm"><strong>2024</strong>년 <strong>04</strong>월</span>
+		<a href="" class="calDateR fa vm"><span class="hidden">다음달</span></a>
+	</div>
+	<div class="row jc-between rsrvtn-state">
+		<p class="help2">예약 시 관람안내탭 및 하단 유의사항 참고 필수</p>
+		<div class="row ai-center m-flexWrap">
+			<div class="row">
+				<span class="rsrvtn"></span>예약가능
 			</div>
+			<div class="row">
+				<span class="rsrvtn-disabled"></span>예약불가능
+			</div>
+			<div class="row">
+				<span class="rsrvtn-closed"></span>휴관
+			</div>
+		</div>
+	</div>
+	
+	<div class="calendarSet type2" id="regDateWrap">
+		<table>
+			<caption>예약날짜 및 시간선택 달력</caption>
+			<colgroup>
+				<col>
+				<col style="width: 14.2%;">
+				<col style="width: 14.2%;">
+				<col style="width: 14.2%;">
+				<col style="width: 14.2%;">
+				<col style="width: 14.2%;">
+				<col style="width: 14.2%;">
+			</colgroup>
+			<thead>
+				<tr>
+					<th class="sun">일요일</th> 
+					<th>월요일</th>
+					<th>화요일</th>
+					<th>수요일</th>
+					<th>목요일</th>
+					<th>금요일</th>
+					<th class="sat">토요일</th> 
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td></td>
+					<td class="rsrvtn-not">
+						<div class="row">
+							<span class="date">1</span>
+							<span class="con sr-only">휴관</span>
+						</div>
+					</td>
+					<td class="rsrvtn-not">
+                        <div class="row">
+							<span class="date">2</span>
+							<span class="con">예약완료</span>
+						</div>
+					</td>
+                    <td class="rsrvtn-not">
+                        <div class="row">
+							<span class="date">3</span>
+							<span class="con">예약완료</span>
+						</div>
+					</td> 
+					<td class="rsrvtn-not">
+                        <div class="row">
+							<span class="date">4</span>
+							<span class="con">예약완료</span>
+						</div>
+					</td>
+                    <td class="rsrvtn-can">
+						<div class="row">
+							<span class="date">5</span>
+							<span class="con">예약가능</span>
+						</div>
+                        <div class="date-list">
+                            <ul>
+                                <li>
+                                    <button type="button" class="rsrvtn-date">10:00</button>
+                                </li>
+                                <li>
+                                    <button type="button" class="rsrvtn-date">11:00</button>
+                                </li>
+                                <li>
+                                    <button type="button" class="rsrvtn-date">13:00</button>
+                                </li>
+                                <li>
+                                    <button type="button" class="rsrvtn-date">14:00</button>
+                                </li>
+                                <li>
+                                    <button type="button" class="rsrvtn-date">15:00</button>
+                                </li>
+                                <li class="rsrvtn-done">
+                                    <button type="button" class="rsrvtn-date" disabled="disabled" title="예약불가">16:00</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </td >
+					<td class="rsrvtn-can">
+						<div class="row">
+							<span class="date">6</span>
+							<span class="con">예약가능</span>
+						</div>
+                        <div class="date-list">
+                            <ul class="col2">
+                                <li>
+                                    <button type="button" class="rsrvtn-date">10:00 (영어)</button>
+                                </li>
+                                <li>
+                                    <button type="button" class="rsrvtn-date">11:00 (한국어)</button>
+                                </li>
+                                <li>
+                                    <button type="button" class="rsrvtn-date">13:00 (중국어)</button>
+                                </li>
+                                <li>
+                                    <button type="button" class="rsrvtn-date">14:00 (중국어)</button>
+                                </li>
+                                <li>
+                                    <button type="button" class="rsrvtn-date">15:00 (영어)</button>
+                                </li>
+                                <li class="rsrvtn-done">
+                                    <button type="button" class="rsrvtn-date" disabled="disabled" title="예약불가">16:00 (한국어)</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+				<tr>
+					<td>
+						<div class="row">
+							<span class="date">7</span>
+						</div>
+					</td>
+					<td>
+						<div class="row">
+							<span class="date">8</span>
+						</div>
+					</td>
+					<td>
+						<div class="row">
+							<span class="date">9</span>
+						</div>
+					</td>
+					<td>
+						<div class="row">
+							<span class="date">10</span>
+						</div>
+					</td>
+					<td>
+						<div class="row">
+							<span class="date">11</span>
+						</div>
+					</td>
+					<td>
+						<div class="row">
+							<span class="date">12</span>
+						</div>
+					</td>
+					<td>
+						<div class="row">
+							<span class="date">13</span>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<p class="tac mt30 help3">예약일자를 선택하세요</p>
+<p class="tac mt20 seletedDate">
+	<span>선택하신 예약 일자는 <em class="fc1">2024년 03월 29일 14:00</em> 입니다.</span>
+	신청시간부터 <em class="fc1">30분 이내에만 입장</em>이 가능 합니다.
+	<br>
+	(예약자수:0/25)	
+</p>
+<div class="btn-set c">
+	<a href="" class="b-go lg">예약확인 및 수정취소</a>
+	<a href="" class="b-go lg">다음단계로 이동</a>
+</div>
+
+<div class="calendarInfo">
+	<h4>유의사항</h4>
+	<ul class="bu-dot">
+		<li>단체관람 신청 시 <em>전시설명을 신청</em>한 경우에만 전시설명 가능</li>
+		<li>단체 전시설명은 주중에는 10:00, 13:00, 16:00, 주말에는 10:00에만 운영합니다.</li>
+		<li>예약은 관람희망일 하루전까지 가능합니다. (당일 예약불가)</li>
+		<li><em>단체(10인 이상)</em> 방문 예약은 <em>단체당 최대 40명</em>까지 가능합니다.</li>
+		<li>시간당 총 관람 인원수는 주중 100명, 주말 50명으로 제한됩니다.</li>
+		<li><em>초등학생 이하</em> 관람인 경우 반드시 <em>보호자가 동행</em>해야 합니다.</li>
+		<li><em>주차는 불가능</em>합니다(장애인은 사전 협의 시 주차 가능).</li>
+	</ul>
+	<div class="help2">온라인 예약 관련 문의는 유선( ☏ 02-759-4881,4882 )으로 연락주시기 바랍니다.</div>
+</div>
+
+
+
+<script>
+	$(document).on("click", ".rsrvtn-can li:not(.rsrvtn-done) button", function() {
+
+		var selectedDate = $(this).text();
+
+		$(".seletedDate").slideDown();
+		$(".seletedDate > span > em").text(selectedDate)
+	})
+</script>			</div>
 			<!-- //컨텐츠 끝 -->
 
 			<!-- 내가 본 콘텐츠 -->

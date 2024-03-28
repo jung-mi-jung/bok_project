@@ -76,6 +76,7 @@ $btn: "[class^=b-]";
 	&.lg {
 		@include breakpoint($lg) {
 			min-width: 160px;
+			font-size: rem(16);
 		}
 	}
 	&.b-reg,
@@ -143,6 +144,9 @@ $btn: "[class^=b-]";
 		}
 	}
 	&.b-go{
+		&.lg {
+			background: #3B63C4;
+		}
 		&::after {
 			content: "\e315";
 			font-family: "Material Icons Outlined";

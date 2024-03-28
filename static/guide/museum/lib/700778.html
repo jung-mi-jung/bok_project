@@ -1,0 +1,109 @@
+<form method="" id="" name="" action="">
+	<h3 class="h3">개인정보</h3>
+    <div class="view type2">
+        <dl>
+            <dt>
+                <span class="req" aria-label="필수입력" role="img"></span>작성자
+            </dt>
+            <dd>하유미</dd>
+        </dl>
+        <dl>
+            <dt><span class="req" aria-label="필수입력" role="img"></span>공개여부</dt>
+			<dd>
+				<div class="row ai-center radioSet">
+					<label>
+						<input type="radio" value="Y" title="공개">
+						<i></i>공개
+					</label>
+					<label>
+						<input type="radio" value="M" title="비공개">
+						<i></i>비공개
+					</label>
+				</div>
+			</dd>
+        </dl>
+        <dl>
+            <dt>
+                <span class="req" aria-label="필수입력" role="img"></span>
+                <label for="bdTit">제목</label>
+            </dt>
+            <dd>
+                <input type="text" name="" id="bdTit" class="w100p" value="" />
+            </dd>
+        </dl>
+        <dl>
+            <dt>
+                <span class="req" aria-label="필수입력" role="img"></span>
+                <label for="bdDesc">내용</label>
+            </dt>
+            <dd>
+                <textarea name="" id="bdDesc" class="w100p"></textarea>
+            </dd>
+        </dl>
+        <dl>
+			<dt>첨부파일</dt>
+			<dd>
+				<div class="row fileSet">
+					<button type="button" class="b-fileAdd sm"><i class="ico-add"></i>추가</button>
+					<div class="row ai-center">
+						<input type="file" />
+						<button type="button" class="b-fileDel sm"><i class="ico-close-rd"></i>삭제</button>
+					</div>
+				</div>
+				<p class="help3">파일은 70MB까지 업로드 가능합니다.</p>
+			</dd>
+		</dl>
+        <dl>
+            <dt><span class="req" aria-label="필수입력" role="img"></span>자동등록 방지</dt>
+            <dd>
+                <div class="catpchaSet">
+                    <p class="help3">아래 이미지의 숫자를 보이는 대로 입력하여 주세요.</p>
+                    <div class="set">
+                        <div class="l">
+                            <div id="catpcha">
+                                <img src="https://www.bok.or.kr/cmmn/captcha/image.do?rand=0.2625964253012085" alt="">
+                            </div>
+                            <div id="audiocatpch" style="display: none;"></div>
+                            <div class="b">
+                                <button id="reLoad" type="button"><i class="fa fa-refresh" aria-hidden="true"></i><span class="sr-only">새로고침</span></button>
+                                <button id="soundOnKor" type="button"><i class="fa fa-volume-up" aria-hidden="true"></i><span class="sr-only">한글음성</span></button>
+                            </div>
+                        </div>
+                        <input type="text" id="catpchaAnswer" name="catpchaAnswer" value="" maxlength="5" title="자동등록 방지 숫자 입력">
+                    </div>
+                </div>
+            </dd>
+        </dl>
+    </div>
+    <dlv class="btn-set">
+        <button type="button" class="b-aply"><i class="ico-check-wh"></i>등록</a>
+        <button type="button" class="b-cancel"><i class="ico-cancel-wh"></i>취소</button>
+    </dlv>
+</form>
+
+
+<script>
+	$(function(){
+
+        var rand;
+        var fileTemp = `<div class="row ai-center">
+						<input type="file" />
+						<button type="button" class="b-fileDel sm"><i class="ico-close-rd"></i>삭제</button>
+					</div>`
+
+		//첨부파일 폼 추가 이벤트
+		$(document).on("click", ".b-fileAdd", function(){
+			if ( $(".fileSet > .row").length < 6)  {
+				$(".fileSet").append(fileTemp)
+			}
+		});
+
+		//첨부파일 폼 삭제 이벤트
+		$(document).on("click", ".b-fileDel", function(){
+			if( $(".fileSet > .row").length > 1 ) {
+				$(this).parent(".row").remove();
+			}
+		});
+	});
+
+</script>
