@@ -427,7 +427,17 @@
 		}		
 		.ic-choice {
 			&::before {
-				background: url(/static/portal/img/ico/ico-step-choice.png);
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				width: 72px;
+				height: 72px;
+				border-radius: 50%;;
+				background-color: #F3F3F3;
+				// background: url(/static/portal/img/ico/ico-step-choice.png);
+				background-image: url(/static/museum/img/ico/ico-reserve.png);
+				background-repeat: no-repeat;
+				background-position: center center;
 			}
 		}
 		.ic-info {
