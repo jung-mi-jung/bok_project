@@ -524,7 +524,22 @@ $(function() {
 		return false;
 	});
 
-
+	//로그인후
+	var userInfoOp = $(".userInfoOpener");
+	$(userInfoOp).on("mouseenter keyup", function(){
+		$(".userInfoOpBx").addClass("on");
+	});
+	$(".userInfoOpBxSet").on("mouseleave blur", function(){
+		$(".userInfoOpBx").removeClass("on");
+	});
+	$(".userInfoOpBx .logout").on("focusout", function(){
+		$(".userInfoOpBx").removeClass("on");
+	});
+	$(userInfoOp).bind('keydown', function(e){
+		if(e.shiftKey && e.keyCode == 9){
+			$(".userInfoOpBx").removeClass("on");
+		}
+	})
 	
 	//navigation
 	$(".navigation .depth2").prev().addClass("bu");

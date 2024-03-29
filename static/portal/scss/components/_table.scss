@@ -10,6 +10,7 @@ table {
 }
 .table {
 	clear: both;	
+	border-top: 2px solid #182252;
 	margin-bottom: 10px;
 	@include breakpoint($md){
 		&.pcweb {
@@ -46,6 +47,15 @@ table {
 			min-height: 55px;
 			border: 1px solid $bd-color;
 			background-color: #fff;
+			&.title {
+				text-align: left;
+				a {
+					&:hover {
+						color: $color-point;;
+						text-decoration: underline;
+					}
+				}				
+			}
 		}
 	}
 	&.type2 {
@@ -115,7 +125,7 @@ table {
 
 .table-view {
 	border-top: 2px solid #182252;
-	&.table {		
+	&.table {
 		th {
 			text-align: left;
 			font-weight: 400;

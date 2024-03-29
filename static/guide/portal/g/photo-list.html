@@ -1,39 +1,10 @@
 
 <script>
 
-// $('.sh-db').each(function(index){
-// 		$("#m-0" + index).click(function(){
-// 			$(".m-0" + index).toggleClass("on")
-// 			$(this).css("border", "1px solid red")
-// 		});
-// 	});
- 
+
 
 $(function () { 
 	 
-	// 	var index = 1++;
-	// var menua1 = $("#m-0"+index)
-	// var menua2 = $(".m-0"+index)
-
-	// $('.sh-db').each(function(index, el) {
-	// 	menua1.click(function(){
-	// 		menua2.toggleClass("on")
-	// 	});
-	// });
-
-/*
-	var arr = $("#m-01 ul.sub-m > li");
-
-	// 배열에서 'a' 개수 구하기
-	let count = 0;
-	for(let i=0; i < arr.length; i++) {
-		if(arr[i] === 'a')  {
-			count++;
-		}
-	}
-	//alert(count)
-*/
- 
 
 	// 유형 선택시 분류 노출
 	$(".label-list input").click(function(e){
@@ -58,7 +29,7 @@ $(function () {
 
 	//var $index = $(this).index() ++;
 
-
+/*
 	$(".m-01 button").click(function(){
 		$("#m-01").prop("checked", true)
 		$("#m-02").prop("checked", false)
@@ -89,31 +60,109 @@ $(function () {
 		$(".m-01").hide()
 		$(".m-02").hide()
 	});
+*/
 
-	$("[class^=m-0]").click(function(){
-		$(".check-list input").attr("disabled", true);
-	});
+
+
+
+	//$("[class^=m-0]").click(function(){
+	//	$(".check-list input").attr("disabled", true);
+	//});
 
 	
 	//depth3 있는 경우 아이콘 추가
-	$(".details-list .sub-m").prev("button").addClass("bu")
+	//삭제 $(".details-list .sub-m").prev("button").addClass("bu")
 	//depth3 있는 경우 depth2 클릭 금지
-	$(".details-list > ul > li > button.bu").attr("disabled", true);
+	//삭제 $(".details-list > ul > li > button.bu").attr("disabled", true);
 
-	// 분류 한가지만 클릭가능
+	//4, 5뎁스 숨김처리
+	// $(".depth4").hide();
+	// $(".depth5").hide();
+
+	// $(".sh-db .depth3 > ul > li > button").click(function(){
+	// 	$(this).next().show();
+	// })
+	// $(".sh-db .depth4 > ul > li > button").click(function(){
+	// 	$(this).next().show();
+	// })
+	
+	// $('.sh-db .depth3 >ul > li > button').each(function(index) {
+	// 	$('.sh-db .depth3 >ul > li > button').click(function(){
+	// 		if ($(this).hasClass('active')){
+	// 			$(this).next().show();
+	// 		} else {
+	// 			$(this).next().hide();
+	// 		}	
+	// 	})
+	// });
+
+/*
+
+	// 세부유형 한가지만 클릭가능
 	$('.details-list').each(function(index) {
 		$(".details-list button").click(function(){
-			$(this).addClass("active").parents().find(".details-list").children().find("button").removeClass("active");
+			$(this).parents().find(".details-list").children().find("button").removeClass("active");
 			$(this).addClass("active").parents().find(".details-list").children().find("button").css("", "");
+		
+		
+		//	$(this).addClass("active").next().addClass("on");
+			//$(this).addClass("active").parents().find(".depth3").children().removeClass("active");
+		
+		
+		
+		
+			//$(this).next().addClass("on")
 			if ($(this).hasClass('active')){
 				$(this).attr("title", "선택됨");
+				//$(this).next().addClass("on")
+				//$(this).children().find(".depth4").addClass("on1");
+				//$(this).addClass("active").next().addClass("on");
+				//$(this).next().addClass("on");
+			
 			} else {
 				$(this).removeAttr("title");
-			}	
+				//$(this).children().find(".depth4").removeClass("on1");
+			}
 		})
 	});
-	
-	//분류 li 갯수 10개 이상인 경우 전체보기 버튼 노출
+	*/
+
+
+
+
+
+	$(".sh-db .depth3 > ul > li > input").on('click',function(){
+		var chk = $(".sh-db .depth3 > ul > li > input").is(":checked");
+		$(this).css("border", "1px solid red")
+		if(chk==true){
+			$(this).css("border", "1px solid red")
+			$(".depth4").addClass('onfff');
+		}else{
+			$(".depth4").addClass('onfff2');
+			//$("#submit").attr("disabled", true);
+		}
+		
+		// if(!$(".sh-db .depth3 > ul > li > input").prop("checked")){
+		// 	$(this).parent().next().addClass("on11");
+		// 	$(this).css("border", "1px solid red");
+		// 	//return false;
+		// }
+
+
+
+
+
+		
+		
+
+		
+		
+	})
+
+
+
+
+	//세부유형 li 갯수 10개 이상인 경우 전체보기 버튼 노출
 	$(".details-list [class^=m-0]").each(function(){
 		var list_length = $(this).find("> ul > li").length;
 		if(list_length > 10){
@@ -132,9 +181,73 @@ $(function () {
 			$(this).text("전체보기");
 		}
 	})	
-});
-</script>
 
+
+	
+
+
+	$("input#depth3_1").click(function(){
+		var index = $(this).next().index();
+		$(this).index().addClass("1231")
+	})
+
+
+});
+
+
+$(function() {
+	$('.date-set').hide();
+	$(".select1 select").on("change", function(){
+		var result = $(".select1 option:selected").val()
+		if(result == 5){
+			$('.date-set').show();
+		}else{
+			$('.date-set').hide();
+		}
+	});
+});
+
+
+
+/*
+function setDisplay(){    
+	//var idx = $('.input#depth3_').index(this);
+
+
+
+	if($("input:radio[id='depth3_1']").is(":checked")){        
+		//$(this).parents().find(">li").addClass("adff")
+		//$(".depth4_").eq(idx).show(); 
+		$(".depth4_1").show(); 
+		$(this).css("border", "1px solid red")
+	}else{       
+		//$(".depth4").show();    
+		$(".depth4_1").show(); 
+		//$(".depth4_").eq(idx).show(); 
+		//$(this).css("border", "1px solid blue")
+	}
+}
+*/
+
+
+//var index = $(this).parent().index();
+
+
+
+// $(document).ready(function() {
+// 	$(".select1 option:selected").val();
+
+// 	$('.select1').change(function() {
+// 		var result = $('.select1 option:selected').val();
+// 		if (result == '5') {
+// 			$('.date-set').show();
+// 		} else {
+// 			$('.date-set').hide();
+// 		}
+// 	});
+// }); 
+
+</script>
 
 
 
@@ -151,8 +264,11 @@ $(function () {
 			</div>
 		</div>
 	</div>
+
+	<h2 class="sr-only">메뉴 선택 검색</h2>
+
+	<!-- 유형 -->
 	<div class="check-list">
-		<h2 class="sr-only">멀티콘텐츠 유형 선택</h2>
 		<h3>유형</h3>
 		<button type="button" class="check-ctrl ">유형 선택</button>
 		<div class="label-list">
@@ -173,71 +289,179 @@ $(function () {
 			</label>
 		</div>
 	</div>
+	<!-- //유형 -->
 	<div class="check-list details"> <!-- style="display: none;"-->
-		<h2 class="sr-only">멀티콘텐츠 분류 선택</h2>
-		<h3>분류</h3>
+		<h3>세부유형</h3>
 		<button type="button" class="check-ctrl">분류 선택</button>
 		<div class="details-list">
 			<!-- 동영상 -->
 			<h4 class="sr-only">동영상</h4>
-			<div class="m-01">
-				<ul >
+			<div class="depth3 m-01">
+				<ul>
 					<li>
-						<button type="button">총재기자간담회</button>
-						<!--class="active"-->
-						<ul class="sub-m">
-							<li>
-								<button type="button">통화정책</button>
-							</li>
-						</ul>
+						<label for="depth3_1">
+							<input type="radio" name="ck_depth3" id="depth3_1" onchange="setDisplay()">
+							<i></i>
+							<span>총재기자간담회</span>
+						</label>
+						<div class="depth4 depth4_1">
+							<ul class="sub-m">
+								<li>
+									<label for="depth4_1_1">
+										<input type="radio" name="depth4_1_01" id="depth4_1_1">
+										<i></i>
+										<span>통화정책</span>
+									</label>
+									<div class="depth5">
+										<ul>
+											<li>
+												<label for="">
+													<input type="radio" name="">
+													<i></i>
+													<span>뎁스5</span>
+												</label>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<label for="depth4_1_2">
+										<input type="radio" name="depth4_1_01" id="depth4_1_2">
+										<i></i>
+										<span>뎁스4</span>
+									</label>
+								</li>
+							</ul>
+							<button type="button" class="btn-view" title="4뎁스 전체보기">전체보기</button>
+						</div>
 					</li>
 					<li>
-						<button type="button">보도자료설명회</button>
-						<ul class="sub-m">
-							<li>
-								<button type="button">통계</button>
-							</li>
-						</ul>
+						<label for="depth3_2">
+							<input type="radio" name="ck_depth3" id="depth3_2" onchange="setDisplay()">
+							<i></i>
+							<span>보도자료설명회</span>
+						</label>
+						<div class="depth4 depth4_2">
+							<ul class="sub-m">
+								<li>
+									<label for="depth4_2_1">
+										<input type="radio" name="" id="depth4_2_1">
+										<i></i>
+										<span>통계</span>
+									</label>
+								</li>
+							</ul>
+						</div>
 					</li>
 					<li>
-						<button type="button">주요 행사 및 강연</button>
+						<label for="depth3_3">
+							<input type="radio" name="ck_depth3" id="depth3_3" onchange="setDisplay()">
+							<i></i>
+							<span>주요 행사 및 강연</span>
+						</label>
 					</li>
 					<li>
-						<button type="button">홍보기획영상</button>
+						<label for="depth3_4">
+							<input type="radio" name="ck_depth3" id="depth3_4" onchange="setDisplay()">
+							<i></i>
+							<span>홍보기획영상</span>
+						</label>
 					</li>
 					<li>
-						<button type="button">경제교육</button>
-						<ul class="sub-m">
-							<li>
-								<button type="button">어린이</button>
-							</li>
-							<li>
-								<button type="button">청소년</button>
-							</li>
-							<li>
-								<button type="button">교사</button>
-							</li>
-							<li>
-								<button type="button">일반인</button>
-							</li>
-							<li>
-								<button type="button">금요강좌</button>
-							</li>
-						</ul>
+						<label for="depth3_5">
+							<input type="radio" name="ck_depth3" id="depth3_5" onchange="setDisplay()">
+							<i></i>
+							<span>경제교육</span>
+						</label>
+						<div class="depth4 depth4_3">
+							<ul class="sub-m">
+								<li>
+									<label for="">
+										<input type="radio" name="">
+										<i></i>
+										<span>어린이</span>
+									</label>
+								</li>
+								<li>
+									<label for="">
+										<input type="radio" name="">
+										<i></i>
+										<span>청소년</span>
+									</label>
+								</li>
+								<li>
+									<label for="">
+										<input type="radio" name="">
+										<i></i>
+										<span>교사</span>
+									</label>
+								</li>
+								<li>
+									<label for="">
+										<input type="radio" name="">
+										<i></i>
+										<span>일반인</span>
+									</label>
+								</li>
+								<li>
+									<label for="">
+										<input type="radio" name="">
+										<i></i>
+										<span>금요강좌</span>
+									</label>									
+									<div class="depth5">
+										<ul>
+											<li>
+												<label for="">
+													<input type="radio" name="">
+													<i></i>
+													<span>뎁스5-1</span>
+												</label>
+											</li>
+											<li>
+												<label for="">
+													<input type="radio" name="">
+													<i></i>
+													<span>뎁스5-2</span>
+												</label>
+											</li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
 					</li>
 					<li>
-						<button type="button">공모 수상작</button>
-						<ul class="sub-m">
-							<li>
-								<button type="button">화폐사랑 콘텐츠(동영상)</button>
-							</li>
-							<li>
-								<button type="button">통화정책 경시대회</button>
-							</li>
-						</ul>
+						<label for="depth3_6">
+							<input type="radio" name="ck_depth3" id="depth3_6" onchange="setDisplay()">
+							<i></i>
+							<span>공모 수상작</span>
+						</label>
+						<div class="depth4 depth4_4">
+							<ul class="sub-m">
+								<li>
+									<label for="">
+										<input type="radio" name="">
+										<i></i>
+										<span>화폐사랑 콘텐츠(동영상)</span>
+									</label>
+								</li>
+								<li>
+									<label for="">
+										<input type="radio" name="">
+										<i></i>
+										<span>통화정책 경시대회</span>
+									</label>
+								</li>
+							</ul>
+						</div>
 					</li>
 					<li>
-						<button type="button">외환신고안내</button>
+						<label for="depth3_7">
+							<input type="radio" name="ck_depth3" id="depth3_7" onchange="setDisplay()">
+							<i></i>
+							<span>외환신고안내</span>
+						</label>
 					</li>
 				</ul>
 				<button type="button" class="btn-view">전체보기</button>
@@ -246,19 +470,35 @@ $(function () {
 
 			<!-- 카드뉴스 -->
 			<h4 class="sr-only">카드뉴스</h4>
-			<div class="m-02">
+			<div class="depth3 m-02">
 				<ul>
 					<li>
-						<button type="button">인포그래픽</button>
+						<label for="">
+							<input type="radio" name="">
+							<i></i>
+							<span>인포그래픽</span>
+						</label>
 					</li>
 					<li>
-						<button type="button">화폐홍보</button>
+						<label for="">
+							<input type="radio" name="">
+							<i></i>
+							<span>화폐홍보</span>
+						</label>
 					</li>
 					<li>
-						<button type="button">경제교육</button>
+						<label for="">
+							<input type="radio" name="">
+							<i></i>
+							<span>경제교육</span>
+						</label>
 					</li>
 					<li>
-						<button type="button">공모 수상작</button>
+						<label for="">
+							<input type="radio" name="">
+							<i></i>
+							<span>공모 수상작</span>
+						</label>
 					</li>
 				</ul>
 				<button type="button" class="btn-view">전체보기</button>
@@ -267,9 +507,15 @@ $(function () {
 
 			<!-- 웹툰 -->
 			<h4 class="sr-only">웹툰</h4>
-			<div class="m-03">
-				<ul class="">
-					<li><button type="button">경제교육웹툰</button></li>
+			<div class="depth3 m-03">
+				<ul>
+					<li>
+						<label for="">
+							<input type="radio" name="">
+							<i></i>
+							<span>경제교육웹툰</span>
+						</label>
+					</li>
 				</ul>
 				<button type="button" class="btn-view">전체보기</button>
 			</div>
@@ -289,6 +535,11 @@ $(function () {
 		</ul>
 	</div>
 	<!-- //키워드 -->
+
+	<p class="sub-btn">
+		<a href="">BOK 주요행사</a>
+	</p>
+	
 </div>
 
 
@@ -318,22 +569,35 @@ $(function () {
 
 	<div class="sh-BxSet">
 		<p class="count-total">총 <strong>1590</strong>건의 게시물이 있습니다.</p>
-		<div class="sh-select">
-			<div class="select-set">
-				<select name="" id="" title="개월 선택">
-					<option value="">3개월</option>
-					<option value="">6개월</option>
+		<div class="sh-select">			
+			<div class="select-set select1">
+				<select name="" id="" title="개월 선택">					
+					<option value="1">1개월</option>
+					<option value="2">3개월</option>
+					<option value="3">6개월</option>
+					<option value="4">1년</option>
+					<option value="5">직접선택</option>
 				</select>
+			</div>
+			<div class="date-set" style="display: none;">
+				<input id="sdate" name="sdate" class="sdate" title="검색기간 시작일" value="" type="text" autocomplete="off">
+				<span class="dash">~</span>
+				<input id="edate" name="edate" class="edate" title="검색기간 종료일" value="" type="text" autocomplete="off">
 			</div>
 			<div class="select-set select2">
 				<select name="" id="" title="정렬순서 선택">
 					<option value="">최신순</option>
+					<option value="">인기순</option>
 				</select>
 			</div>
 			<div class="select-set select3">
 				<select name="" id="" title="갯수 선택">
 					<option value="">10개</option>
 					<option value="">20개</option>
+					<option value="">30개</option>
+					<option value="">40개</option>
+					<option value="">50개</option>
+					<option value="">100개</option>
 				</select>
 			</div>
 			<button type="button" class="submit" aria-label="검색"></button>

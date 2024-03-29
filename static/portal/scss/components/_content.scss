@@ -6,6 +6,10 @@
 		color: #1A1A1A;
 	}
 }
+.p-point {
+	font-size: rem(18);
+	font-weight: 500;
+}
 .sm-txt {
 	font-size: 13px;
 }
@@ -1808,6 +1812,30 @@ p.subject {
 		padding: 4px 10px;
 		vertical-align: middle;
 	}
+	label {
+		display: inline-block;
+		height: 32px;
+		line-height: 32px;
+		margin-right: 6px;
+		@include  bu-dot();
+		&::before{			
+			top: 50%;
+		}
+	}
+	.search {
+		background-color: $color-point;
+		color: #fff;
+		border-radius: 4px;
+		padding: 4px 10px;
+		vertical-align: middle;
+		border: 0;
+		height: 32px;
+		&::before {
+			@include font-ico-outline('\e5ca');
+			font-size: 20px;
+			color: #1C1B1F;
+		}
+	}
 }
 
 //프로그램 문의(Q&A)
@@ -1902,6 +1930,7 @@ p.subject {
 		}
 	}
 }
+
 
 
 // .userType{

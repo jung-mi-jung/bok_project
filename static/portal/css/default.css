@@ -1902,6 +1902,126 @@ height: 14px;
 background-color: #fff;
 margin: 0 6px;
 }
+#header .g-info .global ul li .userInfoOpBxSet {
+padding: 3px 0;
+position: relative;
+}
+#header .g-info .global ul li .userInfoOpBxSet .userInfoOpener {
+border-radius: 30px;
+background: #fff;
+display: inline-block;
+padding: 1px 10px;
+color: #131547;
+font-size: 14px;
+}
+#header .g-info .global ul li .userInfoOpBxSet .userInfoOpBx {
+display: none;
+width: 280px;
+position: absolute;
+top: 30px;
+left: -100%;
+margin-left: -40px;
+border: 1px solid #3B63C4;
+border-radius: 5px;
+padding: 24px;
+box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+background-color: #fff;
+z-index: 99;
+}
+#header .g-info .global ul li .userInfoOpBxSet .userInfoOpBx.on {
+display: block;
+}
+#header .g-info .global ul li .userInfoOpBxSet .userInfoOpBx .userInfoSnsBx {
+display: flex;
+align-items: center;
+}
+#header .g-info .global ul li .userInfoOpBxSet .userInfoOpBx .userInfoSnsBx .infoTxts {
+margin-left: 14px;
+line-height: 1.2;
+}
+#header .g-info .global ul li .userInfoOpBxSet .userInfoOpBx .userInfoSnsBx .infoTxts strong {
+font-weight: 500;
+}
+#header .g-info .global ul li .userInfoOpBxSet .userInfoOpBx .userInfoSnsBx i {
+text-align: center;
+display: inline-block;
+width: 64px;
+height: 64px;
+line-height: 64px;
+border-radius: 50%;
+background-color: #B1C1E7;
+}
+#header .g-info .global ul li .userInfoOpBxSet .userInfoOpBx .userInfoSnsBx i::before {
+content: "\e7fd";
+font-family: "Material Icons";
+font-weight: normal;
+font-style: normal;
+display: inline-block;
+line-height: 1;
+vertical-align: text-bottom;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+font-feature-settings: "liga";
+-webkit-font-feature-settings: "liga";
+font-size: 35px;
+color: #fff;
+margin-top: 14px;
+}
+#header .g-info .global ul li .userInfoOpBxSet .userInfoOpBx .myLogoutBx {
+margin-top: 15px;
+display: flex;
+justify-content: space-between;
+}
+#header .g-info .global ul li .userInfoOpBxSet .userInfoOpBx .myLogoutBx a {
+text-align: center;
+width: calc(50% - 2px);
+display: block;
+color: #fff;
+font-size: 14px;
+font-weight: 300;
+border-radius: 4px;
+padding: 4px;
+}
+#header .g-info .global ul li .userInfoOpBxSet .userInfoOpBx .myLogoutBx a.mypg {
+background-color: #3B63C4;
+}
+#header .g-info .global ul li .userInfoOpBxSet .userInfoOpBx .myLogoutBx a.mypg::before {
+content: "";
+display: inline-block;
+vertical-align: middle;
+width: 21px;
+height: 20px;
+background: url(/static/portal/img/ico/ico-person_edit.png);
+margin-right: 4px;
+}
+#header .g-info .global ul li .userInfoOpBxSet .userInfoOpBx .myLogoutBx a.logout {
+background-color: #4D4D4D;
+}
+#header .g-info .global ul li .userInfoOpBxSet .userInfoOpBx .myLogoutBx a.logout::before {
+content: "\e9ba";
+font-family: "Material Icons Outlined";
+font-weight: normal;
+font-style: normal;
+display: inline-block;
+line-height: 1;
+vertical-align: text-bottom;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+font-feature-settings: "liga";
+-webkit-font-feature-settings: "liga";
+font-size: 18px;
+margin-right: 4px;
+}
 }
 
 .bd-view_wrap .hgroup {

@@ -180,6 +180,32 @@ h2 + .boxTop {
 			left: 0;
 		}
 	}
+	.badge_txt {
+		text-align: center;
+		font-size: rem(24);
+		font-weight: 400;
+		color: $point;
+		p {
+			margin-bottom: 0;
+			.mDib {
+				&::before {
+					content: "";
+					display: inline-block;
+					width: 6px;
+					height: 6px;
+					border-radius: 50%;
+					background: $point;
+					margin: 0 10px 6px 0;					
+				}
+				& + .mDib {
+					margin-left: 60px;
+				}
+			}
+			.fc_red {
+				font-weight: 500;
+			}
+		}
+	}
 }
 .box2{
 	background: #FAFAFA; 
