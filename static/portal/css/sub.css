@@ -1256,6 +1256,45 @@ margin-top: 3px;
 width: 40%;
 }
 
+.label-list label {
+margin-left: 15px;
+}
+.label-list label:first-child {
+margin-left: 0;
+}
+.view .label-list input {
+height: 20px;
+}
+.view .label-list input[type=checkbox] {
+width: 20px;
+height: 20px;
+}
+.view .label-list input[type=checkbox] + i {
+width: 20px;
+height: 20px;
+margin-left: -24px;
+margin-right: 5px;
+}
+.view .label-list input[type=checkbox]:checked + i::after {
+top: 5px;
+left: 1px;
+}
+.view .label-list input[type=checkbox]:checked + i + span {
+color: #131547;
+font-weight: 500;
+position: relative;
+}
+.view .label-list input[type=checkbox]:checked + i + span::before {
+content: "";
+display: inline-block;
+width: 100%;
+height: 1px;
+background: #131547;
+position: absolute;
+bottom: 2px;
+left: 0;
+}
+
 table {
 word-break: break-all;
 width: 100%;
@@ -1998,7 +2037,7 @@ padding: 2px 0;
 float: right;
 padding: 2px 0;
 }
-.bdLine > ul .fileLink .fileGroupSet > a::before {
+.bdLine > ul .fileLink .fileGroupSet > a.i-download::before {
 content: "";
 display: inline-block;
 vertical-align: middle;
@@ -2694,9 +2733,22 @@ margin-top: 30px;
 border-top: 2px solid #000;
 }
 
+.view-table {
+border-top: none;
+font-size: 1rem;
+}
+.view-table table th {
+color: #fff;
+background-color: #233B76;
+padding: 10px 0;
+}
+.view-table table tbody th {
+background-color: #FAFAFA;
+}
+
 .view {
 clear: both;
-font-size: 1.125rem;
+font-size: 1rem;
 border-top: 2px solid #222;
 border-bottom: 1px solid #E5E5E5;
 border-left: 1px solid #E5E5E5;
@@ -4449,7 +4501,6 @@ background-color: transparent;
 display: block;
 }
 .sh-db .details-list .depth3 > ul > li .depth4 {
-display: none;
 position: relative;
 }
 .sh-db .details-list .depth3 > ul > li .depth4::before {
@@ -5099,6 +5150,22 @@ width: 100%;
 }
 .sh .c.w2 > div .select-box-set.n2 > * {
 width: calc(50% - 2px);
+}
+.sh .c.w2.type2 .sh-input {
+display: flex;
+justify-content: space-between;
+flex-grow: 1;
+}
+.sh .c.w2.type2 .select-box .select-set::after {
+display: none;
+}
+@media (min-width: 1200px) {
+.sh .c.w2.type2 .select-box .select-set select {
+min-width: 200px;
+}
+}
+.sh .c.w2.type2 .date-set {
+flex-basis: calc(100% - 200px);
 }
 .sh > * {
 margin: 0 2px;
@@ -8060,6 +8127,14 @@ margin-left: -25px;
 .info-txt .tit em {
 font-weight: 600;
 }
+.info-txt .info-link {
+margin-top: 40px;
+}
+.info-txt .t-line {
+margin-top: 24px;
+padding-top: 15px;
+border-top: 1px solid #B1C1E7;
+}
 .info-txt [class^=b-].b-edit {
 height: 48px;
 line-height: 46px;
@@ -8560,6 +8635,23 @@ background: url(/static/portal/img/ico/ico-b-download.svg) no-repeat;
 margin-left: 4px;
 margin-bottom: 3px;
 }
+[class^=b-].b-download2 {
+height: 32px;
+line-height: 32px;
+font-size: 14px;
+color: #fff;
+background-color: #3B63C4;
+}
+[class^=b-].b-download2::before {
+content: "";
+display: inline-block;
+vertical-align: middle;
+width: 21px;
+height: 20px;
+background: url(/static/portal/img/ico/ico-b-download2.svg) no-repeat;
+margin-left: 4px;
+margin-bottom: 3px;
+}
 
 .view + .btnSet [class^=b-] {
 height: 48px;
@@ -8654,6 +8746,18 @@ margin-right: 3px;
 vertical-align: bottom;
 }
 
+.a-add::before {
+content: "\e147";
+font-family: "Material Icons";
+font-size: 30px;
+}
+
+.a-del::before {
+content: "\e644";
+font-family: "Material Icons";
+font-size: 30px;
+}
+
 .btnSet {
 float: none;
 margin-top: 40px;
@@ -8661,6 +8765,7 @@ margin-top: 40px;
 .btnSet [class^=b-] {
 font-size: 1.125rem;
 min-width: 112px;
+padding: 0 20px;
 }
 .btnSet [class^=b-] + [class^=b-] {
 margin-left: 7px;

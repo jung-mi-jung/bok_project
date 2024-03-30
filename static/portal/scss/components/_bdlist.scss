@@ -559,7 +559,9 @@
 				> a {
 					float: right;
 					padding: 2px 0;
-					@include fileload();
+					&.i-download {
+						@include fileload();
+					}
 				}
 				.fileGoupBox {
 					top: 28px;

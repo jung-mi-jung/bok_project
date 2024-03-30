@@ -352,7 +352,7 @@
 						}*/
 					}
 					.depth4 {
-						display: none;
+						//display: none;
 						position: relative;
 						&::before {
 							content: "";
@@ -862,6 +862,28 @@
 				.date-set {
 				}
 				
+			}
+			&.type2 {	//마이페이지
+				.sh-input {
+					display: flex;
+					justify-content: space-between;
+					flex-grow: 1;
+				}
+				.select-box {
+					.select-set {
+						&::after {
+							display: none;
+						}
+						@include breakpoint($lg){
+							select {
+								min-width: 200px;
+							}
+						}	
+					}
+				}
+				.date-set {
+					flex-basis: calc(100% - 200px);
+				}
 			}
 		}
 	}	
