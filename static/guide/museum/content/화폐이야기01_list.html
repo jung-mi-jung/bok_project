@@ -1,0 +1,145 @@
+<!-- 
+화폐이야기01_list.html 재미있는 화폐이야기, 우리나라의 화폐
+화폐이야기02_list.html 세계의 화폐여행, 세계의 현용화폐
+-->
+
+<!-- 탭메뉴 -->
+<div class="tab-list">
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <a href="javascript:void(0)" role="tab" aria-controls="panel1-1" class="swiper-slide all on" id="tap1-1">화폐일반</a>
+            <a href="javascript:void(0)" role="tab" aria-controls="panel1-2" class="swiper-slide" id="tap1-2" >은행권 도안 이야기</a>
+            <a href="javascript:void(0)" role="tab" aria-controls="panel1-3" class="swiper-slide" id="tap1-3" >은행권 이야기</a>
+            <a href="javascript:void(0)" role="tab" aria-controls="panel1-4" class="swiper-slide" id="tap1-4">주화 이야기</a>
+        </div>
+    </div>
+    <button type="button" class="swiper-tab-button swiper-tab-next"><i class="ico-cont-right-w"></i></button>
+    <button type="button" class="swiper-tab-button swiper-tab-prev"><i class="ico-cont-left-w"></i></button>
+</div>
+
+<!-- 비쥬얼이미지 -->
+<div class="visualImg">
+
+
+</div> 
+
+<!-- 탭패널 -->
+<div class="tab-content">
+    <div class="tab-pannel on" id="panel1-1" aria-labelledby="tap1-1" role="tabpanel">
+        <div class="sh-BxSet">
+            <p class="count-total">총 <strong>1590</strong>건의 게시물이 있습니다.</p>	
+        </div>
+        <div class="bd-line d-type">
+            <ul>
+                <li>
+                    <a href="" class="row ai-center">
+                        <span class="num">1</span>
+                        <div class="set">화폐의 기본요건</div>
+                        <i class="ico-more-gr"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="row ai-center">
+                        <span class="num">2</span>
+                        <div class="set">화폐의 발명자는 누구?</div>
+                        <i class="ico-more-gr"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="row ai-center">
+                        <span class="num">3</span>
+                        <div class="set">국민의 신뢰를 바탕으로 한 중앙은행의 독점</div>
+                        <i class="ico-more-gr"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="row ai-center">
+                        <span class="num">4</span> 
+                        <div class="set">화페 액면체계</div>
+                        <i class="ico-more-gr"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="tab-pannel" id="panel1-2" aria-labelledby="tap1-2" role="tabpanel">
+        <div class="sh-BxSet">
+            <p class="count-total">총 <strong>1590</strong>건의 게시물이 있습니다.</p>	
+        </div>
+        <div class="bd-line d-type">
+            <ul>
+                <li>
+                    <a href="" class="row ai-center">
+                        <span class="num">1</span>
+                        <div class="set">화폐의 기본요건</div>
+                        <i class="ico-more-gr"></i>
+                    </a>
+                </li>
+                <li>
+            </ul>
+        </div>
+    </div>
+    <div class="tab-pannel" id="panel1-3" aria-labelledby="tap1-3" role="tabpanel">
+        <div class="sh-BxSet">
+            <p class="count-total">총 <strong>1590</strong>건의 게시물이 있습니다.</p>	
+        </div>
+        <div class="bd-line d-type">
+            <ul>
+                <li>
+                    <a href="" class="row ai-center">
+                        <span class="num">3</span>
+                        <div class="set">국민의 신뢰를 바탕으로 한 중앙은행의 독점</div>
+                        <i class="ico-more-gr"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="tab-pannel" id="panel1-4" aria-labelledby="tap1-4" role="tabpanel">
+        <div class="sh-BxSet">
+            <p class="count-total">총 <strong>1</strong>건의 게시물이 있습니다.</p>	
+        </div>
+        <div class="bd-line d-type">
+            <ul>
+                <li>
+                    <a href="" class="row ai-center">
+                        <span class="num">4</span> 
+                        <div class="set">화페 액면체계</div>
+                        <i class="ico-more-gr"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    $(".worldMap a").on("click", function(e){
+        e.preventDefault();
+
+        var targetImg = $(this).parents("g");
+        var targetInx = $(this).parents("g").index() + 1;
+
+        $(targetImg).addClass("on").siblings().removeClass("on");
+        $(".tab-list a").eq(targetInx).addClass("on").siblings().removeClass("on")
+        
+    });
+
+    //탭메뉴 클릭 시 이미지맵 활성화 및 하단 리스트 활성화
+    $(".tab-list a").on("click", function(e){
+        e.preventDefault();
+
+        var tablist = $(this);
+        var tablistInx = $(this).index() - 1 ;
+
+        $(tablist).addClass("on").siblings().removeClass("on");
+        $(".worldMap g").eq(tablistInx).addClass("on").siblings().removeClass("on")
+
+        if( tablist.hasClass("all") ) {
+            return $(".worldMap g").removeClass("on");
+        }
+        
+    });
+</script>

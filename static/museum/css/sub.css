@@ -2310,11 +2310,28 @@ background-image: url("/static/museum/img/ico/ico-alarm@2x.png");
 }
 }
 
+/* 화폐이야기 게시판 */
 .bd-line.d-type > ul > li {
 min-height: 56px;
 }
 .bd-line.d-type a {
 gap: 0 8px;
+}
+.bd-line.d-type a:hover .set {
+position: relative;
+}
+.bd-line.d-type a:hover .set::before {
+content: "";
+display: block;
+width: 100%;
+height: 1px;
+background: #1a1a1a;
+position: absolute;
+left: 0;
+bottom: 0;
+}
+.bd-line.d-type a:hover i {
+background-position: -40px -310px;
 }
 .bd-line.d-type .num {
 display: inline-block;
@@ -2334,8 +2351,15 @@ box-sizing: border-box;
 background: #fff;
 }
 .bd-line.d-type .set {
+display: inline-block;
 max-width: calc(100% - 130px);
-width: 100%;
+white-space: nowrap;
+text-overflow: ellipsis;
+overflow: hidden;
+}
+.bd-line.d-type i {
+position: absolute;
+right: 15px;
 }
 
 /* 옛날 소스 */
@@ -4837,7 +4861,7 @@ box-sizing: border-box;
 align-items: stretch;
 }
 .tab-list .swiper a.swiper-slide {
-display: block;
+flex: 1;
 min-height: 40px;
 padding: 8px;
 color: #3B63C4;
@@ -7357,8 +7381,39 @@ padding: 26.5px 124.4px 26.21px 123.5px;
 background: #F2F6FA;
 box-sizing: border-box;
 }
-.worldMap .africa > path:not(.mapTxt) {
-fill: red;
+@media (max-width: 1199px) {
+.worldMap {
+padding: 20px 16px;
+}
+}
+@media (max-width: 749px) {
+.worldMap {
+padding: 20px 8px;
+}
+}
+.worldMap g {
+cursor: pointer;
+}
+.worldMap g.on path:not(.mapTxt) {
+fill: #1F4CBA;
+}
+.worldMap g.on path.mapTxt {
+fill: #fff;
+}
+.worldMap g.on circle {
+fill: #FF327C;
+stroke: rgba(255, 50, 124, 0.3);
+stroke-width: 8;
+filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.25));
+}
+.worldMap g.europe {
+order: 1;
+}
+
+.visualImg {
+aspect-ratio: 1340/400;
+background: url(/static/museum/img/visualImg.png) no-repeat center center;
+background-size: contain;
 }
 
 .dbdata {

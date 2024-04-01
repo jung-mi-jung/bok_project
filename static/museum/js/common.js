@@ -657,30 +657,7 @@ $(function() {
 		});
 		$(this).parent().removeClass('open').next().hide();
 	});
-
-	// focus this position // 	ul>li>a[data-rel^='prettyPhoto']
-	// $("[data-rel^='prettyPhoto']").each(function(n){
-	// 	$(this).attr("data-num", n);
-	// });
-	// $("[data-rel^='prettyPhoto']").on("click", function(event){
-	// 	focusPos = $(this).attr("data-num");
-	// });
-	// $("[data-rel^='prettyPhoto']").prettyPhoto({
-	// 	animation_speed:'fast', theme:'light_square', slideshow:3000, show_title:false, autoplay_slideshow:false, social_tools:false, allow_resize:false
-	// 	// 타이틀 숨김, 확대보기 (allow_resize:true)
-	// });
 });
-
-// $(function() {
-// 	$('img').each(function(index, el) {
-// 		$(this).error(function() {
-// 			// console.log($(this),'error!!')
-// 			// $(this).replaceWith('<i class=errimg>');
-// 			$(this).attr('src','/static/commons/img/noimage.png');
-// 		});
-// 		// console.log($(this))
-// 	});
-// });
 
 
 // 상설전시 탭메뉴 swiper
