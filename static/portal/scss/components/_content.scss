@@ -1,3 +1,4 @@
+sup {}
 .place {
 	color: #1A1A1A;
 	&::before {
@@ -1831,9 +1832,11 @@ p.subject {
 		border: 0;
 		height: 32px;
 		&::before {
-			@include font-ico-outline('\e5ca');
+			@include font-ico-outline("\e8b6"); //e5ca
 			font-size: 20px;
-			color: #1C1B1F;
+			color: #fff;
+			margin-right: 5px;
+			//color: #1C1B1F;
 		}
 	}
 }

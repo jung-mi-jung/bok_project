@@ -225,6 +225,11 @@ position: static;
 #main-container h3.h3::after {
 display: none;
 }
+#main-container h3.h3 sup {
+vertical-align: super;
+font-size: 75%;
+color: #39A0FF;
+}
 #main-container .bu2,
 #main-container h4 {
 color: #3B63C4;
@@ -1473,6 +1478,110 @@ background-color: #1A1A1A;
 width: 4px;
 height: 4px;
 border-radius: 50%;
+}
+
+.pcWin {
+border: 0px solid #dedede;
+}
+.pcWin .main_table {
+border: 1px solid #dedede;
+border-collapse: collapse;
+text-align: center;
+table-layout: fixed;
+line-height: 1.5;
+border-right: none;
+border-top: none;
+}
+.pcWin .main_table td {
+border: 1px solid #dedede;
+overflow: hidden;
+font-size: 11pt;
+border-right: none;
+border-top: none;
+width: 120px;
+height: 100px;
+}
+.pcWin .main_table td.textOverDefault {
+white-space: normal;
+text-overflow: clip;
+}
+.pcWin .head_table {
+border: 1px solid #dedede;
+background-color: #627fa4;
+border-collapse: collapse;
+text-align: center;
+color: white;
+font-weight: 600;
+table-layout: fixed;
+border-spacing: 0px;
+}
+.pcWin .left_table {
+border: 0px solid #dedede;
+width: 140px;
+table-layout: fixed;
+border-spacing: 0px;
+border-right: none;
+border-top: none;
+/*  margin			: -1px; */
+}
+.pcWin .left_table td {
+border: 1px solid #dedede;
+border-collapse: collapse;
+border-right: none;
+border-top: none;
+text-align: center;
+table-layout: fixed;
+/*   font-size			: 10pt; */
+font-weight: bold;
+}
+.pcWin .head_table th {
+border: 1px solid #dedede;
+border-collapse: collapse;
+width: 120px;
+height: 70px;
+text-align: center;
+table-layout: fixed;
+}
+.pcWin .headDivKey {
+border: 1px solid #dedede;
+background-color: #627fa4;
+border-collapse: collapse;
+text-align: center;
+color: white;
+font-weight: bold;
+table-layout: fixed;
+border-spacing: 0px;
+margin: -1px;
+}
+.pcWin #rockLeftDiv {
+width: 140px;
+overflow-y: hidden;
+overflow-x: hidden;
+border: 1px;
+margin: -1px;
+border-collapse: collapse;
+}
+.pcWin #rockLeftDiv td {
+width: 140px;
+height: 100px;
+}
+.pcWin .headDivKey td {
+width: 140px;
+height: 70px;
+}
+.pcWin #headDiv {
+overflow: hidden;
+border-collapse: collapse;
+}
+.pcWin #dataDiv {
+overflow-y: auto;
+overflow-x: hidden;
+}
+.pcWin #bottomDiv {
+/* width:783px; */
+height: 20px;
+overflow-x: scroll;
+overflow-y: hidden;
 }
 
 .sh-BxSet {
@@ -8071,7 +8180,7 @@ border: 0;
 height: 32px;
 }
 .select-go .search::before {
-content: "\e5ca";
+content: "\e8b6";
 font-family: "Material Icons Outlined";
 font-weight: normal;
 font-style: normal;
@@ -8087,7 +8196,8 @@ text-rendering: optimizeLegibility;
 -moz-osx-font-smoothing: grayscale;
 font-feature-settings: "liga";
 font-size: 20px;
-color: #1C1B1F;
+color: #fff;
+margin-right: 5px;
 }
 
 .info-txt {
@@ -9849,6 +9959,463 @@ margin-left: 20px;
 }
 .choice-type .reser-type span.i2::before {
 background-color: #F5F5F5;
+}
+
+[class^=ico-].ico-youtube::before {
+background-image: url(/static/portal/img/ico/ico-youtube.svg);
+}
+[class^=ico-].ico-instagram::before {
+background-image: url(/static/portal/img/ico/ico-instagram.svg);
+}
+[class^=ico-].ico-facebook::before {
+background-image: url(/static/portal/img/ico/ico-facebook.svg);
+}
+[class^=ico-].ico-twitter::before {
+background-image: url(/static/portal/img/ico/ico-twitter.svg);
+}
+
+[class^=sns-].sns-youtube::before {
+background-image: url(/static/portal/img/ico/sns-youtube.svg);
+}
+[class^=sns-].sns-instagram::before {
+background-image: url(/static/portal/img/ico/sns-instagram.svg);
+}
+[class^=sns-].sns-facebook::before {
+background-image: url(/static/portal/img/ico/sns-facebook.svg);
+}
+[class^=sns-].sns-twitter::before {
+background-image: url(/static/portal/img/ico/sns-twitter.svg);
+}
+
+.i-fax::before {
+color: #1A1A1A;
+content: "\ead8";
+font-family: "Material Icons Outlined";
+font-weight: normal;
+font-style: normal;
+display: inline-block;
+line-height: 1;
+vertical-align: text-bottom;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+font-feature-settings: "liga";
+font-size: 24px;
+margin-right: 3px;
+}
+
+.i-email::before {
+color: #1A1A1A;
+content: "\e158";
+font-family: "Material Icons Outlined";
+font-weight: normal;
+font-style: normal;
+display: inline-block;
+line-height: 1;
+vertical-align: text-bottom;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+font-feature-settings: "liga";
+font-size: 24px;
+margin-right: 3px;
+}
+
+.sub-main .zone_main .section_bg {
+margin-bottom: 56px;
+padding-top: 30px;
+padding-bottom: 80px;
+background-color: #F2F6FA;
+background-image: url(/static/portal/img/submain/bg_zone.png);
+background-position: 50% 0;
+background-repeat: no-repeat;
+}
+@media (min-width: 1200px) {
+.sub-main .zone_main .section_bg .container {
+display: flex;
+justify-content: space-between;
+}
+.sub-main .zone_main .section_bg .container > div {
+width: calc(50% - 40px);
+}
+}
+.sub-main .zone_main .section_bg .top {
+display: flex;
+justify-content: space-between;
+align-items: flex-end;
+}
+.sub-main .zone_main .section_bg .top h2 > * {
+display: block;
+line-height: 1.3;
+text-align: left;
+}
+.sub-main .zone_main .section_bg .top h2 .bu {
+padding-left: 5px;
+}
+.sub-main .zone_main .section_bg .top h2 strong {
+font-weight: 500;
+color: #131547;
+font-size: 2.25rem;
+}
+.sub-main .zone_main .section_bg .top .button_link {
+position: relative;
+}
+.sub-main .zone_main .section_bg .top .button_link button {
+text-align: left;
+width: 222px;
+border-radius: 4px;
+padding: 7px 15px;
+display: block;
+background: #fff;
+border: 1px solid #D8E0E8;
+}
+.sub-main .zone_main .section_bg .top .button_link button::after {
+color: #1C1B1F;
+float: right;
+content: "\e5c5";
+font-family: "Material Icons Outlined";
+font-weight: normal;
+font-style: normal;
+display: inline-block;
+line-height: 1;
+vertical-align: text-bottom;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+font-feature-settings: "liga";
+font-size: 18px;
+margin: 3px 1px 0 0;
+}
+.sub-main .zone_main .section_bg .top .button_link ul {
+display: none;
+position: absolute;
+top: 39px;
+left: 0;
+width: 100%;
+z-index: 9;
+background-color: #fff;
+border: 1px solid #D8E0E8;
+border-radius: 4px;
+padding: 5px 0;
+}
+.sub-main .zone_main .section_bg .top .button_link ul.active {
+display: block;
+}
+.sub-main .zone_main .section_bg .top .button_link ul li a {
+padding: 4px 15px;
+display: block;
+}
+.sub-main .zone_main .visual {
+position: relative;
+overflow: hidden;
+margin-top: 40px;
+}
+.sub-main .zone_main .visual .ctrl {
+position: absolute;
+bottom: 20px;
+right: 20px;
+z-index: 1;
+}
+.sub-main .zone_main .visual .ctrl button {
+width: 20px;
+height: 30px;
+}
+.sub-main .zone_main .visual .ctrl button i::before {
+color: #1A1A1A;
+font-size: 22px;
+vertical-align: middle;
+}
+.sub-main .zone_main .visual .ctrl-prev::before {
+content: "\e314";
+font-family: "Material Icons Outlined";
+font-weight: normal;
+font-style: normal;
+display: inline-block;
+line-height: 1;
+vertical-align: text-bottom;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+font-feature-settings: "liga";
+}
+.sub-main .zone_main .visual .ctrl-stop::before {
+content: "\e034";
+font-family: "Material Icons";
+}
+.sub-main .zone_main .visual .ctrl-play::before {
+content: "\e037";
+font-family: "Material Icons";
+}
+.sub-main .zone_main .visual .ctrl-next::before {
+content: "\e315";
+font-family: "Material Icons Outlined";
+font-weight: normal;
+font-style: normal;
+display: inline-block;
+line-height: 1;
+vertical-align: text-bottom;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+font-feature-settings: "liga";
+}
+.sub-main .zone_main .visual .ctrl .swiper-pagination {
+position: static;
+width: auto;
+display: inline-block;
+vertical-align: middle;
+color: #4D4D4D;
+font-size: 1.125rem;
+font-weight: 300;
+padding: 0 5px;
+}
+.sub-main .zone_main .visual .ctrl .swiper-pagination-current {
+color: #39A0FF;
+font-size: 1.25rem;
+font-weight: 700;
+}
+.sub-main .zone_main .visual .ctrl .swiper-pagination-total {
+font-size: 1rem;
+}
+.sub-main .zone_main .visual .ctrl .swiper-pagination > span {
+display: inline-block;
+margin: 0 5px;
+}
+.sub-main .zone_main .visual .section-visual {
+box-shadow: 24px 24px 24px 0 rgba(0, 0, 0, 0.5);
+}
+.sub-main .zone_main .visual .section-visual .img {
+display: block;
+padding-top: 50.6%;
+background-position: 50%;
+background-size: cover;
+background-repeat: no-repeat;
+}
+.sub-main .zone_main .section2 {
+margin-top: 50px;
+}
+@media (min-width: 1200px) {
+.sub-main .zone_main .section2 {
+padding-left: 40px;
+}
+}
+.sub-main .zone_main .section2 .go_link {
+margin-bottom: 56px;
+}
+.sub-main .zone_main .section2 .go_link ul {
+display: flex;
+justify-content: space-between;
+}
+.sub-main .zone_main .section2 .go_link ul li {
+position: relative;
+}
+.sub-main .zone_main .section2 .go_link ul li a {
+text-align: center;
+display: block;
+color: #131547;
+font-weight: 500;
+text-align: center;
+font-size: 1.125rem;
+}
+.sub-main .zone_main .section2 .go_link ul li a:hover {
+color: #3B63C4;
+text-decoration: underline;
+}
+.sub-main .zone_main .section2 .go_link ul li + li::before {
+content: "";
+display: inline-block;
+width: 1px;
+height: 18px;
+margin-top: -9px;
+background: #CACCD8;
+position: absolute;
+top: 50%;
+left: 40%;
+}
+.sub-main .zone_main .section2 h2 {
+font-weight: 500;
+font-size: 3rem;
+color: #131547;
+margin-bottom: 30px;
+}
+.sub-main .zone_main .section2 .tit {
+overflow: hidden;
+max-height: 122px;
+line-height: 1.4;
+}
+.sub-main .zone_main .section2 .tit p {
+margin-bottom: 10px;
+}
+.sub-main .zone_main .section2 .more {
+margin-top: 25px;
+text-align: right;
+}
+.sub-main .zone_main .section2 .more a {
+font-size: 14px;
+color: #2F4F9D;
+display: inline-block;
+border: 1px solid #2F4F9D;
+border-radius: 30px;
+padding: 3px 12px;
+}
+.sub-main .zone_main .section2 .more a::after {
+content: "\e5cc";
+font-family: "Material Icons Outlined";
+font-weight: normal;
+font-style: normal;
+display: inline-block;
+line-height: 1;
+vertical-align: text-bottom;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+font-feature-settings: "liga";
+font-size: 18px;
+color: #2F4F9D;
+margin-left: 5px;
+}
+.sub-main .zone_main .section2 .etc-link {
+margin-top: 60px;
+}
+.sub-main .zone_main .section2 .etc-link ul {
+display: flex;
+justify-content: space-between;
+}
+.sub-main .zone_main .section2 .etc-link ul li {
+width: 25%;
+}
+.sub-main .zone_main .section2 .etc-link ul li a {
+text-align: center;
+display: block;
+padding: 8px;
+color: #fff;
+background-color: #131547;
+}
+.sub-main .zone_main .section2 .etc-link ul li a::before {
+content: "";
+display: inline-block;
+vertical-align: middle;
+width: 36px;
+height: 36px;
+background-position: 50%;
+background-repeat: no-repeat;
+margin-right: 8px;
+}
+.sub-main .zone_main .section2 .etc-link ul li a.ico1::before {
+background-image: url(/static/portal/img/submain/ico-zone1.png);
+}
+.sub-main .zone_main .section2 .etc-link ul li a.ico2::before {
+background-image: url(/static/portal/img/submain/ico-zone2.png);
+}
+.sub-main .zone_main .section2 .etc-link ul li a.ico3::before {
+background-image: url(/static/portal/img/submain/ico-zone3.png);
+}
+.sub-main .zone_main .section2 .etc-link ul li a.ico4::before {
+background-image: url(/static/portal/img/submain/ico-zone4.png);
+}
+.sub-main .zone_main .section2 .etc-link ul li a:hover {
+background-color: #3B63C4;
+}
+@media (min-width: 1200px) {
+.sub-main .notice-set {
+display: flex;
+justify-content: space-between;
+}
+}
+.sub-main .notice-set .notice {
+position: relative;
+width: calc(33.3% - 79px);
+}
+.sub-main .notice-set .notice h2 {
+color: #1A1A1A;
+font-size: 1.75rem;
+font-weight: 500;
+border-bottom: 2px solid #1A1A1A;
+padding-bottom: 18px;
+}
+.sub-main .notice-set .notice ul li {
+border-bottom: 1px solid #E6E6E6;
+}
+.sub-main .notice-set .notice ul li a {
+display: block;
+padding: 15px 0;
+}
+.sub-main .notice-set .notice ul li span {
+display: block;
+}
+.sub-main .notice-set .notice ul li span.title {
+color: #222;
+font-size: 1.125rem;
+font-weight: 500;
+overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+display: inline-block;
+}
+.sub-main .notice-set .notice ul li span.title + .date {
+margin-top: 6px;
+}
+.sub-main .notice-set .notice ul li span.txt {
+color: #4D4D4D;
+overflow: hidden;
+text-overflow: ellipsis;
+display: block;
+display: -webkit-box;
+-webkit-line-clamp: 2;
+-webkit-box-orient: vertical;
+height: 48px;
+margin-top: 6px;
+}
+.ie .sub-main .notice-set .notice ul li span.txt {
+display: block;
+height: 32px;
+overflow: hidden;
+}
+.sub-main .notice-set .notice ul li span.date {
+color: #666;
+font-size: 14px;
+margin-top: 15px;
+}
+.sub-main .notice-set .notice ul li span.t {
+margin-top: 2px;
+color: #3B63C4;
+}
+.sub-main .notice-set .notice .more {
+position: absolute;
+top: 3px;
+right: 0;
+z-index: 9;
+}
+.sub-main .notice-set .notice .more a::before {
+content: "";
+display: inline-block;
+width: 36px;
+height: 36px;
+background: url(/static/portal/img/submain/more.png);
 }
 
 .pdf {

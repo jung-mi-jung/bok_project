@@ -1515,6 +1515,11 @@ position: static;
 #main-container h3.h3::after {
 display: none;
 }
+#main-container h3.h3 sup {
+vertical-align: super;
+font-size: 75%;
+color: #39A0FF;
+}
 #main-container .bu2,
 #main-container h4 {
 color: #3B63C4;

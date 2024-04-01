@@ -136,6 +136,11 @@ p.bu-dot {
 		&.h3 {
 			margin: 40px 0 16px;
 			@include h-caption();
+			sup {
+				vertical-align: super;
+				font-size: 75%;
+				color: #39A0FF;
+			}
 		}
 	}
 	.bu2,
