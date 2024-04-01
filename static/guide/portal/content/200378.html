@@ -1,0 +1,137 @@
+<h2>위조지폐 기번호 검색</h2>
+
+<form  method="post" name="counterfeit" onsubmit="return goSearch(this);" action="./counterfeitSch.action">
+	<input type="hidden" name="menuNaviId" value="2036" id="menuNaviId"/>
+	<fieldset class="moneyChoW">
+		<legend>위조지폐 검색</legend>
+			<div class="moneyCho">
+				<ul>
+					<li>
+						<label for="facevalue50000"><input type="radio" name="counterfeitBean.filefacevalue" id="facevalue50000" value="50000" title="오만원"/><i></i> 50,000원권</label>
+						<p><img src="https://www.bok.or.kr/static/portal/img/cts/sub1/200378_1.jpg" alt="5만원권" /></p>
+					</li>
+					<li>
+						<label for="facevalue10000"><input type="radio" name="counterfeitBean.filefacevalue" id="facevalue10000" value="10000" title="만원"/><i></i> 10,000원권</label>
+						<p><img src="https://www.bok.or.kr/static/portal/img/cts/sub1/200378_2.jpg" alt="구 만원권, 만원권" /></p>
+					</li>
+					<li>
+						<label for="facevalue5000"><input type="radio" name="counterfeitBean.filefacevalue" id="facevalue5000" value="5000" title="오천원"/><i></i> 5,000원권</label>
+						<p><img src="https://www.bok.or.kr/static/portal/img/cts/sub1/200378_3.jpg" alt="구 오천원권, 오천원권" /></p>
+					</li>
+					<li>
+						<label for="facevalue1000"><input type="radio" name="counterfeitBean.filefacevalue" id="facevalue1000" value="1000" title="천원"/><i></i> 1,000원권</label>
+						<p><img src="https://www.bok.or.kr/static/portal/img/cts/sub1/200378_4.jpg" alt="구 천원권, 천원권" /></p>
+					</li>
+				</ul>
+			
+				<div class="moneySch">
+					<div>
+						<p><span class="help3">권종을 선택하시고 기번호 (지폐의 앞면 왼쪽 위 또는 오른쪽 아래 번호)를 입력하십시오.</span></p>
+						<div class="moneySch_box">
+							<input type="text" name="counterfeitBean.fileserialno" value="" id="serialno" class="input-lg" placeholder="Ex)가가가0009999 or AA0009999A"  title="기번호 입력"/>
+							<a class="b-search" href="" ><span class="sr-only">검색</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="moneybox">
+				<p>조회하신 <strong>50000원권 CA7283871B</strong> 기번호의 위조지폐는<br />지금까지 총 <span class="fb fc_red">56</span>장이 발견되었습니다.</strong></p>
+				<div class="table">
+					<table class="fixed">
+						<caption>위조지폐 기번호 검색결과</caption>
+						<colgroup>
+							<col style="width: 30%;">
+							<col>
+						</colgroup>
+						<thead>
+							<th scope="col">지폐</th>
+							<th scope="col">장수</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td>CA7283871B</td>
+								<td>56</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="tar"><a href="/portal/main/contents.do?menuNo=200379" class="b-go xs">위조화폐 식별요령</a></div>
+			</div>
+			<!-- zz -->
+	</fieldset>
+
+	<div class="moneybox1">
+		<p class="help3 red">권종별로 많이 발견되는 위폐 기번호</p>
+		<ul class="money-list">
+			<li>
+				<div>
+					<p>50,000원권</p>
+					<ul>
+						<li >KD0225189K</li>
+						<li>EE0803823H</li>
+						<li>DB7723397E</li>
+						<li>JA0896631K</li>
+						<li>HD0969984D</li>
+						<li>HL0948454F</li>
+						<li>HC0982001L</li>
+						<li>CA7779014H</li>
+						<li>FF0794919C</li>
+						<li>CA7283871B</li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<div>
+					<p>10,000원권</p>
+					<ul>
+						<li >AK1441861J</li>
+						<li>JC7984541D</li>
+						<li>KL0605350B</li>
+						<li>AD3285168E</li>
+						<li>AH2426732A</li>
+						<li>CE2844515K</li>
+						<li>KB2575975K</li>
+						<li>DH7855404J</li>
+						<li>FA2843197B</li>
+						<li>BC0700142A</li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<div>
+					<p>5,000원권</p>
+					<ul>
+							<li >AA0112994D</li>
+						<li>DA0076345F</li>
+						<li>BK0043473H</li>
+						<li>CC0138626A</li>
+						<li>AA7289940K</li>
+						<li>AC0962594H</li>
+						<li>AL0059007B</li>
+						<li>CB0514473K</li>
+						<li>AA0547282J</li>
+							<li>CH0538378B</li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<div>
+					<p>1,000원권</p>
+					<ul>
+						<li >KH0815805H</li>
+						<li>JA0481722L</li>
+						<li>FJ0085748K</li>
+						<li>FJ0151654J</li>
+						<li>BK1601952J</li>
+						<li>KJ0575852F</li>
+						<li>CC2808662B</li>
+						<li>AA9153712F</li>
+						<li>LE0718576A</li>
+						<li>JK0389916B</li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+	</div>
+</form>

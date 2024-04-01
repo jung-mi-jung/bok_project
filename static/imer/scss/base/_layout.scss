@@ -120,12 +120,27 @@
 			width: $m-header-height;
 			height: $m-header-height;
 			z-index: 9;
-			background-color: #3B63C4;
+			background-color: #fff;
+			&::before  {
+				@include font-ico-outline("\e8b6");
+				color: $point;
+				font-size: rem(40);
+				@include breakpoint($smd){
+					font-size: rem(32);
+				}
+			}
+			&:focus {
+				@include focus;
+			}
 			@include breakpoint($lg){
 				width: 104px;
 				height: $header-height;
 				background-color: #3B63C4;
 				top: -42px;
+				&::before {
+					color: #fff;
+					font-size: rem(24);
+				}
 			}
 		}	
 		@include breakpoint($lg){
@@ -140,11 +155,6 @@
 						a {
 							color: #fff;
 							font-size: 15px;
-							// &[target=_blank]::after {
-							// 	@include font-ico("\e89e");
-							// 	font-size: 16px;
-							// 	margin: 0 0 2px 5px;
-							// }
 						}
 						& + li {
 							padding-left: 8px;

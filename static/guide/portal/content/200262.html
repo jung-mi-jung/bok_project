@@ -1,0 +1,69 @@
+<div class="info-txt">
+	<p class="tit ico1">뉴스레터를 <em>신청한 내역</em>이 없습니다.</p>
+	<p class="info-link">
+		<a href="/portal/singl/newsLetter/reqAgre.do?menuNo=200174" class="a-link">뉴스레터 신청하기</a>
+	</p>
+	<p class="t-line">
+		<span class="help3">뉴스레터 수신을 원하실 경우 <em>‘뉴스레터 신청하기’</em> 버튼을 클릭하시면 신청화면으로 이동합니다.</span>
+	</p>
+</div>
+
+<h3 class="h3">홈페이지 개편 이전 뉴스레터 신청자</h3>
+<div class="view type">
+	<dl>
+		<dt>이메일</dt>
+		<dd>
+			<input type="text" name="email1" id="email1" value="" title="이메일 아이디" class="emailId">
+			@
+			<input type="text" name="email2" id="email2" value="" title="이메일 주소" readonly="readonly" class="emailAddr emailDomainForm">
+			<label for="sr_email_more" class="hidden">이메일 도메인 선택</label>
+			<select id="sr_email_more" name="" class="input_select select_email_js" title="직접입력 선택시 자동활성화&amp;포커스 이동">
+				<option selected="">메일주소선택</option>
+				
+					<option value="gmail.com">gmail.com</option>
+				
+					<option value="naver.com">naver.com</option>
+				
+					<option value="hanmail.net">hanmail.net</option>
+				
+					<option value="daum.net">daum.net</option>
+				
+					<option value="hotmail.com">hotmail.com</option>
+				
+					<option value="nate.com">nate.com</option>
+				
+					<option value="yahoo.co.kr">yahoo.co.kr</option>
+				
+				<option value="emaildomain_false">직접입력</option>
+			</select>
+			<a href="javascript:void(0);" onclick="emailSearchBtn();" class="b-btn"><span>찾기</span></a>
+			<script type="text/javascript">
+				jQuery(function(){
+					jQuery('select.select_email_js').change(function() {
+						if (jQuery(this).val()=='emaildomain_false') {
+							jQuery('.emailDomainForm:text[name=email2]').val('');
+							jQuery('.emailDomainForm').attr('readonly',false).focus();
+						}else{
+							jQuery('.emailDomainForm:text[name=email2]').val('');
+							jQuery('.emailDomainForm:text[name=email2]').val(jQuery(this).val());
+							jQuery('.emailDomainForm').attr('readonly',true)
+						}
+					});
+				});
+			</script>
+		</dd>
+	</dl>
+</div>
+
+
+<h3 class="h3">신청정보변경</h3>
+
+
+<div class="btnSet">
+	<a href="" class="b-confirm">변경하기</a>
+</div>
+
+
+<h3 class="h3">뉴스레터 수신해지</h3>
+<p>뉴스레터 수신을 원하지 않을 경우 <strong>'해지하기'</strong> 버튼을 선택하여 주시기 바랍니다.
+<a href="" class="b-go xs">해지하기</a></p>

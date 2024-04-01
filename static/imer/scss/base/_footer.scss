@@ -210,13 +210,14 @@
 		.f_sns {
 			display: flex;
 			justify-content: space-between;
-			margin: 0 35px;
+			margin-left: 35px;
 			@include breakpoint($mdw){
 				padding-top: 15px;
 				width: 192px;
 			}
 			@include breakpoint($sm){
 				justify-content: center;
+				margin-left: 0;
 			}
 			a {
 				display: block;

@@ -1,0 +1,326 @@
+<h2>월간통계공표일정</h2>
+
+
+<div class="calSec fr">
+	<div class="calList">
+		<a href="javascript:void(0);" class="icoList1 on" title="선택됨">
+			<span class="hidden">달력으로 보기</span>
+		</a>
+		<a href="javascript:void(0);" class="icoList2 ">
+			<span class="hidden">리스트로 보기</span>
+		</a>
+	</div>
+</div>
+
+
+<!-- 달력 -->
+<div class="calendarWrap">
+	<div class="clear calDate mt30">
+		<a href="" class="calDateL fa vm"><span class="hidden">이전달</span></a>
+		<span id="yymm"><strong>2024</strong>년 <strong>03</strong>월</span>
+		<a href="" class="calDateR fa vm"><span class="hidden">다음달</span></a>
+	</div>
+	<div class="box-list">
+		<ul>
+			<li>
+				<a href="">1월</a>
+			</li>
+			<li>
+				<a href="">2월</a>
+			</li>
+			<li>
+				<a href="">3월</a>
+			</li>
+			<li class="on">
+				<a href="" title="선택됨">4월</a>
+			</li>
+			<li>
+				<a href="">5월</a>
+			</li>
+			<li>
+				<a href="">6월</a>
+			</li>
+			<li>
+				<a href="">7월</a>
+			</li>
+			<li>
+				<a href="">8월</a>
+			</li>
+			<li>
+				<a href="">9월</a>
+			</li>
+			<li>
+				<a href="">10월</a>
+			</li>
+			<li>
+				<a href="">11월</a>
+			</li>
+			<li>
+				<a href="">12월</a>
+			</li>
+		</ul>
+	</div>
+
+	
+	<div class="calendarSet">
+		<table>
+			<caption>행사일정 달력</caption>
+			<colgroup>
+				<col>
+				<col style="width: 14.2%;">
+				<col style="width: 14.2%;">
+				<col style="width: 14.2%;">
+				<col style="width: 14.2%;">
+				<col style="width: 14.2%;">
+				<col style="width: 14.2%;">
+			</colgroup>
+			<thead>
+				<tr>
+					<th class="sun">일<span>요일</span></th> 
+					<th>월<span>요일</span></th>
+					<th>화<span>요일</span></th>
+					<th>수<span>요일</span></th>
+					<th>목<span>요일</span></th>
+					<th>금<span>요일</span></th>
+					<th class="sat">토<span>요일</span></th> 
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td></td>
+					<td>1</td>
+					<td>2</td>
+					<td>3</td>
+					<td>4
+						<ul>
+							<li>
+								<a href="javascript:void(0);" class="tooltipOp fc1" data-toggle="modal" data-target="#modalBox1" onclick="schdulPop('5781')" title="" data-original-title="2023년 자금순환(잠정)">2023년 자금순환(잠정)</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" class="tooltipOp fc1" sdata-toggle="modal" data-target="#modalBox2" onclick="schdulPop('5782')" title="" data-original-title="2023년 4/4분기 예금취급기관 산업별대출금">2023년 4/4분기 예금취급기관 산업별대출금</a>
+							</li>
+						</ul>
+					</td>
+					<td>5</td>
+					<td>6</td>
+				</tr>
+				<tr>
+					<td>7</td>
+					<td>8</td>
+					<td>9</td>
+					<td>10</td>
+					<td>11</td>
+					<td>12</td>
+					<td>13</td>
+				</tr>
+				<tr>
+					<td>14</td>
+					<td>15</td>
+					<td>16</td>
+					<td>17</td>
+					<td>18</td>
+					<td>19</td>
+					<td>20</td>
+				</tr>
+				<tr>
+					<td>21</td>
+					<td>22</td>
+					<td>23</td>
+					<td>24</td>
+					<td>25</td>
+					<td>26</td>
+					<td>27</td>
+				</tr>
+				<tr>
+					<td>28</td>
+					<td>29</td>
+					<td>30</td>
+					<td>31</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>	
+</div>
+<!-- //달력 -->
+
+
+<!-- 리스트 -->
+<div class="bdPhotoSet" style="display: none;">
+	<div class="select-go">
+		<label for="schType">연도검색</label>
+		<select name="year" title="검색 영역 선택" class="input-md" id="schType">
+			<option value="">선택</option>
+			<option value="2010">2010</option>
+			<option value="2011">2011</option>
+			<option value="2012">2012</option>
+			<option value="2013">2013</option>
+			<option value="2014">2014</option>
+			<option value="2015">2015</option>
+			<option value="2016">2016</option>
+			<option value="2017">2017</option>
+			<option value="2018">2018</option>
+			<option value="2019">2019</option>
+			<option value="2020">2020</option>
+			<option value="2021">2021</option>
+			<option value="2022">2022</option>
+			<option value="2023">2023</option>
+			<option value="2024" selected="selected">2024</option>
+			<option value="2025">2025</option>
+			<option value="2026">2026</option>
+			<option value="2027">2027</option>
+			<option value="2028">2028</option>
+			<option value="2029">2029</option>
+		</select>
+		<input type="submit" value="검색" class="search">
+	</div>
+
+	<div class="table type2 mt15 tac">
+		<table>
+			<caption>월간통계공표일정 목록</caption>
+			<colgroup>
+				<col style="width: 18%;">
+				<col style="width: 14%;">
+				<col>
+				<col style="width: 15%;">
+			</colgroup>
+			<thead>
+				<tr>
+					<th>공표일</th>
+					<th>시각</th>
+					<th>대상통계</th>
+					<th>비고</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>2024-01-04</td>
+					<td>12:00</td>
+					<td class="title">
+						<p>
+							<a href="javascript:void(0);" class="tooltipOp" data-toggle="modal" data-target="#modalBox1" onclick="schdulPop('5761')" data-original-title="" title="">2023년 3/4분기 자금순환(잠정)</a>
+						</p>
+					</td>
+					<td class="tal"></td>
+				</tr>
+				<tr>
+					<td>2024-01-25</td>
+					<td>06:00</td>
+					<td class="title">
+						<p>
+							<a href="javascript:void(0);" class="tooltipOp" data-toggle="modal" data-target="#modalBox1" onclick="schdulPop('5767')" data-original-title="" title="">2024년 1월 기업경기실사지수(BSI) 및 경제심리지수(ESI)</a>
+						</p>
+					</td>
+					<td class="tal"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+<!-- //리스트 -->
+	
+
+
+<ol class="fnote">
+	<li><span class="title">주 : <sup title="각주 1)의 대한 설명" class="noteN">1)  </sup></span><span class="desc">동 통계 공표 일정은 통신/방송/인터넷 매체에서 취급 가능한 일자 및 시각이며, 사정에 따라 변경될 수 있음</span> </li>
+	<!-- <li><span class="title"><sup title="각주 2)의 대한 설명" class="ml25">2)  </sup></span><span class="desc">「결제통화별 수출입」, 「예금취급기관 가계대출」 및 「지역별 통화별 국제투자대조표」 는 별도의 보도자료 없이 ECOS에 수록</span> </li> -->
+	<li><span class="title"><sup title="각주 2)의 대한 설명" class="ml25">2)  </sup></span><span class="desc">「예금취급기관 가계대출」 통계는 보도자료 없이 한국은행 경제통계시스템(ECOS)에 수록</span> </li>
+	<li><span class="title"><sup title="각주 2)의 대한 설명" class="ml25">    </sup></span><span class="desc">(공표일: 2, 5, 8, 11월은 ｢가계신용｣ 통계 공표일, 기타 월은 ｢통화 및 유동성｣ 통계 공표일)</span> </li>
+	<li><span class="title"><sup title="각주 2)의 대한 설명" class="ml25">3)  </sup></span><span class="desc">상반기 「결제통화별 수출입」 통계는 보도자료 없이 한국은행 경제통계시스템(ECOS)에 수록</span> </li>
+	<li><span class="title"><sup title="각주 2)의 대한 설명" class="ml25">4)  </sup></span><span class="desc">「기업경기조사 및 경제심리지수」,「소비자동향조사」,「수출입물가지수」,「생산자물가지수」 통계는 공표일 08:00에 한국은행 경제통계시스템(ECOS)에 수록</span> </li>
+</ol>
+
+<!--  layer Popup  -->
+<div class="modal fade" id="modalBox1" tabindex="-1" role="dialog" aria-labelledby="modalBox1">
+	<div class="lpop modal-dialog" role="document">
+		<div class="set modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><i class="ti-close"></i><span class="sr-only">레이어 창닫기</span></button>
+				<h4 class="modal-title" id="modal-label1">통계공표일정<small id="selectDate"></small></h4>
+			</div>
+			<div class="modal-body">
+				<!-- <div class="calView"></div> -->
+				<div class="calView">
+					<ul>	
+						<li>
+							<div class="con ml0">
+								<p class="tit">2023년 3/4분기 자금순환(잠정)</p>
+								<span class="date">공표일 : 2024-01-04 시각 : 12:00</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="modal-bottom">
+					<button type="button" class="b-btn b-close lg" data-dismiss="modal">닫기</button>
+				</div>
+			</div>			
+		</div>
+	</div>
+</div>
+<div class="bgW"></div>
+<!--  //layer Popup  -->
+
+<script>
+//<![CDATA[
+$(function(){
+	$(".tooltipOp").tooltip();
+	$(".icoList1").on("click", function(e){
+		$(this).addClass("on").siblings().removeClass("on");
+		$(".calendarWrap").show();
+		$(".bdPhotoSet").hide();
+		return false;
+	})
+	$(".icoList2").on("click", function(e){
+		$(this).addClass("on").siblings().removeClass("on");
+		$(".calendarWrap").hide();
+		$(".bdPhotoSet").show();
+		return false;
+	})
+	function schdulPopFocus(){
+		$("#modalBox1 .close").focus();
+	}
+	schdulPop = function(schdulSn) {
+		
+		$.post(
+			"/portal/stats/statsPublictSchdul/view.json",
+			{schdulSn : schdulSn,isView:'Y'},
+			function(data) {
+				schdulPopHtml(data.result);
+				setTimeout(schdulPopFocus, 600)
+			},"json"
+		);
+	}
+
+	schdulPopHtml = function(result) {
+		$('#selectDate').text('('+result.publictDe+')');
+		var html =
+			'<ul>	<li>'+
+				'<div class="con ml0">'+
+					'<p class="tit">'+result.trgetStats+'</p>'+
+					'<span class="date">공표일 : '+result.publictDe+' 시각 : '+result.publictTm+'</span>'+
+				'</div>';
+		if (result.link != null) {
+			html += '<div class="b-view"><a href="javascript:void(0);" onclick="goUrl(\''+result.link+'\')" title="새창열림"><i class="fa fa-search-plus"></i> 바로가기</a></div>';
+		}
+		if (result.changeDate != null) {
+			html +=
+			'<h3>비고</h3>'+
+			'<p>'+
+			'변경일시 : '+result.changeDate+'<br>'+
+			'변경내역 : '+(result.changeDtls == null ? '-' : result.changeDtls)+
+			'</p>';
+		}
+		html += '</li></ul>';
+		$('.calView').html(html);
+	}
+
+	goUrl = function(str) {
+		window.open(str, '_blank');
+		//window.open('/portal/bbs/P0000559/list.do?menuNo=200690&searchCnd=1&searchWrd='+encodeURI(str), '_blank').focus();
+		return false;
+	}
+})
+//]]>
+</script>

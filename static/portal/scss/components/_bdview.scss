@@ -434,9 +434,25 @@
 }
 
 
+.view-table {
+	border-top: none;
+	font-size: rem(16);
+	table {
+		th {			
+			color: #fff;
+			background-color: #233B76;
+			padding: 10px 0;
+		}
+		tbody {
+			th {
+			background-color: #FAFAFA;}
+		}
+	}
+}
+
 .view {
 	clear: both;
-	font-size: rem(18);
+	font-size: rem(16);
 	border-top: 2px solid #222;
 	border-bottom:1px solid $bd-color;
 	border-left:1px solid $bd-color;

@@ -1,3 +1,53 @@
+//달력, 리스트 선택
+.calSec {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 15px;
+	.calList {
+		a {
+			&::after {
+				content: "";
+				display: inline-block;
+				vertical-align: middle;
+				width: 24px;
+				height: 24px;
+			}
+			&.icoList1 {
+				&::after {
+					background: url(/static/portal/img/ico/ico-calender_off.png);
+				}
+			}
+			&.icoList2 {
+				&::after {
+					background: url(/static/portal/img/ico/ico-list_off.png);
+				}
+			}
+			&.on {
+				&.icoList1 {
+					&::after {
+						background: url(/static/portal/img/ico/ico-calender.png);
+					}
+				}
+				&.icoList2 {
+					&::after {
+						background: url(/static/portal/img/ico/ico-list.png);
+					}
+				}
+			}
+			& + a {
+				&::before {
+					content: "";
+					display: inline-block;
+					vertical-align: middle;
+					width: 1px;
+					height: 16px;						
+					background-color: #E6E6E6;
+					margin: 0 10px;
+				}
+			}
+		}
+	}
+}
 //행사일정
 .calendarWrap {
 	.calDate {
@@ -74,53 +124,12 @@
 			}			
 		}
 	}
-	.calSec {
-		display: flex;
-		justify-content: space-between;
-		margin-bottom: 15px;
-		.calList {
-			a {
-				&::after {
-					content: "";
-					display: inline-block;
-					vertical-align: middle;
-					width: 24px;
-					height: 24px;
-				}
-				&.icoList1 {
-					&::after {
-						background: url(/static/portal/img/ico/ico-calender_off.png);
-					}
-				}
-				&.icoList2 {
-					&::after {
-						background: url(/static/portal/img/ico/ico-list_off.png);
-					}
-				}
-				&.on {
-					&.icoList1 {
-						&::after {
-							background: url(/static/portal/img/ico/ico-calender.png);
-						}
-					}
-					&.icoList2 {
-						&::after {
-							background: url(/static/portal/img/ico/ico-list.png);
-						}
-					}
-				}
-				& + a {
-					&::before {
-						content: "";
-						display: inline-block;
-						vertical-align: middle;
-						width: 1px;
-						height: 16px;						
-						background-color: #E6E6E6;
-						margin: 0 10px;
-					}
-				}
-			}
+	.table {
+		a {
+			&:hover {
+				color: $color-point;
+				text-decoration: underline;
+			}			
 		}
 	}
 }
@@ -172,6 +181,20 @@
 				text-decoration: underline;
 			}
 		}
+		ul {
+			margin-top: 3px;
+			li {
+				&::before {
+					background-color: $color-point;
+				}
+				a {
+					position: relative;
+					color: $color-point;					
+					margin-top: 2px;
+					font-weight: 400;
+				}
+			}
+		}		
 	}
 	&.type2 {
 		td {

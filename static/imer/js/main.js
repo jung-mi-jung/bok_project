@@ -1,46 +1,118 @@
 $(function () {
-	//메인 비쥬얼 영역 swiper 설정
-	var section1Visual = new Swiper('.section1-visual', {
-		speed: 1000,
-		autoplay: {
-			delay: 5000,
-			disableOnInteraction: false,
+
+	//비줄얼 & 컨퍼런스
+	var galleryList = new Swiper(".s1-bottom-set .swiper-container", {
+		slidesPerView: 1,	// 보여지는 슬라이드 갯수
+		spaceBetween : 0,	// 전체적인 슬라이드의 왼쪽에 0px 공백을 준다.
+		direction: 'vertical', // 수직 슬라이드
+		loop: true,
+		pagination : false,	//pager 여부
+		autoplay : {  // 자동 슬라이드 설정 , 비 활성화 시 false
+			delay : 3000,  //시간 설정
+			disableOnInteraction : false,  //true 설정시 쓸어 넘기거나 버튼 클릭 시 자동 슬라이드 정지.
 		},
-		grabCursor: true,
-		effect: "creative",
-		creativeEffect: {
-			prev: {
-				shadow: true,
-				translate: ["-20%", 0, -1],
+		navigation: {	// 버튼 사용자 지정
+			prevEl: ".section1__swiper-button-prev",
+			nextEl: ".section1__swiper-button-next",
+		},
+		pagination: {
+			el: '.s1-bottom-set .swiper-pagination',
+			type: "fraction",
+		},
+		//effect: 'true', //슬라이드 이미지가 쌓이는 느낌
+		observer: true, //처음에 보이지 않는 display: none 상태인 요소 포커스 오류 정정
+		observeParents: true,
+		watchOverflow : true,	//슬라이드가 1개 일 때 pager, button 숨김 여부 설정
+		on: {
+			init: function (v) {
+				var item = $('.s1-bottom-set')
+				item.find('.swiper-slide-active a').attr('tabindex',0).siblings().attr('tabindex',-1)
 			},
-			next: {
-				translate: ["100%", 0, 0],
+			slideChangeTransitionEnd:function(){
+				var item = $('.s1-bottom-set')
+				item.find('.swiper-slide-active a').attr('tabindex',0).siblings().attr('tabindex',-1)
+			}
+		},			
+	});
+	var galleryThumbs = new Swiper(".section1-visual", {
+		slidesPerView: 1,	// 보여지는 슬라이드 갯수
+		spaceBetween: 0,	// 마진값
+		loop: true,	// 슬라이드 반복 여부
+		touchRatio: 0,  //드래그 금지
+		freeMode: true, 
+		effect: 'true', //슬라이드 이미지가 쌓이는 느낌
+		autoplay : {  // 자동 슬라이드 설정 , 비 활성화 시 false
+			delay : 3000,  //시간 설정
+			disableOnInteraction : false,
+		},
+		thumbs: {
+			swiper: galleryList,
+		},
+	});
+	galleryList.init();//초기화
+
+	$('.section1__swiper-button-stop').on('click', function () {
+		$(this).hide().next().show().focus()
+		section1Visual.autoplay.stop();
+	});
+	$('.section1__swiper-button-play').on('click', function () {
+		$(this).hide().prev().show().focus()
+		section1Visual.autoplay.start();
+	});
+	$('.s1-bottom-set .swiper-slide').on('mouseover', function(){
+		section1Visual.autoplay.stop();
+	});
+	$('.s1-bottom-set .swiper-slide').on('mouseout', function(){
+		section1Visual.autoplay.start();
+	});
+});
+
+
+//최신 연구자료
+$(function () {
+	const board1 = new Swiper('.board-list1', {
+		init: false,
+		//freeMode: true,
+		// Optional parameters
+		loop: false,
+		slidesPerView : '4',
+		spaceBetween : 40,
+		breakpoints: {
+			// window 넓이 640px ~ 767px
+			320: {
+			  slidesPerView: 1,
+			  spaceBetween: 20,
+			},
+			// window 넓이 768px ~ 1023px
+			768: {
+			  slidesPerView: 2,
+			  spaceBetween: 20,
+			},
+			// window 넓이 1024px ~
+			1024: {
+			  slidesPerView: 4,
+			  spaceBetween: 40,
 			},
 		},
 		navigation: {
-			nextEl: '.section1-visual__swiper-button-next',
-			prevEl: '.section1-visual__swiper-button-prev',
+			prevEl: '#section2 .board-list-prev',
+			nextEl: '#section2 .board-list-next',
 		},
-		pagination: {
-			el: '.pagination_fraction',
-			type: "fraction",
-			formatFractionCurrent: function (number) {
-				return ('0' + number).slice(-2);
-			},
-			formatFractionTotal: function (number) {
-				return ('0' + number).slice(-2);
-			},
-			renderFraction: function (currentClass, totalClass) {
-				return '<span class="' + currentClass + '"></span>' + '<span class="' + totalClass + '"></span>';
-			}
+		// And if we need scrollbar
+		scrollbar: {
+			hide:true
 		},
+		a11y:{
+			enabled:true,
+		},
+		//autoplay: {
+		//	delay: 3000,
+		//	disableOnInteraction: false,
+		//},
+		observer: true,
+		observeParents: true,
 	});
-	//메인 비쥬얼 영역 progress 추가 설정
-	section1Visual.on('slideChange',function(){
-		$(".progress").removeClass('active first');
-		console.log($(".progress").offset());
-		$(".progress").addClass('active');
-	});
+	board1.init();//초기화	
 });
 
 
@@ -71,8 +143,8 @@ $(function () {
 			},
 		},
 		navigation: {
-			prevEl: '#section5 .board-list-prev',
-			nextEl: '#section5 .board-list-next',
+			prevEl: '#section3 .board-list-prev',
+			nextEl: '#section3 .board-list-next',
 		},
 		// And if we need scrollbar
 		scrollbar: {

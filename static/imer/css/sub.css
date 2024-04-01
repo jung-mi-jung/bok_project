@@ -18,19 +18,6 @@ strong {
 font-weight: 500;
 }
 
-/*
-
-$url-img	: "/static/portal/img/";	//background: url($url-images + "폴더명/파일명.png");
-
-
-// sh
-$sh-form-height: 40px;
-$sh-bd-radius: 5px;
-
-// input
-$form-height: 40px;
-
-*/
 .visible {
 display: none;
 }
@@ -506,7 +493,15 @@ background-size: 312px 240px;
 }
 
 .red {
-color: #e24b44;
+color: #C81720 !important;
+}
+
+.fc_red {
+color: #C81720;
+}
+
+.point2 {
+color: #3B63C4;
 }
 
 [class^=ico-].ico-youtube::before {
@@ -632,7 +627,7 @@ content: "";
 display: block;
 width: 100%;
 height: 2px;
-background-color: #000;
+background-color: #1A1A1A;
 position: absolute;
 bottom: -1px;
 left: 0;
@@ -797,7 +792,7 @@ display: block;
 text-decoration: underline;
 }
 .navigation nav > ul > li .depth2 ul li.on a {
-color: #000;
+color: #1A1A1A;
 font-weight: 600;
 }
 .navigation nav > ul > li .depth2 ul li.on a::after {
@@ -885,7 +880,7 @@ display: flex;
 font-weight: 500;
 align-items: center;
 justify-content: space-between;
-color: #000;
+color: #1A1A1A;
 }
 .lnb-nav .lnb ul > li > ul li a {
 display: block;
@@ -1026,7 +1021,7 @@ height: 16px;
 }
 }
 input[type=checkbox]:hover + i, input[type=checkbox]:focus + i {
-outline: dotted 1px #000;
+outline: dotted 1px #1A1A1A;
 }
 input[type=checkbox] + i {
 display: inline-block;
@@ -1092,7 +1087,7 @@ height: 20px;
 vertical-align: middle;
 }
 input[type=radio]:focus + i {
-outline: dotted 1px #000;
+outline: dotted 1px #1A1A1A;
 outline-offset: 2px;
 }
 input[type=radio] + i {
@@ -1130,7 +1125,7 @@ border: 1px solid #ccc;
 background-color: #ffffff;
 padding: 4px 10px;
 line-height: 20px;
-height: 100px;
+height: 40px;
 vertical-align: middle;
 border-radius: 5px;
 }
@@ -1219,7 +1214,7 @@ display: none;
 background: none;
 width: 30px;
 margin: 0;
-height: 100px;
+height: 40px;
 display: none;
 }
 input::-ms-clear,
@@ -1516,7 +1511,7 @@ margin-left: 4px;
 
 .bd-list {
 margin-top: 10px;
-border-top: 2px solid #000;
+border-top: 2px solid #E5E5E5;
 }
 .bd-list a:hover, .bd-list a.focus, .bd-list a:active {
 color: #131547;
@@ -1528,7 +1523,7 @@ color: #fff;
 .bd-list .nodata {
 padding: 40px;
 text-align: center;
-border-bottom: 1px solid #d9d9d9;
+border-bottom: 1px solid #E5E5E5;
 }
 .bd-list table {
 width: 100%;
@@ -1570,14 +1565,14 @@ position: relative;
 padding: 10px 0;
 height: auto;
 display: block;
-border-top: 1px solid #d9d9d9;
+border-top: 1px solid #E5E5E5;
 }
 }
 .bd-list table tbody tr:first-child {
 border-top: none;
 }
 .bd-list table tbody.notice .no i {
-color: #e24b44;
+color: #C81720;
 font-size: 1.375rem;
 display: inline-block;
 padding-top: 0.3125em;
@@ -1588,7 +1583,7 @@ padding-bottom: 3px;
 }
 @media (min-width: 750px) {
 .bd-list table tbody td {
-border-bottom: 1px solid #d9d9d9;
+border-bottom: 1px solid #E5E5E5;
 }
 }
 @media (max-width: 749px) {
@@ -1923,12 +1918,12 @@ background-color: #131547;
 height: 50px;
 }
 .table table th + th {
-border-left: 1px solid #d9d9d9;
+border-left: 1px solid #E5E5E5;
 }
 .table table td {
 color: #757575;
 padding: 12px 15px;
-border: 1px solid #d9d9d9;
+border: 1px solid #E5E5E5;
 background-color: #fff;
 }
 .table.type2 table td {
@@ -2168,7 +2163,7 @@ color: #fff;
 font-size: 14px;
 }
 .datepicker table thead tr:last-child {
-border-bottom: 1px solid #d9d9d9;
+border-bottom: 1px solid #E5E5E5;
 margin-bottom: 5px;
 }
 
