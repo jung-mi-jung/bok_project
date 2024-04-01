@@ -494,27 +494,105 @@
 
 
 
-<div class="intro_museum">
-    <div class="person">
-        <p><span>한국은행 화폐박물관을 찾아 주셔서 감사합니다.</span></p>
+<div class="bd-view media-view">
+	<h2 class="subject">1.한국은행 창립선서문</h2>
+	<div class="card-photo">
+		<div class="swiper-container">
+			<div class="photo-ctrl">
+				<button type="button" class="prev photo-prev"><span class="sr-only">이전 보기</span></button>
+				<button type="button" class="next photo-next"><span class="sr-only">다음 보기</span></button>
+				<div class="swiper-pagination"></div>
+			</div>
+			<div class="photo swiper">
+				<ul class="swiper-wrapper">
+					<li class="swiper-slide">
+						<span class="img" style="background-image: url('/static/portal/img/main/s1-v1.png');">
+							<span class="sr-only">카드뉴스 이미지1(대체텍스트)</span>
+						</span>
+					</li>
+					<li class="swiper-slide">
+						<span class="img" style="background-image: url('/static/portal/img/main/s1-v1.png');">
+							<span class="sr-only">카드뉴스 이미지1(대체텍스트)</span>
+						</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+    <div class="audioplayer"><audio title="화폐박물관 건물소개" controls="controls">
+        <source src="/static/portal/audio/K101.mp3" type="audio/mp3">
+        <!-- Microsoft + Safari + Chrome -->
+        <source src="/static/portal/audio/K101.ogg" type="audio/ogg"> <!-- Firefox + Opera --></audio>
     </div>
+	<div class="dbdata dbdata2">
+		<div class="view">
+			<dl>
+				<dt>전시장 위치</dt>
+				<dd>1층 우리의 중앙은행</dd>
+			</dl>
+			<dl>
+				<dt>설명</dt>
+				<dd>
+					<p>우리나라는 1945년 해방 이후 현대적인 금융제도를 확립하기 위해 통화신용정책을 자주적으로 수행하는 중앙은행의 설립이 시급한 과제였습니다. 이에 따라 1950년 5월 5일 한국은행법을 공포하고 같은 해 6월 12일 중앙은행인 한국은행을 설립하였습니다. 이 선서문에는 당시의 경제적 혼란을 극복하고 대한민국 경제발전에 공헌하고자 하는 한국은행 직원들의 의지가 담겨 있습니다.</p>
+				</dd>
+			</dl>	
+		</div>
+	</div>
 </div>
-<div class="introTxt">
-    <div class="col m6 s12">
-        <p>한국은행 화폐박물관은 한국은행 창립 50주년을 기념하여 2001년 6월 12일 개관하였습니다. 개관 이후 화폐박물관은 서울 도심에서 우리나라를
-            대표하는 중앙은행 박물관으로서 많은 국민들의 사랑을 받아왔습니다.<span><span><br></span></span></p>
-        <p class="mb"><span><span>이제는 화폐박물관이 내국인뿐만 아니라 외국인도 자연스럽게 찾는
-                    국제적인 박물관으로의 도약을 시작하였습니다. 그동안 화폐박물관은 꾸준히 전시공간을 개편하고 다양한 화폐와 소장 미술품 기획전을 개최하여 관람객들에게 보다 나은 문화 향유 기회를
-                    제공하였습니다.</span></span></p>
-    </div>
-    <div class="col m6 s12">
-        <p class="mb">앞으로도 화폐박물관은 중요 국가문화재인 건물의 특성을 잘 보존하면서도 과거와 현대가 공존하는 살아있는 박물관이 될 수 있도록
-            하겠습니다. 또한 전시물과 관객이 함께 소통할 수 있는 프로그램과 전시를 지속적으로 도입하여 대표적인 복합문화공간이 될 수 있도록 노력하겠습니다.</p>
-        <p class="mb">아울러 화폐박물관이 화폐・금융・경제 관련 자료를 수집, 보존, 연구, 전시함으로써 어린이와 청소년을 비롯한 많은 국민들에게
-            화폐경제교육의 생생한 체험의 장이 될 수 있도록 지혜를 모아 나가겠습니다.</p>
-        <p class="mb">국민 여러분들의 많은 관심과 사랑을 부탁드립니다.</p>
-    </div>
-</div>			</div>
+
+<div class="btn-set">
+	<a href="" class="b-list">목록</a>
+</div>
+
+<script>
+$(function () {
+	const swiper = new Swiper('.photo', {
+		init: false,
+		freeMode: true,
+		// Optional parameters
+		// loop: true,
+		loopAdditionalSlides : 1,
+		slidesPerView : '1',
+		navigation: {
+			prevEl: '.photo-prev',
+			nextEl: '.photo-next',
+		},
+		// And if we need scrollbar
+		scrollbar: {
+			hide:true
+		},
+		a11y:{
+			enabled:true,
+		},
+		pagination: {
+			el: '.card-photo .swiper-pagination',
+			type: "fraction",
+		},
+		observer: true,
+		observeParents: true,
+		on: {
+			init: function (v) {
+				var item = $('.card-photo')
+				item.find('.swiper-slide-active').attr('tabindex',0).siblings().attr('tabindex',-1)
+			},
+			slideChangeTransitionEnd:function(){
+				var item = $('.card-photo')
+				item.find('.swiper-slide-active').attr('tabindex',0).siblings().attr('tabindex',-1)
+			}
+		}
+	});
+	swiper.init();//초기화	
+
+	$(".summary button").click(function(e){
+		$(this).toggleClass("active");
+		if ($(this).hasClass('active')){
+			$(this).attr("title", "개요 닫기");
+		} else {
+			$(this).attr("title", "개요 열기");
+		}
+	});
+});
+</script>			</div>
 			<!-- //컨텐츠 끝 -->
 
 			<!-- 내가 본 콘텐츠 -->

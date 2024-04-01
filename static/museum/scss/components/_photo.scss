@@ -154,17 +154,28 @@
 /* 소장품 화폐 목록 */
 .photoList {
 	.row {
-		display: grid;
+		// display: grid;
+		display: flex;
 		margin-top: 16px;
-		grid-template-columns: repeat(4, 1fr);
+		flex-wrap: wrap;
+		// grid-template-columns: repeat(4, 1fr);
 		gap: 32px 32px;
 		@include breakpoint($smd) {
-			grid-template-columns: repeat(3, 1fr);
+			// grid-template-columns: repeat(3, 1fr);
 			gap: 20px 20px;
 		}
 		@include breakpoint($sm) {
-			grid-template-columns: repeat(1, 1fr);
+			// grid-template-columns: repeat(1, 1fr);
 			gap: 20px 0;
+		}
+		li {
+			width: calc(25% - 24px);
+			@include breakpoint($smd) { 
+				width: calc(33.33% - 13.33px);
+			}
+			@include breakpoint($sm) {
+				width: calc(50% - 10px);
+			}
 		}
 		a {
 			&:hover {
@@ -224,6 +235,13 @@
 					color: #1A1A1A;
 				}
 			}
+			p {
+				width: 100%;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				word-break: break-all;
+			}
 		}
 	}
 }
@@ -232,7 +250,7 @@
 	position: relative;
 	width: 1140px;
 	max-width: 100%;
-	margin: 30px auto;
+	margin: 50px auto;
 	// padding-bottom: 40px;
 	.photo-ctrl {
 		button {
@@ -288,7 +306,7 @@
 		}
 		.swiper-pagination {
 			position: absolute;
-			bottom: 0;
+			bottom: -40px;
 			left: 0;
 			width: 100%;
 			text-align: center;
@@ -315,6 +333,15 @@
 			background-position: center center;
 			background-size: contain;
 			border: 1px solid #dee0e6;
+		}
+	}
+	& + .audioplayer {
+		width: 960px;
+		max-width: 100%;
+		margin: 50px auto;
+		text-align: right;
+		audio {
+			width: 400px;
 		}
 	}
 }
