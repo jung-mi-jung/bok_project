@@ -244,6 +244,7 @@
 		}
 	}	
 }
+/* 추가된 스타일 */
 .bd-line.c-type {
 	.list-num {
 		align-items: center;
@@ -321,7 +322,63 @@
 		}
 	}
 }
+/* 화폐이야기 게시판 */
+.bd-line.d-type {
+	> ul > li {
+		min-height: 56px;
+	}
+	a {
+		gap: 0 8px;
+		&:hover {
+			.set {
+				position: relative;
+				&::before {
+					content: "";
+					display: block;
+					width: 100%;
+					height: 1px;
+					background: #1a1a1a;
+					position: absolute;
+					left: 0;
+					bottom: 0;
 
+				}
+			}
+			i {
+				background-position: -40px -310px;
+			}
+		}
+	}
+	.num {
+		display: inline-block;
+		width: 32px;
+		font-size: rem(16);
+		color: #4D4D4D;
+		text-align: center;
+	}
+	.t1 {
+		display: inline-block;
+		font-size: rem(14);
+		color: #3B63C4;
+		padding: 1.5px 8px; 
+		border: 1px solid #3B63C4;
+		border-radius: 3px;
+		box-sizing: border-box;
+		background: #fff;
+	}
+	.set {
+		display: inline-block;
+		max-width: calc(100% - 130px);
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+	i {
+		position: absolute;
+		right: 15px;
+	}
+	
+}
 
 /* 옛날 소스 */
 .bdList {

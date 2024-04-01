@@ -1242,6 +1242,7 @@
 }
 .content-row {
 	display: flex;
+	flex-wrap: wrap;
 	@include breakpoint($sm) {
 		display: block;
 	}

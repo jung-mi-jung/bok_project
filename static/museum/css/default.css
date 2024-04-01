@@ -2202,6 +2202,32 @@ background-size: 348px 330px;
 }
 }
 
+.ico-more-bk {
+background-image: url(/static/museum/img/sprite.png);
+background-position: -40px -310px;
+width: 20px;
+height: 20px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+.ico-more-bk {
+background-image: url(/static/museum/img/sprite@2x.png);
+background-size: 348px 330px;
+}
+}
+
+.ico-more-gr {
+background-image: url(/static/museum/img/sprite.png);
+background-position: -80px -310px;
+width: 20px;
+height: 20px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+.ico-more-gr {
+background-image: url(/static/museum/img/sprite@2x.png);
+background-size: 348px 330px;
+}
+}
+
 .ico-overview {
 background-image: url(/static/museum/img/sprite.png);
 background-position: -204px 0px;
@@ -3526,7 +3552,7 @@ margin: 0 -12px;
 }
 @media (max-width: 1199px) {
 .reference-news dl dd ul {
-width: -moz-max-content;
+width: -webkit-max-content;
 width: max-content;
 }
 }
@@ -3659,7 +3685,7 @@ margin: -12px -12px 0;
 }
 @media (max-width: 1199px) {
 .reference-media dl dd ul {
-width: -moz-max-content;
+width: -webkit-max-content;
 width: max-content;
 }
 }
@@ -3744,6 +3770,7 @@ margin-top: 60px;
 
 .content-row {
 display: flex;
+flex-wrap: wrap;
 }
 @media (max-width: 749px) {
 .content-row {
