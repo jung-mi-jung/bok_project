@@ -244,6 +244,7 @@
 		}
 	}	
 }
+/* 추가된 스타일 */
 .bd-line.c-type {
 	.list-num {
 		align-items: center;
@@ -321,7 +322,35 @@
 		}
 	}
 }
-
+.bd-line.d-type {
+	> ul > li {
+		min-height: 56px;
+	}
+	a {
+		gap: 0 8px;
+	}
+	.num {
+		display: inline-block;
+		width: 32px;
+		font-size: rem(16);
+		color: #4D4D4D;
+		text-align: center;
+	}
+	.t1 {
+		display: inline-block;
+		font-size: rem(14);
+		color: #3B63C4;
+		padding: 1.5px 8px; 
+		border: 1px solid #3B63C4;
+		border-radius: 3px;
+		box-sizing: border-box;
+		background: #fff;
+	}
+	.set {
+		max-width: calc(100% - 130px);
+		width: 100%;;
+	}
+}
 
 /* 옛날 소스 */
 .bdList {

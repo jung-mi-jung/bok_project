@@ -715,3 +715,43 @@
 		margin: 20px 0;
 	}
 }
+
+/* 화폐이야기 */
+.worldMap {
+	padding: 26.5px 124.4px 26.21px 123.5px;
+	background: #F2F6FA;
+	box-sizing: border-box;
+	// > div {
+	// 	position: relative;
+	// 	min-height: 640px;
+	// }
+	// svg {
+	// 	position: absolute;
+	// }
+	// .europe {
+	// 	top: 34px;
+	// 	left: 0;
+	// }
+	// .africa {
+	// 	left: 14px;
+	// 	top: calc(202px + 34px);
+	// }
+	// .asia {
+	// 	top: 0;
+	// 	left: 25%;
+	// }
+	// .oceania {
+	// 	left: 30%;
+	// 	bottom: 0;
+
+	// }
+	// .america {
+	// 	top: 0;
+	// 	right: 0;
+	// }
+	.africa {
+		> path:not(.mapTxt) {
+			fill: red;
+		}
+	}
+}

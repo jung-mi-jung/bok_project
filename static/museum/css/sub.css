@@ -701,6 +701,32 @@ background-size: 348px 330px;
 }
 }
 
+.ico-more-bk {
+background-image: url(/static/museum/img/sprite.png);
+background-position: -40px -310px;
+width: 20px;
+height: 20px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+.ico-more-bk {
+background-image: url(/static/museum/img/sprite@2x.png);
+background-size: 348px 330px;
+}
+}
+
+.ico-more-gr {
+background-image: url(/static/museum/img/sprite.png);
+background-position: -80px -310px;
+width: 20px;
+height: 20px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+.ico-more-gr {
+background-image: url(/static/museum/img/sprite@2x.png);
+background-size: 348px 330px;
+}
+}
+
 .ico-overview {
 background-image: url(/static/museum/img/sprite.png);
 background-position: -204px 0px;
@@ -2181,6 +2207,7 @@ background-image: url("/static/museum/img/ico/ico-lock@2x.png");
 }
 }
 
+/* 추가된 스타일 */
 .bd-line.c-type .list-num {
 align-items: center;
 gap: 0 8px;
@@ -2281,6 +2308,34 @@ background-size: auto 100%;
 .bd-line.c-type .alarm i {
 background-image: url("/static/museum/img/ico/ico-alarm@2x.png");
 }
+}
+
+.bd-line.d-type > ul > li {
+min-height: 56px;
+}
+.bd-line.d-type a {
+gap: 0 8px;
+}
+.bd-line.d-type .num {
+display: inline-block;
+width: 32px;
+font-size: 1rem;
+color: #4D4D4D;
+text-align: center;
+}
+.bd-line.d-type .t1 {
+display: inline-block;
+font-size: 0.875rem;
+color: #3B63C4;
+padding: 1.5px 8px;
+border: 1px solid #3B63C4;
+border-radius: 3px;
+box-sizing: border-box;
+background: #fff;
+}
+.bd-line.d-type .set {
+max-width: calc(100% - 130px);
+width: 100%;
 }
 
 /* 옛날 소스 */
@@ -7294,6 +7349,16 @@ background-color: initial;
 
 .introTxtrow p {
 margin: 20px 0;
+}
+
+/* 화폐이야기 */
+.worldMap {
+padding: 26.5px 124.4px 26.21px 123.5px;
+background: #F2F6FA;
+box-sizing: border-box;
+}
+.worldMap .africa > path:not(.mapTxt) {
+fill: red;
 }
 
 .dbdata {
