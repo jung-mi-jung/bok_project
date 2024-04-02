@@ -293,7 +293,7 @@ $(function () {
 				_id = $(this).attr('id')
 				$('[aria-labelledby="' + _id + '"]').show().siblings().hide()
 			})
-	});
+	});	
 
 
 	// 이미지맵 반응형
@@ -817,10 +817,10 @@ $(function () {
 
 	//tabsub Content Tab
 	var linka= $(".tabsub ul li")
-	//$('.tabsub li.active a').attr('title', '선택됨');
+	$('.tabsub li.active a').attr('title', '선택됨');
 	$(linka).find('a').click(function(){
 		$(this).parent().siblings().removeClass('active').removeClass('title');
-		$(this).parent().addClass('active')
+		$(this).parent().addClass('active').al
 
 		//안됨
 		if ($(this).parent().hasClass('active')){
@@ -836,6 +836,36 @@ $(function () {
 		return false;
 
 	});
+
+
+	//tab
+
+
+	// var tabList = $('.tablist button');
+	// tabList.click(function(){
+	// 	var tab_id = $(this).attr('data-tab');
+
+	// 	$('.tablist button').removeClass('active').removeAttr('title');
+	// 	$('.con').removeClass('active');
+
+	// 	$(this).addClass('active').attr('title', '선택됨');
+	// 	$("#"+tab_id).addClass('active');
+	// });
+
+
+	// var linka= $(".tabnavi ul li, .tabnavi1 ul li")
+	// $(linka).find('a').click(function(){
+	// 	$(this).parent().siblings().removeClass('active');
+	// 	$(this).parent().addClass('active');
+	// 	var k = linka.find('a').length + 1
+	// 	var linkName = $(this).attr("href");
+	// 	$(this).parent().parent().parent().parent().find(".tab-content .tab-pane").removeClass("active");
+	// 	$(linkName).addClass("active");
+	// 	$(this).attr("title", "선택됨").parent().siblings().find(">a").removeAttr("title");
+	// 	return false;
+	// });
+
+
 
 
 	//첨부파일

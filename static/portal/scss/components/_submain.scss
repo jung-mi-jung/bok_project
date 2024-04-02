@@ -1,8 +1,209 @@
 @import 'components/ico'; // icons
 
+
+@mixin more {
+	position: absolute;
+	top: -3px;
+	right: 0;
+	z-index: 9;
+	@include breakpoint($lg){
+		top: 3px;
+	}
+	a {
+		&::before {
+			content: "";
+			display: inline-block;
+			width: 36px;
+			height: 36px;
+			background: url(/static/portal/img/submain/more.png);
+		}
+	}
+}
+
+.sub-main + #footer {
+	margin-top: 0;
+}
+
+.sub-main-zone {
+	padding: 80px 0;
+	background-color: #F2F6FA;
+	@include breakpoint($sm){
+		padding: 30px 0 ;
+	}
+	.container {
+		@include breakpoint($lg){
+			display: flex;
+			justify-content: space-between;
+		}		
+		.map_img {
+			position: relative;
+			display: flex;
+			justify-content: flex-start;
+			align-items: top;
+			@include breakpoint($lg){
+				width: calc(100% - 35.6%);
+			}
+			.map_info {
+				h1 {
+					font-weight: 300;
+					font-size: rem(36);
+					color: $point;
+					line-height: 1.1;
+					margin-bottom: 40px;
+					strong {
+						font-size: rem(48);
+						font-weight: 700;
+						display: block;
+					}
+				}
+				.map-list {
+					display: flex;
+					flex-wrap: wrap;
+					flex-direction: column;
+					button {
+						display: inline-block;
+						color: $point;
+						padding: 6px 12px;
+						margin: 1px 0;
+						text-align: left;
+						&.active {
+							color: #fff;
+							background-color: $point;
+							border-radius: 30px;
+							&::after {
+								@include font-ico-outline('\e315');
+								font-size: 18px;
+								color: #fff;
+								margin-left: 8px;
+								margin-bottom: 2px;
+							}
+						}
+					}
+				}
+			}
+			.map-set {
+				#canvas {
+					position: absolute;
+					z-index: 9;
+					display: none;
+				}
+				.mapsinfomaion-pin {
+					
+				}
+				.svg-map {
+					area {
+						display: inline-block;
+						width: 12px;
+						height: 12px;
+						background-color: #39A0FF;
+						border-radius: 50%;
+						&.active {
+							position: relative;
+							background-color: #FF327C;
+							outline: 6px solid rgba(200, 60, 60, 0.3);
+							
+						}
+					}
+				}
+			}
+		}
+		.notice-set-style {
+			margin-top: 30px;
+			@include breakpoint($lg){
+				width: 35.6%;
+			}
+			.notice {
+				position: relative;
+				.tablist {
+					display: flex;
+					button {
+						color: #808080;
+						font-size: rem(20);
+						&[aria-selected='true'] {
+							color: $black;
+							font-size: rem(24);
+							font-weight: 500;
+						}
+						& + button {
+							&::before {
+								content: "";
+								display: inline-block;
+								vertical-align: middle;
+								width: 1px;
+								height: 20px;
+								background-color: #BFBFBF;
+								margin: 0 10px;
+							}
+						}
+					}
+				}
+				ul {
+					li{
+						a {
+							padding: 8px 0;
+							display: flex;
+							justify-content: space-between;
+							align-items: center;
+						}				
+						.s {
+							line-height: 1.2;
+							width: calc(100% - 100px);
+							.t {
+								@include ellipsis();
+								color: $color-point;
+								font-size: rem(14);
+							}
+							.title {
+								display: block;
+								color: $black;
+								font-size: rem(16);
+								font-weight: 400;
+							}
+						}
+						.date {
+							color: $black;
+							font-size: rem(14);
+						}
+					}
+				}
+				
+				.more {
+					@include more();
+					top: 0;
+					@include breakpoint($lg){
+						top: 0;
+					}
+				}
+				.tab-content {
+					border-top: 2px solid $black;				
+					margin-top: 14px;
+					padding-top: 14px;	
+					.con {
+						display: none;						
+						&.active {
+							display: block;
+						}
+					}
+				}
+				& + .notice {
+					margin-top: 40px;
+				}
+			}
+		}
+	}
+}
+
+
 .sub-main {
-	main {
-		
+	&.container {
+		width: 100%;
+		max-width: 100%;
+	}
+	.container {
+		@include breakpoint($smd){
+			padding-left: 10px;
+			padding-right: 10px;
+		}
 	}
 	.zone_main {
 		.section_bg {
@@ -13,6 +214,11 @@
 			background-image: url(/static/portal/img/submain/bg_zone.png);
 			background-position: 50% 0;
 			background-repeat: no-repeat;
+			@include breakpoint($sm){
+				padding-top: 20px;
+				padding-bottom: 50px;
+				margin-bottom: 30px;
+			}			
 			.container {
 				@include breakpoint($lg){
 					display: flex;
@@ -52,6 +258,9 @@
 						display: block;
 						background: #fff;
 						border: 1px solid #D8E0E8;
+						@include breakpoint($sm){
+							width: 170px;
+						}
 						&::after {
 							color: #1C1B1F;
 							float: right;
@@ -88,6 +297,7 @@
 			position: relative;
 			overflow: hidden;
 			margin-top: 40px;
+			box-shadow: 24px 24px 24px 0 rgba(60, 60, 60, 0.2);
 			.ctrl {
 				position: absolute;
 				bottom: 20px;
@@ -147,8 +357,7 @@
 					}
 				}
 			}
-			.section-visual {
-				box-shadow: 24px 24px 24px 0 rgba(0, 0, 0, 0.5);
+			.section-visual {				
 				.img {
 					display: block;
 					padding-top: 50.6%;
@@ -165,28 +374,35 @@
 			}
 			.go_link {
 				margin-bottom: 56px;
+				@include breakpoint($sm){
+					margin-bottom: 30px;
+				}
 				ul {
 					display: flex;
 					justify-content: space-between;
+					flex-wrap: wrap;
+					@include breakpoint($sm){
+						justify-content: flex-start;
+					}
 					li {
-						position: relative;
+						
 						//flex-grow: 1;
 						//width: 20%;
+						@include breakpoint($sm){
+							width: 33.3%;
+						}
 						a {
-							
+							position: relative;
 							text-align: center;
 							display: block;
 							color: $point;
 							font-weight: 500;
 							text-align: center;
 							font-size: rem(18);
-							
 							&:hover {
 								color: $color-point;
 								text-decoration: underline;
 							}
-						}
-						& + li {							
 							&::before {
 								content: "";
 								display: inline-block;
@@ -196,8 +412,12 @@
 								background: #CACCD8;
 								position: absolute;
 								top: 50%;
-								left: 40%;
+								right: 0;
+								margin-left: -50%;
 							}
+						}
+						& + li {
+							
 						}
 					}
 				}
@@ -207,16 +427,23 @@
 				font-size: rem(48);
 				color: $point;
 				margin-bottom: 30px;
+				@include breakpoint($sm){
+					font-size: rem(30);
+					margin-bottom: 10px;
+				}
 			}
 			.tit {
 				overflow: hidden;
-				max-height: 122px;
+				height: 122px;
 				line-height: 1.4;
+				@include breakpoint($sm){
+					height: 108px;
+				}
 				p {
 					margin-bottom: 10px;
 				}
 			}
-			.more {
+			.more2 {
 				margin-top: 25px;
 				text-align: right;
 				a {
@@ -236,6 +463,9 @@
 			}
 			.etc-link {
 				margin-top: 60px;
+				@include breakpoint($sm){
+					margin-top: 30px;
+				}
 				ul {
 					display: flex;
 					justify-content: space-between;
@@ -287,19 +517,27 @@
 		}
 	}
 	.notice-set {
+		margin-bottom: 60px;
 		@include breakpoint($lg){
 			display: flex;
 			justify-content: space-between;
 		}
 		.notice {
-			position: relative;
-			width: calc(33.3% - 79px);			
+			position: relative;			
+			width: 100%;
+			@include breakpoint($lg){
+				width: calc(33.3% - 79px);
+			}		
 			h2 {
 				color: $black;
-				font-size: rem(28);
+				font-size: rem(20);
 				font-weight: 500;
 				border-bottom: 2px solid $black;
-				padding-bottom: 18px;
+				padding-bottom: 10px;
+				@include breakpoint($lg){
+					font-size: rem(28);
+					padding-bottom: 18px;
+				}
 			}
 			ul {
 				li {
@@ -324,6 +562,9 @@
 							@include line-clamp(2);
 							height: 48px;
 							margin-top: 6px;
+							@include breakpoint($sm){
+								height: 42px;
+							}
 						}
 						&.date {
 							color: #666;
@@ -338,18 +579,459 @@
 				}
 			}
 			.more {
-				position: absolute;
-				top: 3px;
-				right: 0;
-				z-index: 9;
-				a {
-					&::before {
-						content: "";
-						display: inline-block;
-						width: 36px;
-						height: 36px;
-						background: url(/static/portal/img/submain/more.png);
+				@include more();
+				top: -3px;
+				@include breakpoint($lg){
+					top: 3px;
+				}
+			}
+			& + .notice {
+				margin-top: 30px;
+				@include breakpoint($lg){
+					margin-top: 0;
+				}
+			}
+		}
+	}
+}
+
+
+
+// ** 서브 메인
+//통화정책
+.index-main-video {
+	position: relative;	
+	&::before {
+		content: "";
+		display: inline-block;
+		background: linear-gradient(180deg, rgba(224,234,249,1) 0%, rgba(224,234,249,1) 50%, rgba(177,193,231,0.9906337535014006) 100%);;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: 400px;
+		z-index: -1;
+		@include breakpoint($sm){
+			display: none;
+		}
+	}
+	.video {
+		display: block;
+		overflow: hidden;
+		border-radius: 16px;
+		position:relative; 
+		width:100%; 
+		height:0; 
+		padding-bottom:56.25%; 
+		iframe { 
+			position:absolute; 
+			width:100%; 
+			height:100%;
+		}
+	}
+	.videoSet .video-etc {
+		padding: 18px 0 0;
+	}
+}
+.sub-main-box {
+	width: 1440px;
+	max-width: 100%;
+	margin: 0 auto;
+}
+.index-box {
+	text-align: center;
+	margin: 50px 0 80px;
+	@include breakpoint($sm){
+		margin: 20px 0 20px;
+		text-align: left;
+	}
+	p {
+		line-height: 1.4;
+		&.title {
+			color: $black;			
+			font-size: rem(48);
+			font-weight: 300;
+			margin-bottom: 15px;
+			@include breakpoint($sm){
+				text-align: center;
+				font-size: rem(34);
+			}
+			strong {			
+				font-weight: 700;				
+			}
+		}
+		& + p {
+			margin-bottom: 20px;
+		}
+		em {
+			color: #1A1A1A;
+			font-weight: 500;
+		}
+	}
+}
+.index-menu {
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;	
+		margin: 0 -30px;
+		@include breakpoint($sm){
+			margin: 0;
+		}
+		li {
+			width: 33.3%;
+			padding: 48px 30px;
+			@include breakpoint($smd){
+				width: 50%;
+			}
+			@include breakpoint($sm){
+				width: 100%;
+				padding: 10px;
+			}
+			a {
+				color: #4D4D4D;
+				display: flex;
+				justify-content: space-between;
+				i {
+					display: inline-block;
+					width: 100px;
+					height: 100px;
+					background-color: #F1F1F1;
+					border-radius: 50%;
+					background-position: 50%;
+					background-repeat: no-repeat;
+					margin-right: 24px;
+					&.ico1 {
+						background-image: url(/static/portal/img/submain/ico_1_1.png);
 					}
+					&.ico2 {
+						background-image: url(/static/portal/img/submain/ico_1_2.png);
+					}
+					&.ico3 {
+						background-image: url(/static/portal/img/submain/ico_1_3.png);
+					}
+					&.ico4 {
+						background-image: url(/static/portal/img/submain/ico_1_4.png);
+					}
+					&.ico5 {
+						background-image: url(/static/portal/img/submain/ico_1_5.png);
+					}
+					&.ico6 {
+						background-image: url(/static/portal/img/submain/ico_1_6.png);
+					}
+					&.ico7 {
+						background-image: url(/static/portal/img/submain/ico_4_1.png);
+					}
+
+					&.ico8 {
+						background-image: url(/static/portal/img/submain/ico_4_2.png);
+					}
+					&.ico9 {
+						background-image: url(/static/portal/img/submain/ico_4_3.png);
+					}
+					&.ico10 {
+						background-image: url(/static/portal/img/submain/ico_4_4.png);
+					}
+					&.ico11 {
+						background-image: url(/static/portal/img/submain/ico_4_5.png);
+					}
+				}
+				.set {
+					width: calc(100% - 124px);
+					@include breakpoint($sm){
+						width: 100%;
+					}
+					strong {
+						display: block;
+						font-weight: 500;
+						font-size: rem(18);
+						margin-bottom: 5px;
+					}
+					.s-txt {
+						margin-top: 10px;
+						font-size: 14px;
+						display: inline-block;
+					}
+				}
+			}
+		}
+	}
+}
+
+//금융안정
+.index-menu2 {
+	ul {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		margin: 0 -15px;
+		li {
+			width: 33.3%;
+			padding: 15px;
+			@include breakpoint($smd){
+				width: 50%;
+			}
+			@include breakpoint($sm){
+				width: 100%;
+			}
+			a {
+				position: relative;
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				padding: 20px;
+				border-radius: 16px;
+				border: 1px solid #E6E6E6;
+				> * {
+					display: block;
+				}
+				em {
+					color: #89A1DC;
+					font-size: rem(20);
+				}
+				strong {
+					color: $point;
+					font-size: rem(18);
+					margin-bottom: 20px;
+				}
+				.tit {
+					color: #4D4D4D;
+				}
+				&::before {
+					content: "";
+					display: inline-block;
+					width: 62px;
+					height: 51px;
+					position: absolute;
+					top: 20px;
+					right: 15px;
+					background-position: 50% 100%;
+					background-repeat: no-repeat;
+				}
+				&.ico1 {
+					&::before {
+						background-image: url(/static/portal/img/submain/ico_2_1.png);
+					}
+				}
+				&.ico2 {
+					&::before {
+						background-image: url(/static/portal/img/submain/ico_2_2.png);
+					}
+				}
+				&.ico3 {
+					&::before {
+						background-image: url(/static/portal/img/submain/ico_2_3.png);
+					}
+				}
+				&.ico4 {
+					&::before {
+						background-image: url(/static/portal/img/submain/ico_2_4.png);
+					}
+				}
+				&.ico5 {
+					&::before {
+						background-image: url(/static/portal/img/submain/ico_2_5.png);
+					}
+				}
+			}
+		}
+	}
+}
+.skip_link {
+	margin-top: 40px;
+	margin-bottom: 60px;
+	p {
+		display: flex;
+		justify-content: space-between;
+		@include breakpoint($sm){
+			display: block;
+		}
+		a {
+			width: calc(50% - 20px);
+			padding: 17px 20px;
+			display: block;
+			color: #fff;
+			border-radius: 8px;
+			@include breakpoint($sm){
+				margin-top: 10px;
+				width: 100%;
+			}
+			&.link01 {
+				background: #0C131B url(/static/portal/img/submain/bg_skip_link01.png) 100% 0 no-repeat;
+			}
+			&.link02 {
+				background: #0C131B url(/static/portal/img/submain/bg_skip_link02.png) 100% 0 no-repeat;
+			}
+			strong {
+				display: block;
+				font-size: rem(20);
+				font-weight: 500;
+				margin-bottom: 20px;
+			}
+			.go {
+				font-weight: 300;
+				&::after {
+					@include font-ico-outline('\e5cc');
+					font-size: 20px;
+					color: #fff;
+				}
+			}
+		}
+	}
+}
+
+//화폐
+.index-main-img {
+	margin-top: 30px;
+}
+.index-menu3 {
+	ul {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		
+		li {
+			width: calc(25% - 30px);
+			text-align: center;
+			@include breakpoint($smd){
+				width: calc(50% - 15px);
+				margin-top: 20px;
+			}
+			
+			
+			> * {
+				display: block;
+			}
+			i {
+				display: inline-block;
+				width: 100px;
+				height: 100px;
+				margin-bottom: 8px;
+				background-color: #F1F1F1;
+				border-radius: 50%;
+				background-repeat: no-repeat;
+				background-position: 50%;
+				&.ico1 {
+					background-image: url(/static/portal/img/submain/ico_3_1.png);
+				}
+				&.ico2 {
+					background-image: url(/static/portal/img/submain/ico_3_2.png);
+				}
+				&.ico3 {
+					background-image: url(/static/portal/img/submain/ico_3_3.png);
+				}
+				&.ico4 {
+					background-image: url(/static/portal/img/submain/ico_3_4.png);
+				}
+			}
+			em {
+				display: block;
+				color: $black;
+				font-weight: 500;
+				font-size: rem(18);
+				margin-bottom: 4px;
+			}
+			span {
+				display: block;
+				color: #4D4D4D;
+			}
+		}
+	}
+}
+.money-search {
+	margin-top: 50px;
+	margin-bottom: 110px;
+	@include breakpoint($lg){
+		margin-top: 80px;
+		display: flex;
+		justify-content: space-between;		
+		> * {
+			width: calc(50% - 12px);
+		}
+	}
+	.skip_link2 {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -6px;
+		li {
+			width: calc(33.3% - 6px);
+			padding: 6px;
+			@include breakpoint($sm){
+				width: 50%;
+			}
+			a {			
+				height: 100%;
+				padding: 17px 20px;
+				display: block;
+				color: $color-point;
+				border-radius: 8px;
+				border: 1px solid #E6E6E6;
+				strong {
+					display: block;
+					font-size: rem(20);
+					font-weight: 500;
+					margin-bottom: 17px;
+					letter-spacing: -1px;
+				}
+				.go {
+					color: $black;
+					font-weight: 400;
+					&::after {
+						@include font-ico-outline('\e5cc');
+						font-size: 20px;
+						color: $point;
+					}
+				}
+				&:hover {
+					color: #fff;
+					background-color: $color-point;
+					border: 1px solid $color-point;
+					background-image: url(/static/portal/img/submain/bg_200016.png);
+					background-position: 100%;
+					background-repeat: no-repeat;
+					.go {
+						color: #fff;
+						&::after {
+							color: #fff;
+						}
+					}
+				}
+			}
+		}		
+	}
+	.money-sh {
+		@include breakpoint($smd){
+			margin-top: 30px;
+		}
+		h2 {
+			color: #000;
+			font-size: rem(24) !important;
+			font-weight: 500 !important;
+			margin-bottom: 20px;
+		}
+		.sh {
+			border-radius: 8px;
+			padding: 45px 30px 40px;
+			margin-bottom: 0;
+			@include breakpoint($sm){
+				padding: 20px;
+			}
+			.select-set {
+				width: 200px;
+				@include breakpoint($sm){
+					width: 100%;
+					margin-bottom: 5px;
+				}
+			}
+			.keyword-set {
+				width: calc(100% - 200px);
+				@include breakpoint($sm){
+					width: 100%;
+				}
+			}
+			.c {
+				.sh-input {
+					justify-content: flex-start;
 				}
 			}
 		}

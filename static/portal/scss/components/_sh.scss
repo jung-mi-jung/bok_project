@@ -246,7 +246,7 @@
 			}
 		}
 		&.details {
-			display: none;  //임시 주석
+			//display: none;  //임시 주석
 		}
 	}
 	.details-list {
@@ -261,7 +261,7 @@
 			padding: 4px;
 		}
 		.depth3 {  //[class^=m-0]
-			display: none;
+			//display: none;
 			&.on {
 				display: block;
 			}
