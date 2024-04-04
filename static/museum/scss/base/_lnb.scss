@@ -181,12 +181,23 @@
 	}
 }
 
+@include breakpoint($sm) {
+	.navigation nav > ul > li {
+		&.last-of-type {
+			display: none;
+		}
+		&.home {
+			display: none;
+		}
+	}
+}
+
 
 //목차형
 .lnb-nav{
 	position: sticky;
 	top: 48px;
-	padding-top: 0;
+	padding-top: 30px;
 	// &.sticky {
 	// 	position: sticky;
 	// 	top: 78px;

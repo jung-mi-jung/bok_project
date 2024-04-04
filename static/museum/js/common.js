@@ -660,7 +660,7 @@ $(function() {
 });
 
 
-// 상설전시 탭메뉴 swiper
+// 탭메뉴 swiper
 var section2Txt = new Swiper('.tab-list .swiper', {
 	slidesPerView: "auto",
 	// slidesPerView: 4,

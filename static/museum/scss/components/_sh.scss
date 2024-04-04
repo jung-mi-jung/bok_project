@@ -950,6 +950,8 @@
 			border-radius: 4px;
 			&.b-search {
 				.ico-srch-w {
+					width: 21px;
+					height: 20px;
 					@include background-image-retina("/static/museum/img/ico/ico-srch-w", png, auto, 100%);
 					margin-right: 8px;
 				}
@@ -960,6 +962,8 @@
 				box-sizing: border-box;
 				color: #3B63C4;
 				.ico-reset {
+					width: 21px;
+					height: 20px;
 					@include background-image-retina("/static/museum/img/ico/ico-reset", png, auto, 100%);
 					margin-right: 8px;
 				}

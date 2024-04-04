@@ -1625,7 +1625,7 @@ clear: both;
 color: #131547;
 font-size: 1.75rem;
 font-weight: 500;
-margin: 40px 0 16px;
+margin: 30px 0 16px;
 }
 #main-container h3::before {
 content: "";
@@ -2812,11 +2812,18 @@ flex-direction: column;
 }
 }
 @media (min-width: 1200px) {
+#main-container .lnb-nav, #main-container .sh-db {
+margin-top: -30px;
+}
+#main-container .lnb-nav + .content, #main-container .sh-db + .content {
+margin-top: -30px;
+}
 #main-container .lnb-nav + .content,
 #main-container .sh-db + .content {
 float: right;
 border-left: 1px solid #E5E5E5;
 padding-left: 36px;
+padding-top: 30px;
 }
 #main-container .lnb-nav + .content {
 width: 83.630952381%;

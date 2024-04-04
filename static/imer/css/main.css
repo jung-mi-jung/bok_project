@@ -29,32 +29,6 @@ color: #C81720;
 color: #3B63C4;
 }
 
-[class^=ico-].ico-youtube::before {
-background-image: url(/static/imer/img/ico/ico-youtube.svg);
-}
-[class^=ico-].ico-instagram::before {
-background-image: url(/static/imer/img/ico/ico-instagram.svg);
-}
-[class^=ico-].ico-facebook::before {
-background-image: url(/static/imer/img/ico/ico-facebook.svg);
-}
-[class^=ico-].ico-twitter::before {
-background-image: url(/static/imer/img/ico/ico-twitter.svg);
-}
-
-[class^=sns-].sns-youtube::before {
-background-image: url(/static/imer/img/ico/sns-youtube.svg);
-}
-[class^=sns-].sns-instagram::before {
-background-image: url(/static/imer/img/ico/sns-instagram.svg);
-}
-[class^=sns-].sns-facebook::before {
-background-image: url(/static/imer/img/ico/sns-facebook.svg);
-}
-[class^=sns-].sns-twitter::before {
-background-image: url(/static/imer/img/ico/sns-twitter.svg);
-}
-
 /* 레이아웃 */
 #wrap {
 padding-top: 0;
@@ -158,6 +132,7 @@ height: 32px;
 
 @media (min-width: 1200px) {
 .gnb > ul > li > a {
+font-size: 1.1875rem;
 color: #fff;
 }
 }
@@ -278,6 +253,8 @@ bottom: 0;
 left: 0;
 z-index: 9;
 width: 100%;
+padding: 0 10px;
+box-sizing: border-box;
 background-color: rgba(0, 0, 0, 0.4);
 height: 64px;
 }
@@ -1011,7 +988,6 @@ padding-top: calc((100vh - 1274px) / 2 + 194px);
 .gnb-stiky #section3,
 .gnb-stiky #section4 {
 height: 100vh;
-padding: 74px 0 0px;
 }
 }
 #footer {

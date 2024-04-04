@@ -39,17 +39,25 @@ $(function () {
 		spaceBetween: 0,	// 마진값
 		loop: true,	// 슬라이드 반복 여부
 		touchRatio: 0,  //드래그 금지
-		freeMode: true, 
+		// freeMode: true, 
 		effect: 'true', //슬라이드 이미지가 쌓이는 느낌
 		autoplay : {  // 자동 슬라이드 설정 , 비 활성화 시 false
 			delay : 3000,  //시간 설정
 			disableOnInteraction : false,
 		},
-		thumbs: {
-			swiper: galleryList,
-		},
+		// thumbs: {
+		// 	swiper: galleryList,
+		// },
 	});
-	galleryList.init();//초기화
+	//galleryList.init();//초기화
+
+
+	galleryList.controller.control = galleryThumbs;
+	galleryThumbs.controller.control = galleryList;
+
+
+
+
 
 	$('.section1__swiper-button-stop').on('click', function () {
 		$(this).hide().next().show().focus()

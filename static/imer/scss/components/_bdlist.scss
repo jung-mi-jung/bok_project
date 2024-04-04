@@ -1,15 +1,52 @@
+.sh-BxSet {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 2px solid $black;
+	padding-bottom: 15px;
+	@include breakpoint($sm){
+		display: block;
+		.count-total {
+			margin-bottom: 10px;
+		}
+	}
+	.sh-select {
+		margin-bottom: 0;
+	}
+}
+.count-total {
+	color: $black;
+	font-size: rem(15);
+	&::before {
+		content: "";
+		display: inline-block;
+		width: 3px;
+		height: 3px;
+		background-color: $black;
+		border-radius: 50%;
+		margin: 5px 8px 0 0;
+	}
+	strong {
+		font-weight: 600;
+		text-decoration: underline;
+	}
+}
+
+/* 게시판 목록 */
 .bd-line {
-	ul {		
-		li {
+	clear: both;
+	> ul {		
+		> li {
 			position: relative;
 			padding: 15px 15px 10px 15px;
 			border-bottom: 1px solid #D9D9D9;
+			min-height: 86px;
 			@include breakpoint($sm){
 				padding: 15px 8px 10px;
 			}
 			.i {
 				font-size: 14px;
-				display: block;
+				display: inline-block;
 				margin-bottom: 8px;
 				>span {
 					display: inline-block;
@@ -33,25 +70,36 @@
 					display: block;
 				}
 				.title {
-					width: calc(100% - 250px);
+					max-width: calc(100% - 250px);
 					@include ellipsis;
 					color: #222;
 					font-size: rem(20);
 					@include breakpoint($sm){
 						font-size: rem(16);
 						width: 100%;
+						max-width: 100%;
 						margin-bottom: 8px;
 						@include line-clamp(3);
 						white-space: inherit;
 					}
+					.ico-notice {
+						display: inline-block;
+						width: 24px;
+						height: 25px;	
+						margin-right: 4px;
+						@include background-image-retina("/static/museum/img/ico/ico-notice", png, auto, 100%);
+						background-repeat: no-repeat;
+						background-position-y: -3px;
+					}
 				}
 				.btns {
+					position: relative;
 					@include breakpoint($sm){
 						position: absolute;
 						bottom: 10px;
 						right: 8px;
 					}
-					a {
+					> a {
 						color: #666;
 						display: inline-block;
 						&::before {
@@ -60,8 +108,8 @@
 						}
 						& + a {
 							position: relative;
-							margin-left: 15px;
-							padding-left: 15px;
+							margin-left: 11px;
+							padding-left: 13px;
 							&::after {
 								content: "";
 								position: absolute;
@@ -72,22 +120,58 @@
 								height: 10px;
 							}
 						}
-					}					
-					.i-download {
-						&::before {
-							content: "";
+						&.i-download {
+							&::before {
+								content: "";
+								display: inline-block;
+								vertical-align: middle;
+								background: url(/static/portal/img/common/ico-download.png);
+								width: 20px;
+								height: 20px;
+							}
+						}
+						&.i-view {
+							&::before {
+								@include font-ico-outline("\e666");
+								background-color: transparent;
+							}
+						}
+						.icon {
 							display: inline-block;
-							vertical-align: middle;
-							background: url(/static/portal/img/common/ico-download.png);
-							width: 20px;
-							height: 20px;
-							//@include font-ico-outline("\f824");
 						}
 					}
-					.i-view {
-						&::before {
-							@include font-ico-outline("\e666");
-						}
+				}
+			}
+			.dataInfo {
+				align-items: center;
+				margin-top: 8px;
+				span {
+					display: inline-flex;
+					align-items: center;
+				}
+				.date {
+					color: #767676;
+					&::before {
+						content: "";
+						display: inline-block;
+						vertical-align: middle;
+						width: 16px;
+						height: 16px;
+						background: url(/static/portal/img/ico/ico-date.png) no-repeat;
+						margin-right: 5px;
+					}
+				}
+				.hits {
+					margin-left: 20px;
+					color: #767676;
+					&::before {
+						content: "";
+						display: inline-block;
+						vertical-align: middle;
+						width: 14px;
+						height: 16px;
+						background: url(/static/portal/img/ico/ico-hits.png) no-repeat;
+						margin-right: 5px;
 					}
 				}
 			}
@@ -143,73 +227,268 @@
 							background: url(/static/portal/img/common/arr01_on.png) 50% no-repeat;
 						}
 					}
-				}				
+				}
+				.set {
+					align-items: center;
+					justify-content: flex-start;
+					.ico-lock {
+						display: inline-block;
+						margin-left: 8px;
+						width: 20px;
+						height: 21px;
+						@include background-image-retina("/static/museum/img/ico/ico-lock", png, auto, 100%);
+						background-repeat: no-repeat;
+					}	
+				}			
 			}
 		}
 	}	
 }
+// /* 추가된 스타일 */
+// .bd-line.c-type {
+// 	.list-num {
+// 		align-items: center;
+// 		gap:  0 8px;
+// 		.num {
+// 			display: flex;
+// 			align-items: center;
+// 			justify-content: center;
+// 			width: 33px;
+// 			font-size: rem(14);
+// 			padding: 2px 4px;
+// 			border: 1px solid #b3b3b3;
+// 			border-radius: 4px;
+// 			box-sizing: border-box;
+// 			background: #fff;
+// 		}
+// 		.recruit {
+// 			color: #131547;
+// 			font-weight: 500;
+// 		}
+// 		.firstCome {
+// 			color: #3B63C4;
+// 		}
+// 	}
+// 	.list-title {
+// 		align-items: center;
+// 		justify-content: space-between;
+// 		gap: 0 8px;
+// 		margin: 8px 0; 
+// 		.title {
+// 			max-width: calc(100% - 70px - 8px); 
+// 			white-space: nowrap;
+// 			text-overflow: ellipsis;
+// 			overflow: hidden;
+// 			color: #1A1A1A;
+// 		}
+// 		.list-state {
+// 			i {
+// 				display: inline-block;
+// 				width: 20px;
+// 				height: 20px;
+// 				margin-right: 2px;
+// 			}
+// 			&.ing {
+// 				color: #131547;
+// 				text-decoration: underline;
+// 				i {
+// 					@include background-image-retina("/static/museum/img/ico/ico-ing", png, auto, 100%);
+// 				}
+// 			}
+// 			&.wait {
+// 				color: #666;
+// 				i {
+// 					@include background-image-retina("/static/museum/img/ico/ico-wait", png, auto, 100%);
+// 				}
+// 			}
+// 			&.done {
+// 				color: #666;
+// 				i {
+// 					@include background-image-retina("/static/museum/img/ico/ico-done", png, auto, 100%);
+// 				}
+// 			}
+// 		}
+// 	}
+// 	.alarm {
+// 		display: flex;
+// 		align-items: center;
+// 		gap: 0 8px;
+// 		color: #666666;
+// 		i {
+// 			display: inline-block;
+// 			width: 20px;
+// 			height: 20px;
+// 			@include background-image-retina("/static/museum/img/ico/ico-alarm", png, auto, 100%);
+// 		}
+// 	}
+// }
+// /* 화폐이야기 게시판 */
+// .bd-line.d-type {
+// 	> ul > li {
+// 		min-height: 56px;
+// 	}
+// 	a {
+// 		gap: 0 8px;
+// 		&:hover {
+// 			.set {
+// 				position: relative;
+// 				&::before {
+// 					content: "";
+// 					display: block;
+// 					width: 100%;
+// 					height: 1px;
+// 					background: #1a1a1a;
+// 					position: absolute;
+// 					left: 0;
+// 					bottom: 0;
 
-/* 여기까지 */
+// 				}
+// 			}
+// 			i {
+// 				background-position: -40px -310px;
+// 			}
+// 		}
+// 	}
+// 	.num {
+// 		display: inline-block;
+// 		width: 32px;
+// 		font-size: rem(16);
+// 		color: #4D4D4D;
+// 		text-align: center;
+// 	}
+// 	.t1 {
+// 		display: inline-block;
+// 		font-size: rem(14);
+// 		color: #3B63C4;
+// 		padding: 1.5px 8px; 
+// 		border: 1px solid #3B63C4;
+// 		border-radius: 3px;
+// 		box-sizing: border-box;
+// 		background: #fff;
+// 	}
+// 	.set {
+// 		display: inline-block;
+// 		max-width: calc(100% - 130px);
+// 		white-space: nowrap;
+// 		text-overflow: ellipsis;
+// 		overflow: hidden;
+// 	}
+// 	i {
+// 		position: absolute;
+// 		right: 15px;
+// 	}
+	
+// }
 
-
-
-/* 아래는 아직 사용무 */
-
-
-.bd-list {
-	table {
-		thead {
+/* 뉴스 및 자료형 타입 */
+.bd-line.data-type {
+	position: relative;
+	> ul > li {
+		padding: 18px 24px;
+		border-radius: 16px;
+		border: 1px solid #E5E5E5;
+		margin: 16px 0;
+		cursor: pointer;
+		@include breakpoint($sm) {
+			padding: 10px 16px;
+		}
+		&:hover {
+			background: #fff;
+			border: 1px solid #3B63C4;
+		}
+	}
+	.i {
+		display: flex;
+		align-items: center;
+		margin-bottom: 0;
+		font-size: rem(16);
+		.t2 {
+			border: 0;
+			color: #3B63C4;
+		}
+	}
+	.dataInfo {
+		position: absolute;
+		top: 18px;
+		right: 24px;
+		margin-top: 0;
+		@include breakpoint($sm) { 
+			position: static;
+		}
+	}
+	.set {
+		margin: 12px 0;
+		@include breakpoint($sm) {
+			margin: 4px 0;
+		}
+		.title {
 			@include breakpoint($sm) {
-				display: none;
+				margin-bottom: 0;
 			}
 		}
-		tbody {
-			@include breakpoint($sm) {
-				display: block;
+	}
+	.data-info {		
+		@include breakpoint($sm) { 
+			padding-bottom: 10px;
+			margin-bottom: 10px;
+			border-bottom: 1px solid #E5E5E5;
+		}
+		dl {
+			display: flex;
+			align-items: center;
+			gap: 0 8px;
+			// display: table;
+			// width: 100%;
+			// table-layout: fixed;
+			// padding: 2px 0;
+			// @include breakpoint($sm) {
+			// 	width: calc(100% - 75px);
+			// }
+			> * {
+				font-size: rem(14);
+			}
+			dt {
+				width: 40px;
+				color: #808080;
+			}
+			dd {
+				width: calc(100% - 40px - 8px);
+				color: #1A1A1A;
 			}
 		}
-		img {
-			vertical-align: middle;
-		}
 	}
-}
-thead th {
-	&.no {
-		width: 55px;
-		@include breakpoint($lg) {
-			width: 75px;
-		}
-	}
-	&.date {
-		width: 90px;
-		@include breakpoint($lg) {
-			width: 100px;
-		}
-	}
-	&.file {
-		width: 80px;
-		@include breakpoint($lg) {
-			width: 105px;
-		}
-	}
-	&.count,
-	&.hits {
-		width: 90px;
-		@include breakpoint($lg) {
-			width: 100px;
-		}
-	}
-	&.ckek {
-		width: 50px;
-	}
-	&.depart {
-		width: 110px;
-	}
-	&.time {
-		width: 110px;
+	.btns {
+		text-align: right;
+		margin-top: -24px;
 	}
 }
 
+/* 옛날 소스 */
+.bdList {
+	border-top: 2px solid #222;	
+	th,
+	td {
+		color: $black;
+		font-size: rem(18);
+		// font-size: rem(16);
+		font-weight: 400;
+		border: 1px solid $bd-color;
+		padding: 13px 15px;
+	}
+	th {
+		background-color: #F2F6FA;
+		border-bottom: none;
+		&.no {
+			width: 8%;
+		}
+	}
+	td {
+		
+	}
+	.nodata {
+		text-align: center;
+	}
+}
 
 // 게시물 카운트
 .count-total {
@@ -223,158 +502,5 @@ thead th {
 		font-style: normal;
 		display: inline-block;
 		margin-left: 4px;
-	}
-}
-
-.bd-list {
-	margin-top: 10px;
-	border-top: 2px solid $bd-top-color;	
-	a {
-		&:hover,
-		&.focus, 
-		&:active {
-			color: $point;
-			text-decoration: underline;
-		}
-		&[class^="b-"] {
-			color: #fff;
-		}
-	}
-	.nodata {
-		padding: 40px;
-		text-align: center;
-		border-bottom: 1px solid $bd-color;
-	}
-	table {
-		width: 100%;
-		text-align: center;		
-        table-layout: fixed;
-		@include breakpoint($sm) {
-			text-align: left;
-			display: block;
-		}
-		thead {
-			color: $bd-list-head-color;
-			@include breakpoint($sm) {
-				display: none;
-			}
-		}
-		tr {
-			height: 60px;
-		}
-		th {
-			height: 60px;
-			background-color: $bd-list-th-bg-color;
-			border-bottom: 1px solid #ccc;
-			font-weight: 400;
-			font-size: 18px;
-		}
-		tbody {
-			@include breakpoint($sm) {
-				display: block;
-			}
-			tr {
-				@include breakpoint($sm) {
-					position: relative;
-					padding: 10px 0;
-					height: auto;
-					display: block;
-					border-top: 1px solid $bd-color;
-				}
-				&:first-child {
-					border-top: none;
-				}
-			}
-			&.notice {
-				.no i {
-					color: $red;
-					font-size: 1.375rem;
-					display: inline-block;
-					padding-top: 0.3125em;
-				}
-			}
-			td {
-				color: #757575;
-				padding-bottom: 3px;
-				@include breakpoint($md) {
-					border-bottom: 1px solid $bd-color;
-				}
-				@include breakpoint($sm) {
-					display: flex;
-					align-items: center;
-					&.no {
-						display: none;
-					}
-				}
-				&.tal {
-					@include breakpoint($md) {
-						padding-left: 20px;
-					}
-				}
-				&.title {
-					text-align: left;
-					span + a {
-						width: calc(100% - 70px);
-						vertical-align: middle;
-						padding-left: 5px;
-					}
-					a {
-						color: #757575;
-						@include ellipsis;
-						width: 100%;				
-						@include breakpoint($sm) {
-							display: block;
-							margin: 0;
-							padding: 0 4px;
-						}
-						@include breakpoint($md) {
-							padding-left: 20px;
-						}
-						&:hover {
-							text-decoration: underline;
-						}
-					}
-				}
-				a.link {
-					text-decoration: underline;
-				}
-				.only-m {
-					display: none;
-					@include breakpoint($sm) {
-						color: #000;
-						font-weight: 400;
-						margin-right: 10px;
-						display: block;
-						font-size: 14px;
-						line-height: 1;
-						height: auto;
-						padding: 4px;
-						border-radius: 3px;
-						flex-basis: 32%;
-						max-width: 70px;
-					}
-				}				
-			}
-			.a.file {
-				width: 30px;
-				height: 30px;
-				display: block;
-				background: url(/static/fss/img/common/ico-file.png) 0 0 no-repeat;
-				margin: 0 auto;
-			}
-		}
-	}
-	[class^=tag] {
-		display: inline-block;
-		color: #fff;
-		font-size: 13px;
-		padding: 1px 5px;
-		border-radius: 30px;
-	}
-	.tag1 {
-		background-color: #8b3793;
-	}
-	.tag2 {
-		background-color: #344ba1;
 	}
 }

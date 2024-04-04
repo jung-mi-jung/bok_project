@@ -13,6 +13,7 @@ const rename = require('gulp-rename');
 const removeEmptyLines = require('gulp-remove-empty-lines');
 const spritesmith = require('gulp.spritesmith');
 const imageResize = require('gulp-image-resize');
+
 const reload = browserSync.reload;
 const merge = require('merge');
 const inlineCss = require('gulp-inline-css');
@@ -38,8 +39,8 @@ function servers() {
 			baseDir: './',
 			index: 'static/guide/g.html',
 		},
-		port: 1981,
-		//port: 1989,
+		// port: 1981,
+		port: 1989,
 	});
 }
 const scss = ["commons", "portal", "museum", "imer", "imerEng", "eng", "bos"];   // museum 화폐박물관	  eng 영문	 imer 경제연구원	 imerEng 경제연구원(영문)
@@ -98,12 +99,16 @@ function waths() {
 
 	guideToDist('portal');	//guideToDist 레이아웃용
 	guideToDist('museum');
+	guideToDist('imer');	
+	guideToDist('imerEng');
 
 // 	guideToDist('portal');	//guideToDist 가이드용
 // 	guideToDist('museum');	
 
 	guideLayout('portal');	//레이아웃용
 	guideLayout('museum');
+	guideLayout('imer');
+	guideLayout('imerEng');
 
 	indexLayout('portal');	//indexLayout 목차형 (포털 전용)
 	indexLayout('eng');	
@@ -269,11 +274,11 @@ function htmlmerge(cb) {
 var sprite = async function () {
 	console.log('sprite watching start!');
 	// All events will be watched
-	watch('static/museum/sprite/*.png', { events: 'all' }, function (cb) {
+	watch('static/imer/sprite/*.png', { events: 'all' }, function (cb) {
 		// body omitted
 		// Generate our spritesheet
-		var path = 'static/museum/sprite/';
-		var site = 'museum';
+		var path = 'static/imer/sprite/';
+		var site = 'imer';
 		var spriteData = gulp.src(path + '*.png').pipe(
 			spritesmith({
 				// imgName      : 'sprite.png',
@@ -313,8 +318,8 @@ var spriteMain = async function () {
 	// watch('static/fss/img/sprite-main/*.png', { events: 'all' }, function(cb) {
 	// body omitted
 	// Generate our spritesheet
-	var path = "static/museum/img/sprite-main/";
-	var site = "museum";
+	var path = "static/imer/img/sprite-main/";
+	var site = "imer";
 	var spriteData = gulp.src(path + "*.png").pipe(
 		spritesmith({
 		  // imgName      : 'sprite.png',

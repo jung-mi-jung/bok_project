@@ -31,6 +31,7 @@
 	.cont-nav {
 		width: 240px;
 		margin-right: 4.28571%;
+		margin-top: 30px;
 		@include breakpoint($sm) {
 			width: 100%;
 			margin-right: 0;
