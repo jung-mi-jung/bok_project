@@ -319,27 +319,21 @@ $(function () {
 	
 </div>
 
+
 <div class="content">
 
 
 
 
 	<div class="sh">
-		<div class="c">
+		<div class="c short">
 			<div class="sh-input">
 				<div class="select-set select1">
-					<button type="button" class="btn_select" title="구분 선택">전체</button>
-					<ul>
-						<li>
-							<button type="button">전체</button>
-						</li>
-						<li>
-							<button type="button">제목</button>
-						</li>
-						<li>
-							<button type="button">내용</button>
-						</li>
-					</ul>
+					<select name="" id="" title="구분 선택">
+						<option value="">전체</option>
+						<option value="">제목</option>
+						<option value="">내용</option>
+					</select>
 				</div>
 				<div class="keyword-set">
 					<span class="keyword"><input type="text" title="검색어"></span>
@@ -352,36 +346,36 @@ $(function () {
 	
 	<div class="sh-BxSet">
 		<p class="count-total">총 <strong>1590</strong>건의 게시물이 있습니다.</p>
-		<div class="sh-select">
+		<div class="sh-select">			
 			<div class="select-set select1">
-				<button type="button" class="btn_select" title="개월 선택">개월</button>
-				<ul>
-					<li>
-						<button type="button">3개월</button>
-					</li>
-					<li>
-						<button type="button">6개월</button>
-					</li>
-				</ul>
+				<select name="" id="" title="개월 선택">					
+					<option value="1">1개월</option>
+					<option value="2">3개월</option>
+					<option value="3">6개월</option>
+					<option value="4">1년</option>
+					<option value="5">직접선택</option>
+				</select>
+			</div>
+			<div class="date-set">
+				<input id="sdate" name="sdate" class="sdate" title="검색기간 시작일" value="" type="text" autocomplete="off">
+				<span class="dash">~</span>
+				<input id="edate" name="edate" class="edate" title="검색기간 종료일" value="" type="text" autocomplete="off">
 			</div>
 			<div class="select-set select2">
-				<button type="button" class="btn_select" title="정렬순서 선택">정렬</button>
-				<ul>
-					<li>
-						<button type="button">최신순</button>
-					</li>
-				</ul>
+				<select name="" id="" title="정렬순서 선택">
+					<option value="">최신순</option>
+					<option value="">인기순</option>
+				</select>
 			</div>
 			<div class="select-set select3">
-				<button type="button" class="btn_select" title="갯수 선택">갯수</button>
-				<ul>
-					<li>
-						<button type="button">10개</button>
-					</li>
-					<li>
-						<button type="button">20개</button>
-					</li>
-				</ul>
+				<select name="" id="" title="갯수 선택">
+					<option value="">10개</option>
+					<option value="">20개</option>
+					<option value="">30개</option>
+					<option value="">40개</option>
+					<option value="">50개</option>
+					<option value="">100개</option>
+				</select>
 			</div>
 			<button type="button" class="submit" aria-label="검색"></button>
 		</div>

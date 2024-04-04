@@ -876,6 +876,15 @@
 	}
 }
 
+[class^=reference-] {
+	&:first-child {
+		margin-top: 0;
+		padding-top: 0;
+	}
+	& + [class^=reference-] {
+		border-top: 1px solid #DCE2F1;
+	}
+}
 .reference {
 	margin-top: 30px;
 	padding: 50px 120px;
@@ -993,8 +1002,7 @@
 	}
 	&-news {
 		margin-top: 20px;
-		padding-top: 30px;
-		border-top: 1px solid #DCE2F1;
+		padding-top: 30px;		
 		@include reference();		
 		dl {
 			dt {
@@ -1059,7 +1067,7 @@
 		}
 	}
 	&-media {
-		border-top: 1px solid #DCE2F1;
+		//border-top: 1px solid #DCE2F1;
 		@include reference();
 		margin-top: 25px;
 		padding-top: 30px;				

@@ -1515,6 +1515,11 @@ position: static;
 #main-container h3.h3::after {
 display: none;
 }
+#main-container h3.h3 sup {
+vertical-align: super;
+font-size: 75%;
+color: #39A0FF;
+}
 #main-container .bu2,
 #main-container h4 {
 color: #3B63C4;
@@ -2732,6 +2737,14 @@ outline: 1px dashed #000;
 outline-offset: 2px;
 }
 
+[class^=reference-]:first-child {
+margin-top: 0;
+padding-top: 0;
+}
+[class^=reference-] + [class^=reference-] {
+border-top: 1px solid #DCE2F1;
+}
+
 .reference {
 margin-top: 30px;
 padding: 50px 120px;
@@ -2889,7 +2902,6 @@ margin-right: 5px;
 .reference-news {
 margin-top: 20px;
 padding-top: 30px;
-border-top: 1px solid #DCE2F1;
 }
 .reference-news dl dt {
 color: #1A1A1A;
@@ -3006,7 +3018,6 @@ font-size: 0.875rem;
 margin-top: 10px;
 }
 .reference-media {
-border-top: 1px solid #DCE2F1;
 margin-top: 25px;
 padding-top: 30px;
 }

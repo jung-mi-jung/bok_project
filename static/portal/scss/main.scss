@@ -180,6 +180,12 @@
 		position: relative;
 		background-size: cover;
 		//background-attachment: fixed;
+		@include breakpoint($mdw){
+			height: 600px;
+		}
+		@include breakpoint($sm){
+			height: 550px;
+		}
 		&.swiper-slide-active {
 			-webkit-animation: visual-bg 3s ease-out 1;
 			animation: visual-bg 3s ease-out 1;
@@ -211,6 +217,10 @@
 			bottom: 129px;
 			left: 121px;
 			text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+			@include breakpoint($sm){
+				left: 10px;
+				width: calc(100% - 20px);
+			}
 		}
 		.s1-t1 {
 			color: #fff;
@@ -219,7 +229,9 @@
 			font-weight: 700;
 			line-height: normal;
 			text-transform: uppercase;
-			
+			@include breakpoint($sm){
+				font-size: rem(38);
+			}
 		}
 		.s1-t2 {
 			margin-top: 30px;
@@ -229,6 +241,10 @@
 			font-weight: 500;
 			line-height: normal;
 			text-transform: uppercase;
+			@include breakpoint($sm){
+				font-size: rem(20);
+				margin-top: 15px;
+			}
 		}
 		&::before {
 			content: "";
@@ -253,6 +269,9 @@
 		display: flex;
 		flex-direction: row;
 		align-items: center;
+		@include breakpoint($sm){
+			display: none;
+		}
 		.swiper-pagination-bullet {
 			@include rect(20px);
 			background-color: #fff;
@@ -323,6 +342,7 @@
 	right: 0;
 	bottom: 0;
 	width: 600px;
+	max-width: 100%;
 	height: 113px;
 	background: rgba(0, 0, 0, 0.70);
 	backdrop-filter: blur(4px);
@@ -330,15 +350,24 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	@include breakpoint($sm){
+	}
 	a {
 		width: calc(100% / 3);
 		position: relative;
 		padding: 20px 24px;
 		color: #fff;
 		display: block;
+		@include breakpoint($sm){
+			padding: 0 10px;
+			text-align: center;
+		}
 		&:nth-child(2) {
 			border: 1px solid rgba(255, 255, 255, 0.2);
 			border-width: 1px 0;
+			@include breakpoint($sm){
+				border: none;
+			}
 		}
 		& + a {
 			&::before {
@@ -362,6 +391,9 @@
 			font-size: 18px;
 			color: #fff;
 			float: right;
+			@include breakpoint($sm){
+				display: none;
+			}
 		}	
 	}
 	.t {
@@ -370,11 +402,17 @@
 		font-weight: 300;
 		text-align: right;
 		height: 49px;
+		@include breakpoint($sm){
+			font-size: rem(20);
+		}
 		em {
 			font-size: rem(44);
 			font-weight: 600;
 			line-height: 1.4;
 			margin-right: 8px;
+			@include breakpoint($sm){			
+				font-size: rem(30);
+			}
 		}
 		.ctype1 {
 			color: #FF327C;
@@ -474,6 +512,9 @@
 	}
 	.set {
 		padding: 100px 0;
+		@include breakpoint($sm){
+			padding: 50px 0;
+		}
 	}
 	h2 {
 		position: relative;
@@ -503,6 +544,9 @@
 				}
 				&-total {				
 					font-size: rem(24);				
+				}
+				@include breakpoint($sm){
+					display: none;
 				}
 			}
 			.ctrl {
@@ -583,6 +627,9 @@
 				border-radius: 16px;
 				box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.15);
 				//margin: 0 16px;
+				@include breakpoint($sm){
+					width: 100% !important;
+				}
 				span {				
 					&.img {
 						padding-top: 60%;
@@ -616,11 +663,14 @@
 						font-size: rem(18);	
 						font-weight: 500;
 						margin-bottom: 12px;
+						@include breakpoint($sm){
+							height: 40px;
+						}
 					}
 					&.txt {
 						//line-height: 1.3;
 						@include line-clamp(3);
-						height: 62px;
+						height: 66px;
 						color: #666;
 						font-size: rem(14);
 					}
@@ -638,6 +688,7 @@
 					//width: 45% !important;
 					//transform: scale(1.5) !important;
 					width: 720px !important;
+					max-width: 100% !important;
 					box-shadow: none;
 					padding: 0 80px;
 					margin-top: -80px;
@@ -645,9 +696,18 @@
 					margin-right: 0 !important;
 					//margin: -80px 100px 0;
 					background-color: transparent;
+					@include breakpoint($sm){
+						background-color: #fff;
+						margin-top: 0;
+						padding: 16px;
+						margin: 0 10px !important;
+					}
 					.img {
 						width: 560px;
 						padding-top: 57%;
+						@include breakpoint($sm){
+							width: 100%;
+						}
 					}
 					span {
 						&.t {							
@@ -667,11 +727,17 @@
 							font-size: rem(24);
 							text-align: center;
 							margin-bottom: 22px;
+							@include breakpoint($sm){
+								height: 52px;
+							}
 						}
 						&.txt {
 							height: 82px;
 							color: #4D4D4D;
-							font-size: rem(18);						
+							font-size: rem(18);	
+							@include breakpoint($sm){
+								height: 68px;
+							}					
 						}
 						&.date {
 							color: #4D4D4D;
@@ -821,6 +887,9 @@
 	}
 	.media {
 		padding: 125px 0;
+		@include breakpoint($sm){
+			padding: 60px 0;
+		}
 		.swiper-slide {
 			border-radius: 16px;
 			background-color: #fff;
@@ -998,8 +1067,10 @@
 					padding: 0 16px;
 					display: block;
 					color: #4D4D4D;
-					@include line-clamp(2);
-					height: 48px;
+					//@include line-clamp(2);
+					//height: 48px;
+					@include line-clamp(5);
+					height: 120px;
 				}
 			}
 		}
@@ -1035,7 +1106,11 @@
 				@include breakpoint($smd){
 					padding: 16px 16px 70px;
 				}
+				@include breakpoint($sm){
+					padding: 16px;
+				}
 				.bottom {
+					display: none !important; /* 기능 삭제 */
 					opacity: 1;
 					position: absolute;
 					bottom: 0;
@@ -1085,6 +1160,7 @@
 						}
 					}
 				}
+				/* 기능 삭제
 				@include breakpoint($lg){
 					//&:hover,
 					&.hover {
@@ -1121,11 +1197,12 @@
 							opacity: 1;
 						}
 					}
-				}
+				}*/
 				@include breakpoint($smd){
 					.img-set {
 						.img {
-							padding-top: 63.8%;
+							//padding-top: 63.8%;  기능 삭제 전
+							padding-top: 100%;
 							background-position: 50%;
 						}
 					}
@@ -1136,7 +1213,7 @@
 						}
 					}
 					.bottom {
-						opacity: 1;
+						//opacity: 1;  삭제
 					}					
 				}
 				@include breakpoint($sm){
@@ -1208,6 +1285,9 @@
 			li {
 				padding: 10px 0;
 				border-bottom: 1px solid #B1C1E7;
+				@include breakpoint($sm){
+					padding: 5px 0;
+				}
 				a {
 					display: flex;
 					justify-content: space-between;
