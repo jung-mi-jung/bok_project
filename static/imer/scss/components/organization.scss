@@ -1,0 +1,46 @@
+.ognztn-pop {
+	display: none;
+	position: absolute;
+	top: 26px;
+	right: 0;
+	width: 328px;
+	// background-color: $point;
+	box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.15);
+	border-radius: 8px;
+	z-index: 9;	
+	text-align: left;
+	@include breakpoint($md) {
+		//position: relative;
+	}
+	h3 {
+		#main-container & {
+			color: #fff;
+			font-size: 14px;
+			font-weight: 300;
+			background-color: #2F4F9D;
+			border-radius: 8px 8px 0 0;
+			margin: 0;
+			padding: 9px 12px;
+			&::before {
+				display: none;
+			}
+		}
+	}
+	.closeLayer {
+		position: absolute;
+		top: 14px;
+		right: 14px;
+		width: 13px;
+		height: 13px;
+		background-color: #fff;
+		border-radius: 50%;
+		&::before {
+			@include font-ico-outline('\e5cd');
+			vertical-align: top;
+			margin-top: 1px;
+			font-size: 12px;
+			color: #2F4F9D;
+			font-weight: 600;
+		}
+	}
+}

@@ -1,62 +1,353 @@
-.tab-nav {
-	display: none;
-	position: relative;
-	margin-bottom: 40px;
-	@include breakpoint($lg){
-		display: block;
+.tabsub { 
+	clear:both;
+	float: left;
+	width: 100%;
+	margin-bottom: 30px;
+	margin-bottom:30px;
+	&.dept3{
+		margin-bottom:5px;
 	}
-	ul{
-		display: flex;
-		flex-wrap: wrap;
-		width: 100%;
+	ul{ 
+		float:left;
+		width:100%; 
+		background-color: #fbfbfc;
+		border:1px solid #dee0e6; 
 		li{
-			border: 1px solid $bd-color;
-			margin-left: -1px;
-			margin-bottom: -1px;
-			@include breakpoint($md){
-				width: 33.3333%;
-				/* &:nth-child(3n){
-					border-right: none !important;
-				} */
+			width:25%; 
+			float: left;
+			text-align: center;
+			line-height: 120%;
+			display: table-cell;
+			line-height: 40px;
+			&:nth-child(4n){
+				background: none;
 			}
-			@include breakpoint($sm){
-				width: 50%;
+			&.active{
+				border:2px solid #3B63C4; 
+				position: relative;
+				line-height: 36px; 
+				background: #fff;
+				&:before{
+					content:"▼"; 
+					font-size: 10px;
+					position: absolute;
+					top: -17px;
+					left: 48%;
+				}
 			}
-			@include breakpoint($xs){
+			&.active>a,
+			&.on>a{
+				font-weight:600;
+				color: #3B63C4; 
+				text-decoration:none;
+				font-size: 14px;
+			}
+			a{
+				color:#666;
+				vertical-align: middle; 
+				text-align: center; 
 				width: 100%;
+				float: none;
 			}
-			@include breakpoint($lg){
-				//width: 25%;
-				
-			}
-			a {
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				justify-items: center;
-				height: 100%;
-				padding: 0 10px;
-				border-right-width: 0;
-				min-height: 47px;
-				/* word-break: inherit; */
-				background-color: #f9f9f9;
-				text-align: center;
-				font-family: $heading-font;
-				font-weight: 500;
-				line-height: 1.3;
-				&.on{
-					font-weight: 500;
-					position: relative;
-					z-index: 1;
-					background-color: $point;
-					color:$white;
+		}
+	}
+}
+.tabsub {
+	&.type {
+		float:none !important;
+		overflow:hidden;
+		ul {
+			border-bottom:1px solid #ddd;
+			border-width:0 0 1px 0 !important;
+			overflow:hidden;
+			clear:both;
+			li { 
+				background: #FBFBFC;
+				display:table;
+				line-height:17px;
+				a{
+					display:table-cell;
+					line-height:17px;
+					height:43px;
+					padding:0 5px;
+				}
+				@include breakpoint ($md) {
+					text-align:center;
+					a{
+						line-height:1em;
+						text-align:center;
+					}
+				}
+				&.active{
+					border-bottom:3px solid #5b79b9;
+					&:before{
+						color: #3B63C4;
+						content:"▼"; 
+						font-size: 10px; 
+						position: absolute;
+						top: -7px;
+						left: 48%;
+					}
+				}
+				&:first-child{
+					background:none;
+				}
+				&:nth-child(4n+1){
+					clear:both;
+					background-image:none;
 				}
 			}
 		}
 	}
-	&-ctrl {
-		@include breakpoint($lg){
-			display: none;
+}
+
+/* 콘텐츠 탭메뉴 */
+.tab-list {
+	display: flex;
+	position: relative;
+	margin: 0 0 24px;
+	// padding: 0 60px;
+	.swiper {
+		width: 100%;
+		box-sizing: border-box;
+		&.swiper-autoheight .swiper-wrapper {
+			align-items: stretch;	
+		}
+		a.swiper-slide {
+			// display: block;
+			flex: 1;
+			// width: 100%;
+			min-height: 40px;
+			padding: 8px;
+			color: #3B63C4;
+			background: #fff;
+			border-top: 1px solid #89A1DC;
+			border-bottom: 1px solid #89A1DC;
+			border-right: 1px solid #89A1DC;
+			text-align: center;
+			box-sizing: border-box;
+			&:first-of-type {
+				border-left: 1px solid #89A1DC;
+			}
+			&.on {
+				color: #fff;
+				background: #3B63C4;
+			}
+			
+		}
+	}
+	.swiper-tab-button {
+		display: none;
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		i {
+			transform: scale(0.833) translateY(-5px) translateX(-5px);
+		}
+		&.swiper-tab-prev {
+			left: 0;
+		}
+		&.swiper-tab-next{
+			right: 0;
+		}
+		&.swiper-button-disabled {
+			opacity: .6;
+			cursor: not-allowed;
+		}
+	}
+	
+}
+// .tab-list2 {
+// 	position: relative;
+// 	margin-top: 20px;
+// 	a {
+// 		padding: 8px;
+// 		min-width: 228px;
+// 		width: auto;
+// 		min-height: 40px;
+// 		box-sizing: border-box;
+// 		@include breakpoint($sm) {
+// 			min-width: 128px;
+// 		}
+// 	}
+// }
+.tab-content {
+	.tab-pannel {
+		display: none;
+		&.on {
+			display: block;
+		}
+	}
+}
+.js-tab  {
+	display: none;
+	
+}
+
+/* 미술품 게시판 목록 탭메뉴 */
+.category2 {
+	margin-bottom: 24px;
+	.row {
+		justify-content: center;
+		@include breakpoint($smd) {
+			flex-wrap: wrap;
+		}
+	}
+	li {
+		position: relative;
+		font-size: rem(18);
+		color: #4d4d4d;
+		padding: 2px 0;
+		&::before {
+			content: "";
+			display: inline-block;
+			position: absolute;
+			top: 6px;
+			right: 0;
+			width: 1px;
+			height: 16px;
+
+			background: #E5E5E5;
+		}
+		a {
+			padding: 0 24px;
+			@include breakpoint($sm) {
+				padding: 0 16px;
+			}
+		}
+		&:last-of-type {
+			&::before {
+				display: none;
+			}
+		}
+		&.on {
+			color: #1A1A1A;
+			border: 2px solid #4D4D4D;
+			box-sizing: border-box;
+			border-radius: 99px;
+			&::before {
+				display: none;
+			}
+		}
+
+	}
+}
+
+
+/* 본인인증, 실명인증 */
+.formBox {
+	display: flex;
+	justify-content: center;	
+	margin-top: 30px;
+	margin-bottom: 50px;
+	ul.step {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		li {
+			display: flex;
+			align-items: center;
+			position: relative;
+			color: #666;
+			font-size: rem(18);
+			line-height: 1.3;
+			@include breakpoint($sm){
+				font-size: rem(16);
+			}
+			&::after {
+				@include font-ico-outline('\e5e1');
+				font-size: 20px;
+				color: #BFBFBF;	
+				margin: 0 0 0 10px;			
+				@include breakpoint($lg){
+					margin: 0 20px;
+				}
+			}
+			.title {
+				display: block;
+				width: 100%;
+				font-size: 14px;
+				@include breakpoint($sm){
+					font-size: 12px;
+				}
+			}
+			span {
+				display: block;
+				width: 100%;
+				font-size: rem(18);
+				// font-size: rem(16);
+				@include breakpoint($smd) {
+					font-size: rem(16);
+				}
+			}
+			&.active {
+				color: $black;
+				font-weight: 500;
+				&::before{
+					content: "";
+					display: inline-block;
+					vertical-align: middle;
+					width: 72px;
+					height: 72px;
+					margin-right: 18px;
+					@include breakpoint($sm){
+						display: none;
+					}
+				}
+				.title {
+					font-weight: 600;
+					color: #39A0FF;
+				}
+			}
+			&:last-child {
+				&::after {
+					display: none;
+				}
+			}			
+		}		
+		.ic-choice {
+			&::before {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				width: 72px;
+				height: 72px;
+				border-radius: 50%;;
+				background-color: #F3F3F3;
+				// background: url(/static/portal/img/ico/ico-step-choice.png);
+				background-image: url(/static/museum/img/ico/ico-reserve.png);
+				background-repeat: no-repeat;
+				background-position: center center;
+			}
+		}
+		.ic-info {
+			&::before {
+				background: url(/static/portal/img/ico/ico-step-info.png);
+			}
+		}
+		.ic-agree {
+			&::before {
+				background: url(/static/portal/img/ico/ico-step-agree.png);
+			}
+		}
+		.ic-app {
+			&::before {
+				background: url(/static/portal/img/ico/ico-step-app.png);
+			}
+		}
+		.ic-certi {
+			&::before {
+				background: url(/static/portal/img/ico/ico-step-certi.png);
+			}
+		}
+		.ic-end {
+			&::before {
+				background: url(/static/portal/img/ico/ico-step-end.png);
+			}
+		}
+		@include breakpoint($sm) {
+			flex-wrap: wrap;
+			justify-content: center;
 		}
 	}
 }

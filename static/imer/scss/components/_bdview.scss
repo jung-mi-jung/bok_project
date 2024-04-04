@@ -7,16 +7,26 @@
 	font-weight: 400;
 	color: #525d64;
 	&::before {
+		// content: "";
+		// display: inline-block;
+		// width: 6px;
+		// height: 6px;
+		// border-radius: 50%;
+		// background-color: #e24b44;
+		// font-weight: 600;
+		// vertical-align: middle;
+		// transform: translateY(-2px);
+		// margin-right: 2px;	
 		content: "";
 		display: inline-block;
-		width: 6px;
-		height: 6px;
+		width: 8px;
+		height: 8px;
 		border-radius: 50%;
-		background-color: #e24b44;
+		background-color: #39A0FF;
 		font-weight: 600;
 		vertical-align: middle;
 		transform: translateY(-2px);
-		margin-right: 2px;	
+		margin-right: 3px;
 		.reg & {
 			position: absolute;
 			top: 50%;
@@ -87,94 +97,556 @@
 	}
 }
 
-.bd-view {
-	@include dl-table;
-	.subject {
-		font-weight: 400;
-		font-size: 18px !important;
-		//text-align: center;
-		padding: 16px 20px;
-		margin-bottom: 0 !important;
-		border-bottom: 1px solid $bd-color;
-		background-color: $bd-list-th-bg-color;
-	}
-	&.type-dt-length-2 {
-		> dl {
-			> dt {
-				@include breakpoint($md){
-					width: 200px;
-				}				
+
+@mixin dataInfoSet {	
+	display: flex;
+	justify-content: space-between;
+	margin: 10px 0 18px;
+	.dataInfo {
+		position: absolute;
+		top: -27px;
+		right: 0;
+		display: flex;
+		color: #666;
+		@include breakpoint($sm){
+			right: auto;
+			left: 0;
+			top: -34px;
+			width: 100%;
+		}
+		.ass {
+			color: #3B63C4;
+			font-weight: 500;
+			@include breakpoint($sm){
+				position: absolute;
+				top: -37px;
+				right: 0;
+				&::after {
+					display: none;
+				}
 			}
 		}
-	}
-}
-
-// 뷰 네비게이션
-.bd-view-nav {
-	border-top: $bd-top-line;
-	border-bottom: $bd-top-line;
-	@include clearfix;
-	dl + dl {
-		border-top: 1px solid $bd-color;
-	}
-	dl {
-		height: 50px;
-		display: table;
-		table-layout: fixed;
-		width: 100%;
-		> * {
-			display: table-cell;
-			vertical-align: top;
-			line-height: 36px;
-		}
-		dt {
-			position: relative;
-			width: 130px;
-			font-size: 16px;
-			font-weight: 500;
-			letter-spacing: -0.24px;
-			text-align: center;
-			padding: 7px 0;
-			border-right: 1px solid $bd-color;
+		.date {
 			&::before {
 				content: "";
 				display: inline-block;
 				vertical-align: middle;
-				width: 9px;
-				height: 5px;
-				margin-right: 7px;
-				background: url(/static/aieth/img/ico/bu-bd-view-nav.png);
+				width: 16px;
+				height: 16px;
+				background: url(/static/portal/img/ico/ico-date.png) no-repeat;
+				margin-right: 5px;
+				@include breakpoint($sm){
+					background-size: auto 14px;
+				}
 			}
-			@include breakpoint($sm) {
-				width: 90px;
+		}
+		.hits {
+			&::before {
+				content: "";
+				display: inline-block;
+				vertical-align: middle;
+				width: 14px;
+				height: 16px;
+				background: url(/static/portal/img/ico/ico-hits.png) no-repeat;
+				margin-right: 5px;
+				@include breakpoint($sm){
+					background-size: auto 14px;
+				}
 			}
+		}
+		dt + dd {
+			&::after {
+				content: "";
+				display: inline-block;
+				vertical-align: middle;
+				width: 1px;
+				height: 16px;
+				background-color: #D9D9D9;
+				margin: 0 16px;
+				@include breakpoint($sm){
+					height: 12px;
+					margin: 0 10px;
+				}
+			}
+			&:last-child {
+				&::after {
+					display: none;
+				}
+			}
+		}
+	}
+	.keyword {
+		display: flex;
+		a {
+			display: inline-block;
+			padding: 1px 11px;
+			color: #666;
+			font-size: rem(14);
+			border-radius: 30px;
+			border: 1px solid #C2C2C2;
+			&:hover {
+				color: #fff;
+				background-color: #3B63C4;
+				border: 1px solid #3B63C4;
+			}
+		}
+		@include breakpoint($sm){
+			& + dl {
+				position: absolute;
+				display: flex;
+				align-items: center;
+				gap: 0 8px;
+				top: 6px;
+				left: 0;
+				font-size: 12px;
+			}
+		}
+	}
+	.type2 {
+		display: flex;
+		align-items: center;
+		gap: 0 20px;
+	}
+	.type3 {
+		display: flex;
+		align-items: center;
+		gap: 0 20px;
+		@include breakpoint($sm) {
+			flex-wrap: wrap;
 		}
 		dd {
-			color: 
-			#757575;
-			letter-spacing: -0.24px;
-			padding: 7px 0 7px 20px;
-			span {
-				@include ellipsis;
-				width: 100%;
-				vertical-align: middle;
-				font-weight: 300;
-			}
-			a {
-				color: #000;
-				@include ellipsis;
-				display: block;
-				width: calc(100% - 20px);
+			display: flex;
+			align-items: center;
+		}
+		i {
+			margin-right: 5px;
+		}
+	}
+	.user {
+		display: flex;
+		align-items: center;
+		&::before {
+			content: "";
+			display: inline-block;
+			vertical-align: middle;
+			width: 18px;
+			height: 16px;
+			background: url(/static/portal/img/ico/ico-user.png) no-repeat;
+			margin-right: 5px;
+			@include breakpoint($sm){
+				background-size: auto 14px;
 			}
 		}
-		&:last-child {
-			dt::before {
-				transform: rotate(180deg);
+	}
+	.depart {
+		display: flex;
+		align-items: center;
+		&::before {
+			content: "";
+			display: inline-block;
+			vertical-align: middle;
+			width: 20px;
+			height: 20px;
+			background: url(/static/portal/img/ico/ico-depart.png) no-repeat;
+			margin-right: 5px;
+		}
+	}
+}
+.bd-view {
+	position: relative;
+	//@include dl-table;	
+	.subject {
+		color: $black;
+		font-weight: 400 !important;
+		font-size: rem(36) !important;
+		line-height: 1.2;
+		@include breakpoint($sm){
+			font-size: rem(22) !important;
+			padding-top: 22px;
+		}
+		&.qna-answer {
+			font-size: rem(26) !important;
+			@include breakpoint($sm){
+				font-size: rem(18) !important;
 			}
+		}
+	}
+	.dataInfoSet {
+		@include dataInfoSet();
+		align-items: flex-end;
+		.type2 {
+			margin-top: -16px;
+		}
+	}	
+	.down {		
+		border-top: 2px solid #000;
+		background-color: #FAFAFA;
+		padding: 10px 14px;
+		border-bottom: 1px solid #E5E5E5;
+		dd {
+			display: flex;
+			justify-content: space-between;
+		}
+		a {
+			position: relative;
+			color: $black;
+			&:hover {
+				&::after {
+					@include breakpoint($lg) {
+						display: block;
+					}
+				}
+			}
+
+			&::before {
+				content: "";
+				display: inline-block;
+				vertical-align: middle;
+				width: 15px;
+				height: 19px;
+				background: url(/static/portal/img/ico/ico-down.png) no-repeat;
+				margin-right: 5px;
+			}
+			&::after {
+				content: "";
+				width: 100%;
+				height: 1px;
+				background-color: #1A1A1A;
+				position: absolute;
+				bottom: -2px;
+				display: none;
+			}
+		}
+	}		
+}
+/* 동영상, 이미지 등 콘텐츠 상세페이지 */
+.media-view {
+	.subject {
+		@include breakpoint($sm){
+			margin-top: -50px;
 		}
 	}
 }
 
+
+.down {		
+	a {
+		position: relative;
+		color: $black;
+		&:hover {
+			&::after {
+				@include breakpoint($lg) {
+					display: block;
+				}
+			}
+		}
+		&::before {
+			content: "";
+			display: inline-block;
+			vertical-align: middle;
+			width: 15px;
+			height: 19px;
+			background: url(/static/portal/img/ico/ico-down.png) no-repeat;
+			margin-right: 5px;
+		}
+		&::after {
+			content: "";
+			width: 100%;
+			height: 1px;
+			background-color: #1A1A1A;
+			position: absolute;
+			bottom: -2px;
+			display: none;
+		}
+	}
+}	
+
+.videoSet {
+	padding: 30px 0;
+	width: 1280px;
+	max-width: 100%;
+	margin: 0 auto;
+	.video {
+		.vjs-icon-placeholder:before {
+			font-size: 24px;
+			margin-top: 8px;
+		}
+		.video-js {
+			&.vjs-4-3 {
+				padding-top: 56.2%;
+			}
+			.vjs-big-play-button {
+				width: 64px;
+				height: 64px;
+				margin-top: -32px;
+				margin-left: -32px;
+				.vjs-icon-placeholder:before {
+					content: "";
+					display: inline-block;
+					width: 64px;
+					height: 64px;
+					background: url(/static/portal/img/common/video-play.png) no-repeat;
+					margin-top: 0;
+				}
+			}
+			&:hover .vjs-big-play-button, 
+			.vjs-big-play-button:focus {
+				background-color: transparent;
+			}
+			.vjs-play-control {
+				.vjs-icon-placeholder:before {
+					@include font-ico-outline("\e5df");
+				}
+				&.vjs-playing .vjs-icon-placeholder:before {
+					@include font-ico-outline('\e034');
+				}
+			}
+			.vjs-mute-control {
+				.vjs-icon-placeholder:before {
+					@include font-ico-outline('\e050');
+				}
+				&.vjs-vol-0 .vjs-icon-placeholder:before {
+					@include font-ico-outline('\e04f');
+				}
+			}
+			.vjs-fullscreen-control .vjs-icon-placeholder:before {
+				@include font-ico-outline('\e56b');
+			}
+		}
+		&-etc {
+			padding: 18px 0 30px;
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+			.help {
+				color: #4D4D4D;
+				&::before {
+					@include font-ico-outline('\e88e');
+					font-size: 24px;
+					margin-right: 8px;
+				}
+			}
+			.btn-go {
+				color: #3B63C4;
+				&::after {
+					@include font-ico-outline('\e315');
+					font-size: 18px;
+					color: #3B63C4;
+					margin: 0 0 1px 5px;
+				}
+			}
+		}
+	}	
+	.thumb {
+		padding: 2%;
+		border: 6px solid #e5e5e5;
+		.webzine_photo {
+			width: 100%;
+			aspect-ratio: 16/9;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: contain;
+			a {
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}	
+	.subtitle,
+	.detail {			
+		position: relative;
+		color: #4D4D4D;
+		border: 1px solid #E5E5E5;
+		border-radius: 8px;
+		margin-top: 30px;
+		button {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 55px;
+			height: 48px;
+			line-height: 48px;
+			text-align: center;				
+			&::before {
+				@include font-ico-outline('\e5cf');
+				width: 24px;
+				height: 24px;
+				background-color: #1A1A1A;
+				border-radius: 4px;
+				font-size: 24px;
+				color: #fff;
+			}
+			&.active {
+				&::before {
+					@include font-ico("\e5cd");
+					font-size: 24px;
+					color: #354052;
+					background-color: transparent;
+				}
+				& + .con {
+					display: block;
+					border-top: 1px solid #E5E5E5; 
+					.mCustomScrollBox {
+						padding: 15px;
+						background-color: #FAFAFA;
+						border-radius: 0 0 8px 8px;
+						max-height: 360px !important;
+					}
+				}
+			}
+		}
+		h3 {
+			color: #1A1A1A;
+			font-weight: 400 !important;
+			font-size: rem(18) !important;
+			padding: 10px 25px;
+			margin: 0 !important;
+			&::before {
+				display: none !important;
+			}
+			
+		}	
+		.con {
+			display: none;
+		}		
+	}
+	.scrollY {
+		overflow-y: auto;
+		overflow-x: hidden;
+		padding: 15px;
+		background-color: #FAFAFA;
+		border-radius: 0 0 8px 8px;
+		max-height: 360px;
+		white-space: pre-line;
+		// > p {
+		// 	white-space: pre-line;
+		// }
+	}
+	.desc{
+		font-size: rem(16);
+		dd > *{
+			white-space: pre-line;
+		}
+	}
+}
+.summary {			
+	position: relative;
+	color: #4D4D4D;
+	border: 1px solid #E5E5E5;
+	border-radius: 8px;
+	margin-top: 30px;
+	button {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 55px;
+		height: 48px;
+		line-height: 48px;
+		text-align: center;				
+		&::before {
+			@include font-ico-outline('\e5cf');
+			width: 24px;
+			height: 24px;
+			background-color: #1A1A1A;
+			border-radius: 4px;
+			font-size: 24px;
+			color: #fff;
+		}
+		&.active {
+			&::before {
+				@include font-ico("\e5cd");
+				font-size: 24px;
+				color: #354052;
+				background-color: transparent;
+			}
+			& + .con {
+				display: block;
+				border-top: 1px solid #E5E5E5; 
+				.mCustomScrollBox {
+					padding: 15px;
+					background-color: #FAFAFA;
+					border-radius: 0 0 8px 8px;
+					max-height: 360px !important;
+				}
+			}
+		}
+	}
+	h3 {
+		color: #1A1A1A;
+		font-weight: 400 !important;
+		font-size: rem(18) !important;
+		padding: 10px 25px;
+		margin: 0 !important;
+		&::before {
+			display: none !important;
+		}
+		
+	}	
+	.con {
+		display: none;
+	}		
+}
+
+
+
+.scrollY {
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding: 15px;
+	background-color: #FAFAFA;
+	border-radius: 0 0 8px 8px;
+	max-height: 360px;
+	white-space: pre-line;
+	> p {
+		white-space: pre-line;
+	}
+}
+
+.pdf-cont {
+	background: #f4f5f7;
+    padding: 20px;
+	overflow-y: auto;
+    overflow-x: hidden;
+    border-radius:8px;
+    min-height: 400px;
+    max-height: 800px;
+    white-space: pre-line;
+
+}
+
+
+.bd-blog {
+	position: relative;
+	.img-box {
+		margin: 20px 0 30px;
+		.img {
+			padding-top: 21.4%;
+		}
+	}
+	.subject {
+		color: $black;
+		font-weight: 400;
+		font-size: rem(32) !important;
+	}
+	.dataInfoSet {
+		@include dataInfoSet();
+		.dataInfo {
+			top: -56px;
+		}
+	}
+	.dbdata {
+		margin-top: 30px;
+		border-top: 2px solid #000;
+	}
+	
+}
+
+
+
+
+
+/* 아직 아래 안씀 */
 .reg {
 	@include dl-table;
 	> dl {
@@ -264,3 +736,359 @@
 		margin-top: 10px;
 	}
 }
+
+
+
+
+.view {
+	clear: both;
+	font-size: rem(18);
+	// font-size: rem(16);
+	border-top: 2px solid #222;
+	border-bottom:1px solid $bd-color;
+	margin-bottom:30px;
+	.labellistup{
+		overflow:hidden;
+		line-height:26px;
+		label{
+			float:left;
+			width:33%;
+		}
+		label+label{
+			margin-left:0;
+		}
+	}
+	&+.help{
+		margin-top:-20px;
+	}	
+	img{
+		max-width:100%;
+	}
+	.title{
+		padding:15px 0;
+		margin:0;
+		text-align:center;
+		font-weight: 600;
+		&:before {
+			display:none;
+		}
+	}
+	&+.dbdata{
+		margin-top:-30px;
+		padding-left:20px;
+		padding-right:20px;
+	}
+	.viewWrap{
+		padding:20px;
+	}
+	// label+label{
+	// 	margin-right:10px;
+	// }
+	.subject{ 
+		font-size:24px;padding:10px 12px 1px 20px;margin:0 !important;
+		&:before{
+			content:"" !important; display:none  !important;
+		}
+		.title{
+			font-size: 18px;
+			color: rgb(51, 51, 51);
+			font-weight: bold;
+			line-height: 1.2;
+			float:left;
+			margin:0;
+		}
+		.d{
+			float:right;
+			width:200px;
+			text-align:right;
+				font-size: 14px;
+				color: rgb(51, 51, 51);
+		}
+		&+dl>*{
+			border-top:none;
+		}
+	}
+	.total-num {
+		margin-top: 20px;
+		em {
+			font-weight: 600;
+		}
+	}
+	textarea{
+		width:100%;
+	}
+	>label,
+	>dl{
+		display:table;
+		width:100%;
+		border-collapse:collapse;
+		table-layout:fixed;
+		>*,
+		>dt,
+		>dd{
+			display:table-cell;
+			padding: 15px 0;
+			vertical-align:top;
+			border-top:1px solid $bd-color;
+			vertical-align:middle;
+			.fr{
+				.date{
+					margin-right:15px;
+					&:before{
+						@include font-ico-outline('\e855');
+						font-size: 20px;
+						background: none;margin-right:5px;
+					}
+				}
+				.hits{
+					&:before{
+						@include font-ico-outline('\e54b');
+						font-size: px;
+						margin-right:5px;
+					}
+				}
+			}
+		}
+		>.l,
+		>dt{			
+			width:13%;max-width:120px;vertical-align:middle; text-align:left; position:relative; border-left:1px solid $bd-color; padding-left:20px;
+			&:first-child{
+				border-left:none;
+			}
+			@include breakpoint($sm){
+				width:80px;
+			}
+			.req{width:0;text-indent:-10px;}
+		}
+		>.r,
+		>dd{ 
+			padding-left:13px; padding-right:10px;position:relative;
+			@include breakpoint($sm) {
+				border-top: 0;
+			}
+			&.pos-s{
+				position:static;
+			}
+			p+p{
+				margin-top:5px;
+			}
+			&:after{
+				content:"";position:absolute;
+				left:0;top:30%;width:1px;height:42%;background: $bd-color;
+			}
+		}
+		&:first-child>*{
+			border-top:none;
+		}
+	}
+	&.dtw{
+		>dl>dt{
+			width:30%;
+		}
+	}
+	&.dtw2{
+		>dl>dt{
+			width:180px;padding-left:60px;
+		}
+	}
+	&.type2{
+		dd{
+			line-height:40px;
+		}
+	}
+	>dl.w>dt,
+	>dl.w>dd{
+		display:block;width:100%;
+	}
+	>dl.w>dt{
+		border-right:1px solid $bd-color;
+	}
+	>dl+.dbData{
+		border-top:1px solid $bd-color;padding:15px;border-bottom:2px solid $bd-color;
+	}
+	&.reg{
+		dd,
+		dt{
+			height:53px;
+		}
+	}
+	#aplyNum {
+		max-width: 100px;
+	}
+}
+.view.edu-info {
+	border-top: 0;
+	dl {
+		font-size: rem(16);
+	}
+	// dt {
+	// 	padding: 8px 20px 8px;
+	// 	padding-left: 20px;
+	// }
+	// dd {
+	// 	padding: 8px 0;
+	// 	padding-left: 13px;
+	// 	padding-right: 10px;
+	// }
+}
+.view.type2 {
+	>dl{
+		display:table;
+		width:100%;
+		border-collapse:collapse;
+		table-layout:fixed;
+		>*,
+		>dt,
+		>dd{
+			display:table-cell;
+			padding: 15px 0;
+			vertical-align:top;
+			border-top:1px solid $bd-color;
+			vertical-align:middle;
+			font-size: rem(16);
+			line-height: 1.4;
+			&::after {
+				display: none;
+			}
+			.fr{
+				.date{
+					margin-right:15px;
+					&:before{
+						@include font-ico-outline('\e855');
+						font-size: 20px;
+						background: none;margin-right:5px;
+					}
+				}
+				.hits{
+					&:before{
+						@include font-ico-outline('\e54b');
+						font-size: px;
+						margin-right:5px;
+					}
+				}
+			}
+		}
+		>.l,
+		>dt{		
+			width: 14%;
+			max-width: 120px;			
+			text-align: center;
+			border-right: 1px solid $bd-color;
+			background-color: #F2F6FA;
+			@include breakpoint($sm){
+				width:80px;
+			}
+		}
+		>.r,
+		>dd{ 
+			position:relative;
+			padding-left: 16px;
+			padding-right: 16px;
+			@include breakpoint($sm){
+				padding-right: 0;
+				padding-left: 8px;
+			}
+			&.pos-s{
+				position:static;
+			}
+			label {
+				margin-right:20px;
+			}
+			p+p{
+				margin-top:5px;
+			}
+			input.date,
+			input.sdate,
+			input.edate {
+				max-width: 150px;
+				border: 1px solid #D9D9D9;
+				line-height: 20px;
+				height: 32px;
+				@include breakpoint($sm) {
+					max-width: 130px;
+				}
+			}
+			.date-set {
+				justify-content: flex-start;
+			}
+			.select {
+				@include breakpoint($sm) {
+					width: 100%;
+					max-width: 220px;
+				}
+			}
+			
+		}
+		&:first-child>*{
+			border-top:none;
+		}
+	}
+	i {
+		display: inline-block;
+		&.fa-refresh {
+			&::before {
+				@include font-ico-outline("\f053");
+				font-size: 20px;
+			}
+		}
+		&.fa-volume-up {
+			&::before {
+				@include font-ico-outline("\e050");
+				font-size: 20px;
+			}
+		}
+	}
+	.b {
+		margin-bottom: 10px;
+	}	
+}
+
+
+@include breakpoint($sm) {
+	.view > dl {
+		display: block;
+		border-collapse:inherit;
+   		table-layout: inherit;
+		dt {
+			display: block;
+			width: 100%;
+			max-width: none;
+			padding-left: 0;
+			padding: 8px 0;
+		}
+		dd {
+			display: block;
+			width: 100%;
+			max-width: none;
+			padding: 8px 0;
+			&::after {
+				display: none;
+			}
+			input[type=text] {
+				width: 100%;;
+			}
+			.tel-set {
+				select {
+					width: 90px;
+				}
+				input {
+					width: calc(50% - 160px);
+				}
+			}
+			textarea {
+				height: 200px !important;
+			}
+		}
+	}
+	.view {
+		.help3 {
+			font-size: rem(16);
+			margin-bottom: 10px !important;
+		}
+		#aplyNum {
+			max-width: 90px;
+		}
+	}
+}
+
+

@@ -23,6 +23,7 @@
 #header {
 	position: fixed;
 	background: rgba(0, 0, 0, 0.60);
+	// background: #131547;
 	backdrop-filter: blur(4px);
 	.globalHeader {
 		@include breakpoint($lg){
@@ -94,6 +95,7 @@
 		@include breakpoint($lg){
 			> li {
 				> a {
+					font-size: rem(19);
 					color: #fff;
 				}
 			}
@@ -164,12 +166,12 @@
 			@include breakpoint($sm){
 				padding-top: 0;
 			}
-			.s1-t1 {}
+			// .s1-t1 {}
 			.s1-t2 {
 				padding-top: 3%;
 				padding-bottom: 8%;
 			}
-			.s1-t3 {}
+			// .s1-t3 {}
 		}
 		.visual_banner {
 			margin-top: 70px;
@@ -202,6 +204,8 @@
 	left: 0;
 	z-index: 9;
 	width: 100%;
+	padding: 0 10px;
+	box-sizing: border-box;
 	background-color: rgba(0, 0, 0, 0.4);
 	height: 64px;
 
@@ -861,7 +865,7 @@
 	.gnb-stiky #section3,
 	.gnb-stiky #section4 {
 		height: 100vh;
-		padding: 74px 0 0px;
+		// padding: 74px 0 0px;
 	}
 }
 

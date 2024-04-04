@@ -172,6 +172,7 @@
 // 	}
 // }
 .tab-content {
+
 	.tab-pannel {
 		display: none;
 		&.on {
@@ -187,6 +188,7 @@
 /* 미술품 게시판 목록 탭메뉴 */
 .category2 {
 	margin-bottom: 24px;
+	margin-top: 30px;;
 	.row {
 		justify-content: center;
 		@include breakpoint($smd) {

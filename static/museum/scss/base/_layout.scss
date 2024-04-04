@@ -277,6 +277,9 @@
 	margin: 50px 0 30px;
 	border-bottom: 2px solid #222;
 	padding-bottom: 30px;
+	// & + * {
+	// 	margin-top: 30px;
+	// }
 	@include breakpoint($sm){
 		margin: 0 10px 15px;
 		padding-bottom: 0;
@@ -379,6 +382,7 @@
 	width: $pc-wide;
 	max-width: 100%;
 	min-height: calc(100vh - 246px - 196px - 80px);
+	// padding-top: 30px;
 	@include clearfix();
 	@include breakpoint($sm){
 		padding: 0 10px;
@@ -388,11 +392,18 @@
 		flex-direction: column;
 	}
 	@include breakpoint($lg){
+		.lnb-nav, .sh-db {
+			margin-top: -30px;
+			& + .content {
+				margin-top: -30px;
+			}
+		}
 		.lnb-nav + .content,
 		.sh-db + .content {
 			float: right;
 			border-left: 1px solid $bd-color;
 			padding-left: 36px;
+			padding-top: 30px;
 		}
 		.lnb-nav + .content {
 			width: per(1405px, $pc-wide);
