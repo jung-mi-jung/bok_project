@@ -1,0 +1,190 @@
+
+
+<h2>한은금요강좌</h2>
+
+<div class="formBox">
+	<ul class="step">
+		<li class="ic-choice">
+			<div class="s">
+				<strong class="title">STEP 1</strong>
+				<span>한은금요강좌 선택</span>
+			</div>
+		</li>
+		<li class="active ic-agree">
+			<div class="s ">
+				<strong class="title">STEP 2</strong>
+				<span>수집 및 이용동의<span class="hidden">(현재단계)</span></span>
+			</div>
+		</li>
+		<li class="ic-app">
+			<div class="s ">
+				<strong class="title">STEP 3</strong>
+				<span>한은금요강좌 신청</span>
+			</div>
+		</li>
+		<li class="ic-end">
+			<div class="s ">
+				<strong class="title">STEP 4</strong>
+				<span>신청 완료</span>
+			</div>
+		</li>
+	</ul>
+</div>
+
+
+<div class="agree-info-txt">
+	<p>한국은행은 한은금요강좌 제공, 설문 발송 및 수료증 발급 등을 위하여 「개인정보보호법」 제15조 및 제22조에 따라 아래와 같이 개인정보를 수집·이용하고자 합니다. 내용을 읽어보신 후 동의 여부를 결정하여 주십시오.</p>
+</div>
+
+<form name="frm" id="frm" action="/portal/ecEdu/friLectrReq/reqInput.do?menuNo=200603" method="post">
+
+<div class="agreeBox">
+	<h4 class="mt0">필수 정보의 수집&middot;이용 내역에 관한 안내 </h4>
+	<input type="hidden" id="essntlInfoAt"  value="Y" />
+	<div class="scrollarBox">
+		<ul class="bu-dot">
+			<li>수집목적 : 한은금요강좌 제공, 설문 발송 및 수료증 발급</li>
+			<li>수집·이용 항목 : 이름, 이메일주소, 연락처</li>
+			<li>보유·이용기간 : <strong>수집일로부터 5년</strong></li>
+		</ul>
+		<p class="help">귀하는 위 개인정보 수집·이용에 동의하지 않을 수 있으나 필수정보에 대한 수집 동의 거부 시 한은금요강좌 신청이 불가합니다.</p>		
+	</div>
+	<div class="agreeTxt">
+		<p class="txt1">위와 같이 개인정보 수집&middot;이용에 동의합니다.</p>
+		<p class="txt2">
+			<label for="agreAtY1_1">
+				<input type="radio" name="agreAt1" id="agreAtY1_1" value="Y" />
+				<i></i> 
+				<span>동의함</span>
+			</label>
+			<label for="agreAtY1_2">
+				<input type="radio" name="agreAt1" id="agreAtY1_2" value="N" />
+				<i></i> 
+				<span>동의하지 않음</span>
+			</label>
+		</p>
+	</div>	
+</div>
+
+
+<div class="agreeBox">
+	<input type="hidden" id="choiseInfoAt" value="Y" />
+	<h4 class="mt0">선택 정보의 수집&middot;이용 내역에 관한 안내</h4>
+	<div class="scrollarBox">
+	
+		<ul class="bu-dot">
+			<li>수집목적 : 한은금요강좌 제공, 설문 발송 및 수료증 발급</li>
+			<li>수집·이용 항목 : 직업구분</li>
+			<li>보유·이용기간 : <strong>수집일로부터 5년</strong></li>
+		</ul>
+		<p class="help">귀하는 위 개인정보 수집·이용에 동의하지 않을 수 있으며 선택정보에 대한 수집 동의 거부 시에도 한은금요강좌 신청이 가능합니다.</p>
+	</div>
+	<div class="agreeTxt">
+		<p class="txt1">위와 같이 개인정보 수집&middot;이용에 동의합니다.</p>
+		<p class="txt2">
+			<label for="agreAtY2_1"><input type="radio" name="agreAt2" id="agreAtY2_1" value="Y" /><i></i> <span>동의함</span></label>
+			<label for="agreAtY2_2"><input type="radio" name="agreAt2" id="agreAtY2_2" value="N" /><i></i><span> 동의하지 않음</span></label>
+		</p>
+	</div>
+</div>
+
+<div class="agreeBox">	
+	<h4 class="mt0">기타 고지사항 </h4>
+	<div class="scrollarBox">
+		<input type="hidden" id="lptInfoAt"  value="Y" />
+
+		<ul class="bu-dot">
+			<li>인터넷 서비스 이용과정에서 IP주소, 쿠키, MAC주소, 서비스 이용기록, 방문기록, 불량 이용기록 등으로 개인정보 항목이 자동으로 생성되어 수집될 수 있습니다.</li>
+			<li>개인정보 처리에 관한 자세한 사항은 한국은행 홈페이지(http://www.bok.or.kr)의 “개인정보처리방침”을 참고하시기 바랍니다.</li>
+		</ul>
+	</div>	
+</div>	
+
+		
+</form>
+
+<div class="btnSet">
+	<a href="javascript:checkForm();" class="a-link">다음단계로 이동</a>
+</div>
+	
+<script src="/static/jslibrary/miya_validator.js"></script>
+<script type="text/javascript">
+	function checkForm() {
+		var form = $("#frm")[0];
+		var v = new MiyaValidator(frm);
+		
+		var essntlInfoAt = $("#essntlInfoAt").val();
+		var choiseInfoAt = $("#choiseInfoAt").val();
+		var indvdlinfoThptyAt = $("#indvdlinfoThptyAt").val();
+		var snstiveInfoAt = $("#snstiveInfoAt").val();
+		var esntlIdntfcInfoAt = $("#esntlIdntfcInfoAt").val();
+		
+		if(essntlInfoAt == 'Y'){
+			v.add("agreAt1", {
+				required : true,
+				requiredstring :'Y',
+				message : "필수 정보의 수집·이용에 동의하셔야 신청이 가능합니다."
+			});
+		}
+		if(choiseInfoAt == 'Y'){
+			v.add("agreAt2", {
+				required : true,
+				message : "선택 정보의 수집·이용 동의 여부를 선택해 주세요."
+			});			
+		}
+		if(indvdlinfoThptyAt == 'Y'){
+			v.add("agreAt3", {
+				required :  true,
+				requiredstring :'Y',
+				message : "개인정보 제 3자 제공 내역 안내에 동의하셔야 신청이 가능합니다."
+			});		
+		}
+		if(snstiveInfoAt == 'Y'){
+			v.add("agreAt4", {
+				required : true,
+				requiredstring :'Y',
+				message : "민감정보 수집 이용에 관한 사항 안내에 동의하셔야 신청이 가능합니다."
+			});	
+		}
+		if(esntlIdntfcInfoAt == 'Y'){
+			v.add("agreAt5", {
+				required : true,
+				requiredstring : 'Y',
+				message : "고유식별번호 수집 이용 내역 안내에 동의하셔야 신청이 가능합니다."
+			});	
+		}
+		
+		/* v.add("agreAt", {
+			required : true,
+			requiredstring : 'Y',
+			message : "개인정보 수집에 동의하여야만 한은 금요강좌 신청이 가능합니다."
+		}); */
+		
+		//'동의안함'체크
+		if($('#agreAtY1_2').is(':checked')){
+			alert("필수 정보의 수집·이용에 동의하셔야 신청이 가능합니다.");
+			return;
+		}
+		if($('#agreAtY3_2').is(':checked')){
+			alert("개인정보 제 3자 제공 내역 안내에 동의하셔야 신청이 가능합니다.");
+			return;
+		}
+		if($('#agreAtY4_2').is(':checked')){
+			alert("민감정보 수집 이용에 관한 사항 안내에 동의하셔야 신청이 가능합니다.");
+			return;
+		}
+		if($('#agreAtY5_2').is(':checked')){
+			alert("고유식별번호 수집 이용 내역 안내에 동의하셔야 신청이 가능합니다.");
+			return;
+		}
+		
+		var result = v.validate();
+		if (!result) {
+			alert(v.getErrorMessage());
+			v.getErrorElement().focus();
+			return;
+		}
+
+		form.submit();
+	}
+</script>

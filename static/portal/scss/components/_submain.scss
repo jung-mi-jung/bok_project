@@ -36,8 +36,13 @@
 	}
 }
 
-.sub-main + #footer {
-	margin-top: 0;
+.sub-main {
+	& + #footer {
+		margin-top: 0;
+	}
+	#main-container {
+		width: 100%;
+	}
 }
 
 .sub-main-zone {
@@ -707,6 +712,7 @@
 			position:absolute; 
 			width:100%; 
 			height:100%;
+			border: 0;
 		}
 	}
 	.videoSet .video-etc {

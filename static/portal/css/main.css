@@ -214,7 +214,6 @@ background-color: rgb(59, 99, 196);
 
 @media (min-width: 1200px) {
 .section {
-min-height: 1080px;
 height: 100vh;
 }
 }

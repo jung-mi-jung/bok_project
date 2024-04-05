@@ -90,6 +90,11 @@
 	}
 }
 //이용약관
+.agree-info-txt {
+	font-size: rem(18);
+	font-weight: 500;
+	margin-bottom: 20px;
+}
 .agreeBox {
 	clear: both;
 	border: 1px solid #E6E6E6;	
@@ -130,11 +135,20 @@
 			background-color: $red;
 		}
 	}	
+	.scrollarBox,
 	.scrollarLBox {
 		padding: 0 32px 32px;
 		//max-height: 500px;
-		overflow-y: auto;
-		overflow-x: hidden;
+		//overflow-y: auto;
+		//overflow-x: hidden;
+		p {
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		.bu-dot + .help {
+			margin-top: 20px;
+		}
 	}	
 	.agreeTxt {
 		border-top: 1px solid #E6E6E6;
@@ -158,6 +172,7 @@
 		}
 		.txt2 {
 			display: flex;
+			margin-bottom: 0;
 			@include breakpoint($lg){
 				margin-left: 20px;
 			}
@@ -165,6 +180,9 @@
 		label + label {
 			margin-left: 20px;
 		}
+	}
+	& + .agreeBox {
+		margin-top: 24px;
 	}
 }
 

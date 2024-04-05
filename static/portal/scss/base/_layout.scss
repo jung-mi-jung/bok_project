@@ -6,12 +6,28 @@
 	}
 }
 
+
+// #main-container {
+// 	> .content {
+// 		width: 1405px;
+// 		max-width: 100%;
+// 		margin: 0 auto;
+// 		&.wild-content {
+// 			width: 100%;
+// 		}
+// 	}
+// }
+
+
+
 .container {
+	width: 100%;
 	max-width: $pc-wide;
 	margin: 0 auto;
 	margin-left: 10px;
 	margin-right: 10px;
-	@include breakpoint(min-width 1720px) {
+	//@include breakpoint(min-width 1720px) {
+	@include breakpoint(min-width 1480px) {
 		margin-left: auto;
 		margin-right: auto;
 	}
@@ -424,10 +440,12 @@
 			padding-left: 36px;
 		}
 		.lnb-nav + .content {
-			width: per(1405px, $pc-wide);
+			//width: per(1405px, $pc-wide);
+			width: per(1165px, $pc-wide);
 		}
 		.sh-db + .content {
-			width: per(1441px, $pc-wide);
+			//width: per(1441px, $pc-wide);
+			width: per(1200px, $pc-wide);
 		}
 		//우측에 연관자료 있는 경우
 		&.refer_wrap {

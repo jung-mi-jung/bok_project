@@ -1663,9 +1663,12 @@ p.subject {
 		}
 	}
 	.txt{
-		display:block;overflow:hidden;
+		display:block;
+		overflow:hidden;
 		.titType{
-			font-size:20px;font-weight:600;color: $color-point;line-height:1.4;
+			font-size: rem(20);
+			font-weight: 400;
+			color: $color-point;line-height:1.4;
 			span{
 				display:block;
 				@include breakpoint($sm){

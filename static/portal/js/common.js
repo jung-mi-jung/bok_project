@@ -286,7 +286,7 @@ $(function () {
 
 	// 탭 활성화
 	$('.tab-list').each(function (index, element) {
-		$(this).find('button')
+		$(this).find('button, a')
 			.on('click', function (e) {
 				e.preventDefault();
 				$(this).attr('aria-selected', true).attr('title','선택됨').siblings().attr('aria-selected', false).removeAttr('title')
@@ -890,4 +890,15 @@ $(function () {
 			$(".fileGoupBox").hide();
 		}
 	})
+
+
+
+
+	//목차 없는 컨텐츠일 경우 가로 사이즈 변경에 따른 예외처리
+	// $(".bd-view").parents().find(".content").addClass("wild-content");
 });
+
+
+
+
+	
