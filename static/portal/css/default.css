@@ -1478,7 +1478,7 @@ clear: both;
 color: #131547;
 font-size: 1.75rem;
 font-weight: 500;
-margin: 40px 0 16px;
+margin: 25px 0 16px;
 }
 #main-container h3::before {
 content: "";
@@ -1520,12 +1520,15 @@ vertical-align: super;
 font-size: 75%;
 color: #39A0FF;
 }
+#main-container h3 + h4 {
+margin-top: -2px;
+}
 #main-container .bu2,
 #main-container h4 {
 color: #3B63C4;
 font-size: 1.25rem;
 font-weight: 500;
-margin-top: 18px;
+margin-top: 25px;
 margin-bottom: 5px;
 /*&:first-child {
 	margin-top: 0;
@@ -1537,6 +1540,7 @@ font-size: 1.125rem;
 color: #1a1a1a;
 font-weight: 500;
 padding-left: 24px;
+margin-top: 15px;
 margin-bottom: 5px;
 }
 #main-container h5::before {
@@ -1595,15 +1599,15 @@ display: none;
 ul.bu > li {
 clear: both;
 position: relative;
-padding-left: 13px;
+padding-left: 20px;
 }
 ul.bu > li::before {
 position: absolute;
 top: 10px;
-left: 0;
+left: 6px;
 width: 4px;
 height: 4px;
-background-color: #131547;
+background-color: #4D4D4D;
 border-radius: 50%;
 content: "";
 }
@@ -1612,15 +1616,15 @@ font-size: 1rem;
 }
 ul.bu > li > ul > li {
 position: relative;
-padding-left: 9px;
+padding-left: 8px;
 }
 ul.bu > li > ul > li::before {
 position: absolute;
-top: 14px;
+top: 16px;
 left: 0;
 width: 4px;
 height: 1px;
-background-color: #757575;
+background-color: #000;
 content: "";
 }
 ul.bu > li > ul.referList {
@@ -1635,15 +1639,15 @@ font-weight: 500;
 
 p.bu {
 position: relative;
-padding-left: 13px;
+padding-left: 20px;
 }
 p.bu::before {
 position: absolute;
 top: 10px;
-left: 0;
+left: 6px;
 width: 4px;
 height: 4px;
-background-color: #131547;
+background-color: #4D4D4D;
 border-radius: 50%;
 content: "";
 }
@@ -1653,15 +1657,15 @@ display: none;
 }
 .bu-dash > li {
 position: relative;
-padding-left: 9px;
+padding-left: 8px;
 }
 .bu-dash > li::before {
 position: absolute;
-top: 14px;
+top: 16px;
 left: 0;
 width: 4px;
 height: 1px;
-background-color: #757575;
+background-color: #000;
 content: "";
 }
 
@@ -2218,6 +2222,7 @@ color: #666;
 }
 
 #main-container {
+position: relative;
 clear: both;
 width: 1440px;
 max-width: 100%;
@@ -2240,7 +2245,6 @@ padding: 0 10px;
 #main-container .lnb-nav + .content,
 #main-container .sh-db + .content {
 float: right;
-border-left: 1px solid #E5E5E5;
 padding-left: 36px;
 }
 #main-container .lnb-nav + .content {

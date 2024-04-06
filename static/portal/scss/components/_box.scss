@@ -295,3 +295,26 @@ h2 + .boxTop {
 	}
 }
 
+.ico-box {
+	display: flex;
+	align-items: center;
+	font-size: rem(18);
+	color: $point;
+	min-height: 122px;
+	background-color: #F2F6FA;
+	border-radius: 16px;
+	padding: 20px 20px 20px 180px;
+	margin-bottom: 30px;
+	background-repeat: no-repeat;
+	background-position: 60px 50%;
+	p {
+		margin-bottom: 0;
+	}
+	&.ico1 {		
+			background-image: url(/static/portal/img/ico/ico-box1.png);
+	}
+	&.ico2 {		
+		background-color: #E5ECFF;
+		background-image: url(/static/portal/img/ico/ico-box2.png);
+}
+}

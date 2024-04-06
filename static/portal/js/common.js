@@ -899,6 +899,42 @@ $(function () {
 });
 
 
-
-
-	
+$(function () {
+	//지역본부 > 화폐전시실
+	const swiper = new Swiper('.gallery__list', {
+		init: false,
+		freeMode: true,
+		// Optional parameters
+		loop: true,
+		loopAdditionalSlides : 1,
+		slidesPerView : '1',
+		navigation: {
+			prevEl: '.gallery-set .prev',
+			nextEl: '.gallery-set .next',
+		},
+		// And if we need scrollbar
+		scrollbar: {
+			hide:true
+		},
+		a11y:{
+			enabled:true,
+		},
+		pagination: {
+			el: '.card-photo .swiper-pagination',
+			type: "fraction",
+		},
+		observer: true,
+		observeParents: true,
+		on: {
+			init: function (v) {
+				var item = $('.card-photo')
+				item.find('.swiper-slide-active').attr('tabindex',0).siblings().attr('tabindex',-1)
+			},
+			slideChangeTransitionEnd:function(){
+				var item = $('.card-photo')
+				item.find('.swiper-slide-active').attr('tabindex',0).siblings().attr('tabindex',-1)
+			}
+		}
+	});
+	swiper.init();//초기화	
+});
