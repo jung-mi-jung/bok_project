@@ -4,10 +4,8 @@ $(function () {
         'bd-view',
         'bd-list-default',
         'bd-list-forum',
-
         '500215',
-        '경제분석안내',
-        
+        '500784',
     ]
     link.forEach(element => {
         let _s = element.split('/')

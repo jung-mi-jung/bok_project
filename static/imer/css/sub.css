@@ -2434,6 +2434,8 @@ margin-bottom: 0;
 }
 }
 .bd-line.data-type .btns {
+display: flex;
+justify-content: flex-end;
 text-align: right;
 margin-top: -24px;
 }
