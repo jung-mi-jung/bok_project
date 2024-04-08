@@ -143,7 +143,6 @@ margin: 0;
 
 /* section, 공통 */
 .section {
-min-height: 1080px;
 height: 100vh;
 }
 @media (max-width: 749px) {

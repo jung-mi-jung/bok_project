@@ -1,10 +1,13 @@
 .btn-set {
 	margin: 30px 0;
+	padding-top: 30px;
 	text-align: right;
 	position: relative;
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
+	border-top: 1px solid $bd-color;
+
 	@include breakpoint($sm) {
 		flex-wrap: wrap;
 	}
@@ -43,6 +46,9 @@ $btn: "[class^=b-]";
 	background-color: #1A1A1A;
 	border-radius: 4px;
 	padding: 0 10px;
+	i {
+		margin-right: 8px;
+	}
 	&:focus {
 		outline: 1px dashed #fff;
     	outline-offset: -2px;
@@ -130,11 +136,22 @@ $btn: "[class^=b-]";
 		color: #3B63C4;
 
 	}
-	// &.b-save {
-	// 	border: 1px solid $point;
-	// 	background-color: #fff;
-	// 	color: $point;
-	// }
+	&.b-homepage {
+		border: 2px solid #3B63C4;
+		background-color: #fff;
+		color: #3B63C4;
+		&::before {
+			content: "";
+			display: block;
+			width: 20px;
+			height: 20px;
+			@include background-image-retina("/static/imer/img/ico/ico-blank-bl", png, auto, 100%);
+		}
+	}
+	&.b-cvDown {
+		background: #233B76;
+		color: #fff;
+	}
 	&.b-submit {}
 	&.b-confirm {}
 	&.b-link {

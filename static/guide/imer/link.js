@@ -1,7 +1,11 @@
 $(function () {
     link = [
-        // '500531',
-        
+        'bd-list-news',
+        'bd-view',
+        'bd-list-default',
+        'bd-list-forum',
+        '500215',
+        '500784',
     ]
     link.forEach(element => {
         let _s = element.split('/')

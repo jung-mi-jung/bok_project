@@ -126,6 +126,9 @@
 				background-color: #3B63C4;
 				top: -42px;
 			}
+			&:focus {
+				@include focus;
+			}
 		}	
 		@include breakpoint($lg){
 			.global {
@@ -150,6 +153,98 @@
 								height: 14px;
 								background-color: rgba(255,255,255,0.3);
 								margin: 0 6px;
+							}
+						}
+						//로그인후
+						.userInfoOpBxSet {
+							padding: 3px 0;
+							position: relative;
+							.userInfoOpener {
+								border-radius: 30px;
+								background: #fff;
+								display: inline-block;
+								padding: 1px 10px;
+								color: $point;
+								font-size: 14px;
+							}
+							.userInfoOpBx {
+								display: none;
+								width: 280px;
+								position: absolute;
+								top: 30px;
+								left: -100%;
+								margin-left: -40px;
+								border: 1px solid #3B63C4;
+								border-radius: 5px;
+								padding: 24px;
+								box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+								background-color: #fff;
+								z-index: 99;
+								&.on {
+									display: block;
+								}
+								.userInfoSnsBx {
+									display: flex;
+									//justify-content: space-between;
+									align-items: center;
+									.infoTxts {
+										margin-left: 14px;
+										line-height: 1.2;
+										strong {
+											font-weight: 500;
+										}
+									}
+									i {
+										text-align: center;
+										display: inline-block;
+										width: 64px;
+										height: 64px;
+										line-height: 64px;
+										border-radius: 50%;
+										background-color: #B1C1E7;
+										&::before {
+											@include font-ico('\e7fd');
+											font-size: 35px;
+											color: #fff;
+											margin-top: 14px;
+										}
+									}
+								}
+								.myLogoutBx {
+									margin-top: 15px;
+									display: flex;
+									justify-content: space-between;
+									a {
+										text-align: center;
+										width: calc(50% - 2px);
+										display: block;
+										color: #fff;
+										font-size: 14px;
+										font-weight: 300;
+										border-radius: 4px;
+										padding: 4px;
+										&.mypg {
+											background-color: $color-point;
+											&::before {
+												content: "";
+												display: inline-block;
+												vertical-align: middle;
+												width: 21px;
+												height: 20px;
+												background: url(/static/portal/img/ico/ico-person_edit.png);
+												margin-right: 4px;
+											}
+										}
+										&.logout {
+											background-color: #4D4D4D;
+											&::before {
+												@include font-ico-outline('\e9ba');
+												font-size: 18px;
+												margin-right: 4px;
+											}
+										}
+									}
+								}
 							}
 						}
 					}
@@ -401,15 +496,16 @@
 		.lnb-nav + .content,
 		.sh-db + .content {
 			float: right;
-			border-left: 1px solid $bd-color;
+			// border-left: 1px solid $bd-color;
 			padding-left: 36px;
 			padding-top: 30px;
 		}
 		.lnb-nav + .content {
-			width: per(1405px, $pc-wide);
+			// width: per(1405px, $pc-wide);
+			width: calc(100% - 275px);
 		}
 		.sh-db + .content {
-			width: per(1441px, $pc-wide);
+			// width: per(1441px, $pc-wide);
 		}
 	}
 	//연관자료 있는 서브
@@ -967,7 +1063,7 @@
 .reference {
 	margin-top: 30px;
 	padding: 50px 120px;
-	background-color: #F2F6FA;
+	background-color: #E5ECFF;
 	@include breakpoint($smd){
 		padding: 16px;
 		margin: 30px -10px 0;

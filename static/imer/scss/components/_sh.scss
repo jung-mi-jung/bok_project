@@ -16,7 +16,8 @@
 		//position: relative;
 		display: block;
 		float: left;
-		width: per(204px + 35px, $pc-wide);
+		// width: per(204px + 35px, $pc-wide);
+		width: 240px;
 		padding-right: 36px;
 		background-color: #fff;
 		height: auto;
@@ -538,6 +539,7 @@
 	@include select-set();
 	.submit {
 		width: 44px;
+		height: 32px;
 		background-color: #3B63C4;
 		border-radius: $sh-bd-radius;
 		&::before {
@@ -548,7 +550,46 @@
 		}
 	}	
 }
-
+.sh-BxSet.type2 {
+	@include breakpoint($smd) {
+		gap: 12px 0;
+		align-items: flex-start;
+		flex-direction: column;
+	}
+	.sh-select {
+		@include breakpoint($smd) {
+			flex-wrap: wrap;
+			gap:  8px 0;
+		}
+		@include breakpoint($sm) {
+			gap:  4px 0;
+		}
+		> .row {
+			gap:  0 8px;
+			@include breakpoint($sm) {
+				flex-wrap: wrap;
+				gap: 4px 4px;
+			}
+		}
+		.date-set {
+			display: none;
+			max-width: 334px;
+			flex-basis: initial;
+			margin-bottom: 0 !important;
+			@include breakpoint($smd) {
+				width: auto;
+			}
+			input.sdate,
+			input.edate,
+			input.date {
+				max-width: 135px !important;
+				height: 32px;
+				padding: 0 30px 0 8px;
+				border: 1px solid #D9D9D9;
+			}
+		}
+	}
+}
 
 /* 검색 필드*/
 .sh {
@@ -825,7 +866,9 @@
 		}		
 	}
 }
-
+.sh.bg-blue {
+	background: #233B76;
+}
 .sh-detail {
 	.c {
 		gap: 4px 0;

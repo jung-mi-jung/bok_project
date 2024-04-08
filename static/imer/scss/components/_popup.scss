@@ -64,8 +64,7 @@ body > .popwrap {
 		overflow-y: auto;
 		overflow-x: hidden;
 	}
-	&__footer {
-	}
+	&__footer {}
 }
 
 
@@ -101,6 +100,9 @@ body > .popwrap {
 		position: relative;
 		z-index: 999;
 		margin: 0 auto;
+		@include breakpoint($sm) {
+			max-width: calc(100% - 20px);
+		}
 		
 	}
 	&-content {
@@ -141,9 +143,6 @@ body > .popwrap {
 		}
 		.close {
 			position: absolute;
-			display: flex;
-			align-items: center;
-			justify-content: center;
 			top: 0;
 			right: 10px;
 			height: 68px;
@@ -157,7 +156,7 @@ body > .popwrap {
 			&::before {
 				color: #fff;	
 				@include font-ico-outline('\e5cd');
-				font-size: 36px;	
+				font-size: 40px;	
 			}
 		}
 	}	
@@ -180,18 +179,8 @@ body > .popwrap {
 		}
 	}
 	&-bottom {
-		margin-top: 40px;
+		margin-top: 40px !important;
 		text-align: center;
-	}
-	&-footer {
-		text-align: center;
-		margin: 0 0 40px;
-		.b-close {
-			margin: 0 auto;
-			line-height: 32px;
-			background: #131547;
-			color: #fff;
-		}
 	}
 	.calView {
 		h5 {

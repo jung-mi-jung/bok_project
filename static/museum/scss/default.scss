@@ -80,9 +80,10 @@ body {
 	@include breakpoint($sm) {
 		word-break: keep-all;
 	}
-	&.ovh {
+	&.ovh, 
+	&.modal-open {
 		position: relative;
-		overflow: hidden;
+		overflow: hidden !important;
 		height: 100vh;
 	}
 }

@@ -67,7 +67,8 @@
 				display: flex;
 				justify-content: space-between;
 				@include breakpoint($sm){
-					display: block;
+					flex-wrap: wrap;
+					margin-bottom: 8px;
 				}
 				.title {
 					max-width: calc(100% - 250px);
@@ -76,9 +77,8 @@
 					font-size: rem(20);
 					@include breakpoint($sm){
 						font-size: rem(16);
-						width: 100%;
+						// width: 100%;
 						max-width: 100%;
-						margin-bottom: 8px;
 						@include line-clamp(3);
 						white-space: inherit;
 					}
@@ -92,53 +92,65 @@
 						background-position-y: -3px;
 					}
 				}
-				.btns {
-					position: relative;
-					@include breakpoint($sm){
-						position: absolute;
-						bottom: 10px;
-						right: 8px;
+			}
+			.btns {
+				position: relative;
+				@include breakpoint($sm){
+					position: absolute;
+					bottom: 10px;
+					right: 8px;
+				}
+				> a {
+					color: #666;
+					display: inline-block;
+					&::before {
+						font-size: 19px;
+						margin-right: 5px;
 					}
-					> a {
-						color: #666;
-						display: inline-block;
+					& + a {
+						position: relative;
+						margin-left: 11px;
+						padding-left: 13px;
+						&::after {
+							content: "";
+							position: absolute;
+							top: 7px;
+							left: 0;
+							background: #666;
+							width: 1px;
+							height: 10px;
+						}
+					}
+					&.i-download {
 						&::before {
-							font-size: 19px;
-							margin-right: 5px;
-						}
-						& + a {
-							position: relative;
-							margin-left: 11px;
-							padding-left: 13px;
-							&::after {
-								content: "";
-								position: absolute;
-								top: 7px;
-								left: 0;
-								background: #666;
-								width: 1px;
-								height: 10px;
-							}
-						}
-						&.i-download {
-							&::before {
-								content: "";
-								display: inline-block;
-								vertical-align: middle;
-								background: url(/static/portal/img/common/ico-download.png);
-								width: 20px;
-								height: 20px;
-							}
-						}
-						&.i-view {
-							&::before {
-								@include font-ico-outline("\e666");
-								background-color: transparent;
-							}
-						}
-						.icon {
+							content: "";
 							display: inline-block;
+							vertical-align: middle;
+							background: url(/static/portal/img/common/ico-download.png);
+							width: 20px;
+							height: 20px;
 						}
+					}
+					&.i-download2 {
+						display: inline-flex;
+						height: 32px;
+						align-items: center;
+						justify-content: center;
+						gap: 0 8px;
+						padding: 0 12px;
+						color: #3B63C4;
+						border: 1px solid #3B63C4;
+						background: #fff;
+						border-radius: 4px;
+					}
+					&.i-view {
+						&::before {
+							@include font-ico-outline("\e666");
+							background-color: transparent;
+						}
+					}
+					.icon {
+						display: inline-block;
 					}
 				}
 			}
@@ -175,6 +187,37 @@
 					}
 				}
 			}
+			//저자 등 상세 요약정보
+			.data-info {		
+				@include breakpoint($sm) { 
+					padding-bottom: 10px;
+					// margin-bottom: 10px;
+					// border-bottom: 1px solid #E5E5E5;
+				}
+				dl {
+					display: flex;
+					align-items: center;
+					gap: 0 8px;
+					// display: table;
+					// width: 100%;
+					// table-layout: fixed;
+					// padding: 2px 0;
+					// @include breakpoint($sm) {
+					// 	width: calc(100% - 75px);
+					// }
+					> * {
+						font-size: rem(14);
+					}
+					dt {
+						width: 40px;
+						color: #808080;
+					}
+					dd {
+						width: calc(100% - 40px - 8px);
+						color: #1A1A1A;
+					}
+				}
+			}
 			.date {
 				color: #767676;
 			}
@@ -184,7 +227,7 @@
 					background: url(/static/portal/img/common/arr01_on.png) 50% no-repeat;
 				}
 				.btns {
-					a {
+					a.i-view {
 						color: $point;
 						&::before {
 							background: #F2F6FA;
@@ -383,18 +426,29 @@
 /* 뉴스 및 자료형 타입 */
 .bd-line.data-type {
 	position: relative;
+	&.border {
+		> ul > li {
+			border-radius: 16px;
+			border: 1px solid #E5E5E5;
+			padding: 18px 24px;
+			margin: 16px 0;
+			&:hover {
+				background: #fff;
+				border: 1px solid #3B63C4;
+			}
+			.data-info {		
+				@include breakpoint($sm) { 
+					padding-bottom: 10px;
+					margin-bottom: 10px;
+					border-bottom: 1px solid #E5E5E5;
+				}
+			}
+		}
+	}
 	> ul > li {
-		padding: 18px 24px;
-		border-radius: 16px;
-		border: 1px solid #E5E5E5;
-		margin: 16px 0;
-		cursor: pointer;
+		//cursor: pointer;
 		@include breakpoint($sm) {
 			padding: 10px 16px;
-		}
-		&:hover {
-			background: #fff;
-			border: 1px solid #3B63C4;
 		}
 	}
 	.i {
@@ -427,41 +481,20 @@
 			}
 		}
 	}
-	.data-info {		
-		@include breakpoint($sm) { 
-			padding-bottom: 10px;
-			margin-bottom: 10px;
-			border-bottom: 1px solid #E5E5E5;
-		}
-		dl {
-			display: flex;
-			align-items: center;
-			gap: 0 8px;
-			// display: table;
-			// width: 100%;
-			// table-layout: fixed;
-			// padding: 2px 0;
-			// @include breakpoint($sm) {
-			// 	width: calc(100% - 75px);
-			// }
-			> * {
-				font-size: rem(14);
-			}
-			dt {
-				width: 40px;
-				color: #808080;
-			}
-			dd {
-				width: calc(100% - 40px - 8px);
-				color: #1A1A1A;
-			}
-		}
-	}
 	.btns {
+		display: flex;
+		justify-content: flex-end;
 		text-align: right;
 		margin-top: -24px;
 	}
 }
+.bd-line.noFile {
+	.btns {
+		display: none !important;
+	}
+}
+
+
 
 /* 옛날 소스 */
 .bdList {

@@ -67,7 +67,9 @@
 				display: flex;
 				justify-content: space-between;
 				@include breakpoint($sm){
-					display: block;
+					// display: block;
+					flex-wrap: wrap;
+					margin-bottom: 8px;
 				}
 				.title {
 					max-width: calc(100% - 250px);
@@ -76,9 +78,8 @@
 					font-size: rem(20);
 					@include breakpoint($sm){
 						font-size: rem(16);
-						width: 100%;
+						// width: 100%;
 						max-width: 100%;
-						margin-bottom: 8px;
 						@include line-clamp(3);
 						white-space: inherit;
 					}
