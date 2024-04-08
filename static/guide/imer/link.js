@@ -1,6 +1,12 @@
 $(function () {
     link = [
-        // '500531',
+        'bd-list-news',
+        'bd-view',
+        'bd-list-default',
+        'bd-list-forum',
+
+        '500215',
+        '경제분석안내',
         
     ]
     link.forEach(element => {

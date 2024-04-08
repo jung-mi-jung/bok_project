@@ -110,7 +110,7 @@
 
 /* section, 공통 */
 .section {
-	min-height: 1080px;
+	// min-height: 1080px;
 	height: 100vh;
 	@include breakpoint($sm) {
 		min-height: initial;

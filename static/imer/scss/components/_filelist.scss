@@ -3,6 +3,7 @@
 	.fileGroupSet {
 		position: relative;		
 		.i-download {
+			position: relative;		
 			padding: 2px 0;
 			&::before {
 				content: "";
@@ -11,6 +12,18 @@
 				background: url(/static/portal/img/common/ico-download.png);
 				width: 20px;
 				height: 20px;
+			}
+		}
+		> .i-download {
+			&::after {
+				content: "";
+				display: inline-block;
+				position: absolute;
+				left: 50%;
+				bottom: -10px;
+				width: 60px;
+				height: 60px;
+				transform: translateX(-50%);
 			}
 		}
 	}
@@ -54,6 +67,7 @@
 				width: 100%;
 				display: inline-block;
 				vertical-align: middle;
+				font-size: rem(14);
 				font-weight: 300;
 				color: #fff !important;
 				padding: 8px 20px 8px 0;

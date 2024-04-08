@@ -9,6 +9,13 @@
 .first {
 	color: #666;
 }
+.fade {
+	opacity: 0;
+	transition: opacity 0.15s linear;
+	&.in {
+		opacity: 1;
+	}
+}
 
 .fnote {
 	margin-top: 20px;
@@ -25,6 +32,71 @@
 		color: #1A1A1A;
 	}
 }
+.btns {
+	position: relative;
+	display: inline-flex;
+	@include breakpoint($sm){
+		position: absolute;
+		bottom: 10px;
+		right: 8px;
+	}
+	> a {
+		color: #666;
+		display: inline-block;
+		&::before {
+			font-size: 19px;
+			margin-right: 5px;
+		}
+		& + a {
+			position: relative;
+			margin-left: 11px;
+			padding-left: 13px;
+			&::after {
+				content: "";
+				position: absolute;
+				top: 7px;
+				left: 0;
+				background: #666;
+				width: 1px;
+				height: 10px;
+			}
+		}
+		&.i-download {
+			&::before {
+				content: "";
+				display: inline-block;
+				vertical-align: middle;
+				background: url(/static/portal/img/common/ico-download.png);
+				width: 20px;
+				height: 20px;
+			}
+		}
+		&.i-download2 {
+			display: inline-flex;
+			height: 32px;
+			align-items: center;
+			justify-content: center;
+			gap: 0 8px;
+			padding: 0 12px;
+			color: #3B63C4;
+			border: 1px solid #3B63C4;
+			background: #fff;
+			border-radius: 4px;
+		}
+		&.i-view {
+			&::before {
+				@include font-ico-outline("\e666");
+				background-color: transparent;
+			}
+		}
+		.icon {
+			display: inline-block;
+		}
+	}
+}
+
+
+
 
 /* 콘텐츠 내부 래프트메뉴 */
 .content-row {

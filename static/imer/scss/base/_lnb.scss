@@ -50,7 +50,7 @@
 		}
 	}
 	position: relative;
-	z-index: 1;
+	z-index: 2;
 	height: 48px;
 	line-height: 48px;
 	background-color: #FCFCFC;
@@ -181,6 +181,14 @@
 	}
 }
 
+@include breakpoint($sm) {
+	.navigation nav > ul > li:not(.home) {
+		display: none;
+	}
+	.navigation nav > ul > li:last-of-type{
+		display: block;
+	}
+}
 
 //목차형
 .lnb-nav{
@@ -196,7 +204,8 @@
 		//position: relative;
 		display: block;
 		float: left;
-		width: per(240px + 35px, $pc-wide);
+		// width: per(240px + 35px, $pc-wide);
+		width: 240px;
 		padding-right: 36px;
 		background-color: #fff;
 		height: auto;
@@ -209,6 +218,7 @@
 			right: -1px;
 			width: 1px;
 			height: 100%;
+			display: none;
 		}
 	}
 	// @include breakpoint($smd){ 
@@ -276,6 +286,9 @@
 			}
 		}
 	}
+}
+.lnb + .content {
+	border-left: 1px solid #d9d9d9;
 }
 
 //연관자료

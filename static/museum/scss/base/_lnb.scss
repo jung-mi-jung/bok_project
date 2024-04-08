@@ -14,7 +14,7 @@
 			position: absolute;
 			bottom: -1px;
 			left: 0;
-			z-index: 1;
+			
 		}
 	}
 	.top-page-toolbar {
@@ -50,7 +50,7 @@
 		}
 	}
 	position: relative;
-	z-index: 1;
+	z-index: 2;
 	height: 48px;
 	line-height: 48px;
 	background-color: #FCFCFC;
@@ -207,20 +207,21 @@
 		//position: relative;
 		display: block;
 		float: left;
-		width: per(240px + 35px, $pc-wide);
+		// width: per(240px + 35px, $pc-wide);
+		width: 275px;
 		padding-right: 36px;
 		background-color: #fff;
 		height: auto;
-		&::after {
-			content: "";
-			display: inline-block;
-			background-color: #d9d9d9;
-			position: absolute;
-			top: 0;
-			right: -1px;
-			width: 1px;
-			height: 100%;
-		}
+		// &::after {
+		// 	content: "";
+		// 	display: inline-block;
+		// 	background-color: #d9d9d9;
+		// 	position: absolute;
+		// 	top: 0;
+		// 	right: -1px;
+		// 	width: 1px;
+		// 	height: 100%;
+		// }
 	}
 	// @include breakpoint($smd){ 
 	// 	order: 2;
@@ -288,7 +289,9 @@
 		}
 	}
 }
-
+.lnb-nav + .content {
+	border-left: 1px solid #d9d9d9;
+}
 //연관자료
 // .lnb-reference {
 // 	padding: 24px 0;

@@ -63,8 +63,6 @@ $(function () {
 	});
 })
 
-
-
 //전체메뉴
 var navhtml = $('#gnb > ul').clone()
 navhtml.find('div').removeAttr('id')
@@ -437,6 +435,7 @@ $('#content a').each(function () {
 		$(this).attr('title', '새창열림');
 	}
 });
+
 // 게시물 이미지
 $('.dbdata img')
 .each(function (index, element) {
@@ -550,6 +549,23 @@ $(function() {
 		}, 700);
 		return false;
 	});
+
+	//로그인후
+	var userInfoOp = $(".userInfoOpener");
+	$(userInfoOp).on("mouseenter keyup", function(){
+		$(".userInfoOpBx").addClass("on");
+	});
+	$(".userInfoOpBxSet").on("mouseleave blur", function(){
+		$(".userInfoOpBx").removeClass("on");
+	});
+	$(".userInfoOpBx .logout").on("focusout", function(){
+		$(".userInfoOpBx").removeClass("on");
+	});
+	$(userInfoOp).bind('keydown', function(e){
+		if(e.shiftKey && e.keyCode == 9){
+			$(".userInfoOpBx").removeClass("on");
+		}
+	})
 
 
 	

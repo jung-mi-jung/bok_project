@@ -177,6 +177,39 @@
 		&.on {
 			display: block;
 		}
+		.table.table-view {
+			table {
+				tr {
+					th {
+						width: 65% !important;
+						background: #F2F6FA !important;
+						padding: 7px 15px !important;
+						font-family: "Spoqa Han Sans Neo" !important;
+						font-weight: 400 !important; 
+						* {
+							font-size: rem(18) !important;
+							font-family: "Spoqa Han Sans Neo" !important;
+							font-weight: 400 !important; 
+							color: #1A1A1A;;
+						}
+					}
+					td {
+						width: 35% !important;
+						padding: 7px 15px !important;
+						background: #fff !important;
+						font-weight: 400 !important;
+						font-family: "Spoqa Han Sans Neo" !important;
+						color: #666;
+						* {
+							font-size: rem(18) !important;
+							font-weight: 400 !important;
+							font-family: "Spoqa Han Sans Neo" !important;
+							color: #4d4d4d !important;
+						}
+					}
+				}
+			}
+		}
 	}
 }
 .js-tab  {
