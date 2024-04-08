@@ -148,9 +148,9 @@
 
 @include breakpoint($lg 1500px){
 	.gnb > ul {
-		width: 580px;
+		width: 600px;
 		> li > a {
-			font-size: rem(20);
+			font-size: rem(18);
 		}
 	}
 	#header {

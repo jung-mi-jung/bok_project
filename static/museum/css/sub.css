@@ -1037,13 +1037,18 @@ margin-bottom: -2px;
 @media (max-width: 1199px) {
 .navigation nav > ul > li.home::before {
 position: absolute;
-top: 0;
+top: 5px;
 left: 0;
 z-index: 9;
 text-align: center;
 width: 36px;
 height: 36px;
 margin-right: 0;
+}
+}
+@media (max-width: 749px) {
+.navigation nav > ul > li.home::before {
+top: 0;
 }
 }
 .navigation nav > ul > li > a {
@@ -1140,11 +1145,11 @@ display: block;
 }
 
 @media (max-width: 749px) {
-.navigation nav > ul > li.last-of-type {
+.navigation nav > ul > li:not(.home) {
 display: none;
 }
-.navigation nav > ul > li.home {
-display: none;
+.navigation nav > ul > li:last-of-type {
+display: block;
 }
 }
 .lnb-nav {

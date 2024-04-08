@@ -3587,7 +3587,7 @@ outline-offset: 2px;
 .reference {
 margin-top: 30px;
 padding: 50px 120px;
-background-color: #F2F6FA;
+background-color: #E5ECFF;
 }
 @media (max-width: 1199px) {
 .reference {
@@ -4305,10 +4305,10 @@ display: none;
 
 @media (min-width: 1200px) and (max-width: 1500px) {
 .gnb > ul {
-width: 580px;
+width: 600px;
 }
 .gnb > ul > li > a {
-font-size: 1.25rem;
+font-size: 1.125rem;
 }
 #header .g-info .global {
 padding-left: 20px;

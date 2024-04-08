@@ -104,13 +104,16 @@
 						margin-bottom: -2px;
 						@include breakpoint($smd){
 							position: absolute;
-							top: 0;
+							top: 5px;
 							left: 0;
 							z-index: 9;
 							text-align: center;
 							width: 36px;
 							height: 36px;
 							margin-right: 0;
+						}
+						@include breakpoint($sm) {
+							top: 0;
 						}
 					}	
 				}
