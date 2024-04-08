@@ -7,6 +7,7 @@
 	<link type="text/css" rel="stylesheet" href="/static/portal/css/sub.css">
 	<script src="/static/jslibrary/jquery-3.5.1.min.js"></script>
 	<script src="/static/jslibrary/jquery.cookie.js"></script>
+	<script src="/static/jslibrary/bootstrap/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="/static/jslibrary/swiper@8/swiper-bundle.min.css">
 	<script src="/static/jslibrary/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js"></script>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -285,51 +286,56 @@
 
 
 <h2>실명신고</h2>
-<h3>부패·부조리 신고</h3>
 
 <div class="cheongStop"> 
-	<div class="row"> <a title="신고하기" href="/portal/bbs/B0000238/reqVerify.do?menuNo=201120"> 
-	<div class="col m9 s12"> 
-	<p class="tit">부패&middot;부조리 신고</p> 
-	<p class="con">한국은행 소속 임직원 및 관련자의 「부패방지 및 국민권익위원회의 설치와 운영에 관한 법률」, 「공익신고자 보호법」에서 정한 위반사례 및 기타 부조리 등을 신고하여 주시기 바랍니다.</p> </div> 
-	<div class="col m3 s12 img"> <img alt="신고하기" src="/static/portal/img/cts/sub8/20230222.gif"> </div> </a> </div> </div>
-	<h4>1. 신고대상</h4>
-	<ol > 
-		<li>가.「부패방지 및 국민권익위원회의 설치와 운영에 관한 법률」제2조제4호 각 목에 해당하는 부패행위</li> 
-		<li>나.「공익신고자 보호법」제2조제1호 각 목에 해당하는 공익침해 행위</li> 
-		<li>다. 부당한 예산집행 및 예산낭비 행위</li> 
-		<li>라. 기타 업무상 부패&middot;부조리</li> 
-	</ol>
-	<h4>2. 신고방법</h4>
-	<ul class="bu-dash"> 
-		<li style="background: url(/static/portal/img/common/bu2.gif) left 12px no-repeat; padding-left: 10px;">누구든지 한국은행 소속 임직원 및 관련자의 부패행위, 공익침해행위, 예산낭비 사례, 기타 부조리를 알게 된 경우에는 한국은행에 신고할 수 있습니다.			
-			<div class="box2 mt10 mb10"> 
-				<h5>신고시 필수 기재사항</h5> 
-				<ol> 
-					<li>1. 신고자의 인적사항 : 성명, 주민등록번호, 주소, 직업 및 연락처, 그 밖에 신고자를 확인할 수 있는 인적사항</li> 
-					<li>2. 법위반자의 인적사항 : 성명, 연락처, 직업 등 법 위반행위자를 확인할 수 있는 인적사항</li> 
-					<li>3. 신고의 경위 및 이유</li> 
-					<li>4. 법 위반행위가 발생한 일시, 장소 및 내용</li> 
-					<li>5. 법 위반행위 내용을 입증할 수 있는 증거자료(증거자료를 확보한 경우에만 해당)</li> 
-				</ol>
-			</div>
-		</li>
-		<li style="background: url(/static/portal/img/common/bu2.gif) left 12px no-repeat; padding-left: 10px;">국민권익위원회 청렴포털을 통하여 신고하실 수도 있습니다. <a title="새창열림" class="b-link" href="https://ncp.clean.go.kr/cmn/secCtfcKMC.do?menuCode=acs&amp;mapAcs=Y&amp;insttCd=B190033 " target="_blank">바로가기</a></li> 
-	<ul> 
-		
-	<h4>3. 신고처리절차</h4>
-	<ul class="bu-dash"> 
-		<li>신고가 접수되면, 한국은행 준법관리인이 사실관계를 확인하여 필요한 조사를 진행하며, 조사를 마치면 그 결과를 신고자에게 알려드립니다.</li> 
-		<li>신고자의 신분비밀이 보장되며, 신고 등을 이유로 한 불이익조치가 금지됩니다.</li> 
-		<li>신고자는 국민권익위원회에 신변보호조치를 요청할 수 있습니다.</li> 
-		<li>신고에 의하여 공공기관에 직접적인 수입의 회복&middot;증대 또는 비용의 절감 등을 가져온 경우, 재산상 이익을 가져오거나 손실방지&middot;공익증진을 가져온 것으로 인정될 경우, 국민권익위원회로부터 보상금 및 포상금이 지급될 수 있습니다.</li> 
-	</ul>
+	<dl>
+		<dt>부패&middot;부조리 신고</dt>
+		<dd>한국은행 소속 임직원 및 관련자의 「부패방지 및 국민권익위원회의 설치와 운영에 관한 법률」, 「공익신고자 보호법」에서 정한 위반사례 및 기타 부조리 등을 신고하여 주시기 바랍니다.</dd>
+	</dl>
+	<p><a href="/portal/bbs/B0000238/reqVerify.do?menuNo=201120" class="b-edit">신고하기</a></p>
+</div>
+
+<h3>1. 신고대상</h3>
+<ol > 
+	<li>가.「부패방지 및 국민권익위원회의 설치와 운영에 관한 법률」제2조제4호 각 목에 해당하는 부패행위</li> 
+	<li>나.「공익신고자 보호법」제2조제1호 각 목에 해당하는 공익침해 행위</li> 
+	<li>다. 부당한 예산집행 및 예산낭비 행위</li> 
+	<li>라. 기타 업무상 부패&middot;부조리</li> 
+</ol>
+<h3>2. 신고방법</h3>
+<ul class="bu-dot"> 
+	<li>누구든지 한국은행 소속 임직원 및 관련자의 부패행위, 공익침해행위, 예산낭비 사례, 기타 부조리를 알게 된 경우에는 한국은행에 신고할 수 있습니다.			
+		<div class="box2 mt10 mb10"> 
+			<dl>
+				<dt class="help">신고시 필수 기재사항</dt>
+				<dd>
+					<ol>
+						<li>1. 신고자의 인적사항 : 성명, 주민등록번호, 주소, 직업 및 연락처, 그 밖에 신고자를 확인할 수 있는 인적사항</li>
+						<li>2. 법위반자의 인적사항 : 성명, 연락처, 직업 등 법 위반행위자를 확인할 수 있는 인적사항</li>
+						<li>3. 신고의 경위 및 이유</li>
+						<li>4. 법 위반행위가 발생한 일시, 장소 및 내용</li>
+						<li>5. 법 위반행위 내용을 입증할 수 있는 증거자료(증거자료를 확보한 경우에만 해당)</li>
+					</ol>
+				</dd>
+			</dl>
+		</div>
+	</li>
+	<li>국민권익위원회 청렴포털을 통하여 신고하실 수도 있습니다. <a href="https://ncp.clean.go.kr/cmn/secCtfcKMC.do?menuCode=acs&amp;mapAcs=Y&amp;insttCd=B190033 " title="새창열림" class="b-go xs" target="_blank">바로가기</a></li> 
+<ul> 
 	
-	<p class="fb mt20">※ 처리절차</p>
-	<div class="imgSet"> 
+<h3>3. 신고처리절차</h3>
+<ul class="bu-dot"> 
+	<li>신고가 접수되면, 한국은행 준법관리인이 사실관계를 확인하여 필요한 조사를 진행하며, 조사를 마치면 그 결과를 신고자에게 알려드립니다.</li> 
+	<li>신고자의 신분비밀이 보장되며, 신고 등을 이유로 한 불이익조치가 금지됩니다.</li> 
+	<li>신고자는 국민권익위원회에 신변보호조치를 요청할 수 있습니다.</li> 
+	<li>신고에 의하여 공공기관에 직접적인 수입의 회복&middot;증대 또는 비용의 절감 등을 가져온 경우, 재산상 이익을 가져오거나 손실방지&middot;공익증진을 가져온 것으로 인정될 경우, 국민권익위원회로부터 보상금 및 포상금이 지급될 수 있습니다.</li> 
+</ul>
+	
+<h3 class="h-caption">처리절차</h3>
+<div class="img-set"> 
 	<p class="visible-md"><img alt="1.신고자(1. 관련신고 위반사항 신고), 2.한국은행(접수 및 확인 / 위반행위 조사), 3.신고자(조사결과 통보-조사결과를 통보받은 날부터 7일 이내에 이의신청 가능)" src="/static/portal/img/cts/sub1/202303.jpg"></p> 
-	<p class="visible-sm"><a title="확대보기" href="/static/portal/img/cts/sub1/202303.jpg" data-rel="prettyPhoto"><img alt="1.신고자(1. 관련신고 위반사항 신고), 2.한국은행(접수 및 확인 / 위반행위 조사), 3.신고자(조사결과 통보-조사결과를 통보받은 날부터 7일 이내에 이의신청 가능)" src="/static/portal/img/cts/sub1/202303.jpg"></a></p> </div>
-								
+	<p class="visible-sm"><a title="확대보기" href="/static/portal/img/cts/sub1/202303.jpg" data-rel="prettyPhoto"><img alt="1.신고자(1. 관련신고 위반사항 신고), 2.한국은행(접수 및 확인 / 위반행위 조사), 3.신고자(조사결과 통보-조사결과를 통보받은 날부터 7일 이내에 이의신청 가능)" src="/static/portal/img/cts/sub1/202303.jpg"></a></p>
+</div>							
 		
 </div>
 

@@ -7,6 +7,7 @@
 	<link type="text/css" rel="stylesheet" href="/static/portal/css/sub.css">
 	<script src="/static/jslibrary/jquery-3.5.1.min.js"></script>
 	<script src="/static/jslibrary/jquery.cookie.js"></script>
+	<script src="/static/jslibrary/bootstrap/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="/static/jslibrary/swiper@8/swiper-bundle.min.css">
 	<script src="/static/jslibrary/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js"></script>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -361,21 +362,22 @@
 			<p>이용자는 개인정보의 수집·이용목적에 대한 동의를 거부할 수 있으나, 최소한의 개인정보 수집동의 거부 시 홈페이지에서 제공하는 서비스가 아래와 같이 제한될 수 있습니다.</p>
 			<p class="bu-dot red">필수항목 및 자동생성 정보 제공 동의 거부 시 : 신고접수 불가</p>
 			<p class="help mb0">한국은행의 개인정보처리방침에 대해 보다 자세히 알기 원하시면 홈페이지 하단의 ‘개인정보처리방침’을 참고하시기 바랍니다.</p>
-		</div>			
+		</div>
+		<div class="agreeTxt">
+			<p class="txt1">위와 같이 개인정보를 수집&middot;이용하는데 동의하십니까?</p>
+			<p class="txt2">
+				<label for="agreAtY1_1">
+					<input type="radio" name="agreAtY1" id="agreAtY1_1" value="Y" />
+					<i></i> <span>동의함</span>
+				</label>
+				<label for="agreAtY1_2">
+					<input type="radio" name="agreAtY1" id="agreAtY1_2" value="N" />
+					<i></i> <span>동의하지 않음</span>
+				</label>
+			</p>
+		</div>				
 	</div>
-	<div class="agreeTxt">
-		<p class="txt1">위와 같이 개인정보를 수집&middot;이용하는데 동의하십니까?</p>
-		<p class="txt2">
-			<label for="agreAtY1_1">
-				<input type="radio" name="agreAtY1" id="agreAtY1_1" value="Y" />
-				<i></i> <span>동의함</span>
-			</label>
-			<label for="agreAtY1_2">
-				<input type="radio" name="agreAtY1" id="agreAtY1_2" value="N" />
-				<i></i> <span>동의하지 않음</span>
-			</label>
-		</p>
-	</div>	
+	
 
 	<div class="btnSet">
 		<a href="javascript:checkForm();" class="b-confirm lg" >확인</a>		

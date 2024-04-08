@@ -7,6 +7,7 @@
 	<link type="text/css" rel="stylesheet" href="/static/portal/css/sub.css">
 	<script src="/static/jslibrary/jquery-3.5.1.min.js"></script>
 	<script src="/static/jslibrary/jquery.cookie.js"></script>
+	<script src="/static/jslibrary/bootstrap/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="/static/jslibrary/swiper@8/swiper-bundle.min.css">
 	<script src="/static/jslibrary/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js"></script>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -284,78 +285,12 @@
 			<div class="content">
 
 
-<h2>화폐전시실</h2>
+<h2>통화정책 목표</h2>
 
-<div class="box2 boxGal"> 
-	<div class="boxGalbox"> 
-		<p class="fsb_point">한국은행 대구경북본부의 화폐전시실은 우리나라 화폐가 시대별로 전시되어 있는 &ldquo;우리화폐전시실&rdquo;과 세계 화폐가 테마별로 구분 정리되어 있는 &ldquo;세계화폐전시실&rdquo;으로 구성되어 있으며 2,300여점의 다양한 전시물이 전시되어 있습니다.</p> 
-		<div class="oh"> 
-			<ul> 
-				<li class="gaIco1"> <strong>관람시간 : </strong> <span>09:30&sim;16:00<br>
-				단체관람의 경우 사전예약 필요<br> (토&middot;일요일, 공휴일 및 근로자의 날 휴관)</span> </li> 
-				<li class="gaIco4"><strong>입장료 : </strong><span>무료</span></li> 
-			</ul> 
-			<ul> 
-				<li class="gaIco5"><strong>주차정보 : </strong><span>장애인 및 20인 이상 단체방문객 차량에 한해 은행 내 주차가능(승용차 5부제 실시)</span></li> 
-				<li class="gaIco6"><strong>문의 : </strong><span>053-429-0246</span></li> 
-				<li class="gaIco7"><strong>주소 : </strong><span>대구광역시 중구 동덕로 145 (41939)</span></li> 
-			</ul> 
-		</div> 
-	</div>
-</div>
-
-<div class="video-wrap">
-	<div class="videoSet">
-		<div class="video">
-			<video id="bokPlayer" class="video-js vjs-4-3 vjs-default-skin" controls="controls" poster="https://www.bok.or.kr/crosseditor/attachs/images/000012/dk_sum.jpg"> </video>
-		</div>
-		<p class="help">플레이 버튼을 클릭하시면 바로 동영상 열람이 가능합니다.</p>
-		<p class="refer">전체화면으로 보기 원하실때는 동영상 우측 하단의 확대버튼을 클릭하여주세요.</p>
-	</div>
-</div>
-
-<!--<div class="thumbs" id="vsThumbs"> <div class="img4vs3"> <img class="height100p" alt="대구경북본부 내부 전경1" src="https://www.bok.or.kr/crosseditor/attachs/images/000002/Pz8==NamOSeSlaSH==PyBkc2NfNzcxNg==_3.jpg" /> </div> <div class="img4vs3"> <img class="height100p" alt="대구경북본부 내부 전경2" src="https://www.bok.or.kr/crosseditor/attachs/images/000002/Pz8==NamOSeSlaSH==PyBkc2NfNzcyNA==_3.jpg" /> </div> <div class="img4vs3"> <img class="height100p" alt="대구경북본부 내부 전경3" src="https://www.bok.or.kr/crosseditor/attachs/images/000002/Pz8==NamOSeSlaSH==PyBkc2NfNzcyOA==_2.jpg" /> </div> </div> </div> <div class="thumbsList" id="thumbsList"> <div class="thumbs"> <div> <a href="#self"><img alt="대구경북본부 내부 전경1" src="https://www.bok.or.kr/crosseditor/attachs/images/000002/Pz8==NamOSeSlaSH==PyBkc2NfNzcxNg==_3.jpg" /></a> </div> <div> <a href="#self"><img alt="대구경북본부 내부 전경2" src="https://www.bok.or.kr/crosseditor/attachs/images/000002/Pz8==NamOSeSlaSH==PyBkc2NfNzcyNA==_3.jpg" /></a> </div> <div> <a href="#self"><img alt="대구경북본부 내부 전경3" src="https://www.bok.or.kr/crosseditor/attachs/images/000002/Pz8==NamOSeSlaSH==PyBkc2NfNzcyOA==_2.jpg" /></a> </div> </div> </div> </div>-->
-
-<link href="https://www.bok.or.kr/static/jslibrary/videojs/video-js.css" rel="stylesheet">
-<script src="https://www.bok.or.kr/static/jslibrary/videojs/video.js"></script>
-<script src="https://www.bok.or.kr/static/jslibrary/videojs/flash/videojs-flash.min.js"></script>
-<script src="https://www.bok.or.kr/static/jslibrary/videojs/videojs-contrib-hls.min.js"></script>
-<script src="https://www.bok.or.kr/static/jslibrary/videojs/Youtube.min.js"></script>
-
-
-<script>
-var player, play_type;
-var options = {hls:{withCredentials:false}}
-var play_src = '/movie.mp4'
-var play_src = 'https://media.bok.or.kr/vod/_definst_/mp4:lib/2021/01/CID20210104114021645_w.mp4/playlist.m3u8'
-var opt = 'video';
-var fileExt = getExtensionOfFilename(play_src);
-if(fileExt == ".mp4"){
-	play_type = "video/mp4";
-}else{
-	play_type = "application/x-mpegURL";	
-}
-
-player = videojs('bokPlayer',{muted:true,autoplay: false,flash:options, html5:options});
-player.muted()
-player.ready(function(){
-	player.muted()
-	//player.play()
-	this.src({
-		src:play_src,
-		type:play_type
-	});
-	//$('.vjs-big-play-button').trigger('click')
-});
-
-function getExtensionOfFilename(filename){
-	var _fileLen = filename.length;
-	var _lastDot = filename.lastIndexOf('.');
-	var _fileExt = filename.substring(_lastDot, _fileLen).toLowerCase();
-	return _fileExt;
-}
-
-</script>
+<p class="first">일반적으로 <span class="fc1">통화정책</span>이란 한 나라에서 <span class="fc1">화폐(법정화폐 및 본원통화)의 독점적 발행권</span>을 지닌 중앙은행이 경제 내에 유통되는 <span class="fc1">화폐(통화, 본원통화 및 파생통화)의 양이나 가격</span>(금리)에 영향을 미치고 이를 통해 화폐의 가치, 즉 <span class="fc1">물가를 안정</span>시키고 지속가능한 경제성장을 이루어 나가려는 일련의 정책을 말한다.</p>
+<p class="fnote type2">화폐는 재화와 서비스, 금융 및 실물자산의 가격을 나타내는 척도로서 교환의 매개가 되며 가치저장의 기능을 수행한다. </p>
+<p><span class="fc1">「한국은행법」제1조 제1항</span>은 "한국은행을 설립하고 효율적인 통화신용정책의 수립과 집행을 통하여 <span class="fc1">물가안정을 도모</span>함으로써 <span class="fc1">국민경제의 건전한 발전</span>에 이바지함" 을 동 법의 목적으로 규정하고 있다. 따라서 한국은행의 통화정책이 추구하는 <span class="fc1">최우선 목표는 물가를 안정</span>시키는 일이라 하겠다. 물가가 안정되지 못하면 미래에 대한 불확실성이 높아져 전반적인 경제활동이 위축되고 소득과 자원 배분이 왜곡될 수 있을 뿐 아니라 서민생활의 안정도 해치게 된다.</p>
+<p><span class="fc1">국민경제</span>가 <span class="fc1">안정적 성장을 이루기</span> 위해서는 물가안정뿐 아니라 <span class="fc1">금융안정</span>도 확보되어야 한다. 이와 관련하여 <span class="fc1">「한국은행법」 제1조 제2항</span>은 “한국은행은 통화신용정책을 수행할 때에는 금융안정에 유의하여야 한다.”고 규정하고 있다. 이에 따라 한국은행은 통화신용정책 수행을 통해 물가안정을 도모하는 가운데 <span class="fc1">금융안정</span>을 위한 정책적 노력도 함께 경주하고 있다.</p>
 </div>
 
 <script src="/static/jslibrary/swiper@8/swiper-bundle.min.js"></script>

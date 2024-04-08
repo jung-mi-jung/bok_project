@@ -1,0 +1,255 @@
+<h2>한국은행 기준금리</h2>
+
+<p><span class="fc1">한국은행 기준금리</span>는 한국은행이 금융기관과 환매조건부증권(RP) 매매, 자금조정 예금 및 대출 등의 거래를 할 때 기준<span title="별표1. 하단의 설명 참고" class="strC2"><sup>*</sup></span>이 되는 <span class="fc1">정책금리</span>로서 간단히 &lsquo;<span class="fc1">기준금리</span>&rsquo;(base rate)라고도 한다.</p>
+<p class="fnote type2"> 한국은행은 기준금리를 7일물 RP매각시 고정입찰금리로, 7일물 RP매입시 최저입찰금리(minimum bid rate)로 사용한다. 자금조정예금 금리는 기준금리에서 50bp를 차감한 이율(최저이율은 0%)로, 자금조정대출 금리는 기준금리에서 50bp를 더한 이율(기준금리가 1% 미만일 경우 기준금리의 2배)로 운용한다. </p>
+<p>한국은행 <span class="fc1">금융통화위원회는&nbsp;</span>물가 동향, 국내외 경제 상황, 금융시장 여건 등을 종합적으로 고려하여&nbsp;<span class="fc1">연 8회</span>&nbsp;기준금리를 결정하고 있다. 이렇게 결정된 <span class="fc1">기준금리</span>는 초단기금리인 <span class="fc1">콜금리</span>에 즉시 영향을 미치고, <span class="fc1">장단기 시장금리, 예금 및 대출 금리</span> 등의 변동으로 이어져 궁극적으로는 <strspanong class="fc1">실물경제 활동</span>에 영향을 미치게 된다. </p>
+
+<h3>한국은행 기준금리</h3>
+
+<c:catch var ="catchException">
+	
+
+
+
+
+
+<div class="img-box-round">
+	<div id="chartObj2"><span class="hidden">한국은행 기준금리를 년도별 %로 나타낸 그래프(자세한 내용은 아래 도표의 치수를 참조하세요. 주: 1)2008년 2월까지는 콜금리 목표</span></div>
+</div>
+
+<link type="text/css" rel="stylesheet" href="/static/jslibrary/jqplot/jquery.jqplot.min.css" />
+<script class="include" src="/static/jslibrary/jquery-ui/jquery-ui.min.js"></script>
+<script class="include" src="/static/jslibrary/jqplot/jquery.jqplot.min.js"></script>
+<script class="include" src="/static/jslibrary/jqplot/plugins/jqplot.barRenderer.js"></script>
+<script class="include" src="/static/jslibrary/jqplot/plugins/jqplot.categoryAxisRenderer.js"></script>
+<script class="include" src="/static/jslibrary/jqplot/plugins/jqplot.dateAxisRenderer.js"></script>
+<script class="include" src="/static/jslibrary/jqplot/plugins/jqplot.highlighter.js"></script>
+<script class="include" src="/static/jslibrary/jqplot/plugins/jqplot.cursor.js"></script>
+<script class="include" src="/static/jslibrary/jqplot/plugins/jqplot.pointLabels.js"></script>
+
+<script>
+
+var chartObj2_s     = [["2008/08/07 ", 5.25],["2008/10/09 ", 5.00],["2008/10/27 ", 4.25],["2008/11/07 ", 4.00],["2008/12/11 ", 3.00],["2009/01/09 ", 2.50],["2009/02/12 ", 2.00],["2010/07/09 ", 2.25],["2010/11/16 ", 2.50],["2011/01/13 ", 2.75],["2011/03/10 ", 3.00],["2011/06/10 ", 3.25],["2012/07/12 ", 3.00],["2012/10/11 ", 2.75],["2013/05/09 ", 2.50],["2014/08/14 ", 2.25],["2014/10/15 ", 2.00],["2015/03/12 ", 1.75],["2015/06/11 ", 1.50],["2016/06/09 ", 1.25],["2017/11/30 ", 1.50],["2018/11/30 ", 1.75],["2019/07/18 ", 1.50],["2019/10/16 ", 1.25],["2020/03/17 ", 0.75],["2020/05/28 ", 0.50],["2021/08/26 ", 0.75],["2021/11/25 ", 1.00],["2022/01/14 ", 1.25],["2022/04/14 ", 1.50],["2022/05/26 ", 1.75],["2022/07/13 ", 2.25],["2022/08/25 ", 2.50],["2022/10/12 ", 3.00],["2022/11/24 ", 3.25],["2023/01/13 ", 3.50],["2024/04/04 15", 3.50]] 
+/* var chartObj2_s     = [["2008/08/07 ", 5.25],["2008/10/09 ", 5.00],["2008/10/27 ", 4.25],["2008/11/07 ", 4.00],["2008/12/11 ", 3.00],["2009/01/09 ", 2.50],["2009/02/12 ", 2.00],["2010/07/09 ", 2.25],["2010/11/16 ", 2.50],["2011/01/13 ", 2.75],["2011/03/10 ", 3.00],["2011/06/10 ", 3.25],["2012/07/12 ", 3.00],["2012/10/11 ", 2.75],["2013/05/09 ", 2.50],["2014/08/14 ", 2.25],["2014/10/15 ", 2.00],["2015/03/12 ", 1.75],["2015/06/11 ", 1.50],["2016/06/09 ", 1.25],["2017/11/30 ", 1.50],["2018/11/30 ", 1.75],["2019/07/18 ", 1.50],["2019/10/16 ", 1.25],["2020/03/17 ", 0.75],["2020/05/28 ", 0.50],["2021/08/26 ", 0.75],["2021/11/25 ", 1.00],["2022/01/14 ", 1.25],["2022/04/14 ", 1.50],["2022/05/26 ", 1.75],["2022/07/13 ", 2.25],["2022/08/25 ", 2.50],["2022/10/12 ", 3.00],["2022/11/24 ", 3.25],["2023/01/13 ", 3.50]] */
+var chartObj2Labels = [["[2008.08]"],["[2008.10]"],["[2008.10]"],["[2008.11]"],["[2008.12]"],["[2009.01]"],["[2009.02]"],["[2010.07]"],["[2010.11]"],["[2011.01]"],["[2011.03]"],["[2011.06]"],["[2012.07]"],["[2012.10]"],["[2013.05]"],["[2014.08]"],["[2014.10]"],["[2015.03]"],["[2015.06]"],["[2016.06]"],["[2017.11]"],["[2018.11]"],["[2019.07]"],["[2019.10]"],["[2020.03]"],["[2020.05]"],["[2021.08]"],["[2021.11]"],["[2022.01]"],["[2022.04]"],["[2022.05]"],["[2022.07]"],["[2022.08]"],["[2022.10]"],["[2022.11]"],["[2023.01]"]]
+
+$(function () {
+	var chartObj2t = '한국은행 기준 금리 변동추이';
+	/* var chartObj2_s = 
+	[["2008/08/07", 5.25], ["2008/10/09", 5.00], ["2008/10/27", 4.25],["2008/11/07", 4.00],["2008/12/11", 3.00],["2009/01/09", 2.50],["2009/02/12", 2.00],["2010/07/09", 2.25],["2010/11/16", 2.50],["2011/01/13", 2.75],["2011/03/10", 3.00],["2011/06/10", 3.25],["2012/07/12", 3.00],["2012/10/11", 2.75],["2013/05/09", 2.50],["2014/08/14", 2.25],["2014/10/15", 2.00],["2015/03/12", 1.75],["2015/06/11", 1.50],["2016/06/09", 1.25], ["2017/11/30", 1.50],]; 
+	var chartObj2Labels = 
+	[["[2008.08]"], ["[2008.10]"], ["[2008.10]"],["[2008.11]"],["[2008.12]"],["[2009.01]"],["[2009.02]"],["[2010.07]"],["[2010.11]"],["[2011.01]"],["[2011.03]"],["[2011.06]"],["[2012.07]"],["[2012.10]"],["[2013.05]"],["[2014.08]"],["[2014.10]"],["[2015.03]"],["[2015.06]"],["[2016.06]"], ["[2017.11]"],];*/
+	//var chartObj2_s     = [["2008/08/07  ", 5.25],["2008/10/09  ", 5.00],["2008/10/27  ", 4.25],["2008/11/07  ", 4.00],["2008/12/11  ", 3.00],["2009/01/09  ", 2.50],["2009/02/12  ", 2.00],["2010/07/09  ", 2.25],["2010/11/16  ", 2.50],["2011/01/13  ", 2.75],["2011/03/10  ", 3.00],["2011/06/10  ", 3.25],["2012/07/12  ", 3.00],["2012/10/11  ", 2.75],["2013/05/09  ", 2.50],["2014/08/14  ", 2.25],["2014/10/15  ", 2.00],["2015/03/12  ", 1.75],["2015/06/11  ", 1.50],["2016/06/09  ", 1.25],["2017/11/30  ", 1.50],["2018/11/30  ", 1.75],["2019/02/14  ", 1.5],["2019/04/05  17", 2.00],["2019/04/05 17", 2.00]]
+	//var chartObj2Labels = [["[2008.08]"],["[2008.10]"],["[2008.10]"],["[2008.11]"],["[2008.12]"],["[2009.01]"],["[2009.02]"],["[2010.07]"],["[2010.11]"],["[2011.01]"],["[2011.03]"],["[2011.06]"],["[2012.07]"],["[2012.10]"],["[2013.05]"],["[2014.08]"],["[2014.10]"],["[2015.03]"],["[2015.06]"],["[2016.06]"],["[2017.11]"],["[2018.11]"],["[2019.02]"],["[2019.04]"]]
+
+	var locationPos;
+	$(window).width() >= 768  ? locationPos ="w" : locationPos ="n";
+	plot1 = $.jqplot("chartObj2", [chartObj2_s, chartObj2_s], {
+		//title : '한국은행 기준 금리 변동추이',
+		animate: true,
+		// Will animate plot on calls to plot1.replot({resetAxes:true})
+		animateReplot: true,
+		grid:{
+			drawGridLines : true, 
+			background : "#fff",
+			borderColor : "#c7c7c7",
+			shadow:false,
+			drawBorder : false
+		},
+		seriesDefaults : { 
+			step:true, 
+			pointLabels: {
+				show:true, 
+				seriesLabelIndex : 0,
+				location: locationPos, 
+				//formatString : "%s",
+				labels : chartObj2Labels,
+				xpadding: 10
+			 },
+			 breakOnNull : true
+		},
+		cursor: {
+			show: true,
+			zoom: false,
+			looseZoom: true,
+			showTooltip: false
+		},
+		series:[
+			{	//  line 
+				color: "#5b79b9",
+				lineWidth: 3,
+				shadow:false,
+				markerOptions : {
+					 color: "#fff",
+					style: "filledCircle",
+					shadow:false,
+					size : 10
+				},
+				rendererOptions: {
+					animation: {
+						speed: 2000
+					},
+					fillToZero : true, //y축의 중심점 0으로 변환.
+					smooth:true
+				}
+			}, 
+			{	//  line 2 Dots
+				color: "#f00",
+				lineWidth: 0,
+				yaxis: 'y2axis',
+				showLine : false,
+				markerOptions : {
+					 color: "#00b0f0",
+					style: "filledCircle",
+					shadow:false,
+					size : 8
+				},
+				rendererOptions: {
+					animation: {
+						speed: 2000
+					},
+					fillToZero : true, //y축의 중심점 0으로 변환.
+					smooth:true
+				}
+			}
+
+		],
+		axesDefaults: {
+				pad: 1
+		},
+		axes: {
+			// These options will set up the x axis like a category axis.
+			xaxis: {
+				label : '주 : 1) 2008년 2월까지는 콜금리 목표',
+				renderer: $.jqplot.DateAxisRenderer,
+				tickOptions: {
+					show : true, 	//x축 하단 정보 숨김
+					textColor: "#333",
+					formatString: '%Y',
+					showGridline:true
+				},
+				//tickInterval: 1, // 가로축 간격 조정.
+				drawMajorGridlines: false,
+				drawMinorGridlines: true,
+				//drawMajorTickMarks: false, // hover시  최상단으로 위치함.
+				rendererOptions: {
+					tickInset: 0.5,
+					minorTicks: 1
+				}
+			},
+			yaxis: {
+				label : '(연 %)',
+				labelRenderer : $.jqplot.CanvasAxisLabelRenderer,
+				ticks : [0, 1, 2, 3, 4, 5, 6],
+				tickOptions: {
+					show: true,
+					width : 100,
+					textColor: "#333",
+					tooltipFormatString : '%.1f'
+				},
+				rendererOptions: {
+					forceTickAt0: true
+				}
+			},
+			y2axis: {
+				label : '(연 %)',
+				labelRenderer : $.jqplot.CanvasAxisLabelRenderer,
+				ticks : [0, 1, 2, 3, 4, 5, 6],
+				tickOptions: {
+					show: true,
+					width : 100,
+					textColor: "#333",
+					tooltipFormatString : '%.1f'
+				},
+				rendererOptions: {
+					forceTickAt0: true
+				}
+			}
+		},
+		highlighter: {
+			show: true, 
+			showLabel: true, 
+			tooltipAxes: 'xy',
+			tooltipFormatString : '%.2f',
+			//sizeAdjust: 7.5 , 
+			tooltipLocation : 'n',
+			tooltipContentEditor : function(str, seriesIndex, pointIndex, jqPlot){
+				//console.log("str : "+str, "                   seriesIndex : "+seriesIndex, "                  pointIndex : "+pointIndex, jqPlot)
+				//오늘정보와 마지막 정보(월)이 같다면 시간을 출력함.
+				
+				if(jqPlot.data[seriesIndex][pointIndex][0] === jqPlot.data[seriesIndex][jqPlot.data[seriesIndex].length-1][0] ){
+					
+					return "<strong>"+jqPlot.data[seriesIndex][pointIndex][0]+"시</strong><br><p class='h3'>"+  jqPlot.data[seriesIndex][pointIndex][1].toFixed(2) + "%</p>";
+				}else{
+					return "<strong>"+jqPlot.data[seriesIndex][pointIndex][0]+"</strong><br><p class='h3'>"+  jqPlot.data[seriesIndex][pointIndex][1].toFixed(2) + "%</p>";
+				} 
+				//return "<strong>"+jqPlot.data[seriesIndex][pointIndex][0]+"</strong><br><p class='h3'>"+  jqPlot.data[seriesIndex][pointIndex][1].toFixed(2) + "%</p>";
+			}
+			/*formatString: '$%s\<br>\
+			전년동기대비성장률 : %s \%'*/
+		}
+	});
+	$('div.imgSet').resizable({delay: 20});
+	$('div.imgSet').bind('resize', function(event, ui) {
+		$("#chartObj2").width($('div.imgSet').width()*0.96)
+		plot1.replot({resetAxes: true});
+	});
+	$(window).resize(function(){
+		if($(window).width() >= 768){
+			plot1.replot({
+				resetAxes: {yaxis : true, y2axis : true},
+				seriesDefaults : { 
+					pointLabels: {
+						location: 'w'
+					 }
+				}
+			});
+		}else{
+			plot1.replot({
+				resetAxes: {yaxis : true, y2axis : true},
+				seriesDefaults : { 
+					pointLabels: {
+						location: 'n'
+					 }
+				}
+			});
+
+		}
+	})
+});
+</script>
+<style>
+	.jqplot-yaxis{
+		margin-left: 5% !important;
+		width: 5% !important; 
+	}
+	.jqplot-y2axis{
+		margin-left: 5% !important;
+		width: 5% !important; 
+	}
+	.jqplot-yaxis-label,
+	.jqplot-y2axis-label{top:-20px !important; width: 50px !important;}
+	.jqplot-xaxis-label{left:10% !important; }
+	.jqplot-canvasOverlay-tooltip, .jqplot-cursor-tooltip, .jqplot-highlighter-tooltip{background-color: #fff;  z-index: 10; border:1px solid #c7c7c7; border-radius: 250px; padding: 30px 15px 15px 15px;height: 110px;  }
+	.jqplot-point-label{z-index: 0; }
+	@media (max-width: 767px){
+		.jqplot-yaxis{
+			margin-left: 3% !important;
+			width: 3% !important; 
+		}
+		.jqplot-y2axis{
+			margin-left: 3% !important;
+			width: 3% !important; 
+		}
+	}
+</style>
+</c:catch>
+
+<div class="linkBox2 mt40">
+	<ul>
+		<li>
+			<span>한국은행 기준금리 변동 추이</span>
+			<span class="btnStyle"><a class="b-go xs" href="/portal/singl/baseRate/list.do?dataSeCd=01&menuNo=200643" target="_blank"  title="새창열림">바로가기</a></span>
+		</li>
+	</ul>
+</div>

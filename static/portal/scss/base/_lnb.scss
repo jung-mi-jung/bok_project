@@ -5,6 +5,7 @@
 			width: 100%;
 			position: fixed;
 			top: 0;
+			z-index: 9;
 			&::before {
 				content: "";
 				display: block;
@@ -70,9 +71,16 @@
 				border-right: 1px solid #E5E5E5;
 				color: #666;
 				@include breakpoint($sm){
+					display: none;
 					width: 100%;
 					&:last-child {
+					display: block;
 						border-right: none;
+					}
+				}
+				@include breakpoint($sm){
+					&:nth-child(2) {
+						display: block;
 					}
 				}
 				&.home {
@@ -87,6 +95,9 @@
 						span {
 							display: none;
 						}
+					}
+					@include breakpoint($sm){
+						display: block;
 					}
 					&::before {
 						content: "";
@@ -199,15 +210,28 @@
 		padding-right: 36px;
 		background-color: #fff;
 		height: auto;
-		&::after {
-			content: "";
-			display: inline-block;
-			background-color: #d9d9d9;
-			position: absolute;
-			top: 0;
-			right: -1px;
-			width: 1px;
-			height: 100%;
+		// &::after {
+		// 	content: "";
+		// 	display: inline-block;
+		// 	background-color: #d9d9d9;
+		// 	position: absolute;
+		// 	top: 0;
+		// 	right: -1px;
+		// 	width: 1px;
+		// 	height: 100%;
+		// }
+		& + .content {
+			&::after {
+				content: "";
+				display: inline-block;
+				background-color: #d9d9d9;
+				position: absolute;
+				top: 0;
+				left:per(240px + 35px, $pc-wide);
+				//right: -1px;
+				width: 1px;
+				height: 100%;
+			}
 		}
 	}
 	h1 {

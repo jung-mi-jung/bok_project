@@ -39,7 +39,6 @@ function servers() {
 			baseDir: './',
 			index: 'static/guide/g.html',
 		},
-		// port: 1981,
 		port: 3000,
 	});
 }
@@ -274,11 +273,11 @@ function htmlmerge(cb) {
 var sprite = async function () {
 	console.log('sprite watching start!');
 	// All events will be watched
-	watch('static/imer/sprite/*.png', { events: 'all' }, function (cb) {
+	watch('static/portal/sprite/*.png', { events: 'all' }, function (cb) {
 		// body omitted
 		// Generate our spritesheet
-		var path = 'static/imer/sprite/';
-		var site = 'imer';
+		var path = 'static/portal/sprite/';
+		var site = 'portal';
 		var spriteData = gulp.src(path + '*.png').pipe(
 			spritesmith({
 				// imgName      : 'sprite.png',

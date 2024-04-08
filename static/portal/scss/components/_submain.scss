@@ -36,8 +36,13 @@
 	}
 }
 
-.sub-main + #footer {
-	margin-top: 0;
+.sub-main {
+	& + #footer {
+		margin-top: 0;
+	}
+	#main-container {
+		width: 100%;
+	}
 }
 
 .sub-main-zone {
@@ -97,29 +102,92 @@
 					}
 				}
 			}
-			.map-set {
-				#canvas {
-					position: absolute;
-					z-index: 9;
-					display: none;
-				}
+			.map-set {				
 				.mapsinfomaion-pin {
 					
 				}
-				.svg-map {
-					area {
-						display: inline-block;
-						width: 12px;
-						height: 12px;
-						background-color: #39A0FF;
-						border-radius: 50%;
-						&.active {
-							position: relative;
-							background-color: #FF327C;
-							outline: 6px solid rgba(200, 60, 60, 0.3);
-							
+				.svg-set {
+					.cls-1,
+					.cls-2 {
+						fill:none;
+					}
+					.cls-1 {
+						stroke:#b1c1e7;
+					}
+					.cls-1,
+					.cls-2,
+					.cls-3 {
+						stroke-width:2px;
+					}
+					.cls-2,
+					.cls-3,
+					.cls-4 {
+						stroke:#6282d0;
+					}
+					.cls-3,
+					.cls-4,
+					.cls-5 {
+						fill:#b8caf5;
+					}
+					.cls-4 {
+						stroke-width:1.64px;
+					}
+					.svg-map {
+						width: 605px;
+						max-width: 100%;
+						/* aspect-ratio: 363/599; */
+						padding-right: 7px;
+						svg {
+							width: 100%;
+						}
+						path {
+							outline: none;
+							stroke-width: 2;
+						}
+						.item {
+							cursor: pointer;
+							stroke: #6282D0;
+							fill: #b8caf5;
+							&.active {
+								stroke: #1F4CBA;
+								fill: #1F4CBA;
+								-webkit-box-shadow: 0 4px 4px #000;
+										box-shadow: 0 4px 4px #000;
+								-webkit-filter: url(#shadow);
+										filter: url(#shadow);
+							}
 						}
 					}
+					.tabpressed .svg-map path:focus {
+						outline: dashed 1px #000;
+					}
+					.svg-map .label {
+						pointer-events: none;
+						font-size: 23px;
+						fill: #787878;
+					}
+					.svg-map .label.active {
+						font-size: 30px;
+						font-weight: 800;
+						text-align: center;
+						fill: #000;
+						letter-spacing: 0.5px;
+						-webkit-filter: url(#txtshadow);
+								filter: url(#txtshadow);
+					}
+					// area {
+					// 	display: inline-block;
+					// 	width: 12px;
+					// 	height: 12px;
+					// 	background-color: #39A0FF;
+					// 	border-radius: 50%;
+					// 	&.active {
+					// 		position: relative;
+					// 		background-color: #FF327C;
+					// 		outline: 6px solid rgba(200, 60, 60, 0.3);
+							
+					// 	}
+					// }
 				}
 			}
 		}
@@ -644,6 +712,7 @@
 			position:absolute; 
 			width:100%; 
 			height:100%;
+			border: 0;
 		}
 	}
 	.videoSet .video-etc {
@@ -1065,7 +1134,7 @@
 	}
 }
 
-//국고채권 발행 및 환매
+//국고채권 발행 및 환매, 경제교육
 .reference2 {
 	margin-top: 80px;
 	padding: 45px 120px;
@@ -1084,7 +1153,8 @@
 		border-top: 1px solid $black;
 		padding-top: 24px;
 		position: relative;
-		ul {
+		//국고채권 발행 및 환매
+		ul.list-type1 {
 			position: relative;
 			display: flex;
 			flex-wrap: wrap;
@@ -1180,6 +1250,153 @@
 				}
 			}
 		}
+		//경제교육
+		.tablist2 {
+			position: absolute;
+			top: -60px;
+			right: 70px;
+			@include breakpoint($sm){
+				position: static;
+				margin-bottom: 20px;
+			}
+			button {
+				padding: 5px 15px;
+				color: #666;
+				border: 1px solid #C2C2C2;
+				border-radius: 6px;
+				background-color: #fff;
+				&[aria-selected="true"] {
+					color: #fff;
+					background-color: $color-point;
+					border: 1px solid $color-point;
+				}
+			}
+		}
+		.tab-content {
+			.con {
+				display: none;
+			}
+		}
+		ul.list-type2 {
+			position: relative;
+			display: flex;
+			flex-wrap: wrap;
+			padding-left: calc(50% + 24px);
+			margin-top: -22px;
+			@include breakpoint($sm){
+				padding-left: 0;
+				& + .more {
+					top: -42px;
+				}
+			}
+			li {
+				padding: 20px 0;
+				width: 100%;
+				border-bottom: 1px solid #B1C1E7;
+				a {
+					display: flex;
+					justify-content: space-between;
+					@include breakpoint($sm){
+						display: block;
+					}
+					.img {
+						position: relative;
+						width: 220px;
+						max-width: 100%;
+						display: block;
+						padding-top: 21.6%;
+						background-position: 50%;
+						background-repeat: no-repeat;
+						background-size: cover;
+						border-radius: 8px;
+						@include breakpoint($sm){
+							width: 100%;
+							padding-top: 56.2%;
+							margin-bottom: 10px;
+						}
+						&::before {
+							content: "";
+							display: inline-block;
+							width: 34px;
+							height: 34px;
+							background: url(/static/portal/img/submain/ico-play_circle.png) no-repeat;
+							background-size: 34px;
+							position: absolute;
+							top: 50%;
+							left: 50%;
+							margin-left: -17px;
+							margin-top: -17px;
+						}
+					}
+					.s {
+						width: calc(100% - 220px - 24px);
+						padding: 15px 0;
+					}
+					.t {						
+						color: $color-point;
+						display: inline-block;
+					}
+					.title {
+						width: 100%;
+						display: block;
+						overflow: hidden;
+						font-size: rem(18);
+						height: 52px;
+						margin: 8px 0 12px;
+						@include breakpoint($sm){
+							height: auto;
+							max-height: 52px;
+						}
+					}
+					.date {
+						display: block;
+						color: #666;
+						&::before {
+							@include font-ico-outline('\e8b5');
+							font-size: 20px;
+							color: #666;
+							margin-right: 4px;
+						}
+					}
+				}				
+				&:first-child {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: calc(50% - 24px);
+					border-bottom: none;
+					@include breakpoint($sm){
+						position: static;
+						width: 100%;
+					}
+					a {
+						display: block;
+						.img {
+							width: 100%;
+							padding-top: 56.2%;
+							margin-bottom: 24px;
+							&::before {
+								width: 70px;
+								height: 70px;
+								margin-left: -35px;
+								margin-top: -35px;
+								background-size: 70px;
+							}
+						}
+						.t {
+							font-size: 14px;
+							color: #fff;
+							background-color: $color-point;
+							border-radius: 3px;
+							padding: 3px 8px;
+						}
+						.title {
+							
+						}
+					}									
+				}
+			}
+		}
 	}
 	.more {
 		@include breakpoint($lg){
@@ -1265,21 +1482,35 @@
 		}
 	}
 	&.type2 {
-		.info {
-			text-align: center;
-			color: $color-point;
-			display: block;
-			border-radius: 30px;
-			background-color: #F2F6FA;
-			padding: 6px;
-			span {
-				display: block;
+		ul {
+			@include breakpoint($sm){
+				max-width: 500px;
+				margin: 0 auto;
 			}
-		}
-		.txt {
-			height: 140px;
-			margin-top: 16px;
-		}
+			li {
+				@include breakpoint($mdw){
+					width: calc(50% - 10px);
+				}
+				@include breakpoint($sm){
+					width: 100%;
+				}
+				.info {
+					text-align: center;
+					color: $color-point;
+					display: block;
+					border-radius: 30px;
+					background-color: #F2F6FA;
+					padding: 6px;
+					span {
+						display: block;
+					}
+				}
+				.txt {
+					height: 140px;
+					margin-top: 16px;
+				}
+			}
+		}		
 	}
 }
 
@@ -1376,6 +1607,63 @@
 				&.ico8 {
 					&::before {
 						background-image: url(/static/portal/img/submain/ico_6_8.png);
+					}
+				}
+
+				//한국은행
+				&.ico2_01 {
+					&::before {
+						background-image: url(/static/portal/img/submain/ico_9_1.png);
+					}
+				}
+				&.ico2_02 {
+					&::before {
+						background-image: url(/static/portal/img/submain/ico_9_2.png);
+					}
+				}
+				&.ico2_03 {
+					&::before {
+						background-image: url(/static/portal/img/submain/ico_9_3.png);
+					}
+				}
+				&.ico2_04 {
+					&::before {
+						background-image: url(/static/portal/img/submain/ico_9_4.png);
+					}
+				}
+				&.ico2_05 {
+					&::before {
+						background-image: url(/static/portal/img/submain/ico_9_5.png);
+					}
+				}
+				&.ico2_06 {
+					&::before {
+						background-image: url(/static/portal/img/submain/ico_9_6.png);
+					}
+				}
+				&.ico2_07 {
+					&::before {
+						background-image: url(/static/portal/img/submain/ico_9_7.png);
+					}
+				}
+				&.ico2_08 {
+					&::before {
+						background-image: url(/static/portal/img/submain/ico_9_8.png);
+					}
+				}
+				&.ico2_09 {
+					&::before {
+						background-image: url(/static/portal/img/submain/ico_9_9.png);
+					}
+				}
+				&.ico2_10 {
+					&::before {
+						background-image: url(/static/portal/img/submain/ico_9_10.png);
+					}
+				}
+				&.ico2_11 {
+					&::before {
+						background-image: url(/static/portal/img/submain/ico_9_11.png);
 					}
 				}
 			}
@@ -1571,25 +1859,147 @@
 
 //경제교육
 .notice-list {
-	@include h2();
+	margin-top: 80px;
+	background-color: #FAFAFA;
+	padding: 20px 40px;
 	@include breakpoint($lg){
 		display: flex;
 		justify-content: space-between;
+		padding: 40px 120px;
 	}
-	ul {
-		border-top: 1px solid $black;
-		li {
-			border-bottom: 1px solid #B1C1E7;
-			a {
-				display: block;
-				padding: 15px 0;
-				.title {
-					font-size: rem(18);
-					color: $black;
+	@include breakpoint($sm){
+		padding: 20px 15px;
+	}
+	.notice {
+		@include breakpoint($lg){
+			width: calc(50% - 30px);
+		}
+		@include h2();
+		h2 {
+			margin-bottom: 0 !important;
+		}
+		ul {
+			border-top: 1px solid $black;
+			li {
+				border-bottom: 1px solid #B1C1E7;
+				a {
+					display: block;
+					padding: 18px 0;
+					@include breakpoint($sm){
+						padding: 10px 0;
+					}
+					.title {
+						font-size: rem(18);
+						color: $black;
+					}
+					.date {
+						color: #666;
+						font-size: 14px;
+					}
 				}
-				.date {
-					color: #666;
-					font-size: 14px;
+			}
+		}
+		&.type2 {
+			a {
+				display: flex;
+				justify-content: space-between;
+			}
+			.t {
+				color: $color-point;
+				width: 155px;
+			}
+			.title {
+				width: calc(100% - 155px - 10px);
+			}
+		}
+		@include breakpoint($sm){
+			& + .notice {
+				margin-top: 30px;
+			}
+		}
+	}	
+}
+.edu-go {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin: 70px 0;
+	@include breakpoint($smd){
+		max-width: 693px;
+		margin: 0 auto;
+	}
+	li {
+		width: calc(25% - 30px);
+		@include breakpoint($smd){
+			width: calc(50% - 5px);
+			margin: 5px 0;
+		}
+		@include breakpoint($xs){
+			width: 100%;
+			margin: 5px 0;
+		}
+		a {
+			padding: 18px 20px;
+			display: block;
+			border-radius: 8px;
+			border: 1px solid #E6E6E6;
+			&.ico1 {
+				background: url(/static/portal/img/submain/img_edugo1.png) no-repeat;
+			}
+			&.ico2 {
+				background: url(/static/portal/img/submain/img_edugo2.png) no-repeat;
+			}
+			&.ico3 {
+				background: url(/static/portal/img/submain/img_edugo3.png) no-repeat;
+			}
+			&.ico4 {
+				background: url(/static/portal/img/submain/img_edugo4.png) no-repeat;
+			}
+			@include breakpoint($smd){
+				background-position: 60% 50% !important;
+			}
+			strong {
+				display: block;
+				margin-bottom: 18px;
+				color: #233B76;
+				font-size: rem(20);
+				font-weight: 500;
+			}
+			.go {
+				color: $point;
+				font-weight: 500;
+				&::after {
+					@include font-ico-outline('\e5cc');
+					font-size: 18px;
+					color: $point;
+				}
+			}
+		}
+	}
+	//한국은행
+	&.type2 {
+		li {
+			width: calc(25% - 15px);
+			@include breakpoint($smd){
+				width: calc(50% - 5px);
+				margin: 5px 0;
+			}
+			@include breakpoint($xs){
+				width: 100%;
+				margin: 5px 0;
+			}
+			a {	
+				&.ico5 {
+					background: url(/static/portal/img/submain/img_bank1.png) no-repeat;
+				}
+				&.ico6 {
+					background: url(/static/portal/img/submain/img_bank2.png) no-repeat;
+				}
+				&.ico7 {
+					background: url(/static/portal/img/submain/img_bank3.png) no-repeat;
+				}
+				&.ico8 {
+					background: url(/static/portal/img/submain/img_bank4.png) no-repeat;
 				}
 			}
 		}
