@@ -2462,6 +2462,10 @@ width: 1280px;
 max-width: 100%;
 margin: 0 auto;
 }
+.videoSet .video {
+display: block;
+overflow: hidden;
+}
 .videoSet .video .vjs-icon-placeholder:before {
 font-size: 24px;
 margin-top: 8px;
@@ -2625,6 +2629,7 @@ margin: 0 0 1px 5px;
 }
 .videoSet .subtitle,
 .videoSet .detail {
+clear: both;
 position: relative;
 color: #4D4D4D;
 border: 1px solid #E5E5E5;
@@ -7888,6 +7893,58 @@ margin-top: 3px;
 .conZone > ul.type2 strong {
 width: 124px;
 }
+#main-container .conZone h3 {
+color: #002A99;
+font-size: 1.75rem;
+font-weight: 500;
+padding-left: 0;
+}
+#main-container .conZone h3::before {
+display: none;
+}
+.conZone .serList ul {
+display: flex;
+justify-content: flex-start;
+margin: 0 -12px;
+}
+.conZone .serList ul li {
+width: 25%;
+padding: 0 12px;
+}
+.conZone .serList ul li a {
+display: block;
+padding: 10px;
+border: 1px solid #E6E6E6;
+border-radius: 8px;
+}
+.conZone .serList ul li a .img {
+display: block;
+padding-top: 68%;
+background-repeat: no-repeat;
+background-position: 50%;
+background-size: cover;
+margin-bottom: 7px;
+}
+.conZone .serList ul li a .txt {
+color: #1A1A1A;
+overflow: hidden;
+text-overflow: ellipsis;
+display: block;
+display: -webkit-box;
+-webkit-line-clamp: 2;
+-webkit-box-orient: vertical;
+height: 48px;
+padding: 0 5px;
+}
+.ie .conZone .serList ul li a .txt {
+display: block;
+height: 32px;
+overflow: hidden;
+}
+.conZone .serList ul li a:hover {
+border: 1px solid #1454FF;
+outline: 1px solid #1454FF;
+}
 
 .boxGal .boxGalbox {
 overflow: hidden;
@@ -8149,7 +8206,6 @@ width: 100%;
 .bokHead .bankMap {
 width: 38%;
 margin-left: 2%;
-font-size: 1.125rem;
 }
 @media (max-width: 749px) {
 .bokHead .bankMap {
@@ -8158,63 +8214,51 @@ margin-left: 0;
 margin-top: 20px;
 }
 }
-.bokHead .bankMap.type dt {
-font-weight: 600;
-color: #131547;
-margin-top: 5px;
+.bokHead .bankMap .map {
+height: 720px;
 }
 .bokHead .bankMap dt, .bokHead .bankMap dd {
-padding-left: 25px;
+padding-left: 30px;
+}
+.bokHead .bankMap dd + dt {
+margin-top: 18px;
+}
+.bokHead .bankMap dd ul li + li {
+margin-top: 5px;
+}
+.bokHead .bankMap dd ul li.point {
+color: #1454FF;
+}
+.bokHead .bankMap dd ul li.point::before {
+background-color: #1454FF;
 }
 .bokHead .bankMap dt {
+color: #1A1A1A;
+position: relative;
 margin-top: 10px;
 }
 .bokHead .bankMap dt::before {
+content: "";
+display: inline-block;
+vertical-align: middle;
 font-size: 16px;
 position: absolute;
 top: 0;
 left: 0;
-width: 22px;
-height: 22px;
-line-height: 22px;
+width: 24px;
+height: 24px;
+line-height: 24px;
 text-align: center;
-margin: 3px 3px 0 0;
-font-size: 20px;
+margin: 1px 3px 0 0;
+font-size: 24px;
 }
-.bokHead .bankMap .pic {
-display: none;
+.bokHead .bankMap dt.ad:before {
+background: url(/static/portal/img/sub/zone/ico-ad.png);
 }
-.bokHead .bankMap .ad {
-position: relative;
+.bokHead .bankMap dt.ph:before {
+background: url(/static/portal/img/sub/zone/ico-call.png);
 }
-.bokHead .bankMap .ad:before {
-content: "\e0c8";
-font-family: "Material Icons Outlined";
-font-weight: normal;
-font-style: normal;
-display: inline-block;
-line-height: 1;
-vertical-align: text-bottom;
-text-transform: none;
-letter-spacing: normal;
-word-wrap: normal;
-white-space: nowrap;
--webkit-font-smoothing: antialiased;
-text-rendering: optimizeLegibility;
--moz-osx-font-smoothing: grayscale;
-font-feature-settings: "liga";
-}
-.bokHead .bankMap .ph {
-position: relative;
-}
-.bokHead .bankMap .ph:before {
-content: "\e0b0";
-font-family: "Material Icons";
-}
-.bokHead .bankMap .fx {
-position: relative;
-}
-.bokHead .bankMap .fx:before {
+.bokHead .bankMap dt.fx:before {
 content: "\ead8";
 font-family: "Material Icons Outlined";
 font-weight: normal;
@@ -8231,21 +8275,28 @@ text-rendering: optimizeLegibility;
 -moz-osx-font-smoothing: grayscale;
 font-feature-settings: "liga";
 }
-.bokHead .bankMap .em {
-position: relative;
+.bokHead .bankMap dt.em:before {
+content: "\e158";
+font-family: "Material Icons Outlined";
+font-weight: normal;
+font-style: normal;
+display: inline-block;
+line-height: 1;
+vertical-align: text-bottom;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+font-feature-settings: "liga";
 }
-.bokHead .bankMap .em:before {
-content: "\f003";
-color: #fff;
-font-size: 13px;
-position: absolute;
-top: 0;
-left: 0;
-border-radius: 30px;
-background: #3B63C4;
-width: 20px;
-height: 20px;
-text-align: center;
+.bokHead .bankMap dt.way::before {
+background: url(/static/portal/img/sub/zone/ico-way.png);
+}
+.bokHead .bankMap .pic {
+display: none;
 }
 
 .serType p {

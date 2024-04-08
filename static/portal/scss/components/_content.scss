@@ -1754,6 +1754,53 @@ p.subject {
 			}
 		}
 	}
+	//화폐전시실
+	h3 {
+		#main-container & {
+			color: #002A99;
+			font-size: rem(28);
+			font-weight: 500;
+			padding-left: 0;
+			&::before {
+				display: none;
+			}
+		}		
+	}
+	.serList {
+		ul {
+			display: flex;
+			justify-content: flex-start;
+			margin: 0 -12px;
+			li {
+				width: 25%;
+				padding: 0 12px;
+				a {
+					display: block;
+					padding: 10px;
+					border: 1px solid #E6E6E6;
+					border-radius: 8px;
+					.img {
+						display: block;
+						padding-top: 68%;
+						background-repeat: no-repeat;
+						background-position: 50%;
+						background-size: cover;
+						margin-bottom: 7px;
+					}
+					.txt {
+						color: $black;
+						@include line-clamp(2);
+						height: 48px;
+						padding: 0 5px;
+					}
+					&:hover {
+						border: 1px solid #1454FF;
+						outline: 1px solid #1454FF;
+					}
+				}
+			}
+		}
+	}
 }
 
 //지역본부 > 화폐전시실
@@ -1896,15 +1943,13 @@ p.subject {
 		.map{width:100%;}
 		.bankMap{width:100%;margin:20px 0 0 0;}
 	}
-	.map{
-	
+	.map {	
 		width:60%;
 		@include breakpoint($sm){
 			width: 100%;
 		}
 	}
-	.bankMap{
-	
+	.bankMap {	
 		width:38%;
 		margin-left:2%;
 		@include breakpoint($sm){
@@ -1912,59 +1957,87 @@ p.subject {
 			margin-left: 0;
 			margin-top: 20px;
 		}
-		font-size: rem(18);
-		&.type{
-			dt{
-				font-weight:600;color: $point;margin-top:5px;
-			}
+		//font-size: rem(18);
+		// &.type{
+		// 	dt{
+				
+		// 		color: $point;
+		// 		margin-top:5px;
+		// 	}
+		// }
+		.map {
+			height: 720px;
 		}
 		dt, dd{
-			padding-left:25px;
+			padding-left: 30px;
+		}
+		dd {
+			& + dt {
+				margin-top: 18px;
+			}
+			ul {
+				li {
+					& + li {
+						margin-top: 5px;
+					}
+					&.point {
+						color: #1454FF;
+						&::before {
+							background-color: #1454FF;
+						}
+					}
+				}
+			}
 		}
 		dt{
-			margin-top:10px;
+			color: $black;
+			position: relative;
+			margin-top: 10px;
 			&::before {
+				content: "";
+				display: inline-block;
+				vertical-align: middle;
 				font-size: 16px;
 				position:absolute;
 				top:0;
 				left:0;
-				width: 22px;
-				height: 22px;
-				line-height: 22px;
+				width: 24px;
+				height: 24px;
+				line-height: 24px;
 				text-align:center;
-				margin: 3px 3px 0 0;
-				font-size: 20px;
+				margin: 1px 3px 0 0;
+				font-size: 24px;
+			}
+			&.ad{
+				&:before{
+					background: url(/static/portal/img/sub/zone/ico-ad.png);
+				}
+			}
+			&.ph{
+				&:before{
+					background: url(/static/portal/img/sub/zone/ico-call.png);
+				}
+			}
+			&.fx{
+				&:before{
+					@include font-ico-outline('\ead8');
+				}
+			}
+			&.em{
+				&:before{
+					@include font-ico-outline('\e158');
+				}
+			}
+			&.way {
+				&::before {
+					background: url(/static/portal/img/sub/zone/ico-way.png);
+				}
 			}
 		}
 		.pic {
 			display: none;
 		}
-		.ad{
-			position:relative;
-			&:before{
-				@include font-ico-outline('\e0c8');
-				
-			}
-		}
-		.ph{
-			position:relative;
-			&:before{
-				@include font-ico('\e0b0');
-			}
-		}
-		.fx{
-			position:relative;
-			&:before{
-				@include font-ico-outline('\ead8');
-			}
-		}
-		.em{
-			position:relative;
-			&:before{
-				content:"\f003";
-				color:#fff;font-size:13px;position:absolute;top:0;left:0;border-radius: 30px;background:#3B63C4;width:20px;height:20px;text-align:center;
-			}
-		}
+		
 	}
 }
 

@@ -3271,6 +3271,7 @@ margin: 0 5px 0 0;
 }
 
 .help3 {
+display: block;
 position: relative;
 padding-left: 30px;
 color: #4D4D4D;
