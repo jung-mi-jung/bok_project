@@ -62,6 +62,7 @@ underline-top | underline-bottom | underline-left-right | underline-right-left |
 	}
 	}
 }
+
 @mixin a-hover($color){
 	position: relative;
 	&::before{
@@ -103,10 +104,18 @@ underline-top | underline-bottom | underline-left-right | underline-right-left |
 
 
 .a-hover {
-	color: #3B63C4;
+	color: inherit;
 	&:hover {
 		@include breakpoint($lg) {
 			@include a-hover(#3B63C4);
+		}
+	}
+
+	&.colorBk {
+		&:hover {
+			@include breakpoint($lg) {
+				@include a-hover(#1a1a1a);
+			}
 		}
 	}
 }

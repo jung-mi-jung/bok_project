@@ -4958,6 +4958,13 @@ border-bottom: 1px solid #89A1DC;
 border-right: 1px solid #89A1DC;
 text-align: center;
 box-sizing: border-box;
+cursor: grab;
+}
+@media (max-width: 749px) {
+.tab-list .swiper a.swiper-slide {
+flex: none;
+max-width: 180px;
+}
 }
 .tab-list .swiper a.swiper-slide:first-of-type {
 border-left: 1px solid #89A1DC;
@@ -6885,7 +6892,7 @@ display: flex;
 justify-content: center;
 width: 100%;
 max-width: 1280px;
-gap: 0 16px;
+gap: 0 8px;
 }
 .ognztn ol .row::before {
 content: "";
@@ -6893,7 +6900,7 @@ display: block;
 position: absolute;
 left: 50%;
 top: 0;
-width: 85%;
+width: 84%;
 max-width: 1080px;
 height: 1px;
 background: #89A1DC;
@@ -6903,7 +6910,7 @@ transform: translateX(-50%);
 .ognztn ul {
 position: relative;
 display: flex;
-gap: 0 16px;
+gap: 0 8px;
 margin-top: 40px;
 flex: 1;
 }
@@ -6976,7 +6983,7 @@ content: "";
 display: block;
 position: absolute;
 width: 1px;
-height: calc(100% - 5px);
+height: 100%;
 top: -20px;
 left: -15px;
 background: #89A1DC;
@@ -7007,6 +7014,10 @@ transform: translateY(-50%);
 height: 40px;
 font-size: 0.875rem;
 padding: 6px;
+}
+.ognztn ul li button {
+font-size: 12px;
+height: 39px;
 }
 }
 .department > div {
@@ -7123,9 +7134,15 @@ grid-template-columns: repeat(1, 1fr);
 gap: 12px 0;
 }
 }
-/* 팝업 */
+/* 이메일, 연락처 노출 팝업 */
 .infoPop .modal-dialog {
 width: 520px;
+}
+@media (max-width: 749px) {
+.infoPop .modal-dialog {
+width: 100%;
+max-width: 360px;
+}
 }
 .infoPop p {
 font-size: 1rem;
@@ -7205,12 +7222,18 @@ font-weight: 600;
 color: #3B63C4;
 }
 
+/* 프로필 상세 팝업 */
 .profilePop > div {
 position: relative;
 height: 100%;
 transform: translateX(200%);
 transition: transform 0.4s;
 z-index: 502;
+}
+@media (max-width: 749px) {
+.profilePop > div {
+transform: translateX(100%);
+}
 }
 .profilePop.in > div {
 transform: translateX(0);
@@ -7263,15 +7286,15 @@ z-index: 2;
 }
 .profilePop .modal-body {
 padding: 0;
-height: 100%;
+min-height: 100%;
 align-items: stretch;
 }
-.profilePop .modal-body .left {
+.profilePop .left {
 width: 276px;
 padding: 48px 48px;
 background: #FAFAFA;
 }
-.profilePop .modal-body .left .profile-img {
+.profilePop .left .profile-img {
 display: block;
 width: 180px;
 height: 180px;
@@ -7281,39 +7304,39 @@ background-position: center center;
 background-size: cover;
 background-repeat: no-repeat;
 }
-.profilePop .modal-body .left .profile-btn {
+.profilePop .left .profile-btn {
 display: flex;
 justify-content: center;
 margin: 20px 0 16px;
 padding-top: 24px;
 border-top: 1px solid #E5E5E5;
 }
-.profilePop .modal-body .left .profile-btn button {
+.profilePop .left .profile-btn button {
 padding: 0 16px;
 }
-.profilePop .modal-body .left .profile-btn button:nth-of-type(2) {
+.profilePop .left .profile-btn button:nth-of-type(2) {
 border-left: 1px solid #E5E5E5;
 }
-.profilePop .modal-body .left .name {
+.profilePop .left .name {
 font-size: 1.5rem;
 margin-top: 12px;
 margin-bottom: 20px;
 color: #1A1A1A;
 text-align: center;
 }
-.profilePop .modal-body .left .name span {
+.profilePop .left .name span {
 display: block;
 font-size: 1rem;
 margin-top: 2px;
 font-weight: 500;
 color: #3B63C4;
 }
-.profilePop .modal-body .left .position {
+.profilePop .left .position {
 position: relative;
 color: #4D4D4D;
 padding-left: 20px;
 }
-.profilePop .modal-body .left .position::before {
+.profilePop .left .position::before {
 content: "";
 display: inline-block;
 position: absolute;
@@ -7324,29 +7347,24 @@ height: 5px;
 background: #4D4D4D;
 border-radius: 50%;
 }
-.profilePop .modal-body .left .profile-etc a {
+.profilePop .left .profile-etc a {
 width: 100%;
 font-size: 1rem;
 margin: 4px 0;
 }
-.profilePop .modal-body .right {
+.profilePop .right {
 width: calc(100% - 276px);
 padding: 50px 50px;
 background: #fff;
 }
-.profilePop .modal-body .right .bu-dot {
-padding-left: 6px;
+.profilePop .right .bu-dot {
+padding-left: 20px;
 }
-.profilePop .modal-body .right .bu-dot li {
-margin: 6px 0;
-line-height: 1.4;
+.profilePop .right .bu-dot p, .profilePop .right .bu-dot div {
+white-space: pre-line;
+line-height: 1.8;
 }
-.profilePop .modal-body .right .bu-dot li::before {
-width: 4px;
-height: 4px;
-background: #4d4d4d;
-}
-.profilePop .modal-body .right .bu-dot + h5 {
+.profilePop .right .bu-dot + h5 {
 margin-top: 30px;
 }
 
@@ -7357,20 +7375,100 @@ width: 100%;
 .profilePop .modal-body {
 flex-direction: column;
 }
-.profilePop .modal-body .left {
+.profilePop .left {
 width: 100%;
 padding: 20px 20px;
 }
-.profilePop .modal-body .left .profile {
+.profilePop .left .profile {
 display: flex;
 flex-direction: column;
 align-items: center;
 }
-.profilePop .modal-body .right {
+.profilePop .right {
 width: 100%;
 padding: 20px 20px;
 }
 }
+/* 원장 약력 */
+.director .left {
+width: 276px;
+padding: 48px 48px;
+background: #FAFAFA;
+}
+.director .left .profile-img {
+display: block;
+width: 180px;
+height: 180px;
+border-radius: 50%;
+background-color: #EBEBEA;
+background-position: center center;
+background-size: cover;
+background-repeat: no-repeat;
+}
+.director .left .profile-btn {
+display: flex;
+justify-content: center;
+margin: 20px 0 16px;
+padding-top: 24px;
+border-top: 1px solid #E5E5E5;
+}
+.director .left .profile-btn button {
+padding: 0 16px;
+}
+.director .left .profile-btn button:nth-of-type(2) {
+border-left: 1px solid #E5E5E5;
+}
+.director .left .name {
+font-size: 1.5rem;
+margin-top: 12px;
+margin-bottom: 20px;
+color: #1A1A1A;
+text-align: center;
+}
+.director .left .name span {
+display: block;
+font-size: 1rem;
+margin-top: 2px;
+font-weight: 500;
+color: #3B63C4;
+}
+.director .left .position {
+position: relative;
+color: #4D4D4D;
+padding-left: 20px;
+}
+.director .left .position::before {
+content: "";
+display: inline-block;
+position: absolute;
+left: 0;
+top: 6px;
+width: 5px;
+height: 5px;
+background: #4D4D4D;
+border-radius: 50%;
+}
+.director .left .profile-etc a {
+width: 100%;
+font-size: 1rem;
+margin: 4px 0;
+}
+.director .right {
+width: calc(100% - 276px);
+padding: 50px 50px;
+background: #fff;
+}
+.director .right .bu-dot {
+padding-left: 20px;
+}
+.director .right .bu-dot p, .director .right .bu-dot div {
+white-space: pre-line;
+line-height: 1.8;
+}
+.director .right .bu-dot + h5 {
+margin-top: 30px;
+}
+
 .fc1 {
 color: #118DB4;
 font-weight: 500;
@@ -7611,629 +7709,9 @@ display: none;
 }
 }
 /* 상설전시 상세*/
-.exhbt {
-position: relative;
-margin: 30px auto;
-}
-.exhbt .swiper-slide img {
-display: block;
-max-width: 600px;
-width: 100%;
-margin: 0 auto;
-}
-.exhbt .swiper__ctrl {
-position: absolute;
-display: flex;
-top: 50%;
-left: 50%;
-max-width: 700px;
-width: 100%;
-justify-content: space-between;
-transform: translate(-50%, -50%);
-z-index: 1;
-}
-.exhbt .swiper__ctrl button {
-margin: 0 5px;
-background-color: #fff;
-border-radius: 50%;
-}
-@media (max-width: 749px) {
-.exhbt .swiper__ctrl button {
-transform: scale(0.8);
-}
-}
-.exhbt .swiper__ctrl button.swiper-button-disabled {
-opacity: 0.4;
-}
-.exhbt .swiper__ctrl button.content-prev:hover > i, .exhbt .swiper__ctrl button.content-prev:focus > i {
-background-position: 0px -68px;
-}
-.exhbt .swiper__ctrl button.content-next:hover > i, .exhbt .swiper__ctrl button.content-next:focus > i {
-background-position: -136px 0px;
-}
-.exhbt-imglist {
-display: flex;
-align-items: center;
-flex-wrap: wrap;
-gap: 0 12px;
-margin-bottom: 60px;
-}
-.exhbt-imglist li {
-text-align: center;
-}
-.exhbt-imglist span {
-display: block;
-font-size: 14px;
-}
-
-.bokHead {
-background: #f4f5f7;
-padding: 15px;
-overflow: hidden;
-}
-@media (max-width: 749px) {
-.bokHead .map {
-width: 100%;
-}
-.bokHead .bankMap {
-width: 100%;
-margin: 20px 0 0 0;
-}
-}
-.bokHead .map {
-float: left;
-width: 60%;
-}
-@media (max-width: 749px) {
-.bokHead .map {
-width: 100%;
-}
-}
-.bokHead .bankMap {
-float: left;
-width: 38%;
-margin-left: 2%;
-font-size: 1.125rem;
-}
-@media (max-width: 749px) {
-.bokHead .bankMap {
-width: 100%;
-margin-left: 0;
-margin-top: 20px;
-}
-}
-.bokHead .bankMap.type dt {
-font-weight: 600;
-color: #131547;
-margin-top: 5px;
-}
-.bokHead .bankMap dt, .bokHead .bankMap dd {
-padding-left: 25px;
-}
-.bokHead .bankMap dt {
-margin-top: 10px;
-}
-.bokHead .bankMap dt::before {
-font-size: 16px;
-color: #fff;
-position: absolute;
-top: 0;
-left: 0;
-border-radius: 30px;
-background: #3B63C4;
-width: 22px;
-height: 22px;
-line-height: 22px;
-text-align: center;
-margin: 3px 3px 0 0;
-}
-.bokHead .bankMap .pic img {
-display: inline-block;
-border: 3px solid #fff;
-}
-.bokHead .bankMap .ad {
-position: relative;
-}
-.bokHead .bankMap .ad:before {
-content: "\e0c8";
-font-family: "Material Icons Outlined";
-font-weight: normal;
-font-style: normal;
-display: inline-block;
-line-height: 1;
-vertical-align: text-bottom;
-text-transform: none;
-letter-spacing: normal;
-word-wrap: normal;
-white-space: nowrap;
--webkit-font-smoothing: antialiased;
-text-rendering: optimizeLegibility;
--moz-osx-font-smoothing: grayscale;
-font-feature-settings: "liga";
-}
-.bokHead .bankMap .ph {
-position: relative;
-}
-.bokHead .bankMap .ph:before {
-content: "\e0b0";
-font-family: "Material Icons Outlined";
-font-weight: normal;
-font-style: normal;
-display: inline-block;
-line-height: 1;
-vertical-align: text-bottom;
-text-transform: none;
-letter-spacing: normal;
-word-wrap: normal;
-white-space: nowrap;
--webkit-font-smoothing: antialiased;
-text-rendering: optimizeLegibility;
--moz-osx-font-smoothing: grayscale;
-font-feature-settings: "liga";
-}
-.bokHead .bankMap .fx {
-position: relative;
-}
-.bokHead .bankMap .fx:before {
-content: "\ead8";
-font-family: "Material Icons Outlined";
-font-weight: normal;
-font-style: normal;
-display: inline-block;
-line-height: 1;
-vertical-align: text-bottom;
-text-transform: none;
-letter-spacing: normal;
-word-wrap: normal;
-white-space: nowrap;
--webkit-font-smoothing: antialiased;
-text-rendering: optimizeLegibility;
--moz-osx-font-smoothing: grayscale;
-font-feature-settings: "liga";
-}
-.bokHead .bankMap .em {
-position: relative;
-}
-.bokHead .bankMap .em:before {
-content: "\f003";
-color: #fff;
-font-size: 13px;
-position: absolute;
-top: 0;
-left: 0;
-border-radius: 30px;
-background: #3B63C4;
-width: 20px;
-height: 20px;
-text-align: center;
-}
-
-.posMap .m9 {
-width: 75%;
-padding: 10px;
-}
-.posMap .m9 .mr20 {
-margin-bottom: 20px;
-}
-.posMap .m9 .h3 {
-margin-bottom: 5px;
-font-size: 1.25rem;
-font-weight: 500;
-color: #222;
-}
-.posMap .m3 {
-width: 25%;
-padding: 10px;
-}
-.posMap .m3 .ratioSet {
-width: 100%;
-height: 0;
-position: relative;
-display: inline-block;
-z-index: 1;
-}
-.posMap .m3 .ratioSet.ratio-4x3 {
-padding-bottom: 59%;
-}
-.posMap .m3 .ratioSet .ratioObject {
-position: absolute;
-top: 0;
-right: 0;
-bottom: 0;
-left: 0;
-width: 100%;
-height: 100%;
-z-index: 100;
-background-size: cover;
-background-repeat: no-repeat;
-background-position: 50% 50%;
-z-index: 1;
-border: 1px solid #dee0e6;
-}
-
-.info_icon > div {
-position: relative;
-padding-left: 77px;
-}
-@media (max-width: 749px) {
-.info_icon > div {
-padding-left: 0;
-}
-}
-.info_icon > div > i {
-position: absolute;
-display: inline-block;
-top: 0;
-left: 0;
-width: 60px;
-height: 60px;
-font-size: 30px;
-background-color: #f2f3f7;
-border-radius: 50px;
-color: #5b79b9;
-text-align: center;
-vertical-align: top;
-background-size: cover;
-}
-@media (max-width: 749px) {
-.info_icon > div > i {
-display: none;
-}
-}
-.info_icon > div > i::before {
-content: "";
-display: block;
-position: absolute;
-left: 50%;
-top: 50%;
-transform: translate(-50%, -50%);
-width: 30px;
-height: 30px;
-font-size: 30px;
-line-height: 60px;
-background-size: cover;
-color: #5b79b9;
-}
-.info_icon > div .ti-layout-slider-alt::before {
-background-image: url(/static/museum/img/layout-slider-alt.svg);
-background-position: center center;
-background-repeat: no-repeat;
-}
-.info_icon > div .ti-info-alt::before {
-background-image: url(/static/museum/img/info-alt.svg);
-background-position: center center;
-background-repeat: no-repeat;
-}
-.info_icon > div .ti-blackboard::before {
-background-image: url(/static/museum/img/blackboard.svg);
-background-position: center center;
-background-repeat: no-repeat;
-}
-.info_icon > div .ti-bookmark-alt::before {
-background-image: url(/static/museum/img/bookmark-alt.svg);
-background-position: center center;
-background-repeat: no-repeat;
-}
-.info_icon .bu {
-margin-left: 10px;
-}
-.info_icon .bu > li {
-position: relative;
-padding-left: 10px;
-margin-bottom: 5px;
-font-size: 1rem;
-color: #333;
-}
-.info_icon .bu > li::before {
-content: "";
-display: inline-block;
-position: absolute;
-width: 3px;
-height: 3px;
-top: 10px;
-left: 0;
-border-radius: 50%;
-background: #333;
-}
-.info_icon .bu > li strong {
-font-weight: bold;
-}
-.info_icon .bu > li span {
-font-weight: bold;
-}
-.info_icon .bu table td {
-text-align: center;
-}
-@media (max-width: 749px) {
-.info_icon .fc1 {
-display: block;
-font-size: 1.25rem;
-}
-}
-.info_icon .b-go {
-margin-top: 0;
-font-size: 14px !important;
-line-height: 28px;
-}
-.info_icon .ti-new-window {
-position: relative;
-display: inline-flex;
-flex-wrap: wrap;
-align-items: center;
-width: auto;
-height: 60px;
-left: 80px;
-margin-top: 20px;
-padding-left: 30px;
-padding-right: 10px;
-line-height: 60px;
-font-size: 14px;
-background: #f2f3f7;
-border-radius: 50px;
-color: #5b79b9;
-text-align: center;
-vertical-align: top;
-}
-@media (max-width: 749px) {
-.info_icon .ti-new-window {
-left: 0;
-}
-}
-.info_icon .ti-new-window img {
-vertical-align: middle;
-padding-bottom: 3px;
-}
-.info_icon .ti-new-window .fz12 {
-display: inline-flex;
-align-items: center;
-}
-.info_icon .ti-new-window .fz12 i {
-margin-right: 6px;
-}
-.info_icon .row {
-text-align: center;
-}
-
-.intro_museum {
-aspect-ratio: 905/200;
-margin: 0 auto;
-background: #e2e9f8 url("https://www.bok.or.kr/static/imer/img/sub/500531_2.jpg") no-repeat left top;
-background-size: auto 100%;
-}
-.intro_museum .person {
-display: flex;
-align-items: center;
-padding-bottom: 20px;
-padding: 50px 3% 20px 70%;
-aspect-ratio: 905/200;
-box-sizing: border-box;
-}
-.intro_museum .person p {
-position: relative;
-}
-.intro_museum .person p::before {
-content: "";
-background: url("https://www.bok.or.kr/static/portal/img/cts/sub8/200192_3.png") no-repeat left top;
-width: 45px;
-height: 30px;
-position: absolute;
-top: -40px;
-left: 0;
-display: inline-block;
-background-size: 70%;
-}
-.intro_museum .person p::after {
-content: "";
-background: url("https://www.bok.or.kr/static/portal/img/cts/sub8/200192_4.png") no-repeat left bottom;
-width: 45px;
-height: 55px;
-display: inline-block;
-position: absolute;
-bottom: -15px;
-right: 55px;
-background-size: 70%;
-}
-.intro_museum .person p span {
-font-size: 1.5rem;
-color: #5b79b9;
-font-weight: 500;
-margin-bottom: 10px;
-line-height: 30px;
-}
-.intro_museum + .introTxt {
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-margin: 20px auto 0;
-}
-.intro_museum + .introTxt p {
-padding: 2% 3%;
-font-size: 16px;
-}
-
-@media (max-width: 1199px) {
-.intro_museum,
-.intro_museum + .introTxt {
-width: 100%;
-}
-.into_museum .person {
-padding: 50px 3% 20px 58%;
-aspect-ratio: initial;
-}
-}
-@media (max-width: 749px) {
-.intro_museum {
-background-image: none;
-}
-.intro_museum .person {
-background-position: 2% bottom;
-background-size: auto 70%;
-padding: 40px 5%;
-}
-.intro_museum .person p::before {
-top: -30px;
-}
-.intro_museum .person p::after {
-bottom: -28px;
-right: 20px;
-}
-.intro_museum + .introTxt {
-display: block;
-}
-.intro_museum + .introTxt p {
-padding: 2% 0;
-}
-}
-.mhistory li {
-display: flex;
-align-items: flex-start;
-padding: 20px 10px;
-border-top: 1px solid #dee0e6;
-}
-.mhistory li:first-of-type {
-border-top: 0;
-}
-.mhistory .ye {
-color: #5b79b9;
-font-size: 20px;
-width: 63px;
-}
-.mhistory .con {
-overflow: hidden;
-padding-top: 4px;
-}
-.mhistory .con ul > li {
-display: flex;
-}
-.mhistory .con ul > li .mth {
-display: block;
-width: 30px;
-color: #5b79b9;
-font-weight: bold;
-text-align: right;
-padding-right: 10px;
-}
-.mhistory .con ul > li .ex {
-display: block;
-overflow: hidden;
-padding-left: 10px;
-margin-bottom: 5px;
-}
-
 /* 큐레이터와의 대화 */
-.curator {
-max-width: 1280px;
-margin: 0 auto;
-}
-.curator .box4 {
-gap: 0 40px;
-padding: 30px;
-margin-bottom: 80px;
-background-color: gainsboro;
-}
-.curator .badge {
-display: inline-block;
-background-color: #3B63C4;
-color: #fff;
-padding: 4px 12px;
-}
-.curator-desc ul {
-margin-bottom: 20px;
-}
-.curator-desc ul li em {
-font-size: 1.125rem;
-font-weight: 600;
-}
-.curator .bu {
-padding-left: 6px;
-}
-
 /* 건물 소개 */
-.muIntro1 {
-position: relative;
-width: 100%;
-aspect-ratio: 905/410;
-background: url("https://www.bok.or.kr/static/portal/img/cts/sub5/200129_1.jpg") no-repeat;
-background-position: center center;
-background-size: contain;
-}
-.muIntro1 .muEx {
-position: absolute;
-display: flex;
-flex-direction: column;
-align-items: flex-end;
-gap: 10px 0;
-bottom: 20px;
-right: 20px;
-}
-.muIntro1 .muEx .btnSet {
-margin: 20px 0 0;
-text-align: right;
-}
-.muIntro1 .muEx .btnSet button {
-display: flex;
-padding: 0 16px;
-align-items: center;
-gap: 0 8px;
-background: #3B63C4;
-font-size: 1rem;
-}
-.muIntro1 .muEx .btnSet button:hover {
-text-decoration: underline;
-}
-.muIntro1 .muEx .btnSet + img {
-color: rgb(51, 51, 51);
-font-weight: 400;
-vertical-align: baseline;
-border-style: solid;
-border-color: rgb(0, 0, 0);
-background-color: initial;
-}
-
-.introTxtrow p {
-margin: 20px 0;
-}
-
 /* 화폐이야기 */
-.worldMap {
-padding: 26.5px 124.4px 26.21px 123.5px;
-background: #F2F6FA;
-box-sizing: border-box;
-}
-@media (max-width: 1199px) {
-.worldMap {
-padding: 20px 16px;
-}
-}
-@media (max-width: 749px) {
-.worldMap {
-padding: 20px 8px;
-}
-}
-.worldMap g {
-cursor: pointer;
-}
-.worldMap g.on path:not(.mapTxt) {
-fill: #1F4CBA;
-}
-.worldMap g.on path.mapTxt {
-fill: #fff;
-}
-.worldMap g.on circle {
-fill: #FF327C;
-stroke: rgba(255, 50, 124, 0.3);
-stroke-width: 8;
-filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.25));
-}
-.worldMap g.europe {
-order: 1;
-}
-
-.visualImg {
-aspect-ratio: 1340/400;
-background: url(/static/museum/img/visualImg.png) no-repeat center center;
-background-size: contain;
-}
-
 .dbdata {
 padding: 32px 0;
 word-break: break-all;
@@ -9096,6 +8574,12 @@ z-index: 1100;
 display: none;
 overflow: hidden;
 }
+@media (max-width: 749px) {
+.modal {
+width: 100vw;
+height: 100vh;
+}
+}
 .modal.fade.in::before {
 content: "";
 display: block;
@@ -9106,6 +8590,12 @@ z-index: 501;
 top: 0;
 left: 0;
 height: 100%;
+}
+@media (max-width: 749px) {
+.modal.fade.in::before {
+width: 100vw;
+height: 100vh;
+}
 }
 .modal-dialog {
 width: 720px;
@@ -9819,6 +9309,10 @@ margin-right: 0;
 .h-group .email-s {
 display: block;
 }
+}
+
+.w100p {
+display: block;
 }
 
 .ico-no-data {

@@ -126,6 +126,11 @@
 			border-right: 1px solid #89A1DC;
 			text-align: center;
 			box-sizing: border-box;
+			cursor: grab;
+			@include breakpoint($sm) {
+				flex: none;
+				max-width: 180px;
+			}
 			&:first-of-type {
 				border-left: 1px solid #89A1DC;
 			}
@@ -157,20 +162,7 @@
 	}
 	
 }
-// .tab-list2 {
-// 	position: relative;
-// 	margin-top: 20px;
-// 	a {
-// 		padding: 8px;
-// 		min-width: 228px;
-// 		width: auto;
-// 		min-height: 40px;
-// 		box-sizing: border-box;
-// 		@include breakpoint($sm) {
-// 			min-width: 128px;
-// 		}
-// 	}
-// }
+
 .tab-content {
 	.tab-pannel {
 		display: none;

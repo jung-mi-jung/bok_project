@@ -6,13 +6,16 @@ $(function () {
         'bd-list-forum',
         '500215',
         '500784',
+        '500531',
+        '500422',
+        '경제분석안내',
     ]
     link.forEach(element => {
         let _s = element.split('/')
         if (_s.length > 1) {
             // dist 폴더에 없는 파일들에 대한 예외 처리
             $('td:contains("' + _s[1] + '")').addClass('ok')
-            url = `/static/guide/museum/${element}.html`;
+            url = `/static/guide/imer/${element}.html`;
             try {
                 $.ajax({
                     url: url,
