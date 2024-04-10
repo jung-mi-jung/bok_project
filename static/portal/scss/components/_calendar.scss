@@ -192,6 +192,8 @@
 					color: $color-point;					
 					margin-top: 2px;
 					font-weight: 400;
+					@include line-clamp(3);
+					max-height: 72px;
 				}
 			}
 		}		

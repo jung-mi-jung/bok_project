@@ -1,4 +1,5 @@
-.dbdata {
+.dbdata, 
+.dbData {
 	min-height: 250px;
 	padding: 32px 0;
 	word-break: break-all;
@@ -176,6 +177,18 @@
 					}
 				}
 			}
+		}
+	}
+}
+
+.view {
+	.dbData {
+		min-height: 250px;
+		padding: 32px 20px;
+		word-break: break-all;
+		border-top: 1px solid $bd-color;
+		@include breakpoint($sm) {
+			padding: 15px 10px;
 		}
 	}
 }

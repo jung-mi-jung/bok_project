@@ -259,7 +259,10 @@
 				margin-right: 5px;
 			}
 		}
-	}		
+	}	
+	.view {
+		border-top: none
+	}	
 }
 
 .videoSet {
@@ -451,6 +454,20 @@
 			background-color: #FAFAFA;}
 		}
 	}
+	.inputGr {
+		display: flex;
+		.input-sm {
+			width: calc(100% - 32px - 2px) !important;
+		}
+		.b-sh {
+			min-width: 32px;
+			margin-left: 2px;
+		}
+		span {
+			display: inline-block;
+			margin-left: 2px;
+		}
+	}
 }
 
 .view {
@@ -599,5 +616,11 @@
 	}
 	.b {
 		margin-bottom: 10px;
+	}
+}
+
+.pdf-cont {
+	iframe {
+		width: 100%;
 	}
 }

@@ -420,7 +420,7 @@
 	clear: both;
 	width: $pc-wide;
 	max-width: 100%;
-	min-height: calc(100vh - 246px - 196px - 80px);
+	//min-height: calc(100vh - 246px - 196px - 80px);
 	@include clearfix();
 	// > main {
 	// 	@include breakpoint($lg){
