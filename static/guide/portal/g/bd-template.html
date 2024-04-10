@@ -100,7 +100,7 @@
 			//탭 유튜브 일시정시
 			$(document).ready(function () {
 				$(".video-tab button").click(function () {
-					jQuery(".video iframe").each(function () {
+					jQuery("iframe").each(function () {
 						jQuery(this)[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*')
 					});
 				});

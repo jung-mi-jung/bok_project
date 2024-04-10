@@ -2226,7 +2226,6 @@ position: relative;
 clear: both;
 width: 1440px;
 max-width: 100%;
-min-height: calc(100vh - 246px - 196px - 80px);
 display: block;
 }
 #main-container:before, #main-container:after {
@@ -2971,7 +2970,7 @@ margin: 0 -12px;
 }
 @media (max-width: 1199px) {
 .reference-news dl dd ul {
-width: -webkit-max-content;
+width: -moz-max-content;
 width: max-content;
 }
 }
@@ -3103,7 +3102,7 @@ margin: -12px -12px 0;
 }
 @media (max-width: 1199px) {
 .reference-media dl dd ul {
-width: -webkit-max-content;
+width: -moz-max-content;
 width: max-content;
 }
 }
@@ -3271,6 +3270,7 @@ margin: 0 5px 0 0;
 }
 
 .help3 {
+display: block;
 position: relative;
 padding-left: 30px;
 color: #4D4D4D;

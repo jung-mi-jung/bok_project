@@ -1,0 +1,161 @@
+<h2>화폐전시실</h2>
+
+
+
+<!-- <link rel="stylesheet" href="/static/jslibrary/videojs/video-js.css">
+<script src="/static/jslibrary/videojs/video.js"></script>
+<script src="/static/jslibrary/videojs/flash/videojs-flash.min.js"></script>
+<script src="/static/jslibrary/videojs/videojs-contrib-hls.min.js"></script>
+<script src="/static/jslibrary/videojs/Youtube.min.js"></script> -->
+
+
+
+<div class="ico-box ico1">
+	<p>한국은행 대구경북본부의 화폐전시실은 우리나라 화폐가 시대별로 전시되어 있는 &ldquo;우리화폐전시실&rdquo;과 세계 화폐가 테마별로 구분 정리되어 있는 &ldquo;세계화폐전시실&rdquo;으로 구성되어 있으며 2,300여점의 다양한 전시물이 전시되어 있습니다.</p>
+</div>
+
+<div class="conZone">
+	<ul class="bu">
+		<li><strong>관람시간</strong> 09:30~16:00<br>
+			단체관람의 경우 사전예약 필요 (토·일요일, 공휴일 및 근로자의 날 휴관)</li>
+		<li><strong>입장료</strong> 무료</li>
+		<li><strong>주차정보</strong> 장애인 및 20인 이상 단체방문객 차량에 한해 은행 내 주차가능(승용차 5부제 실시)</li>
+		<li><strong>문의</strong> 053-429-0246</li>
+		<li><strong>주소</strong> 대구광역시 중구 동덕로 145 (41939)</li>
+	</ul>
+
+	<h3>전시실 영상</h3>
+	<div class="serList">
+		<ul>
+			<li>
+				<a href="javascript:void(0)" title="하단에 영상 보기">
+					<span class="img" style="background-image: url('/static/portal/img/sub/zone/img_200843_01.jpg');"></span>
+					<span class="txt">대구경북본부 화폐전시실 소개</span>
+				</a>
+			</li>
+			<li>
+				<a href="javascript:void(0)" title="하단에 영상 보기">
+					<span class="img" style="background-image: url('/static/portal/img/sub/zone/img_200843_02.jpg');"></span>
+					<span class="txt">대구경북본부 화폐전시실 랜선투어 1(최초의 한국은행권)</span>
+				</a>
+			</li>
+			<li>
+				<a href="javascript:void(0)" title="하단에 영상 보기">
+					<span class="img" style="background-image: url('/static/portal/img/sub/zone/img_200843_03.jpg');"></span>
+					<span class="txt"> 대구경북본부 화폐전시실 랜선투어 2 (최단명 은행권)</span>
+				</a>
+			</li>
+			<li>
+				<a href="javascript:void(0)" title="하단에 영상 보기">
+					<span class="img" style="background-image: url('/static/portal/img/sub/zone/img_200843_04.jpg');"></span>
+					<span class="txt">대구경북본부 화폐전시실 랜선투어 3 (최초의 기념주화와 기념지폐)</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="">
+		<div class="con">
+
+			<div class="videoSet">		
+				<div class="video mb20 video1">
+					<video id="bokPlayer1" class="video-js vjs-4-3 vjs-default-skin" controls="controls" poster=""></video>
+				</div>
+				<script>
+					var player, play_type;
+					var options = {hls:{withCredentials:false}}
+					var play_src = '/movie.mp4'
+					var play_src = 'https://media.bok.or.kr/vod/_definst_/mp4:lib/2021/01/CID20210104114021645_w.mp4/playlist.m3u8'
+					var opt = 'video';
+					var fileExt = getExtensionOfFilename(play_src);
+					if(fileExt == ".mp4"){
+						play_type = "video/mp4";
+					}else{
+						play_type = "application/x-mpegURL";	
+					}
+					
+					player = videojs('bokPlayer1',{muted:true,autoplay: false,flash:options, html5:options});
+					player.muted()
+					player.ready(function(){
+						player.muted()
+						//player.play()
+						this.src({
+							src:play_src,
+							type:play_type
+						});
+						//$('.vjs-big-play-button').trigger('click')
+					});
+					
+					function getExtensionOfFilename(filename){
+						var _fileLen = filename.length;
+						var _lastDot = filename.lastIndexOf('.');
+						var _fileExt = filename.substring(_lastDot, _fileLen).toLowerCase();
+						return _fileExt;
+					}
+				</script> 
+				<div class="subtitle">
+					<h3>자막</h3>
+					<button type="button" title="자막 접기" class="active"></button>
+					<div class="con scrollY">
+						자막..............
+					</div>
+				</div>
+			</div>	
+		</div>
+
+		<div class="con">
+
+			<div class="videoSet">		
+				<div class="video mb20 video2">
+					<video id="bokPlayer2" class="video-js vjs-4-3 vjs-default-skin" controls="controls" poster=""></video>
+				</div>
+				<script>
+					var player, play_type;
+					var options = {hls:{withCredentials:false}}
+					var play_src = '/movie.mp4'
+					var play_src = 'https://media.bok.or.kr/vod/_definst_/mp4:lib/2021/06/CID20210609171150713_w.mp4/playlist.m3u8'
+					var opt = 'video2';
+					var fileExt = getExtensionOfFilename(play_src);
+					if(fileExt == ".mp4"){
+						play_type = "video/mp4";
+					}else{
+						play_type = "application/x-mpegURL";	
+					}
+					
+					player = videojs('bokPlayer2',{muted:true,autoplay: false,flash:options, html5:options});
+					player.muted()
+					player.ready(function(){
+						player.muted()
+						//player.play()
+						this.src({
+							src:play_src,
+							type:play_type
+						});
+						//$('.vjs-big-play-button').trigger('click')
+					});
+					
+					function getExtensionOfFilename(filename){
+						var _fileLen = filename.length;
+						var _lastDot = filename.lastIndexOf('.');
+						var _fileExt = filename.substring(_lastDot, _fileLen).toLowerCase();
+						return _fileExt;
+					}
+				</script> 
+				<div class="subtitle">
+					<h3>자막</h3>
+					<button type="button" title="자막 접기" class="active"></button>
+					<div class="con scrollY">
+						자막..............
+					</div>
+				</div>
+			</div>	
+		</div>
+	</div>
+</div>
+
+<link href="https://www.bok.or.kr/static/jslibrary/videojs/video-js.css" rel="stylesheet">
+<script src="https://www.bok.or.kr/static/jslibrary/videojs/video.js"></script>
+<script src="https://www.bok.or.kr/static/jslibrary/videojs/flash/videojs-flash.min.js"></script>
+<script src="https://www.bok.or.kr/static/jslibrary/videojs/videojs-contrib-hls.min.js"></script>
+<script src="https://www.bok.or.kr/static/jslibrary/videojs/Youtube.min.js"></script>
+

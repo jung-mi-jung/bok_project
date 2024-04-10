@@ -900,7 +900,7 @@ $(function () {
 
 
 $(function () {
-	//지역본부 > 화폐전시실
+	//지역본부 > 화폐전시실(부산)
 	const swiper = new Swiper('.gallery__list', {
 		init: false,
 		freeMode: true,

@@ -665,9 +665,14 @@
 	}
 	.select-box {
 		display: flex;
+		@include breakpoint($sm){
+			.keyword-set {
+				margin-top: 0 !important;
+			}
+		}
 		.select-set {
 			position: relative;
-			background-color: #fff;			
+			background-color: #fff;					
 			&::after {
 				content: "";
 				display: inline-block;
@@ -696,6 +701,13 @@
 					background-position: calc(100% - 10px) 50%;
 				}
 			}
+			& + .select-set {
+				margin-left: 4px;
+				@include breakpoint($sm){
+					margin-left: 0;
+					margin-top: 4px;
+				}
+			}
 		}		
 		input[type=text] {
 			border-radius: 0;
@@ -704,12 +716,19 @@
 	@include select-set();
 	.select-set {
 		select {
-			width: 220px;
+			//width: 220px;
+			width: 200px;
 			height: 56px;
 			border: 0;
 			@include breakpoint($sm){
-				width: 120px;
+				//width: 120px;
+				width: 100%;
 				height: 40px;
+			}
+		}
+		@include breakpoint($sm){
+			& + .select-set {
+				margin: 4px 0 !important;
 			}
 		}
 		.btn_select {
@@ -782,11 +801,10 @@
 			align-items: center;
 			background-color: #fff;
 			border-radius: 4px;
-			@include breakpoint($mdw){
-
-			}
 			@include breakpoint($sm){
-				flex-basis: calc(100% - 100px - 2px);
+				width: 100%;
+				margin-top: 4px;
+				//flex-basis: calc(100% - 100px - 2px);
 			}
 			.keyword {
 				width: calc(100% - 66px);				
@@ -825,7 +843,8 @@
 		&.w2 {	//두줄
 			display: flex;
 			> div {
-				width: 904px;
+				//width: 904px;
+				width: 800px;
 				max-width: 100%;
 				& + div {
 					margin-top: 4px;
@@ -843,6 +862,9 @@
 						width: 100%;
 						flex-basis: 100%;
 						display: flex;
+						@include breakpoint($sm){
+							margin-top: 4px !important;
+						}
 					}
 				}
 				.select-set select {
@@ -872,9 +894,19 @@
 					display: flex;
 					justify-content: space-between;
 					flex-grow: 1;
+					@include breakpoint($sm){
+						display: block;
+					}
 				}
 				.select-box {
+					@include breakpoint($sm){
+						display: block;
+						margin-bottom: 4px;
+					}
 					.select-set {
+						@include breakpoint($sm){
+							width: 100%;
+						}
 						&::after {
 							display: none;
 						}
@@ -887,6 +919,10 @@
 				}
 				.date-set {
 					flex-basis: calc(100% - 200px);
+					@include breakpoint($sm){
+						flex-basis: 100%;
+						margin: 2px !important;
+					}
 				}
 			}
 		}
@@ -1052,156 +1088,6 @@
 	}
 }
 
-
-
-/* 이하 아직 안씀
-.sh {
-	margin-bottom: 20px;
-	padding: 20px;
-	background-color: $sh-bg-color;
-	border-radius: 5px;
-	@include breakpoint($md) {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
-		padding: 30px;
-		> * {
-			margin-left: 2px;
-			margin-right: 2px;
-		}
-	}
-	> * {
-		@include breakpoint($sm) {
-			& + * {
-				display: block;
-				margin-top: 4px;
-			}
-		}
-	}
-	label {
-		line-height: $sh-form-height;
-	}
-	select,
-	input[type="text"],
-	input[type="date"],
-	input[type="number"] {
-		width: 100%;
-		border: 1px solid $form-bd-color;
-		border-radius: $sh-bd-radius;
-		padding: 0 8px;
-	}
-	div > .label:first-child,
-	div > *:first-child > label > .label {
-		padding-left: 0;
-		min-width: 60px;
-		margin-right: 0 !important;
-		margin-left: 0;
-	}
-	.select {
-		flex-basis: 110px;
-	}	
-	// 키워드 구분
-	.keyword-cate {
-		@include breakpoint($md) {
-			flex-basis: 120px;
-		}
-	}
-	.input-group,
-	.select-group {
-		display: block;
-		flex-grow: 1;
-		label {
-			display: flex;
-			flex-direction: row;
-			justify-content: space-between;
-			align-items: center;
-		}
-		.label {
-			padding-right: 10px;
-			@include breakpoint($mdw) {
-				padding-left: 0;
-				padding-right: 4px;
-			}
-			@include breakpoint($lg) {
-				padding-left: 20px;
-			}
-			&.w {
-				flex-basis: 140px;
-				flex-shrink: 0;
-				flex-grow: 1;
-			}
-		}
-		select {
-			min-width: 80px;
-		}
-	}
-	.keyword {
-		flex-grow: 1;
-		@include breakpoint($sm) {
-			display: block;
-		}
-	}
-	.btns {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
-		flex-basis: 104px;
-		flex-shrink: 0;
-		.search,
-		.reset {
-			width: 50px;
-			height: $form-height;
-			border-radius: $sh-bd-radius;
-		}
-		.search {
-			background-color: $point;
-			&::before {
-				@include font-ico-outline('\e8b6');
-				font-size: 25px;
-				color: #fff;
-			}
-			&:focus {
-				outline: 2px dashed #fff;
-				outline-offset: -2px;
-			}
-		}
-		.reset {
-			background-color: #fff;
-			border: 1px solid $point;
-			&::before {
-				@include font-ico-outline('\e5d5');
-				font-size: 25px;
-				transform: scaleX(-1);
-				color: $point;;
-			}
-			&:focus {
-				outline: 2px dashed $point;
-				outline-offset: -2px;
-			}
-		}
-		@include breakpoint($sm) {
-			.search,
-			.reset {
-				width: calc(50% - 2px);
-			}
-		}
-	}
-	//검색버튼만 있을 경우 임시용
-	.search {
-		width: 40px;
-		height: 40px;
-		background-color: $point;
-		border-radius: 5px;
-		&::before {
-			@include font-ico-outline('\e8b6');
-			font-size: 25px;
-			color: #fff;
-		}
-	}
-}
-*/
 
 .date-set {
 	@include breakpoint($sm){

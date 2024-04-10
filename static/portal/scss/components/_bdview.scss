@@ -259,7 +259,10 @@
 				margin-right: 5px;
 			}
 		}
-	}		
+	}	
+	.view {
+		border-top: none
+	}	
 }
 
 .videoSet {
@@ -268,6 +271,8 @@
 	max-width: 100%;
 	margin: 0 auto;
 	.video {
+		display: block;
+		overflow: hidden;
 		.vjs-icon-placeholder:before {
 			font-size: 24px;
 			margin-top: 8px;
@@ -339,7 +344,8 @@
 		}
 	}		
 	.subtitle,
-	.detail {			
+	.detail {
+		clear: both;
 		position: relative;
 		color: #4D4D4D;
 		border: 1px solid #E5E5E5;
@@ -351,7 +357,7 @@
 			width: 55px;
 			height: 48px;
 			line-height: 48px;
-			text-align: center;				
+			text-align: center;
 			&::before {
 				@include font-ico-outline('\e5cf');
 				width: 24px;
@@ -446,6 +452,20 @@
 		tbody {
 			th {
 			background-color: #FAFAFA;}
+		}
+	}
+	.inputGr {
+		display: flex;
+		.input-sm {
+			width: calc(100% - 32px - 2px) !important;
+		}
+		.b-sh {
+			min-width: 32px;
+			margin-left: 2px;
+		}
+		span {
+			display: inline-block;
+			margin-left: 2px;
 		}
 	}
 }
@@ -596,5 +616,11 @@
 	}
 	.b {
 		margin-bottom: 10px;
+	}
+}
+
+.pdf-cont {
+	iframe {
+		width: 100%;
 	}
 }
