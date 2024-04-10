@@ -4812,7 +4812,7 @@ font-size: 0.875rem;
 }
 
 body {
-overflow-x: hidden;
+overflow-x: hidden !important;
 color: #4D4D4D;
 line-height: 1.5;
 font-family: "Spoqa Han Sans Neo", "AppleGothic", "맑은 고딕", "돋움", "dotum", Helvetica, Arial, sans-serif;
@@ -4826,9 +4826,7 @@ word-break: keep-all;
 }
 }
 body.ovh, body.modal-open {
-position: relative;
 overflow: hidden !important;
-height: 100vh;
 }
 
 * {

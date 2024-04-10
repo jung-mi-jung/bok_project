@@ -7369,8 +7369,24 @@ margin-top: 30px;
 }
 
 @media (max-width: 749px) {
+.profilePop > div {
+transform: translateX(0);
+}
 .profilePop .modal-dialog {
 width: 100%;
+}
+.profilePop .modal-header button {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+width: 60px;
+height: 60px;
+line-height: 60px;
+margin-top: 0;
+}
+.profilePop .modal-header h4 {
+height: 60px;
+line-height: 60px;
 }
 .profilePop .modal-body {
 flex-direction: column;
@@ -7390,6 +7406,9 @@ padding: 20px 20px;
 }
 }
 /* 원장 약력 */
+.director {
+align-items: stretch;
+}
 .director .left {
 width: 276px;
 padding: 48px 48px;
@@ -7469,6 +7488,24 @@ line-height: 1.8;
 margin-top: 30px;
 }
 
+@media (max-width: 749px) {
+.row.director {
+flex-direction: column;
+}
+.row.director .left {
+width: 100%;
+padding: 20px 20px;
+}
+.row.director .left .profile {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.row.director .right {
+width: 100%;
+padding: 20px 20px;
+}
+}
 .fc1 {
 color: #118DB4;
 font-weight: 500;
@@ -8572,13 +8609,7 @@ right: 0;
 bottom: 0;
 z-index: 1100;
 display: none;
-overflow: hidden;
-}
-@media (max-width: 749px) {
-.modal {
-width: 100vw;
-height: 100vh;
-}
+overflow: hidden !important;
 }
 .modal.fade.in::before {
 content: "";
@@ -8590,12 +8621,6 @@ z-index: 501;
 top: 0;
 left: 0;
 height: 100%;
-}
-@media (max-width: 749px) {
-.modal.fade.in::before {
-width: 100vw;
-height: 100vh;
-}
 }
 .modal-dialog {
 width: 720px;

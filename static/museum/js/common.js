@@ -662,7 +662,7 @@ $(function() {
 
 	//faq
 	var article = $('.faqList dt>button');
-	article.each(function(index, el) {
+	article.each(function(index, el) {``
 		$(this).click(function(event) {
 			if ($(this).parent().hasClass('open')) {
 				$(this).parent().removeClass('open').next().hide();
@@ -678,19 +678,19 @@ $(function() {
 
 
 // 탭메뉴 swiper
-// var section2Txt = new Swiper('.tab-list .swiper', {
-// 	slidesPerView: "auto",
-// 	// slidesPerView: 4,
-// 	//autoHeight: true,
-// 	// freeMode: true,
-// 	observer: true, // 슬라이드 변경 관찰 활성화
-// 	observeParents: true, // 부모 요소의 변경도 관찰
-// 	preventClicksPropagation: true,
-// 	navigation: {
-// 		nextEl: ".swiper-tab-next",
-//         prevEl: ".swiper-tab-prev",
-// 	},
-// });
+var section2Txt = new Swiper('.tab-list .swiper', {
+	slidesPerView: "auto",
+	// slidesPerView: 4,
+	//autoHeight: true,
+	// freeMode: true,
+	observer: true, // 슬라이드 변경 관찰 활성화
+	observeParents: true, // 부모 요소의 변경도 관찰
+	preventClicksPropagation: true,
+	navigation: {
+		nextEl: ".swiper-tab-next",
+        prevEl: ".swiper-tab-prev",
+	},
+});
 
 
 //내가 본 콘텐츠

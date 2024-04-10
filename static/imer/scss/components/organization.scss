@@ -321,7 +321,7 @@
 	.modal-dialog {
 		width: 520px;
 		@include breakpoint($sm) {
-			width: 100%;;
+			width: 100%;
 			max-width: 360px;
 		}
 	}
@@ -541,12 +541,30 @@
 }
 @include breakpoint($sm){
 	.profilePop {
+		> div {
+			transform: translateX(0);
+		}
 		.modal-dialog {
 			width: 100%;
 			// margin: 0 auto;
 			// left: 50%;
 			// right: initial;
 			// transform: translateX(-50%);
+		}
+		.modal-header {
+			button {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				width: 60px;
+				height: 60px;
+				line-height: 60px;
+				margin-top: 0;
+			}
+			h4 {
+				height: 60px;
+				line-height: 60px;
+			}
 		}
 		.modal-body {
 			flex-direction: column;
@@ -571,6 +589,7 @@
 
 /* 원장 약력 */
 .director {
+	align-items: stretch;
 	.left {
 		width: 276px;
 		padding: 48px 48px;
@@ -660,6 +679,26 @@
 			& + h5 {
 				margin-top: 30px;
 			}
+		}
+	}
+}
+@include breakpoint($sm){
+	.row.director {
+		flex-direction: column;
+		.left {
+			width: 100%;
+			padding: 20px 20px;
+			.profile {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+		}
+		.right {
+			width: 100%;
+			//height: calc(100vh - 510px);
+			padding: 20px 20px;
+			// background: #fff;
 		}
 	}
 }

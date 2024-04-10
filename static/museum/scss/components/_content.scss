@@ -92,17 +92,17 @@
 				display: inline-flex;
 				align-items: center;
 				justify-content: center;
-				//flex: 1;
+				flex: none;
 				padding: 8px;
 				// min-width: 190px;
 				min-width: 25%;
 				width: auto;
 				min-height: 40px;
 				box-sizing: border-box;
-				// @include breakpoint($sm) {
-				// 	flex: auto;
-				// 	min-width: 140px;
-				// }
+				@include breakpoint($sm) {
+					flex: auto;
+					min-width: 180px;
+				}
 			}
 		}
 

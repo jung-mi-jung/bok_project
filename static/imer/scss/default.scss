@@ -70,7 +70,7 @@ html {
 	}
 }
 body {
-	overflow-x: hidden;
+	overflow-x: hidden !important;
 	color: $body-font-color;
 	line-height: 1.5;
 	font-family: $font-set;
@@ -82,9 +82,9 @@ body {
 	}
 	&.ovh, 
 	&.modal-open {
-		position: relative;
+		//position: relative;
 		overflow: hidden !important;
-		height: 100vh;
+		//height: 100vh;
 	}
 }
 
