@@ -29,7 +29,8 @@ $(function () {
         '700834',
         '700124',
         '700778',
-        '700129'
+        '700129',
+        '700118'
     ]
     link.forEach(element => {
         let _s = element.split('/')

@@ -76,7 +76,11 @@ body > .popwrap {
     bottom: 0;
     z-index: 1100;
     display: none;
-    overflow: hidden;
+    overflow: hidden !important;
+	// @include breakpoint($sm) { 
+	// 	width: 100vw;
+	// 	height: 100vh;
+	// }
 	&.fade.in {
 		&::before {
 			content: "";
@@ -88,6 +92,10 @@ body > .popwrap {
 			top: 0;
 			left: 0;
 			height: 100%;
+			// @include breakpoint($sm) { 
+			// 	width: 100vw;
+			// 	height: 100vh;
+			// }
 		}
 		
 	}

@@ -228,601 +228,601 @@
 }
 
 /* 상설전시 상세*/
-.exhbt  {
-	position: relative;
-	margin: 30px auto;
-	.swiper-slide {
-		img {
-			display: block;
-			max-width: 600px;
-			width: 100%;
-			margin: 0 auto;
-		}
-	}
-	.swiper__ctrl {
-		position: absolute;
-		display: flex;
-		top: 50%;
-		left: 50%;
-		max-width: 700px;;
-		width: 100%;
-    	justify-content: space-between;
-		transform: translate(-50%, -50%);
-		z-index: 1;
-		button {
-			margin: 0 5px;
-			background-color: #fff;
-			border-radius: 50%;
-			@include breakpoint($sm) {
-				transform: scale(.8);
-			}
-			&.swiper-button-disabled {
-				opacity: 0.4;
-			}
-			&.content-prev {
-				&:hover,
-				&:focus {
-					> i {
-						background-position: 0px -68px;
-					}
-				}
-			}
-			&.content-next {
-				&:hover,
-				&:focus {
-					> i {
-						background-position: -136px 0px;
-					}
-				}
-			}
-		}
-	}
-	&-imglist {
-		display: flex;
-		align-items: center;
-		flex-wrap: wrap;
-		gap: 0 12px;
-		margin-bottom: 60px;
-		li {
-			text-align: center;
-		}
-		span {
-			display: block;
-			font-size: 14px;
-		}
+// .exhbt  {
+// 	position: relative;
+// 	margin: 30px auto;
+// 	.swiper-slide {
+// 		img {
+// 			display: block;
+// 			max-width: 600px;
+// 			width: 100%;
+// 			margin: 0 auto;
+// 		}
+// 	}
+// 	.swiper__ctrl {
+// 		position: absolute;
+// 		display: flex;
+// 		top: 50%;
+// 		left: 50%;
+// 		max-width: 700px;;
+// 		width: 100%;
+//     	justify-content: space-between;
+// 		transform: translate(-50%, -50%);
+// 		z-index: 1;
+// 		button {
+// 			margin: 0 5px;
+// 			background-color: #fff;
+// 			border-radius: 50%;
+// 			@include breakpoint($sm) {
+// 				transform: scale(.8);
+// 			}
+// 			&.swiper-button-disabled {
+// 				opacity: 0.4;
+// 			}
+// 			&.content-prev {
+// 				&:hover,
+// 				&:focus {
+// 					> i {
+// 						background-position: 0px -68px;
+// 					}
+// 				}
+// 			}
+// 			&.content-next {
+// 				&:hover,
+// 				&:focus {
+// 					> i {
+// 						background-position: -136px 0px;
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// 	&-imglist {
+// 		display: flex;
+// 		align-items: center;
+// 		flex-wrap: wrap;
+// 		gap: 0 12px;
+// 		margin-bottom: 60px;
+// 		li {
+// 			text-align: center;
+// 		}
+// 		span {
+// 			display: block;
+// 			font-size: 14px;
+// 		}
 		
-	}
-}
+// 	}
+// }
 
 //오시는 길
-.bokHead{
-	background:#f4f5f7;padding:15px;overflow:hidden;
-	@include breakpoint($sm){
-		.map{width:100%;}
-		.bankMap{width:100%;margin:20px 0 0 0;}
-	}
-	.map{
-		float:left;
-		width:60%;
-		@include breakpoint($sm){
-			width: 100%;
-		}
-	}
-	.bankMap{
-		float:left;
-		width:38%;
-		margin-left:2%;
-		@include breakpoint($sm){
-			width: 100%;
-			margin-left: 0;
-			margin-top: 20px;
-		}
-		font-size: rem(18);
-		&.type{
-			dt{
-				font-weight:600;color: $point;margin-top:5px;
-			}
-		}
-		dt, dd{
-			padding-left:25px;
-		}
-		dt{
-			margin-top:10px;
-			&::before {
-				font-size: 16px;
-				color:#fff;
-				position:absolute;
-				top:0;
-				left:0;
-				border-radius: 30px;
-				background:#3B63C4;
-				width: 22px;
-				height: 22px;
-				line-height: 22px;
-				text-align:center;
-				margin: 3px 3px 0 0;
-			}
-		}
-		.pic img{
-			display:inline-block;border:3px solid #fff;
-		}
-		.ad{
-			position:relative;
-			&:before{
-				@include font-ico-outline('\e0c8');
+// .bokHead{
+// 	background:#f4f5f7;padding:15px;overflow:hidden;
+// 	@include breakpoint($sm){
+// 		.map{width:100%;}
+// 		.bankMap{width:100%;margin:20px 0 0 0;}
+// 	}
+// 	.map{
+// 		float:left;
+// 		width:60%;
+// 		@include breakpoint($sm){
+// 			width: 100%;
+// 		}
+// 	}
+// 	.bankMap{
+// 		float:left;
+// 		width:38%;
+// 		margin-left:2%;
+// 		@include breakpoint($sm){
+// 			width: 100%;
+// 			margin-left: 0;
+// 			margin-top: 20px;
+// 		}
+// 		font-size: rem(18);
+// 		&.type{
+// 			dt{
+// 				font-weight:600;color: $point;margin-top:5px;
+// 			}
+// 		}
+// 		dt, dd{
+// 			padding-left:25px;
+// 		}
+// 		dt{
+// 			margin-top:10px;
+// 			&::before {
+// 				font-size: 16px;
+// 				color:#fff;
+// 				position:absolute;
+// 				top:0;
+// 				left:0;
+// 				border-radius: 30px;
+// 				background:#3B63C4;
+// 				width: 22px;
+// 				height: 22px;
+// 				line-height: 22px;
+// 				text-align:center;
+// 				margin: 3px 3px 0 0;
+// 			}
+// 		}
+// 		.pic img{
+// 			display:inline-block;border:3px solid #fff;
+// 		}
+// 		.ad{
+// 			position:relative;
+// 			&:before{
+// 				@include font-ico-outline('\e0c8');
 				
-			}
-		}
-		.ph{
-			position:relative;
-			&:before{
-				@include font-ico-outline('\e0b0');
-			}
-		}
-		.fx{
-			position:relative;
-			&:before{
-				@include font-ico-outline('\ead8');
-			}
-		}
-		.em{
-			position:relative;
-			&:before{
-				content:"\f003";
-				color:#fff;font-size:13px;position:absolute;top:0;left:0;border-radius: 30px;background:#3B63C4;width:20px;height:20px;text-align:center;
-			}
-		}
-	}
-}
+// 			}
+// 		}
+// 		.ph{
+// 			position:relative;
+// 			&:before{
+// 				@include font-ico-outline('\e0b0');
+// 			}
+// 		}
+// 		.fx{
+// 			position:relative;
+// 			&:before{
+// 				@include font-ico-outline('\ead8');
+// 			}
+// 		}
+// 		.em{
+// 			position:relative;
+// 			&:before{
+// 				content:"\f003";
+// 				color:#fff;font-size:13px;position:absolute;top:0;left:0;border-radius: 30px;background:#3B63C4;width:20px;height:20px;text-align:center;
+// 			}
+// 		}
+// 	}
+// }
 
 //편의시설 안내
-.posMap {
-	.m9 {
-		width: 75%;
-		padding: 10px;
-		.mr20 {
-			margin-bottom: 20px;
-		}
-		.h3 {
-			margin-bottom: 5px;
-			font-size: rem(20);
-			font-weight: 500;
-			color: #222;
-		}	
-	}
-	.m3 {
-		width: 25%;
-		padding: 10px;
-		.ratioSet {
-			width: 100%;
-			height: 0;
-			position: relative;
-			display: inline-block;
-			z-index: 1;
-			&.ratio-4x3 {
-				padding-bottom: 59%;
-			}
-			.ratioObject {
-				position: absolute;
-				top: 0;
-				right: 0;
-				bottom: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				z-index: 100;
-				background-size: cover;
-				// background-size: contain;
-				background-repeat: no-repeat;
-				background-position: 50% 50%;
-				z-index: 1;
-				border: 1px solid #dee0e6;
-			}
-		}
-	}
-}
+// .posMap {
+// 	.m9 {
+// 		width: 75%;
+// 		padding: 10px;
+// 		.mr20 {
+// 			margin-bottom: 20px;
+// 		}
+// 		.h3 {
+// 			margin-bottom: 5px;
+// 			font-size: rem(20);
+// 			font-weight: 500;
+// 			color: #222;
+// 		}	
+// 	}
+// 	.m3 {
+// 		width: 25%;
+// 		padding: 10px;
+// 		.ratioSet {
+// 			width: 100%;
+// 			height: 0;
+// 			position: relative;
+// 			display: inline-block;
+// 			z-index: 1;
+// 			&.ratio-4x3 {
+// 				padding-bottom: 59%;
+// 			}
+// 			.ratioObject {
+// 				position: absolute;
+// 				top: 0;
+// 				right: 0;
+// 				bottom: 0;
+// 				left: 0;
+// 				width: 100%;
+// 				height: 100%;
+// 				z-index: 100;
+// 				background-size: cover;
+// 				// background-size: contain;
+// 				background-repeat: no-repeat;
+// 				background-position: 50% 50%;
+// 				z-index: 1;
+// 				border: 1px solid #dee0e6;
+// 			}
+// 		}
+// 	}
+// }
 
 //관람안내
-.info_icon {
-	> div {
-		position: relative;
-		padding-left: 77px;
-		@include breakpoint($sm) {
-			padding-left: 0;
-		}
-		> i {
-			position: absolute;
-			display: inline-block;
-			top: 0;
-			left: 0;
-			width: 60px;
-			height: 60px;
-			font-size: 30px;
-			background-color: #f2f3f7;
-			border-radius: 50px;
-			color: #5b79b9;
-			text-align: center;
-			vertical-align: top;
-			// margin-top: 20px;
-			background-size: cover;
-			@include breakpoint($sm) {
-				display: none;
-			}
-			&::before {
-				content: "";
-				display: block;
-				position: absolute;
-				left: 50%;
-				top: 50%;
-				transform: translate(-50%, -50%);
-				width: 30px;
-				height: 30px;
-				font-size: 30px;
-				line-height: 60px;
-				background-size: cover;
-				color: #5b79b9;
+// .info_icon {
+// 	> div {
+// 		position: relative;
+// 		padding-left: 77px;
+// 		@include breakpoint($sm) {
+// 			padding-left: 0;
+// 		}
+// 		> i {
+// 			position: absolute;
+// 			display: inline-block;
+// 			top: 0;
+// 			left: 0;
+// 			width: 60px;
+// 			height: 60px;
+// 			font-size: 30px;
+// 			background-color: #f2f3f7;
+// 			border-radius: 50px;
+// 			color: #5b79b9;
+// 			text-align: center;
+// 			vertical-align: top;
+// 			// margin-top: 20px;
+// 			background-size: cover;
+// 			@include breakpoint($sm) {
+// 				display: none;
+// 			}
+// 			&::before {
+// 				content: "";
+// 				display: block;
+// 				position: absolute;
+// 				left: 50%;
+// 				top: 50%;
+// 				transform: translate(-50%, -50%);
+// 				width: 30px;
+// 				height: 30px;
+// 				font-size: 30px;
+// 				line-height: 60px;
+// 				background-size: cover;
+// 				color: #5b79b9;
 
-			}
-		}
-		.ti-layout-slider-alt {
-			&::before {
-				background-image: url(/static/museum/img/layout-slider-alt.svg);
-				background-position: center center;
-				background-repeat: no-repeat;
-			}
-		}
-		.ti-info-alt{
-			&::before {
-				background-image: url(/static/museum/img/info-alt.svg);
-				background-position: center center;
-				background-repeat: no-repeat;
-			}
-		}
-		.ti-blackboard {
-			&::before {
-				background-image: url(/static/museum/img/blackboard.svg);
-				background-position: center center;
-				background-repeat: no-repeat;
-			}
-		}
-		.ti-bookmark-alt {
-			&::before {
-				background-image: url(/static/museum/img/bookmark-alt.svg);
-				background-position: center center;
-				background-repeat: no-repeat;
-			}
-		}
-	}
-	.bu {
-		margin-left: 10px;
-		> li {
-			position: relative;
-			padding-left: 10px;
-			margin-bottom: 5px;
-			font-size: rem(16);
-			color: #333;
-			&::before {
-				content: "";
-				display: inline-block;
-				position: absolute;
-				width: 3px;
-				height: 3px;
-				top: 10px;
-				left: 0;
-				border-radius: 50%;
-				background: #333;
-			}
-			strong {
-				font-weight: bold;
-			}
-			span {
-				font-weight: bold;
-			}
-		}
-		table td {
-			text-align: center;
-		}
-	}
-	.fc1 {
-		@include breakpoint($sm) {
-			display: block;
-			font-size: rem(20);
-		}
-	}
-	.b-go {
-		margin-top: 0;
-		font-size: 14px !important;
-		line-height: 28px;
-		// background: #3B63C4;
-	}
-	.ti-new-window {
-		position: relative;
-		display: inline-flex;
-		flex-wrap: wrap;
-		align-items: center;
-		width: auto;
-		height: 60px;
-		left: 80px;
-		margin-top: 20px;
-		padding-left: 30px;
-		padding-right: 10px;
-    	line-height: 60px;
-		font-size: 14px;
-		background: #f2f3f7;
-		border-radius: 50px;
-		color: #5b79b9;
-		text-align: center;
-		vertical-align: top;
-		@include breakpoint($sm) {
-			left: 0;
-		}
-		img {
-			vertical-align: middle;
-			padding-bottom: 3px;
-		}
-		.fz12 {
-			display: inline-flex;
-			align-items: center;
-			i {
-				margin-right: 6px;
-			}
-		}
-	}
-	.row  {
-		text-align: center;
-	}
-}
+// 			}
+// 		}
+// 		.ti-layout-slider-alt {
+// 			&::before {
+// 				background-image: url(/static/museum/img/layout-slider-alt.svg);
+// 				background-position: center center;
+// 				background-repeat: no-repeat;
+// 			}
+// 		}
+// 		.ti-info-alt{
+// 			&::before {
+// 				background-image: url(/static/museum/img/info-alt.svg);
+// 				background-position: center center;
+// 				background-repeat: no-repeat;
+// 			}
+// 		}
+// 		.ti-blackboard {
+// 			&::before {
+// 				background-image: url(/static/museum/img/blackboard.svg);
+// 				background-position: center center;
+// 				background-repeat: no-repeat;
+// 			}
+// 		}
+// 		.ti-bookmark-alt {
+// 			&::before {
+// 				background-image: url(/static/museum/img/bookmark-alt.svg);
+// 				background-position: center center;
+// 				background-repeat: no-repeat;
+// 			}
+// 		}
+// 	}
+// 	.bu {
+// 		margin-left: 10px;
+// 		> li {
+// 			position: relative;
+// 			padding-left: 10px;
+// 			margin-bottom: 5px;
+// 			font-size: rem(16);
+// 			color: #333;
+// 			&::before {
+// 				content: "";
+// 				display: inline-block;
+// 				position: absolute;
+// 				width: 3px;
+// 				height: 3px;
+// 				top: 10px;
+// 				left: 0;
+// 				border-radius: 50%;
+// 				background: #333;
+// 			}
+// 			strong {
+// 				font-weight: bold;
+// 			}
+// 			span {
+// 				font-weight: bold;
+// 			}
+// 		}
+// 		table td {
+// 			text-align: center;
+// 		}
+// 	}
+// 	.fc1 {
+// 		@include breakpoint($sm) {
+// 			display: block;
+// 			font-size: rem(20);
+// 		}
+// 	}
+// 	.b-go {
+// 		margin-top: 0;
+// 		font-size: 14px !important;
+// 		line-height: 28px;
+// 		// background: #3B63C4;
+// 	}
+// 	.ti-new-window {
+// 		position: relative;
+// 		display: inline-flex;
+// 		flex-wrap: wrap;
+// 		align-items: center;
+// 		width: auto;
+// 		height: 60px;
+// 		left: 80px;
+// 		margin-top: 20px;
+// 		padding-left: 30px;
+// 		padding-right: 10px;
+//     	line-height: 60px;
+// 		font-size: 14px;
+// 		background: #f2f3f7;
+// 		border-radius: 50px;
+// 		color: #5b79b9;
+// 		text-align: center;
+// 		vertical-align: top;
+// 		@include breakpoint($sm) {
+// 			left: 0;
+// 		}
+// 		img {
+// 			vertical-align: middle;
+// 			padding-bottom: 3px;
+// 		}
+// 		.fz12 {
+// 			display: inline-flex;
+// 			align-items: center;
+// 			i {
+// 				margin-right: 6px;
+// 			}
+// 		}
+// 	}
+// 	.row  {
+// 		text-align: center;
+// 	}
+// }
 
 //인사말
-.intro_museum {
-	// width: 905px;
-	aspect-ratio: 905/200;
-	margin: 0 auto;
-	background: #e2e9f8 url("https://www.bok.or.kr/static/imer/img/sub/500531_2.jpg") no-repeat left top;
-    background-size: auto 100%;
-	.person {
-		display: flex;
-		align-items: center;
-		padding-bottom: 20px;
-		padding: 50px 3% 20px 70%;
-		aspect-ratio: 905/200;
-		box-sizing: border-box;
-		p {
-			position: relative;
-			// margin-bottom: 10px;
-			&::before {
-				content: "";
-				background: url("https://www.bok.or.kr/static/portal/img/cts/sub8/200192_3.png") no-repeat left top;
-				width: 45px;
-				height: 30px;
-				position: absolute;
-				top: -40px;
-				left: 0;
-				display: inline-block;
-				background-size: 70%;
-			}
-			&::after {
-				content: "";
-				background: url("https://www.bok.or.kr/static/portal/img/cts/sub8/200192_4.png") no-repeat left bottom;
-				width: 45px;
-				height: 55px;
-				display: inline-block;
-				position: absolute;
-				bottom: -15px;
-				right: 55px;
-				background-size: 70%;
-			}
-			span {
-				font-size: rem(24);
-				color: #5b79b9;
-				font-weight: 500;
-				margin-bottom: 10px;
-				line-height: 30px;
-			}
-		}
-	}
-	& + .introTxt {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		// width: 905px;
-		margin: 20px auto 0;
-		p {
-			padding: 2% 3%;
-			font-size: 16px;
-		}
-	}
-}
-@include breakpoint($smd) {
-	.intro_museum, 
-	.intro_museum + .introTxt {
-		width: 100%;
-	}
-	.into_museum {
-		.person {
-			padding: 50px 3% 20px 58%;
-			aspect-ratio: initial;
-		}
-	}
-}
-@include breakpoint($sm) {
-	.intro_museum  {
-		background-image: none;
-		.person {
-			background-position: 2% bottom;
-			background-size: auto 70%;
-			padding: 40px 5%;
-			p {
-				&::before {
-					top: -30px;
-				}
-				&::after {
-					bottom: -28px;
-					right: 20px;
-				}
-			}
-		}
-	}
-	.intro_museum + .introTxt {
-		display: block;
-		p {
-			padding: 2% 0;
-		}
-	}
-}
+// .intro_museum {
+// 	// width: 905px;
+// 	aspect-ratio: 905/200;
+// 	margin: 0 auto;
+// 	background: #e2e9f8 url("https://www.bok.or.kr/static/imer/img/sub/500531_2.jpg") no-repeat left top;
+//     background-size: auto 100%;
+// 	.person {
+// 		display: flex;
+// 		align-items: center;
+// 		padding-bottom: 20px;
+// 		padding: 50px 3% 20px 70%;
+// 		aspect-ratio: 905/200;
+// 		box-sizing: border-box;
+// 		p {
+// 			position: relative;
+// 			// margin-bottom: 10px;
+// 			&::before {
+// 				content: "";
+// 				background: url("https://www.bok.or.kr/static/portal/img/cts/sub8/200192_3.png") no-repeat left top;
+// 				width: 45px;
+// 				height: 30px;
+// 				position: absolute;
+// 				top: -40px;
+// 				left: 0;
+// 				display: inline-block;
+// 				background-size: 70%;
+// 			}
+// 			&::after {
+// 				content: "";
+// 				background: url("https://www.bok.or.kr/static/portal/img/cts/sub8/200192_4.png") no-repeat left bottom;
+// 				width: 45px;
+// 				height: 55px;
+// 				display: inline-block;
+// 				position: absolute;
+// 				bottom: -15px;
+// 				right: 55px;
+// 				background-size: 70%;
+// 			}
+// 			span {
+// 				font-size: rem(24);
+// 				color: #5b79b9;
+// 				font-weight: 500;
+// 				margin-bottom: 10px;
+// 				line-height: 30px;
+// 			}
+// 		}
+// 	}
+// 	& + .introTxt {
+// 		display: grid;
+// 		grid-template-columns: repeat(2, 1fr);
+// 		// width: 905px;
+// 		margin: 20px auto 0;
+// 		p {
+// 			padding: 2% 3%;
+// 			font-size: 16px;
+// 		}
+// 	}
+// }
+// @include breakpoint($smd) {
+// 	.intro_museum, 
+// 	.intro_museum + .introTxt {
+// 		width: 100%;
+// 	}
+// 	.into_museum {
+// 		.person {
+// 			padding: 50px 3% 20px 58%;
+// 			aspect-ratio: initial;
+// 		}
+// 	}
+// }
+// @include breakpoint($sm) {
+// 	.intro_museum  {
+// 		background-image: none;
+// 		.person {
+// 			background-position: 2% bottom;
+// 			background-size: auto 70%;
+// 			padding: 40px 5%;
+// 			p {
+// 				&::before {
+// 					top: -30px;
+// 				}
+// 				&::after {
+// 					bottom: -28px;
+// 					right: 20px;
+// 				}
+// 			}
+// 		}
+// 	}
+// 	.intro_museum + .introTxt {
+// 		display: block;
+// 		p {
+// 			padding: 2% 0;
+// 		}
+// 	}
+// }
 
 //연혁
-.mhistory {
-	li {
-		display: flex;
-		align-items: flex-start;
-		padding: 20px 10px;
-		border-top: 1px solid #dee0e6;
-		&:first-of-type {
-			border-top: 0;
-		}
-	}
-	.ye {
-		color: #5b79b9;
-		font-size: 20px;
-		width: 63px;
-	}
-	.con {
-		overflow: hidden;
-		padding-top: 4px;
-		ul > li {
-			display: flex;
-			.mth {
-				display: block;
-				width: 30px;
-				color: #5b79b9;
-				font-weight: bold;
-				text-align: right;
-				padding-right: 10px;
-			}
-			.ex {
-				display: block;
-				overflow: hidden;
-				padding-left: 10px;
-				margin-bottom: 5px;
-			}
-		}
-	}
-}
+// .mhistory {
+// 	li {
+// 		display: flex;
+// 		align-items: flex-start;
+// 		padding: 20px 10px;
+// 		border-top: 1px solid #dee0e6;
+// 		&:first-of-type {
+// 			border-top: 0;
+// 		}
+// 	}
+// 	.ye {
+// 		color: #5b79b9;
+// 		font-size: 20px;
+// 		width: 63px;
+// 	}
+// 	.con {
+// 		overflow: hidden;
+// 		padding-top: 4px;
+// 		ul > li {
+// 			display: flex;
+// 			.mth {
+// 				display: block;
+// 				width: 30px;
+// 				color: #5b79b9;
+// 				font-weight: bold;
+// 				text-align: right;
+// 				padding-right: 10px;
+// 			}
+// 			.ex {
+// 				display: block;
+// 				overflow: hidden;
+// 				padding-left: 10px;
+// 				margin-bottom: 5px;
+// 			}
+// 		}
+// 	}
+// }
 
 /* 큐레이터와의 대화 */
-.curator {
-	max-width: 1280px;
-	margin: 0 auto;
-	.box4 {
-		gap: 0 40px;
-		padding: 30px;
-		margin-bottom: 80px;
-		background-color: gainsboro;
-	}
-	.badge {
-		display: inline-block;
-		background-color: #3B63C4;
-		color: #fff;
-		padding: 4px 12px;
-	}
-	&-desc {
-		ul {
-			margin-bottom: 20px;
-			li {
-				em {
-					font-size: rem(18);
-					font-weight: 600;
-				}
-			}
-		}
-	}
-	.bu {
-		padding-left: 6px;
-	}
-}
+// .curator {
+// 	max-width: 1280px;
+// 	margin: 0 auto;
+// 	.box4 {
+// 		gap: 0 40px;
+// 		padding: 30px;
+// 		margin-bottom: 80px;
+// 		background-color: gainsboro;
+// 	}
+// 	.badge {
+// 		display: inline-block;
+// 		background-color: #3B63C4;
+// 		color: #fff;
+// 		padding: 4px 12px;
+// 	}
+// 	&-desc {
+// 		ul {
+// 			margin-bottom: 20px;
+// 			li {
+// 				em {
+// 					font-size: rem(18);
+// 					font-weight: 600;
+// 				}
+// 			}
+// 		}
+// 	}
+// 	.bu {
+// 		padding-left: 6px;
+// 	}
+// }
 
 /* 건물 소개 */
-.muIntro1 {
-	position: relative;
-	width: 100%;
-	aspect-ratio: 905/410;
-	background: url("https://www.bok.or.kr/static/portal/img/cts/sub5/200129_1.jpg") no-repeat;
-	background-position: center center;
-	background-size: contain;
-	.muEx {
-		position: absolute;
-		display: flex;
-		flex-direction: column;
-		align-items: flex-end;
-		gap: 10px 0;
-		bottom: 20px;
-		right: 20px;
-		.btnSet {
-			margin: 20px 0 0;
-			text-align: right;
-			button {
-				display: flex;
-				padding: 0 16px;
-				align-items: center;
-				gap: 0 8px;
-				background: #3B63C4;
-				font-size: rem(16);
-				&:hover {
-					text-decoration: underline;
-				}
-			}
-			& + img {
-				color: rgb(51, 51, 51);
-				font-weight: 400;
-				vertical-align: baseline;
-				border-style: solid;
-				border-color: rgb(0, 0, 0);
-				background-color: initial;
-			}
-		}
-	}
-}
-.introTxtrow {
-	p {
-		margin: 20px 0;
-	}
-}
+// .muIntro1 {
+// 	position: relative;
+// 	width: 100%;
+// 	aspect-ratio: 905/410;
+// 	background: url("https://www.bok.or.kr/static/portal/img/cts/sub5/200129_1.jpg") no-repeat;
+// 	background-position: center center;
+// 	background-size: contain;
+// 	.muEx {
+// 		position: absolute;
+// 		display: flex;
+// 		flex-direction: column;
+// 		align-items: flex-end;
+// 		gap: 10px 0;
+// 		bottom: 20px;
+// 		right: 20px;
+// 		.btnSet {
+// 			margin: 20px 0 0;
+// 			text-align: right;
+// 			button {
+// 				display: flex;
+// 				padding: 0 16px;
+// 				align-items: center;
+// 				gap: 0 8px;
+// 				background: #3B63C4;
+// 				font-size: rem(16);
+// 				&:hover {
+// 					text-decoration: underline;
+// 				}
+// 			}
+// 			& + img {
+// 				color: rgb(51, 51, 51);
+// 				font-weight: 400;
+// 				vertical-align: baseline;
+// 				border-style: solid;
+// 				border-color: rgb(0, 0, 0);
+// 				background-color: initial;
+// 			}
+// 		}
+// 	}
+// }
+// .introTxtrow {
+// 	p {
+// 		margin: 20px 0;
+// 	}
+// }
 
 /* 화폐이야기 */
-.worldMap {
-	padding: 26.5px 124.4px 26.21px 123.5px;
-	background: #F2F6FA;
-	box-sizing: border-box;
-	@include breakpoint($smd) {
-		padding: 20px 16px;	
-	}
-	@include breakpoint($sm) {
-		padding: 20px 8px;	
-	}
+// .worldMap {
+// 	padding: 26.5px 124.4px 26.21px 123.5px;
+// 	background: #F2F6FA;
+// 	box-sizing: border-box;
+// 	@include breakpoint($smd) {
+// 		padding: 20px 16px;	
+// 	}
+// 	@include breakpoint($sm) {
+// 		padding: 20px 8px;	
+// 	}
 
-	g {
-		cursor: pointer;
-		&.on {
-			path:not(.mapTxt) {
-				fill: #1F4CBA;
-			}
-			path.mapTxt {
-				fill: #fff;
-			}
-			circle {
-				fill: #FF327C;
-				stroke: rgba(255, 50, 124, 0.3);
-				stroke-width: 8;
-				filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.25));
-			}
-		}
-		&.europe {
-			order: 1;
-		}
-	}
-}
-.visualImg {
-	aspect-ratio: 1340/400;
-	background: url(/static/museum/img/visualImg.png) no-repeat center center;
-	background-size: contain;
-}
+// 	g {
+// 		cursor: pointer;
+// 		&.on {
+// 			path:not(.mapTxt) {
+// 				fill: #1F4CBA;
+// 			}
+// 			path.mapTxt {
+// 				fill: #fff;
+// 			}
+// 			circle {
+// 				fill: #FF327C;
+// 				stroke: rgba(255, 50, 124, 0.3);
+// 				stroke-width: 8;
+// 				filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.25));
+// 			}
+// 		}
+// 		&.europe {
+// 			order: 1;
+// 		}
+// 	}
+// }
+// .visualImg {
+// 	aspect-ratio: 1340/400;
+// 	background: url(/static/museum/img/visualImg.png) no-repeat center center;
+// 	background-size: contain;
+// }

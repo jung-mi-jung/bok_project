@@ -1516,7 +1516,7 @@ transform: scale(1, 1);
 }
 
 .a-hover {
-color: #3B63C4;
+color: inherit;
 }
 @media (min-width: 1200px) {
 .a-hover:hover {
@@ -1529,6 +1529,22 @@ position: absolute;
 width: 100%;
 height: 1px;
 background: #3B63C4;
+bottom: 0;
+left: 50%;
+transform: translateX(-50%);
+}
+}
+@media (min-width: 1200px) {
+.a-hover.colorBk:hover {
+position: relative;
+}
+.a-hover.colorBk:hover::before {
+content: "";
+display: block;
+position: absolute;
+width: 100%;
+height: 1px;
+background: #1a1a1a;
 bottom: 0;
 left: 50%;
 transform: translateX(-50%);
@@ -4796,7 +4812,7 @@ font-size: 0.875rem;
 }
 
 body {
-overflow-x: hidden;
+overflow-x: hidden !important;
 color: #4D4D4D;
 line-height: 1.5;
 font-family: "Spoqa Han Sans Neo", "AppleGothic", "맑은 고딕", "돋움", "dotum", Helvetica, Arial, sans-serif;
@@ -4810,9 +4826,7 @@ word-break: keep-all;
 }
 }
 body.ovh, body.modal-open {
-position: relative;
 overflow: hidden !important;
-height: 100vh;
 }
 
 * {

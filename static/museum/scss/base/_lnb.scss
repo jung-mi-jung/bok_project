@@ -204,6 +204,9 @@
 	// 	top: 78px;
 	// 	padding-top: 0;
 	// }
+	@include breakpoint($smd){ 
+		display: none;
+	}
 	@include breakpoint($lg){
 		//position: relative;
 		display: block;
@@ -292,6 +295,9 @@
 }
 .lnb-nav + .content {
 	border-left: 1px solid #d9d9d9;
+	@include breakpoint($smd) {
+		border-left: none;
+	}
 }
 //연관자료
 // .lnb-reference {

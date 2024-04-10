@@ -662,7 +662,7 @@ $(function() {
 
 	//faq
 	var article = $('.faqList dt>button');
-	article.each(function(index, el) {
+	article.each(function(index, el) {``
 		$(this).click(function(event) {
 			if ($(this).parent().hasClass('open')) {
 				$(this).parent().removeClass('open').next().hide();
@@ -689,18 +689,6 @@ var section2Txt = new Swiper('.tab-list .swiper', {
 	navigation: {
 		nextEl: ".swiper-tab-next",
         prevEl: ".swiper-tab-prev",
-	},
-});
-
-// 상설전시 swiper
-var section2Txt = new Swiper('.exhbt', {
-	slidesPerView: 1,
-	effect: "fade",
-	updateOnWindowResize: true,
-	speed: 600,
-	navigation: {
-		prevEl: '.content-prev',
-		nextEl: '.content-next',
 	},
 });
 
