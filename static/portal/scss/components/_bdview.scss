@@ -261,7 +261,12 @@
 		}
 	}	
 	.view {
-		border-top: none
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		& + .dbdata {
+			padding-top: 0;
+		}
 	}	
 }
 

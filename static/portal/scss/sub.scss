@@ -419,6 +419,9 @@
 
 
 // 한줄에 h3 + p
+h3 + .h-group  {
+	margin-top: 0;
+}
 .h-group {	 // 기존 class => hgroup
 	display: flex;
 	justify-content: space-between;

@@ -2192,7 +2192,7 @@ p.subject {
 	}
 	>div{		
 		width: 100%;
-		padding: 0 4ch;
+		padding: 0 4px;
 		@include breakpoint($sm){
 			width: 50%;
 		}
@@ -2249,7 +2249,7 @@ p.subject {
 		display: table-cell;
 	}
 	dt {
-		width: 109px;
+		width: 118px;
 		@include bu-dot;
 	}
 }
@@ -2405,20 +2405,23 @@ p.subject {
 	padding: 20px;
 	color: $point;
 	font-size: rem(30);
-	font-weight: 300;
+	//font-weight: 300;
+	font-family: 'Spoqa Han Sans Neo Light';
 	background-color: #F2F6FA;
 	border-radius: 16px;
 	margin-bottom: 30px;	
 	strong {
 		font-weight: 600;
+		font-family: 'Spoqa Han Sans Neo';
 	}
 	.ico-box {
 		display: flex;
 		align-items: center;
 		position: relative;
-		line-height: 1.2;
+		line-height: 1.4;
 		min-height: 100px;
 		padding-left: 120px;
+		margin-bottom: 0;
 		&::before {
 			content: "";
 			display: inline-block;
