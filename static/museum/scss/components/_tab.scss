@@ -136,7 +136,7 @@
 			@include breakpoint($sm) {
 				flex: auto;
 				font-size: 14px;
-				min-width: 180px;
+				min-width: 140px;
 			}
 			&:first-of-type {
 				border-left: 1px solid #89A1DC;
