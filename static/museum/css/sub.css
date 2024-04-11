@@ -4901,7 +4901,7 @@ font-size: 0.875rem;
 .tab-list .swiper a.swiper-slide {
 flex: auto;
 font-size: 14px;
-min-width: 180px;
+min-width: 140px;
 }
 }
 .tab-list .swiper a.swiper-slide:first-of-type {
@@ -6704,7 +6704,6 @@ color: #1A1A1A;
 .content-row .cont-nav {
 width: 240px;
 margin-right: 36px;
-margin-top: 30px;
 }
 @media (max-width: 749px) {
 .content-row .cont-nav {
@@ -6781,8 +6780,8 @@ box-sizing: border-box;
 }
 @media (max-width: 749px) {
 .content-row .cont-right .tab-list a {
-flex: auto;
-min-width: 180px;
+flex: none;
+min-width: 140px;
 }
 }
 

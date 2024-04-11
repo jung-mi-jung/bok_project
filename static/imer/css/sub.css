@@ -1907,6 +1907,9 @@ clear: both;
 border-top: 2px solid #182252;
 margin-bottom: 10px;
 }
+.table.noBorder {
+border-top: 0;
+}
 @media (min-width: 750px) {
 .table.pcweb {
 display: block !important;
@@ -1939,6 +1942,14 @@ color: #1A1A1A;
 min-height: 55px;
 border: 1px solid #E5E5E5;
 background-color: #fff;
+}
+.table table td .a-hover2 strong {
+color: #1a1a1a;
+margin-bottom: 4px;
+}
+.table table td .a-hover2 span {
+font-size: 1rem;
+color: #808080;
 }
 .table.type2 {
 font-size: 1.125rem;
@@ -2192,7 +2203,7 @@ position: relative;
 .bd-line > ul > li .btns {
 position: absolute;
 bottom: 10px;
-right: 8px;
+right: 24px;
 }
 }
 .bd-line > ul > li .btns > a {
@@ -4939,6 +4950,7 @@ background-image: none;
 display: flex;
 position: relative;
 margin: 0 0 24px;
+border-bottom: 1px solid #89A1DC;
 }
 .tab-list .swiper {
 width: 100%;
@@ -4954,7 +4966,6 @@ padding: 8px;
 color: #3B63C4;
 background: #fff;
 border-top: 1px solid #89A1DC;
-border-bottom: 1px solid #89A1DC;
 border-right: 1px solid #89A1DC;
 text-align: center;
 box-sizing: border-box;
@@ -4963,7 +4974,7 @@ cursor: grab;
 @media (max-width: 749px) {
 .tab-list .swiper a.swiper-slide {
 flex: none;
-max-width: 180px;
+max-width: 140px;
 }
 }
 .tab-list .swiper a.swiper-slide:first-of-type {
@@ -7406,15 +7417,15 @@ padding: 20px 20px;
 }
 }
 /* 원장 약력 */
-.director {
+.row.director {
 align-items: stretch;
 }
-.director .left {
+.row.director .left {
 width: 276px;
 padding: 48px 48px;
 background: #FAFAFA;
 }
-.director .left .profile-img {
+.row.director .left .profile-img {
 display: block;
 width: 180px;
 height: 180px;
@@ -7424,39 +7435,39 @@ background-position: center center;
 background-size: cover;
 background-repeat: no-repeat;
 }
-.director .left .profile-btn {
+.row.director .left .profile-btn {
 display: flex;
 justify-content: center;
 margin: 20px 0 16px;
 padding-top: 24px;
 border-top: 1px solid #E5E5E5;
 }
-.director .left .profile-btn button {
+.row.director .left .profile-btn button {
 padding: 0 16px;
 }
-.director .left .profile-btn button:nth-of-type(2) {
+.row.director .left .profile-btn button:nth-of-type(2) {
 border-left: 1px solid #E5E5E5;
 }
-.director .left .name {
+.row.director .left .name {
 font-size: 1.5rem;
 margin-top: 12px;
 margin-bottom: 20px;
 color: #1A1A1A;
 text-align: center;
 }
-.director .left .name span {
+.row.director .left .name span {
 display: block;
 font-size: 1rem;
 margin-top: 2px;
 font-weight: 500;
 color: #3B63C4;
 }
-.director .left .position {
+.row.director .left .position {
 position: relative;
 color: #4D4D4D;
 padding-left: 20px;
 }
-.director .left .position::before {
+.row.director .left .position::before {
 content: "";
 display: inline-block;
 position: absolute;
@@ -7467,24 +7478,24 @@ height: 5px;
 background: #4D4D4D;
 border-radius: 50%;
 }
-.director .left .profile-etc a {
+.row.director .left .profile-etc a {
 width: 100%;
 font-size: 1rem;
 margin: 4px 0;
 }
-.director .right {
+.row.director .right {
 width: calc(100% - 276px);
-padding: 50px 50px;
+padding: 0 50px;
 background: #fff;
 }
-.director .right .bu-dot {
+.row.director .right .bu-dot {
 padding-left: 20px;
 }
-.director .right .bu-dot p, .director .right .bu-dot div {
+.row.director .right .bu-dot p, .row.director .right .bu-dot div {
 white-space: pre-line;
 line-height: 1.8;
 }
-.director .right .bu-dot + h5 {
+.row.director .right .bu-dot + h5 {
 margin-top: 30px;
 }
 
@@ -7494,7 +7505,7 @@ flex-direction: column;
 }
 .row.director .left {
 width: 100%;
-padding: 20px 20px;
+padding: 20px 10px;
 }
 .row.director .left .profile {
 display: flex;

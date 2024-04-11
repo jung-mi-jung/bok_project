@@ -393,6 +393,20 @@
 			padding: 30px 0 25px;
 		}
 	}
+	& + .tab-list {
+		margin: 0 0 24px !important;
+		@include breakpoint($sm) {
+			margin: 0 10px 24px !important;
+		}
+		.swiper {
+			a.swiper-slide {
+				@include breakpoint($sm) {
+					flex: 1;
+					max-width: none;
+				}
+			}
+		}
+	}
 }
 .page-toolbar {
 	.nav-stiky & {

@@ -31,7 +31,7 @@
 	.cont-nav {
 		width: 240px;
 		margin-right: 36px;
-		margin-top: 30px;
+		// margin-top: 30px;
 		@include breakpoint($sm) {
 			width: 100%;
 			margin-right: 0;
@@ -100,8 +100,8 @@
 				min-height: 40px;
 				box-sizing: border-box;
 				@include breakpoint($sm) {
-					flex: auto;
-					min-width: 180px;
+					flex: none;
+					min-width: 140px;
 				}
 			}
 		}

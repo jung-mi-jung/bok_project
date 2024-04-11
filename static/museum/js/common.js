@@ -850,6 +850,17 @@ $(function () {
 	});
 
 
+	//이미지맵 클릭 시 엥커 클릭 트리거
+	$(".imgMapLink li").on("click", function(){
+
+		var imgmapInx = $(this).index()
+
+		$(".cont-nav ul li").eq(imgmapInx).addClass("on").siblings().removeClass("on");
+		$(".cont-nav ul li").eq(imgmapInx).trigger("click");
+
+	});
+
+
 	//첨부파일
 	var filesOv = $(".fileGroupSet>a");
 	//$(filesOv).on("mouseenter keyup", function(event){

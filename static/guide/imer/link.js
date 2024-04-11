@@ -9,6 +9,11 @@ $(function () {
         '500531',
         '500422',
         '경제분석안내',
+        '500767',
+        // '500548',
+
+        // '500822',
+
     ]
     link.forEach(element => {
         let _s = element.split('/')
