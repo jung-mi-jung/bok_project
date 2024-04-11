@@ -1,0 +1,101 @@
+<h2>금융중개지원대출 기업정보조회</h2>
+
+
+
+
+<div class="info-txt">
+	<p class="tit"><em>여러분과 늘 함께 해 온, 한국은행</em> <br>
+	한국은행은 우리 경제와 항상 고락을 함께 하여 왔습니다.</p>
+</div>
+
+
+<ul class="bu">
+	<li>이 정보는 한국은행이 여러 금융기관으로부터 수집하여 관리하고 있는 정보로서 아래와 같은 점에 유의하여 한국은행 금융중개지원대출 지원대상기업 확인을 위한 참고용으로만 사용하여 주시기 바랍니다.
+		<ul>
+			<li>첫째, 조회일 현재의 대기업 정보는 금융기관의 보고시차 등으로 인해 실제 정보와 다를 수 있습니다.</li>
+			<li>둘째, 조회내용 중<strong class="fc_blue">“대기업으로 보고되지 않음”</strong>은 해당 기업이 당행에 대기업으로 보고된 적이 없음을 의미하는 것으로 동기업이 <strong class="fc_blue">중소기업임을 확인하는 것은 아닙니다.</strong></li>
+			<li>셋째, 중소기업 여부에 대한 판정책임은 최종적으로 금융기관에 있으므로<strong class="fc_blue">“대기업으로 보고되지 않음”으로 조회되더라도</strong> 동 업체가 <strong class="fc_blue">추후 대기업으로 밝혀질 경우 제재대상이 될 수 있습니다.</strong></li>
+		</ul>
+	</li>
+	<li>"중소기업기본법"상 중소기업에 해당하는 기업이 대기업으로 조회된 경우 소명자료를 제출하여 주시면 즉시 수정하여 드리겠습니다.</li>
+	<li>중소기업중 상위 30대 계열기업군 소속 기업은 금융중개지원대출 지원대상에서 제외되는 바 계열 기업군 소속 기업에 관한 정보는 금융감독원에 문의하시기 바랍니다.</li>
+	<li>대기업 DB 파일이 필요하신 분은 “기업정보 DB파일 다운로드” 탭을 선택하시기 바랍니다.
+		<!-- <p>(금융결제국 결제업무팀 Tel. 02)759- 4541, 4553)</p> -->
+	</li>
+</ul>
+<h3>기업정보 검색 및 DB파일 다운로드</h3>
+<ul class="bu">
+	<li>기업정보 검색 및 DB파일 다운로드 서비스를 이용하기 위해서 본인인증이 필요합니다.</li>
+	<li>기업정보 DB파일 다운로드 시, 본인의 소속, 부서명, 사용목적을 입력 후 다운로드 버튼을 클릭하시기 바랍니다. <!-- (금융결제국 결제업무팀 Tel. 02)759- 4541, 4553) --></li>
+</ul>
+
+
+
+
+<!-- 로그인후 -->
+
+<form name="frm" id="frm" action="">
+	<input type="hidden" name="nm" value="">
+	
+	<div class="userType">
+		<div class="auth">
+			<div class="col">
+				<div class="LogBox type1">
+					<h4 class="mt0">기업정보검색</h4>
+					<div class="s">
+						<dl class="w2">
+							<dt>사업자등록번호</dt>
+							<dd>
+								<input type="text" name="cmpnyId1" id="cmpnyId1" title="사업자등록번호 첫번째자리" maxlength="3"> 
+								<span class="bar">-</span>
+								<input type="text" name="cmpnyId2" id="cmpnyId2" title="사업자등록번호 두번째자리" maxlength="2">
+								<span class="bar">-</span>
+								<input type="text" name="cmpnyId3" id="cmpnyId3" title="사업자등록번호 세번째자리" maxlength="5">
+							</dd>
+						</dl>
+						<div class="btnSet tac">
+							<a href="javascript:void(0);" onclick="requstInqireBtn();" class="b-sh">검색</a>
+							<a href="javascript:void(0);" class="b-cancel init-cmpny">초기화</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="LogBox type1">
+					<h4 class="mt0">기업정보 DB파일 다운로드</h4>
+					<div class="s">
+						<dl>
+							<dt>
+								<label for="insttNm">기관명</label>
+							</dt>
+							<dd>
+								<input type="text" name="insttNm" id="insttNm">
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<label for="deptNm">부서명</label>
+							</dt>
+							<dd>
+								<input type="text" name="deptNm" id="deptNm">
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<label for="usePurps">사용목적</label>
+							</dt>
+							<dd>
+								<input type="text" name="usePurps" id="usePurps">
+							</dd>
+						</dl>
+
+						<div class="btnSet tac">
+							<a href="javascript:void(0);" onclick="excelBtn();" class="b-download">다운로드</a>
+							<a href="javascript:void(0);" class="b-cancel init-down">초기화</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</form>

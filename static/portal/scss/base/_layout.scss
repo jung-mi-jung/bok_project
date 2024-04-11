@@ -875,19 +875,37 @@
 		}
 	}
 	.more {
-		width: 100%;
-		text-align: center;
-		margin-top: 14px;
+		position: absolute;
+		top: -3px;
+		right: 0;
+		z-index: 9;
+		@include breakpoint($lg){
+			top: 3px;
+		}
 		a {
-			color: #3B63C4;
 			&::before {
-				@include font-ico-outline('\e5cf');
-				font-size: 20px;
-				color: #3B63C4;
-				margin-right: 4px;
+				content: "";
+				display: inline-block;
+				width: 36px;
+				height: 36px;
+				background: url(/static/portal/img/submain/more.png);
 			}
 		}
 	}
+	// .more {
+	// 	width: 100%;
+	// 	text-align: center;
+	// 	margin-top: 14px;
+	// 	a {
+	// 		color: #3B63C4;
+	// 		&::before {
+	// 			@include font-ico-outline('\e5cf');
+	// 			font-size: 20px;
+	// 			color: #3B63C4;
+	// 			margin-right: 4px;
+	// 		}
+	// 	}
+	// }
 }
 
 [class^=reference-] {
@@ -899,7 +917,7 @@
 		border-top: 1px solid #DCE2F1;
 	}
 }
-.reference {
+.reference {	
 	margin-top: 30px;
 	padding: 50px 120px;
 	background-color: #F2F6FA;
@@ -1019,6 +1037,7 @@
 		padding-top: 30px;		
 		@include reference();		
 		dl {
+			position: relative;
 			dt {
 				&::before {	
 					width: 21px;

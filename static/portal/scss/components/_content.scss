@@ -199,6 +199,11 @@ p.subject {
 			}
 		}
 	}
+	&.type3{ //민원이용안내
+		.table{
+			width: 100%;
+		}
+	}
 	.table{
 		width: calc(100% - 28% - 3%);
 		float:left;
@@ -2313,7 +2318,7 @@ p.subject {
 		position: relative;
 		color: #131547;
 		font-weight: 300;
-		font-size: rem(36);	
+		font-size: rem(28);	
 		line-height: 1.2;
 		margin-bottom: 0;
 		&.ico1 {
@@ -2368,14 +2373,14 @@ p.subject {
 	}
 }
 
-
+//민원이용안내
 .info-box {
 	font-size: rem(18);
 	margin-bottom: 30px;
 	padding-left: 200px;
-	
+	background: url(/static/portal/img/sub/ico-info.png) 32px 50% no-repeat;
 	em {
-		font-weight: 600;
+		font-weight: 500;
 	}
 }
 .info-btn {
