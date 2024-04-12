@@ -14,23 +14,6 @@
 		margin-bottom: 0;
 	}
 }
-.count-total {
-	color: $black;
-	font-size: rem(15);
-	&::before {
-		content: "";
-		display: inline-block;
-		width: 3px;
-		height: 3px;
-		background-color: $black;
-		border-radius: 50%;
-		margin: 5px 8px 0 0;
-	}
-	strong {
-		font-weight: 600;
-		text-decoration: underline;
-	}
-}
 
 /* 게시판 목록 */
 .bd-line {
@@ -287,141 +270,6 @@
 		}
 	}	
 }
-// /* 추가된 스타일 */
-// .bd-line.c-type {
-// 	.list-num {
-// 		align-items: center;
-// 		gap:  0 8px;
-// 		.num {
-// 			display: flex;
-// 			align-items: center;
-// 			justify-content: center;
-// 			width: 33px;
-// 			font-size: rem(14);
-// 			padding: 2px 4px;
-// 			border: 1px solid #b3b3b3;
-// 			border-radius: 4px;
-// 			box-sizing: border-box;
-// 			background: #fff;
-// 		}
-// 		.recruit {
-// 			color: #131547;
-// 			font-weight: 500;
-// 		}
-// 		.firstCome {
-// 			color: #3B63C4;
-// 		}
-// 	}
-// 	.list-title {
-// 		align-items: center;
-// 		justify-content: space-between;
-// 		gap: 0 8px;
-// 		margin: 8px 0; 
-// 		.title {
-// 			max-width: calc(100% - 70px - 8px); 
-// 			white-space: nowrap;
-// 			text-overflow: ellipsis;
-// 			overflow: hidden;
-// 			color: #1A1A1A;
-// 		}
-// 		.list-state {
-// 			i {
-// 				display: inline-block;
-// 				width: 20px;
-// 				height: 20px;
-// 				margin-right: 2px;
-// 			}
-// 			&.ing {
-// 				color: #131547;
-// 				text-decoration: underline;
-// 				i {
-// 					@include background-image-retina("/static/museum/img/ico/ico-ing", png, auto, 100%);
-// 				}
-// 			}
-// 			&.wait {
-// 				color: #666;
-// 				i {
-// 					@include background-image-retina("/static/museum/img/ico/ico-wait", png, auto, 100%);
-// 				}
-// 			}
-// 			&.done {
-// 				color: #666;
-// 				i {
-// 					@include background-image-retina("/static/museum/img/ico/ico-done", png, auto, 100%);
-// 				}
-// 			}
-// 		}
-// 	}
-// 	.alarm {
-// 		display: flex;
-// 		align-items: center;
-// 		gap: 0 8px;
-// 		color: #666666;
-// 		i {
-// 			display: inline-block;
-// 			width: 20px;
-// 			height: 20px;
-// 			@include background-image-retina("/static/museum/img/ico/ico-alarm", png, auto, 100%);
-// 		}
-// 	}
-// }
-// /* 화폐이야기 게시판 */
-// .bd-line.d-type {
-// 	> ul > li {
-// 		min-height: 56px;
-// 	}
-// 	a {
-// 		gap: 0 8px;
-// 		&:hover {
-// 			.set {
-// 				position: relative;
-// 				&::before {
-// 					content: "";
-// 					display: block;
-// 					width: 100%;
-// 					height: 1px;
-// 					background: #1a1a1a;
-// 					position: absolute;
-// 					left: 0;
-// 					bottom: 0;
-
-// 				}
-// 			}
-// 			i {
-// 				background-position: -40px -310px;
-// 			}
-// 		}
-// 	}
-// 	.num {
-// 		display: inline-block;
-// 		width: 32px;
-// 		font-size: rem(16);
-// 		color: #4D4D4D;
-// 		text-align: center;
-// 	}
-// 	.t1 {
-// 		display: inline-block;
-// 		font-size: rem(14);
-// 		color: #3B63C4;
-// 		padding: 1.5px 8px; 
-// 		border: 1px solid #3B63C4;
-// 		border-radius: 3px;
-// 		box-sizing: border-box;
-// 		background: #fff;
-// 	}
-// 	.set {
-// 		display: inline-block;
-// 		max-width: calc(100% - 130px);
-// 		white-space: nowrap;
-// 		text-overflow: ellipsis;
-// 		overflow: hidden;
-// 	}
-// 	i {
-// 		position: absolute;
-// 		right: 15px;
-// 	}
-	
-// }
 
 /* 뉴스 및 자료형 타입 */
 .bd-line.data-type {
@@ -488,12 +336,73 @@
 		margin-top: -24px;
 	}
 }
+
+/* 파일없는 게시판 */
 .bd-line.noFile {
 	.btns {
 		display: none !important;
 	}
+	ul {
+		li {
+			a.title {
+				max-width: calc(100% - 100px) !important;
+				@include breakpoint($lg) {
+					&::before {
+						content: "";
+						display: inline-block;
+						width: 48px;
+						height: 48px;
+						position: absolute;
+						top: 50%;
+						right: 15px;
+						margin-top: -24px;
+						background: url(/static/portal/img/common/arr01_off.png) 50% no-repeat;
+					}
+				}
+			}
+			&:hover {
+				@include breakpoint($lg) { 
+					a {
+						&::before {
+							background: url(/static/portal/img/common/arr01_on.png) 50% no-repeat;
+						}
+					}
+				}
+			}
+		}
+	}
+	
 }
 
+// 게시물 카운트
+.count-total {
+	color: $black;
+	font-size: rem(15);
+	margin-top: 15px;
+	line-height: 0.8rem;
+	display: flex;
+	font-size: 14px;
+	&::before {
+		content: "";
+		display: inline-block;
+		width: 3px;
+		height: 3px;
+		background-color: $black;
+		border-radius: 50%;
+		margin: 5px 8px 0 0;
+	}
+	em {
+		color: #5772e8;
+		font-weight: 600;
+		font-style: normal;
+		display: inline-block;
+		margin-left: 4px;
+	}
+	strong {
+		font-weight: 600;
+		text-decoration: underline;
+	}
+}
 
 
 /* 옛날 소스 */
@@ -520,20 +429,5 @@
 	}
 	.nodata {
 		text-align: center;
-	}
-}
-
-// 게시물 카운트
-.count-total {
-	margin-top: 15px;
-	line-height: 0.8rem;
-	display: flex;
-	font-size: 14px;
-	em {
-		color: #5772e8;
-		font-weight: 600;
-		font-style: normal;
-		display: inline-block;
-		margin-left: 4px;
 	}
 }
