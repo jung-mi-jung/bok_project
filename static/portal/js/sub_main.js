@@ -73,4 +73,19 @@ $(function () {
 			$('.button_link button').next().removeClass("active");
 		}
 	});
+
+
+	//동영상 자막
+	$(".index-main-video .video-etc .btn_view").click(function(){
+		$(".subtitle-set").addClass("active");
+		$(this).hide();
+		$(".subtitle-set .btn_close").show();
+		$(".subtitle").focus();
+	});	
+	$(".index-main-video .subtitle-set .btn_close").click(function(){
+		$(".subtitle-set").removeClass("active");
+		$(this).hide();
+		$(".video-etc .btn_view").show();
+		$(".video-etc .btn_view").focus();
+	});
 });

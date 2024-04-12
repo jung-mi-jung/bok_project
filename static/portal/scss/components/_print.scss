@@ -91,3 +91,23 @@
 		height: auto !important;
 	}
 }
+
+.popup {
+	
+	.page-print {
+		background-color: #eee;
+		padding: 10px 0;
+		text-align: center;
+		[class^=b-] {
+			height: 33px;
+			line-height: 33px;
+			font-size: 14px;
+		}
+		.b-print {
+			background-color: $color-point;
+		}
+		.b-close {
+			background-color: #666;
+		}
+	}
+}

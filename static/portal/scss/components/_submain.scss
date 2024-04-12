@@ -107,6 +107,16 @@
 					
 				}
 				.svg-set {
+					text {
+						&::before {
+							content: "";
+							display: inline-block;
+							width: 12px;
+							height: 12px;
+							background-color: #39A0FF;
+							border-radius: 50%;
+						}
+					}
 					.cls-1,
 					.cls-2 {
 						fill:none;
@@ -163,7 +173,7 @@
 					}
 					.svg-map .label {
 						pointer-events: none;
-						font-size: 23px;
+						font-size: 16px;
 						fill: #787878;
 					}
 					.svg-map .label.active {
@@ -188,6 +198,75 @@
 							
 					// 	}
 					// }
+				}
+				.con_set {					
+					.con {
+						position: absolute;
+						top: -100px;
+						left: 50%;
+						z-index: 9;
+						width: 320px;
+						background-color: #fff;
+						border-radius: 16px;
+						padding: 16px;
+						box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+					}
+					dl {
+						dt {
+							font-size: rem(24);
+							font-weight: 500;
+							border-bottom: 1px solid #CCDAFF;
+							padding-bottom: 6px;
+							margin-bottom: 10px;
+						}
+						dd {
+							ul {
+								li {
+									display: flex;
+									margin-bottom: 8px;
+									padding-left: 32px;
+									&.map {	
+										background: url(/static/portal/img/sub/zone/ico-ad.png) 0 1px no-repeat;
+									}
+									&.tel {
+										background: url(/static/portal/img/sub/zone/ico-call.png) 0 1px no-repeat;
+									}
+								}
+							}
+						}
+					}
+					.btn {
+						margin: 10px 0 0;
+						text-align: center;
+						a {
+							padding: 4px 10px;
+							display: inline-block;
+							color: #fff;
+							font-weight: 300;
+							background-color: $color-point;
+							border-radius: 4px;
+							&::after {
+								@include font-ico-outline('\e315');
+								font-size: 20px;
+							}
+						}
+					}
+					.close {
+						position: absolute;
+						right: 16px;
+						top: 8px;
+						z-index: 9;						
+						margin-bottom: 0;
+						a {
+							width: 40px;
+							height: 40px;
+							line-height: 50px;
+							&::before {
+								@include font-ico-outline('\e5cd');
+								font-size: 22px;
+							}
+						}
+					}			
 				}
 			}
 		}
@@ -692,9 +771,10 @@
 		background: linear-gradient(180deg, rgba(224,234,249,1) 0%, rgba(224,234,249,1) 50%, rgba(177,193,231,0.9906337535014006) 100%);
 		position: absolute;
 		left: 0;
+		top: 420px;
 		bottom: 0;
 		width: 100%;
-		height: 400px;
+		min-height: 400px;
 		z-index: -1;
 		@include breakpoint($sm){
 			display: none;
@@ -721,30 +801,55 @@
 			justify-content: space-between;
 			padding: 18px 0 0;
 			.btn_view {
-				padding: 3px 5px;
+				padding: 4px 14px 4px 38px;
 				display: inline-block;
 				color: #fff;
-				background-color: #000E33;
-				&::after {
-					@include font-ico-outline('\eac3');
-					font-size: px;
+				background: #000E33 url(/static/portal/img/ico/ico-subtitles.png) 10px 50% no-repeat;
+				border-radius: 4px;
+				&:focus {
+					outline-offset: 2px;
+					outline-style: dashed;
 				}
 			}			
 		}
 	}
 	.subtitle-set {
+		position: relative;
+		display: none;
 		width: 1280px;
 		max-width: 100%;
-		margin: 0 auto;
-		padding: 20px 0;
-		background: linear-gradient(180deg, rgba(224,234,249,1) 0%, rgba(224,234,249,1) 50%, rgba(177,193,231,0.9906337535014006) 100%);
-		.subtitle {
+		margin: -20px auto 0;
+		padding-bottom: 60px;
+		&.active {
+			display: block;
+		}
+		.btn_close {
+			color: #fff;
+			display: inline-block;
+			background-color: #000E33;
+			border-radius: 4px;
+			padding: 4px 14px;
+			position: absolute;
+			top: -50px;
+			right: 0;
+			z-index: 9;
+			&::before {
+				@include font-ico-outline('\e5cd');
+				font-size: 18px;
+				margin-right: 5px;
+				margin-bottom: 2px;
+			}
+			&:focus {
+				outline-offset: 2px;
+				outline-style: dashed;
+			}
+		}
+		.subtitle {			
 			background-color: #fff;
 			padding: 15px;
 			border-radius: 8px;
 			max-height: 330px;
-			overflow-y: auto;
-			.btn_close {}
+			overflow-y: auto;			
 			&.active {
 				display: block;
 			}
@@ -2034,6 +2139,106 @@
 				}
 				&.ico8 {
 					background: url(/static/portal/img/submain/img_bank4.png) no-repeat;
+				}
+			}
+		}
+	}
+}
+
+//주요서비스
+.index-menu6 {
+	> ul {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		> li {
+			margin-bottom: 45px;
+			width: calc(100% / 4 - 20px);
+			@include breakpoint($mdw){
+				width: calc(100% / 2 - 20px);
+			}
+			@include breakpoint($sm){
+				width: 100%;
+			}
+			.img {
+				img {
+					width: 100%;
+				}
+			}
+			dl {
+				dt {
+					text-align: center;
+					color: $point;
+					font-weight: 500;
+					font-size: rem(20);
+				}
+				dd {
+					margin: 20px 0;
+				}
+			}
+			ul {
+				li {
+					margin-top: 5px;
+					a {
+						color: $color-point;
+						&::after {
+							@include font-ico-outline('\e315');
+							font-size: 20px;
+							color: $color-point;
+							margin-bottom: 2px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.etc_menu {	
+	background: #E5ECFF url(/static/portal/img/submain/bg_etc_menu.png) 28px 50% no-repeat;
+	border-radius: 8px;
+	padding: 24px 32px 24px 130px;
+	@include breakpoint($lg){
+		display: flex;	
+		justify-content: space-between;
+		align-items: center;
+	}	
+	dl {
+		dt {
+			color: $color-point;
+			font-size: rem(20);
+			font-weight: 500;
+			margin-bottom: 8px;
+		}
+		dd {
+			color: $black;
+		}
+	}
+	ul {
+		display: flex;
+		@include breakpoint($sm){
+			flex-direction: column;
+		}
+		li {
+			a {
+				display: inline-block;
+				padding: 1px 10px;
+				font-size: 14px;
+				color: $black;
+				border: 1px solid #666;
+				border-radius: 4px;
+				background-color: #fff;
+				&::after {
+					@include font-ico-outline('\e315');
+					font-size: 20px;
+					color: $black;
+					margin-top: 1px;
+				}
+			}
+			& + li {
+				margin-left: 15px;
+				@include breakpoint($sm){
+					margin-left: 0;
+					margin-top: 4px;
 				}
 			}
 		}

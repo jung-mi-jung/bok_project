@@ -75,7 +75,7 @@
 				<td>10</td>
 				<td>2024-00-00</td>
 				<td>
-					<a href="" class="b-download2">수료증발급</a>
+					<a href="javascript:void(0)" onclick="viewerPopBtn()" class="b-download2">수료증발급</a>
 				</td>
 			</tr>
 			<tr>
@@ -88,3 +88,14 @@
 		</tbody>
 	</table>
 </div>
+
+<script>
+$(function() {
+	viewerPopBtn = function(crtfSn,ctfhvSe) {
+		window.open('/static/guide/portal/popup/certifi.html', 'viewerPop_blank', 'scrollbars=yes,width=1000,height=1000').focus();
+		//window.open('/portal/ecEdu/friLectrReq/viewerPop.do?viewType=BODY&crtfSn='+crtfSn+'&ctfhvSe='+ctfhvSe, 'viewerPop_blank', 'scrollbars=yes,width=1000,height=750').focus();
+		return false;
+	}
+});
+</script>
+
