@@ -1077,6 +1077,12 @@ bottom: -1px;
 left: 0;
 z-index: 1;
 }
+@media (max-width: 1199px) {
+.navigation .container {
+margin-left: 0;
+margin-right: 0;
+}
+}
 .nav-stiky .navigation .top-page-toolbar {
 float: right;
 }
@@ -2091,24 +2097,6 @@ margin-bottom: 10px;
 margin-bottom: 0;
 }
 
-.count-total {
-color: #1A1A1A;
-font-size: 0.9375rem;
-}
-.count-total::before {
-content: "";
-display: inline-block;
-width: 3px;
-height: 3px;
-background-color: #1A1A1A;
-border-radius: 50%;
-margin: 5px 8px 0 0;
-}
-.count-total strong {
-font-weight: 600;
-text-decoration: underline;
-}
-
 /* 게시판 목록 */
 .bd-line {
 clear: both;
@@ -2456,8 +2444,59 @@ text-align: right;
 margin-top: -24px;
 }
 
+/* 파일없는 게시판 */
 .bd-line.noFile .btns {
 display: none !important;
+}
+.bd-line.noFile ul li a.title {
+max-width: calc(100% - 100px) !important;
+}
+@media (min-width: 1200px) {
+.bd-line.noFile ul li a.title::before {
+content: "";
+display: inline-block;
+width: 48px;
+height: 48px;
+position: absolute;
+top: 50%;
+right: 15px;
+margin-top: -24px;
+background: url(/static/portal/img/common/arr01_off.png) 50% no-repeat;
+}
+}
+@media (min-width: 1200px) {
+.bd-line.noFile ul li:hover a::before {
+background: url(/static/portal/img/common/arr01_on.png) 50% no-repeat;
+}
+}
+
+.count-total {
+color: #1A1A1A;
+font-size: 0.9375rem;
+margin-top: 15px;
+line-height: 0.8rem;
+display: flex;
+font-size: 14px;
+}
+.count-total::before {
+content: "";
+display: inline-block;
+width: 3px;
+height: 3px;
+background-color: #1A1A1A;
+border-radius: 50%;
+margin: 5px 8px 0 0;
+}
+.count-total em {
+color: #5772e8;
+font-weight: 600;
+font-style: normal;
+display: inline-block;
+margin-left: 4px;
+}
+.count-total strong {
+font-weight: 600;
+text-decoration: underline;
 }
 
 /* 옛날 소스 */
@@ -2481,20 +2520,6 @@ width: 8%;
 }
 .bdList .nodata {
 text-align: center;
-}
-
-.count-total {
-margin-top: 15px;
-line-height: 0.8rem;
-display: flex;
-font-size: 14px;
-}
-.count-total em {
-color: #5772e8;
-font-weight: 600;
-font-style: normal;
-display: inline-block;
-margin-left: 4px;
 }
 
 .req-infor {
@@ -7518,7 +7543,7 @@ padding: 20px 20px;
 }
 }
 .fc1 {
-color: #118DB4;
+color: #3B63C4;
 font-weight: 500;
 }
 
@@ -7550,6 +7575,12 @@ margin-left: 29px !important;
 .cont p, .cont li {
 margin-bottom: 4px;
 color: #1A1A1A;
+}
+
+.top-txt {
+padding: 26px;
+text-align: center;
+background-color: #F2F6FA;
 }
 
 .btns {
@@ -7756,10 +7787,113 @@ font-weight: 400;
 display: none;
 }
 }
-/* 상설전시 상세*/
-/* 큐레이터와의 대화 */
-/* 건물 소개 */
-/* 화폐이야기 */
+/* 컨퍼런스 */
+.conference .top-txt {
+margin-bottom: 30px;
+text-align: left;
+}
+.conference .top-txt .subject span {
+display: block;
+font-size: 1.125rem;
+font-weight: 400;
+color: #1A1A1A;
+}
+.conference .top-txt .address {
+display: inline-block;
+background: linear-gradient(to right, #728bc2, #305e96);
+padding: 10px 15px;
+color: #fff;
+font-size: 1rem;
+margin-top: 20px;
+}
+.conference .top-txt + p {
+margin: 30px 0;
+}
+.conference > h3:first-of-type {
+margin-top: 0 !important;
+}
+.conference .schList {
+margin-top: 30px;
+}
+.conference .schList li {
+display: flex;
+align-items: flex-start;
+border-bottom: 1px solid #e8e8e8;
+padding-bottom: 16px;
+margin-bottom: 16px;
+flex-wrap: wrap;
+}
+.conference .schList li span {
+display: block;
+font-weight: 500;
+}
+.conference .schList li .schTxt1 {
+width: 180px;
+padding: 0 20px;
+color: #1A1A1A;
+box-sizing: border-box;
+}
+@media (max-width: 749px) {
+.conference .schList li .schTxt1 {
+width: 110px;
+padding: 0 0;
+}
+}
+.conference .schList li .schTxt2 {
+width: calc(100% - 180px);
+color: #1A1A1A;
+padding: 0 20px;
+box-sizing: border-box;
+}
+@media (max-width: 749px) {
+.conference .schList li .schTxt2 {
+width: calc(100% - 110px);
+padding: 0 0;
+}
+}
+.conference .schList li .schTxt2 + .schTxt1 {
+margin-top: 30px;
+}
+.conference .schList li .schTxt2 + .schTxt1 + .schTxt2 {
+margin-top: 30px;
+}
+.conference .schList + h3 {
+margin-top: 60px !important;
+}
+.conference .nodata {
+padding: 40px 24px 56px;
+background: #F2F6FA;
+border-radius: 16px;
+text-align: center;
+}
+.conference .nodata i {
+display: block;
+width: 76px;
+height: 56px;
+margin: 0 auto 24px;
+background-image: url("/static/imer/img/ico/ico-noData.png");
+background-repeat: no-repeat;
+background-size: auto 100%;
+}
+@media (-webkit-min-device-pixel-ratio: 2) {
+.conference .nodata i {
+background-image: url("/static/imer/img/ico/ico-noData@2x.png");
+}
+}
+.conference .nodata p {
+font-size: 2.25rem;
+font-weight: 300;
+color: #131547;
+}
+@media (max-width: 749px) {
+.conference .nodata p {
+font-size: 1.5rem;
+}
+}
+.conference > img {
+width: 100%;
+}
+
 .dbdata {
 padding: 32px 0;
 word-break: break-all;
@@ -8428,6 +8562,17 @@ padding: 5px 7px 0 0;
 }
 .box2.type2 li {
 font-size: 0.9375rem;
+}
+
+.box2.bg-lightBlue {
+background: #F2F6FA;
+padding: 30px 30px;
+}
+.box2.bg-lightBlue h2 span {
+display: block;
+font-size: 1.125rem;
+font-weight: 400;
+color: #1a1a1a;
 }
 
 .datepicker {

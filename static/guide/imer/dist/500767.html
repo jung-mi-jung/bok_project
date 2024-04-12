@@ -343,122 +343,24 @@
 				<h1>뉴스 및 자료</h1>
 			</div>
 			<main id="main-container">
-
-				<!-- LNB -->
-				<!-- <div class="lnb-nav">
-					<div class="lnb">
-						<h1>목차</h1>	
-						<ul>
-							<li class="on">
-								<a href="">관람안내<i class="ico-arrow-bk"></i></a>
-							</li>
-							<li>
-								<a href="">새소식</a>
-							</li>
-							<li>
-								<a href="">찾아오시는 길</a>
-							</li>
-							<li>
-								<a href="">편의시설 안내</a>
-							</li>
-							<li>
-								<a href="">FAQ</a>
-							</li>
-							<li>
-								<a href="">자유게시판</a>
-							</li>
-						</ul>
-					</div>
-					<div class="lnb-reference">
-						<h1>키워드</h1>	
-						<ul>
-							<li>
-								<a href="" class="reference-m">한국의 통화정책</a>
-							</li>
-							<li>
-								<a href="" class="reference-c">통화신용정책보고서</a>
-							</li>
-							<li>
-								<a href="" class="reference-c">2024통화신용정책보고서</a>
-							</li>
-							<li>
-								<a href="" class="reference-h">2024연차보고서</a>
-							</li>
-						</ul>
-					</div>
-				</div> -->
-
-				<!-- 자료검색 -->
-				<!-- <div class="sh-db">
-					<div class="db-search">
-						<p class="t">총 <strong>1590</strong>건</p>
-						<div class="search-box">
-							<span class="keyword">
-								<input type="text" title="검색어" placeholder="검색어를 입력하세요">
-							</span>
-							<div class="btns">
-								<button type="button" class="search" onclick="fnSearch('1')"><span>검색</span></button>
-								<button type="button" class="reset" onclick="resetPage()"><span>초기화</span></button>
-							</div>
-						</div>
-					</div>
-					<h2 class="sr-only">메뉴 선택 검색</h2>
-					<div class="check-list">
-						<h2 class="sr-only">뉴스 및 자료 유형 검색</h2>
-						<h3><span>유형</span></h3>
-						<select class="check-ctrl">
-							<option value="">유형 선택</option>
-						</select>
-						<div class="label-list">
-							<label>
-								<input type="checkbox" name="" id="m-01" title="BOK 경제연구">
-								<i></i>
-								<span>BOK 경제연구</span>
-							</label>
-							<label>
-								<input type="checkbox" name="" id="m-02" title="경제분석">
-								<i></i>
-								<span>경제분석</span>
-							</label>
-							<label>
-								<input type="checkbox" name="" id="m-03" title="경제전망보고서 심층연구">
-								<i></i>
-								<span>경제전망보고서 심층연구</span>
-							</label>
-							<label>
-								<input type="checkbox" name="" id="m-04" title="BOK 이슈노트">
-								<i></i>
-								<span>BOK 이슈노트</span>
-							</label>
-							<label>
-								<input type="checkbox" name="" id="m-05" title="최신 해외학술정보">
-								<i></i>
-								<span>최신 해외학술정보</span>
-							</label>
-							<label>
-								<input type="checkbox" name="" id="m-06" title="기타 간행물">
-								<i></i>
-								<span>기타 간행물</span>
-							</label>
-						</div>
-					</div>
-					<div class="Keyword">
-						<h3><span>키워드</span></h3>
-						<ul>
-							<li><a href="">키워드1</a></li>
-							<li><a href="">키워드2</a></li>
-							<li><a href="">키워드3</a></li>
-							<li><a href="">키워드4</a></li>
-							<li><a href="">키워드5</a></li>
-							<li><a href="">키워드6</a></li>
-						</ul>
-					</div>
-					
-				</div> -->
-				
 				
 
 
+
+				
+			<!-- </main>
+		</div>
+	</div> -->
+
+
+<div class="tab-list">
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <a href="javascript:void(0)" aria-controls="panel1-1" class="swiper-slide on" id="tap1-1">소개</a>
+            <a href="javascript:void(0)" aria-controls="panel1-2" class="swiper-slide" id="tap1-2">개최 실적 및 자료</a>
+        </div>
+    </div>
+</div>
 
 <div class="tab-content">
     <div class="tab-pannel on" id="panel1-1" aria-labelledby="tap1-1" role="tabpanel">
@@ -543,6 +445,317 @@
                     </tr>
                 </tbody>
             </table>
+        </div>
+    </div>
+    <div class="tab-pannel" id="panel1-2" aria-labelledby="tap1-2" role="tabpanel">
+        <div class="sh">
+            <div class="c w">
+                <div class="sh-input">
+                    <div class="date-set">
+                        <input id="sdate" name="sdate" class="sdate" title="검색기간 시작일 연도 - 월 - 일" value="" type="text" autocomplete="off" placeholder="연도 - 월 - 일">
+                        <span class="dash">~</span>
+                        <input id="edate" name="edate" class="edate" title="검색기간 종료일 연도 - 월 - 일" value="" type="text" autocomplete="off" placeholder="연도 - 월 - 일">
+                    </div>
+                    <div class="select-box">
+                        <div class="select-set">
+                            <select name="" id="">
+                                <option value="">제목</option>
+                                <option value="">내용</option>
+                                <option value="">제목 + 내용</option>
+                            </select>
+                        </div>
+                        <div class="keyword-set">
+                            <span class="keyword"><input type="text" placeholder="검색어를 입력하세요" title="검색어"></span>
+                            <button type="button" class="search" onclick="" aria-label="검색"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bd-line data-type border">
+            <ul>
+                <li>
+                    <span class="i">
+                        <span class="t1">2024</span>
+                        <!-- <span class="t2">경제연구포럼</span> -->
+                    </span>
+                    <div class="set">
+                        <div class="title">2023년 3/4분기 국제투자대조표(잠정)</div>
+                    </div>
+                    <div class="data-info">
+                        <dl>
+                            <dt>개최일</dt>
+                            <dd>2024-04-28</dd>
+                        </dl>
+                        <dl>
+                            <dt>발표자</dt>
+                            <dd>최상엽 교수(연세대학교)</dd>
+                        </dl>
+                        <dl>
+                            <dt>사회자</dt>
+                            <dd>곽보름 과장(한국은행 경제연구원)</dd>
+                        </dl>
+                        <dl>
+                            <dt>토론자</dt>
+                            <dd>박광용 교수(서강대학교), 황설웅 과장(한국은행 경제연구원)</dd>
+                        </dl>
+                    </div>
+                    <div class="row dataInfo">
+                        <span class="date"><span class="hidden">등록일</span>2022.05.10</span>
+                    </div>
+                    <div class="btns">
+                        <!-- <a href="" class="i-download">다운로드</a> -->
+                        <div class="fileGroupSet">
+                            <a href="javascript:void(0);" class="i-download" title="첨부파일 레이어창 열기">
+                                다운로드<span class="sr-only">첨부파일 있음</span>
+                            </a>
+                            <div class="fileGoupBox" style="display: none;">
+                                <h3>다운로드할 파일을 선택하세요.</h3>
+                                <ul>
+                                    <li>
+                                        <a href="" class="i-download">
+                                            글로벌 외환시장 행동규범 개정본(영문).pdf
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="i-download">
+                                            글로벌 외환시장 행동규범 개정본(번역).pdf
+                                        </a>
+                                    </li>
+                                </ul>
+                                <button class="closeLayer">
+                                    <span class="sr-only">레이어창 닫기</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <span class="row i">
+                        <span class="t1">2023</span>
+                        <!-- <span class="t2">통화금융연구회</span> -->
+                    </span>
+                    <div class="set">
+                        <div class="title">이창용 한국은행 총재, 국제결제은행(BIS) 글로벌금융시스템위원회 의장으로 선임</div>                                
+                    </div>
+                    <div class="data-info">
+                        <dl>
+                            <dt>개최일</dt>
+                            <dd>2024-04-28</dd>
+                        </dl>
+                        <dl>
+                            <dt>발표자</dt>
+                            <dd>최상엽 교수(연세대학교)</dd>
+                        </dl>
+                        <dl>
+                            <dt>사회자</dt>
+                            <dd>곽보름 과장(한국은행 경제연구원)</dd>
+                        </dl>
+                        <dl>
+                            <dt>토론자</dt>
+                            <dd>박광용 교수(서강대학교), 황설웅 과장(한국은행 경제연구원)</dd>
+                        </dl>
+                    </div>
+                    <div class="row dataInfo">
+                        <span class="date"><span class="hidden">등록일</span>2022.05.10</span>
+                    </div>
+                    <div class="btns">
+                        <a href="">
+                            <span class="icon icon-ppt">
+                                <span class="sr-only">첨부파일 있음</span>
+                            </span>
+                        </a>
+                        <a href="" class="i-view">
+                            <span class="sr-only">
+                                문서보기 프로그램 새창으로 열립니다.
+                            </span>
+                        </a>
+                    </div>
+                </li>	
+                <li>
+                    <span class="row i">
+                        <span class="t1">2023</span>
+                        <!-- <span class="t2">미시제도포럼</span> -->
+                    </span>
+                    <div class="set">
+                        <div class="title">한국은행, 「통화금융대책반 회의」 개최</div>
+                    </div>
+                    <div class="data-info">
+                        <dl>
+                            <dt>개최일</dt>
+                            <dd>2024-04-28</dd>
+                        </dl>
+                        <dl>
+                            <dt>발표자</dt>
+                            <dd>최상엽 교수(연세대학교)</dd>
+                        </dl>
+                        <dl>
+                            <dt>사회자</dt>
+                            <dd>곽보름 과장(한국은행 경제연구원)</dd>
+                        </dl>
+                        <dl>
+                            <dt>토론자</dt>
+                            <dd>박광용 교수(서강대학교), 황설웅 과장(한국은행 경제연구원)</dd>
+                        </dl>
+        
+                    </div>
+                    <div class="row dataInfo">
+                        <span class="date"><span class="hidden">등록일</span>2022.05.10</span>
+                    </div>
+                    <div class="btns">
+                        <a href="">
+                            <span class="icon icon-xls">
+                                <span class="sr-only">첨부파일 있음</span>
+                            </span>
+                        </a>
+                    </div>
+                </li>	
+                <li>
+                    <span class="i">
+                        <span class="t1">2023</span>
+                    </span>
+                    <div class="set">
+                        <div class="title">통화정책 여건 변화와 대응 과제</div>
+                    </div>
+                    <div class="data-info">
+                        <dl>
+                            <dt>개최일</dt>
+                            <dd>2024-04-28</dd>
+                        </dl>
+                        <dl>
+                            <dt>발표자</dt>
+                            <dd>최상엽 교수(연세대학교)</dd>
+                        </dl>
+                        <dl>
+                            <dt>사회자</dt>
+                            <dd>곽보름 과장(한국은행 경제연구원)</dd>
+                        </dl>
+                        <dl>
+                            <dt>토론자</dt>
+                            <dd>박광용 교수(서강대학교), 황설웅 과장(한국은행 경제연구원)</dd>
+                        </dl>
+        
+                    </div>
+                    <div class="row dataInfo">
+                        <span class="date"><span class="hidden">등록일</span>2022.05.10</span>
+                    </div>
+                    <div class="btns">
+                        <a href="">
+                            <span class="icon icon-hwp">
+                                <span class="sr-only">첨부파일 있음</span>
+                            </span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <span class="i">
+                        <span class="t1">2022</span>
+                    </span>
+                    <div class="set">
+                        <div class="title">한국은행, 대한상공회의소와 공동세미나 개최 한국은행, 대한상공회의소와 공동세미나 개최 한국은행, 대한상공회의소와 공동세미나 개최 한국은행, 대한상공회의소와 공동세미나 개최</div>
+                    </div>
+                    <div class="data-info">
+                        <dl>
+                            <dt>개최일</dt>
+                            <dd>2024-04-28</dd>
+                        </dl>
+                        <dl>
+                            <dt>발표자</dt>
+                            <dd>최상엽 교수(연세대학교)</dd>
+                        </dl>
+                        <dl>
+                            <dt>사회자</dt>
+                            <dd>곽보름 과장(한국은행 경제연구원)</dd>
+                        </dl>
+                        <dl>
+                            <dt>토론자</dt>
+                            <dd>박광용 교수(서강대학교), 황설웅 과장(한국은행 경제연구원)</dd>
+                        </dl>
+                    </div>
+                    <div class="row dataInfo">
+                        <span class="date"><span class="hidden">등록일</span>2022.05.10</span>
+                    </div>
+                    <div class="btns">
+                        <a href="">
+                            <span class="icon icon-word">
+                                <span class="sr-only">첨부파일 있음</span>
+                            </span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <span class="i">
+                        <span class="t1">2023</span>
+                    </span>
+                    <div class="set">
+                        <div class="title">한국은행, 대한상공회의소와 공동세미나 개최 한국은행, 대한상공회의소와 공동세미나 개최 한국은행, 대한상공회의소와 공동세미나 개최 한국은행, 대한상공회의소와 공동세미나 개최</div>
+                    </div>
+                    <div class="data-info">
+                        <dl>
+                            <dt>개최일</dt>
+                            <dd>2024-04-28</dd>
+                        </dl>
+                        <dl>
+                            <dt>발표자</dt>
+                            <dd>최상엽 교수(연세대학교)</dd>
+                        </dl>
+                        <dl>
+                            <dt>사회자</dt>
+                            <dd>곽보름 과장(한국은행 경제연구원)</dd>
+                        </dl>
+                        <dl>
+                            <dt>토론자</dt>
+                            <dd>박광용 교수(서강대학교), 황설웅 과장(한국은행 경제연구원)</dd>
+                        </dl>
+                    </div>
+                    <div class="row dataInfo">
+                        <span class="date"><span class="hidden">등록일</span>2022.05.10</span>
+                    </div>
+                    <div class="btns">
+                        <a href="">
+                            <span class="icon icon-img">
+                                <span class="sr-only">첨부파일 있음</span>
+                            </span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <span class="i">
+                        <span class="t1">2022</span>
+                    </span>
+                    <div class="set">
+                        <div class="title">한국은행, 대한상공회의소와 공동세미나 개최 한국은행, 대한상공회의소와 공동세미나 개최 한국은행, 대한상공회의소와 공동세미나 개최 한국은행, 대한상공회의소와 공동세미나 개최</div>
+                    </div>
+                    <div class="data-info">
+                        <dl>
+                            <dt>개최일</dt>
+                            <dd>2024-04-28</dd>
+                        </dl>
+                        <dl>
+                            <dt>발표자</dt>
+                            <dd>최상엽 교수(연세대학교)</dd>
+                        </dl>
+                        <dl>
+                            <dt>사회자</dt>
+                            <dd>곽보름 과장(한국은행 경제연구원)</dd>
+                        </dl>
+                        <dl>
+                            <dt>토론자</dt>
+                            <dd>박광용 교수(서강대학교), 황설웅 과장(한국은행 경제연구원)</dd>
+                        </dl>
+                    </div>
+                    <div class="row dataInfo">
+                        <span class="date"><span class="hidden">등록일</span>2022.05.10</span>
+                    </div>
+                    <div class="btns">
+                        <a href="">
+                            <span class="icon icon-zip">
+                                <span class="sr-only">첨부파일 있음</span>
+                            </span>
+                        </a>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
 </div>			<!-- </div> -->
@@ -643,10 +856,12 @@
 			<div class="goTop">
 				<a href="javascript:void(0);"><span class="sr-only">페이지 위로 이동</span></a>
 			</div>
+
 		</main>
 	</div>
-	<!-- //content -->
+	<!-- //#content -->
 </div>
+<!-- //#wrap -->
 
 <!-- footer -->
 <footer id="footer">

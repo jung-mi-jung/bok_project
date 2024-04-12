@@ -17,6 +17,12 @@
 			z-index: 1;
 		}
 	}
+	.container {
+		@include breakpoint($smd) {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
 	.top-page-toolbar {
 		// display: none;
 		.nav-stiky & {
