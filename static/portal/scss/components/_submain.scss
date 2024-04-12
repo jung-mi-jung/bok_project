@@ -683,13 +683,13 @@
 
 
 // ** 서브 메인
-//통화정책
+//동영상
 .index-main-video {
 	position: relative;	
 	&::before {
 		content: "";
 		display: inline-block;
-		background: linear-gradient(180deg, rgba(224,234,249,1) 0%, rgba(224,234,249,1) 50%, rgba(177,193,231,0.9906337535014006) 100%);;
+		background: linear-gradient(180deg, rgba(224,234,249,1) 0%, rgba(224,234,249,1) 50%, rgba(177,193,231,0.9906337535014006) 100%);
 		position: absolute;
 		left: 0;
 		bottom: 0;
@@ -715,15 +715,49 @@
 			border: 0;
 		}
 	}
-	.videoSet .video-etc {
-		padding: 18px 0 0;
+	.videoSet {
+		.video-etc {
+			display: flex;
+			justify-content: space-between;
+			padding: 18px 0 0;
+			.btn_view {
+				padding: 3px 5px;
+				display: inline-block;
+				color: #fff;
+				background-color: #000E33;
+				&::after {
+					@include font-ico-outline('\eac3');
+					font-size: px;
+				}
+			}			
+		}
 	}
+	.subtitle-set {
+		width: 1280px;
+		max-width: 100%;
+		margin: 0 auto;
+		padding: 20px 0;
+		background: linear-gradient(180deg, rgba(224,234,249,1) 0%, rgba(224,234,249,1) 50%, rgba(177,193,231,0.9906337535014006) 100%);
+		.subtitle {
+			background-color: #fff;
+			padding: 15px;
+			border-radius: 8px;
+			max-height: 330px;
+			overflow-y: auto;
+			.btn_close {}
+			&.active {
+				display: block;
+			}
+		}
+	}
+	
 }
 .sub-main-box {
 	width: 1440px;
 	max-width: 100%;
 	margin: 0 auto;
 }
+//통화정책
 .index-box {
 	text-align: center;
 	margin: 50px 0 80px;

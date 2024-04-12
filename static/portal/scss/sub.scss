@@ -419,6 +419,9 @@
 
 
 // 한줄에 h3 + p
+h3 + .h-group  {
+	margin-top: 0;
+}
 .h-group {	 // 기존 class => hgroup
 	display: flex;
 	justify-content: space-between;
@@ -689,6 +692,7 @@ mark {
 		}
 	}
 }
+//본인인증, 금융중개지원대출 기업정보조회
 .userType {
 	margin-top: 50px;
 	@include breakpoint($sm){
@@ -720,63 +724,127 @@ mark {
 				& + .col {
 					margin-top: 20px;					
 				}
-			}
-			&:hover {
-				border: 1px solid $color_point;
-				outline: 1px solid $color_point;
-				box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.15);
-			}
-			a {
-				i {
-					display: block;
-					height: 96px;
-					margin: 65px 0;
-					background-repeat: no-repeat;
-					background-position: 50%;
-					@include breakpoint($sm){
-						margin: 40px 0;
-					}
-					&.ico-certi1 {
-						background-image: url(/static/portal/img/ico/ico-certi1.svg);
-						
-					}
-					&.ico-certi2 {
-						background-image: url(/static/portal/img/ico/ico-certi2.svg);
-					}
-				}
-				strong {
+			}			
+			.LogBox {
+				h4 {
 					display: block;
 					text-align: center;
-					color: #fff;
+					color: #fff !important;
 					font-size: rem(18);
 					font-weight: 400;
 					padding: 8px;
 					border-radius: 50px;
+					background-color: $color-point;
 				}
-				.info {
-					color: #4D4D4D;
-					p {
-						@include bu-dot();
-						margin-bottom: 8px;
+				.fw {
+					font-weight: 500;
+				}
+				.s {
+					margin-top: 20px;
+				}
+				dl {
+					display: flex;
+					align-items: center;
+					margin-top: 5px;
+					dt {
+						width: 80px;
+						margin-bottom: 5px;
 					}
-					em {
-						margin-top: 5px;
-						display: inline-block;
-						font-weight: 600;
-						color: $black;
-						font-size: rem(25);
+					dd {
+						width: calc(100% - 80px);
+						input[type=text] {
+							width: 100%;
+						}
 					}
+					&.w2 {
+						flex-wrap: wrap;
+						flex-direction: column;
+						dt {
+							width: 100%;
+						}
+						dd {
+							width: 100%;
+							display: flex;
+							align-items: center;
+						}
+						.bar {
+							display: inline-block;
+							margin: 0 2px;
+						}
+					}					
+				}
+				.b-sh {
+					&::before {
+						color: #fff;
+						@include font-ico-outline("\e8b6");
+						font-size: 28px;
+					}
+					
 				}
 			}
-			#handphoneLoginBtn {
-				strong {
-					background-color: #3B63C4;
-				}				
-			}	
-			#ipinLoginBtn {
-				strong {
-					background-color: #39A0FF;
-				}				
+		}
+	}
+	//본인인증
+	&.userType1 {
+		.auth {
+			.col {
+				a {
+					i {
+						display: block;
+						height: 96px;
+						margin: 65px 0;
+						background-repeat: no-repeat;
+						background-position: 50%;
+						@include breakpoint($sm){
+							margin: 40px 0;
+						}
+						&.ico-certi1 {
+							background-image: url(/static/portal/img/ico/ico-certi1.svg);
+							
+						}
+						&.ico-certi2 {
+							background-image: url(/static/portal/img/ico/ico-certi2.svg);
+						}
+					}
+					strong {
+						display: block;
+						text-align: center;
+						color: #fff;
+						font-size: rem(18);
+						font-weight: 400;
+						padding: 8px;
+						border-radius: 50px;
+					}
+					.info {
+						color: #4D4D4D;
+						p {
+							@include bu-dot();
+							margin-bottom: 8px;
+						}
+						em {
+							margin-top: 5px;
+							display: inline-block;
+							font-weight: 600;
+							color: $black;
+							font-size: rem(25);
+						}
+					}
+				}
+				#handphoneLoginBtn {
+					strong {
+						background-color: #3B63C4;
+					}				
+				}	
+				#ipinLoginBtn {
+					strong {
+						background-color: #39A0FF;
+					}				
+				}
+				&:hover {
+					border: 1px solid $color_point;
+					outline: 1px solid $color_point;
+					box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.15);
+				}
 			}
 		}
 	}

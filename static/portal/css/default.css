@@ -2774,33 +2774,22 @@ width: 20px;
 height: 20px;
 }
 .reference-data .more {
-width: 100%;
-text-align: center;
-margin-top: 14px;
+position: absolute;
+top: -3px;
+right: 0;
+z-index: 9;
 }
-.reference-data .more a {
-color: #3B63C4;
+@media (min-width: 1200px) {
+.reference-data .more {
+top: 3px;
+}
 }
 .reference-data .more a::before {
-content: "\e5cf";
-font-family: "Material Icons Outlined";
-font-weight: normal;
-font-style: normal;
+content: "";
 display: inline-block;
-line-height: 1;
-vertical-align: text-bottom;
-text-transform: none;
-letter-spacing: normal;
-word-wrap: normal;
-white-space: nowrap;
--webkit-font-smoothing: antialiased;
-text-rendering: optimizeLegibility;
--moz-osx-font-smoothing: grayscale;
-font-feature-settings: "liga";
--webkit-font-feature-settings: "liga";
-font-size: 20px;
-color: #3B63C4;
-margin-right: 4px;
+width: 36px;
+height: 36px;
+background: url(/static/portal/img/submain/more.png);
 }
 .reference-data dl dt {
 font-weight: 500;
@@ -2921,33 +2910,25 @@ width: 20px;
 height: 20px;
 }
 .reference-news .more {
-width: 100%;
-text-align: center;
-margin-top: 14px;
+position: absolute;
+top: -3px;
+right: 0;
+z-index: 9;
 }
-.reference-news .more a {
-color: #3B63C4;
+@media (min-width: 1200px) {
+.reference-news .more {
+top: 3px;
+}
 }
 .reference-news .more a::before {
-content: "\e5cf";
-font-family: "Material Icons Outlined";
-font-weight: normal;
-font-style: normal;
+content: "";
 display: inline-block;
-line-height: 1;
-vertical-align: text-bottom;
-text-transform: none;
-letter-spacing: normal;
-word-wrap: normal;
-white-space: nowrap;
--webkit-font-smoothing: antialiased;
-text-rendering: optimizeLegibility;
--moz-osx-font-smoothing: grayscale;
-font-feature-settings: "liga";
--webkit-font-feature-settings: "liga";
-font-size: 20px;
-color: #3B63C4;
-margin-right: 4px;
+width: 36px;
+height: 36px;
+background: url(/static/portal/img/submain/more.png);
+}
+.reference-news dl {
+position: relative;
 }
 .reference-news dl dt::before {
 width: 21px;
@@ -3039,33 +3020,22 @@ width: 20px;
 height: 20px;
 }
 .reference-media .more {
-width: 100%;
-text-align: center;
-margin-top: 14px;
+position: absolute;
+top: -3px;
+right: 0;
+z-index: 9;
 }
-.reference-media .more a {
-color: #3B63C4;
+@media (min-width: 1200px) {
+.reference-media .more {
+top: 3px;
+}
 }
 .reference-media .more a::before {
-content: "\e5cf";
-font-family: "Material Icons Outlined";
-font-weight: normal;
-font-style: normal;
+content: "";
 display: inline-block;
-line-height: 1;
-vertical-align: text-bottom;
-text-transform: none;
-letter-spacing: normal;
-word-wrap: normal;
-white-space: nowrap;
--webkit-font-smoothing: antialiased;
-text-rendering: optimizeLegibility;
--moz-osx-font-smoothing: grayscale;
-font-feature-settings: "liga";
--webkit-font-feature-settings: "liga";
-font-size: 20px;
-color: #3B63C4;
-margin-right: 4px;
+width: 36px;
+height: 36px;
+background: url(/static/portal/img/submain/more.png);
 }
 .reference-media dl dt::before {
 content: "\e8a7";

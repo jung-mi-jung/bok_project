@@ -230,7 +230,8 @@
 				left:per(240px + 35px, $pc-wide);
 				//right: -1px;
 				width: 1px;
-				height: 100%;
+				//height: 100%;
+				height: calc(100% - 120px);
 			}
 		}
 	}

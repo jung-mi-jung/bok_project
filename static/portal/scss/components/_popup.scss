@@ -233,3 +233,31 @@ body > .popwrap {
 		}
 	}
 }
+
+
+
+//기존 popup (현용은행권...)
+.popupWrap{
+	h1 {background:#484d58;color:#fff;font-size:1.0em;padding:9px 15px;font-weight:500;}
+	.popupBody {margin:20px;}
+	.view {border-top:1px solid #dee0e6;}
+	.btn_close {position:absolute;top:9px;right:9px;
+		i:before {color:#fff;font-size:1.6em;}
+	}
+	.b-cancel {background:#7f7f7f;}
+	.file_bt {color:#ea5a59;
+		i {padding-right:5px;
+			&:before {color:#ea5a59;}
+		}
+	}
+	.inputFile {position:relative;overflow:hidden;padding-right:96px;
+		a {position: absolute;top:0;right:0;}
+		.inputUpload .btnUpload {position: absolute;top:0;right:0;margin: 0;padding:0;font-size:20px;cursor:pointer;opacity:0;filter:alpha(opacity=0);}
+		.w_100 {display: block;}
+		.input {display: inline-block;background:#fff;border:1px solid #7f7f7f;}
+		.input input {width:252px !important;background:none;height:34px;line-height: normal;line-height: 35px;border:none;width:100%;}
+	}
+	.btnBasic {display:inline-block;font-size:15px;min-width:76px;height:36px;line-height:36px;padding: 0 10px; text-align: center;
+		&.black {background:#484d58;color:#fff;}
+	}
+}

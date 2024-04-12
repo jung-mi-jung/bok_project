@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<title>포털 가이드 목록</title>
+	<link rel="stylesheet" href="https://www.bok.or.kr/static/jslibrary/jquery-ui/jquery-ui.css" />
+	<link rel="stylesheet" href="https://www.bok.or.kr/static/bos/css/bossub.css" />
+
+
+	<link rel="stylesheet" href="https://www.bok.or.kr/static/jslibrary/bootstrap/css/bootstrap.css">
+	
+ <link rel="stylesheet" href="https://fontawesome.com/v4/assets/font-awesome/css/font-awesome.css">
+
+
+
+
+
+	<script src="/static/jslibrary/jquery-3.5.1.min.js"></script>
+	<script src="https://www.bok.or.kr/static/commons/commons.js"></script>
+	<script src="https://www.bok.or.kr/static/jslibrary/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+  
+<div id="wrap">
+	<div id="header_wrap">
+		<div class="header"></div>
+	</div>
+	<div id="container">
+		<div id="lnb"></div>
+		<div id="content">
+
+
+<div class="veiw">
+	<dl>
+		<dt>내용</dt>
+		<dd>
+			<div class="bdView" id="bd_table">
+				<table>
+					<colgroup>
+						<col style="width: 100px;">
+						<col>
+						<col style="width: 80px;">
+					</colgroup>
+					<tr>
+						<td class="tac">
+
+							<a href="javascript:void(0)" onclick="fnMoveUpTR(this); return false;">▲</a>
+							<a href="javascript:void(0)" onclick="fnMoveDownTR(this); return false;">▼</a>
+
+
+
+
+							<!-- <button type="button" class="b-default btn-sm btn up" onclick="fnMoveUpTR(this); return false;">
+								<i class="fa fa-angle-up"></i>
+								<span class="sr-only">이전 순서 변경</span>
+							</button>
+							<button type="button" class="b-default btn-sm btn dn" onclick="fnMoveDownTR(this); return false;">
+								<i class="fa fa-angle-down"></i>
+								<span class="sr-only">다음 순서 변경</span>
+							</button> -->
+						</td> 
+						<td>
+							<div class="view mb0">
+								<dl>
+									<dt>동영상</dt>
+									<dd>1 동영상 게시물 제목</dd>
+								</dl>
+							</div>
+						</td>
+						<td class="tac">
+							<button type="button" class="b-del btn-sm btn" onclick="">
+								삭제
+							</button>
+
+							<button type="button" class="btn btn-default btn-sm delBtn">
+								<span class="glyphicon glyphicon-minus"></span>
+							</button>
+
+
+						</td>
+					</tr>
+
+					
+
+					<tr class="">
+						<td class="tac">
+							<a href="javascript:void(0)" onclick="fnMoveUpTR(this); return false;">▲</a>
+							<a href="javascript:void(0)" onclick="fnMoveDownTR(this); return false;">▼</a>
+						</td>
+						<td>
+							<div class="view">
+								<dl>
+									<dt>이미지</dt>
+									<dd>2 동영상 게시물 제목</dd>
+								</dl>
+							</div>
+						</td>
+						<td class="tac">
+							<button type="button" class="btn btn-default btn-sm delBtn">
+								<span class="glyphicon glyphicon-minus"></span>
+							</button>
+						</td>
+					</tr>
+
+
+
+					<tr class="">
+						<td class="tac">
+							<a href="javascript:void(0)" onclick="fnMoveUpTR(this); return false;">▲</a>
+							<a href="javascript:void(0)" onclick="fnMoveDownTR(this); return false;">▼</a>
+						</td>
+						<td>
+
+							<div class="view">
+								<dl>
+									<dt>목차</dt>
+									<dd>3 동영상 게시물 제목</dd>
+								</dl>
+							</div>
+						</td>
+						<td class="tac">
+							<button type="button" class="btn btn-default btn-sm delBtn">
+								<span class="glyphicon glyphicon-minus"></span>
+							</button>
+						</td>
+					</tr>
+
+				</table>
+			</div>
+
+		 
+		</dd>
+	</dl>
+
+</div>
+
+
+
+
+<style>
+	/* td:hover {
+		cursor: move;
+	} */
+ </style>
+
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+	<script>
+
+// $(function () {
+// 	$( "#bd_table tbody").sortable();
+// });
+
+
+
+
+
+//TR 위로 이동
+function fnMoveUpTR(el){
+	var $tr = $(el).parent().parent();  // 클릭한 버튼이 속한 tr 요소
+	$tr.prev().before($tr);              // 현재 tr 의 이전 tr 앞에 선택한 tr 넣기
+}
+
+//TR 아래로 이동
+function fnMoveDownTR(el){
+	var $tr = $(el).parent().parent(); // 클릭한 버튼이 속한 tr 요소
+	$tr.next().after($tr);             // 현재 tr 의 다음 tr 뒤에 선택한 tr 넣기
+}
+
+
+
+
+// $("#bd_table tbody").on('click', '.move', function() {
+//     var mode = ($(this).attr('class') == "move up" ? "up" : "dn");
+//     var element = $(this).closest('tr');
+
+//     if (mode == "up" && element.prev().html() != null) {
+//         // 위로 이동
+//         element.insertBefore(element.prev());
+//     } else if (mode == "dn" && element.next().html() != null){
+//         // 아래로 이동
+//         element.insertAfter(element.next());
+//     }
+// });
+
+
+// var element = $("#bd_table").closest('tr');
+
+//     if(ud=='d'){//아래로이동
+//         element.insertAfter(element.next());
+//     }else if(ud=='u'){//위로 이동
+//         element.insertBefore(element.prev());
+//     }
+
+
+
+
+	// 삭제버튼 클릭시
+	$(".delBtn").on("click", function(){ 
+
+		$(this).css("border", "1px solid red")
+		var clickedRow = $(this).parent().parent();
+		var cls = clickedRow.attr("class");	// 각 항목의 첫번째 row를 삭제한 경우 다음 row에 td 하나를 추가해 준다.
+		if( clickedRow.find("td:eq(0)").attr("rowspan") ){
+			if( clickedRow.next().hasClass(cls) ){  
+				clickedRow.next().prepend(clickedRow.find("td:eq(0)"));
+			}
+		}
+		 clickedRow.remove();
+		resizeRowspan(cls)
+	});
+	</script>
+
+
+
+
+		</div>
+	</div>
+</div>
+</body>

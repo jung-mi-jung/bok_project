@@ -199,6 +199,11 @@ p.subject {
 			}
 		}
 	}
+	&.type3{ //민원이용안내
+		.table{
+			width: 100%;
+		}
+	}
 	.table{
 		width: calc(100% - 28% - 3%);
 		float:left;
@@ -2192,7 +2197,7 @@ p.subject {
 	}
 	>div{		
 		width: 100%;
-		padding: 0 4ch;
+		padding: 0 4px;
 		@include breakpoint($sm){
 			width: 50%;
 		}
@@ -2249,7 +2254,7 @@ p.subject {
 		display: table-cell;
 	}
 	dt {
-		width: 109px;
+		width: 118px;
 		@include bu-dot;
 	}
 }
@@ -2313,7 +2318,7 @@ p.subject {
 		position: relative;
 		color: #131547;
 		font-weight: 300;
-		font-size: rem(36);	
+		font-size: rem(28);	
 		line-height: 1.2;
 		margin-bottom: 0;
 		&.ico1 {
@@ -2368,14 +2373,14 @@ p.subject {
 	}
 }
 
-
+//민원이용안내
 .info-box {
 	font-size: rem(18);
 	margin-bottom: 30px;
 	padding-left: 200px;
-	
+	background: url(/static/portal/img/sub/ico-info.png) 32px 50% no-repeat;
 	em {
-		font-weight: 600;
+		font-weight: 500;
 	}
 }
 .info-btn {
@@ -2405,20 +2410,23 @@ p.subject {
 	padding: 20px;
 	color: $point;
 	font-size: rem(30);
-	font-weight: 300;
+	//font-weight: 300;
+	font-family: 'Spoqa Han Sans Neo Light';
 	background-color: #F2F6FA;
 	border-radius: 16px;
 	margin-bottom: 30px;	
 	strong {
 		font-weight: 600;
+		font-family: 'Spoqa Han Sans Neo';
 	}
 	.ico-box {
 		display: flex;
 		align-items: center;
 		position: relative;
-		line-height: 1.2;
+		line-height: 1.4;
 		min-height: 100px;
 		padding-left: 120px;
+		margin-bottom: 0;
 		&::before {
 			content: "";
 			display: inline-block;
