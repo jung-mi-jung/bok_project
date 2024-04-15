@@ -261,3 +261,78 @@ body > .popwrap {
 		&.black {background:#484d58;color:#fff;}
 	}
 }
+
+.popup {
+	position: relative;
+}
+.certifi_wrap {	
+	color: $black;
+	font-family: 'Noto Serif KR', serif;
+	//font-family: "NotoSerifKR";
+	font-weight: 700;
+	padding: 50px;
+	.num {
+		//font-size: 20px;
+		font-size: 26px;
+	} 
+	h1 {
+		//font-size: 48px;
+		font-size: 60px;
+		text-align: center;
+		margin: 60px 0;
+		letter-spacing: 20px;
+	}
+	.subject {
+		font-size: 28px;
+		//font-weight: 500;
+	}
+	.name {
+		text-align: right;
+		//font-size: 20px;
+		font-size: 26px;
+		margin-top: 20px;
+	}
+	.txt {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		padding: 20px 0;
+		min-height: 400px;
+		background: url(/static/portal/img/popup/bok_mak.png) 50% no-repeat;
+		//font-size: 24px;
+		font-size: 30px;
+		line-height: 1.7;
+		p {
+			text-align: left;
+		}
+	}
+	.date {
+		text-align: center;
+		//font-size: 20px;
+		//font-size: 22px;
+		font-size: 26px;
+		margin: 30px 0 70px;
+	}
+	.bottom {
+		text-align: center;
+		//font-size: 24px;
+		font-size: 28px;
+		line-height: 1.6;
+		> div {
+			position: relative;
+			display: inline-block;
+			margin: 0 auto;
+		}
+		.sin {
+			position: absolute;
+			top: 50%;
+			right: -90px;
+			margin-top: -46px;
+			z-index: 1;
+			img {
+				vertical-align: middle;
+			}
+		}
+	}
+}

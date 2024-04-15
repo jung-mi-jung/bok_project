@@ -549,6 +549,23 @@ overflow-y: hidden;
 height: auto !important;
 }
 }
+.popup .page-print {
+background-color: #eee;
+padding: 10px 0;
+text-align: center;
+}
+.popup .page-print [class^=b-] {
+height: 33px;
+line-height: 33px;
+font-size: 14px;
+}
+.popup .page-print .b-print {
+background-color: #3B63C4;
+}
+.popup .page-print .b-close {
+background-color: #666;
+}
+
 .navigation {
 position: relative;
 z-index: 1;
@@ -10509,6 +10526,73 @@ background: #484d58;
 color: #fff;
 }
 
+.popup {
+position: relative;
+}
+
+.certifi_wrap {
+color: #1A1A1A;
+font-family: "Noto Serif KR", serif;
+font-weight: 700;
+padding: 50px;
+}
+.certifi_wrap .num {
+font-size: 26px;
+}
+.certifi_wrap h1 {
+font-size: 60px;
+text-align: center;
+margin: 60px 0;
+letter-spacing: 20px;
+}
+.certifi_wrap .subject {
+font-size: 28px;
+}
+.certifi_wrap .name {
+text-align: right;
+font-size: 26px;
+margin-top: 20px;
+}
+.certifi_wrap .txt {
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+padding: 20px 0;
+min-height: 400px;
+background: url(/static/portal/img/popup/bok_mak.png) 50% no-repeat;
+font-size: 30px;
+line-height: 1.7;
+}
+.certifi_wrap .txt p {
+text-align: left;
+}
+.certifi_wrap .date {
+text-align: center;
+font-size: 26px;
+margin: 30px 0 70px;
+}
+.certifi_wrap .bottom {
+text-align: center;
+font-size: 28px;
+line-height: 1.6;
+}
+.certifi_wrap .bottom > div {
+position: relative;
+display: inline-block;
+margin: 0 auto;
+}
+.certifi_wrap .bottom .sin {
+position: absolute;
+top: 50%;
+right: -90px;
+margin-top: -46px;
+z-index: 1;
+}
+.certifi_wrap .bottom .sin img {
+vertical-align: middle;
+}
+
 .calSec {
 display: flex;
 justify-content: space-between;
@@ -10976,6 +11060,14 @@ color: #fff;
 margin-left: 8px;
 margin-bottom: 2px;
 }
+.sub-main-zone .container .map_img .map-set .svg-set text::before {
+content: "";
+display: inline-block;
+width: 12px;
+height: 12px;
+background-color: #39A0FF;
+border-radius: 50%;
+}
 .sub-main-zone .container .map_img .map-set .svg-set .cls-1,
 .sub-main-zone .container .map_img .map-set .svg-set .cls-2 {
 fill: none;
@@ -11030,7 +11122,7 @@ outline: dashed 1px #000;
 }
 .sub-main-zone .container .map_img .map-set .svg-set .svg-map .label {
 pointer-events: none;
-font-size: 23px;
+font-size: 16px;
 fill: #787878;
 }
 .sub-main-zone .container .map_img .map-set .svg-set .svg-map .label.active {
@@ -11040,6 +11132,95 @@ text-align: center;
 fill: #000;
 letter-spacing: 0.5px;
 filter: url(#txtshadow);
+}
+.sub-main-zone .container .map_img .map-set .con_set .con {
+position: absolute;
+top: -100px;
+left: 50%;
+z-index: 9;
+width: 320px;
+background-color: #fff;
+border-radius: 16px;
+padding: 16px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+.sub-main-zone .container .map_img .map-set .con_set dl dt {
+font-size: 1.5rem;
+font-weight: 500;
+border-bottom: 1px solid #CCDAFF;
+padding-bottom: 6px;
+margin-bottom: 10px;
+}
+.sub-main-zone .container .map_img .map-set .con_set dl dd ul li {
+display: flex;
+margin-bottom: 8px;
+padding-left: 32px;
+}
+.sub-main-zone .container .map_img .map-set .con_set dl dd ul li.map {
+background: url(/static/portal/img/sub/zone/ico-ad.png) 0 1px no-repeat;
+}
+.sub-main-zone .container .map_img .map-set .con_set dl dd ul li.tel {
+background: url(/static/portal/img/sub/zone/ico-call.png) 0 1px no-repeat;
+}
+.sub-main-zone .container .map_img .map-set .con_set .btn {
+margin: 10px 0 0;
+text-align: center;
+}
+.sub-main-zone .container .map_img .map-set .con_set .btn a {
+padding: 4px 10px;
+display: inline-block;
+color: #fff;
+font-weight: 300;
+background-color: #3B63C4;
+border-radius: 4px;
+}
+.sub-main-zone .container .map_img .map-set .con_set .btn a::after {
+content: "\e315";
+font-family: "Material Icons Outlined";
+font-weight: normal;
+font-style: normal;
+display: inline-block;
+line-height: 1;
+vertical-align: text-bottom;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+font-feature-settings: "liga";
+font-size: 20px;
+}
+.sub-main-zone .container .map_img .map-set .con_set .close {
+position: absolute;
+right: 16px;
+top: 8px;
+z-index: 9;
+margin-bottom: 0;
+}
+.sub-main-zone .container .map_img .map-set .con_set .close a {
+width: 40px;
+height: 40px;
+line-height: 50px;
+}
+.sub-main-zone .container .map_img .map-set .con_set .close a::before {
+content: "\e5cd";
+font-family: "Material Icons Outlined";
+font-weight: normal;
+font-style: normal;
+display: inline-block;
+line-height: 1;
+vertical-align: text-bottom;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+font-feature-settings: "liga";
+font-size: 22px;
 }
 .sub-main-zone .container .notice-set-style {
 margin-top: 30px;
@@ -11627,9 +11808,10 @@ display: inline-block;
 background: linear-gradient(180deg, rgb(224, 234, 249) 0%, rgb(224, 234, 249) 50%, rgba(177, 193, 231, 0.9906337535) 100%);
 position: absolute;
 left: 0;
+top: 420px;
 bottom: 0;
 width: 100%;
-height: 400px;
+min-height: 400px;
 z-index: -1;
 }
 @media (max-width: 749px) {
@@ -11658,13 +11840,40 @@ justify-content: space-between;
 padding: 18px 0 0;
 }
 .index-main-video .videoSet .video-etc .btn_view {
-padding: 3px 5px;
+padding: 4px 14px 4px 38px;
 display: inline-block;
 color: #fff;
-background-color: #000E33;
+background: #000E33 url(/static/portal/img/ico/ico-subtitles.png) 10px 50% no-repeat;
+border-radius: 4px;
 }
-.index-main-video .videoSet .video-etc .btn_view::after {
-content: "\eac3";
+.index-main-video .videoSet .video-etc .btn_view:focus {
+outline-offset: 2px;
+outline-style: dashed;
+}
+.index-main-video .subtitle-set {
+position: relative;
+display: none;
+width: 1280px;
+max-width: 100%;
+margin: -20px auto 0;
+padding-bottom: 60px;
+}
+.index-main-video .subtitle-set.active {
+display: block;
+}
+.index-main-video .subtitle-set .btn_close {
+color: #fff;
+display: inline-block;
+background-color: #000E33;
+border-radius: 4px;
+padding: 4px 14px;
+position: absolute;
+top: -50px;
+right: 0;
+z-index: 9;
+}
+.index-main-video .subtitle-set .btn_close::before {
+content: "\e5cd";
 font-family: "Material Icons Outlined";
 font-weight: normal;
 font-style: normal;
@@ -11679,14 +11888,13 @@ white-space: nowrap;
 text-rendering: optimizeLegibility;
 -moz-osx-font-smoothing: grayscale;
 font-feature-settings: "liga";
-font-size: px;
+font-size: 18px;
+margin-right: 5px;
+margin-bottom: 2px;
 }
-.index-main-video .subtitle-set {
-width: 1280px;
-max-width: 100%;
-margin: 0 auto;
-padding: 20px 0;
-background: linear-gradient(180deg, rgb(224, 234, 249) 0%, rgb(224, 234, 249) 50%, rgba(177, 193, 231, 0.9906337535) 100%);
+.index-main-video .subtitle-set .btn_close:focus {
+outline-offset: 2px;
+outline-style: dashed;
 }
 .index-main-video .subtitle-set .subtitle {
 background-color: #fff;
@@ -13158,6 +13366,132 @@ background: url(/static/portal/img/submain/img_bank3.png) no-repeat;
 }
 .edu-go.type2 li a.ico8 {
 background: url(/static/portal/img/submain/img_bank4.png) no-repeat;
+}
+
+.index-menu6 > ul {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+.index-menu6 > ul > li {
+margin-bottom: 45px;
+width: calc(25% - 20px);
+}
+@media (min-width: 750px) and (max-width: 1199px) {
+.index-menu6 > ul > li {
+width: calc(50% - 20px);
+}
+}
+@media (max-width: 749px) {
+.index-menu6 > ul > li {
+width: 100%;
+}
+}
+.index-menu6 > ul > li .img img {
+width: 100%;
+}
+.index-menu6 > ul > li dl dt {
+text-align: center;
+color: #131547;
+font-weight: 500;
+font-size: 1.25rem;
+}
+.index-menu6 > ul > li dl dd {
+margin: 20px 0;
+}
+.index-menu6 > ul > li ul li {
+margin-top: 5px;
+}
+.index-menu6 > ul > li ul li a {
+color: #3B63C4;
+}
+.index-menu6 > ul > li ul li a::after {
+content: "\e315";
+font-family: "Material Icons Outlined";
+font-weight: normal;
+font-style: normal;
+display: inline-block;
+line-height: 1;
+vertical-align: text-bottom;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+font-feature-settings: "liga";
+font-size: 20px;
+color: #3B63C4;
+margin-bottom: 2px;
+}
+
+.etc_menu {
+background: #E5ECFF url(/static/portal/img/submain/bg_etc_menu.png) 28px 50% no-repeat;
+border-radius: 8px;
+padding: 24px 32px 24px 130px;
+}
+@media (min-width: 1200px) {
+.etc_menu {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+}
+.etc_menu dl dt {
+color: #3B63C4;
+font-size: 1.25rem;
+font-weight: 500;
+margin-bottom: 8px;
+}
+.etc_menu dl dd {
+color: #1A1A1A;
+}
+.etc_menu ul {
+display: flex;
+}
+@media (max-width: 749px) {
+.etc_menu ul {
+flex-direction: column;
+}
+}
+.etc_menu ul li a {
+display: inline-block;
+padding: 1px 10px;
+font-size: 14px;
+color: #1A1A1A;
+border: 1px solid #666;
+border-radius: 4px;
+background-color: #fff;
+}
+.etc_menu ul li a::after {
+content: "\e315";
+font-family: "Material Icons Outlined";
+font-weight: normal;
+font-style: normal;
+display: inline-block;
+line-height: 1;
+vertical-align: text-bottom;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+font-feature-settings: "liga";
+font-size: 20px;
+color: #1A1A1A;
+margin-top: 1px;
+}
+.etc_menu ul li + li {
+margin-left: 15px;
+}
+@media (max-width: 749px) {
+.etc_menu ul li + li {
+margin-left: 0;
+margin-top: 4px;
+}
 }
 
 .pdf {

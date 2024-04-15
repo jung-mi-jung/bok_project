@@ -24,6 +24,20 @@
 	font-weight: 700;
 	font-style: normal;
 }
+//수료증
+@font-face {
+	font-family: 'Noto Serif KR';
+	src: url('/static/font/noto-serif-kr/NotoSerifKR-SemiBold.otf') format('otf');
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Noto Serif KR Bold';
+	src: url('/static/font/noto-serif-kr/NotoSerifKR-Bold.otf') format('otf');
+	font-weight: 700;
+	font-style: normal;
+}
+
 
 
 @import '../../commons/scss/common.scss';
