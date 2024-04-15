@@ -239,6 +239,7 @@
 		margin-bottom: 30px;
 		text-align: left;
 		.subject {
+			margin-bottom: 0 !important;
 			span {
 				display: block;
 				font-size: rem(18);
@@ -276,15 +277,29 @@
 			span {
 				display: block;
 				font-weight: 500;
+				padding: 0 0 10px;
+				> span {
+					display: inline-block;
+					margin-right: 5px;
+					padding: 0;
+				}
+			}
+			p {
+				font-weight: 400;
+				padding: 0 0 10px;
 			}
 			.schTxt1 {
 				width: 180px;
 				padding: 0 20px;
 				color: #1A1A1A;
 				box-sizing: border-box;
+				font-weight: 500 !important;
 				@include breakpoint($sm) {
 					width: 110px;
 					padding: 0 0;
+				}
+				> span {
+					font-weight: 500 !important;
 				}
 			}
 			.schTxt2 {
@@ -297,9 +312,9 @@
 					padding: 0 0;
 				}
 				& + .schTxt1 {
-					margin-top: 30px;
+					margin-top: 20px;
 					& + .schTxt2 {
-						margin-top: 30px;
+						margin-top: 20px;
 					}
 				}
 			}
@@ -331,5 +346,92 @@
 	}
 	> img {
 		width: 100%;
+	}
+}
+
+//오시는 길
+.bokHead{
+	background:#f4f5f7;padding:15px;overflow:hidden;
+	@include breakpoint($sm){
+		.map{width:100%;}
+		.bankMap{width:100%;margin:20px 0 0 0;}
+	}
+	.map{
+		float:left;
+		width:60%;
+		@include breakpoint($sm){
+			width: 100%;
+		}
+	}
+	.bankMap{
+		float:left;
+		width:38%;
+		margin-left:2%;
+		@include breakpoint($sm){
+			width: 100%;
+			margin-left: 0;
+			margin-top: 20px;
+		}
+		// font-size: rem(18);
+		&.type{
+			dt{
+				font-weight:600;color: $point;margin-top:5px;
+			}
+		}
+		dt, dd{
+			padding-left: 35px;
+		}
+		dt{
+			margin-top:10px;
+			&::before {
+				font-size: 16px;
+				color:#fff;
+				position:absolute;
+				top:0;
+				left:0;
+				border-radius: 30px;
+				background:#3B63C4;
+				width: 26px;
+				height: 26px;
+				line-height: 22px;
+				text-align:center;
+				margin: 3px 3px 0 0;
+			}
+		}
+		.pic img{
+			display:inline-block;border:3px solid #fff;
+		}
+		.ad{
+			position:relative;
+			&:before{
+				@include font-ico-outline('\e0c8');
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				
+			}
+		}
+		.ph{
+			position:relative;
+			&:before{
+				@include font-ico-outline('\e0b0');
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+			}
+		}
+		.fx{
+			position:relative;
+			&:before{
+				@include font-ico-outline('\ead8');
+			}
+		}
+		.em{
+			position:relative;
+			&:before{
+				content:"\f003";
+				color:#fff;font-size:13px;position:absolute;top:0;left:0;border-radius: 30px;background:#3B63C4;width:20px;height:20px;text-align:center;
+			}
+		}
 	}
 }

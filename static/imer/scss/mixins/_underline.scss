@@ -122,17 +122,15 @@ underline-top | underline-bottom | underline-left-right | underline-right-left |
 
 .a-hover {
 	color: inherit;
-	&:hover {
-		@include breakpoint($lg) {
-			@include a-hover(#3B63C4);
-		}
-	}
+	@include a-hover(#1454FF);
+	// &:hover {
+	// 	@include breakpoint($lg) {
+	// 		@include a-hover(#1454FF);
+	// 	}
+	// }
 	&.colorBk {
-		&:hover {
-			@include breakpoint($lg) {
-				@include a-hover(#1a1a1a);
-			}
-		}
+		color: inherit;
+		@include a-hover(#1a1a1a);
 	}
 }
 
@@ -144,6 +142,7 @@ underline-top | underline-bottom | underline-left-right | underline-right-left |
 		color: inherit;
 	}
 	&.colorBk {
+		color: inherit;
 		&:hover {
 			> strong {
 				@include breakpoint($lg) {
