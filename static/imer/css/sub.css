@@ -1282,7 +1282,6 @@ display: block;
 }
 }
 .lnb-nav {
-position: -webkit-sticky;
 position: sticky;
 top: 48px;
 padding-top: 0;
@@ -5247,7 +5246,6 @@ justify-content: center;
 .sh-db {
 padding-top: 30px;
 margin-bottom: 30px;
-position: -webkit-sticky;
 position: sticky;
 top: 36px;
 background: #fff;
@@ -7671,7 +7669,6 @@ margin-bottom: 30px;
 }
 }
 .content-row .cont-nav ul {
-position: -webkit-sticky;
 position: sticky;
 top: 48px;
 }
