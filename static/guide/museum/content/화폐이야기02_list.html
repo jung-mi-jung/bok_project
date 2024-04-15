@@ -439,7 +439,8 @@
         var targetInx = $(this).parents("g").index() + 1;
 
         $(targetImg).addClass("on").siblings().removeClass("on");
-        $(".tab-list a").eq(targetInx).addClass("on").siblings().removeClass("on")
+        $(".tab-list a").eq(targetInx).addClass("on").siblings().removeClass("on");
+        $(".tab-list a").eq(targetInx).trigger("click");
         
     });
 

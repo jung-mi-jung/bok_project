@@ -1339,6 +1339,10 @@ color: #C81720 !important;
 color: #C81720;
 }
 
+.point2 {
+color: #3B63C4;
+}
+
 @font-face {
 font-family: "Material Icons";
 font-style: normal;
@@ -2373,7 +2377,7 @@ top: 0;
 left: 0;
 width: 100%;
 z-index: 99;
-background-color: #131547;
+background-color: #001c66;
 display: flex;
 flex-direction: column;
 }
@@ -2525,7 +2529,7 @@ border-radius: 30px;
 background: #fff;
 display: inline-block;
 padding: 1px 10px;
-color: #131547;
+color: #001c66;
 font-size: 14px;
 }
 #header .g-info .global ul li .userInfoOpBxSet .userInfoOpBx {
@@ -2602,7 +2606,7 @@ border-radius: 4px;
 padding: 4px;
 }
 #header .g-info .global ul li .userInfoOpBxSet .userInfoOpBx .myLogoutBx a.mypg {
-background-color: #3B63C4;
+background-color: #3E7CC8;
 }
 #header .g-info .global ul li .userInfoOpBxSet .userInfoOpBx .myLogoutBx a.mypg::before {
 content: "";
@@ -2743,7 +2747,7 @@ padding: 0 0 15px;
 }
 }
 .bd-view_wrap .hgroup h1 {
-color: #131547;
+color: #001c66;
 font-size: 1.25rem;
 font-weight: 700;
 }
@@ -2777,7 +2781,7 @@ padding-bottom: 0;
 .hgroup h1 {
 display: block;
 font-size: 3rem;
-color: #131547;
+color: #001c66;
 font-weight: 600;
 font-family: "Spoqa Han Sans Neo Bold";
 width: calc(100% - 140px);
@@ -3116,7 +3120,7 @@ margin-left: 10px;
 }
 .admin-set .satisfact .radio-group input[type=radio]:checked + i + span {
 font-weight: 500;
-color: #131547;
+color: #001c66;
 text-decoration: underline;
 }
 @media (max-width: 1199px) {
@@ -3131,7 +3135,7 @@ top: 50%;
 right: 20px;
 margin-top: -16px;
 color: #fff;
-background-color: #131547;
+background-color: #001c66;
 border-radius: 4px;
 padding: 4px 14px;
 }
@@ -3417,7 +3421,7 @@ width: 40px;
 height: 40px;
 border: 1px solid #131547;
 border-radius: 50%;
-background: #131547;
+background: #001c66;
 }
 @media (min-width: 1200px) {
 .my_memo .swiper .b-close {
@@ -4281,7 +4285,7 @@ left: 0;
 display: block;
 width: 100%;
 height: 100vh;
-background-color: #131547;
+background-color: #001c66;
 z-index: 99;
 }
 .mobileGnb__set.active .top {
@@ -4313,7 +4317,7 @@ display: none;
 display: none;
 }
 .mobileGnb__nav > ul > li.active > a {
-color: #131547;
+color: #001c66;
 background-color: #fff;
 border-bottom: none;
 }
@@ -4335,7 +4339,7 @@ margin-bottom: 15px;
 .mobileGnb__nav > ul > li.active .depth2 > ul > li > a {
 display: block;
 font-weight: 500;
-color: #131547;
+color: #001c66;
 padding: 2px 0;
 }
 .mobileGnb__nav > ul > li.active .depth3 > ul li a {

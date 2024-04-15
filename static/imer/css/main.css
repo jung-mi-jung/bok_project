@@ -630,7 +630,7 @@ color: #fff;
 font-weight: 300;
 font-size: 0.875rem;
 padding: 9px 24px;
-background-color: #3B63C4;
+background-color: #3E7CC8;
 border-radius: 4px;
 }
 #section2 .board-list1 .swiper-wrapper .swiper-slide .dowload::before {
@@ -764,13 +764,13 @@ content: "";
 display: inline-block;
 width: 64px;
 height: 64px;
-border: 1px solid #131547;
+border: 1px solid #001c66;
 border-radius: 50%;
 background: url(/static/imer/img/main/ctrl-off.png) 50% no-repeat;
 }
 .ctrl2 button:hover::before {
-background: #131547 url(/static/imer/img/main/ctrl-on.png) 50% no-repeat;
-border-color: #131547;
+background: #001c66 url(/static/imer/img/main/ctrl-on.png) 50% no-repeat;
+border-color: #001c66;
 }
 .ctrl2 button.prev {
 left: -100px;
@@ -972,7 +972,7 @@ background-image: url(/static/imer/img/main/ico-info4.png);
 }
 #section4 .info-list ul li a:hover {
 color: #fff;
-background-color: #3B63C4;
+background-color: #3E7CC8;
 box-shadow: none;
 }
 

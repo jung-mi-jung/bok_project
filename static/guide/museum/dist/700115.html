@@ -339,7 +339,20 @@
 					<div class="global">
 						<ul>
 							<li>
-								<a href="">본인인증</a>
+								<!-- <a href="">본인인증</a> -->
+								<div class="userInfoOpBxSet">
+									<a href="javascript:void(0)" class="userInfoOpener" title="로그인 정보 페이지 열고 닫기">홍길동</a>
+									<div class="userInfoOpBx">
+										<div class="userInfoSnsBx">
+											<i class="ico"></i>
+											<span class="infoTxts"><strong>홍길동</strong>님 <br>로그인중입니다.</span>
+										</div>
+										<div class="myLogoutBx">
+											<a href="/portal/bbs/U0000555/listMy.do?menuNo=200263" class="mypg">마이페이지</a>
+											<a href="/portal/member/user/logout.do" class="logout">로그아웃</a>
+										</div>
+									</div>								
+								</div>
 							</li>
 							<li>
 								<a href="/eng/main/main.do" target="_blank" title="새창열림">ENGLISH</a>
@@ -432,6 +445,22 @@
 							</ul>
 						</div>
 					</li>
+					<li>
+						<a href="" title="하위메뉴 열기">1F</a>
+						<div class="depth2">
+							<ul>
+								<li>
+									<a href="">1F</a>
+								</li>
+								<li class="">
+									<a href="">MF</a>
+								</li>
+								<li class="">
+									<a href="">2F</a>
+								</li>
+							</ul>
+						</div>
+					</li>
 				</ul>
 				<div class="top-page-toolbar">
 					<div class="page-toolbar">
@@ -464,6 +493,7 @@
 			</div>
 			<main id="main-container">
 
+				<!-- lnb -->
 				<!-- <div class="lnb-nav">
 					<div class="lnb">
 						<h1>목차</h1>	
@@ -490,12 +520,13 @@
 					</div>
 				</div> -->
 
+				
+
 				<div class="content">
 
 
 
 <div class="content">
-	<h2 class="first">화폐박물관</h2>
 	<div class="bokHead"> 
 		<div class="map" id="mapView" style="height: 300px;" title="1. 지하철 1,2호선 시청역 7번 출구로 나온 후 직진, 횡단보도 이용, 길을 건넌 후 곧바로 좌회전하여 직진. 세종대로와 소공로가 교차하는 사거리에서 우회전하여 직진. 소공로를 따라 계속 걸어오시면 한국은행 동문에 도착. 2. 지하철 2호선 을지로입구역 7번 출구로 나온 후 남대문로를 끼고 계속 직진. 에비뉴엘을 지난 후 횡단보도 이용, 길을 건너 계속 직진. 한진빌딩 본관을 지나면 한국은행 소공별관 도착. 본부는 소공별관 앞 횡단보도를 건넌 후 1분 가량 직진 이동시 정문 도착. 3. 지하철 4호선 회현역 7번 출구로 나온 후 곧바로 좌회전. 아웃백 스테이크 회현점을 지나서 계속 직진. 남대문로에 도착 후 횡단보도 이용, 길을 건너면 한국은행 화폐금융박물관 도착. 본부 정문은 화폐금융박물관에서 좌측으로 50미터 이동."></div>
 		<div class="bankMap"> 
@@ -504,15 +535,19 @@
 			</p>
 			<dl>
 				<dt class="ad">주 소</dt>
-				<dd>서울특별시 중구 남대문로 39 (남대문로3가)</dd> 
+				<dd>[04531] 서울특별시 중구 남대문로 39 (남대문로3가)</dd> 
 				<dt class="ph">전화번호</dt><dd>02-759-4881~2</dd> 
 			</dl> 
 		</div>
 	</div><!-- map E// -->
-	<h3>교통안내</h3>
-	<div class="table th_tac"> 
+	<h3 class="h3">교통안내</h3>
+	<div class="table th_tac onlyThBg borderTop"> 
 		<table> 
 			<caption class="cp_off">화폐박물관 교통안내 </caption> 
+			<colgroup>
+				<col style="width: 20%;">
+				<col>
+			</colgroup>
 			<tbody> 
 				<tr class="firTr"> 
 					<th class="w15p NamoSE_border_show" scope="row"> 

@@ -3,7 +3,7 @@ table {
 	width: 100%;
 	border-collapse: collapse;
     border-spacing: 0;
-	font-size: rem(18);
+	// font-size: rem(18);
 	color: #1A1A1A;
 	p {
 		margin-bottom: 0 !important;
@@ -11,11 +11,8 @@ table {
 }
 .table {
 	clear: both;
-	border-top: 2px solid #182252;
+	// border-top: 2px solid #182252;
 	margin-bottom: 10px;
-	&.noBorder {
-		border-top: 0;
-	}
 	@include breakpoint($md){
 		&.pcweb {
 			display: block !important;
@@ -24,37 +21,83 @@ table {
 			display: none !important;
 		}
 	}
+	&.noBorder {
+		border-top: 0;
+	}
 	table {
 		width: 100%;
 		table-layout: fixed;
 		thead {
 			th {
 				border-bottom: none;
+				background: #E8EBED;
+				color: $black;
+				border-right: 1px solid rgba(0,0,0,0.1);
+				&:first-of-type {
+					border-radius: 8px 0 0 8px;
+				}
+				&:last-of-type {
+					border-radius: 0 8px 8px 0;
+					border-right: 0;
+				}
 			}
 		}
 		th {
 			color: $black;
 			font-weight: 400;
-			background-color: #F2F6FA;			
-			border: 1px solid $bd-color;
-			padding: 12px 0;
+			background-color: #F2F6FA;
+			color: $black;			
+			border-right: 1px solid $tb-border-color;
+			border-bottom: 1px solid $tb-border-color;
+			// border-right: 1px solid $bd-color;
+			padding: 14px 16px;
+			font-size: rem(16);
+			@include breakpoint($sm) {
+				padding: 10px 12px;
+			}
 			// & + th {
 			// 	border-left: 1px solid $bd-color;
 			// }
 		}
 		tbody {
 			th {
-				color: #1A1A1A;
-				// background-color: #F2F6FA;	
-				background-color: #FAFAFA;
+				color: $black;
+				background-color: $tb-bg-color;
+			}
+			tr {
+				&:nth-of-type(even) {
+					td, th {
+						background-color: $tb-bg-color;
+					}
+				}
 			}
 		}
 		td {
-			padding: 10px 15px;
-			color: #1A1A1A;
-			min-height: 55px;
-			border: 1px solid $bd-color;
+			color: $body-font-color;
+			padding: 14px 16px;
+			min-height: 52px;
+			font-size: rem(16);
+			border-right: 1px solid $tb-border-color;
+			border-bottom: 1px solid $tb-border-color;
 			background-color: #fff;
+			@include breakpoint($sm) {
+				padding: 10px 12px;
+			}
+			&:last-of-type {
+				border-right: 0;
+			}
+			&.title {
+				text-align: left;
+				a {
+					&:hover {
+						color: $color-point;;
+						text-decoration: underline;
+					}
+				}				
+			}
+			.a-hover {
+				color: #1454FF;
+			}
 			.a-hover2 {
 				strong {
 					color: #1a1a1a;
@@ -67,6 +110,22 @@ table {
 			}
 		}
 	}
+	&.onlyThBg {
+		table {
+			tbody {
+				td {
+					background-color: #fff !important;
+				}
+			}
+		}
+	}
+	&.borderTop {
+		table {
+			border-top: 2px solid $point;
+		}
+	}
+
+
 	&.type2 {
 		font-size: rem(18);
 		border-top: 2px solid #182252;
@@ -158,7 +217,6 @@ table {
 		display: inline-block;
 	}
 }
-
 @include breakpoint($smd){
 	.scrollX {
 		overflow: hidden;
@@ -199,3 +257,6 @@ table {
 		}
 	}	
 }
+
+
+

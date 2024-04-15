@@ -65,23 +65,40 @@ $(function () {
 
 
 //전체메뉴
-var navhtml = $('#gnb > ul').clone()
-navhtml.find('div').removeAttr('id')
-$('.total-nav .nav').html(navhtml.clone())
+// var navhtml = $('#gnb > ul').clone()
+// navhtml.find('div').removeAttr('id')
+// $('.total-nav .nav').html(navhtml.clone())
+
+$(".total-nav .dp3 .dropdown").on("click", function() {
+	$(this).toggleClass("on");	
+
+	if( $(this).hasClass("on" )) {
+		$(this).children("a").attr("title", "하위메뉴 닫기");
+	}
+	else {
+		$(this).children("a").attr("title", "하위메뉴 열기");
+	}
+})
+
+
 $(".all-nav-toggle").click(function (e){
-	e.preventDefault()
-	$(".total-nav").addClass("active");
-	$('.total-nav .nav>ul>li:first-child>a').focus()
+	$("body").addClass(popupOpened).attr("tabindex", -1);
+
+	// e.preventDefault()
+	// $(".total-nav").addClass("active");
+	// $('.total-nav .nav>ul>li:first-child>a').focus()
+
+	$(".total-nav").attr("tabindex", 1);
+	$(".total-nav .modal-header .close").focus();
 });
-$('.total-nav button').click(function (e) {
-	e.preventDefault()
-	$(".total-nav").removeClass('active');
-	$(".all-nav-toggle").focus();
-});
+// $('.total-nav button').click(function (e) {
+// 	e.preventDefault()
+// 	$(".total-nav").removeClass('active');
+// 	$(".all-nav-toggle").focus();
+// });
 
 
 $(function () {
-
 	//skip
 	$('.skip a[href="#content"]').click(function(event) {
 		$('.page-toolbar button').focus();
@@ -150,35 +167,35 @@ $(function () {
 
 
 	// 모바일
-	$('.m-all-nav-toggle').on('click', function (e) {
-		e.preventDefault()
-		$('.mobileGnb__set').addClass('active')
-		$('body').addClass('ovh')
-	});
-	$('.mobileGnb__nav').html(navhtml)
+	// $('.m-all-nav-toggle').on('click', function (e) {
+	// 	e.preventDefault()
+	// 	$('.mobileGnb__set').addClass('active')
+	// 	$('body').addClass('ovh')
+	// });
+	// $('.mobileGnb__nav').html(navhtml)
 
 	// 모바일 메뉴
-	var mobileNav = $('.mobileGnb__set')
-	mobileNav.find('ul').each(function() {
-		if($(this).find('li').length==0)
-		{
-			$(this).remove()
-		}
-	})
-	$(mobileNav)
-		.find('> ul > li > a')
-		.on('click', function (e) {
-			if($(this).parent().find('>div,>ul').length > 0){
-				e.preventDefault();
-				$(this).parent().toggleClass('active')				
-			}
-		});
+	// var mobileNav = $('.mobileGnb__set')
+	// mobileNav.find('ul').each(function() {
+	// 	if($(this).find('li').length==0)
+	// 	{
+	// 		$(this).remove()
+	// 	}
+	// })
+	// $(mobileNav)
+	// 	.find('> ul > li > a')
+	// 	.on('click', function (e) {
+	// 		if($(this).parent().find('>div,>ul').length > 0){
+	// 			e.preventDefault();
+	// 			$(this).parent().toggleClass('active')				
+	// 		}
+	// 	});
 		
-	$('.mobileGnb-close').on('click', function (e) {
-		e.preventDefault();
-		mobileNav.removeClass('active')
-		$('body').removeClass('ovh')
-	});
+	// $('.mobileGnb-close').on('click', function (e) {
+	// 	e.preventDefault();
+	// 	mobileNav.removeClass('active')
+	// 	$('body').removeClass('ovh')
+	// });
 });
 
 // 콘텐츠 서비스
