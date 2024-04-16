@@ -25,13 +25,13 @@
 		li {
 			float:left;
 			width: calc(100% / 5);		
-			border: 1px solid $color_point;
+			border: 1px solid $color-point;
 			margin-left: -1px;
 			margin-bottom: -1px;	
 			&.on {
 				a {
 					color: #fff;
-					background-color: $color_point;
+					background-color: $color-point;  //?
 				}
 			}
 			a {
@@ -39,7 +39,7 @@
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				color:$color_point;
+				color: $color-point;
 				text-align: center;
 				//min-height: 56px;
 				padding: 10px;
@@ -211,8 +211,8 @@
 				display:inline-block;
 				width: 30px;
 				height: 30px;
-				background-color: $color_point;
-				border-color: $color_point;
+				background-color: $color-point;
+				border-color: $color-point;
 				border-radius: 50%;
 			}
 		}

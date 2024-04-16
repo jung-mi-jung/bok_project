@@ -1,11 +1,17 @@
 //navigation
 .navigation {
+	position: relative;
+	z-index: 1;
+	background-color: #FCFCFC;
+	border-top: 1px solid #E6E6E6;
 	@include breakpoint($lg){
 		.nav-stiky & {
 			width: 100%;
+			height: 60px;
 			position: fixed;
 			top: 0;
 			z-index: 9;
+			background-color: #fff;
 			&::before {
 				content: "";
 				display: block;
@@ -17,11 +23,35 @@
 				left: 0;
 				z-index: 1;
 			}
+			.sub-_visual {
+				display: none;
+			}
 		}
-	}	
-	.top-page-toolbar {		
+	}
+	.sub-_visual {
+		border-top: 1px solid #E6E6E6;
+		height: 216px;
+		background-color: #CBDEF4;
+		//background-image: url(/static/portal/img/sub/sub_visual_bg1.png);
+		background-repeat: no-repeat;
+		background-position: 50%;		
+		div {
+			width: $pc-wide;
+			margin: 0 auto;
+			padding-top: 90px;
+			h1 {
+				color: $black;
+				font-weight: 500;
+				font-size: rem(48);
+				.bd-body & {
+					font-size: rem(20);
+				}
+			}
+		}
+	}
+	.top-page-toolbar {
 		display: block;
-		float: right;		
+		float: right;
 		.page-toolbar {
 			border: 1px solid #E5E5E5;
 			border-width: 0 1px;
@@ -43,22 +73,14 @@
 			}
 			.page-rss {
 				&::before {
-					margin-left: 9px;
+					margin-left: 16px;
 				}
 			}
 		}
-	}
-	position: relative;
-	z-index: 1;
-	height: 48px;
-	line-height: 48px;
-	background-color: #FCFCFC;
-	border-bottom: 1px solid #E5E5E5;
-	@include breakpoint($sm){
-		height: 36px;
-		line-height: 36px;
-	}
+	}	
 	nav {		
+		height: 60px;
+		line-height: 60px;
 		@include breakpoint($lg){
 			display: flex;
 			justify-content: space-between;
@@ -84,7 +106,7 @@
 					}
 				}
 				&.home {
-					color: #000;
+					color: #6D6E72;
 					padding: 0 16px;
 					@include breakpoint($lg){
 						padding: 0 26px;
@@ -125,6 +147,7 @@
 				}
 				&:last-child > span,
 				> a {
+					color: #6D6E72;
 					display: block;	
 					padding: 0 10px;
 					@include breakpoint($lg){
@@ -132,7 +155,7 @@
 					}
 					&::after {
 						@include font-ico-outline('\e5c6');
-						color: #666;
+						color: #6D6E72;
 						font-size: 22px;
 						margin-left: 10px;
 						@include breakpoint($sm){
@@ -145,10 +168,11 @@
 				}
 				&:last-child > span,
 				&:last-child > a {
-					color: $point;
+					color: $black;
 					font-weight: 500;
 					&::after {
-						color: $point;
+						@include font-ico('\e5c6');
+						color: #1A1C46;
 					}
 				}
 				.depth2 {

@@ -59,6 +59,12 @@
 							</li>
 						</ul>
 					</div>
+					<button type="button" class="search" title="검색레이어 열기"></button>
+					<div class="search_wrap">
+						<form action="/">
+							검색 레이어 영역
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -121,7 +127,7 @@
 							</ul>
 						</div>
 					</li>
-					<li class="menu02">
+					<li class="menu02 active">
 						<a href=""><span>정책 및 업무</span></a>
 						<div class="depth2">
 							<ul>
@@ -728,35 +734,37 @@
 						</div>
 					</li>
 				</ul>
-				<!-- <ul>
-					<li class="menu01">
-						<a href=""><span>한국은행</span></a>
-					</li>
-					<li class="menu02">
-						<a href=""><span>정책 및 업무</span></a>
-					</li>
-					<li class="menu03">
-						<a href=""><span>뉴스 및 자료</span></a>
-					</li>
-					<li class="menu04">
-						<a href=""><span>멀티콘텐츠</span></a>
-					</li>
-					<li class="menu05">
-						<a href=""><span>주요서비스</span></a>
-					</li>
-				</ul> -->
 				<!-- //gnb -->
 				<button type="button" class="all-nav-toggle" data-toggle="modal" data-target="#totalMenu" title="전체 메뉴 열기"></button>
 			</nav>
-			<div class="toggle-set">
-				<button type="button" class="all-nav-toggle" data-toggle="modal" data-target="#totalMenu" title="전체 메뉴 열기"></button>
+			<!-- <nav class="mobileGnb" id="mobileGnb">
+				<button type="button" class="m-all-nav-toggle" data-target="#totalMenu" title="전체 메뉴 열기"></button>
+				<div class="mobileGnb__set">
+					<div class="top">
+						<span>MENU</span>
+						<button type="button" class="mobileGnb-close" title="전체 메뉴 닫기"></button>
+					</div>
+					<div class="mobileGnb__nav"></div>
+				</div>
+			</nav> -->
+			<!-- <div class="g-info">
+				<div class="global">
+					<ul>
+						<li>
+							<a href="">본인인증</a>
+						</li>
+						<li>
+							<a href="/eng/main/main.do" target="_blank" title="새창열림">English</a>
+						</li>
+					</ul>
+				</div>
 				<button type="button" class="search" title="검색레이어 열기"></button>
 				<div class="search_wrap">
 					<form action="/">
 						검색 레이어 영역
 					</form>
 				</div>
-			</div>	
+			</div> -->
 		</div>
 		<!-- 전체메뉴 -->
 		<div class="modal fade total-nav" id="totalMenu" tabindex="-1" role="dialog">
@@ -956,7 +964,7 @@
 	<!-- //header -->
 
 	<!-- navigation -->
-	<div class="navigation">		
+	<div class="navigation">
 		<nav class="container">
 			<ul>
 				<li class="home"><span>Home</span></li>
@@ -1047,11 +1055,6 @@
 				</div>
 			</div>
 		</nav>
-		<div class="sub-_visual">
-			<div class="hgroup">
-				<h1>뉴스 및 의사록</h1>
-			</div>
-		</div>
 	</div>
 	<!-- //navigation -->
 
@@ -1067,220 +1070,3 @@
 
 
 
-<p>== 컨텐츠 영역 ==</p>
-<br>
-<p>A_type 뉴스 및 자료 (자료형)</p>
-
-<textarea name="" id="" cols="30" rows="10">
-<div class="db"></div>
-<div class="content"></div>
-</textarea>
-
-<br><br>
-
-<p>B_type 컨텐츠 (목차형)</p>
-
-<textarea name="" id="" cols="30" rows="10">
-<div class="lnb-nav"></div>
-<div class="content"></div>
-</textarea>
-
-<br><br>
-
-
-<p>C_type (관련 자료형)</p>
-
-<textarea name="" id="" cols="30" rows="10">
-<div class="content"></div>
-<div class="reference"></div>
-</textarea>
-
-
-
-
-			</div>
-
-
-<!-- 만족도 -->
-<div class="admin-set">
-	<div class="satisfact">
-		<p class="title">유용한 정보가 되었나요?</p>
-		<div class="radio-group">
-			<label for="sati1">
-				<input type="radio" name="stsfdgIdex" id="sati1">
-				<i></i>
-				<span>매우만족</span>
-			</label>
-			<label for="sati2">
-				<input type="radio" name="stsfdgIdex" id="sati2">
-				<i></i>
-				<span>만족</span>
-			</label>
-			<label for="sati3">
-				<input type="radio" name="stsfdgIdex" id="sati3">
-				<i></i>
-				<span>보통</span>
-			</label>
-			<label for="sati4">
-				<input type="radio" name="stsfdgIdex" id="sati4">
-				<i></i>
-				<span>불만족</span>
-			</label>
-			<label for="sati5">
-				<input type="radio" name="stsfdgIdex" id="sati5">
-				<i></i>
-				<span>매우불만족</span>
-			</label>
-		</div>
-		<button>확인</button>
-	</div>
-	<div class="info">
-		<dl>
-			<dt>담당부서</dt>
-			<dd>기획협력국 전략기획팀</dd>
-			<dt class="sr-only">전화번호</dt>
-			<dd>02-759-4507</dd>
-		</dl>
-	</div>
-</div>
-<!-- //만족도 -->
-
-			<!-- 내가 본 콘텐츠	-->
-			<div class="my_memo">
-				<button type="button" class="btn" title="내가 본 콘텐츠 열기">
-					<span class="sr-only">내가 본 콘텐츠</span>
-				</button>
-				<div class="swiper">
-					<div class="top">
-						<h2>내가 본 콘텐츠</h2>
-						<button type="button" class="close" title="내가 본 콘텐츠 닫기"></button>
-					</div>
-					<div class="swiper_body">
-						<div class="swiper-wrapper">
-							<a href="" class="swiper-slide">
-								<span class="i">보도자료</span>
-								<span class="txt">2023년 4/4분기 및 연간 실질 국내총생산(속보)</span>
-							</a>
-							<a href="" class="swiper-slide">
-								<span class="i">공지사항</span>
-								<span class="txt">경제통계국 국민소득총괄팀 통계조사보조원 채용 안내</span>
-							</a>
-							<a href="" class="swiper-slide">
-								<span class="i">블로그</span>
-								<span class="txt">2023년 한국계 외화채권 시장의 특징 및 2024년 전망</span>
-							</a>
-							<a href="" class="swiper-slide">
-								<span class="i">연구자료</span>
-								<span class="txt">기후변화 물리적리스크가 글로벌가치사슬을 통해 국내 거시경제에 미치는 영향</span>
-							</a>
-							<a href="" class="swiper-slide">
-								<span class="i">공지사항</span>
-								<span class="txt">경제통계국 국민소득총괄팀 통계조사보조원 채용 안내</span>
-							</a>
-							<a href="" class="swiper-slide">
-								<span class="i">블로그</span>
-								<span class="txt">2023년 한국계 외화채권 시장의 특징 및 2024년 전망</span>
-							</a>
-						</div>
-					</div>
-					<div class="ctrl">
-						<button type="button" class="prev memo-prev">
-							<i class="ctrl-prev"></i>
-							<span class="sr-only">이전 동영상 보기</span>
-						</button>
-						<div class="swiper-pagination"></div>
-						<button type="button" class="next memo-next">
-							<i class="ctrl-next"></i>
-							<span class="sr-only">다음 동영상 보기</span>
-						</button>
-					</div>
-					<button type="button" class="b-close close" title="내가 본 콘텐츠 닫기"></button>
-				</div>
-			</div>
-			<!-- //내가 본 콘텐츠 -->
-
-			<p class="goTop">
-				<a href="javascript:void(0);">
-					<span class="sr-only">페이지 위로 이동</span>
-				</a>
-			</p>
-
-
-		</main>
-			
-	</div>
-	<!-- //content -->
-
-</div>
-
-<footer id="footer">
-<div class="container">
-	<div class="f_l">
-		<nav class="footer-nav">
-			<ul>
-				<li>
-					<a href="">자작권보호</a>
-				</li>
-				<li class="point">
-					<a href="">개인정보처리방침</a>
-				</li>
-				<li>
-					<a href="">이메일무단수집거부</a>
-				</li>
-				<li>
-					<a href="">홈페이지이용안내</a>
-				</li>
-				<li>
-					<a href="">관련사이트</a>
-				</li>
-			</ul>
-		</nav>
-		<div class="footer-bottom">
-			<address>04531 서울특별시 중구 남대문로 39 (남대문로3가)<br class="mobile">
-			대표전화 : 02-759-4114</address>
-			<p class="copyright">Copyright(c) Bank of Korea. All rights reserved.</p>
-		</div>
-	</div>
-	<div class="f_r">
-		<div class="site_go">
-			<button type="button" title="fmaily site 열기">fmaily site</button>
-			<ul>
-				<li>
-					<a href="/imer/main/main.do" target="_blank" title="새창열림">경제연구원</a>
-				</li>
-				<li>
-					<a href="/museum/main/main.do" target="_blank" title="새창열림">화폐박물관</a>
-				</li>
-				<li>
-					<a href="">지역본부</a>
-				</li>
-				<li>
-					<a href="https://ecos.bok.or.kr" target="_blank" title="새창열림">경제시스템(ecos)</a>
-				</li>
-				<li>
-					<a href="https://snapshot.bok.or.kr" target="_blank" title="새창열림">금융·경제스냅샷</a>
-				</li>
-				<li>
-					<a href="https://dl.bok.or.kr" target="_blank" title="새창열림">전자도서관</a>
-				</li>
-				<li>
-					<a href="https://apply.bok.or.kr" target="_blank" title="새창열림">채용</a>
-				</li>
-			</ul>
-		</div>
-		<div class="f_sns">
-			<a href="https://www.youtube.com/thebankofkoreakr" target="_blank" title="새창열림" class="sns-youtube"><span class="sr-only">한국은행 Youtube 바로가기 (https://www.youtube.com/thebankofkoreakr)</span></a>
-			<a href="https://www.instagram.com/thebankofkorea" target="_blank" title="새창열림" class="sns-instagram"><span class="sr-only">한국은행 인스타그램  바로가기 (https://www.instagram.com/thebankofkorea)</span></a>
-			<a href="https://www.facebook.com/bankofkoreahub" target="_blank" title="새창열림" class="sns-facebook"><span class="sr-only">한국은행 Facebook 바로가기 (https://www.facebook.com/bankofkoreahub)</span></a>
-			<a href="https://www.twitter.com/bok_hub" target="_blank" title="새창열림" class="sns-twitter"><span class="sr-only">한국은행 Twitter 바로가기 (https://www.twitter.com/bok_hub)</span></a>
-		</div>
-		<div class="f_banner">
-			<a href="" title="새창열림"><img src="/static/portal/img/common/mark.png" alt="(사)한국장애인단체총연합회 한국웹접근성인증평가원 웹 접근성 우수사이트 인증마크(WA인증마크)"></a>
-		</div>
-	</div>
-</div>
-</footer>
-<script src="/static/jslibrary/swiper@8/swiper-bundle.min.js"></script>
-<script src="/static/portal/js/common.js"></script>
-</body>
-</html>

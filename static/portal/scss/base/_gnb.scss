@@ -34,10 +34,10 @@
 					width: 100%;
 					white-space:nowrap;
 					width: 100%;
-					color: #fff;
+					color: $black;
 					text-align: center;
-					height: 72px;
-					line-height: 72px;
+					height: 96px;
+					line-height: 96px;
 					font-size: rem(24);
 					font-weight: 500;
 					padding: 0 11%;
@@ -69,7 +69,7 @@
 				&.on,
 				&.active {
 					> a {
-						color: #39A0FF;
+						color: $color-point;
 						span {
 							display: inline-block;
 							position: relative;
@@ -78,9 +78,9 @@
 								content: "";
 								display: block;
 								position: absolute;
-								bottom: 0;
+								bottom: -13px;
 								left: 0;
-								background-color: #39A0FF;
+								background-color: $color-point;
 								width: 100%;
 								height: 3px;
 							}
@@ -107,7 +107,7 @@
 				display: none;
 				position: absolute;
 				//top: 60px;
-				top: 72px;
+				top: 98px;
 				left: 0;
 				width: 100%;
 				z-index: 99;								
@@ -191,22 +191,7 @@
 				}
 			}
 		}
-	}
-	.all-nav-toggle {
-		&::before {
-			@include font-ico-outline('\e5d2');
-			color: #fff;
-			font-size: 32px;
-		}
-		@include breakpoint($smd){
-			// display: none;
-			position: absolute;
-			top: 0;
-			right: 60px;
-			width: 60px;
-			height: 60px;
-		}
-	}
+	}	
 }
 
 @include breakpoint($lg 1500px){

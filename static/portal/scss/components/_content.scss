@@ -15,7 +15,7 @@ sup {}
 	font-size: 13px;
 }
 .point {
-	color: $color_point;
+	color: $color-point;
 }
 .fc_blue,
 .fc1 {
@@ -2307,16 +2307,16 @@ p.subject {
 //프로그램 문의(Q&A)
 .info-txt {
 	text-align: center;
-	background-color: #F2F6FA;
+	background-color: #F8F8F8;
 	border-radius: 16px;
-	padding: 30px 20px;
+	padding: 40px 20px;
 	margin-bottom: 30px;
 	em {
 		font-weight: 600;
 	}
 	.tit {
 		position: relative;
-		color: #131547;
+		color: #333;
 		font-weight: 300;
 		font-size: rem(28);	
 		line-height: 1.2;

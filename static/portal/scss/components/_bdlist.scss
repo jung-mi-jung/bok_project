@@ -634,7 +634,7 @@
 	.badge{border:1px solid #ddd;}
 	.title{font-size:17px;font-weight:600;letter-spacing:-1px;color:#757575; @include ellipsis;  position:relative;}
 	.titlesub{max-width:90%; @include ellipsis;display:inline-block; vertical-align:top;padding-right:3px;}
-	.active .title{color:$color_point1; }
+	.active .title{color:$1; }
 	.secretSet{ position:relative;display:block;
 		.icon_secret{width:20px;height:30px;}	
 	} 

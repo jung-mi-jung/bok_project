@@ -42,7 +42,8 @@
 	left: 0;
 	width: 100%;
 	z-index: 99;
-	background-color: $point;
+	background-color: #fff;
+	//background-color: $point;
 	display: flex;
 	flex-direction: column;
 	@include breakpoint($smd){
@@ -55,51 +56,63 @@
 		align-items: center;
 		//height: $header-height;
 		width: 100%;
-		max-width: 1920px;
-		padding-left: 50px;
-		padding-right: 146px;
+		//max-width: 1920px;
+		max-width: 1824px;		
 		margin: 0 auto;	
 		@include breakpoint($smd){
-			padding-left: 20px;
-			padding-right: 116px;
+			padding-left: 48px;
+			padding-right: 48px;
 		}
 	}	
 	.globalHeader {	
 		display: none;	
 		@include breakpoint($lg){
 			display: block;
-			ul {
-				max-width: calc(1920px - 192px);
+			.container {
 				display: flex;
-				flex-direction: row;
-				flex-grow: 1;
-				border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-				padding: 7px 0;
-				li {
-					& + li {
-						&::before {
-							content: "";
-							display: inline-block;
-							vertical-align: middle;
-							width: 1px;
-							height: 14px;
-							background-color: rgba(255, 255, 255, 0.2);
+				justify-content: space-between;
+				max-width: 1824px;
+				//max-width: 1920px;
+				border-bottom: 1px solid #E6E6E6;
+				height: 33px;
+				line-height: 33px;
+				@include breakpoint($smd){
+					padding-left: 48px;
+					padding-right: 48px;
+				}
+				ul {
+					//max-width: calc(1920px - 192px);
+					display: flex;
+					flex-direction: row;
+					flex-grow: 1;
+					border-bottom: 1px solid rgba(255, 255, 255, 0.2);					
+					li {
+						& + li {
+							&::before {
+								content: "";
+								display: inline-block;
+								vertical-align: middle;
+								width: 1px;
+								height: 14px;
+								//background-color: rgba(255, 255, 255, 0.2);
+								background-color: rgba(0, 85, 150, 0.3);
+							}
+						}
+					}
+					a {
+						//color: #fff;
+						//color: #004274;
+						color: $color-point;
+						display: inline-block;
+						font-size: 15px;
+						font-weight: 500;
+						padding: 0 9px;		
+						&:hover {
+							text-decoration: underline;
 						}
 					}
 				}
-				a {
-					color: #fff;
-					display: inline-block;
-					font-size: 14px;
-					border-radius: 4px;
-					border: 1px solid rgba(255, 255, 255, 0.40);
-					background: rgba(0, 0, 0, 0.20);
-					padding: 2px 9px;
-					&:hover {
-						text-decoration: underline;
-					}
-				}
-			}
+			}			
 		}
 	}
 	.logo {
@@ -107,7 +120,7 @@
 		vertical-align: middle;
 		a {
 			display: block;
-			background: url(/static/portal/img/common/logo.png) 50% no-repeat;
+			background: url(/static/portal/img/main/logo.png) 50% no-repeat;
 			width: 127px;
 			height: 60px;
 			@include breakpoint($sm){
@@ -120,37 +133,7 @@
 		align-items: center;
 		.global {
 			display: none;
-		}
-		.search {
-			position: absolute;
-			top: 0;
-			right: 0;
-			width: $m-header-height;
-			height: $m-header-height;
-			z-index: 9;
-			background-color: #fff;
-			&::before  {
-				@include font-ico-outline("\e8b6");
-				color: $point;
-				font-size: rem(40);
-				@include breakpoint($smd){
-					font-size: rem(32);
-				}
-			}
-			&:focus {
-				@include focus;
-			}
-			@include breakpoint($lg){
-				width: $header-height;
-				height: $header-height;
-				background-color: #3B63C4;
-				top: -42px;
-				&::before {
-					color: #fff;
-					font-size: rem(24);
-				}
-			}
-		}	
+		}		
 		@include breakpoint($lg){
 			.global {
 				display: flex;
@@ -159,47 +142,29 @@
 					display: flex;
 					align-items: center;
 					white-space: nowrap;
-					li {						
-						a {
-							color: #fff;
-							font-size: 15px;
-							// &[target=_blank]::after {
-							// 	@include font-ico("\e89e");
-							// 	font-size: 16px;
-							// 	margin: 0 0 2px 5px;
-							// }
-						}
-						& + li {
-							padding-left: 8px;
-							&::before {
-								content: "";
-								display: inline-block;
-								vertical-align: middle;
-								width: 1px;
-								height: 14px;
-								background-color: #fff;
-								margin: 0 6px;
-							}
-						}
+					li {
+						// a {
+						// 	color: $black;
+						// }
 						//로그인후
 						.userInfoOpBxSet {
 							padding: 3px 0;
 							position: relative;
 							.userInfoOpener {
 								border-radius: 30px;
-								background: #fff;
+								//background: #fff;
 								display: inline-block;
 								padding: 1px 10px;
-								color: $point;
+								//color: $point;
 								font-size: 14px;
 							}
 							.userInfoOpBx {
 								display: none;
 								width: 280px;
 								position: absolute;
-								top: 30px;
+								top: 37px;
 								left: -100%;
-								margin-left: -40px;
+								margin-left: -80px;
 								border: 1px solid #3B63C4;
 								border-radius: 5px;
 								padding: 24px;
@@ -278,6 +243,95 @@
 			}
 		}
 	}
+	.toggle-set {
+		display: flex;
+		align-items: center;
+		.all-nav-toggle {
+			width: 48px;
+			height: 48px;
+			margin: 0 20px;
+			&::before {
+				@include font-ico-outline('\e5d2');
+				color: $color-point;
+				font-size: 36px;
+			}
+			@include breakpoint($smd){
+				// display: none;
+				position: absolute;
+				top: 0;
+				right: 60px;
+				width: 60px;
+				height: 60px;
+			}
+		}
+		.search {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 48px;
+			height: 48px;
+			border-radius: 50%;
+			z-index: 9;
+			background-color: #fff;
+			&::before  {
+				@include font-ico-outline("\e8b6");
+				color: $point;
+				font-size: rem(40);
+				@include breakpoint($smd){
+					font-size: rem(32);
+				}
+			}
+			&:focus {
+				@include focus;
+			}
+			@include breakpoint($lg){
+				position: static;
+				width: 48px;
+				height: 48px;
+				border-radius: 50%;
+				background-color: $color-point;
+				// width: $header-height;
+				// height: $header-height;
+				// background-color: #3B63C4;
+				// top: -42px;
+				&::before {
+					color: #fff;
+					font-size: rem(24);
+				}
+			}
+		}	
+	}
+}
+
+//게시판일 경우 비주얼 영역 예외처리
+.bd-body {
+	.hgroup {
+		//@include hide();
+		font-size: rem(20);
+	}
+	.navigation {
+		.sub-_visual {
+			div {
+				padding-top: 48px;
+				h1 {
+					font-weight: 600;
+				}
+			}
+		}
+	}
+	#main-container h2 {
+		color: $black;
+	}
+	.bd-view {
+		margin-top: -156px;
+		.subject {
+			width: 100%;
+			@include ellipsis();
+		}
+		.dataInfoSet .keyword a {
+			background-color: #fff;
+		}
+	}
 }
 
 // 일반형 게시판 상세 페이지일 경우
@@ -309,33 +363,39 @@
 		margin: 40px 0 0;
 	}
 }
-
-.hgroup {
-	position: relative;
-	display: flex;
-	justify-content: space-between;
-	margin: 50px 0 30px;
-	border-bottom: 2px solid #222;
-	padding-bottom: 30px;
-	@include breakpoint($sm){
-		margin: 0 10px 15px;
-		padding-bottom: 0;
-	}
-	h1 {
-		display: block;
-		font-size: rem(48);
-		color: $point;
-		font-weight: 600;
-		font-family: 'Spoqa Han Sans Neo Bold';
-		width: calc(100% - 140px);
-		@include breakpoint($sm){
-			width: 100%;
-			font-size: rem(36);
-			text-align: center;
-			padding: 20px 0 18px;
-		}
+#content {
+	margin-top: 36px;
+	.hgroup { //기존 소스 삭제
+		display: none;
 	}
 }
+
+// .hgroup {
+// 	position: relative;
+// 	display: flex;
+// 	justify-content: space-between;
+// 	margin: 50px 0 30px;
+// 	border-bottom: 2px solid #222;
+// 	padding-bottom: 30px;
+// 	@include breakpoint($sm){
+// 		margin: 0 10px 15px;
+// 		padding-bottom: 0;
+// 	}
+// 	h1 {
+// 		display: block;
+// 		font-size: rem(48);
+// 		color: $point;
+// 		font-weight: 600;
+// 		font-family: 'Spoqa Han Sans Neo Bold';
+// 		width: calc(100% - 140px);
+// 		@include breakpoint($sm){
+// 			width: 100%;
+// 			font-size: rem(36);
+// 			text-align: center;
+// 			padding: 20px 0 18px;
+// 		}
+// 	}
+// }
 .page-toolbar {	
 	position: relative;
 	display: flex;
@@ -344,8 +404,8 @@
 		display: none;
 	}
 	.sns-toggle {
-		width: 48px;
-		height: 48px;
+		width: 60px;
+		height: 60px;
 		border: 1px solid #666;
 		border-radius: 50%;
 		&::before {
@@ -399,15 +459,15 @@
 		}
 	}
 	.page-print {	
-		width: 48px;
-		height: 48px;
+		width: 60px;
+		height: 60px;
 		background: url(/static/portal/img/ico/ico-print.svg) 50% no-repeat;
 		margin-left: 6px;
 		margin-right: 10px;
 	}
 	.page-rss {	
-		width: 48px;
-		height: 48px;
+		width: 60px;
+		height: 60px;
 		&::before {
 			@include font-ico-outline('\e0e5');
 			font-size: 40px;
@@ -485,7 +545,7 @@
 			display: flex;
 			align-items: center;
 			gap: 0 24px;
-			color: #005596;
+			color: $color-point;
 		}
 		.totalnav-logo {
 			display: flex;
@@ -500,7 +560,7 @@
 				display: block;
 				width: 1px;
 				height: 36px;
-				background: #005596;
+				background: $color-point;
 				top: 50%;
 				right: -24px;
 				transform: translateY(-50%);
@@ -620,7 +680,7 @@
 						position: relative;
 						// display: inline-flex;
 						align-items: center;
-						color: #005596;
+						color: $color-point;
 						i {
 							position: absolute;
 							top: 4px;
