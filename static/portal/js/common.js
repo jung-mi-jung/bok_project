@@ -610,8 +610,10 @@ $(function() {
 	// *** 게시판 별도 디자인***
 	// 일반형 게시판 상세
 	$(".bd-view").parents("#content").addClass("bd-view_wrap");
+	$(".bd-view").parents("body").addClass("bd-body");
 	// 블로그형 
 	$(".bd-blog").parents("#content").addClass("bd-blog_wrap");
+	//$(".bd-blog").parents("body").addClass("bd-body");
 
 
 	//셀렉트 레이어형 검색 sh-select
@@ -644,7 +646,7 @@ $(function() {
 
 
 	//검색 레이어
-	$(".g-info .search").click(function(){
+	$(".toggle-set .search").click(function(){
 		$(".search_wrap").addClass("active");
 	})
 

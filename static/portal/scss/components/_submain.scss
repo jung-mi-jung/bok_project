@@ -47,7 +47,12 @@
 
 .sub-main-zone {
 	padding: 80px 0;
-	background-color: #F2F6FA;
+	background-color: #F2F6FA;	
+	@include breakpoint($lg){
+		background-image: url(/static/portal/img/submain/bg_zone_big.png);
+		background-position: 50%;
+		background-repeat: no-repeat;
+	}
 	@include breakpoint($sm){
 		padding: 30px 0 ;
 	}
@@ -60,9 +65,13 @@
 			position: relative;
 			display: flex;
 			justify-content: flex-start;
-			align-items: top;
+			//align-items: top;
 			@include breakpoint($lg){
 				width: calc(100% - 35.6%);
+			}
+			@include breakpoint($sm){
+				display: block;
+				width: 100%;
 			}
 			.map_info {
 				h1 {
@@ -77,17 +86,18 @@
 						display: block;
 					}
 				}
-				.map-list {
+				.swiper-wrapper {
 					display: flex;
 					flex-wrap: wrap;
 					flex-direction: column;
-					button {
-						display: inline-block;
-						color: $point;
-						padding: 6px 12px;
-						margin: 1px 0;
-						text-align: left;
-						&.active {
+
+					//max-height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+
+					transform: translate3d(0px, 0px, 0px) !important;
+					a.swiper-slide-active {
+						span {
 							color: #fff;
 							background-color: $point;
 							border-radius: 30px;
@@ -99,13 +109,45 @@
 								margin-bottom: 2px;
 							}
 						}
+						
+					}
+					
+				}
+				.map-list {
+					display: flex;
+					flex-wrap: wrap;
+					flex-direction: column;
+					@include breakpoint($sm){
+						flex-direction: row;
+					}
+					a {
+						display: block;
+						span {
+							display: inline-block;
+							color: $point;
+							padding: 6px 12px;
+							margin: 1px 0;
+							text-align: left;
+						}
+						&.active {
+							span {
+								color: #fff;
+								background-color: $point;
+								border-radius: 30px;
+								&::after {
+									@include font-ico-outline('\e315');
+									font-size: 18px;
+									color: #fff;
+									margin-left: 8px;
+									margin-bottom: 2px;
+								}
+							}
+							
+						}
 					}
 				}
 			}
-			.map-set {				
-				.mapsinfomaion-pin {
-					
-				}
+			.map-set {
 				.svg-set {
 					text {
 						&::before {
@@ -122,7 +164,7 @@
 						fill:none;
 					}
 					.cls-1 {
-						stroke:#b1c1e7;
+						stroke:#C1E0F0;
 					}
 					.cls-1,
 					.cls-2,
@@ -132,15 +174,33 @@
 					.cls-2,
 					.cls-3,
 					.cls-4 {
-						stroke:#6282d0;
+						stroke:#449EE3;
 					}
 					.cls-3,
 					.cls-4,
 					.cls-5 {
-						fill:#b8caf5;
+						fill:#D9E5F3;
 					}
 					.cls-4 {
 						stroke-width:1.64px;
+					}
+					.it {
+						&.active {
+							.item {
+								stroke: $color-point;
+								fill: $color-point;
+								-webkit-box-shadow: 0 4px 4px #000;
+										box-shadow: 0 4px 4px #000;
+								-webkit-filter: url(#shadow);
+										filter: url(#shadow);
+							}
+							circle {
+								fill: #FF327C;
+								stroke: rgba(255, 50, 124, 0.3);
+								stroke-width: 15;
+								filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.25));
+							}
+						}
 					}
 					.svg-map {
 						width: 605px;
@@ -150,11 +210,7 @@
 						svg {
 							width: 100%;
 						}
-						path {
-							outline: none;
-							stroke-width: 2;
-						}
-						.item {
+						g.item {
 							cursor: pointer;
 							stroke: #6282D0;
 							fill: #b8caf5;
@@ -166,6 +222,31 @@
 								-webkit-filter: url(#shadow);
 										filter: url(#shadow);
 							}
+							a {
+								&:focus {
+									&::before {
+										content: "";
+										display: inline-block;
+										outline: dashed 1px #000;
+										outline-offset: -4px;
+									}
+								}
+							}
+							path {
+								position: relative;
+								outline: none;
+								stroke-width: 2;
+								&.active {
+									&:focus {
+										outline: dashed 1px #000;
+										outline-offset: -4px;
+									}
+								}
+							}
+						}
+						circle {
+							fill: #39A0FF;
+							stroke: #39A0FF;
 						}
 					}
 					.tabpressed .svg-map path:focus {
@@ -185,24 +266,12 @@
 						-webkit-filter: url(#txtshadow);
 								filter: url(#txtshadow);
 					}
-					// area {
-					// 	display: inline-block;
-					// 	width: 12px;
-					// 	height: 12px;
-					// 	background-color: #39A0FF;
-					// 	border-radius: 50%;
-					// 	&.active {
-					// 		position: relative;
-					// 		background-color: #FF327C;
-					// 		outline: 6px solid rgba(200, 60, 60, 0.3);
-							
-					// 	}
-					// }
 				}
 				.con_set {					
 					.con {
+						display: none;
 						position: absolute;
-						top: -100px;
+						top: 50%;
 						left: 50%;
 						z-index: 9;
 						width: 320px;
@@ -210,6 +279,15 @@
 						border-radius: 16px;
 						padding: 16px;
 						box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+						margin-top: -160px;
+						@include breakpoint($sm){
+							top: 0;
+							left: 10px;
+							width: calc(100% - 20px);
+						}
+						&.active {
+							display: block;
+						}
 					}
 					dl {
 						dt {
@@ -245,6 +323,7 @@
 							font-weight: 300;
 							background-color: $color-point;
 							border-radius: 4px;
+							border: 1px solid #000;
 							&::after {
 								@include font-ico-outline('\e315');
 								font-size: 20px;
@@ -361,6 +440,7 @@
 	&.container {
 		width: 100%;
 		max-width: 100%;
+		margin-top: 0 !important;
 	}
 	.container {
 		@include breakpoint($smd){
@@ -461,25 +541,59 @@
 			overflow: hidden;
 			margin-top: 40px;
 			box-shadow: 24px 24px 24px 0 rgba(60, 60, 60, 0.2);
-			.ctrl {
-				position: absolute;
-				bottom: 20px;
-				right: 20px;
-				z-index: 1;
-				button {
-					width: 20px;
-					height: 30px;
-					i {
+			.ctrl {				
+				.s {
+					position: absolute;
+					bottom: 20px;
+					right: 20px;
+					z-index: 9;
+					button {
+						width: 20px;
+						height: 30px;
+						i {
+							&::before {
+								color: #fff;
+								font-size: 22px;
+								vertical-align: middle;
+							}
+						}
+					}
+				}
+				&-prev,
+				&-next {
+					width: 48px;
+					height: 48px;
+					background-color: #fff;
+					position: absolute;
+					top: 50%;
+					margin-top: -24px;					
+					z-index: 9;
+					border-radius: 50%;
+					&::before {
+						content: "";
+						display: inline-block;
+						width: 48px;
+						height: 48px;
+						background: url(/static/portal/img/submain/button_off.png) 50% no-repeat;
+					}
+					&:hover {
 						&::before {
-							color: #1A1A1A;
-							font-size: 22px;
-							vertical-align: middle;
+							background: url(/static/portal/img/submain/button_on.png) 50% no-repeat;
 						}
 					}
 				}
 				&-prev {
+					left: 15px;
+				}
+				&-next {
+					right: 15px;
 					&::before {
-						@include font-ico-outline('\e314');			
+						transform: rotate(180deg);
+					}
+					&:hover {
+						&::before {
+							transform: rotate(180deg);
+						}
 					}
 				}
 				&-stop {
@@ -492,17 +606,12 @@
 						@include font-ico('\e037');
 					}
 				}
-				&-next {
-					&::before {
-						@include font-ico-outline('\e315');
-					}
-				}
 				.swiper-pagination {
 					position: static;
 					width: auto;
 					display: inline-block;
 					vertical-align: middle;
-					color: #4D4D4D;
+					color: rgba(255, 255, 255, 0.7);
 					font-size: rem(18);
 					font-weight: 300;
 					padding: 0 5px;
@@ -633,14 +742,19 @@
 				ul {
 					display: flex;
 					justify-content: space-between;
+					flex-grow: 1;
 					li {
-						width: 25%;
+						width: 100%;
+						//width: 25%;
 						a {
 							text-align: center;
 							display: block;
 							padding: 8px;
 							color: #fff;
 							background-color: $point;
+							@include breakpoint($sm){
+								padding: 2px;
+							}
 							&::before {
 								content: "";
 								display: inline-block;
@@ -2147,6 +2261,7 @@
 
 //주요서비스
 .index-menu6 {
+	margin-top: 30px;
 	> ul {
 		display: flex;
 		flex-wrap: wrap;

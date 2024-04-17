@@ -175,8 +175,8 @@
 			border: 1px solid #C2C2C2;
 			&:hover {
 				color: #fff;
-				background-color: #3B63C4;
-				border: 1px solid #3B63C4;
+				background-color: $color-point;
+				border: 1px solid $color-point;
 			}
 		}
 		@include breakpoint($sm){
@@ -220,7 +220,7 @@
 }
 .bd-view {
 	position: relative;
-	//@include dl-table;	
+	z-index: 9;
 	.subject {
 		color: $black;
 		font-weight: 400 !important;
