@@ -76,7 +76,7 @@ body > .popwrap {
     bottom: 0;
     z-index: 1100;
     display: none;
-    overflow: hidden !important;
+    // overflow: hidden !important;
 	// @include breakpoint($sm) { 
 	// 	width: 100vw;
 	// 	height: 100vh;
@@ -91,11 +91,7 @@ body > .popwrap {
 			z-index: 501;
 			top: 0;
 			left: 0;
-			height: 100%;
-			// @include breakpoint($sm) { 
-			// 	width: 100vw;
-			// 	height: 100vh;
-			// }
+			height: 100vh;
 		}
 		
 	}
@@ -108,9 +104,9 @@ body > .popwrap {
 		position: relative;
 		z-index: 999;
 		margin: 0 auto;
-		@include breakpoint($sm) {
-			max-width: calc(100% - 20px);
-		}
+		// @include breakpoint($sm) {
+		// 	max-width: calc(100% - 20px);
+		// }
 		
 	}
 	&-content {

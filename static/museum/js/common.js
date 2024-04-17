@@ -24,10 +24,29 @@ var ismobile = false;
 if (window.innerWidth < 1200) {
 	ismobile = true;
 }
+if( window.innerWidth < 750 ) {
+	$(".total-nav").addClass("m-total-nav");
+	$(".total-nav .dp1 > li > a").on("click", function(e){
+		e.preventDefault();
+		$(this).parent("li").toggleClass("on");
+	})
+} 
+
 $(window).resize(function () {
 	if (window.innerWidth < 1200) {
 		ismobile = true;
-	} else {
+		
+		if( window.innerWidth < 750 ) {
+			$(".total-nav").addClass("m-total-nav");
+			$(".total-nav .dp1 > li > a").on("click", function(e){
+				e.preventDefault();
+			})
+		} 
+		else {
+			$(".total-nav").removeClass("m-total-nav");
+		}
+	} 
+	else {
 		ismobile = false;
 	}
 });
@@ -65,20 +84,52 @@ $(function () {
 
 
 
-//전체메뉴
-var navhtml = $('#gnb > ul').clone()
-navhtml.find('div').removeAttr('id')
-$('.total-nav .nav').html(navhtml.clone())
+// 전체메뉴
+// var navhtml = $('#gnb > ul').clone()
+// navhtml.find('div').removeAttr('id')
+// $('.total-nav .nav').html(navhtml.clone())``
+
+$(".total-nav .dp3 .dropdown").on("click", function() {
+	$(this).toggleClass("on");	
+
+	if( $(this).hasClass("on" )) {
+		$(this).children("a").attr("title", "하위메뉴 닫기");
+	}
+	else {
+		$(this).children("a").attr("title", "하위메뉴 열기");
+	}
+})
+
+
 $(".all-nav-toggle").click(function (e){
-	e.preventDefault()
-	$(".total-nav").addClass("active");
-	$('.total-nav .nav>ul>li:first-child>a').focus()
+	$("body").addClass("popupOpened").attr("tabindex", -1);
+
+	// e.preventDefault()
+	// $(".total-nav").addClass("active");
+	// $('.total-nav .nav>ul>li:first-child>a').focus()
+
+	// $(".total-nav").attr("tabindex", 1);
+	$(".total-nav .modal-header .close").focus();
 });
-$('.total-nav button').click(function (e) {
-	e.preventDefault()
-	$(".total-nav").removeClass('active');
-	$(".all-nav-toggle").focus();f
-});
+// $('.total-nav button').click(function (e) {
+// 	e.preventDefault()
+// 	$(".total-nav").removeClass('active');
+// 	$(".all-nav-toggle").focus();
+// });
+
+// var navhtml = $('#gnb > ul').clone()
+// navhtml.find('div').removeAttr('id')
+// $('.total-nav .nav').html(navhtml.clone())
+// $(".all-nav-toggle").click(function (e){
+// 	e.preventDefault()
+// 	$(".total-nav").addClass("active");
+// 	$('.total-nav .nav>ul>li:first-child>a').focus()
+// });
+// $('.total-nav button').click(function (e) {
+// 	e.preventDefault()
+// 	$(".total-nav").removeClass('active');
+// 	$(".all-nav-toggle").focus();f
+// });
 
 
 $(function () {
@@ -607,8 +658,7 @@ $(function() {
 	// *** 게시판 별도 디자인***
 	// 일반형 게시판 상세
 	$(".bd-view").parents("#content").addClass("bd-view_wrap");
-	// 블로그형 
-	$(".bd-blog").parents("#content").addClass("bd-blog_wrap");
+	$(".bd-view").parents("body").addClass("bd-body");
 
 
 	//셀렉트 레이어형 검색 sh-select

@@ -103,10 +103,10 @@ underline-top | underline-bottom | underline-left-right | underline-right-left |
 
 
 .a-hover {
-	color: #3B63C4;
+	@include a-hover(#222);
 	&:hover {
 		@include breakpoint($lg) {
-			@include a-hover(#3B63C4);
+			@include a-hover(#222);
 		}
 	}
 }

@@ -86,7 +86,7 @@ $btn: "[class^=b-]";
 		background: #3B63C4;
 	}
 	&.b-fileAdd {
-		background: #3B63C4;
+		background: #005596;
 		color: #fff;
 		height: 32px;
 		i {
@@ -94,7 +94,7 @@ $btn: "[class^=b-]";
 		}
 	}
 	&.b-list {
-		background: #3B63C4;
+		background: #005596;
 		&::before {
 			content: "";
 			display: inline-block;
@@ -125,9 +125,9 @@ $btn: "[class^=b-]";
 		
 	}
 	&.b-edit {
-		border: 2px solid #3B63C4;
+		border: 2px solid #005596;
 		background-color: #fff;
-		color: #3B63C4;
+		color: #005596;
 
 	}
 	// &.b-save {

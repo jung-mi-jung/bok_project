@@ -1,20 +1,51 @@
 //navigation
 .navigation {
-	.nav-stiky & {
-		width: 100%;
-		position: fixed;
-		top: 0;
-		z-index: 100;
-		&::before {
-			content: "";
-			display: block;
+	position: relative;
+	z-index: 2;
+	// height: 48px;
+	line-height: 48px;
+	background-color: #FCFCFC;
+	border-bottom: 1px solid #E5E5E5;
+	@include breakpoint($lg){ 
+		.nav-stiky & {
 			width: 100%;
-			height: 2px;
-			background-color: $black;
-			position: absolute;
-			bottom: -1px;
-			left: 0;
-			
+			position: fixed;
+			top: 0;
+			z-index: 100;
+			&::before {
+				content: "";
+				display: block;
+				width: 100%;
+				height: 2px;
+				background-color: $black;
+				position: absolute;
+				bottom: -1px;
+				left: 0;	
+			}
+			.sub-_visual {
+				display: none;
+			}
+		}
+	}
+	.sub-_visual {
+		border-top: 1px solid #E6E6E6;
+		height: 216px;
+		background-color: #CBDEF4;
+		//background-image: url(/static/portal/img/sub/sub_visual_bg1.png);
+		background-repeat: no-repeat;
+		background-position: 50%;		
+		div {
+			width: $pc-wide;
+			margin: 0 auto;
+			padding-top: 90px;
+			h1 {
+				color: $black;
+				font-weight: 500;
+				font-size: rem(48);
+				.bd-body & {
+					font-size: rem(20);
+				}
+			}
 		}
 	}
 	.top-page-toolbar {
@@ -49,16 +80,10 @@
 			}
 		}
 	}
-	position: relative;
-	z-index: 2;
-	height: 48px;
-	line-height: 48px;
-	background-color: #FCFCFC;
-	border-bottom: 1px solid #E5E5E5;
-	@include breakpoint($sm){
-		height: 36px;
-		line-height: 36px;
-	}
+	// @include breakpoint($sm){
+	// 	height: 36px;
+	// 	line-height: 36px;
+	// }
 	nav {		
 		@include breakpoint($lg){
 			display: flex;
@@ -70,7 +95,44 @@
 			> li {
 				position: relative;
 				border-right: 1px solid #E5E5E5;
-				color: #666;
+				> a {
+					display: block;	
+					padding: 0 10px;
+					color: #6D6E72;
+					@include breakpoint($lg){
+						padding: 0 26px;
+					}
+					&::after {
+						@include font-ico-outline('\e5c6');
+						color: #6D6E72;
+						font-size: 22px;
+						margin-left: 10px;
+						@include breakpoint($sm){
+							position: absolute;
+							top: 50%;
+							right: 8px;
+							margin-top: -11px;
+						}
+					}
+					
+				}
+				&:last-of-type {
+					> a {
+						color: #000E33;
+						text-decoration: underline;
+						&::after {
+							content: "";
+							display: inline-block;
+							width: 24px;
+							height: 24px;
+							transform: translateY(2px);
+							background: url('/static/museum/img/ico/ico-lnb-last.png');
+							@include breakpoint($sm){ 
+								transform: translateY(0);
+							}
+						}
+					}
+				}
 				@include breakpoint($sm){
 					width: 100%;
 					&:last-child {
@@ -78,7 +140,8 @@
 					}
 				}
 				&.home {
-					color: #000;
+					// color: #000;
+					color: #6D6E72;
 					padding: 0 16px;
 					@include breakpoint($lg){
 						padding: 0 26px;
@@ -116,25 +179,6 @@
 							top: 0;
 						}
 					}	
-				}
-				> a {
-					display: block;	
-					padding: 0 10px;
-					@include breakpoint($lg){
-						padding: 0 26px;
-					}
-					&::after {
-						@include font-ico-outline('\e5c6');
-						color: #666;
-						font-size: 22px;
-						margin-left: 10px;
-						@include breakpoint($sm){
-							position: absolute;
-							top: 50%;
-							right: 8px;
-							margin-top: -11px;
-						}
-					}
 				}
 				.depth2 {
 					display: none;

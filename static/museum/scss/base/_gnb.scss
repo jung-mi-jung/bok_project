@@ -2,17 +2,18 @@
 	display: none;
 }
 .gnb {
+	position: relative;
 	display: flex;
+    width: calc(100% - 243px);
 	> ul {
 		display: none;
 		@include breakpoint($lg){
 			display: flex;
 			max-width: 100%;
-			width: 767px;
+			width: 100%;
 			display: flex;
-			flex-direction: row;
-			justify-content: space-around;
-			flex-grow: 1;
+			justify-content: center;
+			gap: 0 50px;
 			> li {
 				// flex: 1;
 				> a {
@@ -20,7 +21,8 @@
 					width: 100%;
 					white-space:nowrap;
 					width: 100%;
-					color: #fff;
+					// color: #fff;
+					color: #1a1a1a;
 					text-align: center;
 					height: 72px;
 					line-height: 72px;
@@ -55,7 +57,7 @@
 				&.on,
 				&.active {
 					> a {
-						color: #39A0FF;
+						color: #005596;
 						span {
 							display: inline-block;
 							position: relative;
@@ -66,7 +68,7 @@
 								position: absolute;
 								bottom: 0;
 								left: 0;
-								background-color: #39A0FF;
+								background-color: #005596;
 								width: 100%;
 								height: 3px;
 							}
@@ -178,27 +180,58 @@
 			}
 		}
 	}
-	> button.all-nav-toggle {
-		padding-left: 8%;
-		@include breakpoint($md) {
-			padding-left: 4%;
+	.gnb-btn-wrap {
+		position: absolute;
+		right: 0;
+		display: flex;
+		align-items: center;
+		gap: 0 24px;
+		margin-top: 12px;
+		@include breakpoint($smd) {
+			margin-top: -24px;
+			gap: 0 10px;
+		}
+		@include breakpoint($sm) {
+			margin-top: -18px;
+		}
+	}
+	button.all-nav-toggle {
+		// padding-left: 8%;
+		// @include breakpoint($md) {
+		// 	padding-left: 4%;
+		// }
+		width: 48px;
+		height: 48px;
+		@include breakpoint($smd) {
+			width: 36px;
+			height: 36px;
 		}
 	}
 	.all-nav-toggle {
 		&::before {
 			@include font-ico-outline('\e5d2');
-			color: #fff;
-			font-size: 32px;
+			color: #005596;
+			font-size: 36px;
 		}
 		@include breakpoint($smd){
-			display: none;
+			//display: none;
+		}
+	}
+	.search {
+		width: 48px;
+		height: 48px;
+		background: #005596;
+		border-radius: 50%;
+		@include breakpoint($sm) {
+			width: 36px;
+			height: 36px;
 		}
 	}
 }
 
 @include breakpoint($lg 1500px){
 	.gnb > ul {
-		width: 540px;
+		//width: 540px;
 		> li > a {
 			font-size: rem(20);
 		}
@@ -212,118 +245,118 @@
 		}
 	}
 }
-.mobileGnb {
-	@include breakpoint($lg){
-		display: none;
-	}
-	.m-all-nav-toggle {
-		position: absolute;
-		top: 0;
-		right: 60px;
-		width: $m-header-height;
-		height: $m-header-height;
-		&::before {
-			@include font-ico-outline('\e5d2');
-			color: #fff;
-			font-size: 32px;
-		}
-	}
-	&__set {
-		display: none;
-		.mobileGnb-close {
-			position: absolute;
-			top: 0;
-			right: 0;
-			// width: $m-header-height;
-			width: $m-header-height;
-			height: $m-header-height;
-			line-height: $m-header-height;
-			&::before {
-				@include font-ico('\e5cd');
-				font-size: 34px;
-				color: #fff;
-				margin-top: 12px;
-			}
-		}
-		&.active {
-			position: fixed;
-			top: 0;
-			left: 0;
-			display: block;
-			width: 100%;
-			height: 100vh;
-			background-color: $point;
-			z-index: 99;
-			.top {
-				height: $m-header-height;
-				line-height: $m-header-height;
-				span {
-					font-size: 20px;
-					display: block;
-					padding-left: 10px;
-				}
-			}
-		}
-	}	
-	&__nav {
-		position: relative;
-		> ul {
-			width: 140px;
-			> li {
-				> a {
-					display: block;
-					color: #fff;
-					padding: 16px 24px;
-					font-size: rem(18);
-					border-bottom: 1px solid #233B76;
-				}
-				.depth2 {
-					display: none;
-					.e {
-						display: none;
-					}
-				}
-				&.active {
-					> a {
-						color: $point;
-						background-color: #fff;
-						border-bottom: none;
-					}
-					.depth2 {
-						display: block;
-						position: absolute;
-						top: 0;
-						right: 0;
-						width: calc(100% - 140px);
-						height: calc(100vh - 60px);
-						overflow-y: auto;
-						z-index: 9;
-						padding: 24px;
-						background-color: #fff;
-						> ul {
-							> li {
-								margin-bottom: 15px;
-								> a {
-									display: block;
-									font-weight: 500;
-									color: $point;
-									padding: 2px 0;
-								}
-							}
-						}
-					}
-					.depth3 {
-						> ul {
-							li {
-								a {
-									color: #666;
-									font-size: rem(14);
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-}
+// .mobileGnb {
+// 	@include breakpoint($lg){
+// 		display: none;
+// 	}
+// 	.m-all-nav-toggle {
+// 		position: absolute;
+// 		top: 0;
+// 		right: 60px;
+// 		width: $m-header-height;
+// 		height: $m-header-height;
+// 		&::before {
+// 			@include font-ico-outline('\e5d2');
+// 			color: #fff;
+// 			font-size: 32px;
+// 		}
+// 	}
+// 	&__set {
+// 		display: none;
+// 		.mobileGnb-close {
+// 			position: absolute;
+// 			top: 0;
+// 			right: 0;
+// 			// width: $m-header-height;
+// 			width: $m-header-height;
+// 			height: $m-header-height;
+// 			line-height: $m-header-height;
+// 			&::before {
+// 				@include font-ico('\e5cd');
+// 				font-size: 34px;
+// 				color: #fff;
+// 				margin-top: 12px;
+// 			}
+// 		}
+// 		&.active {
+// 			position: fixed;
+// 			top: 0;
+// 			left: 0;
+// 			display: block;
+// 			width: 100%;
+// 			height: 100vh;
+// 			background-color: $point;
+// 			z-index: 99;
+// 			.top {
+// 				height: $m-header-height;
+// 				line-height: $m-header-height;
+// 				span {
+// 					font-size: 20px;
+// 					display: block;
+// 					padding-left: 10px;
+// 				}
+// 			}
+// 		}
+// 	}	
+// 	&__nav {
+// 		position: relative;
+// 		> ul {
+// 			width: 140px;
+// 			> li {
+// 				> a {
+// 					display: block;
+// 					color: #fff;
+// 					padding: 16px 24px;
+// 					font-size: rem(18);
+// 					border-bottom: 1px solid #233B76;
+// 				}
+// 				.depth2 {
+// 					display: none;
+// 					.e {
+// 						display: none;
+// 					}
+// 				}
+// 				&.active {
+// 					> a {
+// 						color: $point;
+// 						background-color: #fff;
+// 						border-bottom: none;
+// 					}
+// 					.depth2 {
+// 						display: block;
+// 						position: absolute;
+// 						top: 0;
+// 						right: 0;
+// 						width: calc(100% - 140px);
+// 						height: calc(100vh - 60px);
+// 						overflow-y: auto;
+// 						z-index: 9;
+// 						padding: 24px;
+// 						background-color: #fff;
+// 						> ul {
+// 							> li {
+// 								margin-bottom: 15px;
+// 								> a {
+// 									display: block;
+// 									font-weight: 500;
+// 									color: $point;
+// 									padding: 2px 0;
+// 								}
+// 							}
+// 						}
+// 					}
+// 					.depth3 {
+// 						> ul {
+// 							li {
+// 								a {
+// 									color: #666;
+// 									font-size: rem(14);
+// 								}
+// 							}
+// 						}
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// }

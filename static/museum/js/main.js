@@ -91,9 +91,10 @@ $(function () {
 		on: {
 			slideChange: function(){
 				//마지막 인덱스가 active 됐을때
-				// if ( (this.activeIndex + 1) == slideLength) {
-				// 	$(".section2-img .swiper-slide").eq(this.activeIndex + 1).css({ "margin-left" : -30});
-				// }
+				if ( (this.activeIndex + 1) == slideLength) {
+					$(".section2-img .swiper-slide").eq(this.activeIndex + 1).css({ "margin-left" : 30});
+				}
+				//alert();
 			}
 		},
 		breakpoints: {

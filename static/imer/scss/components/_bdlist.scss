@@ -2,8 +2,10 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	border-bottom: 2px solid $black;
+	// border-bottom: 2px solid $black;
+	border-bottom: 1px solid #D9D9D9;
 	padding-bottom: 15px;
+	margin-bottom: 20px;
 	@include breakpoint($sm){
 		display: block;
 		.count-total {

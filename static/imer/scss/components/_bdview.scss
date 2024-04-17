@@ -101,10 +101,10 @@
 @mixin dataInfoSet {	
 	display: flex;
 	justify-content: space-between;
-	margin: 10px 0 18px;
+	margin: 10px 0 26px;
 	.dataInfo {
 		position: absolute;
-		top: -27px;
+		top: -34px;
 		right: 0;
 		display: flex;
 		color: #666;
@@ -254,6 +254,7 @@
 }
 .bd-view {
 	position: relative;
+	z-index: 9;
 	//@include dl-table;	
 	.subject {
 		color: $black;

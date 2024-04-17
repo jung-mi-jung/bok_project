@@ -2,8 +2,10 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	border-bottom: 2px solid $black;
+	// border-bottom: 2px solid $black;
+	border-bottom: 1px solid #D9D9D9;
 	padding-bottom: 15px;
+	// margin-bottom: 20px;
 	@include breakpoint($sm){
 		display: block;
 		.count-total {
@@ -180,7 +182,7 @@
 				color: #767676;
 			}
 			&:hover {
-				background-color: #F2F6FA;				
+				background-color: #EBF3F7;				
 				&::before {
 					background: url(/static/portal/img/common/arr01_on.png) 50% no-repeat;
 				}
@@ -188,7 +190,7 @@
 					a {
 						color: $point;
 						&::before {
-							background: #F2F6FA;
+							background: #EBF3F7;
 						}
 					}
 					.i-download {
@@ -360,9 +362,9 @@
 	.t1 {
 		display: inline-block;
 		font-size: rem(14);
-		color: #3B63C4;
+		color: #005596;
 		padding: 1.5px 8px; 
-		border: 1px solid #3B63C4;
+		border: 1px solid #005596;
 		border-radius: 3px;
 		box-sizing: border-box;
 		background: #fff;

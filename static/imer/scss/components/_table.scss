@@ -32,7 +32,7 @@ table {
 				border-bottom: none;
 				background: #E8EBED;
 				color: $black;
-				border-right: 1px solid rgba(0,0,0,0.1);
+				border-right: 1px solid #BDBCBC;
 				&:first-of-type {
 					border-radius: 8px 0 0 8px;
 				}
@@ -95,9 +95,9 @@ table {
 					}
 				}				
 			}
-			.a-hover {
-				color: #1454FF;
-			}
+			// .a-hover {
+			// 	color: #1454FF;
+			// }
 			.a-hover2 {
 				strong {
 					color: #1a1a1a;
@@ -112,20 +112,32 @@ table {
 	}
 	&.onlyThBg {
 		table {
+			border-spacing: 8px;
+    		border-collapse: separate;
+			th, td {
+				// border-collapse: collapse;
+				// border: 8px solid #fff;
+			}
 			tbody {
+				th {
+					background: #E8EAED !important;
+					border-radius: 8px;
+					border: 0;
+				}
 				td {
-					background-color: #fff !important;
+					// background-color: #fff !important;
+					background: #FAFAFA;
+					border-radius: 8px;
+					border: 0;
 				}
 			}
 		}
 	}
-	&.borderTop {
-		table {
-			border-top: 2px solid $point;
-		}
-	}
-
-
+	// &.borderTop {
+	// 	table {
+	// 		border-top: 2px solid $point;
+	// 	}
+	// }
 	&.type2 {
 		font-size: rem(18);
 		border-top: 2px solid #182252;

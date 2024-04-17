@@ -58,6 +58,7 @@
 @import 'base/footer'; //푸터
 
 @import 'components/visible'; //반응형 스타일
+@import 'components/popup'; //전체메뉴
 
 
 a {
@@ -104,4 +105,5 @@ i {
 }
 img {
 	max-width: 100%;
+	// width: 100%;
 }
