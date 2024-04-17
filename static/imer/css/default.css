@@ -2503,8 +2503,6 @@ position: relative;
 .container {
 max-width: 1440px;
 margin: 0 auto;
-margin-left: 10px;
-margin-right: 10px;
 }
 @media (min-width: 1720px) {
 .container {
@@ -2575,8 +2573,8 @@ background-color: #e5e5e5;
 #header .globalHeader ul a {
 color: #005596;
 display: inline-block;
-font-size: 14px;
-padding: 2px 9px;
+font-size: 0.9375rem;
+padding: 2px 8px;
 }
 #header .globalHeader ul a:hover {
 text-decoration: underline;
@@ -2643,9 +2641,13 @@ white-space: nowrap;
 }
 #header .g-info .global ul li a {
 font-size: 15px;
+padding: 2px 12px;
+}
+#header .g-info .global ul li a:last-of-type {
+padding-right: 0;
 }
 #header .g-info .global ul li + li {
-padding-left: 8px;
+padding-left: 12px;
 }
 #header .g-info .global ul li + li::before {
 content: "";
@@ -2654,7 +2656,6 @@ vertical-align: middle;
 width: 1px;
 height: 14px;
 background-color: #e5e5e5;
-margin: 0 6px;
 }
 #header .g-info .global ul li .userInfoOpBxSet {
 padding: 3px 0;
@@ -2897,6 +2898,32 @@ background: url(/static/portal/img/ico/ico-dropdown-down.png);
 display: none;
 }
 
+.bd-body .hgroup {
+font-size: 1.25rem;
+}
+.bd-body .navigation .sub-_visual div {
+padding-top: 48px;
+}
+.bd-body .navigation .sub-_visual div h1 {
+font-weight: 600;
+}
+.bd-body #main-container h2 {
+color: #1A1A1A;
+}
+.bd-body .bd-view {
+margin-top: -156px;
+}
+.bd-body .bd-view .subject {
+width: 100%;
+overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+display: inline-block;
+}
+.bd-body .bd-view .dataInfoSet .keyword a {
+background-color: #fff;
+}
+
 .bd-view_wrap .hgroup {
 border-bottom: none;
 padding-bottom: 0;
@@ -2926,49 +2953,11 @@ padding-bottom: 0;
 margin: 40px 0 0;
 }
 
-.hgroup {
-position: relative;
-display: flex;
-justify-content: space-between;
-margin: 50px 0 30px;
-border-bottom: 2px solid #222;
-padding-bottom: 30px;
+#content {
+margin-top: 36px;
 }
-@media (max-width: 749px) {
-.hgroup {
-margin: 0 10px 15px;
-padding-bottom: 0;
-}
-}
-.hgroup h1 {
-display: block;
-font-size: 3rem;
-color: #001c66;
-font-weight: 600;
-font-family: "Spoqa Han Sans Neo Bold";
-width: calc(100% - 140px);
-}
-@media (max-width: 749px) {
-.hgroup h1 {
-width: 100%;
-font-size: 2.25rem;
-text-align: center;
-padding: 30px 0 25px;
-}
-}
-.hgroup + .tab-list {
-margin: 0 0 24px !important;
-}
-@media (max-width: 749px) {
-.hgroup + .tab-list {
-margin: 0 10px 24px !important;
-}
-}
-@media (max-width: 749px) {
-.hgroup + .tab-list .swiper a.swiper-slide {
-flex: 1;
-max-width: none;
-}
+#content .hgroup {
+display: none;
 }
 
 .page-toolbar {
@@ -4129,7 +4118,7 @@ margin: 0 -12px;
 }
 @media (max-width: 1199px) {
 .reference-news dl dd ul {
-width: -moz-max-content;
+width: -webkit-max-content;
 width: max-content;
 }
 }
@@ -4262,7 +4251,7 @@ margin: -12px -12px 0;
 }
 @media (max-width: 1199px) {
 .reference-media dl dd ul {
-width: -moz-max-content;
+width: -webkit-max-content;
 width: max-content;
 }
 }

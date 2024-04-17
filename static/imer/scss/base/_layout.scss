@@ -5,8 +5,8 @@
 .container {
 	max-width: $pc-wide;
 	margin: 0 auto;
-	margin-left: 10px;
-	margin-right: 10px;
+	// margin-left: 10px;
+	// margin-right: 10px;
 	@include breakpoint(min-width 1720px) {
 		margin-left: auto;
 		margin-right: auto;
@@ -74,11 +74,11 @@
 				a {
 					color: #005596;
 					display: inline-block;
-					font-size: 14px;
+					font-size: rem(15);
 					// border-radius: 4px;
 					// border: 1px solid rgba(255, 255, 255, 0.40);
 					// background: rgba(0, 0, 0, 0.20);
-					padding: 2px 9px;
+					padding: 2px 8px;
 					&:hover {
 						text-decoration: underline;
 					}
@@ -138,9 +138,13 @@
 						a {
 							//color: #fff;
 							font-size: 15px;
+							padding: 2px 12px;
+							&:last-of-type {
+								padding-right: 0;
+							}
 						}
 						& + li {
-							padding-left: 8px;
+							padding-left: 12px;
 							&::before {
 								content: "";
 								display: inline-block;
@@ -148,7 +152,7 @@
 								width: 1px;
 								height: 14px;
 								background-color: #e5e5e5;
-								margin: 0 6px;
+								// margin: 0 6px;
 							}
 						}
 						//로그인후
@@ -373,6 +377,36 @@
 	}
 }
 
+//게시판일 경우 비주얼 영역 예외처리
+.bd-body {
+	.hgroup {
+		//@include hide();
+		font-size: rem(20);
+	}
+	.navigation {
+		.sub-_visual {
+			div {
+				padding-top: 48px;
+				h1 {
+					font-weight: 600;
+				}
+			}
+		}
+	}
+	#main-container h2 {
+		color: $black;
+	}
+	.bd-view {
+		margin-top: -156px;
+		.subject {
+			width: 100%;
+			@include ellipsis();
+		}
+		.dataInfoSet .keyword a {
+			background-color: #fff;
+		}
+	}
+}
 
 // 일반형 게시판 상세 페이지일 경우
 .bd-view_wrap {
@@ -404,49 +438,57 @@
 	}
 }
 
-.hgroup {
-	position: relative;
-	display: flex;
-	justify-content: space-between;
-	margin: 50px 0 30px;
-	border-bottom: 2px solid #222;
-	padding-bottom: 30px;
-	// & + * {
-	// 	margin-top: 30px;
-	// }
-	@include breakpoint($sm){
-		margin: 0 10px 15px;
-		padding-bottom: 0;
-	}
-	h1 {
-		display: block;
-		font-size: rem(48);
-		color: $point;
-		font-weight: 600;
-		font-family: 'Spoqa Han Sans Neo Bold';
-		width: calc(100% - 140px);
-		@include breakpoint($sm){
-			width: 100%;
-			font-size: rem(36);
-			text-align: center;
-			padding: 30px 0 25px;
-		}
-	}
-	& + .tab-list {
-		margin: 0 0 24px !important;
-		@include breakpoint($sm) {
-			margin: 0 10px 24px !important;
-		}
-		.swiper {
-			a.swiper-slide {
-				@include breakpoint($sm) {
-					flex: 1;
-					max-width: none;
-				}
-			}
-		}
+#content {
+	margin-top: 36px;
+	.hgroup { //기존 소스 삭제
+		display: none;
 	}
 }
+
+// .hgroup {
+// 	position: relative;
+// 	display: flex;
+// 	justify-content: space-between;
+// 	margin: 50px 0 30px;
+// 	border-bottom: 2px solid #222;
+// 	padding-bottom: 30px;
+// 	// & + * {
+// 	// 	margin-top: 30px;
+// 	// }
+// 	@include breakpoint($sm){
+// 		margin: 0 10px 15px;
+// 		padding-bottom: 0;
+// 	}
+// 	h1 {
+// 		display: block;
+// 		font-size: rem(48);
+// 		color: $point;
+// 		font-weight: 600;
+// 		font-family: 'Spoqa Han Sans Neo Bold';
+// 		width: calc(100% - 140px);
+// 		@include breakpoint($sm){
+// 			width: 100%;
+// 			font-size: rem(36);
+// 			text-align: center;
+// 			padding: 30px 0 25px;
+// 		}
+// 	}
+// 	& + .tab-list {
+// 		margin: 0 0 24px !important;
+// 		@include breakpoint($sm) {
+// 			margin: 0 10px 24px !important;
+// 		}
+// 		.swiper {
+// 			a.swiper-slide {
+// 				@include breakpoint($sm) {
+// 					flex: 1;
+// 					max-width: none;
+// 				}
+// 			}
+// 		}
+// 	}
+// }
+
 .page-toolbar {
 	.nav-stiky & {
 		// position: fixed;

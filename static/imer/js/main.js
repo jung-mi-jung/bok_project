@@ -1,17 +1,15 @@
 $(function () {
-
-	//비줄얼 & 컨퍼런스
-	var galleryList = new Swiper(".s1-bottom-set .swiper-container", {
+	//비쥬얼 & 컨퍼런스
+	var galleryThumbs = new Swiper(".section1-visual", {
 		slidesPerView: 1,	// 보여지는 슬라이드 갯수
-		spaceBetween : 0,	// 전체적인 슬라이드의 왼쪽에 0px 공백을 준다.
-		direction: 'vertical', // 수직 슬라이드
-		touchRatio: 0,  //드래그 금지
-		loop: true,
-		pagination : false,	//pager 여부
-		autoplay : {  // 자동 슬라이드 설정 , 비 활성화 시 false
-			delay : 5000,  //시간 설정
-			disableOnInteraction : false,  //true 설정시 쓸어 넘기거나 버튼 클릭 시 자동 슬라이드 정지.
-		},
+		spaceBetween: 0,	// 마진값
+		loop: true,	// 슬라이드 반복 여부
+		//freeMode: true, 
+		effect: 'true', //슬라이드 이미지가 쌓이는 느낌
+		// autoplay : {  // 자동 슬라이드 설정 , 비 활성화 시 false
+		// 	delay : 5000,  //시간 설정
+		// 	disableOnInteraction : false,
+		// },
 		navigation: {	// 버튼 사용자 지정
 			prevEl: ".section1__swiper-button-prev",
 			nextEl: ".section1__swiper-button-next",
@@ -20,7 +18,6 @@ $(function () {
 			el: '.s1-bottom-set .swiper-pagination',
 			type: "fraction",
 		},
-		//effect: 'true', //슬라이드 이미지가 쌓이는 느낌
 		observer: true, //처음에 보이지 않는 display: none 상태인 요소 포커스 오류 정정
 		observeParents: true,
 		watchOverflow : true,	//슬라이드가 1개 일 때 pager, button 숨김 여부 설정
@@ -33,27 +30,30 @@ $(function () {
 				var item = $('.s1-bottom-set')
 				item.find('.swiper-slide-active a').attr('tabindex',0).siblings().attr('tabindex',-1)
 			}
-		},			
+		},	
+		thumbs: {
+			swiper: galleryList,
+		},	
 	});
-	var galleryThumbs = new Swiper(".section1-visual", {
+	var galleryList = new Swiper(".s1-bottom-set .swiper-container", {
 		slidesPerView: 1,	// 보여지는 슬라이드 갯수
-		spaceBetween: 0,	// 마진값
-		loop: true,	// 슬라이드 반복 여부
-		// freeMode: true, 
-		effect: 'true', //슬라이드 이미지가 쌓이는 느낌
-		autoplay : {  // 자동 슬라이드 설정 , 비 활성화 시 false
-			delay : 5000,  //시간 설정
-			disableOnInteraction : false,
-		},
-		// thumbs: {
-		// 	swiper: galleryList,
+		spaceBetween : 0,	// 전체적인 슬라이드의 왼쪽에 0px 공백을 준다.
+		direction: 'vertical', // 수직 슬라이드
+		touchRatio: 0,  //드래그 금지
+		loop: true,
+		pagination : false,	//pager 여부
+		// autoplay : {  // 자동 슬라이드 설정 , 비 활성화 시 false
+		// 	delay : 5000,  //시간 설정
+		// 	disableOnInteraction : false,  //true 설정시 쓸어 넘기거나 버튼 클릭 시 자동 슬라이드 정지.
 		// },
+		//effect: 'true', //슬라이드 이미지가 쌓이는 느낌
 	});
-	galleryList.init();//초기화
-
-
+	
 	galleryList.controller.control = galleryThumbs;
 	galleryThumbs.controller.control = galleryList;
+
+	galleryList.init();//초기화
+	galleryThumbs.init();//초기화
 
 
 

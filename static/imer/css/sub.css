@@ -1045,11 +1045,11 @@ height: auto !important;
 .navigation {
 position: relative;
 z-index: 2;
-height: 48px;
 line-height: 48px;
 background-color: #FCFCFC;
 border-bottom: 1px solid #E5E5E5;
 }
+@media (min-width: 1200px) {
 .nav-stiky .navigation {
 width: 100%;
 position: fixed;
@@ -1067,11 +1067,29 @@ bottom: -1px;
 left: 0;
 z-index: 1;
 }
-@media (max-width: 1199px) {
-.navigation .container {
-margin-left: 0;
-margin-right: 0;
+.nav-stiky .navigation .sub-_visual {
+display: none;
 }
+}
+.navigation .sub-_visual {
+border-top: 1px solid #E6E6E6;
+height: 216px;
+background-color: #CBDEF4;
+background-repeat: no-repeat;
+background-position: 50%;
+}
+.navigation .sub-_visual div {
+width: 1440px;
+margin: 0 auto;
+padding-top: 90px;
+}
+.navigation .sub-_visual div h1 {
+color: #1A1A1A;
+font-weight: 500;
+font-size: 3rem;
+}
+.bd-body .navigation .sub-_visual div h1 {
+font-size: 1.25rem;
 }
 .nav-stiky .navigation .top-page-toolbar {
 float: right;
@@ -1096,12 +1114,6 @@ margin: 0;
 }
 .navigation .top-page-toolbar .page-toolbar .page-rss::before {
 margin-left: 9px;
-}
-@media (max-width: 749px) {
-.navigation {
-height: 36px;
-line-height: 36px;
-}
 }
 @media (min-width: 1200px) {
 .navigation nav {
@@ -1152,7 +1164,7 @@ border-right: none;
 }
 }
 .navigation nav > ul > li.home {
-color: #000;
+color: #6D6E72;
 padding: 0 16px;
 }
 @media (min-width: 1200px) {
@@ -1297,6 +1309,7 @@ display: block;
 }
 }
 .lnb-nav {
+position: -webkit-sticky;
 position: sticky;
 top: 48px;
 padding-top: 0;
@@ -2632,6 +2645,7 @@ border: 0;
 
 .bd-view {
 position: relative;
+z-index: 9;
 }
 .bd-view .subject {
 color: #1A1A1A;
@@ -2656,12 +2670,12 @@ font-size: 1.125rem !important;
 .bd-view .dataInfoSet {
 display: flex;
 justify-content: space-between;
-margin: 10px 0 18px;
+margin: 10px 0 26px;
 align-items: flex-end;
 }
 .bd-view .dataInfoSet .dataInfo {
 position: absolute;
-top: -27px;
+top: -34px;
 right: 0;
 display: flex;
 color: #666;
@@ -3278,11 +3292,11 @@ font-size: 2rem !important;
 .bd-blog .dataInfoSet {
 display: flex;
 justify-content: space-between;
-margin: 10px 0 18px;
+margin: 10px 0 26px;
 }
 .bd-blog .dataInfoSet .dataInfo {
 position: absolute;
-top: -27px;
+top: -34px;
 right: 0;
 display: flex;
 color: #666;
@@ -5312,6 +5326,7 @@ justify-content: center;
 .sh-db {
 padding-top: 30px;
 margin-bottom: 30px;
+position: -webkit-sticky;
 position: sticky;
 top: 36px;
 background: #fff;
@@ -7738,6 +7753,7 @@ margin-bottom: 30px;
 }
 }
 .content-row .cont-nav ul {
+position: -webkit-sticky;
 position: sticky;
 top: 48px;
 }
