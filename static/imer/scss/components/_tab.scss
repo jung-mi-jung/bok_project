@@ -120,11 +120,11 @@
 			// width: 100%;
 			min-height: 40px;
 			padding: 8px;
-			color: #3B63C4;
+			color: #005596;
 			background: #fff;
-			border-top: 1px solid #89A1DC;
+			border-top: 1px solid #2373B0;
 			// border-bottom: 1px solid #89A1DC;
-			border-right: 1px solid #89A1DC;
+			border-right: 1px solid #2373B0;
 			text-align: center;
 			box-sizing: border-box;
 			cursor: grab;
@@ -133,11 +133,11 @@
 				max-width: 140px;
 			}
 			&:first-of-type {
-				border-left: 1px solid #89A1DC;
+				border-left: 1px solid #2373B0;
 			}
 			&.on {
 				color: #fff;
-				background: #3B63C4;
+				background: #005596;
 			}
 			
 		}

@@ -435,3 +435,32 @@
 		}
 	}
 }
+
+/* 학술지 논문목록 */
+.cont-tableList {
+	.table {
+		border-top: 2px solid #17294D;
+		thead {
+			th {
+				background: #EBF3F7 !important;
+				border-radius: 0 !important;
+				border-left: 1px solid #e5e5e5 !important;
+				border-right: 1px solid #e5e5e5 !important;
+				border-bottom: 1px solid #e5e5e5 !important;
+				&:first-of-type {
+					border-right: 0 !important;
+				}
+			}
+		}
+		tbody {
+			td {
+				border-left: 1px solid #e5e5e5 !important;
+				border-right: 1px solid #e5e5e5 !important;
+				&:first-of-type {
+					border-right: 0 !important;
+				}
+			}
+		}
+	}
+	
+}

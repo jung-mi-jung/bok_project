@@ -5067,10 +5067,10 @@ align-items: stretch;
 flex: 1;
 min-height: 40px;
 padding: 8px;
-color: #3B63C4;
+color: #005596;
 background: #fff;
-border-top: 1px solid #89A1DC;
-border-right: 1px solid #89A1DC;
+border-top: 1px solid #2373B0;
+border-right: 1px solid #2373B0;
 text-align: center;
 box-sizing: border-box;
 cursor: grab;
@@ -5082,11 +5082,11 @@ max-width: 140px;
 }
 }
 .tab-list .swiper a.swiper-slide:first-of-type {
-border-left: 1px solid #89A1DC;
+border-left: 1px solid #2373B0;
 }
 .tab-list .swiper a.swiper-slide.on {
 color: #fff;
-background: #3B63C4;
+background: #005596;
 }
 .tab-list .swiper-tab-button {
 display: none;
@@ -8138,6 +8138,28 @@ background: #3B63C4;
 width: 20px;
 height: 20px;
 text-align: center;
+}
+
+/* 학술지 논문목록 */
+.cont-tableList .table {
+border-top: 2px solid #17294D;
+}
+.cont-tableList .table thead th {
+background: #EBF3F7 !important;
+border-radius: 0 !important;
+border-left: 1px solid #e5e5e5 !important;
+border-right: 1px solid #e5e5e5 !important;
+border-bottom: 1px solid #e5e5e5 !important;
+}
+.cont-tableList .table thead th:first-of-type {
+border-right: 0 !important;
+}
+.cont-tableList .table tbody td {
+border-left: 1px solid #e5e5e5 !important;
+border-right: 1px solid #e5e5e5 !important;
+}
+.cont-tableList .table tbody td:first-of-type {
+border-right: 0 !important;
 }
 
 .dbdata {
