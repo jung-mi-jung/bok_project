@@ -457,11 +457,22 @@
 	position: fixed;
 	top: 0;
 	left: 0;
+	right: 0;
+	bottom: 0;
 	width: 100%;
 	min-height: 100vh;
 	background: #fff;
 	z-index: 100;
+	overflow: auto !important;
 	display: none;
+	&::before {
+		display: none;
+	}
+	&.fade.in {
+		&::before {
+			background: none !important;
+		}
+	}
 	.modal-dialog,
 	.modal-content {
 		width: 100%;
@@ -507,9 +518,28 @@
 			}
 		}
 		.close {
+			position: absolute;
+			top: 0;
+			right: 10px;
 			width: 48px;
 			height: 48px;
 			&::before {
+				content: "\e5cd";
+				font-family: "Material Icons Outlined";
+				font-weight: normal;
+				font-style: normal;
+				display: inline-block;
+				line-height: 1;
+				vertical-align: text-bottom;
+				text-transform: none;
+				letter-spacing: normal;
+				word-wrap: normal;
+				white-space: nowrap;
+				-webkit-font-smoothing: antialiased;
+				text-rendering: optimizeLegibility;
+				-moz-osx-font-smoothing: grayscale;
+				font-feature-settings: "liga";
+				font-size: 40px;
 				color: #000;
 			}
 		}
@@ -730,7 +760,7 @@
 }
 @include breakpoint($smd) {
 	.total-nav {
-		overflow: auto !important;
+		// overflow: auto !important;
 		.modal-dialog,
 		.modal-content {
 			min-width: auto;
@@ -744,7 +774,7 @@
 				display: grid !important;
 				grid-template-columns: repeat(3, 1fr);
 				flex-wrap: wrap;
-				gap: 40px 20px;
+				gap: 16px 0;
 				.dp1 {
 					//width: calc(33.33% - 30px);	
 					flex: none;
@@ -784,13 +814,14 @@
 		}
 		.modal-body {
 			.container {
-				grid-template-columns: repeat(2, 1fr);
+				grid-template-columns: repeat(1, 1fr);
 			}
 			.dp1 > li{
 				font-size: rem(24);
 			}
 			.dp2 {
 				margin-top: 10px;
+				margin-bottom: 40px;
 				> li {
 					font-size: rem(20);
 				}
@@ -800,6 +831,43 @@
 			}
 		}
 		
+	}
+}
+
+// 전체메뉴 모바일
+.total-nav {
+	&.m-total-nav {
+		.dp1 {
+			> li {
+				&.on {
+					> a > span {
+						&::before {
+							background: url(/static/portal/img/ico/ico-dropdown-up.png);
+						}
+					}
+					.dp2 {
+						display: block;
+					}
+				}
+				> a > span {
+					position: relative;
+					&::before {
+						content: "";
+						position: absolute;
+						top: 4px;
+						right: -25px;
+						display: inline-block;
+						width: 20px;
+						height: 20px;
+						margin-left: 8px;
+						background: url(/static/portal/img/ico/ico-dropdown-down.png);
+					}
+				}
+			}
+			.dp2 {
+				display: none;
+			}
+		}
 	}
 }
 

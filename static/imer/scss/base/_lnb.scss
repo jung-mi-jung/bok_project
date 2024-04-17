@@ -83,6 +83,29 @@
 						border-right: none;
 					}
 				}
+				&:last-of-type {
+					> a {
+						color: #000E33;
+						text-decoration: underline;
+						&::after {
+							content: "";
+							display: inline-block;
+							width: 24px;
+							height: 24px;
+							transform: translateY(2px);
+							background: url('/static/museum/img/ico/ico-lnb-last.png');
+							@include breakpoint($sm){ 
+								transform: translateY(0);
+							}
+						}
+					}
+				}
+				@include breakpoint($sm){
+					width: 100%;
+					&:last-child {
+						border-right: none;
+					}
+				}
 				&.home {
 					color: #000;
 					padding: 0 16px;

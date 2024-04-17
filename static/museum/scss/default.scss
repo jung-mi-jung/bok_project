@@ -58,6 +58,7 @@
 @import 'base/footer'; //푸터
 
 @import 'components/visible'; //반응형 스타일
+@import 'components/popup'; //전체메뉴
 
 
 a {
@@ -70,7 +71,7 @@ html {
 	}
 }
 body {
-	overflow-x: hidden;
+	overflow-x: hidden !important;
 	color: $body-font-color;
 	line-height: 1.5;
 	font-family: $font-set;
@@ -82,9 +83,9 @@ body {
 	}
 	&.ovh, 
 	&.modal-open {
-		position: relative;
+		// position: relative;
 		overflow: hidden !important;
-		height: 100vh;
+		// height: 100vh;
 	}
 }
 
@@ -104,4 +105,5 @@ i {
 }
 img {
 	max-width: 100%;
+	// width: 100%;
 }

@@ -11,7 +11,7 @@ table {
 }
 .table {
 	clear: both;
-	border-top: 2px solid #182252;
+	//border-top: 2px solid #182252;
 	margin-bottom: 10px;
 	@include breakpoint($md){
 		&.pcweb {
@@ -29,7 +29,7 @@ table {
 				border-bottom: none;
 				background: #E8EBED;
 				color: $black;
-				border-right: 1px solid rgba(0,0,0,0.1);
+				border-right: 1px solid #BDBCBC;
 				&:first-of-type {
 					border-radius: 8px 0 0 8px;
 				}
@@ -92,9 +92,9 @@ table {
 					}
 				}				
 			}
-			.a-hover {
-				color: #1454FF;
-			}
+			// .a-hover {
+			// 	color: #1454FF;
+			// }
 			.a-hover2 {
 				strong {
 					color: #1a1a1a;
@@ -107,37 +107,32 @@ table {
 			}
 		}
 	}
-	// table {
-	// 	width: 100%;
-	// 	table-layout: fixed;
-	// 	thead {
-	// 		th {
-	// 			border-bottom: none;
-	// 		}
-	// 	}
-	// 	th {
-	// 		color: $black;
-	// 		font-weight: 400;
-	// 		background-color: #F2F6FA;			
-	// 		border: 1px solid $bd-color;
-	// 		padding: 12px 0;
-	// 		// & + th {
-	// 		// 	border-left: 1px solid $bd-color;
-	// 		// }
-	// 	}
-	// 	tbody {
-	// 		th {
-	// 			color: #1A1A1A;
-	// 			// background-color: #F2F6FA;	
-	// 			background-color: #FAFAFA;
-	// 		}
-	// 	}
-	// 	td {
-	// 		padding: 10px 15px;
-	// 		color: #1A1A1A;
-	// 		min-height: 55px;
-	// 		border: 1px solid $bd-color;
-	// 		background-color: #fff;
+	&.onlyThBg {
+		table {
+			border-spacing: 8px;
+    		border-collapse: separate;
+			th, td {
+				// border-collapse: collapse;
+				// border: 8px solid #fff;
+			}
+			tbody {
+				th {
+					background: #E8EAED !important;
+					border-radius: 8px;
+					border: 0;
+				}
+				td {
+					// background-color: #fff !important;
+					background: #FAFAFA;
+					border-radius: 8px;
+					border: 0;
+				}
+			}
+		}
+	}
+	// &.borderTop {
+	// 	table {
+	// 		border-top: 2px solid $point;
 	// 	}
 	// }
 	&.type2 {
@@ -198,9 +193,6 @@ table {
 	}
 }
 
-.table-striped tbody > tr:nth-child(even) td{ 
-	background:#FAFAFA; 
-}
 
 .table-view {
 	border-top: 2px solid #182252;
@@ -231,7 +223,6 @@ table {
 		display: inline-block;
 	}
 }
-
 @include breakpoint($smd){
 	.scrollX {
 		overflow: hidden;
@@ -258,7 +249,7 @@ table {
 	}
 	li {
 		position: relative;
-		padding-left: 10px;
+		padding-left: 18px;
 		&::before {
 			content: "";
 			display: inline-block;

@@ -23,9 +23,28 @@ var ismobile = false;
 if (window.innerWidth < 1200) {
 	ismobile = true;
 }
+if( window.innerWidth < 750 ) {
+	$(".total-nav").addClass("m-total-nav");
+	$(".total-nav .dp1 > li > a").on("click", function(e){
+		e.preventDefault();
+		$(this).parent("li").toggleClass("on");
+	})
+} 
+
 $(window).resize(function () {
 	if (window.innerWidth < 1200) {
 		ismobile = true;
+
+		if( window.innerWidth < 750 ) {
+			$(".total-nav").addClass("m-total-nav");
+			$(".total-nav .dp1 > li > a").on("click", function(e){
+				e.preventDefault();
+			})
+		} 
+		else {
+			$(".total-nav").removeClass("m-total-nav");
+		}
+
 	} else {
 		ismobile = false;
 	}
@@ -56,7 +75,7 @@ function lpopClose(target) {
 }
 $(function () {
 	// 레이어 닫기
-	$('.parent-close').on('click', function () {
+	$('.parent-close, .b-close, .close').on('click', function () {
 		lpopClose()
 		$(this).parent().parent().removeClass('active');
 	});
@@ -82,13 +101,13 @@ $(".total-nav .dp3 .dropdown").on("click", function() {
 
 
 $(".all-nav-toggle").click(function (e){
-	$("body").addClass(popupOpened).attr("tabindex", -1);
+	$("body").addClass("popupOpened").attr("tabindex", -1);
 
 	// e.preventDefault()
 	// $(".total-nav").addClass("active");
 	// $('.total-nav .nav>ul>li:first-child>a').focus()
 
-	$(".total-nav").attr("tabindex", 1);
+	//$(".total-nav").attr("tabindex", 1);
 	$(".total-nav .modal-header .close").focus();
 });
 // $('.total-nav button').click(function (e) {

@@ -5,10 +5,11 @@ $(function () {
 		slidesPerView: 1,	// 보여지는 슬라이드 갯수
 		spaceBetween : 0,	// 전체적인 슬라이드의 왼쪽에 0px 공백을 준다.
 		direction: 'vertical', // 수직 슬라이드
+		touchRatio: 0,  //드래그 금지
 		loop: true,
 		pagination : false,	//pager 여부
 		autoplay : {  // 자동 슬라이드 설정 , 비 활성화 시 false
-			delay : 3000,  //시간 설정
+			delay : 5000,  //시간 설정
 			disableOnInteraction : false,  //true 설정시 쓸어 넘기거나 버튼 클릭 시 자동 슬라이드 정지.
 		},
 		navigation: {	// 버튼 사용자 지정
@@ -38,18 +39,17 @@ $(function () {
 		slidesPerView: 1,	// 보여지는 슬라이드 갯수
 		spaceBetween: 0,	// 마진값
 		loop: true,	// 슬라이드 반복 여부
-		touchRatio: 0,  //드래그 금지
 		// freeMode: true, 
 		effect: 'true', //슬라이드 이미지가 쌓이는 느낌
 		autoplay : {  // 자동 슬라이드 설정 , 비 활성화 시 false
-			delay : 3000,  //시간 설정
+			delay : 5000,  //시간 설정
 			disableOnInteraction : false,
 		},
 		// thumbs: {
 		// 	swiper: galleryList,
 		// },
 	});
-	//galleryList.init();//초기화
+	galleryList.init();//초기화
 
 
 	galleryList.controller.control = galleryThumbs;
@@ -57,21 +57,21 @@ $(function () {
 
 
 
-
-
 	$('.section1__swiper-button-stop').on('click', function () {
 		$(this).hide().next().show().focus()
-		section1Visual.autoplay.stop();
+		galleryList.autoplay.stop();
+		galleryThumbs.autoplay.stop();
 	});
 	$('.section1__swiper-button-play').on('click', function () {
 		$(this).hide().prev().show().focus()
-		section1Visual.autoplay.start();
+		galleryList.autoplay.start();
+		galleryThumbs.autoplay.start();
 	});
 	$('.s1-bottom-set .swiper-slide').on('mouseover', function(){
-		section1Visual.autoplay.stop();
+		galleryList.autoplay.stop();
 	});
 	$('.s1-bottom-set .swiper-slide').on('mouseout', function(){
-		section1Visual.autoplay.start();
+		galleryList.autoplay.start();
 	});
 });
 
