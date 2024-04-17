@@ -30,11 +30,13 @@
 	}
 	.sub-_visual {
 		border-top: 1px solid #E6E6E6;
-		height: 216px;
-		background-color: #CBDEF4;
-		//background-image: url(/static/portal/img/sub/sub_visual_bg1.png);
-		background-repeat: no-repeat;
-		background-position: 50%;		
+		@include breakpoint($lg){
+			height: 216px;
+			background-color: #CBDEF4;
+			background-repeat: no-repeat;
+			background-position: 50%;
+			//background-image: url(/static/portal/img/sub/sub_visual_bg1.png);
+		}	
 		div {
 			width: $pc-wide;
 			margin: 0 auto;

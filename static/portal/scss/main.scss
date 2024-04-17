@@ -84,7 +84,7 @@
 		.global {
 			display: none;
 		}
-		.search {
+		> .search {
 			position: absolute;
 			top: 0;
 			right: 0;
@@ -252,7 +252,7 @@
 				.logo a {
 					background: url(/static/portal/img/main/logo.png) 50% no-repeat;
 				}
-				.g-info .search {
+				.g-info > .search {
 					width: 75px;
 					height: 72px;
 					top: 0;

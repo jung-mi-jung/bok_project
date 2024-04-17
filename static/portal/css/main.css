@@ -588,7 +588,7 @@ align-items: center;
 #header .g-info .global {
 display: none;
 }
-#header .g-info .search {
+#header .g-info > .search {
 position: absolute;
 top: 0;
 right: 0;
@@ -597,7 +597,7 @@ height: 60px;
 z-index: 9;
 background-color: #fff;
 }
-#header .g-info .search::before {
+#header .g-info > .search::before {
 content: "\e8b6";
 font-family: "Material Icons Outlined";
 font-weight: normal;
@@ -617,23 +617,23 @@ color: #131547;
 font-size: 2.5rem;
 }
 @media (max-width: 1199px) {
-#header .g-info .search::before {
+#header .g-info > .search::before {
 font-size: 2rem;
 }
 }
-#header .g-info .search:focus {
+#header .g-info > .search:focus {
 outline-color: #fff;
 outline-style: dashed;
 outline-offset: -1PX;
 }
 @media (min-width: 1200px) {
-#header .g-info .search {
+#header .g-info > .search {
 width: 114px;
 height: 114px;
 background-color: #3B63C4;
 top: -42px;
 }
-#header .g-info .search::before {
+#header .g-info > .search::before {
 color: #fff;
 font-size: 1.5rem;
 }
@@ -783,7 +783,7 @@ display: none;
 .gnb-stiky #header .logo a {
 background: url(/static/portal/img/main/logo.png) 50% no-repeat;
 }
-.gnb-stiky #header .g-info .search {
+.gnb-stiky #header .g-info > .search {
 width: 75px;
 height: 72px;
 top: 0;
