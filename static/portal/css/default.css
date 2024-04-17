@@ -1487,26 +1487,15 @@ margin-top: 22px;
 }
 #main-container h3 {
 clear: both;
-color: #131547;
+color: #26447D;
 font-size: 1.75rem;
 font-weight: 500;
-margin: 25px 0 16px;
-}
-#main-container h3::before {
-content: "";
-display: inline-block;
-vertical-align: middle;
-width: 8px;
-height: 24px;
-background-color: #3B63C4;
-border-radius: 30px;
-margin-right: 10px;
-margin-bottom: 4px;
+margin: 70px 0 16px;
 }
 #main-container h3.h3 {
 margin: 40px 0 16px;
-color: #2F4F9D;
-font-size: 1.25rem;
+color: #005596;
+font-size: 1rem;
 font-weight: 500;
 margin: 20px 0 10px;
 padding-left: 0;
@@ -1515,10 +1504,11 @@ padding-left: 0;
 content: "";
 display: inline-block;
 vertical-align: middle;
-width: 16px;
-height: 16px;
+width: 15px;
+height: 15px;
 background-image: url(/static/portal/img/ico/ico-caption.png);
 background-color: transparent;
+background-size: 15px 15px;
 margin-right: 7px;
 border-radius: 0;
 margin-top: -3px;
@@ -1585,8 +1575,8 @@ margin-top: 0 !important;
 margin-bottom: 3px;
 }
 #main-container .h-caption {
-color: #2F4F9D;
-font-size: 1.25rem;
+color: #005596;
+font-size: 1rem;
 font-weight: 500;
 margin: 20px 0 10px;
 padding-left: 0;
@@ -1595,10 +1585,11 @@ padding-left: 0;
 content: "";
 display: inline-block;
 vertical-align: middle;
-width: 16px;
-height: 16px;
+width: 15px;
+height: 15px;
 background-image: url(/static/portal/img/ico/ico-caption.png);
 background-color: transparent;
+background-size: 15px 15px;
 margin-right: 7px;
 border-radius: 0;
 margin-top: -3px;
