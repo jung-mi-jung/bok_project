@@ -349,10 +349,11 @@
 						</li>
 					</ul>
 					<div class="gnb-btn-wrap">
-					<button type="button" class="all-nav-toggle" title="전체 메뉴 열기"></button>
-					<button type="button" class="search" title="검색레이어 열기">
-						<i class="ico-srchW"></i>
-					</button>
+						<button type="button" class="all-nav-toggle" data-toggle="modal" data-target="#totalMenu" title="전체 메뉴 열기"></button>
+						<button type="button" class="search" title="검색레이어 열기">
+							<i class="ico-srchW"></i>
+						</button>
+					</div>
 					<!-- <div class="search_wrap">
 						<form action="">
 							<div class="search_wrap_input">
@@ -377,7 +378,6 @@
 					</div>
 				</nav> -->
 			</div>
-			
 			<!-- 전체메뉴 -->
 			<div class="modal fade total-nav" id="totalMenu" tabindex="-1" role="dialog">
 				<div class="lpop modal-dialog" role="document">
@@ -403,7 +403,7 @@
 							<div class="container">
 								<ul class="dp1">
 									<li>
-										<a href="">한국은행</a>
+										<a href=""><span>한국은행</span></a>
 										<ul class="dp2">
 											<li>
 												<a href="">개요</a>
@@ -454,12 +454,12 @@
 								</ul>
 								<ul class="dp1">
 									<li>
-										<a href="">정책 및 업무</a>
+										<a href=""><span>정책 및 업무</span></a>
 									</li>
 								</ul>
 								<ul class="dp1">
 									<li>
-										<a href="">뉴스 및 자료</a>
+										<a href=""><span>뉴스 및 자료</span></a>
 										<ul class="dp2">
 											<li>
 												<a href="">개요</a>
@@ -511,12 +511,12 @@
 								</ul>
 								<ul class="dp1">
 									<li>
-										<a href="">멀티콘텐츠</a>
+										<a href=""><span>멀티콘텐츠</span></a>
 									</li>
 								</ul>
 								<ul class="dp1">
 									<li>
-										<a href="">주요서비스</a>
+										<a href=""><span>주요서비스</span></a>
 										<ul class="dp2">
 											<li>
 												<a href="">개요</a>
@@ -572,7 +572,6 @@
 				</div>
 			</div>
 			<!-- //전체메뉴 -->
-
 		</header>	
 		<!-- //header -->
 
@@ -669,6 +668,11 @@
 					</div>
 				</div>
 			</nav>
+			<div class="sub-_visual">
+				<div class="hgroup">
+					<h1>뉴스 및 의사록</h1>
+				</div>
+			</div>
 		</div>
 		<!-- //navigation -->
 
