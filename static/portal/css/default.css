@@ -3071,6 +3071,9 @@ outline: 1px dashed #000;
 outline-offset: 2px;
 }
 
+[class^=reference-] {
+position: relative;
+}
 [class^=reference-]:first-child {
 margin-top: 0;
 padding-top: 0;
@@ -3701,6 +3704,10 @@ font-size: 23px;
 margin: 0 5px 0 0;
 }
 
+span.help3 {
+display: inline-block;
+}
+
 .help3 {
 display: block;
 position: relative;
@@ -4272,11 +4279,11 @@ color: #000E33;
 }
 
 html {
-font-size: 16px;
+font-size: 1.125rem;
 }
 @media (max-width: 749px) {
 html {
-font-size: 0.875rem;
+font-size: 1.125rem;
 }
 }
 

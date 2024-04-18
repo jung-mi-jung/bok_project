@@ -21,3 +21,6 @@ static/imer/maps/default.css.map
 static/imer/maps/main.css.map
 static/imer/maps/sub.css.map
 .gitignore
+
+
+static/font

@@ -1288,7 +1288,7 @@
 	}
 }
 
-@mixin reference {	
+@mixin reference {
 	dl {
 		dt {
 			color: $black;
@@ -1339,6 +1339,7 @@
 }
 
 [class^=reference-] {
+	position: relative;
 	&:first-child {
 		margin-top: 0;
 		padding-top: 0;
@@ -1775,6 +1776,9 @@ sup {
 		font-size: 23px;
 		margin: 0 5px 0 0;
 	}
+}
+span.help3 {
+	display: inline-block;
 }
 .help3 {
 	display: block;
