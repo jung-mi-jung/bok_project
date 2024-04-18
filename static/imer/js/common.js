@@ -26,8 +26,7 @@ if (window.innerWidth < 1200) {
 }
 if( window.innerWidth < 750 ) {
 	$(".total-nav").addClass("m-total-nav");
-	$(".total-nav.m-total-nav .dp1 > li > a").on("click", function(e){
-		e.preventDefault();
+	$(".m-total-nav .dp1 > li > a").on("click", function(e){
 		$(this).parent("li").toggleClass("on");
 	})
 } 
@@ -37,8 +36,8 @@ $(window).resize(function () {
 		
 		if( window.innerWidth < 750 ) {
 			$(".total-nav").addClass("m-total-nav");
-			$(".total-nav.m-total-nav .dp1 > li > a").on("click", function(e){
-				e.preventDefault();
+			$(".m-total-nav .dp1 > li > a").on("click", function(e){
+				$(this).parent("li").toggleClass("on");
 			})
 		} 
 		else {
@@ -696,8 +695,13 @@ $(function() {
 
 
 	//검색 레이어
-	$(".g-info .search").click(function(){
+	$(".g-info .search, .toggle-set .search, .gnb-btn-wrap .search").click(function(){
 		$(".search_wrap").addClass("active");
+		$(".search_wrap .search_wrap_input .search_keyword") .focus();
+	})
+	$(".search_wrap .search_close").click(function(){
+		$(".search_wrap").removeClass("active");
+		$(".g-info .search, .toggle-set .search").focus();
 	})
 
 	//첨부파일
