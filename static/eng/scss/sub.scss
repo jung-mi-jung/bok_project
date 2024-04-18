@@ -1,0 +1,758 @@
+// @import url('/static/commons/css/common.css');
+@import url('/static/eng/css/default.css');
+
+
+@import 'base/util'; //mixins
+@import '../../commons/scss/breakpoint'; //반응형 플러그인
+@import 'base/variables';//환경 설정
+@import 'components/visible';//반응형 스타일
+@import 'base/heading';//해딩스타일
+//@import 'mixins/layerfixed'; //mixins
+
+/* 스프라이트 */
+@import "components/sprite";
+@mixin retina-sprites($retina-groups) {
+	@each $retina-group in $retina-groups {
+		$sprite-name: nth($retina-group, 1);
+		.#{$sprite-name} {
+			@include retina-sprite($retina-group);
+		}	
+	}
+}
+[class^='ico-'] {
+	display: inline-block;
+	vertical-align: middle;
+}
+//@include retina-sprites($retina-groups);
+
+
+@import 'base/color'; // colors
+@import 'components/ico'; // icons
+@import 'components/print';//프린트
+
+@import 'base/lnb';//서브 좌측 메뉴
+@import 'components/form';//글쓰기 폼
+@import 'components/table';//테이블 스타일
+@import 'components/bdlist';//프로그램  리스트 공통
+@import 'components/bdview';//프로그램 뷰,수정,쓰기
+@import 'components/photo';//겔러리 타입(동영상 등)
+@import 'components/gallery';	//지역본부 - 화폐박물관
+@import 'components/faq';//FAQ
+@import 'components/paging';//페이징
+@import 'components/tab';//탭메뉴
+@import 'components/sh';//검색
+@import 'components/filelist';//파일목록
+
+@import 'components/content';//콘텐츠
+@import 'components/dbdata';//게시물 데이터
+@import 'components/btn';//버튼 스타일
+@import 'components/box';  //box
+@import 'components/datepicker'; // datepicker theme
+@import 'components/popup';//팝업
+@import 'components/calendar';// calendar
+
+
+
+
+@import url('/static/jslibrary/bootstrap-datepicker-1.9.0-dist/css/bootstrap-datepicker3.standalone.css');
+
+
+
+.pdf {
+	overflow-x: hidden;overflow-y: auto;width: 100%;height: 200px;
+}
+
+
+
+
+.img-box {
+	.img {
+		display: block;
+		height: 1px;
+		//padding-top: 50%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: 50%;
+	}
+}
+
+.category-type {
+	display: flex;
+	justify-content: center;	
+	align-items: center;
+	padding: 20px;
+	margin-bottom: 24px;
+	font-size: rem(18);	
+	background-color: #F2F6FA;
+	dt {
+		@include bu-dot();
+		margin-right: 15px;
+	}
+	dd {
+		select {
+			width: 100%;
+			padding: 4px 40px 4px 20px !important;
+			height: 50px;
+			background-color: #fff;
+			background-position: calc(100% - 20px);
+			border: 0;
+			@include breakpoint($lg){
+				width: 790px;
+			}
+			// @include breakpoint($sm){
+			// 	width: calc(100% - 100px);
+			// }
+		}
+	}
+}
+//이용약관
+.agree-info-txt {
+	font-size: rem(18);
+	font-weight: 500;
+	margin-bottom: 20px;
+}
+.agreeBox {
+	clear: both;
+	border: 1px solid #E6E6E6;	
+	padding: 32px 0 0;
+	background-color: #FAFAFA;
+	h4 {
+		color: $color-point;
+		font-size: rem(20) !important;
+		font-weight: 500 !important;
+		margin-top: 25px;
+		margin-bottom: 8px;
+		padding: 0 32px;
+		&:first-child {
+			margin-top: 0;
+		}
+		& + h5 {
+			margin-top: 15px;
+		}
+	}
+	h5 {
+		margin: 25px 0 15px;
+	}
+	strong {
+		color: $point;
+		text-decoration: underline;
+	}
+	.help {
+		&::before {
+			font-size: 20px;
+			margin-right: 5px;
+			margin-bottom: 1px;
+		}
+	}
+	.bu-dot.red {
+		color: $red;
+		margin: 22px 0;
+		&::before {
+			background-color: $red;
+		}
+	}	
+	.scrollarBox,
+	.scrollarLBox {
+		padding: 0 32px 32px;
+		//max-height: 500px;
+		//overflow-y: auto;
+		//overflow-x: hidden;
+		p {
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		.bu-dot {
+			margin-top: 12px;
+			li {
+				& + li {
+					margin-top: 5px;
+				}
+			}
+			& + .help {
+				margin-top: 20px;
+			}
+		}
+	}	
+	.agreeTxt {
+		border-top: 1px solid #E6E6E6;
+		display: flex;
+		font-size: rem(18);
+		color: $point;
+		padding: 30px 40px;
+		background-color: #fff;
+		@include breakpoint($lg){
+			justify-content: space-between;
+		}
+		@include breakpoint($sm){
+			display: block;
+		}
+		span {
+			display: inline-block;
+		}
+		.txt1 {
+			@include bu-dot();
+			margin-bottom: 0;
+		}
+		.txt2 {
+			display: flex;
+			margin-bottom: 0;
+			@include breakpoint($lg){
+				margin-left: 20px;
+			}
+		}
+		label + label {
+			margin-left: 20px;
+		}
+	}
+	& + .agreeBox {
+		margin-top: 24px;
+	}
+}
+
+
+
+//경제용어사전
+.ecWordCont {
+	display: flex;
+	justify-content: space-between;
+	@include breakpoint($sm){
+		display: block;
+	}
+	.con-box {
+		width: 240px;
+		background-color: #FAFAFA;
+		border: 1px solid #E6E6E6;
+		border-radius: 16px;
+		padding: 16px;
+		line-height: 1.8;
+		@include breakpoint($sm){
+			width: 100%;
+		}
+		.box-info {
+			height: 320px;
+			overflow-y: auto;
+		}
+	}	
+	.boxInfoRt {
+		width: calc(100% - 240px);
+		padding-left: 40px;
+		@include breakpoint($sm){
+			width: 100%;
+			padding-left: 0;
+			margin-top: 20px;
+		}
+		.boxInfoR {
+			padding-left: 0;
+			margin-bottom: 20px;
+			.title {
+				margin-bottom: 15px;
+				strong {
+					font-size: rem(20);
+					color: $color-point;
+				}
+			}
+			#wordCont {
+				height: 164px;
+				overflow-y: auto;
+			}
+		}
+		.boxInfoRel{
+			padding-top: 20px;
+
+			height: 120px; 
+			overflow-y: auto; 
+			border-top: 1px solid $bd-color;
+			&.box3 {
+				
+		
+			}
+			h3{margin: 0 !important}
+			a {
+				position: relative;
+				padding-left: 12px;
+				&::before {
+					position: absolute;
+					top: 9px;
+					left: 0;
+					width: 4px;
+					height: 4px;
+					background-color: #666;
+					border-radius: 50%;
+					content: '';		
+				}
+				& + a {
+					margin-left: 15px;
+				}
+			}
+		}
+	}
+}
+#wordList {
+	li {
+		a {
+			display: block;
+		}
+		&.on {
+			a {
+				color: $point;
+				text-decoration: underline;
+				font-weight: 500;
+			}
+		}
+	}
+}
+
+
+
+// 한줄에 h3 + p
+h3 + .h-group  {
+	margin-top: 0;
+}
+.h-group {	 // 기존 class => hgroup
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 40px;
+	margin-bottom: 10px;
+	h3, h4 {
+		margin: 0 !important;
+	}
+	p {
+		margin-bottom: 0;
+		&.addtxt {
+			@include breakpoint($sm){
+				margin-top: -26px;
+			}
+		}
+	}
+	.mr {
+		margin-right: 20px;
+		@include breakpoint($sm){
+			margin-right: 0;
+		}
+	}
+	.email-s {
+		@include breakpoint($sm){
+			display: block;
+		}		
+	}
+}
+
+.i-no-data {
+	display: flex;
+	justify-content: center;
+	color: $black;
+	p {
+		padding-top: 68px;
+		position: relative;
+		font-size: rem(18);
+		font-weight: 400;
+		
+		&::before {
+			@include font-ico-outline('\e88e');
+			font-size: rem(65);
+			margin-bottom: 10px;
+			position: absolute;
+			top: 0;
+			left: 50%;
+			margin-left: -32px;
+			transform: rotate(180deg);
+			color: $point;
+		}
+	}
+	&.pad {
+		margin: 50px 0;
+		@include breakpoint($lg){
+			margin: 100px 0;
+		}
+	}	
+}
+
+mark {
+	background-color: #FFE100 !important;
+}
+
+.depart-wrap {
+	h2 {
+		text-align: center;
+		position: relative;
+		font-size: rem(40) !important;
+		font-weight: 100 !important;
+		@include breakpoint($lg){
+			font-size: rem(64) !important;
+		}
+		&::before {
+			content: "";
+			display: inline-block;
+			width: 40px;
+			height: 4px;
+			background: #39A0FF;
+			position: absolute;
+			bottom: -8px;
+			left: 50%;
+			margin-left: -20px;
+			border-radius: 30px;
+		}
+	}
+	.txt {
+		font-size: rem(20);
+		max-width: 750px;
+		margin: 10px auto 50px;
+		text-align: center;
+	}
+	/* 안씀
+	.dept-set {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 30px;
+		@include breakpoint($smd){
+			display: block;
+		}
+		@include breakpoint($lg){
+			> * {
+				width: 50%;
+			}
+		}
+		.mr {
+			margin-right: 20px;
+		}
+	}
+	.dept-list {		
+		margin-bottom: 20px;
+		@include breakpoint($lg){
+			padding-top: 30px;
+			margin-bottom: 0;
+		}
+		ul {
+			li {
+				display: flex;
+				margin-bottom: 10px;
+				strong {
+					display: inline-block;
+					padding: 4px 0;
+					margin-right: 10px;
+					width: 80px;
+					color: #fff;
+					font-size: 12px;
+					font-weight: 400 !important;
+					background-color: #39A0FF;
+					border-radius: 99px;
+					text-align: center;
+					letter-spacing: 1.0px;
+				}
+				span {
+					font-size: rem(18);
+				}
+			}
+		}
+	}
+	.list-con {
+		ul {
+			margin-top: 8px;
+			border-top: 2px solid $black;
+			li {
+				border-bottom: 1px solid #BFBFBF;
+				padding: 20px 0;
+				@include breakpoint($lg){
+					padding: 30px 0;
+				}
+			}
+		}
+		dl {
+			width: 100%;
+			display: flex;
+			dt {
+				width: 100px;
+				font-size: rem(24);
+				font-weight: 400;
+				@include breakpoint($lg){
+					width: 180px;
+				}
+				span {
+					display: block;
+					color: #666;
+					font-size: rem(16);
+				}
+			}
+			dd {
+				width: calc(100% - 120px);
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				color: #666;
+				@include breakpoint($lg){
+					width: calc(100% - 150px);
+				}
+				span {
+					display: inline-block;
+					&.txt {
+						width: calc(100% - 120px);
+						@include breakpoint($lg){
+							width: calc(100% - 150px);
+						}
+					}
+					&.tel {
+						width: 120px;
+						text-align: center;
+						@include breakpoint($lg){
+							width: 180px;
+						}
+					}
+				}
+			}
+		}
+	}*/
+}
+
+
+
+//본인인증
+.crtfcform {
+	background-color: #F2F6FA;
+	border-radius: 8px;
+	padding: 24px;
+	.sh1 {
+		display: flex;
+		justify-content: center;
+		text-align: center;		
+		font-size: rem(18);
+		@include breakpoint($sm){
+			display: block;
+		}
+		label + label {
+			margin-left: 50px;
+		}
+	}
+	.box2 {
+		border: 2px solid $color-point;
+		border-radius: 8px;
+		padding: 16px 24px;
+		margin-top: 30px;
+		margin-bottom: 0;
+		background-color: #fff;
+		strong {
+			font-size: rem(20);
+			font-weight: 500;
+			color: $color-point;
+		}
+		.txt {
+			@include breakpoint($lg){
+				display: flex;
+				justify-content: space-between;
+			}	
+			.help {
+				color: #C81720;
+				&::before {
+					color: #C81720;
+					font-size: 24px;
+					margin-right: 5px;
+					margin-bottom: -1px;
+				}
+			}
+		}
+		.input-txt {
+			display: flex;
+			margin-top: 30px;
+			@include breakpoint($sm){
+				display: block;
+				margin-top: 15px;
+			}
+			input {
+				border: 1px solid #BFBFBF;
+				height: 32px;
+				border-radius: 4px;
+			}
+			.bu {
+				display: inline-block;
+				vertical-align: middle;
+				&::before {
+					content: "";
+					display: inline-block;
+					width: 4px;
+					height: 4px;
+					border-radius: 50%;
+					background-color: $black;
+					margin: 0 8px 4px 4px;
+				}
+			}
+		}
+	}
+}
+//본인인증, 금융중개지원대출 기업정보조회
+.userType {
+	margin-top: 50px;
+	@include breakpoint($sm){
+		margin-top: 0;
+	}
+	.auth {
+		display: flex;
+		justify-content: center;
+		@include breakpoint($sm){
+			display: block;
+		}
+		.col {
+			border: 1px solid #BFBFBF;
+			border-radius: 24px;
+			margin: 0 24px;
+			padding: 32px 32px 20px;
+			width: calc(100% - 24px);
+			@include breakpoint($lg){
+				width: 390px;
+			}
+			@include breakpoint($mdw){
+				margin: 0 15px;
+				width: calc(100% - 15px);
+			}
+			@include breakpoint($sm){
+				margin: 0;
+				padding: 20px 20px 15px;
+				width: 100%;
+				& + .col {
+					margin-top: 20px;					
+				}
+			}			
+			.LogBox {
+				h4 {
+					display: block;
+					text-align: center;
+					color: #fff !important;
+					font-size: rem(18);
+					font-weight: 400;
+					padding: 8px;
+					border-radius: 50px;
+					background-color: $color-point;
+				}
+				.fw {
+					font-weight: 500;
+				}
+				.s {
+					margin-top: 20px;
+				}
+				dl {
+					display: flex;
+					align-items: center;
+					margin-top: 5px;
+					dt {
+						width: 80px;
+						margin-bottom: 5px;
+					}
+					dd {
+						width: calc(100% - 80px);
+						input[type=text] {
+							width: 100%;
+						}
+					}
+					&.w2 {
+						flex-wrap: wrap;
+						flex-direction: column;
+						dt {
+							width: 100%;
+						}
+						dd {
+							width: 100%;
+							display: flex;
+							align-items: center;
+						}
+						.bar {
+							display: inline-block;
+							margin: 0 2px;
+						}
+					}					
+				}
+				.b-sh {
+					&::before {
+						color: #fff;
+						@include font-ico-outline("\e8b6");
+						font-size: 28px;
+					}
+					
+				}
+			}
+		}
+	}
+	//본인인증
+	&.userType1 {
+		.auth {
+			.col {
+				a {
+					i {
+						display: block;
+						height: 96px;
+						margin: 65px 0;
+						background-repeat: no-repeat;
+						background-position: 50%;
+						@include breakpoint($sm){
+							margin: 40px 0;
+						}
+						&.ico-certi1 {
+							background-image: url(/static/portal/img/ico/ico-certi1.svg);
+							
+						}
+						&.ico-certi2 {
+							background-image: url(/static/portal/img/ico/ico-certi2.svg);
+						}
+					}
+					strong {
+						display: block;
+						text-align: center;
+						color: #fff;
+						font-size: rem(18);
+						font-weight: 400;
+						padding: 8px;
+						border-radius: 50px;
+					}
+					.info {
+						color: #4D4D4D;
+						p {
+							@include bu-dot();
+							margin-bottom: 8px;
+						}
+						em {
+							margin-top: 5px;
+							display: inline-block;
+							font-weight: 600;
+							color: $black;
+							font-size: rem(25);
+						}
+					}
+				}
+				#handphoneLoginBtn {
+					strong {
+						background-color: #3B63C4;
+					}				
+				}	
+				#ipinLoginBtn {
+					strong {
+						background-color: #39A0FF;
+					}				
+				}
+				&:hover {
+					border: 1px solid $color-point;
+					outline: 1px solid $color-point;
+					box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.15);
+				}
+			}
+		}
+	}
+}
+
+
+//툴팁
+//  tooltip
+.tooltip {position: absolute; z-index: 1070; display: block; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-style: normal; font-weight: normal; letter-spacing: normal; line-break: auto; line-height: 1.42857143; text-align: left; text-align: start; text-decoration: none; text-shadow: none; text-transform: none; white-space: normal; word-break: normal; word-spacing: normal; word-wrap: normal; font-size: 12px; opacity: 0; filter: alpha(opacity=0); }
+.tooltip.in {opacity: 0.9;filter: alpha(opacity=90); }
+.tooltip.top {margin-top: -3px;padding: 5px 0; min-width:120px;}
+.tooltip.right {margin-left: 3px;padding: 0 5px; }
+.tooltip.bottom {margin-top: 3px;padding: 5px 0; }
+.tooltip.left {margin-left: -3px;padding: 0 5px; }
+.tooltip-inner {max-width: 200px;padding: 3px 8px;color: #ffffff;text-align: center;background-color: $color-point;border-radius: 4px; }
+.tooltip-arrow {position: absolute;width: 0;height: 0;border-color: transparent;border-style: solid; }
+.tooltip.top .tooltip-arrow {bottom: 0;left: 50%;margin-left: -5px;border-width: 5px 5px 0;border-top-color: $color-point; }
+.tooltip.top-left .tooltip-arrow {bottom: 0;right: 5px;margin-bottom: -5px;border-width: 5px 5px 0;border-top-color: $color-point; }
+.tooltip.top-right .tooltip-arrow {bottom: 0;left: 5px;margin-bottom: -5px;border-width: 5px 5px 0;border-top-color: $color-point; }
+.tooltip.right .tooltip-arrow {top: 50%;left: 0;margin-top: -5px;border-width: 5px 5px 5px 0;border-right-color: $color-point; }
+.tooltip.left .tooltip-arrow {top: 50%;right: 0;margin-top: -5px;border-width: 5px 0 5px 5px;border-left-color: $color-point; }
+.tooltip.bottom .tooltip-arrow {top: 0;left: 50%;margin-left: -5px;border-width: 0 5px 5px;border-bottom-color: $color-point; }
+.tooltip.bottom-left .tooltip-arrow {top: 0;right: 5px;margin-top: -5px;border-width: 0 5px 5px;border-bottom-color: $color-point; }
+.tooltip.bottom-right .tooltip-arrow {top: 0;left: 5px;margin-top: -5px;border-width: 0 5px 5px;border-bottom-color: $color-point; }

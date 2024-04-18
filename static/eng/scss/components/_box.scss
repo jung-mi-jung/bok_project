@@ -1,0 +1,320 @@
+.c-box {
+	color: #4D4D4D;
+	font-size: 14px;
+	padding: 12px 5px;
+	background-color: #FAFAFA;
+	margin: 8px 0;
+}
+//box
+.box{
+	border:1px solid #ddd;float:left;width:100%;
+	&.boxpd{
+		background-color: #FAFAFA;
+		.badge{
+			display: inline-block; line-height: 30px;width: 30px;text-align: center; background-color:#4d6f9b; padding: 0;
+			&.bg_gray{
+				background-color: #7f7f7f;
+			}
+		 }
+	}
+}
+
+.box1 {
+    border: 1px solid #BFBFBF;
+    padding: 20px;
+}
+
+h2 + .boxTop {
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+.boxTop{
+	border: 7px solid #3B63C4;
+	padding:0 12px;
+	position:relative;
+	margin-bottom:20px; 
+	clear:both; 
+	& + h2 {
+		margin-top: 50px;
+	}
+}
+.boxTopArea{
+	p{margin:0}
+	ol{padding:0;;margin:0;}
+}
+.boxTopArea, 
+.boxTop>p{
+	line-height:1.6;
+	color:#3B63C4;
+	font-size: rem(20);
+	text-align:center;
+	background:#fff;
+	margin:-7px 0 !important;
+	font-weight: 500;
+	padding:10px;
+	@include breakpoint($sm) {
+		padding:0;
+	}
+	.point{
+		text-decoration:underline;color:#1f497d !important;
+	}
+	.type{
+		font-size:1.35em;display:block;
+	}
+	strong {
+		font-weight: 600;
+	}
+	.linkType {
+		a {
+			position: relative;
+			font-weight: 500;
+			color: #2F4F9D;
+			background-color: #F2F6FA;
+			border: 1px solid $point;
+			padding: 0 35px 0 5px;
+			&::after {				
+				@include font-ico-outline('\e315');
+				color: #fff;
+				font-size: 20px;
+				background-color: rgba(19, 21, 71, 1);
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 28px;
+				height: 28px;
+				line-height: 28px;
+			}
+		}
+	}
+}
+.boxbbsWrap{
+	h2{float:left;}
+}
+
+.boxType2 {
+	background:#3c4559 url(/static/eng/img/cts/sub8/200200_1.jpg) no-repeat right top;
+	padding:2% 4%; 
+	color:#fff;
+	margin-bottom:20px;
+	&.bg {background:#3c4559 url(/static/eng/img/cts/sub8/200201_1.jpg) no-repeat right top;}
+	.tit{
+		color:#fff;
+		font-size: rem(22);
+		letter-spacing:-1px;
+		font-weight:500;
+		margin-bottom: 10px;
+	}
+	li{font-size:13px;margin-bottom:5px;}
+	.schType{overflow:hidden;clear:both;margin-top:25px;color:#000;
+		p{margin-bottom:3px !important;}
+		label{color:#fff;font-size:13px;width:60px;display:inline-block;}
+		.inpStyle{
+			border:4px solid #5b79b9;
+			height:45px;
+			padding: 0 10px; 
+		}
+		.pa1{overflow:hidden;
+			p{float:left;width:50%;
+				&:first-child{width:48%;margin-right:2%;
+					@include breakpoint($sm){width:100%;margin-right:0;}
+				}
+				@include breakpoint($sm){width:100%;}
+			}
+		}
+		.pa2{position:relative;
+			.inpStyle{background:#fff;vertical-align:middle;line-height:35px;
+				>span{margin-left:0;padding-right:40px;display:block;}
+				.inpStyle_t{width:100%;line-height:35px;height:35px;border:0;}
+			}
+			.schStyle{position:absolute;top:5px;right:0;margin-left:0;
+				a{display:inline-block;width:35px;height:35px;
+					&:before {
+						//content: '\f002';
+						display:inline-block;
+						//@include fa;
+						margin-right: 10px;font-size:20px;
+					}
+				}
+			}
+		}
+		.pa1, 
+		.pa2{clear:both;
+			label{float:left;display:block;padding-top:10px;}
+			>p>span{margin-left:60px;display:block;
+				.inpStyle{width:100%}
+			}
+		}
+	}
+}
+
+
+.numListStyle {
+	&.type{overflow:hidden;
+		li{float:left;margin-right:10px;}
+	}
+	li{text-indent:-24px;margin-left:24px;
+		>span{text-indent:0;border-radius: 20px;background:#5b79b9;color:#fff;padding:0 5px;min-width:19px;line-height:1.4;display:inline-block;text-align:center;font-size:14px;}
+	}
+}
+
+
+//box
+.img-box-round {
+	text-align: center;
+	border: 1px solid #E6E6E6;
+	border-radius: 16px;
+	padding: 20px;
+}
+.box-round {
+	border: 4px solid #E6E6E6;
+	border-radius: 16px;
+	padding: 20px;
+	margin: 32px 0;
+	color: #4D4D4D;
+	strong {
+		position: relative;
+		color: $black;
+		font-weight: 500;
+		&::before {
+			content: "";
+			display: block;
+			width: 100%;
+			height: 1px;
+			background-color: $black;
+			position: absolute;
+			bottom: 2px;
+			left: 0;
+		}
+	}
+	.badge_txt {
+		text-align: center;
+		font-size: rem(24);
+		font-weight: 400;
+		color: $point;
+		p {
+			margin-bottom: 0;
+			.mDib {
+				&::before {
+					content: "";
+					display: inline-block;
+					width: 6px;
+					height: 6px;
+					border-radius: 50%;
+					background: $point;
+					margin: 0 10px 6px 0;					
+				}
+				& + .mDib {
+					margin-left: 60px;
+				}
+			}
+			.fc_red {
+				font-weight: 500;
+			}
+		}
+	}
+}
+.box2{
+	background: #FAFAFA; 
+	padding:20px;
+	margin-bottom:20px;
+	clear:both;
+	dl {
+		dt {
+			color: $red;
+			margin-bottom: 5px;
+			&::before {
+				font-size: 20px;
+				margin: 0 5px 2px 0;
+			}
+		}
+	}
+	ul & {
+		margin-left: -20px;
+	}	
+	/*&.type1{position:relative;padding:10px 20px;
+		.topCenter{position:absolute; top:50%;}
+		.rightBtn{text-align:right; right:20px;margin-top:-25px;}
+		.badge{padding-left:0; padding-right:0;margin-top:-40px;
+			>span{font-size:40px;display:inline-block; width:80px; height:80px;line-height:80px; text-align:center;}
+		}
+		.badge_txt{display:inline-block;text-align:left;vertical-align:top;
+			p{margin-bottom:5px !important;}
+		}
+		.txtType{font-size:18px;font-weight:bold;color:#1f497d;
+			.mDib{margin-left:15px;
+				&:first-child{margin-left:0;}
+			}
+		}
+	}*/
+	.resultTxt {
+		font-size: rem(24);
+		.fc_red,
+		strong {
+			font-weight: 600;
+			color: #3B63C4 !important;
+		}
+	}
+}
+.box3 {
+	background: #FAFAFA;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border: 1px solid #BFBFBF;
+	h4 {
+		margin-top: 0 !important;
+		&::before {
+			content: "";
+			display: inline-block;
+			vertical-align: middle;
+			width: 16px;
+			height: 16px;
+			background-image: url(/static/eng/img/ico/ico-caption.png);
+			background-color: transparent;
+			margin-right: 5px;
+			margin-bottom: 3px;
+			border-radius: 0;
+		}
+	}
+}
+.box4 {
+	padding: 15px 20px;
+	background-color: #F2F6FA;
+	border: 1px solid #2F4F9D;
+	.title {
+		margin: 0 0 10px !important;
+	}
+	dl {
+		margin-top: 15px;
+		dt {
+			font-weight: 500;
+			@include bu-dot;
+		}
+		dd {
+			padding-left: 12px;
+		}
+	}
+}
+
+.ico-box {
+	display: flex;
+	align-items: center;
+	font-size: rem(18);
+	color: $point;
+	min-height: 122px;
+	background-color: #F2F6FA;
+	border-radius: 16px;
+	padding: 20px 20px 20px 180px;
+	margin-bottom: 30px;
+	background-repeat: no-repeat;
+	background-position: 60px 50%;
+	p {
+		margin-bottom: 0;
+	}
+	&.ico1 {		
+			background-image: url(/static/eng/img/ico/ico-box1.png);
+	}
+	&.ico2 {		
+		background-color: #E5ECFF;
+		background-image: url(/static/eng/img/ico/ico-box2.png);
+}
+}

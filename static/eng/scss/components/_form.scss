@@ -1,0 +1,395 @@
+select,
+input,
+button,
+textarea {
+	color: #757575;
+}
+button {
+	border: 0;
+}
+input[type='radio'] ~ i ~ span,
+input[type='cdeckbox'] ~ i ~ span {
+	margin-right: 10px;
+}
+input[type='checkbox'] {
+	& + i,
+	& + i::before {
+		border-radius: 3px !important;
+	}
+}
+
+label {
+	display: flex;
+	position: relative;
+}
+//input[type='radio'],
+input[type='checkbox'] {
+	opacity: 0;
+	position: relative;
+	z-index: 1;
+	width: 24px;
+	height: 24px;
+	//border: 1px solid #E5E5E5;
+	vertical-align: middle;
+	@include breakpoint($smd){
+		width: 16px;
+		height: 16px;
+	}
+	&:hover + i,
+	&:focus + i {
+		outline: dotted 1px $black;
+	}
+	& + i {
+		display: inline-block;
+		vertical-align: middle;
+		width: 24px;
+		height: 24px;
+		border: 1px solid #E5E5E5;
+		background-color: #FAFAFA;
+		border-radius: 5px;
+		text-align: center;
+		margin-right: 10px;
+		vertical-align: middle;
+		line-height: 1;
+		margin-left: -23px;
+		@include breakpoint($smd){
+			width: 16px;
+			height: 16px;
+		}
+		dd & {
+			vertical-align: middle;
+		}
+	}
+	&.checked + i,
+	&:checked + i {
+		border: 1px solid #356ab9;
+		background-color: #356ab9;
+		&::after {
+			@include font-ico-outline("\e5ca");
+			position: absolute;
+			top: 3px;
+			left: 5px;
+			color: #fff;
+			@include breakpoint($smd){
+				top: 3px;
+				left: 4px;
+			}
+		}
+	}	
+}
+input[type='radio'] {
+	opacity: 0;
+	position: relative;
+	z-index: 1;
+	width: 24px;
+	height: 24px;
+	vertical-align: middle;
+	margin-top: 2px;
+	.admin-set & {
+		width: 20px;
+		height: 20px;
+	}
+	&:focus + i {
+		outline: dotted 1px $black;
+		outline-offset: 2px;
+	}
+	& + i {
+		display: inline-block;
+		width: 24px;
+		height: 24px;
+		border: 1px solid #BFBFBF;
+		border-radius: 50%;
+		background-color: #FAFAFA;
+		position: absolute;
+		top: 2px;
+		left: -1px;
+		.admin-set & {
+			width: 20px;
+			height: 20px;
+		}
+		& + span {
+			margin-left: 10px;
+		}
+	}
+	&:checked + i {
+		//position: relative;
+		background-color: #fff;
+		&:before {
+			content: "";
+			display: inline-block;
+			width: 8px;
+			height: 8px;
+			border: 7px solid #3B63C4;
+			border-radius: 50%;
+			.admin-set & {
+				width: 6px;
+				height: 6px;
+			}
+			
+		}
+		& + span {
+			text-decoration: underline;
+		}
+	}
+}
+
+input[type='number'],
+input[type='date'],
+input[type='text'],
+input[type='password'],
+input[type='file'],
+select,
+textarea {
+	border: 1px solid #ccc;
+	background-color: #ffffff;
+	padding: 4px 10px;
+	line-height: 20px;
+	height: $form-height;
+	vertical-align: middle;
+	// outline: none;
+	border-radius: 4px;
+	&:hover,
+	&:focus,
+	&:active {
+		box-shadow: 0 0 5px $grayblue;
+	}
+}
+// input[type='password'] {
+// 	font-family: serif;
+// }
+input[type='date'] {
+	background: #fff right center no-repeat;
+	background-size: auto 19px;
+	background-position: 90% 50%;
+	padding: 0;
+	text-indent: 0;
+	cursor: pointer;
+	@include breakpoint($xl) {
+		@include background-image-retina(
+		'/static/pass/img/ico/ico_calendar',
+		png,
+		18px,
+		19px
+		);
+	}
+	@include breakpoint($sm) {
+		@include background-image-retina(
+		'/static/pass/img/ico/ico_calendar',
+		png,
+		18px,
+		19px
+		);
+	}
+}
+::-webkit-datetime-edit {
+	padding-left: 5px;
+	padding-right: 0;
+	margin: 0;
+}
+::-webkit-datetime-edit-fields-wrapper {
+	padding: 0;
+	margin: 0;
+}
+::-webkit-datetime-edit-text {
+	// 대쉬 스타일
+	@include breakpoint($lg) {
+		padding: 0 2px;
+	}
+	@include breakpoint($md) {
+		padding: 0;
+	}
+}
+
+::-webkit-inner-spin-button {
+	display: none;
+}
+::-webkit-calendar-picker-indicator {
+	background: none;
+	width: 30px;
+	margin: 0;
+	height: $form-height;
+	display: none;
+	@include breakpoint($sm) {
+	}
+}
+
+// 클리어 버튼
+input::-ms-clear,
+input::-ms-reveal {
+	background-color: #fff;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration {
+	background-color: #fff;
+}
+
+input[type='text']:disabled {
+	background-color: #f5f5f5;
+}
+select {
+	-webkit-appearance: none;
+	padding: 4px 30px 4px 10px !important;
+	background: #fff url(/static/eng/img/common/select-arr.png) calc(100% - 10px) center
+		no-repeat;
+	//background-size: auto 20px;
+	&::-ms-expand {
+		display: none;
+	}
+	&.default {
+		width: 100%;
+		@include breakpoint($mdw) {
+		width: 300px;
+		}
+	}
+}
+textarea {
+	-webkit-appearance: none;
+	width: 100%;
+	height: 200px !important;
+}
+input[type="email"],
+input[type="number"],
+input[type="date"],
+input[type="text"],
+input[type="password"],
+input[type="file"],
+select,
+textarea {
+	border: 1px solid #D9D9D9;
+	line-height: 20px;
+	height: $form-height;
+	//vertical-align: middle;
+	outline: none;
+	border-radius: 5px;
+	-webkit-appearance: none;
+	padding: 4px 10px;
+	&:hover,
+	&:focus,
+	&:active {
+		-webkit-box-shadow: 0 0 5px #008fd4;
+		box-shadow: 0 0 5px #008fd4;
+		border-color: #fff;
+	}
+}
+
+input {
+	cursor: auto;
+	&.sdate,
+	&.edate,
+	&.date,
+	&.month {
+		.sh & {
+		width: 154px;
+		}
+		.popup .sh & {
+		width: calc(50% - 110px / 2);
+		max-width: 185px;
+		}
+		& + img {
+			margin-left: -33px;
+		}
+	}
+	&[readonly] {
+		background-color: #FAFAFA;
+	}
+}
+
+.post-set {
+	input {
+		width: 800px;
+		max-width: 100%;
+	}
+}
+.email-set {
+	display: flex;
+	flex-basis: 0;
+	flex-grow: 1;
+	flex-shrink: 0;
+	width: 800px;
+	align-items: center;
+	margin: 0 -4px;
+	> * {
+		margin: 0 4px;
+	}
+	input { 
+		width: calc(50% - 140px); 
+	}
+	select {
+		width: 140px;
+	}
+}
+.tel-set {
+	display: flex;
+	flex-basis: 0;
+	flex-grow: 1;
+	flex-shrink: 0;
+	width: 500px;
+	align-items: center;
+	margin: 0 -4px;
+	> * {
+		margin: 0 4px;
+	}
+	select {
+		width: 100px;
+	}
+	input {
+		width: calc(50% - 110px);
+	}
+}
+.postSet {
+	div {
+		&:nth-child(2) {
+			margin-top: 3px;
+			input {
+				width: 40%;
+			}
+		}
+	}
+}
+
+.label-list {
+	label {
+		margin-left: 15px;
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+	.view & {
+		input {height: 20px;}
+		input[type=checkbox] {
+			width: 20px;
+			height: 20px;
+			& + i {
+				width: 20px;
+				height: 20px;
+				margin-left: -24px;
+				margin-right: 5px;
+			}
+			&:checked {
+				& + i {
+					&::after {
+						top: 5px;
+						left: 1px;
+					}
+					& + span {
+						color: $point;
+						font-weight: 500;
+						position: relative;
+						&::before {
+							content: "";
+							display: inline-block;
+							width: 100%;
+							height: 1px;
+							background: $point;
+							position: absolute;
+							bottom: 2px;
+							left: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}

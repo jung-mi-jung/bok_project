@@ -108,6 +108,7 @@ function waths() {
 	guideLayout('museum');
 	guideLayout('imer');
 	guideLayout('imerEng');
+	guideLayout('eng');
 
 	indexLayout('portal');	//indexLayout 목차형 (포털 전용)
 	indexLayout('eng');	

@@ -1,0 +1,170 @@
+
+// font Spoqa
+@font-face {
+	font-family: 'Spoqa Han Sans Neo';
+	src: url('/static/font/SpoqaHanSansNeo/SpoqaHanSansNeo-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Spoqa Han Sans Neo';
+	src: url('/static/font/SpoqaHanSansNeo/SpoqaHanSansNeo-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Spoqa Han Sans Neo';
+	src: url('/static/font/SpoqaHanSansNeo/SpoqaHanSansNeo-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Spoqa Han Sans Neo';
+	src: url('/static/font/SpoqaHanSansNeo/SpoqaHanSansNeo-Bold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+}
+//수료증
+@font-face {
+	font-family: 'Noto Serif KR';
+	src: url('/static/font/noto-serif-kr/NotoSerifKR-SemiBold.otf') format('otf');
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Noto Serif KR Bold';
+	src: url('/static/font/noto-serif-kr/NotoSerifKR-Bold.otf') format('otf');
+	font-weight: 700;
+	font-style: normal;
+}
+
+
+
+@import '../../commons/scss/common.scss';
+@import 'static/commons/scss/breakpoint'; //반응형 플러그인
+@import 'base/variables'; //환경 설정
+@import 'base/color'; // colors
+
+@import 'base/util'; //mixins
+@import 'mixins/layerfixed'; //mixins
+@import 'base/heading'; //해딩스타일
+@import 'base/font-material';
+
+
+/* 스프라이트 */
+@import "components/sprite";
+@mixin retina-sprites($retina-groups) {
+	@each $retina-group in $retina-groups {
+		$sprite-name: nth($retina-group, 1);
+		.#{$sprite-name} {
+			@include retina-sprite($retina-group);
+		}	
+	}
+}
+[class^='ico-'] {
+	display: inline-block;
+	vertical-align: middle;
+}
+//@include retina-sprites($retina-groups);
+
+
+@import 'base/layout'; //레이아웃
+@import 'base/gnb'; //메뉴
+@import 'base/footer'; //푸터
+
+@import 'components/visible'; //반응형 스타일
+
+
+a {
+	color: $link-color;
+}
+html {
+	font-size: $html-font-size;
+	@include breakpoint($sm){
+		font-size: rem(14);
+	}
+}
+body {
+	overflow-x: hidden;
+	color: $body-font-color;
+	line-height: 1.5;
+	font-family: $font-set;
+	letter-spacing: -0.015rem;
+	word-break: keep-all;
+	font-weight: 400;
+	@include breakpoint($sm) {
+		word-break: keep-all;
+	}
+	&.ovh, 
+	&.modal-open  {
+		// position: relative;
+		overflow: hidden;
+		// height: 100vh;
+	}
+}
+
+iframe {
+	border: 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+button {
+	padding: 0;
+	border: 0;
+	background-color: transparent;
+	overflow: visible;
+}
+
+i {
+	font-style: normal;
+}
+img {
+	max-width: 100%;
+}
+
+
+
+.col{float: left;width: 100%;}
+.row{margin-left:-10px;margin-right: -10px}
+.row dl{/* clear: both; */}
+.row .col{padding: 10px;}
+.no-padding{margin-left:0;margin-right: 0}
+.no-padding>.col{padding:0;}
+.padding-type>.col{padding: 0 10px;}
+
+@mixin gridGen($columns, $size: ''){
+	@for $i from 1 through $columns {
+		$width : 100% / $columns * $i;
+		@if($size == 'desktop'){
+			.l#{$i}{ width: $width; }
+			.l-offset-#{$i}{ margin-left: $width; }
+		} 
+		@else if($size == 'tablet'){
+			.m#{$i}{ width: $width; }
+			.m-offset-#{$i}{ margin-left: $width; }
+		} 
+		@else if($size == 'mobile'){
+			.s#{$i}{ width: $width; }
+			.s-offset-#{$i}{ margin-left: $width; }
+		} 
+		@else if($size == 'smobile'){
+			.x#{$i}{ width: $width; }
+			.x-offset-#{$i}{ margin-left: $width; }
+		} 
+	}
+}
+
+@include gridGen(12, 'mobile');
+
+@include breakpoint($md) {
+	@include gridGen(12, 'tablet');
+}
+@media (max-width: 600px){
+	@include gridGen(12, 'smobile');
+}
+@media (min-width: 1030px){
+	@include gridGen(12, 'desktop');
+}

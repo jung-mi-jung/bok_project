@@ -1,0 +1,322 @@
+//navigation
+.navigation {
+	position: relative;
+	z-index: 1;
+	background-color: #FCFCFC;
+	border-top: 1px solid #E6E6E6;
+	@include breakpoint($lg){
+		.nav-stiky & {
+			width: 100%;
+			height: 60px;
+			position: fixed;
+			top: 0;
+			z-index: 9;
+			background-color: #fff;
+			&::before {
+				content: "";
+				display: block;
+				width: 100%;
+				height: 2px;
+				background-color: $black;
+				position: absolute;
+				bottom: -1px;
+				left: 0;
+				z-index: 1;
+			}
+			.sub-_visual {
+				display: none;
+			}
+		}
+	}
+	.sub-_visual {
+		border-top: 1px solid #E6E6E6;
+		@include breakpoint($lg){
+			height: 216px;
+			background-color: #CBDEF4;
+			background-repeat: no-repeat;
+			background-position: 50%;
+			//background-image: url(/static/eng/img/sub/sub_visual_bg1.png);
+		}	
+		div {
+			width: $pc-wide;
+			margin: 0 auto;
+			padding-top: 90px;
+			h1 {
+				color: $black;
+				font-weight: 500;
+				font-size: rem(48);
+				.bd-body & {
+					font-size: rem(20);
+				}
+			}
+		}
+	}
+	.top-page-toolbar {
+		display: block;
+		float: right;
+		.page-toolbar {
+			border: 1px solid #E5E5E5;
+			border-width: 0 1px;
+			a,
+			button {
+				&::before {
+					font-size: 30px;
+					margin-bottom: -4px;
+				}
+			}
+			.sns-toggle {
+				border: none;
+			}
+			.page-print {
+				background-size: 30px 30px;
+				border: 1px solid #E5E5E5;
+				border-width: 0 1px;
+				margin: 0;
+			}
+			.page-rss {
+				&::before {
+					margin-left: 16px;
+				}
+			}
+		}
+	}	
+	nav {		
+		height: 60px;
+		line-height: 60px;
+		@include breakpoint($lg){
+			display: flex;
+			justify-content: space-between;
+		}
+		> ul {
+			display: flex;
+			border-left: 1px solid #E5E5E5;
+			> li {
+				position: relative;
+				border-right: 1px solid #E5E5E5;
+				color: #666;
+				@include breakpoint($sm){
+					display: none;
+					width: 100%;
+					&:last-child {
+					display: block;
+						border-right: none;
+					}
+				}
+				@include breakpoint($sm){
+					&:nth-child(2) {
+						display: block;
+					}
+				}
+				&.home {
+					color: #6D6E72;
+					padding: 0 16px;
+					@include breakpoint($lg){
+						padding: 0 26px;
+					}
+					@include breakpoint($smd){
+						width: 36px;
+						text-align: center;
+						span {
+							display: none;
+						}
+					}
+					@include breakpoint($sm){
+						display: block;
+					}
+					&::before {
+						content: "";
+						display: inline-block;
+						width: 18px;
+						height: 18px;
+						background: url(/static/eng/img/ico/ico-home.svg) 50% no-repeat;
+						//@include font-ico('\e88a');
+						//vertical-align: bottom;
+						//font-size: 26px;
+						//color: $point;
+						margin-right: 6px;
+						margin-bottom: -2px;
+						@include breakpoint($smd){
+							position: absolute;
+							top: 0;
+							left: 0;
+							z-index: 9;
+							text-align: center;
+							width: 36px;
+							height: 36px;
+							margin-right: 0;
+						}
+					}	
+				}
+				&:last-child > span,
+				> a {
+					color: #6D6E72;
+					display: block;	
+					padding: 0 10px;
+					@include breakpoint($lg){
+						padding: 0 26px;
+					}
+					&::after {
+						@include font-ico-outline('\e5c6');
+						color: #6D6E72;
+						font-size: 22px;
+						margin-left: 10px;
+						@include breakpoint($sm){
+							position: absolute;
+							top: 50%;
+							right: 8px;
+							margin-top: -11px;
+						}
+					}
+				}
+				&:last-child > span,
+				&:last-child > a {
+					color: $black;
+					font-weight: 500;
+					&::after {
+						@include font-ico('\e5c6');
+						color: #1A1C46;
+					}
+				}
+				.depth2 {
+					display: none;
+					position: absolute;
+					top: 47px;
+					left: -1px;
+					z-index: 9;
+					width: calc(100% + 2px);
+					background-color: #fff;
+					@include breakpoint($sm){
+						top: 36px;
+					}
+					ul {
+						width: 100%;
+						padding: 10px 15px;
+						line-height: 1.8;
+						border: 1px solid #E5E5E5;
+						border-radius: 0 0 4px 4px;
+						box-shadow: 0 4px 2px rgba(127, 24, 24, 0.15);
+						li {
+							a {
+								color: #666;
+								display: block;
+								&:hover {
+									text-decoration: underline;
+								}	
+							}
+							&.on {
+								a {
+									color: $black;
+									font-weight: 600;
+									&::after {
+										@include font-ico-outline('\e5cc');
+										font-size: 18px;
+										margin-bottom: 2px;
+									}
+								}
+							}
+						}
+					}
+					&.active {
+						display: block;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+//목차형
+.lnb-nav {
+	@include breakpoint($lg){
+		position: relative;
+		display: block;
+		float: left;
+		width: per(240px + 35px, $pc-wide);
+		padding-right: 36px;
+		background-color: #fff;
+		height: auto;
+		// &::after {
+		// 	content: "";
+		// 	display: inline-block;
+		// 	background-color: #d9d9d9;
+		// 	position: absolute;
+		// 	top: 0;
+		// 	right: -1px;
+		// 	width: 1px;
+		// 	height: 100%;
+		// }
+		& + .content {
+			&::after {
+				content: "";
+				display: inline-block;
+				background-color: #d9d9d9;
+				position: absolute;
+				top: 0;
+				left:per(240px + 35px, $pc-wide);
+				//right: -1px;
+				width: 1px;
+				//height: 100%;
+				height: calc(100% - 120px);
+			}
+		}
+	}
+	h1 {
+		color: #222;
+		font-size: rem(16);
+		font-weight: 500;
+		&::before {
+			@include font-ico-outline('\e0ee');
+			font-size: 24px;
+			color: #1C1B1F;
+			margin-right: 5px;
+		}
+	}	
+	> ul {
+		> li {
+			> a {
+				display: block;
+				padding: 6px 0;
+				color: #333;
+			}
+			&.on {
+				> a {
+					color: $black;
+					font-weight: 500;
+					&::after {
+						@include font-ico-outline('\e313');
+						font-size: 18px;
+						float: right;
+					}
+				}
+			}
+			> ul {
+				li {
+					a {
+						display: block;
+						padding: 4px 14px;
+						color: #666;
+						font-size: rem(14);
+					}
+					&.on {
+						a {
+							position: relative;
+							color: #2F4F9D;
+							font-weight: 500;
+							background-color: #F2F6FA;
+							border-radius: 4px;
+							&::after {
+								@include font-ico('\e315');
+								font-size: 18px;
+								color: #2F4F9D;
+								position: absolute;
+								top: 2px;
+								right: 8px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
