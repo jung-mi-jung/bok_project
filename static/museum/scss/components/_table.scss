@@ -126,6 +126,10 @@ table {
 					background: #FAFAFA;
 					border-radius: 8px;
 					border: 0;
+					&[rowspan] {
+						border-left: 1px solid #e5e5e5;
+						// transform: translateX(-1px);
+					}
 				}
 			}
 		}

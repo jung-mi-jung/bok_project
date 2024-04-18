@@ -780,6 +780,7 @@
 					border: 0;
 					height: 48px;
 					padding: 10px 16px;
+					color: #1a1a1a;
 					@include breakpoint($sm){
 						padding: 5px 16px;
 						height: 40px;
@@ -822,9 +823,18 @@
 			> li {
 				font-size: rem(32);
 				font-weight: 500;
-				
 				> a {
 					color: #333333;
+					color: red;
+					@include breakpoint($sm) {
+						display: none;
+					}
+				}
+				> a.m-dp1 {
+					display: none;
+					@include breakpoint($sm) {
+						display: inline-block;
+					}
 				}
 			}
 		}
