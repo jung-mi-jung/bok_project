@@ -1,0 +1,366 @@
+.photo-list {
+	border-top: 1px solid $bd-color;
+	ul {
+		margin: 0 -10px;
+		padding: 10px 0;
+		li {
+			float: left;
+			width: 33.3%;
+			padding: 10px 10px 40px;
+			@include breakpoint($sm){
+				width: 100%;
+				padding: 10px 10px 0;
+				& + li {
+					margin-top: 10px;
+				}
+			}
+			a {
+				display: block;
+				border: 1px solid #E5E5E5;
+				border-radius: 8px;
+				padding: 6px;
+				.img-box {
+					position: relative;
+					display: block;
+					margin-bottom: 8px;
+					.img {
+						display: block;
+						padding-top: 56.4%;
+						border: 1px solid #E5E5E5;
+						border-radius: 8px 8px 0 0;
+						.v-ico {
+							&::before {
+								content: "";
+								display: inline-block;
+								width: 48px;
+								height: 48px;
+								background-image: url(/static/eng/img/ico/ico-play2.png);
+								position: absolute;
+								top: 50%;
+								left: 50%;
+								margin-top: -24px;
+								margin-left: -24px;
+								z-index: 1;
+							}
+						}
+					}
+					.p {
+						display: inline-block;
+						//display: flex;
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						padding: 6px 10px;
+						background-color: #fff;
+						border-radius: 0 8px 0 0;
+						color: #3B63C4;
+						font-size: rem(14);
+						i {				
+							display: inline-block;
+							&::before {
+								content: "";
+								display: inline-block;
+								vertical-align: middle;
+								width: 18px;
+								height: 18px;
+								background-position: 50%;
+								background-repeat: no-repeat;
+								margin-right: 4px;
+							}
+						}
+						$icolist: ("i-video", "i-card", "i-webtoon");
+						[class^="i-"] {
+							@each $item in $icolist {
+								&.#{$item} {
+									&::before {
+										background-image: url(/static/eng/img/ico/#{$item}.png);
+									}
+								}
+							}
+						}
+					}
+				}
+				.tit {
+					color: #4d4d4d;
+					font-size: rem(14);
+					padding: 0 10px;
+					span {
+						&.t {
+							color: #3B63C4;
+						}
+						& + span {
+							&::before {
+								content: "";
+								display: inline-block;
+								vertical-align: middle;
+								width: 1px;
+								height: 14px;
+								background-color: #E5E5E5;
+								margin: 0 10px;
+							}
+						}
+					}					
+				}		
+				.title {
+					@include ellipsis;
+					width: 100%;
+					font-size: rem(18);
+					font-weight: 400;
+					margin: 10px 0 0;
+					padding: 0 10px;
+				}
+				.date {
+					color: #666;
+					font-size: rem(14);
+					padding: 0 10px;
+				}
+			}			
+		}
+		
+	}
+}
+
+.card-photo {
+	position: relative;
+	width: 1140px;
+	max-width: 100%;
+	margin: 30px auto;
+	padding-bottom: 40px;
+	.photo-ctrl {
+		button {
+			position: absolute;
+			top: 50%;
+			border: 1px solid #666666;
+			border-radius: 50%;
+			width: 80px;
+			height: 80px;
+			margin-top: -40px;
+			&::before {
+				content: "";
+				display: inline-block;
+				width: 80px;
+				height: 80px;
+			}
+			&.prev,
+			&.next {
+				border: 1px solid $point;
+				border-radius: 50%;
+				&::before {
+					background: url(/static/eng/img/common/ctrl-btn-off.png) 50% no-repeat;
+				}
+				&:hover {
+					background-color: $point;
+					&::before {
+						background: url(/static/eng/img/common/ctrl-btn-on.png) 50% no-repeat;
+					}
+				}
+			}
+			&.prev {
+				left: -5px;
+				&:hover {
+					&::before {
+						transform: rotate(180deg);
+					}
+				}
+			}
+			&.next {
+				right: -5px;
+				&::before {
+					transform: rotate(180deg);
+				}
+				&:hover {
+					&::before {
+						transform: rotate(0);
+					}
+				}
+			}
+		}
+		.swiper-pagination {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			text-align: center;
+			color: #666;
+			&-current {
+				color: #3B63C4;
+				font-size: rem(24);
+				font-weight: 400;
+			}
+		}
+	}
+	.photo {
+		width: 960px;
+		max-width: 100%;
+		margin: 0 auto;
+	}
+	.img {
+		display: block;
+		padding-top: 100%;		
+		background-position: 50%;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+}
+
+
+
+
+//기존   //200035 적용
+.sh + .bdPhoto {
+	margin-top: 10px;
+}
+.bdPhoto{
+	clear: both;
+	float: left;
+	margin-top: 15px;
+	margin-bottom: 30px;
+	width:100%;
+	&.row{
+		margin-left:0
+		;margin-right:0;
+		@include breakpoint($sm){
+			.col {
+				padding: 0;
+			}
+		}
+	}	
+	.ratioSet{
+		display:block;
+	}
+	.ratioSet .badge{
+		position:absolute; 
+		right:0; 
+		z-index:10;
+	}
+	>ul>li{
+		overflow: hidden;
+		position: relative;
+		padding: 8px 15px;
+		border: 1px solid #E6E6E6;
+		border-radius: 4px;
+		margin-bottom:10px;
+		.h3 {
+			font-weight: 500;
+			font-size: rem(20);
+			margin-top: 3px;
+		}
+		&:hover{
+			text-decoration: none;
+			border-color: #1a1a1a;
+		}
+		>a{			
+			&:hover .ratioObject, 
+			&:active .ratioObject, 
+			&:focus .ratioObject {
+				opacity:1;
+			}
+			.ratioObject{
+				opacity:0.65; transition:all .5s;
+			}
+			.ratioSet{ 
+				background:#000;
+			}
+			dd{
+				display:inline-block;
+			}
+		}
+		.photo{
+			float:left;
+			width: 100%;display: inline-block; background-size: cover;
+		}
+		dl{
+			overflow:hidden;
+			.ico {
+				width: auto;
+				padding: 0 10px;
+			}
+			@include breakpoint($sm){
+				height: 132px;
+			}
+			dt{
+				font-weight:bold;padding:6px 0;
+				span.db{
+					line-height:20px;font-weight: 500;font-size:1.05em;color: #3B63C4;
+				}
+				a{
+					color: $black;
+					font-size: rem(20);
+					font-weight: 500;
+				}
+			}
+			dl{
+				height:auto;
+				dt {
+					padding:0
+				}
+			}
+			.cont{
+				overflow:hidden;
+				height:57px;
+				width:100%;
+			}
+			.date{
+				color:#666;
+				&:before{
+					content: "";
+					display: inline-block;
+					vertical-align: middle;
+					width: 16px;
+					height: 16px;
+					background: url(/static/eng/img/ico/ico-date.png) no-repeat;
+					margin-right: 5px;
+				}
+			}
+			.place{
+				color:#666;
+				&:before{
+					@include font-ico-outline('\e0c8');
+					font-size: 20px;
+					margin-right:5px;
+					color: #666;
+					margin-left: -3px;
+				}
+			}
+			.btn{
+				padding-top:14px;overflow:hidden;
+			}
+		}
+	}
+	&.type2{
+		>ul>li{
+			min-height:130px;margin-bottom:0;
+		}
+		.dl-horizontal dd, dt {@include ellipsis; }
+		.ratioSet{display:block;}
+		
+	}
+	&.type3{
+		>ul>li{margin-bottom:0;}
+		dl {height:87px}
+		span.title {overflow:hidden;white-space:nowrap;text-overflow:ellipsis;display:block}
+	}
+	&.type4{
+		dl{height:auto;}
+		.box{display:table;float:none;
+			@include breakpoint($xs) {display:block;float:left;}
+			.col{float:none;display:table-cell;vertical-align:top;
+				@include breakpoint($xs) {display:block;float:left;}
+			}
+		}
+		.m7{position:relative;
+			.cont{margin-bottom:5px !important;height:auto;}
+			.btnSec{font-size:0;margin-top:5px;position:absolute;bottom:10px;width:90%;
+				@include breakpoint($xs) {
+					position:inherit;bottom:inherit;overflow:hidden;width:100%;
+				}
+				a{width:49%;display:inline-block;font-size:13px;text-align:center;padding:0;margin:0 0.5%;
+					span{@include ellipsis}
+				}
+			}
+		}
+	}
+	&.type5{
+		.ratioObject {border:1px solid #dee0e6;}
+	}
+}

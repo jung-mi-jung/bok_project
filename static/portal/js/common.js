@@ -645,9 +645,16 @@ $(function() {
 
 
 	//검색 레이어
-	$(".toggle-set .search").click(function(){
+	$(".g-info .search, .toggle-set .search").click(function(){
 		$(".search_wrap").addClass("active");
+		$(".search_wrap .search_wrap_input .search_keyword") .focus();
 	})
+	$(".search_wrap .search_close").click(function(){
+		$(".search_wrap").removeClass("active");
+		$(".g-info .search, .toggle-set .search").focus();
+	})
+
+	//search_wrap
 
 	//첨부파일
 	var filesOv = $(".fileGroupSet>a");

@@ -1,0 +1,43 @@
+//@import 'font-material';
+
+//font size
+$html-font-size : 16px;
+$body-font-size : 1.125rem; // 18px
+
+
+$mobile  : 360px;	//
+$tablet  : 750px;	//
+$pc      : 1200px;	//pc 최소 사이즈 : 디자이너 및 클라이언트 협의에 따라
+$pc-wide : 1440px;	//pc 최대 사이즈
+//$pc-wide : 1680px;
+$xs      : max-width $mobile - 1; // 359 까지
+$sm      : max-width $tablet - 1; // 749 까지
+$md      : $tablet;               // 750 부터
+$smd     : max-width  $pc - 1;    // 1199 까지
+$mdw     : $tablet $pc - 1;       // 750 ~ 119까지
+$lg      : $pc;                   // 1200 부터
+$xl      : $pc-wide;              // 1680 부터
+
+
+//font
+$font-set		: 'Spoqa Han Sans Neo', "AppleGothic", "맑은 고딕", "돋움", "dotum", Helvetica, Arial, sans-serif;
+$heading-font	: 'Spoqa Han Sans Neo', "맑은고딕", "malgun gothic", sans-serif;
+$popup-font		: 'Noto Sans KR', 'Noto Sans', "AppleGothic", "맑은 고딕", "돋움", "dotum", Helvetica, Arial, sans-serif;
+
+b,
+strong {
+	font-weight: 500;
+}
+
+//해더 높이
+$header-height : 131px;
+$m-header-height : 60px;
+
+
+// sh
+$sh-form-height: 32px;
+$sh-bd-radius: 4px;
+
+
+// input
+$form-height: 40px;

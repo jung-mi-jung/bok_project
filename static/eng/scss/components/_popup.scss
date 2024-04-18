@@ -1,0 +1,338 @@
+.popupOpened {
+	overflow: hidden;
+	.popwrap {
+		display: block;
+	}
+}
+body > .popwrap {
+	display: block;
+	.set {
+		display: block;
+		&__wrap {
+			width: 100%;
+			border-radius: 0;
+		}
+	}
+	&__body {
+		max-height: inherit;
+	}
+}
+.popwrap {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 10000;
+	background-color: rgba(0, 0, 0, 0.7);
+	.set {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100vh;
+		overflow: hidden;
+		&__wrap {
+			position: relative;
+			width: 600px;
+			max-width: 100%;
+			background-color: #fff;
+			border: 1px solid #d5d5d5;
+			border-radius: 10px;
+			box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+		}
+	}
+	&__header {
+		h1 {}
+		.b-close {
+			position: absolute;
+			top: 0;
+			right: 0;
+			background-color: transparent;
+			min-width: 50px;
+			height: 50px;
+			&::before {
+				@include font-ico-outline('\e5cd');
+				font-size: 30px;
+				color: $point;
+			}
+		}
+	}
+	&__body {
+		max-height: 300px;
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
+	&__footer {}
+}
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1100;
+    display: none;
+    overflow: hidden;
+	&.fade.in {
+		&::before {
+			content: "";
+			display: block;
+			background: rgba(0, 0, 0, 0.7);
+			position: fixed;
+			width: 100%;
+			z-index: 501;
+			top: 0;
+			left: 0;
+			height: 100%;
+		}
+		
+	}
+	&-dialog {
+		width: 720px;
+		height: 100%;
+		max-width: 100%;
+		display: flex;
+		align-items: center;
+		position: relative;
+		z-index: 999;
+		margin: 0 auto;
+		
+	}
+	&-content {
+		width: 100%;
+		position: relative;
+		background-color: #fff;
+		border: 2px solid $point;
+		border-radius: 16px;		
+	}
+	&-header {
+		color: #fff;
+		background-color: $point;
+		border-radius: 12px 12px 0 0;
+		h4 {
+			color: #fff !important;
+			margin: 0 !important;
+			padding: 0 18px;
+			height: 68px;
+			line-height: 68px;
+			font-size: rem(24) !important;
+			font-weight: 400 !important;
+			@include breakpoint($sm){
+				height: 50px;
+				line-height: 50px;
+			}
+			.i-mon {
+				&::before {
+					content: "";
+					display: inline-block;
+					vertical-align: middle;
+					width: 32px;
+					height: 32px;
+					background: url(/static/eng/img/ico/ico-calender-2x.png);
+					margin-right: 4px;
+					margin-bottom: 2px;
+				}
+			}
+		}
+		.close {
+			position: absolute;
+			top: 0;
+			right: 10px;
+			height: 68px;
+			width: 68px;
+			@include breakpoint($sm){
+				width: 50px;
+				height: 50px;
+				line-height: 50px;
+				margin-top: 3px;
+			}
+			&::before {
+				color: #fff;	
+				@include font-ico-outline('\e5cd');
+				font-size: 40px;	
+			}
+		}
+	}	
+	&-body {
+		padding: 40px;
+		@include breakpoint($sm){
+			padding: 20px;
+		}
+		.b-close {
+			min-width: 82px;
+			height: 32px;
+			line-height: 32px;
+			font-weight: 300;
+			&::before {
+				@include font-ico-outline('\e5cd');
+				font-size: 18px;
+				margin-right: 4px;
+				margin-bottom: 2px;
+			}
+		}
+	}
+	&-bottom {
+		margin-top: 40px;
+		text-align: center;
+	}
+	.calView {
+		h5 {
+			color: #1A1A1A;
+			font-size: rem(32) !important;
+			font-weight: 400;
+			padding-left: 0 !important;
+			border-bottom: 2px solid #1A1A1A;
+			margin-bottom: 12px !important;
+			&::before {
+				display: none !important;
+			}
+		}
+		ul {
+			li {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				border: 1px solid #E6E6E6;
+				border-radius: 8px;
+				padding: 15px;
+				& + li {
+					margin-top: 8px;
+				}
+				.con {
+					.tit {
+						color: $black;
+						font-size: rem(18);
+					}
+					.date {}
+				}
+				.view-btn {
+					.b-view {
+						color: #fff;
+						font-weight: 300;
+						font-size: rem(16);
+						background-color: #3B63C4;
+						line-height: 32px;
+						height: 32px;
+						border-radius: 4px;
+						&::before {
+							content: "";
+							display: inline-block;
+							vertical-align: middle;
+							width: 20px;
+							height: 20px;
+							background: url(/static/eng/img/ico/ico-b-view.png);
+							margin-right: 5px;
+						}
+					}
+				}				
+			}
+		}
+	}
+}
+
+
+
+//기존 popup (현용은행권...)
+.popupWrap{
+	h1 {background:#484d58;color:#fff;font-size:1.0em;padding:9px 15px;font-weight:500;}
+	.popupBody {margin:20px;}
+	.view {border-top:1px solid #dee0e6;}
+	.btn_close {position:absolute;top:9px;right:9px;
+		i:before {color:#fff;font-size:1.6em;}
+	}
+	.b-cancel {background:#7f7f7f;}
+	.file_bt {color:#ea5a59;
+		i {padding-right:5px;
+			&:before {color:#ea5a59;}
+		}
+	}
+	.inputFile {position:relative;overflow:hidden;padding-right:96px;
+		a {position: absolute;top:0;right:0;}
+		.inputUpload .btnUpload {position: absolute;top:0;right:0;margin: 0;padding:0;font-size:20px;cursor:pointer;opacity:0;filter:alpha(opacity=0);}
+		.w_100 {display: block;}
+		.input {display: inline-block;background:#fff;border:1px solid #7f7f7f;}
+		.input input {width:252px !important;background:none;height:34px;line-height: normal;line-height: 35px;border:none;width:100%;}
+	}
+	.btnBasic {display:inline-block;font-size:15px;min-width:76px;height:36px;line-height:36px;padding: 0 10px; text-align: center;
+		&.black {background:#484d58;color:#fff;}
+	}
+}
+
+.popup {
+	position: relative;
+}
+.certifi_wrap {	
+	color: $black;
+	font-family: 'Noto Serif KR', serif;
+	//font-family: "NotoSerifKR";
+	font-weight: 700;
+	padding: 50px;
+	.num {
+		//font-size: 20px;
+		font-size: 26px;
+	} 
+	h1 {
+		//font-size: 48px;
+		font-size: 60px;
+		text-align: center;
+		margin: 60px 0;
+		letter-spacing: 20px;
+	}
+	.subject {
+		font-size: 28px;
+		//font-weight: 500;
+	}
+	.name {
+		text-align: right;
+		//font-size: 20px;
+		font-size: 26px;
+		margin-top: 20px;
+	}
+	.txt {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		padding: 20px 0;
+		min-height: 400px;
+		background: url(/static/eng/img/popup/bok_mak.png) 50% no-repeat;
+		//font-size: 24px;
+		font-size: 30px;
+		line-height: 1.7;
+		p {
+			text-align: left;
+		}
+	}
+	.date {
+		text-align: center;
+		//font-size: 20px;
+		//font-size: 22px;
+		font-size: 26px;
+		margin: 30px 0 70px;
+	}
+	.bottom {
+		text-align: center;
+		//font-size: 24px;
+		font-size: 28px;
+		line-height: 1.6;
+		> div {
+			position: relative;
+			display: inline-block;
+			margin: 0 auto;
+		}
+		.sin {
+			position: absolute;
+			top: 50%;
+			right: -90px;
+			margin-top: -46px;
+			z-index: 1;
+			img {
+				vertical-align: middle;
+			}
+		}
+	}
+}

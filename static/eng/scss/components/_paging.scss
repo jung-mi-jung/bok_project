@@ -1,0 +1,178 @@
+.paginationSet {
+	clear: both;
+	text-align: center;
+	margin: {
+		top: 60px;
+		//bottom: 10px
+	}
+	@include breakpoint($sm) {
+		margin-top: 20px;
+	}
+}
+.pagination {
+	margin: 0;
+	$page-number: #666; // 숫자 컬러
+	// 현재페이징
+	$pagingActiveBg: $point; // 배경
+	$pagingActive-bdColor: $point; // 보더
+	$pagingActiveColor: #fff; // 텍스트	
+	//$paging-bg-color: #f9f9f9; // 배경
+	// 이전 다음
+	$paging-bd-color: $point; // 보더
+	$page-arr-color: '076bcc'; //화살표컬러
+	$ctrl-bg-color: #fff; // 배경
+	// 페이징
+	$width: 36px;
+	$height: 36px;
+	$page-margin: 9px; //숫자와의 간격
+	// mobile
+	$width-xs: 25px;
+	$width-sm: 30px;
+	$height-sm: 30px;
+	$lmargin-sm: 2px;
+	display: flex;
+	vertical-align: top;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;	
+	a {
+		&:focus {
+			outline: 1px dashed $point;
+		}
+	}
+	> li > a,
+	> li > span {
+		position: relative;
+		display: block;
+		padding: 0;
+		text-decoration: none;
+		min-width: $width;
+		height: $height;
+		line-height: $height - 2px;
+		color: $page-number;
+		margin-left: $page-margin;
+		border-radius: 50%;
+		//background-color: $paging-bg-color;
+	}
+	> li {
+		&.first > *,
+		&.prev > *,
+		&.next > *,
+		&.end > * {
+			background-color: $ctrl-bg-color;
+			min-width: $width;
+			&:before {
+				content: "";
+				display: inline-block;
+				width: 36px;
+				height: 36px;
+				font-size: 36px;
+				color: $point;
+			}
+			&:hover,
+			&:focus,
+			&:active {
+				z-index: 2;
+				background-color: #fff;
+			}
+			@include breakpoint($sm) {
+				min-width: $width-sm;
+				background-size: auto 28px;
+			}
+		}
+		@include breakpoint($sm) {
+			> a {
+				//margin-bottom: 10px;
+			}
+		}
+		.s span {
+			position: absolute;
+			width: 1px;
+			height: 1px;
+			margin: -1px;
+			padding: 0;
+			overflow: hidden;
+		}
+	}
+	> li.first > * {
+		margin-right: 0;
+		&:before {
+			@include font-ico-outline('\e5dc');
+		}
+	}
+	> li.prev > * {
+		&:before {
+			@include font-ico-outline('\e314');
+		}
+		margin-right: 15px;
+		@include breakpoint($sm) {
+			margin-right: 4px;
+		}
+	}
+	> li.next > * {
+		&:before {
+			@include font-ico-outline('\e315');
+		}
+		margin-left: 15px;
+		@include breakpoint($sm) {
+			margin-left: 4px;
+		}
+	}
+	> li.end > * {
+		background-position: right 0;
+		&:before {
+			@include font-ico-outline('\e5dd');			
+		}
+	}
+	> li:first-child > a,
+	> li:first-child > span {
+		margin-left: 0;
+	}
+	> li > a:hover,
+	> li > span:hover,
+	//> li > a:focus,
+	> li > span:focus {
+		z-index: 2;
+		text-decoration: underline;
+		background-color: $pagingActiveBg;
+		color: #fff;
+	}
+	> li > a:focus {
+		color: $page-number;
+		background-color: transparent;
+		border: none;
+	}
+	// active
+	> .active {
+		> a,
+		> span {
+			text-decoration: underline;
+		}
+		> a,
+		> span,
+		> a:hover,
+		> span:hover,
+		> a:focus,
+		> span:focus {
+			z-index: 3;
+			cursor: default;
+			border: 1px solid $pagingActiveBg;
+			background-color: $pagingActiveBg;
+			color: $pagingActiveColor;
+			box-sizing: border-box;
+		}
+	}
+	// disabled
+	> .disabled {
+		> span,
+		> span:hover,
+		> span:focus,
+		> a,
+		> a:hover,
+		> a:focus {
+			cursor: not-allowed;
+			// opacity: 0.7;
+			display: none;
+		}
+	}
+}

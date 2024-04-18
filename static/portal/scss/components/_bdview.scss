@@ -91,10 +91,11 @@
 @mixin dataInfoSet {	
 	display: flex;
 	justify-content: space-between;
-	margin: 10px 0 18px;
+	//margin: 10px 0 18px;
+	margin-bottom: 18px;
 	.dataInfo {
 		position: absolute;
-		top: -27px;
+		top: -44px;
 		right: 0;
 		display: flex;
 		color: #666;
@@ -166,6 +167,7 @@
 	}
 	.keyword {
 		display: flex;
+		//height: 54px;
 		a {
 			display: inline-block;
 			padding: 1px 11px;
@@ -232,17 +234,22 @@
 		}
 	}
 	.dataInfoSet {
+		height: 55px;
 		@include dataInfoSet();
 		align-items: flex-end;
+		margin-top: -18px;
+		margin-bottom: 60px;
 		.type2 {
 			margin-top: -21px;
 		}
 	}	
 	.down {		
-		border-top: 2px solid #000;
+		//border-top: 2px solid #000;
+		border: 1px solid #E6E6E6;
 		background-color: #FAFAFA;
 		padding: 10px 14px;
 		border-bottom: 1px solid #E5E5E5;
+		border-radius: 8px;
 		dd {
 			display: flex;
 			justify-content: space-between;

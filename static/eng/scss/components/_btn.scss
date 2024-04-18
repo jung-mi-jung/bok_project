@@ -1,0 +1,298 @@
+.btn-set {
+	margin: 30px 0;
+	text-align: right;
+	position: relative;
+	display: block;
+	> *[class^=b-] {
+		margin: 0 6px 6px 0;
+	}
+	&.c {
+		text-align: center;		
+		@include breakpoint($lg){
+			margin-top: 80px;
+		}
+	}
+	&.l {
+		text-align: left;
+		float: left;
+	}
+}
+$btn: "[class^=b-]";
+#{$btn} {
+	border: none;
+	font-size: rem(18);
+	text-align: center;
+	min-width: 112px;
+	//min-width: 80px;
+	display: inline-block;
+	line-height: 50px;
+	color: #fff;
+	background-color: $point;
+	border-radius: 6px;
+	padding: 0 10px;
+	&:focus {
+		outline: 1px dashed #fff;
+    	outline-offset: -2px;
+	}
+	.btnSet &
+	.btn-set & {
+		height: 50px;
+		line-height: 48px;
+		justify-content: center;
+		align-items: center;
+		font-size: rem(18);
+		@include breakpoint($md) {
+			min-width: 112px;
+		}		
+	}
+	&.xs {
+		min-width: 0;
+		font-size: 12px;
+		line-height: inherit;
+		padding: 2px 5px;
+		border-radius: 4px;
+	}
+	&.sm {
+		min-width: 0;
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 24px;
+		padding: 0 7px 0 13px;		
+		//padding: 3px 13px !important;
+		border-radius: 4px;
+		// .table & {
+		// 	padding: 2px 5px;
+		// }
+	}
+	&.lg {
+		@include breakpoint($lg) {
+			min-width: 160px;
+		}
+	}
+	&.b-list {
+		background-color: $color-point;
+		&::before {
+			content: "";
+			display: inline-block;
+			vertical-align: middle;
+			width: 24px;
+			height: 14px;
+			background: url(/static/eng/img/ico/ico-b-list.svg) no-repeat;
+			margin-right: 12px;
+		}		
+	}
+	&.b-cancel {
+		background-color: #666;
+		&::before {
+			@include font-ico-outline("\f053");
+			font-size: 28px;
+			margin-right: 10px;
+		}
+	}
+	&.b-del {
+		color: $red;
+		background: #fff;
+		border: 2px solid $red;
+		&::before {
+			@include font-ico-outline('\e5cd');
+			font-size: 28px;
+			color: $red;	
+			margin-right: 8px;	
+			margin-top: 1px;	
+		}
+	}	
+	&.b-reg {
+		background-color: $color-point;
+		&::before {
+			@include font-ico('\e5ca');
+			font-size: 25px;
+			background-color: $color-point;
+			vertical-align: middle;
+			margin-right: 6px;
+			margin-bottom: 1px;
+		}
+	}
+	&.b-save {
+		border: 1px solid $point;
+		background-color: #fff;
+		color: $point;
+	}
+	&.b-submit {}
+	&.b-confirm {  //임시?ㄴ
+		background-color: $color-point;
+		&::before {
+			@include font-ico('\e5ca');
+			font-size: 25px;
+			background-color: $color-point;
+			vertical-align: middle;
+			margin-right: 6px;
+			margin-bottom: 1px;
+		}
+	}
+	&.b-link {
+		background-color: $black;
+		border-radius: 4px;
+		&::after {
+			@include font-ico-outline('\e941');
+			margin-left: 4px;
+		}
+	}
+
+	&.b-edit {
+		color: $color-point;
+		border: 2px solid $color-point;
+		background-color: #fff;
+		&::before {
+			content: "";
+			display: inline-block;
+			vertical-align: middle;
+			width: 26px;
+			height: 26px;
+			background: url(/static/eng/img/ico/ico-b-edit2.svg) no-repeat;
+			margin-right: 8px;
+		}
+	}
+	&.b-go {
+		//padding: 2px 7px 2px 13px;
+		//font-weight: 300;
+		//font-size: 14px;
+		background-color: $black;
+		margin-left: 5px;
+		&::after {
+			@include font-ico-outline('\e315');
+			margin-left: 4px;
+			margin-bottom: 1px;
+			font-size: 16px;
+		}
+	}
+	&.b-download {
+		&::after {
+			content: "";
+			display: inline-block;
+			vertical-align: middle;
+			width: 21px;
+			height: 20px;
+			background: url(/static/eng/img/ico/ico-b-download.svg) no-repeat;
+			margin-left: 4px;
+			margin-bottom: 3px;
+		}		
+	}
+	&.b-download2 {
+		height: 32px;
+		line-height: 32px;
+		font-size: 14px;
+		color: #fff;
+		background-color: $color-point;
+		&::before {
+			content: "";
+			display: inline-block;
+			vertical-align: middle;
+			width: 21px;
+			height: 20px;
+			background: url(/static/eng/img/ico/ico-b-download2.svg) no-repeat;
+			margin-left: 4px;
+			margin-bottom: 3px;
+		}		
+	}
+}
+.view + .btnSet {
+	[class^=b-] {
+		height: 48px;
+		line-height: 48px;
+		&.b-edit,
+		&.b-del {
+			line-height: 44px;
+		}
+	}
+}
+
+.a-link {
+	display: inline-block;
+	padding: 10px 12px 10px 18px;
+	line-height: initial;
+	font-size: rem(18);
+	color: #fff;
+	background-color: $color-point;
+	border: 1px solid $color-point;
+	border-radius: 4px;
+	&::after {
+		@include font-ico-outline('\e315');
+		font-size: 26px;
+		margin-left: 12px;
+	}
+	&:hover {
+		text-decoration: underline;
+	}
+}
+.a-link2 {
+	display: inline-block;
+	padding: 10px 12px 10px 18px;
+	line-height: initial;
+	font-size: rem(18);
+	color: $color-point;
+	background-color: #fff;
+	border: 1px solid $color-point;
+	border-radius: 4px;
+	&::after {
+		@include font-ico-outline('\e315');
+		font-size: 26px;
+		margin-left: 12px;
+		color: $color-point;
+	}
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.i-down {
+	&::before {
+		content: "";
+		display: inline-block;
+		vertical-align: middle;
+		background: url(/static/eng/img/common/ico-download.png);
+		width: 20px;
+		height: 20px;
+	}
+}
+
+table,
+li {
+	.b-down {
+		&::before {
+			@include font-ico('\e258');
+			font-size: 13px;
+			margin-right: 3px;
+			vertical-align: bottom;
+		}
+	}
+}
+
+.a-add {
+	&::before {
+		@include font-ico('\e147');
+		font-size: 30px;
+	}
+}
+.a-del {
+	&::before {
+		@include font-ico('\e644');
+		font-size: 30px;
+	}
+}
+
+.btnSet {
+	float: none;
+	//text-align: center !important;
+	margin-top: 40px;
+	[class^=b-] {
+		font-size: rem(18);
+		min-width: 112px;
+		padding: 0 20px;
+		& + [class^=b-] {
+			margin-left: 7px;
+		}
+	}
+}
+.input-xs {
+	width: 50px;
+}
