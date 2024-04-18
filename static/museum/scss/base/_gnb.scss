@@ -194,6 +194,16 @@
 		@include breakpoint($sm) {
 			margin-top: -18px;
 		}
+		> .search {
+			width: 48px;
+			height: 48px;
+			background: #005596;
+			border-radius: 50%;
+			@include breakpoint($sm) {
+				width: 36px;
+				height: 36px;
+			}
+		}
 	}
 	button.all-nav-toggle {
 		// padding-left: 8%;
@@ -217,16 +227,7 @@
 			//display: none;
 		}
 	}
-	.search {
-		width: 48px;
-		height: 48px;
-		background: #005596;
-		border-radius: 50%;
-		@include breakpoint($sm) {
-			width: 36px;
-			height: 36px;
-		}
-	}
+	
 }
 
 @include breakpoint($lg 1500px){

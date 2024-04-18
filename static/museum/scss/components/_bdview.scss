@@ -613,6 +613,13 @@
     min-height: 400px;
     max-height: 800px;
     white-space: pre-line;
+	iframe {
+		width: 100%;
+    	min-height: 700px;
+		@include breakpoint($sm) {
+			min-height: 480px;
+		}
+	}
 
 }
 

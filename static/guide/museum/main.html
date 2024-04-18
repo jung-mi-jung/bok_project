@@ -351,11 +351,42 @@
 				<div class="search_wrap">
 					<form action="">
 						<div class="search_wrap_input">
-							<input type="text" class="search_keyword" placeholder="검색어를 입력해 주세요.">	
-							<button type="button" class="search" aria-label="검색"></button>
-						</div>
-						<div class="keyword">
-							HOT 이슈키워드
+							<input type="text" class="search_keyword" name="query" id="queryTop" placeholder="검색어를 입력해 주세요." autocomplete="off" maxlength="50">
+							<div class="dqAuto" tabindex="0" style="display: none;">
+								<ul class="autoList">
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+								</ul>
+								<div class="bottom">
+									<a href="javascript:void(0);" id="topSrchClose" class="btnClose">자동완성 닫기</a>
+								</div>
+							</div>	
+							<button type="button" class="btn_search search" aria-label="검색"></button>
 						</div>
 						<button type="button" class="search_close" aria-label="검색 닫기"></button>
 					</form>
