@@ -2307,10 +2307,13 @@ p.subject {
 //프로그램 문의(Q&A)
 .info-txt {
 	text-align: center;
-	background-color: #F8F8F8;
+	background-color: #F2F6FA;
 	border-radius: 16px;
-	padding: 40px 20px;
+	padding: 40px 24px;
 	margin-bottom: 30px;
+	@include breakpoint($sm){
+		padding: 20px;
+	}
 	em {
 		font-weight: 600;
 	}
@@ -2318,9 +2321,12 @@ p.subject {
 		position: relative;
 		color: #333;
 		font-weight: 300;
-		font-size: rem(28);	
-		line-height: 1.2;
+		font-size: rem(28);
+		line-height: 1.4;
 		margin-bottom: 0;
+		@include breakpoint($sm){
+			font-size: rem(20);	
+		}
 		&.ico1 {
 			padding-top: 66px;
 			margin-top: 10px;
@@ -2347,7 +2353,10 @@ p.subject {
 	.t-line {
 		margin-top: 24px;
 		padding-top: 15px;
-		border-top: 1px solid #B1C1E7;
+		border-top: 1px solid #D9D9D9;
+		&.info-btn { //한국은행법의 변천
+			padding: 25px 0 0 0;
+		}
 	}
 	[class^=b-].b-edit {
 		height: 48px;
@@ -2388,7 +2397,7 @@ p.subject {
 	text-align: center;
 	background-color: #F2F6FA;
 	[class^=b-] {
-		font-size: rem(16);
+		font-size: 16px;
 		font-weight: 300;
 		line-height: 28px;
 		background-color: $point !important;
@@ -2398,8 +2407,16 @@ p.subject {
 	ul {
 		display: flex;
 		justify-content: center;
-		li + li {
-			margin-left: 70px;
+		@include breakpoint($sm){
+			display: block;
+			text-align: left;
+		}
+		li {
+			@include breakpoint($lg){
+				& + li {
+					margin-left: 70px;
+				}
+			}
 		}
 	}
 }
@@ -2407,26 +2424,35 @@ p.subject {
 
 //설립목적 및 역사
 .info-box2 {
-	padding: 20px;
-	color: $point;
-	font-size: rem(30);
+	padding: 40px;
+	color: $point;	
 	//font-weight: 300;
 	font-family: 'Spoqa Han Sans Neo Light';
 	background-color: #F2F6FA;
 	border-radius: 16px;
 	margin-bottom: 30px;	
+	@include breakpoint($sm){
+		padding: 20px;
+	}
 	strong {
 		font-weight: 600;
 		font-family: 'Spoqa Han Sans Neo';
 	}
-	.ico-box {
+	span {
+		color: #000;
+		font-size: rem(18);
+		margin-top: -10px;
+	}
+	.ico-box2 {
 		display: flex;
 		align-items: center;
 		position: relative;
 		line-height: 1.4;
-		min-height: 100px;
+		min-height: 100px !important;
 		padding-left: 120px;
 		margin-bottom: 0;
+		font-size: rem(28);
+		letter-spacing: -1.2px;
 		&::before {
 			content: "";
 			display: inline-block;
@@ -2441,11 +2467,21 @@ p.subject {
 		> p {
 			margin-bottom: 0;
 		}
+		&.ico2 {
+			&::before {
+				background: url(/static/portal/img/sub/bu_info2.png) 0 50% no-repeat;
+			}
+		}
+		&.ico3 {
+			&::before {
+				background: url(/static/portal/img/sub/bu_info3.png) 0 50% no-repeat;
+			}
+		}
 	}
 }
 .histroy {
 	position: relative;
-	margin: 40px 80px;
+	margin: 40px 0;
 	@include breakpoint($mdw){
 		margin: 20px;
 	}
@@ -2484,8 +2520,7 @@ p.subject {
 		.his-img {
 			position: relative;
 			//width: 680px;
-			//width: calc(680px + 40px);
-			
+			//width: calc(680px + 40px);			
 			width: calc(50% - 80px);
 			margin-right: 40px;
 			@include breakpoint($mdw){
@@ -2493,6 +2528,7 @@ p.subject {
 			}
 			@include breakpoint($sm){
 				width: 100%;
+				margin-bottom: 55px;
 			}
 			.thum-box {
 				overflow: hidden;
@@ -2505,6 +2541,9 @@ p.subject {
 				width: 100%;
 				text-align: center;
 				z-index: 9;
+				@include breakpoint($sm){
+					bottom: -40px;
+				}
 				a {
 					width: 15px;
 					height: 15px;
@@ -2554,6 +2593,8 @@ p.subject {
 				padding-left: 0;
 			}
 			h2 {				
+				color: #000 !important;
+				font-weight: 300 !important;
 				font-size: rem(48) !important;
 				line-height: 1.2;
 				margin-bottom: 30px !important;
@@ -2596,9 +2637,9 @@ p.subject {
 					margin-bottom: 5px;
 				}
 			}
-			.con-box {
+			.con-box {				
 				background-color: #FAFAFA;
-				border-radius: 16px;
+				border-radius: 16px !important;
 				padding: 50px 40px;
 				@include breakpoint($mdw){
 					padding: 30px 20px;
@@ -2606,9 +2647,36 @@ p.subject {
 				@include breakpoint($sm){
 					padding: 15px;
 				}
-				.title {
-					color: $point;
-					font-size: rem(24);
+				p {
+					font-size: 16px;
+					&.title {
+						color: $point;
+						font-size: rem(24);
+						margin-bottom: 18px;
+					}
+				}
+				& + .con-box {
+					margin-top: 24px;
+				}
+			}
+			.b-down {
+				font-size: 16px;
+				color: $color-point;
+				border: 1px solid $color-point;
+				background-color: #fff;
+				height: 32px;
+				line-height: 32px;
+				@include breakpoint($lg){
+					float: right;
+				}
+				&::before {
+					content: "";
+					display: inline-block;
+					vertical-align: middle;
+					width: 20px;
+					height: 20px;
+					background: url(/static/portal/img/ico/ico-down3.png) 50% no-repeat;
+					margin-right: 3px;
 				}
 			}
 		}
@@ -2628,6 +2696,12 @@ p.subject {
 		li {
 			width: calc(100% / 4);
 			padding: 24px;
+			@include breakpoint($mdw){
+				width: calc(100% / 2);
+			}
+			@include breakpoint($sm){
+				width: 100%;
+			}
 			a {
 				color: #fff;
 				display: block;
@@ -2639,15 +2713,31 @@ p.subject {
 						vertical-align: middle;
 					}
 				}
+				&:focus {
+					outline-offset: 2px;
+					outline-style: dashed;
+					outline-color: rgba(20, 84, 255, 1);
+				}
+				&:focus,
 				&:hover {
-					display: table;
-					.s {
-						top: 0;
+					&::before {
+						content: "";
+						display: block;
+						width: 100%;
 						height: 100%;
-						display: table-cell;
-						vertical-align: middle;
+						background-color: rgba(0, 0, 0, 0.5);	
+						position: absolute;
+						top: 0;
+						bottom: 0;
+						left: 0;
+					}								
+					.s {
+						top: 50%;
+						margin-top: -80px;
+						background-color: transparent;
 						.name {
-							padding-top: 54px;
+							position: relative;
+							padding-top: 68px;
 							&::before {
 								content: "";
 								display: block;
@@ -2705,6 +2795,108 @@ p.subject {
 						}
 					}
 				}
+			}
+		}
+	}
+}
+.his_person {
+	display: flex;
+	justify-content: space-between;
+	padding: 50px;
+	background: url(/static/portal/img/01/bg_his.png) no-repeat;
+	@include breakpoint($sm){
+		display: block;
+	}
+	.img {
+		width: 360px;
+		@include breakpoint($sm){
+			width: 100%;
+		}
+	}
+	.txt-set {
+		margin-top: 20px;		
+		width: calc(100% - 360px - 60px);
+		@include breakpoint($sm){
+			width: 100%;
+		}
+		.top {
+			h2 {
+				color: #17294D !important;
+				.t {
+					display: block;
+					color: $color-point;
+					font-size: rem(18);
+				}
+				strong {
+					font-size: rem(52);
+					font-weight: 500;
+					@include breakpoint($sm){
+						font-size: rem(30);
+					}
+				}
+				em {						
+					font-size: rem(28);
+					font-weight: 500;
+					display: inline-block;
+					margin-left: 2px;
+					@include breakpoint($sm){
+						font-size: rem(20);
+					}
+				}
+			}
+		}
+	}
+	dl {
+		margin-top: 30px;
+		dt {
+			font-weight: 500;
+			color: $black;
+			margin-bottom: 5px;
+			&::before {
+				content: "";
+				display: inline-block;
+				vertical-align: m;
+				width: 14px;
+				height: 14px;
+				border-radius: 4px;
+				background-color: $color-point;
+				margin-right: 7px;
+			}
+		}
+		dd {
+			font-size: rem(16);
+			@include bu-dot();	
+			margin-bottom: 2px;		
+		}
+	}
+}
+
+//금융통화위원회 위원현황
+.his_situa {
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		@include breakpoint($sm){
+			display: block;
+		}
+		li {
+			width: 50%;
+			@include breakpoint($sm){
+				width: 100%;
+			}
+			.img {
+				position: relative;
+				width: 150px;
+				height: 150px;
+				border-radius: 50%;
+				overflow: hidden;
+				display: block;
+				// img {
+				// 	position: absolute;
+				// 	top: 50%;
+				// 	left: 50%;
+				// 	transform: translate(-50%, -44%);
+				// }
 			}
 		}
 	}

@@ -1,6 +1,6 @@
 // @import url('/static/commons/css/common.css');
 @import url('/static/portal/css/default.css');
-
+@import url('/static/font/NotoSans/notosans.css');
 
 @import 'base/util'; //mixins
 @import '../../commons/scss/breakpoint'; //반응형 플러그인
@@ -16,7 +16,7 @@
 		$sprite-name: nth($retina-group, 1);
 		.#{$sprite-name} {
 			@include retina-sprite($retina-group);
-		}	
+		}
 	}
 }
 [class^='ico-'] {

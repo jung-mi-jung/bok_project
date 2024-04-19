@@ -10,7 +10,7 @@
 			height: 60px;
 			position: fixed;
 			top: 0;
-			z-index: 9;
+			z-index: 99;
 			background-color: #fff;
 			&::before {
 				content: "";
@@ -35,7 +35,7 @@
 			background-color: #CBDEF4;
 			background-repeat: no-repeat;
 			background-position: 50%;
-			//background-image: url(/static/portal/img/sub/sub_visual_bg1.png);
+			background-image: url(/static/portal/img/sub/sub_visual_bg1.png);
 		}	
 		div {
 			width: $pc-wide;
