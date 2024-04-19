@@ -272,8 +272,8 @@ $(function () {
 			},
 		},
 		navigation: {
-			prevEl: '#section4 .board-list-prev',
-			nextEl: '#section4 .board-list-next',
+			prevEl: '#section3 .board-list-prev',
+			nextEl: '#section3 .board-list-next',
 		},
 		// And if we need scrollbar
 		scrollbar: {
@@ -329,8 +329,8 @@ $(function () {
 			},
 		},
 		navigation: {
-			prevEl: '#section5 .board-list-prev',
-			nextEl: '#section5 .board-list-next',
+			prevEl: '#section4 .board-list-prev',
+			nextEl: '#section4 .board-list-next',
 		},
 		// And if we need scrollbar
 		scrollbar: {

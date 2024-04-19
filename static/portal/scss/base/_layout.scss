@@ -368,6 +368,9 @@
 }
 #content {
 	margin-top: 36px;
+	@include breakpoint($sm){
+		margin-top: 20px;
+	}
 	.hgroup { //기존 소스 삭제
 		display: none;
 	}
@@ -1718,13 +1721,15 @@
 
 
 sup {
-    top: 0;
-	font-size: 100%;
-	vertical-align: middle;	
+	color: $color-point;
+    //top: 0;
+	//font-size: 100%;
+	//vertical-align: middle;	
 	.table & {
 		vertical-align: super;
 		font-size: 75%;
 		color: #39A0FF;
+		top: 2px;
 	}
 }
 

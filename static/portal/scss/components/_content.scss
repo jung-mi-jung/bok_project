@@ -1,4 +1,6 @@
-sup {}
+sup {
+	color: $color-point;
+}
 .place {
 	color: #1A1A1A;
 	&::before {
@@ -62,7 +64,7 @@ p.subject {
 .fnote {
 	position: relative;
 	font-size: 14px;
-	color: #2F4F9D;
+	color: #0D4E80;
 	margin-top: 20px;
 	margin-bottom: 30px;
 	padding-left: 12px;	
@@ -88,6 +90,10 @@ p.subject {
 			.ml25 {
 				//margin-left: 22px !important;
 				margin-left: 0 !important;
+			}
+			sup {
+				font-size: 100%;
+				top: 0;
 			}
 		}
 		.desc {
@@ -2342,7 +2348,10 @@ p.subject {
 				left: 50%;
 				margin-left: -25px;
 			}
-		}		
+		}	
+		&.ico2 {
+			//할거
+		}	
 		em {
 			font-weight: 600;
 		}
@@ -2453,6 +2462,11 @@ p.subject {
 		margin-bottom: 0;
 		font-size: rem(28);
 		letter-spacing: -1.2px;
+		@include breakpoint($sm){
+			padding-left: 90px;
+			min-height: 72px !important;
+			font-size: rem(20);
+		}
 		&::before {
 			content: "";
 			display: inline-block;
@@ -2463,6 +2477,12 @@ p.subject {
 			top: 50%;
 			left: 0;
 			margin-top: -50px;
+			@include breakpoint($sm){
+				margin-top: -36px;
+				width: 72px;
+				height: 72px;
+				background-size: 72px 72px !important;
+			}
 		}
 		> p {
 			margin-bottom: 0;
@@ -2475,6 +2495,11 @@ p.subject {
 		&.ico3 {
 			&::before {
 				background: url(/static/portal/img/sub/bu_info3.png) 0 50% no-repeat;
+			}
+		}
+		&.ico5 {
+			&::before {
+				background: url(/static/portal/img/sub/bu_info5.png) 0 50% no-repeat;
 			}
 		}
 	}
@@ -2686,6 +2711,76 @@ p.subject {
 	}
 }
 
+//금융통화위원회의 역사
+.histroy2 {
+	.his-con {		
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		padding: 16px 0;
+		@include breakpoint($sm){
+			display: block;
+		}
+		> div {
+			width: 50%;
+		}
+		.his-img {
+			width: calc(50% - 80px);
+			margin-right: 40px;
+			overflow: hidden;
+			border-radius: 8px;
+			@include breakpoint($lg){
+				width: 344px;
+			}
+			@include breakpoint($sm){
+				width: 100%;
+				margin-bottom: 20px;
+			}			
+			.img {
+				display: block;
+				padding-top: 70.2%;
+				background-position: 50%;
+				background-size: cover;
+			}
+			.txt {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				text-align: center;
+				padding: 10px;
+				display: block;
+				color: #fff;
+				font-size: rem(18);
+				background-color: rgba(0, 0, 0, 0.5);
+				@include ellipsis();
+			}
+		}
+		.his-txt {
+			position: relative;
+			width: calc(100% - 344px - 30px);
+			padding-top: 30px;
+			@include breakpoint($sm){
+				width: 100%;
+				padding-top: 0;
+			}
+			dl {
+				dt {
+					color: #3E7CC8;
+					font-size: rem(20);
+					margin-bottom: 16px;
+				}
+				dd {
+					&.fnote {
+						margin-top: 6px;
+						margin-bottom: 8px;
+					}
+				}
+			}
+		}
+	}
+}
+
 
 //역대 총재
 .his_photo {
@@ -2876,27 +2971,117 @@ p.subject {
 	ul {
 		display: flex;
 		flex-wrap: wrap;
+		margin: 0 -12px;
 		@include breakpoint($sm){
 			display: block;
 		}
 		li {
 			width: 50%;
+			padding: 12px;
 			@include breakpoint($sm){
 				width: 100%;
 			}
-			.img {
+			a {
 				position: relative;
-				width: 150px;
-				height: 150px;
-				border-radius: 50%;
-				overflow: hidden;
-				display: block;
-				// img {
-				// 	position: absolute;
-				// 	top: 50%;
-				// 	left: 50%;
-				// 	transform: translate(-50%, -44%);
-				// }
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				border: 1px solid #E5E5E5;
+				border-radius: 16px;
+				padding: 20px;
+				@include breakpoint($sm){
+					display: block;
+				}
+				&:hover {
+					border-color: $color-point;
+					&::before {
+						content: "";
+						display: block;
+						width: calc(100% - 2px);
+						height: calc(100% - 2px);
+						border: 2px solid $color-point;
+						position: absolute;
+						top: -1px;
+						left: -1px;
+						border-radius: 16px;
+					}
+				}
+				.img {				
+					width: 150px;
+					height: 150px;
+					border-radius: 50%;
+					overflow: hidden;
+					display: block;
+					@include breakpoint($sm){
+						width: 90px;
+						height: 90px;
+						img {
+							width: 90px;
+						}
+					}
+				}
+				.set_box {
+					width: calc(100% - 150px - 30px);
+					@include breakpoint($sm){
+						width: 100%;
+						margin-top: 20px;
+					}
+					> span {
+						display: block;
+						&.s {
+							margin-bottom: 15px;
+							@include breakpoint($sm){
+								position: absolute;
+								top: 32px;
+								left: 130px;
+							}
+							.t {
+								display: block;
+								color: $color-point;
+								font-size: 16px;
+							}
+							.name {
+								color: $black;
+								font-size: 16px;
+								span {
+									display: inline-block;margin-right: 2px;
+									font-weight: 500;					
+									font-size: rem(24);
+								}
+							}						
+						}
+						&.date {
+							font-size: 16px;
+							color: #4D4D4D;
+							&::before {
+								@include font-ico-outline('\e98b');
+								font-size: 18px;
+								margin: 0 3px 3px 2px;
+								color: #000;
+							}
+						}
+						&.txt {
+							font-size: 16px;
+							color: #4D4D4D;
+							margin-top: 5px;
+							&::before {
+								@include font-ico-outline('\e174');
+								font-size: 24px;
+								color: #000;
+							}
+						}
+						em {
+							display: inline-block;
+							width: 66px;
+							color: #000;
+							font-size: 16px;
+							span {
+								float: right;
+								margin-right: 9px;
+							}
+						}
+					}
+				}				
 			}
 		}
 	}

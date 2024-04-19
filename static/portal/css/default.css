@@ -1470,6 +1470,12 @@ padding-left: 18px;
 text-indent: -18px;
 margin-bottom: 5px;
 }
+.list-num.type2 > li {
+color: #808080;
+}
+.list-num.type2 > li strong {
+color: #4D4D4D;
+}
 
 #main-container {
 /*.bu2 {
@@ -1480,7 +1486,7 @@ margin-bottom: 5px;
 color: #333;
 font-size: 2.25rem;
 font-weight: 500;
-margin-bottom: 20px;
+margin-bottom: 55px;
 }
 #main-container h2 + h3 {
 margin-top: 22px;
@@ -1495,7 +1501,7 @@ margin: 70px 0 16px;
 #main-container h3.h3 {
 margin: 40px 0 16px;
 color: #005596;
-font-size: 1rem;
+font-size: 1.25rem;
 font-weight: 500;
 margin: 20px 0 10px;
 padding-left: 0;
@@ -1504,11 +1510,10 @@ padding-left: 0;
 content: "";
 display: inline-block;
 vertical-align: middle;
-width: 15px;
-height: 15px;
+width: 16px;
+height: 16px;
 background-image: url(/static/portal/img/ico/ico-caption.png);
 background-color: transparent;
-background-size: 15px 15px;
 margin-right: 7px;
 border-radius: 0;
 margin-top: -3px;
@@ -1576,7 +1581,7 @@ margin-bottom: 3px;
 }
 #main-container .h-caption {
 color: #005596;
-font-size: 1rem;
+font-size: 1.25rem;
 font-weight: 500;
 margin: 20px 0 10px;
 padding-left: 0;
@@ -1585,11 +1590,10 @@ padding-left: 0;
 content: "";
 display: inline-block;
 vertical-align: middle;
-width: 15px;
-height: 15px;
+width: 16px;
+height: 16px;
 background-image: url(/static/portal/img/ico/ico-caption.png);
 background-color: transparent;
-background-size: 15px 15px;
 margin-right: 7px;
 border-radius: 0;
 margin-top: -3px;
@@ -2129,6 +2133,11 @@ margin: 40px 0 0;
 
 #content {
 margin-top: 36px;
+}
+@media (max-width: 749px) {
+#content {
+margin-top: 20px;
+}
 }
 #content .hgroup {
 display: none;
@@ -3615,14 +3624,13 @@ margin-bottom: 12px;
 }
 
 sup {
-top: 0;
-font-size: 100%;
-vertical-align: middle;
+color: #005596;
 }
 .table sup {
 vertical-align: super;
 font-size: 75%;
 color: #39A0FF;
+top: 2px;
 }
 
 .visible-xs,

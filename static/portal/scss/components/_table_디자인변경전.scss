@@ -1,5 +1,4 @@
 table {	
-	font-size: 16px;
 	word-break: break-all;
 	width: 100%;
 	border-collapse: collapse;
@@ -11,8 +10,7 @@ table {
 }
 .table {
 	clear: both;	
-	margin-top: 14px;
-	//border-top: 2px solid #182252;
+	border-top: 2px solid #182252;
 	margin-bottom: 10px;
 	@include breakpoint($md){
 		&.pcweb {
@@ -26,59 +24,29 @@ table {
 		width: 100%;
 		table-layout: fixed;
 		thead {
-			background-color: #E8EBED;
-			margin-bottom: 1px;
 			th {
-				color: $black;
-				font-weight: 400;
-				padding: 15px 5px;
-				&:first-child {
-					border-radius: 8px 0 0 8px;
-				}
-				&:last-child {
-					border-radius: 0 8px 8px 0;
-				}
-				& + th {
-					border-left: 1px solid #BDBCBC;
-				}
+				border-bottom: none;
 			}
+		}
+		th {
+			color: $black;
+			font-weight: 400;
+			background-color: #F2F6FA;			
+			border: 1px solid $bd-color;
+			padding: 12px 5px;
 		}
 		tbody {
 			th {		
-				padding: 13px 5px;		
-				font-weight: 400;
-				color: #4d4d4d;		
+				color: $black;		
 				background-color: #FAFAFA;	
-				& + th,
-				& + td {
-					border-left: 1px solid #E6E6E6;
-				}
-				&.line {
-					border-right: 1px solid #E6E6E6;
-				}
-			}
-			tr {
-				&:first-child {
-					th, td {
-						border-top: 1px solid #fff;
-					}
-				}
-			}
-			td, th {
-				border-bottom: 1px solid #E6E6E6;
 			}
 		}
 		td {
 			color: #666;
-			padding: 13px 14px;
+			padding: 5px 15px;
 			min-height: 55px;
+			border: 1px solid $bd-color;
 			background-color: #fff;
-			@include breakpoint($sm){
-				padding: 13px 8px;
-			}
-			& + td {
-				border-left: 1px solid #E6E6E6;
-			}
 			&.title {
 				text-align: left;
 				a {
