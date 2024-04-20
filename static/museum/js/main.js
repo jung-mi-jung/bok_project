@@ -1,4 +1,8 @@
 $(function () {
+
+	//메인 헤더 스타일 추가
+	$("#header").addClass("main");
+
 	//메인 비쥬얼 영역 swiper 설정
 	var section1Visual = new Swiper('.section1-visual', {
 		speed: 1000,
@@ -145,3 +149,5 @@ $(function () {
 	section2Img.controller.control = section2Txt;
 
 }); //doc end
+
+

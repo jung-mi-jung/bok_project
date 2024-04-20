@@ -1047,6 +1047,7 @@ position: relative;
 z-index: 2;
 line-height: 48px;
 background-color: #FCFCFC;
+border-top: 1px solid #E5E5E5;
 border-bottom: 1px solid #E5E5E5;
 }
 @media (min-width: 1200px) {
@@ -1055,17 +1056,6 @@ width: 100%;
 position: fixed;
 top: 0;
 z-index: 100;
-}
-.nav-stiky .navigation::before {
-content: "";
-display: block;
-width: 100%;
-height: 2px;
-background-color: #1A1A1A;
-position: absolute;
-bottom: -1px;
-left: 0;
-z-index: 1;
 }
 .nav-stiky .navigation .sub-_visual {
 display: none;
@@ -1079,7 +1069,7 @@ background-repeat: no-repeat;
 background-position: 50%;
 }
 .navigation .sub-_visual div {
-width: 1440px;
+max-width: 1440px;
 margin: 0 auto;
 padding-top: 90px;
 }
@@ -1205,6 +1195,7 @@ margin-right: 0;
 @media (max-width: 749px) {
 .navigation nav > ul > li.home::before {
 top: 0;
+height: 48px;
 }
 }
 .navigation nav > ul > li > a {
@@ -2671,6 +2662,7 @@ font-size: 1.125rem !important;
 display: flex;
 justify-content: space-between;
 margin: 10px 0 26px;
+min-height: 25px;
 align-items: flex-end;
 }
 .bd-view .dataInfoSet .dataInfo {
@@ -2832,7 +2824,6 @@ margin-right: 5px;
 margin-top: -16px;
 }
 .bd-view .down {
-border-top: 2px solid #000;
 background-color: #FAFAFA;
 padding: 10px 14px;
 border-bottom: 1px solid #E5E5E5;
@@ -5064,7 +5055,8 @@ box-sizing: border-box;
 align-items: stretch;
 }
 .tab-list .swiper a.swiper-slide {
-flex: 1;
+min-width: 25%;
+width: auto;
 min-height: 40px;
 padding: 8px;
 color: #005596;

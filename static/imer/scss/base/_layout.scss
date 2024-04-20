@@ -5,14 +5,24 @@
 .container {
 	max-width: $pc-wide;
 	margin: 0 auto;
-	// margin-left: 10px;
-	// margin-right: 10px;
-	@include breakpoint(min-width 1720px) {
+	margin-left: 10px;
+	margin-right: 10px;
+	@include breakpoint(min-width 1480px) {
 		margin-left: auto;
 		margin-right: auto;
 	}
 	@include breakpoint($sm){
 		margin: 0;
+	}
+}
+// #content.main-container {
+// 	margin-top: 0;
+// }
+
+.hgroup {
+	@include breakpoint($smd) {
+		padding: 0 10px;
+		box-sizing: border-box;
 	}
 }
 
@@ -57,8 +67,9 @@
 				display: flex;
 				flex-direction: row;
 				flex-grow: 1;
-				border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+				//border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 				padding: 4px 0;
+				gap: 0 2px;
 				li {
 					& + li {
 						&::before {
@@ -254,28 +265,16 @@
 	}
 }
 /* 추가된 설정 */
-#header {
+#header.family {
 	position: relative;
 	background: #fff;
-	border-bottom: 1px solid #E5E5E5;
+	//border-bottom: 1px solid #E5E5E5;
 	backdrop-filter: blur(4px);
 	.globalHeader {
 		> .container {
 			border-bottom: 1px solid #e5e5e5;
 		}
-		@include breakpoint($lg){
-			ul {
-				border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-				// li {
-				// 	a {
-				// 		color: #fff;
-				// 	}
-				// }
-			}
-		}
 	}
-}
-#header.family {
 	.logo {
 		> a {
 			display: inline-flex;
@@ -328,6 +327,141 @@
 		}
 	}
 }
+#header.main {
+	position: absolute;
+	background: rgba(0,0,0,0.6);
+	//border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+	// .g-info .global ul li + li::before {
+	// 	background: transparent;
+	// }
+	.globalHeader {
+		> .container {
+			border-bottom: 1px solid rgba(255,255,255,0.1);
+			> ul li {
+				& + li::before {
+					background: transparent;
+				}
+				a {
+					border: 1px solid rgba(255, 255, 255, 0.40);
+					background: rgba(0, 0, 0, 0.20);
+					border-radius: 4px;
+					color: #fff;
+				}
+			}
+		}
+	}
+	.g-info .global ul li {
+		> a {
+			color: #fff;
+		}
+		& + li::before {
+			background: rgba(255,255,255,0.1);
+		}
+	}
+
+	.gnb {
+		> ul > li {
+			&.active > a {
+				span {
+					color: #005596;
+					&::before {
+						background: #005596;
+					}
+				}
+			}
+			> a {
+				color: #fff;
+			}
+		}
+	
+		.gnb-btn-wrap > .search {
+			background: #3B63C4;	
+		}
+		.all-nav-toggle::before {
+			color: #fff;
+		}
+	} 
+	.logo-portal {
+		background-image: url(/static/museum/img/common/logo-portal.png);
+	}
+	.logo-imer {
+		background-image: url(/static/imer/img/common/logo-imer.png);
+		&::before {
+			background: #fff;
+			opacity: 0.3;
+		}
+	}
+}
+#header.main.active {
+	background: #fff;
+	//border-bottom: 1px solid #E5E5E5;
+	.g-info .global ul li {
+		.userInfoOpBxSet {
+			> a {
+				color: #fff;
+			}
+		}
+		a {
+			color: #005596;
+		}
+		& + li::before {
+			background: #005596;
+			opacity: 0.3;
+		}
+	}
+	.globalHeader {
+		> .container {
+			border-bottom: 1px solid #E5E5E5;
+			> ul li  {
+				& + li::before {
+					background: #005596;
+					opacity: 0.3;
+				}
+				a {
+					border: 0;
+					background: transparent;
+					border-radius: 4px;
+					color: #004274;
+				}
+			}
+		}
+	}
+	.gnb {
+		> ul > li {
+			&.active > a {
+				span {
+					color: #005596;
+					&::before {
+						background: #005596;
+					}
+				}
+			}
+			> a {
+				color: #1A1A1A;
+			}
+		}
+	
+		.gnb-btn-wrap > .search {
+			background: #005596;	
+		}
+		.all-nav-toggle::before {
+			color: #005596;
+		}
+	} 
+	.logo-portal {
+		background-image: url(/static/museum/img/common/logo-blue.png);
+	}
+	.logo-imer {
+		background-image: url(/static/imer/img/common/logo-imer-bl.png);
+		&::before {
+			background: #005596;
+			opacity: 0.3;
+		}
+	}
+
+}
+
+
 .gnb {
 	> ul {
 		@include breakpoint($lg){
@@ -439,6 +573,9 @@
 }
 
 #content {
+	@include breakpoint($lg) {
+		min-height: 1020px;
+	}
 	margin-top: 36px;
 	.hgroup { //기존 소스 삭제
 		display: none;
@@ -690,6 +827,7 @@
 			background-color: #fff;
 			border: 1px solid #e5e5e5;
 			border-radius: 4px;
+			overflow: hidden;
 			@include breakpoint($sm){
 				width: 100%;
 				margin-top: 4px;
@@ -798,7 +936,6 @@
 						position: relative;
 						// display: inline-flex;
 						align-items: center;
-						color: #005596;
 						i {
 							position: absolute;
 							top: 2px;
@@ -813,6 +950,7 @@
 					}
 					&.on {
 						> a  {
+							color: #005596;
 							i {
 								background: url(/static/portal/img/ico/ico-dropdown-up.png);
 							}

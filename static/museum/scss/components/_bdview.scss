@@ -274,13 +274,14 @@
 	}
 	.dataInfoSet {
 		@include dataInfoSet();
+		min-height: 25px;
 		align-items: flex-end;
 		.type2 {
 			margin-top: -16px;
 		}
 	}	
 	.down {		
-		border-top: 2px solid #000;
+		//border-top: 2px solid #000;
 		background-color: #FAFAFA;
 		padding: 10px 14px;
 		border-bottom: 1px solid #E5E5E5;

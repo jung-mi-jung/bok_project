@@ -1,4 +1,7 @@
 $(function () {
+	//메인 헤더 스타일 추가
+	$("#header").addClass("main");
+
 	//비쥬얼 & 컨퍼런스
 	var galleryThumbs = new Swiper(".section1-visual", {
 		slidesPerView: 1,	// 보여지는 슬라이드 갯수

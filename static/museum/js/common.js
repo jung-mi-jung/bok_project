@@ -159,16 +159,21 @@ $(function () {
 	var tshActive = false;
 	var gnb1depth = $('#gnb>ul>li>a');
 	//var gnb3depth = $("#gnb .depth3 > ul > li > a")
+
 	gnb1depth.on('mouseover focusin', function (e) {
 		if (tshActive == false) {
 			//$(this).parent().parent().addClass('active').parent().siblings().find('>a').removeClass('active');
 			$(this).addClass('on').parent().siblings().find('>a').removeClass('on');
+
+			$("#header.family.main").addClass("active");
+
 			//안씀 $(".gnb_bg").show();
 			return false;
 		}
 	});
 	$('#gnb > ul > li').on('mouseleave', function () {
 		$('#gnb > ul > li > a').removeClass('on');
+		$("#header.family.main").removeClass("active");
 	});
 	$('#gnb .depth2>ul a:last').on('focusout', function (e) {
 		gnb1depth.removeClass('on');

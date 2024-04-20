@@ -164,12 +164,15 @@ $(function () {
 		if (tshActive == false) {
 			//$(this).parent().parent().addClass('active').parent().siblings().find('>a').removeClass('active');
 			$(this).addClass('on').parent().siblings().find('>a').removeClass('on');
+
+			$("#header.family.main").addClass("active");
 			//안씀 $(".gnb_bg").show();
 			return false;
 		}
 	});
 	$('#gnb > ul > li').on('mouseleave', function () {
 		$('#gnb > ul > li > a').removeClass('on');
+		$("#header.family.main").removeClass("active");
 	});
 	$('#gnb .depth2>ul a:last').on('focusout', function (e) {
 		gnb1depth.removeClass('on');
