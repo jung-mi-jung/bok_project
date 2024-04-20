@@ -1661,16 +1661,20 @@ p.subject {
 .padding-type {
 	clear: both;
 	overflow: hidden;
-	display: block;
+	display: block;	
 	> .col{
 		padding: 0 10px;
 	}
+	&.type2 {
+		background-color: #FAFAFA;
+		padding: 40px 60px;
+		@include breakpoint($sm){
+			padding: 30px;
+		}
+	}
 }
 .ciBg {
-    background: #fafafa;
-    padding: 2%;
-    text-align: center;
-    min-height: 200px;
+   
 }
 .ciH{
 	min-height:75px;
@@ -1680,28 +1684,41 @@ p.subject {
 }
 .ciBox1{
 	background:#fafafa;
-	padding:2%;text-align:center;
+	padding:2%;
+	text-align:center;
 }
 .ci_box{
 	li{
-		font-weight:bold;font-size:15px;
-		span{
-			text-align:center;
-			color:#fff;
-			width:20%;
-			height:40px;
-			display:inline-block;vertical-align:middle;
-			margin-right:10px;
-			float:left;
-		}
+		display: flex;
+		align-items: center;
+		margin: 10px 0;
 	}
-	.style span{height:50px;}
+	[class^=bgType] {
+		display: inline-block;
+		color:#fff;
+		width: 40px;
+		height: 40px;
+		display:inline-block;vertical-align:middle;
+		margin-right: 15px;
+		border-radius: 50%;
+	}
 	.bgType1{background:#00acdc}
 	.bgType2{background:#005596}
 	.bgType3{background:#b18d43}
-	.bgType4{background:#6d6e72}
-	.bgType5{background:#b2b3b7;color:#333}
+	.bgType4{background:#BDBCBC}
+	.bgType5{background:#6D6E72;color:#333}
 	.bgType6{background:#dcdddf;color:#333} 
+	.s {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		flex-direction: column;
+		.t {
+			color: #17294D;
+			font-weight: 500;
+			display: block;
+		}
+	}	
 }
 
 
@@ -2341,17 +2358,14 @@ p.subject {
 				content: "";
 				display: inline-block;
 				width: 50px;
-				height: 58px;
-				background: url(/static/portal/img/ico/ico-txt_warning.png);
+				height: 58px;				
 				position: absolute;
 				top: 0;
 				left: 50%;
 				margin-left: -25px;
+				background: url(/static/portal/img/ico/ico-txt_warning.png);
 			}
-		}	
-		&.ico2 {
-			//할거
-		}	
+		}			
 		em {
 			font-weight: 600;
 		}
@@ -2389,6 +2403,42 @@ p.subject {
 	.fb {
 		font-weight: 600;
 	}
+}
+
+.info-txt2 {
+	background-color: #F8F8F8;
+	font-size: rem(28);
+	text-align: center;
+	border-radius: 16px;
+	padding: 40px 24px;
+	margin-bottom: 30px;
+	.tit {
+		position: relative;
+		color: #333;
+		font-weight: 300;
+		font-size: rem(26);
+		line-height: 1.4;
+		margin-bottom: 0;
+		&.ico1 {
+			padding-top: 76px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			&::before {
+				content: "";
+				display: inline-block;
+				width: 50px;
+				height: 58px;				
+				position: absolute;
+				top: 0;
+				left: 50%;
+				margin-left: -29px;
+				background: url(/static/portal/img/ico/ico-txt2.png) 50% no-repeat;
+			}
+		}
+		em {
+			font-weight: 600;
+		}
+	}		
 }
 
 //민원이용안내
@@ -2500,6 +2550,11 @@ p.subject {
 		&.ico5 {
 			&::before {
 				background: url(/static/portal/img/sub/bu_info5.png) 0 50% no-repeat;
+			}
+		}
+		&.ico6 {
+			&::before {
+				background: url(/static/portal/img/sub/bu_info6.png) 0 50% no-repeat;
 			}
 		}
 	}
@@ -2710,6 +2765,114 @@ p.subject {
 		}
 	}
 }
+
+//사회공헌 활동
+.info-box3 {
+	padding: 30px 40px;
+	color: #000;
+	font-size: 18px;
+	font-family: 'Spoqa Han Sans Neo Light';
+	background-color: #F8F8F8;
+	border-radius: 16px;
+	margin-bottom: 30px;
+	@include breakpoint($sm){
+		padding: 20px;
+	}
+	p {
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	.title {
+		color: #131547;
+		font-size: rem(30);
+		font-weight: 600;
+		font-family: 'Spoqa Han Sans Neo';
+		margin-bottom: 10px;
+	}
+	.icoBox {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		position: relative;
+		line-height: 1.4;
+		//min-height: 100px !important;
+		padding-left: 120px;
+		margin-bottom: 0;
+		letter-spacing: -1.2px;
+		@include breakpoint($sm){
+			padding-left: 90px;
+			//min-height: 72px !important;
+		}
+		&::before {
+			content: "";
+			display: inline-block;
+			width: 100px;
+			height: 100px;
+			
+			position: absolute;
+			top: 50%;
+			left: 0;
+			margin-top: -50px;
+			@include breakpoint($sm){
+				margin-top: -36px;
+				width: 72px;
+				height: 72px;
+				background-size: 72px 72px !important;
+			}
+		}
+		&.ico1 {
+			&::before {
+				background: url(/static/portal/img/sub/bu_info6.png) 0 50% no-repeat;
+			}
+		}
+		&.ico2 {
+			&::before {
+				background: url(/static/portal/img/sub/bu_info7.png) 0 50% no-repeat;
+			}
+		}
+	}
+}
+
+//사회공헌 활동
+.session-list {
+	margin-top: 48px;
+	ul {
+		li {
+			display: flex;
+			justify-content: space-between;
+			margin-top: 30px;
+			@include breakpoint($sm){
+				display: block;
+			}
+			.img {
+				width: 240px;
+				img {
+					width: 100%;
+				}
+				@include breakpoint($sm){
+					width: 100%;
+				}
+			}
+			dl {
+				width: calc(100% - 260px);
+				padding-top: 20px;
+				@include breakpoint($sm){
+					width: 100%;
+				}
+				dt {
+					color: #3E7CC8;
+					font-size: rem(20);
+					margin-bottom: 12px;
+					dd {
+						font-size: rem(18);
+					}
+				}
+			}
+		}
+	}
+}
+
 
 //금융통화위원회의 역사
 .histroy2 {
@@ -3086,3 +3249,46 @@ p.subject {
 		}
 	}
 }
+
+.linkBox3 {
+	ul {
+		li {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 8px;
+			.txt {
+				color: #1A1A1A;
+				width: calc(100% - 143px - 10px);
+				border-radius: 8px;
+				background-color: #E8EAED;
+				padding: 13px 15px;
+			}
+			.btnStyle {
+				width: 143px;
+				background-color: #FAFAFA;
+				border-radius: 8px;
+				padding: 10px 16px;
+			}
+			.b-down {
+				width: 100%;
+				text-align: center;
+				color: #fff;
+				font-size: 16px;
+				background-color: $color-point;
+				padding: 4px 5px;
+				&::before {
+					content: "";
+					display: inline-block;
+					width: 21px;
+					height: 20px;
+					background: url(/static/portal/img/ico/ico-b-download.svg);
+				}
+			}
+			&:nth-child(even) {
+				.txt {
+					background-color: #FAFAFA;
+				}
+			}
+		}
+	}
+} 

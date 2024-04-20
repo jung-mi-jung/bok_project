@@ -1,3 +1,11 @@
+//게시판 상세 비주얼
+.bd-body .sub-_visual {
+	@include breakpoint($lg){			
+		background-image: url(/static/portal/img/sub/sub_visual_db_bg.png) !important;
+	}
+}
+
+
 //navigation
 .navigation {
 	position: relative;
@@ -36,6 +44,25 @@
 			background-repeat: no-repeat;
 			background-position: 50%;
 			background-image: url(/static/portal/img/sub/sub_visual_bg1.png);
+			&.menu_200716 {
+				background-image: url(/static/portal/img/sub/sub_visual_bg1.png);
+			}
+			&.menu_201149 {
+				background-image: url(/static/portal/img/sub/sub_visual_bg2.png);
+			}
+			&.menu_201150 {
+				background-image: url(/static/portal/img/sub/sub_visual_bg1.png);
+			}
+			&.menu_201151 {
+				background-image: url(/static/portal/img/sub/sub_visual_bg1.png);
+			}
+
+			&.menu_201152 {
+				background-image: url(/static/portal/img/sub/sub_visual_bg1.png);
+			}
+			&.menu_200227 { //이용안내
+				background-image: url(/static/portal/img/sub/sub_visual_bg1.png);
+			}
 		}	
 		div {
 			width: $pc-wide;

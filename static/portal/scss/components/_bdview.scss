@@ -484,7 +484,7 @@
 
 .view {
 	clear: both;
-	font-size: rem(16);
+	font-size: 16px;
 	border-top: 2px solid #222;
 	border-bottom:1px solid $bd-color;
 	border-left:1px solid $bd-color;
@@ -497,13 +497,13 @@
 		background-color: $color-point;
 		border-radius: 4px;
 		font-weight: 300;
-		font-size: rem(16);
+		font-size: 16px;
 	}
 	select,
 	input,
 	button {
 		height: 32px;
-		font-size: rem(16);
+		font-size: 16px;
 	}
 	.btn_file_del {
 		color: $red;
@@ -590,7 +590,7 @@
 			max-width: 120px;			
 			text-align: center;
 			border-right: 1px solid $bd-color;
-			background-color: #F2F6FA;
+			background-color: #EBF3F7;
 			@include breakpoint($sm){
 				width:80px;
 			}

@@ -358,15 +358,18 @@ $(function () {
 
 	//콘텐츠 내부 래프트 엥커
 	$(".cont-nav li").on("click", function(){
+		
 		var thisInx = $(this).index();
-		var thisScrollTop = $(".content-row .cont").eq(thisInx).offset().top
+		var thisScrollTop = $(".content-row .cont").eq(thisInx).offset().top;
+		var currentScrollTop = $(document).scrollTop();
 
 		$(this).addClass("on").siblings().removeClass("on");
 
-		$("html, body").animate({ scrollTop: thisScrollTop - 104}, 200);
-
-		if ( $("body").hasClass("gnb-stiky")) {
-			$("html, body").animate({ scrollTop: thisScrollTop - 56}, 0);
+		if ( currentScrollTop > 1 ) {
+			$("html, body").animate({ scrollTop: thisScrollTop - 48}, 200);
+		}
+		else {
+			$("html, body").animate({ scrollTop: thisScrollTop - 310}, 200);
 		}
 		return false;
 	})

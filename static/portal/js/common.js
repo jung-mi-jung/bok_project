@@ -526,8 +526,8 @@ $(function() {
 	var $root = $("html, body");
 	var $window = $(window);
 
-	var fixNav = 94;
-	var amountScrolled = 120;
+	var fixNav = 196;
+	var amountScrolled = 129;
 	var backBtn = $(".goTop");
 	
 
@@ -691,6 +691,19 @@ $(function() {
 		});
 		$(this).parent().removeClass('open').next().hide();
 	});
+
+
+	//.table thead 없을 경우 처리 (디자인 처리)
+	$(".table")
+		.not("thead")
+		
+		.each(function () {
+			$(this).addClass("table_line");
+		});
+	
+		
+
+
 /*
 	// focus this position // 	ul>li>a[data-rel^='prettyPhoto']
 	$("[data-rel^='prettyPhoto']").each(function(n){
@@ -881,36 +894,6 @@ $(function () {
 	});
 
 
-	//tab
-
-
-	// var tabList = $('.tablist button');
-	// tabList.click(function(){
-	// 	var tab_id = $(this).attr('data-tab');
-
-	// 	$('.tablist button').removeClass('active').removeAttr('title');
-	// 	$('.con').removeClass('active');
-
-	// 	$(this).addClass('active').attr('title', '선택됨');
-	// 	$("#"+tab_id).addClass('active');
-	// });
-
-
-	// var linka= $(".tabnavi ul li, .tabnavi1 ul li")
-	// $(linka).find('a').click(function(){
-	// 	$(this).parent().siblings().removeClass('active');
-	// 	$(this).parent().addClass('active');
-	// 	var k = linka.find('a').length + 1
-	// 	var linkName = $(this).attr("href");
-	// 	$(this).parent().parent().parent().parent().find(".tab-content .tab-pane").removeClass("active");
-	// 	$(linkName).addClass("active");
-	// 	$(this).attr("title", "선택됨").parent().siblings().find(">a").removeAttr("title");
-	// 	return false;
-	// });
-
-
-
-
 	//첨부파일
 	var filesOv = $(".fileGroupSet>a");
 	//$(filesOv).on("mouseenter keyup", function(event){
@@ -933,9 +916,6 @@ $(function () {
 			$(".fileGoupBox").hide();
 		}
 	})
-
-
-
 
 	//목차 없는 컨텐츠일 경우 가로 사이즈 변경에 따른 예외처리
 	// $(".bd-view").parents().find(".content").addClass("wild-content");
@@ -980,4 +960,27 @@ $(function () {
 		}
 	});
 	swiper.init();//초기화	
+});
+
+
+
+$(function () {
+	// *** 동영상 템플릿
+	//탭 유튜브 일시정시
+	$(document).ready(function () {
+		$(".template_wrap .video-tab button").click(function () {
+			jQuery("iframe").each(function () {
+				jQuery(this)[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*')
+			});
+		});
+	});
+	//자막, 내용 (접기, 펼치기)
+	$(".template_wrap .subtitle button").click(function(e){
+		$(this).toggleClass("active");
+		if ($(this).hasClass('active')){
+			$(this).attr("title", "자막 닫기");
+		} else {
+			$(this).attr("title", "자막 열기");
+		}
+	})
 });

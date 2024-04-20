@@ -528,8 +528,8 @@ $(function() {
 	var $root = $("html, body");
 	var $window = $(window);
 
-	var fixNav = 94;
-	var amountScrolled = 120;
+	var fixNav = 196;
+	var amountScrolled = 129;
 	var backBtn = $(".goTop");
 	
 

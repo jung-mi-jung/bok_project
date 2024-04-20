@@ -97,25 +97,6 @@
 					</div>
 			
 				</div>
-				<script>
-					//탭 유튜브 일시정시
-					$(document).ready(function () {
-						$(".video-tab button").click(function () {
-							jQuery("iframe").each(function () {
-								jQuery(this)[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*')
-							});
-						});
-					});
-					//자막, 내용 (접기, 펼치기)
-					$(".subtitle button").click(function(e){
-						$(this).toggleClass("active");
-						if ($(this).hasClass('active')){
-							$(this).attr("title", "자막 닫기");
-						} else {
-							$(this).attr("title", "자막 열기");
-						}
-					})
-					</script>
 				<!-- //동영상 템플릿 영역 -->
 			</div>
 			<!--//1셋트 -->
@@ -214,5 +195,3 @@
 <div class="btn-set">
 	<a href="" class="b-list">목록</a>
 </div>
-
-

@@ -11,8 +11,7 @@ table {
 }
 .table {
 	clear: both;	
-	margin-top: 14px;
-	//border-top: 2px solid #182252;
+	margin-top: 14px;	
 	margin-bottom: 10px;
 	@include breakpoint($md){
 		&.pcweb {
@@ -21,6 +20,9 @@ table {
 		&.moble {
 			display: none !important;
 		}
+	}
+	&.table_line {
+		border-top: 2px solid #182252;
 	}
 	table {
 		width: 100%;
@@ -45,7 +47,7 @@ table {
 		}
 		tbody {
 			th {		
-				padding: 13px 5px;		
+				padding: 13px 10px;		
 				font-weight: 400;
 				color: #4d4d4d;		
 				background-color: #FAFAFA;	

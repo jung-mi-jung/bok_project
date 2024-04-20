@@ -235,7 +235,7 @@ color: #3E7CC8;
 font-size: 1.25rem;
 font-weight: 500;
 margin-top: 45px;
-margin-bottom: 5px;
+margin-bottom: 10px;
 /*&:first-child {
 	margin-top: 0;
 }*/
@@ -562,6 +562,12 @@ background-color: #005596;
 background-color: #666;
 }
 
+@media (min-width: 1200px) {
+.bd-body .sub-_visual {
+background-image: url(/static/portal/img/sub/sub_visual_db_bg.png) !important;
+}
+}
+
 .navigation {
 position: relative;
 z-index: 1;
@@ -601,6 +607,24 @@ height: 216px;
 background-color: #CBDEF4;
 background-repeat: no-repeat;
 background-position: 50%;
+background-image: url(/static/portal/img/sub/sub_visual_bg1.png);
+}
+.navigation .sub-_visual.menu_200716 {
+background-image: url(/static/portal/img/sub/sub_visual_bg1.png);
+}
+.navigation .sub-_visual.menu_201149 {
+background-image: url(/static/portal/img/sub/sub_visual_bg2.png);
+}
+.navigation .sub-_visual.menu_201150 {
+background-image: url(/static/portal/img/sub/sub_visual_bg1.png);
+}
+.navigation .sub-_visual.menu_201151 {
+background-image: url(/static/portal/img/sub/sub_visual_bg1.png);
+}
+.navigation .sub-_visual.menu_201152 {
+background-image: url(/static/portal/img/sub/sub_visual_bg1.png);
+}
+.navigation .sub-_visual.menu_200227 {
 background-image: url(/static/portal/img/sub/sub_visual_bg1.png);
 }
 }
@@ -1404,6 +1428,9 @@ display: block !important;
 display: none !important;
 }
 }
+.table.table_line {
+border-top: 2px solid #182252;
+}
 .table table {
 width: 100%;
 table-layout: fixed;
@@ -1427,7 +1454,7 @@ border-radius: 0 8px 8px 0;
 border-left: 1px solid #BDBCBC;
 }
 .table table tbody th {
-padding: 13px 5px;
+padding: 13px 10px;
 font-weight: 400;
 color: #4d4d4d;
 background-color: #FAFAFA;
@@ -1922,7 +1949,7 @@ text-align: center;
 .bdList th,
 .bdList td {
 color: #000E33;
-font-size: 1.125rem;
+font-size: 16px;
 font-weight: 400;
 border: 1px solid #E6E6E6;
 padding: 13px 15px;
@@ -2998,7 +3025,7 @@ margin-left: 2px;
 
 .view {
 clear: both;
-font-size: 1rem;
+font-size: 16px;
 border-top: 2px solid #222;
 border-bottom: 1px solid #E6E6E6;
 border-left: 1px solid #E6E6E6;
@@ -3012,13 +3039,13 @@ vertical-align: middle;
 background-color: #005596;
 border-radius: 4px;
 font-weight: 300;
-font-size: 1rem;
+font-size: 16px;
 }
 .view select,
 .view input,
 .view button {
 height: 32px;
-font-size: 1rem;
+font-size: 16px;
 }
 .view .btn_file_del {
 color: #C81720;
@@ -3175,7 +3202,7 @@ width: 14%;
 max-width: 120px;
 text-align: center;
 border-right: 1px solid #E6E6E6;
-background-color: #F2F6FA;
+background-color: #EBF3F7;
 }
 @media (max-width: 749px) {
 .view > label > .l,
@@ -7763,12 +7790,14 @@ display: block;
 .padding-type > .col {
 padding: 0 10px;
 }
-
-.ciBg {
-background: #fafafa;
-padding: 2%;
-text-align: center;
-min-height: 200px;
+.padding-type.type2 {
+background-color: #FAFAFA;
+padding: 40px 60px;
+}
+@media (max-width: 749px) {
+.padding-type.type2 {
+padding: 30px;
+}
 }
 
 .ciH {
@@ -7786,21 +7815,19 @@ text-align: center;
 }
 
 .ci_box li {
-font-weight: bold;
-font-size: 15px;
+display: flex;
+align-items: center;
+margin: 10px 0;
 }
-.ci_box li span {
-text-align: center;
+.ci_box [class^=bgType] {
+display: inline-block;
 color: #fff;
-width: 20%;
+width: 40px;
 height: 40px;
 display: inline-block;
 vertical-align: middle;
-margin-right: 10px;
-float: left;
-}
-.ci_box .style span {
-height: 50px;
+margin-right: 15px;
+border-radius: 50%;
 }
 .ci_box .bgType1 {
 background: #00acdc;
@@ -7812,15 +7839,26 @@ background: #005596;
 background: #b18d43;
 }
 .ci_box .bgType4 {
-background: #6d6e72;
+background: #BDBCBC;
 }
 .ci_box .bgType5 {
-background: #b2b3b7;
+background: #6D6E72;
 color: #333;
 }
 .ci_box .bgType6 {
 background: #dcdddf;
 color: #333;
+}
+.ci_box .s {
+display: flex;
+flex-wrap: wrap;
+justify-content: flex-start;
+flex-direction: column;
+}
+.ci_box .s .t {
+color: #17294D;
+font-weight: 500;
+display: block;
 }
 
 .intro_area {
@@ -8620,11 +8658,11 @@ content: "";
 display: inline-block;
 width: 50px;
 height: 58px;
-background: url(/static/portal/img/ico/ico-txt_warning.png);
 position: absolute;
 top: 0;
 left: 50%;
 margin-left: -25px;
+background: url(/static/portal/img/ico/ico-txt_warning.png);
 }
 .info-txt .tit em {
 font-weight: 600;
@@ -8661,6 +8699,42 @@ font-size: 1.5rem;
 font-weight: 300;
 }
 .info-add .fb {
+font-weight: 600;
+}
+
+.info-txt2 {
+background-color: #F8F8F8;
+font-size: 1.75rem;
+text-align: center;
+border-radius: 16px;
+padding: 40px 24px;
+margin-bottom: 30px;
+}
+.info-txt2 .tit {
+position: relative;
+color: #333;
+font-weight: 300;
+font-size: 1.625rem;
+line-height: 1.4;
+margin-bottom: 0;
+}
+.info-txt2 .tit.ico1 {
+padding-top: 76px;
+margin-top: 10px;
+margin-bottom: 10px;
+}
+.info-txt2 .tit.ico1::before {
+content: "";
+display: inline-block;
+width: 50px;
+height: 58px;
+position: absolute;
+top: 0;
+left: 50%;
+margin-left: -29px;
+background: url(/static/portal/img/ico/ico-txt2.png) 50% no-repeat;
+}
+.info-txt2 .tit em {
 font-weight: 600;
 }
 
@@ -8773,6 +8847,9 @@ background: url(/static/portal/img/sub/bu_info3.png) 0 50% no-repeat;
 }
 .info-box2 .ico-box2.ico5::before {
 background: url(/static/portal/img/sub/bu_info5.png) 0 50% no-repeat;
+}
+.info-box2 .ico-box2.ico6::before {
+background: url(/static/portal/img/sub/bu_info6.png) 0 50% no-repeat;
 }
 
 .histroy {
@@ -9007,6 +9084,112 @@ margin-right: 3px;
 }
 .histroy .his-con + .his-con {
 margin-top: 10px;
+}
+
+.info-box3 {
+padding: 30px 40px;
+color: #000;
+font-size: 18px;
+font-family: "Spoqa Han Sans Neo Light";
+background-color: #F8F8F8;
+border-radius: 16px;
+margin-bottom: 30px;
+}
+@media (max-width: 749px) {
+.info-box3 {
+padding: 20px;
+}
+}
+.info-box3 p:last-child {
+margin-bottom: 0;
+}
+.info-box3 .title {
+color: #131547;
+font-size: 1.875rem;
+font-weight: 600;
+font-family: "Spoqa Han Sans Neo";
+margin-bottom: 10px;
+}
+.info-box3 .icoBox {
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+position: relative;
+line-height: 1.4;
+padding-left: 120px;
+margin-bottom: 0;
+letter-spacing: -1.2px;
+}
+@media (max-width: 749px) {
+.info-box3 .icoBox {
+padding-left: 90px;
+}
+}
+.info-box3 .icoBox::before {
+content: "";
+display: inline-block;
+width: 100px;
+height: 100px;
+position: absolute;
+top: 50%;
+left: 0;
+margin-top: -50px;
+}
+@media (max-width: 749px) {
+.info-box3 .icoBox::before {
+margin-top: -36px;
+width: 72px;
+height: 72px;
+background-size: 72px 72px !important;
+}
+}
+.info-box3 .icoBox.ico1::before {
+background: url(/static/portal/img/sub/bu_info6.png) 0 50% no-repeat;
+}
+.info-box3 .icoBox.ico2::before {
+background: url(/static/portal/img/sub/bu_info7.png) 0 50% no-repeat;
+}
+
+.session-list {
+margin-top: 48px;
+}
+.session-list ul li {
+display: flex;
+justify-content: space-between;
+margin-top: 30px;
+}
+@media (max-width: 749px) {
+.session-list ul li {
+display: block;
+}
+}
+.session-list ul li .img {
+width: 240px;
+}
+.session-list ul li .img img {
+width: 100%;
+}
+@media (max-width: 749px) {
+.session-list ul li .img {
+width: 100%;
+}
+}
+.session-list ul li dl {
+width: calc(100% - 260px);
+padding-top: 20px;
+}
+@media (max-width: 749px) {
+.session-list ul li dl {
+width: 100%;
+}
+}
+.session-list ul li dl dt {
+color: #3E7CC8;
+font-size: 1.25rem;
+margin-bottom: 12px;
+}
+.session-list ul li dl dt dd {
+font-size: 1.125rem;
 }
 
 .histroy2 .his-con {
@@ -9468,6 +9651,43 @@ font-size: 16px;
 .his_situa ul li a .set_box > span em span {
 float: right;
 margin-right: 9px;
+}
+
+.linkBox3 ul li {
+display: flex;
+justify-content: space-between;
+margin-bottom: 8px;
+}
+.linkBox3 ul li .txt {
+color: #1A1A1A;
+width: calc(100% - 143px - 10px);
+border-radius: 8px;
+background-color: #E8EAED;
+padding: 13px 15px;
+}
+.linkBox3 ul li .btnStyle {
+width: 143px;
+background-color: #FAFAFA;
+border-radius: 8px;
+padding: 10px 16px;
+}
+.linkBox3 ul li .b-down {
+width: 100%;
+text-align: center;
+color: #fff;
+font-size: 16px;
+background-color: #005596;
+padding: 4px 5px;
+}
+.linkBox3 ul li .b-down::before {
+content: "";
+display: inline-block;
+width: 21px;
+height: 20px;
+background: url(/static/portal/img/ico/ico-b-download.svg);
+}
+.linkBox3 ul li:nth-child(even) .txt {
+background-color: #FAFAFA;
 }
 
 .dbdata,
