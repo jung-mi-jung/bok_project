@@ -561,7 +561,6 @@ background-color: #666;
 position: relative;
 z-index: 1;
 background-color: #FCFCFC;
-border-top: 1px solid #E6E6E6;
 }
 @media (min-width: 1200px) {
 .nav-stiky .navigation {

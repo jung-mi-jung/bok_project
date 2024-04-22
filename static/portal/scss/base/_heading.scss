@@ -180,18 +180,18 @@ p.bu-dot {
 		font-size: rem(18);
 		color: #1a1a1a;
 		font-weight: 500;
-		padding-left: 24px;
+		padding-left: 22px;
 		margin-top: 15px;
 		margin-bottom: 5px;
 		&::before {
 			content: "";
 			display: inline-block;
-			width: 14px;
-			height: 14px;			
-			background: #39A0FF;
-			border-radius: 4px;
+			width: 10px;
+			height: 10px;			
+			background: #3E7CC8;
+			border-radius: 50%;
 			position: absolute;
-			top: 7px;
+			top: 10px;
 			left: 0;
 		}
 	}

@@ -1,0 +1,2231 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>서브명 | 한국은행</title>
+	<link type="text/css" rel="stylesheet" href="/static/portal/css/sub.css">
+	<script src="/static/jslibrary/jquery-3.5.1.min.js"></script>
+	<script src="/static/jslibrary/jquery.cookie.js"></script>
+	<script src="/static/jslibrary/bootstrap/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="/static/jslibrary/swiper@8/swiper-bundle.min.css">
+	<script src="/static/jslibrary/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js"></script>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta property="og:type"			content="website">
+	<meta property="og:title"			content="${title}">
+	<meta property="og:description"		content="${title}">
+</head>
+<body>
+<div class="skip">
+	<a href="#content">본문내용 바로가기</a>
+</div>
+<div id="wrap">
+	<div class="gnb_bg"></div>
+	<!-- header -->
+	<header id="header">
+		<div class="globalHeader">
+			<div class="container">
+				<ul>
+					<li>
+						<a href="/imer/main/main.do" target="_blank" title="새창열림">경제연구원</a>
+					</li>
+					<li>
+						<a href="/museum/main/main.do" target="_blank" title="새창열림">화폐박물관</a>
+					</li>
+					<li>
+						<a href="/portal/submain/submain/rgHqt.do?menuNo=200219">지역본부</a>
+					</li>
+					<li>
+						<a href="https://ecos.bok.or.kr" target="_blank" title="새창열림">경제시스템(ecos)</a>
+					</li>
+					<li>
+						<a href="https://snapshot.bok.or.kr" target="_blank" title="새창열림">금융·경제스냅샷</a>
+					</li>
+					<li>
+						<a href="https://dl.bok.or.kr" target="_blank" title="새창열림">전자도서관</a>
+					</li>
+					<li>
+						<a href="https://apply.bok.or.kr" target="_blank" title="새창열림">채용</a>
+					</li>
+				</ul>
+				<div class="g-info">
+					<div class="global">
+						<ul>
+							<li>
+								<a href="">본인인증</a>
+							</li>
+							<li>
+								<a href="/eng/main/main.do" target="_blank" title="새창열림">English</a>
+							</li>
+						</ul>
+					</div>					
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<h1 class="logo">
+				<a href="">
+					<span class="sr-only">한국은행</span>
+				</a>
+			</h1>
+			<!-- gnb -->
+			<nav class="gnb" id="gnb">
+				<ul>
+					<li class="menu01">
+						<a href=""><span>한국은행</span></a>
+					</li>
+					<li class="menu02 active">
+						<a href=""><span>정책 및 업무</span></a>
+					</li>
+					<li class="menu03">
+						<a href=""><span>뉴스 및 자료</span></a>
+					</li>
+					<li class="menu04">
+						<a href=""><span>멀티콘텐츠</span></a>
+					</li>
+					<li class="menu05">
+						<a href=""><span>주요서비스</span></a>
+					</li>
+				</ul>
+			</nav>
+			<!-- //gnb -->
+			<div class="toggle-set">
+				<button type="button" class="all-nav-toggle" data-toggle="modal" data-target="#totalMenu" title="전체 메뉴 열기"></button>
+				<button type="button" class="search" title="검색레이어 열기"></button>
+				<div class="search_wrap">
+					<form action="/">
+						검색 레이어 영역
+					</form>
+				</div>
+			</div>			
+		</div>
+
+		<!-- 전체메뉴 -->
+		<!-- <div class="modal fade total-nav" id="totalMenu" tabindex="-1" role="dialog">
+			
+		</div> -->
+		<!-- //전체메뉴 -->
+		
+	</header>	
+	<!-- //header -->
+
+	<!-- navigation -->
+	<div class="navigation">
+		<nav class="container">
+			<ul>
+				<li class="home"><span>Home</span></li>
+				<li>
+					<a href="" title="하위메뉴 열기">뉴스 및 자료</a>
+					<div class="depth2">
+						<ul>
+							<li>
+								<a href="">BOK이슈노트</a>
+							</li>
+							<li>
+								<a href="">BOK경제연구</a>
+							</li>
+							<li>
+								<a href="">해외경제포커스</a>
+							</li>
+							<li class="on">
+								<a href="">연차보고서</a>
+							</li>
+							<li>
+								<a href="">통화신용정책보고서</a>
+							</li>
+							<li>
+								<a href="">금융안정보고서</a>
+							</li>
+							<li>
+								<a href="">경제전망보고서</a>
+							</li>
+							<li>
+								<a href="">지역경제보고서</a>
+							</li>
+							<li>
+								<a href="">지급결제보고서</a>
+							</li>
+							<li>
+								<a href="">정기간행물</a>
+							</li>
+							<li>
+								<a href="">단행본</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="" title="하위메뉴 열기">뉴스 및 의사록</a>
+					<div class="depth2">
+						<ul>
+							<li>
+								<a href="">보도자료</a>
+							</li>
+							<li>
+								<a href="">주간보도계획</a>
+							</li>
+							<li>
+								<a href="">언론보도해명자료</a>
+							</li>
+							<li>
+								<a href="">금융통화위원회 의사록</a>
+							</li>
+							<li>
+								<a href="">금융통화위원회 의결사항</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="">보도자료</a>
+				</li>
+			</ul>
+			<div class="top-page-toolbar">
+				<div class="page-toolbar">
+					<button type="button" class="sns-toggle" aria-label="SNS 공유"></button>
+					<div class="sns-wrap">
+						<div class="sns-wrap__set">
+							<button type="button" data-type="close" class="close" aria-label="SNS 공유 닫기"></button>
+							<button type="button" data-type="youtube" class="ico-youtube" aria-label="유튜브 공유 새창열림"></button>
+							<button type="button" data-type="instagram" class="ico-instagram" aria-label="인스타그램 공유 새창열림"></button>
+							<button type="button" data-type="facebook" class="ico-facebook" aria-label="페이스북 공유 새창열림"></button>
+							<button type="button" data-type="twitter" class="ico-twitter" aria-label="트위터 공유 새창열림"></button>
+						</div>
+					</div>
+					<a href="/static/view/forPrint.html" data-size="1200, 700, yes" target="_blank" title="새창열림" class="page-print b-pop">
+						<span class="sr-only">프린트</span>
+					</a>
+					<a href="/static/guide/portal/popup/rss_popup.html" data-size="800, 500, yes" class="page-rss b-pop" target="_blank" title="새창열림">
+						<span class="sr-only">rss 한국은행</span>
+					</a>
+				</div>
+			</div>
+		</nav>
+		<div class="sub-_visual">
+			<div class="hgroup">
+				<h1>뉴스 및 의사록</h1>
+			</div>
+		</div>
+	</div>
+	<!-- //navigation -->
+
+	<!-- content -->
+	<div class="container" id="content">
+		<div class="hgroup">
+			<h1>뉴스 및 자료</h1>			
+		</div>
+		<main id="main-container">
+
+			<div class="lnb-nav">
+				<h1>목차</h1>	
+				<ul>
+					<li class="on">
+						<a href="">금융안정 개요</a>
+						<ul>
+							<li class="on">
+								<a href="">정의</a>
+							</li>
+							<li>
+								<a href="">금융시스템 불안의 요인</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="">금융안정 정책수단</a>
+						<ul>
+							<li>
+								<a href="">개요</a>
+							</li>
+							<li>
+								<a href="">예방적 정책수단</a>
+							</li>
+							<li>
+								<a href="">금융불균형 확대방지 정책수단</a>
+							</li>
+							<li>
+								<a href="">금융위기 관리 및 치유를 위한 정책수단</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="">정책당국간 역할분담</a>
+					</li>
+					<li>
+						<a href="">중앙은행과 금융안정</a>
+					</li>
+					<li>
+						<a href="">FSB와 BCBS</a>
+						<ul>
+							<li>
+								<a href="">참여 현황</a>
+							</li>
+							<li>
+								<a href="">금융안정위원회(FSB)</a>
+							</li>
+							<li>
+								<a href="">바젤은행감독위원회(BCBS)</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="">금융안정 관련 해외사이트</a>
+					</li>
+				</ul>
+			</div>
+
+			
+			<div class="content">
+
+
+<h2>개인정보처리방침</h2>
+<div class="ico-box ico3">
+	<p>한국은행은 정보주체의 자유와 권리 보호를 위해 「개인정보 보호법」 및 관계 법령이 정한 바를 준수하여, 적법하게 개인정보를 처리하고 안전하게 관리하고 있습니다. 이에 「개인정보 보호법」 제30조에 따라 정보주체에게 개인정보 처리에 관한 절차 및 기준을 안내하고, 이와 관련한 고충을 신속하고 원활하게 처리하기 위하여 다음과 같이 개인정보 처리방침을 수립·공개합니다.</p>
+</div>
+
+<div class="table tac"> 
+	<table class="fixed"> 
+		<caption>한국은행 기준 금리 변동추이</caption> 
+		<thead> 
+			<tr> 
+				<th scope="col" colspan="3" class="NamoSE_border_show">[ 주요 개인정보 처리 표시(라벨링) ]</th> 
+				</tr> 
+		</thead> 
+		<tbody> 
+			<tr> 
+				<td> <img src="/static/portal/img/sub/ico_200235_01.png" title="이름, 생년월일, 전화번호, 주소 등" alt=""><br> 일반 개인정보 수집</td> 
+				<td> <img src="/static/portal/img/sub/ico_200235_03.png" title="홈페이지 회원 가입 및 관리, 민원사무 처리, 교육지원 등" alt=""><br> 개인정보 처리목적</td> 
+				<td> <img src="/static/portal/img/sub/ico_200235_03.png" title="6개월, 1년, 2년, 3년, 5년, 구독중지 요청시까지, 조사기간 중 등" alt=""><br> 개인정보의 보유기간</td> 
+			</tr> 
+			<tr> 
+				<td> <img src="/static/portal/img/sub/ico_200235_04.png" title="외국환거래 유관기관 등" alt=""><br> 개인정보의 제공</td> 
+				<td> <img src="/static/portal/img/sub/ico_200235_05.png" title="홈페이지 등 시스템 유지관리, 간행물 발송, 경비 및 출입자 관리 등" alt=""><br> 개인정보 처리 위탁</td> 
+				<td> <img src="/static/portal/img/sub/ico_200235_06.png" title="(담당부서) 정보보호팀 (연락처) 02-560-1346" alt=""><br> 개인정보 열람 청구</td> 
+			</tr> 
+		</tbody> 
+	</table> 
+</div>
+
+
+<h3>[ 목 차 ]</h3>
+
+<p>「한국은행 개인정보 처리방침」은 다음과 같은 내용으로 구성되어 있습니다.</p>
+ 
+<div class="table tal"> 
+<table class="fixed"> 
+<tbody> 
+<tr> 
+<td>&nbsp; □ <a href="#개인정보의 처리 목적 및 수집 항목">개인정보의 처리 목적 및 수집 항목</a></td> 
+<td>□ <a href="#개인정보의 처리 및 보유기간">개인정보의 처리 및 보유기간</a></td> 
+</tr> 
+<tr> 
+<td>&nbsp; □ <a href="#개인정보의 제3자 제공">개인정보의 제3자 제공</a></td> 
+<td>□ <a href="#개인정보 처리의 위탁">개인정보 처리의 위탁</a></td> 
+</tr> 
+<tr> 
+<td>&nbsp; □ <a href="#개인정보 영향평가 수행 결과">개인정보 영향평가 수행 결과</a></td> 
+<td>□ <a href="#정보주체와 법정대리인의 권리의무 및 행사방법">정보주체와 법정대리인의 권리&middot;의무 및 행사방법</a></td> 
+</tr> 
+<tr> 
+<td>&nbsp; □ <a href="#개인정보의 파기">개인정보의 파기</a></td> 
+<td>□ <a href="#개인정보의 안전성 확보조치">개인정보의 안전성 확보조치</a></td> 
+</tr> 
+<tr> 
+<td>&nbsp; □ <a href="#개인정보 자동 수집장치">개인정보 자동 수집 장치의 설치&middot;운영 및 거부에 관한 사항</a></td> 
+<td>□ <a href="#개인정보 보호책임자">개인정보 보호책임자</a></td> 
+</tr> 
+<tr> 
+<td>&nbsp; □ <a href="#추가적인 이용제공">추가적인 이용&middot;제공 판단기준</a></td> 
+<td>□ <a href="#개인정보 열람청구">개인정보 열람청구</a></td> 
+</tr> 
+<tr> 
+<td>&nbsp; □ <a href="#권익침해">권익침해 구제방법</a></td> 
+<td>□ <a href="#개인정보 처리방침 변경">개인정보 처리방침 변경</a></td> 
+</tr> 
+</tbody> 
+</table> 
+</div> 
+
+<a id="개인정보의 처리 목적 및 수집 항목" name="개인정보의 처리 목적 및 수집 항목"><span style="font-size: 10pt;">&nbsp;</span></a> 
+<h4>□ 개인정보의 처리 목적 및 수집 항목&nbsp;<img src="https://www.bok.or.kr/crosseditor/attachs/images/000019/image7.png" alt="" style="vertical-align: middle;"></h4> 
+<ul class="referList type"> 
+<li>&#9312; 한국은행은 「한국은행법」 등 법령에서 정하는 소관업무 수행, 대국민 서비스제공, 민원처리 등의 목적을 위하여 개인정보보호법 제15조에 따라 정보주체의 개인정보를 처리합니다. 아래의 &lsquo;한국은행 개인정보파일 현황&rsquo;을 통해 개인정보의 처리 목적, 운영 근거, 수집 항목을 확인할 수 있습니다.</li> 
+<p class="ckTxt"><a href="#"><strong><span>한국은행 개인정보파일 현황(클릭)</span></strong></a></p> 
+<div class="ckCont"> 
+<div class="table scrollX"> 
+<table> 
+<caption>한국은행 개인정보파일의 처리 목적</caption> 
+<thead> 
+<tr> 
+<th class="w8p NamoSE_border_show">개인정보 처리시스템</th> 
+<th scope="col" class="w3p NamoSE_border_show">번호</th> 
+<th scope="col" class="w17p NamoSE_border_show">개인정보 파일명</th> 
+<th scope="col" class="w25p NamoSE_border_show">처리 목적</th> 
+<th scope="col" class="w22p NamoSE_border_show">운영 근거</th> 
+<th scope="col" class="w25p NamoSE_border_show">개인정보 항목</th> 
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td class="tac" rowspan="20">대표 홈페이지<br>
+ <a href="http://www.bok.or.kr">www.bok.or.kr</a></td> 
+<td class="tac">1</td> 
+<td>홈페이지 민원인 정보</td> 
+<td>민원의 원활한 처리</td> 
+<td>정보주체 동의</td> 
+<td>[필수]성명, 이메일 주소, 연락처(전화번호, 휴대폰번호 중 택일)</td> 
+</tr> 
+<tr> 
+<td class="tac">2</td> 
+<td>뉴스레터 배포 대상자 정보</td> 
+<td>뉴스레터 발송</td> 
+<td>정보주체 동의</td> 
+<td>[필수]성명, 이메일 주소</td> 
+</tr> 
+<tr> 
+<td class="tac">3</td> 
+<td>정보공개 신청자 정보</td> 
+<td>정보공개 청구에 대한 결정 통지</td> 
+<td>정보주체 동의</td> 
+<td>[필수]성명, 집주소, 이메일 주소, 연락처(전화번호, 휴대폰번호 중 택일)</td> 
+</tr> 
+<tr> 
+<td class="tac">4</td> 
+<td>통화정책경시대회 신청자 정보</td> 
+<td>통화정책경시대회 신청접수, 대회참가증 발급, 참가기념품 발송, 대회개최 결과 보도자료 배포 및 홈페이지 게시</td> 
+<td>정보주체 동의</td> 
+<td>[필수] 성명, 생년월일, 성별, 소속학교명, 전공학과(부), 학년, 연락처(휴대폰번호, 이메일주소), 재(휴)학 및 졸업예정 여부</td> 
+</tr> 
+<tr> 
+<td class="tac">5</td> 
+<td>어린이박물관 교실 신청자 정보</td> 
+<td>어린이박물관 교실 운영</td> 
+<td>정보주체 동의</td> 
+<td>[필수] 성명, 생년월일, 성별, 소속(학교), 학년, 법정대리인 이름, 이메일주소, 휴대폰번호(만14세 미만 이용자인 경우)</td> 
+</tr> 
+<tr> 
+<td class="tac">6</td> 
+<td>화폐박물관 단체예약 신청자 정보</td> 
+<td>단체관람 전시예약 운영</td> 
+<td>정보주체 동의</td> 
+<td>[필수]성명, 휴대폰번호</td> 
+</tr> 
+<tr> 
+<td class="tac">7</td> 
+<td>화폐박물관 개인관람예약 신청자 정보</td> 
+<td>특별교육 운영</td> 
+<td>정보주체 동의</td> 
+<td>[필수]성명, 휴대폰번호</td> 
+</tr> 
+<tr> 
+<td class="tac">8</td> 
+<td>특별강좌 신청자 정보</td> 
+<td>특별교육 운영</td> 
+<td>정보주체 동의</td> 
+<td>[필수]성명, 휴대폰번호</td> 
+</tr> 
+<tr> 
+<td class="tac">9</td> 
+<td>체험단체 신청자 정보</td> 
+<td>체험단체</td> 
+<td>정보주체 동의</td> 
+<td>[필수]성명, 휴대폰번호</td> 
+</tr> 
+<tr> 
+<td class="tac">10</td> 
+<td>아카이브 이용 방문신청자 정보</td> 
+<td>외부이용자의 방문 신청 처리</td> 
+<td>정보주체 동의</td> 
+<td>[필수]성명, 휴대폰번호</td> 
+</tr> 
+<tr> 
+<td class="tac">11</td> 
+<td>아카이브 이용 문의자 정보</td> 
+<td>외부이용자 문의 내역 접수 및 처리</td> 
+<td>정보주체 동의</td> 
+<td>[필수]성명, 휴대폰번호</td> 
+</tr> 
+<tr> 
+<td class="tac">12</td> 
+<td>교사직무연수 신청자 정보</td> 
+<td>연수대상자 선정 및 연수 제공</td> 
+<td>정보주체 동의</td> 
+<td>[필수] 성명, 성별, 생년월일, 휴대폰번호, 이메일주소, 소속 기관(교육청), 근무기관(학교명), 학교구분, 담당교과, 직위<br> [선택] 집주소</td> 
+</tr> 
+<tr> 
+<td class="tac">13</td> 
+<td>금요강좌 신청자 정보</td> 
+<td>강좌 제공, 설문서 발송 및 수료증 발급</td> 
+<td>정보주체 동의</td> 
+<td>[필수] 성명, 이메일주소, 연락처<br> [선택] 직업구분</td> 
+</tr> 
+<tr> 
+<td class="tac">14</td> 
+<td>경제교육서포터즈 신청자 정보</td> 
+<td>서포터즈 선정 및 연수 제공</td> 
+<td>정보주체 동의</td> 
+<td>[필수] 성명, 출생연도, 학교명(캠퍼스), 학년/학기, 전공, 휴대폰번호, 이메일주소<br> [선택] 집주소, 성별</td> 
+</tr> 
+<tr> 
+<td class="tac">15</td> 
+<td>청소년 경제강좌 신청자 정보</td> 
+<td>청소년 경제강좌 제공</td> 
+<td>정보주체 동의</td> 
+<td>[필수] 단체명, 성명, 휴대폰번호</td> 
+</tr> 
+<tr> 
+<td class="tac">16</td> 
+<td>방문강좌 및 외부강좌 신청자 정보</td> 
+<td>한국은행 방문 강좌 및 외부기관 강의지원 요청에 따른 경제강좌 제공</td> 
+<td>정보주체 동의</td> 
+<td>(방문강좌 신청시)<br>
+ [필수] 성명, 단체명, 휴대폰번호<br>
+ [선택] 이메일주소, 연락처<br>
+ <br>
+ (외부기관강의지원신청시)<br>
+ [필수] 성명, 단체명, 휴대폰번호<br> [선택] 이메일주소, 연락처</td> 
+</tr> 
+<tr> 
+<td class="tac">17</td> 
+<td>CLEAN신고 신고자 정보</td> 
+<td>청렴&middot;이해충돌방지제도, 부패&middot;부조리, 직장 내 고충 신고</td> 
+<td>정보주체 동의</td> 
+<td>[필수] 성명, 집주소, 연락처(휴대폰번호)</td> 
+</tr> 
+<tr> 
+<td class="tac">18</td> 
+<td>대량주화 교환신청자 정보</td> 
+<td>화폐교환</td> 
+<td>개인정보보호법 제15조 제&#9312;항 제3호(법령상 소관 업무 수행)<br> 한국은행법 제53조 제&#9313;항, 제52조 제&#9312;항</td> 
+<td>[필수] 성명, 전화번호</td> 
+</tr> 
+<tr> 
+<td class="tac">19</td> 
+<td>화폐사랑 콘텐츠 공모전 참가 신청자 정보</td> 
+<td>공모전 참가자 본인 확인, 응모작 심사, 당선작 이용, 기념품 발송</td> 
+<td>정보주체 동의</td> 
+<td>[필수] 성명, 생년월일, 집주소, 연락처(핸드폰, 이메일), 재학증명서 기재사항(수상자에 한함), 동영상(개인 초상 포함의 경우)</td> 
+</tr> 
+<tr> 
+<td class="tac">20</td> 
+<td>외환거래 질의 신청자 정보</td> 
+<td>외환거래 질의 신청에 대한 정보자료 제공</td> 
+<td>정보주체 동의</td> 
+<td>[필수] 성명, 소속, 연락처, 이메일주소<br> [선택] 열람목적, 열람시간</td> 
+</tr> 
+<tr> 
+<td class="tac" rowspan="2">전자도서관<br> dl.bok.or.kr</td> 
+<td class="tac">21</td> 
+<td>도서관 방문신청자 정보</td> 
+<td>외부이용자의 한국은행 도서관 방문 및 자료이용 신청</td> 
+<td>정보주체 동의</td> 
+<td>[필수] 성명, 소속, 연락처, 이메일주소<br> [선택] 열람목적, 열람시간</td> 
+</tr> 
+<tr> 
+<td class="tac">22</td> 
+<td>퇴직임직원용 전자도서관 이용자 정보</td> 
+<td>퇴직임직원의 전자도서관 이용</td> 
+<td>정보주체 동의</td> 
+<td>[필수] 성명, 행번, 생년월일, 전화번호(휴대전화), 퇴직연월, 이메일주소</td> 
+</tr> 
+<tr> 
+<td class="tac">간행물관리 시스템</td> 
+<td class="tac">23</td> 
+<td>간행물 배포대상자 정보</td> 
+<td>한국은행 발행자료 배포</td> 
+<td>정보주체 동의</td> 
+<td>[필수] 성명, 이메일주소, 수령지 정보</td> 
+</tr> 
+<tr> 
+<td class="tac" rowspan="5">경제통계시스템<br> ecos.bok.or.kr</td> 
+<td class="tac">24</td> 
+<td>API 요청회원 정보</td> 
+<td>OpenAPI 서비스의 원활한 제공</td> 
+<td>정보주체 동의</td> 
+<td>[필수] 성명, 전화번호, 이메일주소</td> 
+</tr> 
+<tr> 
+<td class="tac">25</td> 
+<td>홈페이지 회원 정보</td> 
+<td>개인화 기능제공</td> 
+<td>정보주체 동의</td> 
+<td>[필수] 아이디, 성명, 이메일주소<br> [선택] 직업</td> 
+</tr> 
+<tr> 
+<td class="tac">26</td> 
+<td>통계자료입수 회원정보</td> 
+<td>통계자료 조사표 제출</td> 
+<td>개인정보보호법 제15조 제&#9312;항 제3호(법령상 소관업무 수행)<br>
+ <br> 한국은행법 제86조</td> 
+<td>[]필수] 성명, 이메일<br> [선택] 소속기관명, 부서명, 연락처, 주소</td> 
+</tr> 
+<tr> 
+<td class="tac">27</td> 
+<td>BSI 회원정보</td> 
+<td>BSI 설문조사</td> 
+<td>개인정보보호법 제15조 제&#9312;항 제3호(법령상 소관업무 수행)<br>
+ <br> 한국은행법 제86조</td> 
+<td>[필수] 기업체명, 이름, 이메일, 부서, 직위, 전화번호, 팩스</td> 
+</tr> 
+<tr> 
+<td class="tac">28</td> 
+<td>CSI 회원정보</td> 
+<td>CSI 설문조사</td> 
+<td>개인정보보호법 제15조 제&#9312;항 제3호(법령상 소관업무 수행)<br>
+ <br> 한국은행법 제86조</td> 
+<td>[필수] 이름, 이메일<br> [선택] 휴대폰번호, 성별, 연령, 세대내가족수, 전화번호, 주소, 직업, 주거사항, 월평균가구총수입</td> 
+</tr> 
+<tr> 
+<td class="tac" rowspan="2">전자설문 시스템</td> 
+<td class="tac">29</td> 
+<td>전자설문 일반회원 정보</td> 
+<td>일반 설문조사</td> 
+<td>정보주체 동의</td> 
+<td>[필수] 성명, 이메일<br> [선택] 휴대폰번호</td> 
+</tr> 
+<tr> 
+<td class="tac">30</td> 
+<td>전자설문(대출행태서베이, 기업경영분석) 일반회원 정보</td> 
+<td>대출행태서베이 기업경영분석 설문</td> 
+<td>개인정보보호법 제15조 제&#9312;항 제3호(법령상 소관업무 수행)<br>
+ <br> 한국은행법 제86조</td> 
+<td>[필수] 성명, 이메일<br> [선택] 휴대폰번호</td> 
+</tr> 
+<tr> 
+<td class="tac" rowspan="2">온라인<br>
+ 외환심사시스템<br> fxra.bok.or.kr:4443</td> 
+<td class="tac">31</td> 
+<td>온라인 시스템 이용신청자 정보</td> 
+<td>온라인 시스템 이용 ID 발급</td> 
+<td>개인정보보호법 제15조 제&#9312;항 제2호(법령상 의무준수)<br>
+ <br> 외국환거래법 제16조, 외국환거래법 시행령 제30조,외국환거래규정 제5-3조 제&#9313;항</td> 
+<td>[필수] 성명, 생년월일, 휴대폰번호, 성별</td> 
+</tr> 
+<tr> 
+<td class="tac">32</td> 
+<td>온라인 신고인 및 대리인 정보</td> 
+<td>온라인 외환신고 관리</td> 
+<td>개인정보보호법 제15조 제&#9312;항 제2호(법령상 의무 준수)<br>
+ <br> 외국환거래법 제16조, 외국환거래법 시행령 제30조,외국환거래규정 제5-3조 제&#9313;항 등</td> 
+<td>[필수] 성명, 생년월일, 휴대폰번호, 성별</td> 
+</tr> 
+<tr> 
+<td class="tac" rowspan="3">외환정보</td> 
+<td class="tac">33</td> 
+<td>거래외국환은행 정보</td> 
+<td>거래외국환 은행 지정</td> 
+<td>개인정보보호법 제15조 제&#9312;항 제2호(법령상 의무 준수) <br>
+ <br> 외국환거래법 제20조 제&#9317;항, 제23조 제&#9312;항, 제25조 제&#9313;항 외국환거래법 시행령 제37조 제&#9314;항, 제39조, 제39조의2등</td> 
+<td>[필수] 성명, 주민등록번호, 여권번호</td> 
+</tr> 
+<tr> 
+<td class="tac">34</td> 
+<td>외국환거래내역의 외국환 거래자</td> 
+<td>외환거래 및 시장정보의 신속한 수집, 분석, 사후관리, 관계기관 제공 등</td> 
+<td>개인정보보호법 제15조 제&#9312;항 제2호(법령상 의무 준수) <br>
+ <br> 외국환거래법 제20조 제&#9317;항, 제23조 제&#9312;항, 제25조 제&#9313;항, 외국환거래법 시행령 제37조 제&#9314;항, 제39조, 제39조의2등</td> 
+<td>[필수] 성명, 주민등록번호, 여권번호, 외국인등록번호</td> 
+</tr> 
+<tr> 
+<td class="tac">35</td> 
+<td>외환정보 시스템 사용자 ID</td> 
+<td>외환전산망 사용자 관리</td> 
+<td>개인정보보호법 제15조 제&#9312;항 제2호(법령상 의무 준수) <br>
+ <br> 외국환거래법 제25조 제&#9313;항, 외국환거래법 시행령 제39조, 외환정보집중기관 운영에 관한 규정</td> 
+<td>[필수] 사용자ID, 비밀번호, 사용자명, 전화번호, 휴대폰번호, 기관명, 접속IP 등</td> 
+</tr> 
+<tr> 
+<td class="tac" rowspan="41">외환정보</td> 
+<td class="tac">36</td> 
+<td>금융기관 대표자 및 대리인</td> 
+<td>금융기관 대표자 및 대리인 관리</td> 
+<td>개인정보보호법 제15조 제&#9312;항 제3호(법령상 소관업무 수행), 제4호 (계약 체결/이행) <br>
+ <br> 한국은행법 제54조, 제64조</td> 
+<td>[필수] 성명, 생년월일, 직위, 기관명, 법인 전화번호, 법인 주소</td> 
+</tr> 
+<tr> 
+<td class="tac">37</td> 
+<td>한은금융망 참가기관 비상연락망</td> 
+<td>비상연락체제 구축</td> 
+<td>개인정보보호법 제15조 제&#9312;항 제3호(법령상 소관업무 수행) <br>
+ <br> 한국은행법 제81조 제&#9315;항</td> 
+<td>[필수] 기관명, 관련부서 구분(자금 혹은 전산), 책임 구분(정 혹은 부), 부서명, 직위명, 성명, 사무실 전화, FAX, 집 전화, 휴대폰번호, 이메일</td> 
+</tr> 
+<tr> 
+<td class="tac">38</td> 
+<td>수취인지정자금이체 의뢰인&middot;수취인</td> 
+<td>수취인지정자금이체</td> 
+<td>개인정보보호법 제15조 제&#9312;항 제3호(법령상 소관업무 수행) <br>
+ <br> 한국은행법 제81조</td> 
+<td>[필수] 성명, 계좌번호</td> 
+</tr> 
+<tr> 
+<td class="tac">39</td> 
+<td>한은금융망 등록 송신권한자</td> 
+<td>한은금융망 이용</td> 
+<td>개인정보보호법 제15조 제&#9312;항 제3호(법령상 소관업무 수행) <br>
+ <br> 한국은행법 제81조</td> 
+<td>[필수] 사용자번호, 성명, 소속부서, 직책</td> 
+</tr> 
+<tr> 
+<td class="tac">40</td> 
+<td>연계결제 처리정보</td> 
+<td>연계결제 처리</td> 
+<td>개인정보보호법 제15조 제&#9312;항 제3호(법령상 소관업무 수행) <br>
+ <br> 한국은행법 81조</td> 
+<td>[필수] 의뢰인 성명, 계좌번호, 수취인 성명, 계좌번호</td> 
+</tr> 
+<tr> 
+<td class="tac">41</td> 
+<td>세입금 수납</td> 
+<td>국고금 납부자 식별</td> 
+<td>개인정보보호법 제15조 제&#9312;항 제3호(법령상 소관업무 수행) <br>
+ <br> 한국은행법 제71조, 국고금관리법 시행령 제109조의3</td> 
+<td>[필수] 주민등록번호</td> 
+</tr> 
+<tr> 
+<td class="tac">42</td> 
+<td>세입금 정정내역</td> 
+<td>국고금 납부자 식별</td> 
+<td>개인정보보호법 제15조 제&#9312;항 제3호(법령상 소관업무 수행) <br>
+ <br> 한국은행법 제71조, 국고금관리법 시행령 제109조의3</td> 
+<td>[필수] 주민등록번호</td> 
+</tr> 
+<tr> 
+<td class="tac">43</td> 
+<td>세입금수납 건별 오류내역</td> 
+<td>국고금 납부자 식별</td> 
+<td>개인정보보호법 제15조 제&#9312;항 제3호(법령상 소관업무 수행) <br>
+ <br> 한국은행법 제71조, 국고금관리법 시행령 제109조의3</td> 
+<td>[필수] 주민등록번호</td> 
+</tr> 
+<tr> 
+<td class="tac">44</td> 
+<td>각행분 세입금 건별 보고지연 내역</td> 
+<td>국고금 납부자 식별</td> 
+<td>개인정보보호법 제15조 제&#9312;항 제3호(법령상 소관업무 수행) <br>
+ <br> 한국은행법 제71조, 국고금관리법 시행령 제109조의3</td> 
+<td>[필수] 주민등록번호</td> 
+</tr> 
+<tr> 
+<td class="tac">45</td> 
+<td>세입금 영수증명 신청</td> 
+<td>국고금 납부자 식별</td> 
+<td>개인정보보호법 제15조 제&#9312;항 제3호(법령상 소관업무 수행) <br>
+ <br> 한국은행법 제71조, 국고금관리법 시행령 제109조의3</td> 
+<td>[필수] 성명, 주민등록번호</td> 
+</tr> 
+<tr> 
+<td class="tac">46</td> 
+<td>세입금 영수증명 검색내역</td> 
+<td>국고금 납부자 식별</td> 
+<td>개인정보보호법 제15조 제&#9312;항 제3호(법령상 소관업무 수행) <br>
+ <br> 한국은행법 제71조, 국고금관리법 시행령 제109조의3</td> 
+<td>[필수] 주민등록번호</td> 
+</tr> 
+<tr> 
+<td class="tac">47</td> 
+<td>반납금 건별내역</td> 
+<td>국고금 납부자 식별</td> 
+<td>개인정보보호법 제15조 제&#9312;항 제3호(법령상 소관업무 수행) <br>
+ <br> 한국은행법 제71조, 국고금관리법 시행령 제109조의3</td> 
+<td>[필수] 주민등록번호</td> 
+</tr> 
+<tr> 
+<td class="tac">48</td> 
+<td>실시간 전자이체 반납금 정정내역</td> 
+<td>국고금 납부자 식별</td> 
+<td>개인정보보호법 제15조 제&#9312;항 제3호(법령상 소관업무 수행) <br>
+ <br> 한국은행법 제71조, 국고금관리법 시행령 제109조의3</td> 
+<td>[필수] 주민등록번호</td> 
+</tr> 
+<tr> 
+<td class="tac">49</td> 
+<td>세입금 내부정정</td> 
+<td>국고금 납부자 식별</td> 
+<td>개인정보보호법 제15조 제&#9312;항 제3호(법령상 소관업무 수행) <br>
+ <br> 한국은행법 제71조, 국고금관리법 시행령 제109조의3</td> 
+<td>[필수] 주민등록번호</td> 
+</tr> 
+<tr> 
+<td class="tac">50</td> 
+<td>국고 조기 결제정보</td> 
+<td>국고금 납부자 식별</td> 
+<td>개인정보보호법 제15조 제&#9312;항 제3호(법령상 소관업무 수행) <br>
+ <br> 한국은행법 제71조, 국고금관리법 시행령 제109조의3</td> 
+<td>[필수] 주민등록번호</td> 
+</tr> 
+<tr> 
+<td class="tac">51</td> 
+<td>세입금수납 건별자료</td> 
+<td>국고금 납부자 식별</td> 
+<td>개인정보보호법 제15조 제&#9312;항 제3호(법령상 소관업무 수행) <br>
+ <br> 한국은행법 제71조, 국고금관리법 시행령 제109조의3</td> 
+<td>[필수] 주민등록번호</td> 
+</tr> 
+<tr> 
+<td class="tac">52</td> 
+<td>세입금 오납정정 전자의뢰</td> 
+<td>국고금 납부자 식별</td> 
+<td>개인정보보호법 제15조 제&#9312;항 제3호(법령상 소관업무 수행) <br>
+ <br> 한국은행법 제71조, 국고금관리법 시행령 제109조의3</td> 
+<td>[필수] 주민등록번호</td> 
+</tr> 
+<tr> 
+<td class="tac">53</td> 
+<td>실시간 세입금 청구정정내역</td> 
+<td>국고금 납부자 식별</td> 
+<td>개인정보보호법 제15조 제&#9312;항 제3호(법령상 소관업무 수행) <br>
+ <br> 한국은행법 제71조, 국고금관리법 시행령 제109조의3</td> 
+<td>[필수] 주민등록번호</td> 
+</tr> 
+<tr> 
+<td class="tac">54</td> 
+<td>국고금 실시간 참가기관 담당자 정보</td> 
+<td>비상연락</td> 
+<td>개인정보보호법 제15조 제&#9312;항 제3호(법령상 소관업무 수행) <br>
+ <br> 한국은행법 71조 국고금관리법, 동법 시행령 및 시행규칙 등</td> 
+<td>[필수] 성명, 연락처(또는 휴대폰번호)</td> 
+</tr> 
+<tr> 
+<td class="tac">55</td> 
+<td>국세환급금 계좌확인 개별명세</td> 
+<td>국고금 지급 상대방 정보</td> 
+<td>개인정보보호법 제15조 제&#9312;항 제3호(법령상 소관업무 수행) <br>
+ <br> 한국은행법 제71조, 국고금관리법 시행령 제109조의3</td> 
+<td>[필수] 주민등록번호</td> 
+</tr> 
+<tr> 
+<td class="tac">56</td> 
+<td>국세환급금 계좌이체 개별명세일별</td> 
+<td>국고금 지급 상대방 정보</td> 
+<td>개인정보보호법 제15조 제&#9312;항 제3호(법령상 소관업무 수행) <br>
+ <br> 한국은행법 제71조, 국고금관리법 시행령 제109조의3</td> 
+<td>[필수] 주민등록번호</td> 
+</tr> 
+<tr> 
+<td class="tac">57</td> 
+<td>실시간 이체요구 건별내역</td> 
+<td>국고금 지급 상대방 정보</td> 
+<td>개인정보보호법 제15조 제&#9312;항 제3호(법령상 소관업무 수행) <br>
+ <br> 한국은행법 제71조, 국고금관리법 시행령 제109조의3</td> 
+<td>[필수] 주민등록번호</td> 
+</tr> 
+<tr> 
+<td class="tac">58</td> 
+<td>은행응답 이체요구 건별내역</td> 
+<td>국고금 지급 상대방 정보</td> 
+<td>개인정보보호법 제15조 제&#9312;항 제3호(법령상 소관업무 수행) <br>
+ <br> 한국은행법 제71조, 국고금관리법 시행령 제109조의3</td> 
+<td>[필수] 주민등록번호</td> 
+</tr> 
+<tr> 
+<td class="tac">59</td> 
+<td>실시간 이체거래 송수신 내역</td> 
+<td>국고금 지급 상대방 정보</td> 
+<td>개인정보보호법 제15조 제&#9312;항 제3호(법령상 소관업무 수행) <br>
+ <br> 한국은행법 제71조, 국고금관리법 시행령 제109조의3</td> 
+<td>[필수] 주민등록번호</td> 
+</tr> 
+<tr> 
+<td class="tac">60</td> 
+<td>실시간 수입금대체 지출내역</td> 
+<td>국고금 지급 상대방 정보</td> 
+<td>개인정보보호법 제15조 제&#9312;항 제3호(법령상 소관업무 수행) <br>
+ <br> 한국은행법 제71조, 국고금관리법 시행령 제109조의3</td> 
+<td>[필수] 주민등록번호</td> 
+</tr> 
+<tr> 
+<td class="tac">61</td> 
+<td>실시간 국고금 지로납부 건별 내역</td> 
+<td>회계직 공무원 정보</td> 
+<td>개인정보보호법 제15조 제&#9312;항 제3호(법령상 소관업무 수행) <br>
+ <br> 한국은행법 제71조, 국고금관리법 시행령 제109조의3</td> 
+<td>[필수] 주민등록번호</td> 
+</tr> 
+<tr> 
+<td class="tac">62</td> 
+<td>지출관 고유번호 정보</td> 
+<td>회계직 공무원 정보</td> 
+<td>개인정보보호법 제15조 제&#9312;항 제3호(법령상 소관업무 수행) <br>
+ <br> 한국은행법 제71조, 국고금관리법 시행령 제109조의3</td> 
+<td>[필수] 성명, 연락처</td> 
+</tr> 
+<tr> 
+<td class="tac">63</td> 
+<td>지출관 고유번호 정보 연혁관리</td> 
+<td>회계직 공무원 정보</td> 
+<td>개인정보보호법 제15조 제&#9312;항 제3호(법령상 소관업무 수행) <br>
+ <br> 한국은행법 제71조, 국고금관리법 시행령 제109조의3</td> 
+<td>[필수] 성명, 연락처</td> 
+</tr> 
+<tr> 
+<td class="tac">64</td> 
+<td>실시간 월계대사 조회 및 확인 내역</td> 
+<td>회계직 공무원 정보</td> 
+<td>개인정보보호법 제15조 제&#9312;항 제3호(법령상 소관업무 수행) <br>
+ <br> 한국은행법 제71조, 국고금관리법 시행령 제109조의3</td> 
+<td>[필수] 성명, 연락처</td> 
+</tr> 
+<tr> 
+<td class="tac">65</td> 
+<td>월별 수입계좌잔액</td> 
+<td>회계직 공무원 정보</td> 
+<td>개인정보보호법 제15조 제&#9312;항 제3호(법령상 소관업무 수행) <br>
+ <br> 한국은행법 제71조, 국고금관리법 시행령 제109조의3</td> 
+<td>[필수] 성명, 연락처</td> 
+</tr> 
+<tr> 
+<td class="tac">66</td> 
+<td>월별 세출계좌잔액</td> 
+<td>회계직 공무원 정보</td> 
+<td>개인정보보호법 제15조 제&#9312;항 제3호(법령상 소관업무 수행) <br>
+ <br> 한국은행법 제71조, 국고금관리법 시행령 제109조의3</td> 
+<td>[필수] 성명, 연락처</td> 
+</tr> 
+<tr> 
+<td class="tac">67</td> 
+<td>국고예금 계좌잔액 월별 내역</td> 
+<td>회계직 공무원 정보</td> 
+<td>개인정보보호법 제15조 제&#9312;항 제3호(법령상 소관업무 수행) <br>
+ <br> 한국은행법 제71조, 국고금관리법 시행령 제109조의3</td> 
+<td>[필수] 성명, 연락처</td> 
+</tr> 
+<tr> 
+<td class="tac">68</td> 
+<td>견양국고 수표 출고</td> 
+<td>국고수표 수령자 관리</td> 
+<td>개인정보보호법 제15조 제&#9312;항 제3호(법령상 소관업무 수행) <br>
+ <br> 한국은행법 제71조, 국고금관리법 시행령 제109조의3</td> 
+<td>[필수] 성명, 주민등록번호</td> 
+</tr> 
+<tr> 
+<td class="tac">69</td> 
+<td>국고수표책 출고</td> 
+<td>국고수표 수령자 관리</td> 
+<td>개인정보보호법 제15조 제&#9312;항 제3호(법령상 소관업무 수행) <br>
+ <br> 한국은행법 제71조, 국고금관리법 시행령 제109조의3</td> 
+<td>[필수] 성명, 주민등록번호</td> 
+</tr> 
+<tr> 
+<td class="tac">70</td> 
+<td>고객(증권소유자) 관리</td> 
+<td>증권 소유자 신분 확인</td> 
+<td>개인정보보호법 제15조 제&#9312;항 제2호(법령상 의무준수) 제3호(법령상 소관업무 수행) <br>
+ <br>
+ 한국은행법 제69조 제&#9312;항, 국채법 제15조 제&#9312;항,금융실명법 제3조 <br>
+ <br> 금융실명법 시행령 제3조 제1호</td> 
+<td>[필수] 성명, 주민등록번호, 전화번호, 주소</td> 
+</tr> 
+<tr> 
+<td class="tac">71</td> 
+<td>수입인지 판매기관 거래대리인 정보 </td> 
+<td>수입인지 판매기관앞 수입인지 공급시 수령인(거래대리인) 신분 확인</td> 
+<td>개인정보보호법 제15조 제&#9312;항 제2호(법령상 의무준수) <br>
+ <br> 수입인지법 제9조 제&#9312;항, 수입인지에 관한 법률 시행령 제19조 제&#9312;항</td> 
+<td>[필수] 성명, 직위, 생년월일, 결제모점장 성명</td> 
+</tr> 
+<tr> 
+<td class="tac">72</td> 
+<td>수입인지 판매인 정보 </td> 
+<td>수입인지 판매인과의 계약</td> 
+<td>개인정보보호법 제15조 제&#9312;항 제2호(법령상 의무준수) <br>
+ <br> 수입인지법 제9조 제&#9312;항, 수입인지에 관한 법률 시행령 제19조 제&#9312;항</td> 
+<td>[필수] 성명, 생년월일, 주소, 전화번호</td> 
+</tr> 
+<tr> 
+<td class="tac">73</td> 
+<td>증권거래원 정보 </td> 
+<td>증권담당 거래원 신분 확인</td> 
+<td>개인정보보호법 제15조 제&#9312;항 제3호(법령상 소관업무 수행) <br>
+ <br> 한국은행통화안정증권법 제3조</td> 
+<td>[필수] 성명</td> 
+</tr> 
+<tr> 
+<td class="tac">74</td> 
+<td>정부보관 유가증권 제출자 정보</td> 
+<td>정부보관유가증권 수탁 및 환부시 신분 확인</td> 
+<td>개인정보보호법 제15조 제&#9312;항 제2호(법령상 의무준수) <br>
+ <br> 정부유가증권취급규정 12조</td> 
+<td>[필수] 성명, 생년월일, 주소(주민등록번호: 2017.3.29.까지정부유가증권취급규정에 의거 처리)</td> 
+</tr> 
+<tr> 
+<td class="tac">75</td> 
+<td>정부유가증권 취급공무원 정보</td> 
+<td>정부유가증권 수탁계좌 관리</td> 
+<td>개인정보보호법 제15조 제&#9312;항 제2호(법령상 의무준수) <br>
+ <br> 정부유가증권 취급규정 제4조</td> 
+<td>[필수] 성명, 관서명</td> 
+</tr> 
+<tr> 
+<td class="tac">76</td> 
+<td>소손권 등 손상화폐 교환자 정보</td> 
+<td>화폐교환</td> 
+<td>개인정보보호법 제15조 제&#9312;항 제3호(법령상 소관업무 수행) <br>
+ <br> 한국은행법 제52조 제&#9313;항</td> 
+<td>[필수] 성명, 전화번호</td> 
+</tr> 
+<tr> 
+<td class="tac">출입자관리시스템</td> 
+<td class="tac">77</td> 
+<td>방문객 출입자 정보</td> 
+<td>국가중요시설 출입자 관리</td> 
+<td>개인정보보호법 제15조 제&#9312;항 제3호(법령상 소관업무 수행) <br>
+ <br> 보안업무규정 제3조, 제32조, 제34조, 보안업무규정시행규칙 제52조의2</td> 
+<td>[필수] 성명, 회사명, 생년월일, 차량번호/+ 휴대폰 번호(강남본부)</td> 
+</tr> 
+</tbody> 
+</table></div></div> 
+<li>&#9313; 한국은행은 각 개인정보파일 목적에 따라 최소한의 개인정보를 수집하고 있으며, 처리 목적이 변경되는 경우에는 「개인정보 보호법」 제18조에 따라 별도의 동의를 받는 등 필요한 조치를 이행할 예정입니다.</li> 
+<li>&#9314; 인터넷 서비스 이용과정에서 IP주소, 쿠키, MAC주소, 서비스 이용기록, 방문기록, 불량 이용기록 등의 개인정보 항목이 자동으로 생성되어 수집될 수 있습니다.</li><br>
+ 
+<p class="refer">※ 한국은행이 「개인정보 보호법」 제32조에 따라 등록&middot;공개하는 개인정보파일 현황은 개인정보보호위원회 개인정보보호 포털(www.privacy.go.kr) &rarr; 개인서비스 &rarr; 정보주체 권리행사 &rarr; 개인정보 열람 등 요구신청 &rarr; 개인정보파일 검색 &rarr; 기관명에 &ldquo;한국은행&rdquo; 입력 후 조회하실 수 있습니다.</p> 
+</ul> <a id="개인정보의 처리 및 보유기간" name="개인정보의 처리 및 보유기간"><span style="font-size: 10pt;">&nbsp;</span></a> 
+<h4>□ 개인정보의&nbsp; 처리&nbsp; 및&nbsp; 보유기간&nbsp; <img style="vertical-align: middle;" src="https://www.bok.or.kr/crosseditor/attachs/images/000019/image9.png" alt=""></h4> <!-- <h2>제3조(개인정보의 처리 및 보유기간)</h2> --> 
+<ul class="referList"> 
+<li>&#9312; 한국은행은 법령에 따른 개인정보 보유&middot;이용기간 또는 정보주체로부터 개인정보를 수집 시 동의 받은 개인정보 보유&middot;이용기간</li> 
+<li>&nbsp;&nbsp;&nbsp; 내에서 개인정보를 처리&middot;보유합니다.</li> 
+<li>&#9313; 각각의 개인정보 처리 및 보유기간은 다음과 같습니다. 
+<p class="ckTxt"><a href="#"><strong><span>한국은행의 개인정보 처리 및 보유기간(클릭)</span></strong></a></p> 
+<div class="ckCont"> 
+<div class="table"> 
+<table> 
+<caption>한국은행의 개인정보 처리 및 보유 기간</caption> 
+<thead> 
+<tr> 
+<th class="w15p NamoSE_border_show">개인정보 처리시스템</th> 
+<th scope="col" class="w6p NamoSE_border_show">번호</th> 
+<th scope="col" class="w44p NamoSE_border_show">개인정보 파일명</th> 
+<th scope="col" class="w35p NamoSE_border_show">처리 및 보유기간</th> 
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td class="tac" rowspan="20">대표 홈페이지<br>
+ <a href="http://www.bok.or.kr/">www.bok.or.kr</a></td> 
+<td class="tac">1</td> 
+<td>홈페이지 민원인 정보</td> 
+<td class="tac">3년</td> 
+</tr> 
+<tr> 
+<td class="tac">2</td> 
+<td>뉴스레터 배포 대상자 정보</td> 
+<td class="tac">2년<br> (단, 재동의시 2년 연장)</td> 
+</tr> 
+<tr> 
+<td class="tac">3</td> 
+<td>외환거래 질의 신청자 정보</td> 
+<td class="tac">3년</td> 
+</tr> 
+<tr> 
+<td class="tac">4</td> 
+<td>통화정책경시대회 신청자 정보</td> 
+<td class="tac">5년</td> 
+</tr> 
+<tr> 
+<td class="tac">5</td> 
+<td>어린이박물관 교실 신청자 정보</td> 
+<td class="tac">3년</td> 
+</tr> 
+<tr> 
+<td class="tac">6</td> 
+<td>화폐박물관 단체예약 신청자 정보</td> 
+<td class="tac">1년</td> 
+</tr> 
+<tr> 
+<td class="tac">7</td> 
+<td>화폐박물관 개인관람예약 신청자 정보</td> 
+<td class="tac">1개월</td> 
+</tr> 
+<tr> 
+<td class="tac">8</td> 
+<td>특별강좌 신청자 정보</td> 
+<td class="tac">1년</td> 
+</tr> 
+<tr> 
+<td class="tac">9</td> 
+<td>체험단체 신청자 정보</td> 
+<td class="tac">1년</td> 
+</tr> 
+<tr> 
+<td class="tac">10</td> 
+<td>아카이브 이용 방문신청자 정보</td> 
+<td class="tac">3년</td> 
+</tr> 
+<tr> 
+<td class="tac">11</td> 
+<td>아카이브 이용 문의자 정보</td> 
+<td class="tac">3년</td> 
+</tr> 
+<tr> 
+<td class="tac">12</td> 
+<td>교사직무연수 신청자 정보</td> 
+<td class="tac">3년</td> 
+</tr> 
+<tr> 
+<td class="tac">13</td> 
+<td>금요강좌 신청자 정보</td> 
+<td class="tac">5년</td> 
+</tr> 
+<tr> 
+<td class="tac">14</td> 
+<td>경제교육서포터즈 신청자 정보</td> 
+<td class="tac">3년</td> 
+</tr> 
+<tr> 
+<td class="tac">15</td> 
+<td>청소년 경제강좌 신청자 정보</td> 
+<td class="tac">3년</td> 
+</tr> 
+<tr> 
+<td class="tac">16</td> 
+<td>방문강좌 및 외부강좌 신청자 정보</td> 
+<td class="tac">3년</td> 
+</tr> 
+<tr> 
+<td class="tac">17</td> 
+<td>CLEAN신고 신고자 정보</td> 
+<td class="tac">3년</td> 
+</tr> 
+<tr> 
+<td class="tac">18</td> 
+<td>대량주화 교환신청자 정보</td> 
+<td class="tac">1년</td> 
+</tr> 
+<tr> 
+<td class="tac">19</td> 
+<td>화폐사랑 콘텐츠 공모전 참가 신청자 정보</td> 
+<td class="tac">2년</td> 
+</tr> 
+<tr> 
+<td class="tac">20</td> 
+<td>외환거래 질의 신청자 정보</td> 
+<td class="tac">3년</td> 
+</tr> 
+<tr> 
+<td class="tac" rowspan="2">전자도서관<br> dl.bok.or.kr</td> 
+<td class="tac">21</td> 
+<td>도서관 방문 신청자 정보</td> 
+<td class="tac">6개월</td> 
+</tr> 
+<tr> 
+<td class="tac">22</td> 
+<td>퇴직임직원용 전자도서관 이용자 정보</td> 
+<td class="tac">이용기간(2년) 종료 후 180일까지</td> 
+</tr> 
+<tr> 
+<td class="tac">간행물관리<br> 시스템</td> 
+<td class="tac">23</td> 
+<td>간행물 배포대상자 정보</td> 
+<td class="tac">간행물 구독 중지 요청 시까지</td> 
+</tr> 
+<tr> 
+<td class="tac" rowspan="5">경제통계시스템<br> ecos.bok.or.kr</td> 
+<td class="tac">24</td> 
+<td>API 요청회원 정보</td> 
+<td class="tac">2년<br> (단, 재동의시 2년 연장)</td> 
+</tr> 
+<tr> 
+<td class="tac">25</td> 
+<td>홈페이지 회원 정보</td> 
+<td class="tac">2년(단, 재동의시 2년 연장)</td> 
+</tr> 
+<tr> 
+<td class="tac">26</td> 
+<td>통계자료입수 회원정보</td> 
+<td class="tac">통계작성 기간 중</td> 
+</tr> 
+<tr> 
+<td class="tac">27</td> 
+<td>BSI 회원정보</td> 
+<td class="tac">3년</td> 
+</tr> 
+<tr> 
+<td class="tac">28</td> 
+<td>CSI 회원정보</td> 
+<td class="tac">5년</td> 
+</tr> 
+<tr> 
+<td class="tac" rowspan="2">전자설문 시스템</td> 
+<td class="tac">29</td> 
+<td>전자설문 일반회원 정보</td> 
+<td class="tac">조사 기간 중</td> 
+</tr> 
+<tr> 
+<td class="tac">30</td> 
+<td>전자설문(대출행태서베이, 기업경영분석) 일반회원 정보</td> 
+<td class="tac">조사 기간 중</td> 
+</tr> 
+<tr> 
+<td class="tac" rowspan="2">온라인<br>
+ 외환심사시스템<br> fxra.bok.or.kr:4443</td> 
+<td class="tac">31</td> 
+<td>온라인 시스템 이용신청자 정보</td> 
+<td class="tac">5년</td> 
+</tr> 
+<tr> 
+<td class="tac">32</td> 
+<td>온라인 신고인 및 대리인 정보</td> 
+<td class="tac">5년</td> 
+</tr> 
+<tr> 
+<td class="tac" rowspan="41">회계&middot;결제 시스템</td> 
+<td class="tac">36</td> 
+<td>금융기관 대표자 및 대리인</td> 
+<td class="tac">3년</td> 
+</tr> 
+<tr> 
+<td class="tac">37</td> 
+<td>한은금융망 참가기관 비상연락망</td> 
+<td class="tac">담당자 변경시까지</td> 
+</tr> 
+<tr> 
+<td class="tac">38</td> 
+<td>수취인지정자금이체 의뢰인&middot;수취인</td> 
+<td class="tac">자금이체 발생후 10년</td> 
+</tr> 
+<tr> 
+<td class="tac">39</td> 
+<td>한은금융망 등록 송신권한자</td> 
+<td class="tac">송신권한 승인후 10년(사용건 제외)</td> 
+</tr> 
+<tr> 
+<td class="tac">40</td> 
+<td>연계결제 처리정보</td> 
+<td class="tac">자금이체 발생후 10년</td> 
+</tr> 
+<tr> 
+<td class="tac">41</td> 
+<td>세입금 수납</td> 
+<td class="tac">10년</td> 
+</tr> 
+<tr> 
+<td class="tac">42</td> 
+<td>세입금 정정내역</td> 
+<td class="tac">10년</td> 
+</tr> 
+<tr> 
+<td class="tac">43</td> 
+<td>세입금수납 건별 오류내역</td> 
+<td class="tac">10년</td> 
+</tr> 
+<tr> 
+<td class="tac">44</td> 
+<td>각행분 세입금 건별 보고지연내역</td> 
+<td class="tac">10년</td> 
+</tr> 
+<tr> 
+<td class="tac">45</td> 
+<td>세입금영수증명 신청</td> 
+<td class="tac">1년</td> 
+</tr> 
+<tr> 
+<td class="tac">46</td> 
+<td>세입금 영수증명 검색내역</td> 
+<td class="tac">1년</td> 
+</tr> 
+<tr> 
+<td class="tac">47</td> 
+<td>반납금 건별내역</td> 
+<td class="tac">10년</td> 
+</tr> 
+<tr> 
+<td class="tac">48</td> 
+<td>실시간 전자이체 반납금 정정내역</td> 
+<td class="tac">10년</td> 
+</tr> 
+<tr> 
+<td class="tac">49</td> 
+<td>세입금 내부정정</td> 
+<td class="tac">10년</td> 
+</tr> 
+<tr> 
+<td class="tac">50</td> 
+<td>국고 조기 결제정보</td> 
+<td class="tac">10년</td> 
+</tr> 
+<tr> 
+<td class="tac">51</td> 
+<td>세입금수납 건별자료</td> 
+<td class="tac">10년</td> 
+</tr> 
+<tr> 
+<td class="tac">52</td> 
+<td>세입금 오납정정 전자의뢰</td> 
+<td class="tac">10년</td> 
+</tr> 
+<tr> 
+<td class="tac">53</td> 
+<td>실시간 세입금 청구정정내역</td> 
+<td class="tac">10년</td> 
+</tr> 
+<tr> 
+<td class="tac">54</td> 
+<td>국고금실시간 참가기관 담당자 정보</td> 
+<td class="tac">담당자 교체시 즉시 파기</td> 
+</tr> 
+<tr> 
+<td class="tac">55</td> 
+<td>국세환급금 계좌확인 개별명세</td> 
+<td class="tac">5년</td> 
+</tr> 
+<tr> 
+<td class="tac">56</td> 
+<td>국세환급금 계좌이체 개별명세일별</td> 
+<td class="tac">5년</td> 
+</tr> 
+<tr> 
+<td class="tac">57</td> 
+<td>실시간 이체요구 건별내역</td> 
+<td class="tac">5년</td> 
+</tr> 
+<tr> 
+<td class="tac">58</td> 
+<td>은행응답 이체요구 건별내역</td> 
+<td class="tac">5년</td> 
+</tr> 
+<tr> 
+<td class="tac">59</td> 
+<td>실시간 이체거래 송수신 내역</td> 
+<td class="tac">5년</td> 
+</tr> 
+<tr> 
+<td class="tac">60</td> 
+<td>실시간 수입금대체 지출내역</td> 
+<td class="tac">5년</td> 
+</tr> 
+<tr> 
+<td class="tac">61</td> 
+<td>실시간 국고금 지로납부 건별 내역</td> 
+<td class="tac">5년</td> 
+</tr> 
+<tr> 
+<td class="tac">62</td> 
+<td>지출관고유번호 정보</td> 
+<td class="tac">5년</td> 
+</tr> 
+<tr> 
+<td class="tac">63</td> 
+<td>지출관고유번호 정보 연혁관리</td> 
+<td class="tac">5년</td> 
+</tr> 
+<tr> 
+<td class="tac">64</td> 
+<td>실시간 월계대사 조회 및 확인내역</td> 
+<td class="tac">5년</td> 
+</tr> 
+<tr> 
+<td class="tac">65</td> 
+<td>월별 수입계좌잔액</td> 
+<td class="tac">5년</td> 
+</tr> 
+<tr> 
+<td class="tac">66</td> 
+<td>월별 세출계좌잔액</td> 
+<td class="tac">5년</td> 
+</tr> 
+<tr> 
+<td class="tac">67</td> 
+<td>국고예금계좌잔액 월별 내역</td> 
+<td class="tac">5년</td> 
+</tr> 
+<tr> 
+<td class="tac">68</td> 
+<td>견양국고수표 출고</td> 
+<td class="tac">5년</td> 
+</tr> 
+<tr> 
+<td class="tac">69</td> 
+<td>국고수표책 출고</td> 
+<td class="tac">5년</td> 
+</tr> 
+<tr> 
+<td class="tac">70</td> 
+<td>고객(증권소유자) 관리</td> 
+<td class="tac">10년</td> 
+</tr> 
+<tr> 
+<td class="tac">71</td> 
+<td>수입인지 판매기관 거래대리인 정보</td> 
+<td class="tac">수입인지 거래대리인 지정해지후 5년</td> 
+</tr> 
+<tr> 
+<td class="tac">72</td> 
+<td>수입인지 판매인 정보</td> 
+<td class="tac">판매인 계약해지후 5년</td> 
+</tr> 
+<tr> 
+<td class="tac">73</td> 
+<td>증권거래원 정보</td> 
+<td class="tac">5년(담당자 교체시 즉시파기)</td> 
+</tr> 
+<tr> 
+<td class="tac">74</td> 
+<td>정부보관 유가증권 제출자 정보</td> 
+<td class="tac">정부보관 유가증권 환부 완료후 5년</td> 
+</tr> 
+<tr> 
+<td class="tac">75</td> 
+<td>정부유가증권 취급공무원 정보</td> 
+<td class="tac">정부유가증권 취급공무원 변경후 5년</td> 
+</tr> 
+<tr> 
+<td class="tac">76</td> 
+<td>소손권 등 손상화폐 교환자 정보</td> 
+<td class="tac">1년</td> 
+</tr> 
+<tr> 
+<td class="tac">출입자관리시스템</td> 
+<td class="tac">77</td> 
+<td>방문객 출입자 정보</td> 
+<td class="tac">2년</td> 
+</tr> 
+</tbody> 
+</table></div></div></li> 
+<li>&#9314; 제2항에도 불구하고 다음 각 호의 사유에 해당하는 경우 개인정보 처리 및 보유기간은 각 해당 사유 종료 시까지입니다. 
+<ul> 
+<li>1. 관계 법령 위반에 따른 수사&middot;조사 등이 진행 중인 경우:해당 수사&middot;조사 종료 시까지</li> 
+<li>2. 홈페이지 이용에 따른 채권&middot;채무관계 잔존 시:해당 채권&middot;채무관계 정산 시까지</li> 
+<li>3. 민원사무 처리 :민원처리 종료 후 3년</li> 
+</ul></li> 
+</ul> 
+<h2 style="line-height: 100%;"><a id="개인정보의 제3자 제공" name="개인정보의 제3자 제공"><span style="font-size: 10pt;">&nbsp;</span></a><br></h2> 
+<h4>□ 개인정보의&nbsp; 제3자&nbsp; 제공&nbsp; <img style="vertical-align: middle;" src="https://www.bok.or.kr/crosseditor/attachs/images/000019/image10.png" alt=""></h4> <!-- <h2>제4조(개인정보의 제3자 제공)</h2> --> 
+<ul class="referList"> 
+<li>&#9312; 한국은행은 정보주체의 동의, 법률의 특별한 규정 등「개인정보보호법」제17조 및 제18조에 해당하는 경우에만 개인정보를 제3자에게 제공합니다.</li> 
+<li>&#9313; 한국은행은 개인정보를「개인정보보호법」제18조 제4항에 따라 제3자에게 제공하는 경우 그 목적, 근거, 범위 등에 관하여 <a href="https://www.bok.or.kr/portal/bbs/P0002728/list.do?menuNo=200237"><strong>인터넷 홈페이지에 공개</strong></a>합니다.</li> 
+</ul> 
+<h2 style="line-height: 100%;"><a id="개인정보 처리의 위탁" name="개인정보 처리의 위탁"><span style="font-size: 10pt;">&nbsp;</span></a><br></h2> 
+<h4>□ 개인정보처리의&nbsp; 위탁&nbsp; <img style="vertical-align: middle;" src="https://www.bok.or.kr/crosseditor/attachs/images/000019/image11.png" alt=""></h4> <!-- <h2>제5조(개인정보처리의 위탁)</h2> --> 
+<ul class="referList"> 
+<li>&#9312; 한국은행은 원활한 개인정보 업무처리를 위하여 개인정보 처리업무를 위탁하고 있으며, 위탁받는 자(수탁자) 및 위탁하는 업무의 내용을 <a href="https://www.bok.or.kr/portal/bbs/P0002728/list.do?menuNo=200237"><strong>인터넷 홈페이지에 공개</strong></a>합니다.</li> 
+<li>&#9313; 한국은행은 개인정보 처리업무를 위탁 시 「개인정보보호법」제26조에 따라 위탁업무 수행목적 외 개인정보 처리금지, 기술적&middot;관리적 보호조치, 재위탁 제한, 수탁자에 대한 관리&middot;감독, 손해배상 등 책임에 관한 사항을 계약서 등 문서에 명시하고, 수탁자가 개인정보를 안전하게 처리하는지를 감독하고 있습니다.</li> 
+<li>&#9314; 위탁업무의 내용이나 수탁자가 변경될 경우에는 지체 없이 인터넷 홈페이지를 통해 공개하도록 하겠습니다.</li> 
+</ul> 
+<h2 style="line-height: 100%;"><a id="개인정보 영향평가 수행 결과" name="개인정보 영향평가 수행 결과"><span style="font-size: 10pt;">&nbsp;</span></a><br></h2> 
+<h4>□ 개인정보 영향평가 수행 결과&nbsp; <img style="vertical-align: middle;" src="https://www.bok.or.kr/crosseditor/attachs/images/000019/image8.png" alt=""></h4> 
+<ul class="referList"> 
+	<li>&#9312; 한국은행은 개인정보처리시스템의 운영 및 변경으로 정보주체의 개인정보파일에 미칠 영향에 대해 조사, 분석, 평가하기 위해 「개인정보 보호법」 제33조에 해당하는 경우 "개인정보 영향평가"를 수행하고 있습니다.</li> 
+	<li>&#9313; 한국은행은 다음 개인정보파일에 대해 영향평가를 수행하였습니다.</li>
+</ul>
+<p class="ckTxt"><a href="#"><strong><span>개인정보 영향평가 수행 현황(클릭)</span></strong></a></p> 
+<div class="ckCont"> 
+<div class="table"> 
+<table> 
+<caption>한국은행 개인정보 영향평가 수행 현황</caption> 
+<thead> 
+<tr> 
+<th scope="col" class="w6p NamoSE_border_show">번호</th> 
+<th scope="col" class="w50p NamoSE_border_show">영향평가 대상</th> 
+<th scope="col" class="w44p NamoSE_border_show">영향평가 수행연도</th> 
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td class="tac">1</td> 
+<td align="center">차세대 회계결제시스템</td> 
+<td align="center">2019</td> 
+</tr> 
+<tr> 
+<td class="tac">2</td> 
+<td align="center">회계시스템</td> 
+<td align="center">2014</td> 
+</tr> 
+<tr> 
+<td class="tac">3</td> 
+<td align="center">차세대 외환정보시스템</td> 
+<td align="center">2012</td> 
+</tr> 
+</tbody> 
+</table></div></div></li> 
+<h2 style="line-height: 100%;"><a id="정보주체와 법정대리인의 권리의무 및 행사방법" name="정보주체와 법정대리인의 권리의무 및 행사방법"><span style="font-size: 10pt;">&nbsp;</span></a><br></h2> 
+<h4>□ 정보주체와 법정대리인의 권리&middot;의무 및 행사방법&nbsp; <img style="vertical-align: middle;" src="https://www.bok.or.kr/crosseditor/attachs/images/000019/image12.png" alt=""></h4> <!-- <h2>제6조(정보주체와 법정대리인의 권리·의무 및 행사방법)</h2> --> 
+
+
+
+<ul class="referList"> 
+	<li>&#9312; 정보주체는 아래의 한국은행 담당부서에 <strong>&lt;별지 서식 1&gt;</strong><a href="/portal/cmmn/file/fileDown.do?atchFileId=FILE_000000000016884&amp;fileSn=1" class="b-down xs">다운로드</a>을 제출함으로써 「개인정보 보호법」제35조 제1항, 제36조 제1항, 제37조 제1항에 따른 개인정보의 열람, 정정&middot;삭제, 처리정지 요구 등의 권리를 행사할 수 있습니다.
+	
+		<p class="ckTxt"><a href="#"><strong><span>한국은행 각 개인정보파일의 담당부서 및 연락처(클릭)</span></strong></a></p> 
+		<div class="ckCont"> 
+		<div class="table scrollX tac"> 
+		<table> 
+		<caption>한국은행 각 개인정보파일의 담당부서 및 연락처</caption> 
+		<thead> 
+		<tr> 
+		<th class="w15p NamoSE_border_show">개인정보<br> 처리시스템</th> 
+		<th class="w7p NamoSE_border_show" scope="col">번호</th> 
+		<th class="w30p NamoSE_border_show" scope="col">개인정보 파일명</th> 
+		<th class="w24p NamoSE_border_show" scope="col">처리부서<br> 담당부서</th> 
+		<th class="w24p NamoSE_border_show" scope="col">연락처<br> 이메일 주소</th> 
+		</tr> 
+		</thead> 
+		<tbody> 
+		<tr> 
+		<td rowspan="21">대표 홈페이지<br>
+		 <a href="http://www.bok.or.kr/">www.bok.or.kr</a></td> 
+		<td>1</td> 
+		<td>홈페이지 민원인정보</td> 
+		<td>기획협력국<br> 대외협력팀</td> 
+		<td>02-759-4040<br>
+		 <a href="mailto:bokexcop@bok.or.kr">bokexcop@bok.or.kr</a></td> 
+		</tr> 
+		<tr> 
+		<td>2</td> 
+		<td>뉴스레터 배포 대상자 정보</td> 
+		<td>커뮤니케이션국<br> 디지털미디어팀</td> 
+		<td>02-759-5456<br>
+		 <a href="mailto:bokpr@bok.or.kr">bokpr@bok.or.kr</a></td> 
+		</tr> 
+		<tr> 
+		<td>3</td> 
+		<td>정보공개 신청자 정보</td> 
+		<td>커뮤니케이션국<br> 커뮤니케이션운영팀</td> 
+		<td>02-759-5167, 4520<br>
+		 <a href="mailto:bokkm@bok.or.kr">bokkm@bok.or.kr</a></td> 
+		</tr> 
+		<tr> 
+		<td>4</td> 
+		<td>통화정책경시대회 신청자 정보</td> 
+		<td>커뮤니케이션국 <br> 커뮤니케이션기획팀</td> 
+		<td>02-759-4784, 4649, 4759<br>
+		 <a href="mailto:bokpr@bok.or.kr">bokpr@bok.or.kr</a></td> 
+		</tr> 
+		<tr> 
+		<td>5</td> 
+		<td>어린이박물관교실 신청자 정보</td> 
+		<td>커뮤니케이션국 <br> 화폐박물관팀</td> 
+		<td>02-759-4125<br>
+		 <a href="mailto:museum@bok.or.kr">museum@bok.or.kr</a></td> 
+		</tr> 
+		<tr> 
+		<td>6</td> 
+		<td>화폐박물관 단체예약 신청자 정보</td> 
+		<td>커뮤니케이션국 <br> 화폐박물관팀</td> 
+		<td>02-759-4125<br>
+		 <a href="mailto:museum@bok.or.kr">museum@bok.or.kr</a></td> 
+		</tr> 
+		<tr> 
+		<td>7</td> 
+		<td>화폐박물관 개인관람예약 신청자 정보</td> 
+		<td>커뮤니케이션국 <br> 화폐박물관팀</td> 
+		<td>02-759-4125<br>
+		 <a href="mailto:museum@bok.or.kr">museum@bok.or.kr</a></td> 
+		</tr> 
+		<tr> 
+		<td>8</td> 
+		<td>특별강좌 신청자 정보</td> 
+		<td>커뮤니케이션국 <br> 화폐박물관팀</td> 
+		<td>02-759-4125<br>
+		 <a href="mailto:museum@bok.or.kr">museum@bok.or.kr</a></td> 
+		</tr> 
+		<tr> 
+		<td>9</td> 
+		<td>체험단체 신청자 정보</td> 
+		<td>커뮤니케이션국 <br> 화폐박물관팀</td> 
+		<td>02-759-4125<br>
+		 <a href="mailto:museum@bok.or.kr">museum@bok.or.kr</a></td> 
+		</tr> 
+		<tr> 
+		<td>10</td> 
+		<td>아카이브 이용 방문신청자 정보</td> 
+		<td>커뮤니케이션국 <br> 아카이브반</td> 
+		<td>02-759-5491<br>
+		 <a href="mailto:bok-archive@bok.or.kr">bok-archive@bok.or.kr</a></td> 
+		</tr> 
+		<tr> 
+		<td>11</td> 
+		<td>아카이브 이용 문의자 정보</td> 
+		<td>커뮤니케이션국 <br> 아카이브반</td> 
+		<td>02-759-5491<br>
+		 <a href="mailto:bok-archive@bok.or.kr">bok-archive@bok.or.kr</a></td> 
+		</tr> 
+		<tr> 
+		<td>12</td> 
+		<td>교사직무연수 신청자 정보</td> 
+		<td>경제교육실 <br> 경제교육기획팀</td> 
+		<td>02-759-4269<br>
+		 <a href="mailto:bokedu@bok.or.kr">bokedu@bok.or.kr</a></td> 
+		</tr> 
+		<tr> 
+		<td>13</td> 
+		<td>금요강좌 신청자 정보</td> 
+		<td>경제교육실 <br> 경제교육기획팀</td> 
+		<td>02-759-5325<br>
+		 <a href="mailto:bokedu@bok.or.kr">bokedu@bok.or.kr</a></td> 
+		</tr> 
+		<tr> 
+		<td>14</td> 
+		<td>경제교육서포터즈 신청자 정보</td> 
+		<td>커뮤니케이션국 <br> 경제교육기획팀</td> 
+		<td>02-759-4269<br>
+		 <a href="mailto:bokedu@bok.or.kr">bokedu@bok.or.kr</a></td> 
+		</tr> 
+		<tr> 
+		<td>15</td> 
+		<td>청소년 경제강좌 신청자 정보</td> 
+		<td>경제교육실 <br> 경제교육기획팀</td> 
+		<td>02-759-4269<br>
+		 <a href="mailto:bokedu@bok.or.kr">bokedu@bok.or.kr</a></td> 
+		</tr> 
+		<tr> 
+		<td>16</td> 
+		<td>방문강좌 및 외부강좌 신청자 정보</td> 
+		<td>경제교육실 <br> 경제교육운영팀</td> 
+		<td>02-759-5369<br>
+		 <a href="mailto:eduman@bok.or.kr">eduman@bok.or.kr</a></td> 
+		</tr> 
+		<tr> 
+		<td>17</td> 
+		<td>CLEAN신고 신고자 정보</td> 
+		<td>윤리경영실 <br> 준법지원팀</td> 
+		<td>02-759-5373, 5576<br>
+		 <a href="mailto:compliance@bok.or.kr">compliance@bok.or.kr</a></td> 
+		</tr> 
+		<tr> 
+		<td>17</td> 
+		<td>CLEAN신고 신고자 정보</td> 
+		<td>윤리경영실 <br> 준법지원팀</td> 
+		<td>02-759-5373, 5576<br>
+		 <a href="mailto:compliance@bok.or.kr">compliance@bok.or.kr</a></td> 
+		</tr> 
+		<tr> 
+		<td>18</td> 
+		<td>대량주화 교환신청자 정보</td> 
+		<td>발권국 <br> 화폐수급팀</td> 
+		<td>02-759-4164</td> 
+		</tr> 
+		<tr> 
+		<td>19</td> 
+		<td>화폐사랑 콘텐츠 공모전 참가 신청자 정보</td> 
+		<td>발권국 <br> 발권정책팀</td> 
+		<td>02-759-4067<br>
+		 <a href="mailto:issuepol@bok.or.kr">issuepol@bok.or.kr</a></td> 
+		</tr> 
+		<tr> 
+		<td>20</td> 
+		<td>외환거래 질의 신청자 정보</td> 
+		<td>국제국 <br> 외환심사팀</td> 
+		<td>02-759-5765<br>
+		 <a href="mailto:bokfxrt@bok.or.kr">bokfxrt@bok.or.kr</a></td> 
+		</tr> 
+		<tr> 
+		<td rowspan="2">전자도서관<br> dl.bok.or.kr</td> 
+		<td>21</td> 
+		<td>도서관 방문 신청자 정보</td> 
+		<td>커뮤니케이션국<br> 정보자료반</td> 
+		<td>02-759-4285<br>
+		 <a href="mailto:libinfor1@bok.or.kr">libinfor1@bok.or.kr</a></td> 
+		</tr> 
+		<tr> 
+		<td>22</td> 
+		<td>퇴직임직원용 전자도서관 이용자 정보</td> 
+		<td>커뮤니케이션국 <br> 정보자료반</td> 
+		<td>02-759-4285<br>
+		 <a href="mailto:libinfor1@bok.or.kr">libinfor1@bok.or.kr</a></td> 
+		</tr> 
+		<tr> 
+		<td>간행물관리<br> 시스템</td> 
+		<td>23</td> 
+		<td>간행물 배포대상자 정보</td> 
+		<td>커뮤니케이션국<br> 디지털미디어팀</td> 
+		<td>02-759-5350<br>
+		 <a href="mailto:bokpr@bok.or.kr">bokpr@bok.or.kr</a></td> 
+		</tr> 
+		<tr> 
+		<td rowspan="5">경제통계시스템<br> ecos.bok.or.kr</td> 
+		<td>24</td> 
+		<td>API 요청회원 정보</td> 
+		<td>경제통계국 <br> 통계정보팀</td> 
+		<td>02-759-4665<br>
+		 <a href="mailto:ecos@bok.or.kr">ecos@bok.or.kr</a></td> 
+		</tr> 
+		<tr> 
+		<td>25</td> 
+		<td>홈페이지 회원 정보</td> 
+		<td>경제통계국 <br> 통계정보팀</td> 
+		<td>02-759-4665<br>
+		 <a href="mailto:ecos@bok.or.kr">ecos@bok.or.kr</a></td> 
+		</tr> 
+		<tr> 
+		<td>26</td> 
+		<td>통계자료입수 회원정보</td> 
+		<td>경제통계국 <br> 및 해당 부서</td> 
+		<td>02-759-5382<br>
+		 <a href="mailto:ecos@bok.or.kr">ecos@bok.or.kr</a></td> 
+		</tr> 
+		<tr> 
+		<td>27</td> 
+		<td>BSI 회원정보</td> 
+		<td>경제통계국 <br> 및 해당 부서</td> 
+		<td>02-759-5650<br>
+		 <a href="mailto:ecos@bok.or.kr">ecos@bok.or.kr</a></td> 
+		</tr> 
+		<tr> 
+		<td>28</td> 
+		<td>CSI 회원정보</td> 
+		<td>경제통계국 <br> 및 해당 부서</td> 
+		<td>02-759-5678<br>
+		 <a href="mailto:ecos@bok.or.kr">ecos@bok.or.kr</a></td> 
+		</tr> 
+		<tr> 
+		<td rowspan="2">전자설문시스템</td> 
+		<td>29</td> 
+		<td>전자설문 일반회원 정보</td> 
+		<td>경제통계국<br> 통계정보팀</td> 
+		<td>02-759-4665<br>
+		 <a href="mailto:ecos@bok.or.kr">ecos@bok.or.kr</a></td> 
+		</tr> 
+		<tr> 
+		<td>30</td> 
+		<td>전자설문(대출행태서베이, 기업경영분석) 일반회원 정보</td> 
+		<td>경제통계국 <br> 및 해당 부서</td> 
+		<td>02-759-6879, 4953<br>
+		 <a href="mailto:ecos@bok.or.kr">ecos@bok.or.kr</a></td> 
+		</tr> 
+		<tr> 
+		<td rowspan="2">온라인<br>
+		 외환심사시스템<br> fxra.bok.or.kr:4443</td> 
+		<td>31</td> 
+		<td>온라인 시스템 이용신청자 정보</td> 
+		<td>국제국<br> 외환심사팀</td> 
+		<td>02-759-5776<br>
+		 <a href="mailto:bokfxrt@bok.or.kr">bokfxrt@bok.or.kr</a></td> 
+		</tr> 
+		<tr> 
+		<td>32</td> 
+		<td>온라인 신고인 및 대리인 정보</td> 
+		<td>국제국 <br> 외환심사팀</td> 
+		<td>02-759-5776<br>
+		 <a href="mailto:bokfxrt@bok.or.kr">bokfxrt@bok.or.kr</a></td> 
+		</tr> 
+		<tr> 
+		<td rowspan="3">외환정보</td> 
+		<td>33</td> 
+		<td>거래외국환은행 정보</td> 
+		<td>국제국<br> 외환정보팀</td> 
+		<td>02-759-5788</td> 
+		</tr> 
+		<tr> 
+		<td>34</td> 
+		<td>외국환거래내역의 외국환거래자</td> 
+		<td>국제국 <br> 외환정보팀</td> 
+		<td>02-759-5788</td> 
+		</tr> 
+		<tr> 
+		<td>35</td> 
+		<td>외환정보시스템 사용자 ID</td> 
+		<td>국제국 <br> 외환정보팀</td> 
+		<td>02-759-5788</td> 
+		</tr> 
+		<tr> 
+		<td rowspan="42">회계&middot;결제 시스템</td> 
+		<td>36</td> 
+		<td>금융기관 대표자 및 대리인</td> 
+		<td>금융업무실<br> 결제업무팀</td> 
+		<td>02-759-4538</td> 
+		</tr> 
+		<tr> 
+		<td>37</td> 
+		<td>한은금융망 참가기관 비상연락망</td> 
+		<td>금융업무실 <br> 결제운영팀</td> 
+		<td>02-759-6669</td> 
+		</tr> 
+		<tr> 
+		<td>38</td> 
+		<td>수취인지정자금이체 의뢰인&middot;수취인</td> 
+		<td>금융업무실 <br> 결제운영팀</td> 
+		<td>02-750-6620</td> 
+		</tr> 
+		<tr> 
+		<td>39</td> 
+		<td>한은금융망 등록 송신권한자</td> 
+		<td>금융업무실 <br> 결제운영팀</td> 
+		<td>02-759-6620</td> 
+		</tr> 
+		<tr> 
+		<td>40</td> 
+		<td>연계결제 처리정보</td> 
+		<td>금융업무실 <br> 결제운영팀</td> 
+		<td>02-759-6675</td> 
+		</tr> 
+		<tr> 
+		<td>41</td> 
+		<td>세입금 수납</td> 
+		<td>금융업무실 <br> 국고팀</td> 
+		<td>02-759-4680</td> 
+		</tr> 
+		<tr> 
+		<td>42</td> 
+		<td>세입금 정정내역</td> 
+		<td>금융업무실 <br> 국고팀</td> 
+		<td>02-759-4681</td> 
+		</tr> 
+		<tr> 
+		<td>43</td> 
+		<td>세입금수납 건별 오류내역</td> 
+		<td>금융업무실 <br> 국고팀</td> 
+		<td>02-759-4681</td> 
+		</tr> 
+		<tr> 
+		<td>44</td> 
+		<td>각행분 세입금 건별 보고지연내역</td> 
+		<td>금융업무실 <br> 국고팀</td> 
+		<td>02-759-4681</td> 
+		</tr> 
+		<tr> 
+		<td>45</td> 
+		<td>세입금영수증명 신청</td> 
+		<td>금융업무실 <br> 국고팀</td> 
+		<td>02-759-4680</td> 
+		</tr> 
+		<tr> 
+		<td>46</td> 
+		<td>세입금 영수증명 검색내역</td> 
+		<td>금융업무실 <br> 국고팀</td> 
+		<td>02-759-4680</td> 
+		</tr> 
+		<tr> 
+		<td>47</td> 
+		<td>반납금 건별내역</td> 
+		<td>금융업무실 <br> 국고팀</td> 
+		<td>02-759-4680</td> 
+		</tr> 
+		<tr> 
+		<td>48</td> 
+		<td>실시간 전자이체 반납금 정정내역</td> 
+		<td>금융업무실 <br> 국고팀</td> 
+		<td>02-759-4680</td> 
+		</tr> 
+		<tr> 
+		<td>49</td> 
+		<td>세입금 내부정정</td> 
+		<td>금융업무실 <br> 국고팀</td> 
+		<td>02-759-4681</td> 
+		</tr> 
+		<tr> 
+		<td>50</td> 
+		<td>국고 조기 결제정보</td> 
+		<td>금융업무실 <br> 국고팀</td> 
+		<td>02-759-4681</td> 
+		</tr> 
+		<tr> 
+		<td>51</td> 
+		<td>세입금수납 건별자료</td> 
+		<td>금융업무실 <br> 국고팀</td> 
+		<td>02-759-4680</td> 
+		</tr> 
+		<tr> 
+		<td>52</td> 
+		<td>세입금 오납정정 전자의뢰</td> 
+		<td>금융업무실 <br> 국고팀</td> 
+		<td>02-759-4681</td> 
+		</tr> 
+		<tr> 
+		<td>53</td> 
+		<td>실시간 세입금 청구정정내역</td> 
+		<td>금융업무실 <br> 국고팀</td> 
+		<td>02-759-4680</td> 
+		</tr> 
+		<tr> 
+		<td>54</td> 
+		<td>국고금실시간 참가기관 담당자 정보</td> 
+		<td>금융업무실 <br> 국고팀</td> 
+		<td>02-759-4681</td> 
+		</tr> 
+		<tr> 
+		<td>55</td> 
+		<td>국세환급금 계좌확인 개별명세</td> 
+		<td>금융업무실 <br> 국고팀</td> 
+		<td>02-759-4680</td> 
+		</tr> 
+		<tr> 
+		<td>56</td> 
+		<td>국세환급금 계좌이체 개별명세일별</td> 
+		<td>금융업무실 <br> 국고팀</td> 
+		<td>02-759-4680</td> 
+		</tr> 
+		<tr> 
+		<td>57</td> 
+		<td>실시간 이체요구 건별내역</td> 
+		<td>금융업무실 <br> 국고팀</td> 
+		<td>02-759-4680</td> 
+		</tr> 
+		<tr> 
+		<td>58</td> 
+		<td>은행응답 이체요구 건별내역</td> 
+		<td>금융업무실 <br> 국고팀</td> 
+		<td>02-759-4680</td> 
+		</tr> 
+		<tr> 
+		<td>59</td> 
+		<td>실시간 이체거래 송수신 내역</td> 
+		<td>금융업무실 <br> 국고팀</td> 
+		<td>02-759-4680</td> 
+		</tr> 
+		<tr> 
+		<td>60</td> 
+		<td>실시간 수입금대체 지출내역</td> 
+		<td>금융업무실 <br> 국고팀</td> 
+		<td>02-759-4680</td> 
+		</tr> 
+		<tr> 
+		<td>61</td> 
+		<td>실시간 국고금 지로납부 건별 내역</td> 
+		<td>금융업무실 <br> 국고팀</td> 
+		<td>02-759-4680</td> 
+		</tr> 
+		<tr> 
+		<td>62</td> 
+		<td>지출관고유번호 정보</td> 
+		<td>금융업무실 <br> 국고팀</td> 
+		<td>02-759-4680</td> 
+		</tr> 
+		<tr> 
+		<td>63</td> 
+		<td>지출관고유번호 정보 연혁관리</td> 
+		<td>금융업무실 <br> 국고팀</td> 
+		<td>02-759-4680</td> 
+		</tr> 
+		<tr> 
+		<td>64</td> 
+		<td>실시간 월계대사 조회 및 확인내역</td> 
+		<td>금융업무실 <br> 국고팀</td> 
+		<td>02-759-4680</td> 
+		</tr> 
+		<tr> 
+		<td>65</td> 
+		<td>월별 수입계좌잔액</td> 
+		<td>금융업무실 <br> 국고팀</td> 
+		<td>02-759-4680</td> 
+		</tr> 
+		<tr> 
+		<td>66</td> 
+		<td>월별 세출계좌잔액</td> 
+		<td>금융업무실 <br> 국고팀</td> 
+		<td>02-759-4680</td> 
+		</tr> 
+		<tr> 
+		<td>67</td> 
+		<td>국고예금계좌잔액 월별 내역</td> 
+		<td>금융업무실 <br> 국고팀</td> 
+		<td>02-759-4681</td> 
+		</tr> 
+		<tr> 
+		<td>68</td> 
+		<td>견양국고수표 출고</td> 
+		<td>금융업무실 <br> 국고팀</td> 
+		<td>02-759-4737</td> 
+		</tr> 
+		<tr> 
+		<td>69</td> 
+		<td>국고수표책 출고</td> 
+		<td>금융업무실 <br> 국고팀</td> 
+		<td>02-759-4737</td> 
+		</tr> 
+		<tr> 
+		<td>70</td> 
+		<td>고객(증권소유자) 관리</td> 
+		<td>금융업무실 <br> 증권팀</td> 
+		<td>02-759-4736</td> 
+		</tr> 
+		<tr> 
+		<td>71</td> 
+		<td>수입인지 판매기관 거래대리인 정보</td> 
+		<td>금융업무실 <br> 증권팀</td> 
+		<td>02-759-4731</td> 
+		</tr> 
+		<tr> 
+		<td>72</td> 
+		<td>수입인지 판매인 정보</td> 
+		<td>금융업무실 <br> 증권팀</td> 
+		<td>02-759-4731</td> 
+		</tr> 
+		<tr> 
+		<td rowspan="2">73</td> 
+		<td rowspan="2">증권거래원 정보</td> 
+		<td>금융시장국 <br> 시장운영팀</td> 
+		<td>02-759-4575</td> 
+		</tr> 
+		<tr> 
+		<td>금융업무실 <br> 증권팀</td> 
+		<td>02-759-4734</td> 
+		</tr> 
+		<tr> 
+		<td>74</td> 
+		<td>정부보관 유가증권 제출자 정보</td> 
+		<td>금융업무실 <br> 증권팀</td> 
+		<td>02-759-4731</td> 
+		</tr> 
+		<tr> 
+		<td>75</td> 
+		<td>정부유가증권 취급공무원 정보</td> 
+		<td>금융업무실 <br> 증권팀</td> 
+		<td>02-759-4731</td> 
+		</tr> 
+		<tr> 
+		<td>76</td> 
+		<td>소손권 등 손상화폐 교환자 정보</td> 
+		<td>발권국 <br> 발권기획팀</td> 
+		<td>02-759-4182</td> 
+		</tr> 
+		<tr> 
+		<td rowspan="2">출입자관리<br> 시스템</td> 
+		<td rowspan="2">77</td> 
+		<td rowspan="2">방문객 출입자 정보</td> 
+		<td>안전관리실<br> 안전운영팀</td> 
+		<td>02-759-4827<br>
+		 <a href="mailto:boksc090@bok.or.kr">boksc090@bok.or.kr</a></td> 
+		</tr> 
+		<tr> 
+		<td>강남본부총무팀</td> 
+		<td>02-560-1023, 1100<br>
+		 <a href="mailto:bokateam@bok.or.kr">bokateam@bok.or.kr</a></td> 
+		</tr> 
+		</tbody> 
+		</table>
+	</div>
+	
+	</li> 
+
+	<li>&#9313; 정보주체는 제1항의 부서 이외에 개인정보보호위원회의 개인정보보호 포털(www.privacy.go.kr)을 통하여서도 개인정보의 열람, 정정&middot;삭제, 처리정지 등의 권리를 행사할 수 있습니다.<br> ※ 개인정보보호위원회 개인정보보호 포털(www.privacy.go.kr) &rarr; 민원마당 &rarr; 개인정보 열람 등 요구(공공아이핀을 통한 실명인증 필요)</li> 
+	<li>&#9314; 제1항에 따른 권리 행사는 「개인정보 보호법 시행령」 제41조 제2항 및 제43조 제1항, 제44조 제1항에 따라 &lt;별지 서식 1&gt;에 따른 요구서를 작성한 후 서면, 전자우편, 모사전송(FAX) 또는 홈페이지 제출 등을 통하여 하실 수 있으며, 한국은행은 이에 대해 지체없이 조치하겠습니다.<br>
+		<span class="help3">한국은행 홈페이지(<a href="http://www.bok.or.kr">http://www.bok.or.kr</a>)&nbsp; &rarr; 고객의 소리&nbsp; &rarr; 민원&nbsp; &rarr; 민원신청&nbsp; &rarr; 일반민원 신청 (로그인 필요) </span>
+	</li> 
+</ul>
+
+
+<ul class="referList"> 
+	<li>&#9315; 제1항 따른 권리 행사는 정보주체의 법정대리인이나 위임을 받은 자 등 대리인을 통하여도 하실 수 있습니다. 이 경우 제1항에서 요구하는 서식과 함께 <strong>&lt;별지 서식 2&gt;</strong><a class="b-down xs" href="/portal/cmmn/file/fileDown.do?atchFileId=FILE_000000000001603&amp;fileSn=5">다운로드</a>를 제출하셔야 합니다.</li> 	
+	<li>&#9316; 제1항부터 제4항까지의 방침에도 불구하고 개인정보의 열람, 삭제 또는 처리정지는 「개인정보 보호법」 제35조 제4항, 제36조 제1항 단서&nbsp;또는 제37조 제2항 단서에 의하여 제한 될 수 있습니다.</li> 
+	<li>&#9317; 한국은행은 정보주체 권리에 따른 열람의 요구, 정정&middot;삭제의 요구, 처리정지의 요구 시 열람 등 요구를 한 자가 본인이거나 정당한 대리인인지를 확인합니다.</li> 
+</ul> 
+
+
+<h2 style="line-height: 100%;"><a id="개인정보의 파기" name="개인정보의 파기"><span style="font-size: 10pt;">&nbsp;</span></a></h2> 
+<h4>□ 개인정보의&nbsp; 파기&nbsp; <img style="vertical-align: middle;" src="https://www.bok.or.kr/crosseditor/attachs/images/000019/image13.png" alt=""></h4> <!-- <h2>제7조(개인정보의 파기)</h2> --> 
+<ul class="referList"> 
+	<li>&#9312; 한국은행은 개인정보 보유기간의 경과 또는 처리목적 달성 등 개인정보가 불필요하게 되었을 때에는 지체 없이 해당 개인정보를 파기합니다.</li> 
+	<li>&#9313; 정보주체로부터 동의받은 개인정보 보유기간이 경과하거나 처리목적이 달성되었음에도 불구하고 「공공기록물 관리에 관한 법률」을 포함한 다른 법령에 따라 개인정보를 계속 보존하여야 하는 경우에는, 해당 개인정보(또는 개인정보파일)를 별도의 데이터베이스(DB)로 옮기거나 보관 장소를 달리하여 보존합니다.</li> 
+	<li>&#9314; 개인정보 파기의 절차 및 방법은 다음 각 호와 같습니다. 
+		<ul> 
+			<li>1. 파기절차 : 한국은행은 파기하여야 하는 개인정보(또는 개인정보파일)에 대해 개인정보 파기계획을 수립하여 파기합니다. 또한 한국은행은 파기 사유가 발생한 개인정보(또는 개인정보파일)을 선정하고, 개인정보 보호책임자의 승인을 받아 개인정보(또는 개인정보파일)을 파기합니다.</li> 
+			<li>2. 파기방법 : 한국은행은 전자적 파일 형태로 기록&middot;저장된 개인정보는 기록을 재생할 수 없도록 파기하며, 종이 문서에 기록&middot;저장된 개인정보는 분쇄기로 분쇄하거나 소각하는 등의 방법으로 파기합니다.</li> 
+		</ul>
+	</li> 
+</ul> 
+
+<h2 style="line-height: 100%;"><a id="개인정보의 안전성 확보조치" name="개인정보의 안전성 확보조치"></a></h2> 
+<h4>□ 개인정보의&nbsp; 안전성&nbsp; 확보조치&nbsp; <img style="vertical-align: middle;" src="https://www.bok.or.kr/crosseditor/attachs/images/000019/image14.png" alt=""></h4> <!-- <h2>제8조(개인정보의 안전성 확보조치)</h2> --> 
+<ul class="referList"> 
+	<li>&#9312; 한국은행은 개인정보의 안전성 확보를 위해 다음과 같은 조치를 취하고 있습니다. 
+		<ul> 
+			<li>1. 관리적 조치 : 내부관리계획 수립&middot;시행, 정기적 직원 교육 등</li> 
+			<li>2. 기술적 조치 : 개인정보처리시스템 등의 접근권한 관리, 접근통제시스템 설치, 고유식별정보 등의 암호화, 보안프로그램 설치</li> 
+			<li>3. 물리적 조치 : 비인가자에 대한 전산실, 자료보관실 등의 접근통제</li> 
+		</ul>
+	</li> 
+</ul> 
+<h2 style="line-height: 100%;"><a id="개인정보 자동 수집장치" name="개인정보 자동 수집장치"><span style="font-size: 10pt;">&nbsp;</span></a></h2> 
+
+
+
+<h4>□ 개인정보&nbsp; 자동&nbsp; 수집&nbsp; 장치의&nbsp; 설치&middot;운영 및 거부에 관한 사항&nbsp; <img style="vertical-align: middle;" src="https://www.bok.or.kr/crosseditor/attachs/images/000019/image15.png" alt=""></h4> <!-- <h2>제9조(개인정보 자동 수집 장치의 설치·운영 및 거부에 관한 사항)</h2> --> 
+<p>한국은행은 이용자에게 개별적인 맞춤서비스를 제공하기 위해 이용정보를 저장하고 수시로 불러오는 &lsquo;쿠키(cookie)&rsquo;를 사용하며 쿠키의 정의, 사용목적, 쿠키의 설치&middot;운영 및 거부 방법은 다음 각 호와 같습니다.</p> 
+<ul class="referList"> 
+	<li>1. 쿠키의 정의 :&nbsp;쿠키는 웹사이트를 운영하는데 이용되는 서버(http)가 이용자(정보주체)의 컴퓨터 브라우저에 보내는 소량의 정보이며 이용자(정보주체) 컴퓨터 내의 하드디스크에&nbsp;저장되기도 합니다.</li> 
+	<li>2. 쿠키의 사용목적 : 이용자(정보주체)가 방문한 각 서비스와 웹 사이트들에 대한 방문 및 이용형태, 인기 검색어, 보안접속 여부 등을 파악하여 이용자에게 최적화된 정보 제공을 위해 사용됩니다.</li> 
+	<li>3. 쿠키의 설치&middot;운영 및 거부 : 웹브라우저 상단의 [도구]&rarr;[인터넷 옵션]&rarr;[개인정보] 메뉴의 옵션 설정을 통해 쿠키 저장을 거부할 수 있습니다. 단, 쿠키 저장을 거부한 경우 홈페이지에서 제공하는 맞춤형 서비스 이용에 어려움이 발생할 수 있습니다.</li> 
+</ul> 
+
+<h2 style="line-height: 100%;"><a id="개인정보 보호책임자" name="개인정보 보호책임자"><span style="font-size: 10pt;">&nbsp;</span></a><br></h2> 
+<h4>□ 개인정보&nbsp; 보호책임자&nbsp; 및&nbsp; 보호담당자&nbsp; <img style="vertical-align: middle;" src="https://www.bok.or.kr/crosseditor/attachs/images/000019/image16.png" alt=""></h4> <!-- <h2>제10조 (개인정보 보호책임자 및 보호담당자)</h2> --> 
+<ul class="referList type"> 
+	<li>&#9312; 한국은행은 개인정보 처리와 관련한 정보주체의 불만처리 및 피해구제 등을 위하여 개인정보 보호책임자 및 보호담당자를 다음 각 호와 같이 지정하고 있습니다. 
+		<ul class="list-num"> 
+			<li>1. 한국은행 개인정보 보호책임자 : 윤리경영실장</li> 
+			<li>2. 한국은행 개인정보 보호담당자 : 준법지원팀장</li> 
+			<li>3. 한국은행 개인정보 보호 담당부서 : 준법지원팀 (전화) 02-759-5549 (팩스) 02-759-5441 (이메일) bokprivacy@bok.or.kr<br></li> 
+		</ul>
+	</li> 
+	<li>&#9313; 정보주체는 한국은행의 서비스(또는 사업)를 이용하시면서 발생한 모든 개인정보 보호 관련 문의, 불만처리, 피해구제 등에 관한 사항을 개인정보 보호 담당부서로 문의하실 수 있습니다.</li> 
+</ul> 
+<h2 style="line-height: 100%;"><a id="추가적인 이용제공" name="추가적인 이용제공"><span style="font-size: 10pt;">&nbsp;</span></a></h2> 
+<h4>□ 추가적인&nbsp; 이용&middot;제공&nbsp; 판단기준&nbsp; <img style="vertical-align: middle;" src="https://www.bok.or.kr/crosseditor/attachs/images/000019/image17.png" alt=""></h4> 
+<p>한국은행은 「개인정보 보호법」 제15조제3항 및 제17조제4항에 따라 「개인정보 보호법 시행령」 제14조의2에 따른 사항을 고려하여 정보주체의 동의 없이 개인정보를 추가적으로 이용&middot;제공할 수 있습니다.<br>
+ 이에 따라 한국은행은 정보주체의 동의 없이 추가적인 이용&middot;제공을 하기 위해서 다음 각 호 사항을 고려하였습니다.</p> 
+<ul class="list-num"> 
+	<li>1. 개인정보를 추가적으로 이용&middot;제공하려는 목적이 당초 수집 목적과 관련성이 있는지 여부</li> 
+	<li>2. 개인정보를 수집한 정황 또는 처리 관행에 비추어 볼 때 추가적인 이용&middot;제공에 대한 예측 가능성이 있는지 여부</li> 
+	<li>3. 개인정보의 추가적인 이용&middot;제공이 정보주체의 이익을 부당하게 침해하는지 여부</li> 
+	<li>4. 가명처리 또는 암호화 등 안정성 확보에 필요한 조치를 하였는지 여부</li> 
+	</ul> 
+<h2 style="line-height: 100%;"><a id="개인정보 열람청구" name="개인정보 열람청구"><span style="font-size: 10pt;">&nbsp;</span></a><br></h2> 
+<h4>□ 개인정보&nbsp; 열람청구&nbsp; <img style="vertical-align: middle;" src="https://www.bok.or.kr/crosseditor/attachs/images/000019/image18.png" alt=""></h4> 
+<p>정보주체는 「개인정보 보호법」 제35조에 따른 개인정보의 열람 청구를 개인정보보호 담당부서에 할 수 있습니다. 한국은행은 정보주체의 개인정보 열람청구가 신속하게 처리되도록 노력하겠습니다.</p> 
+<h2 style="line-height: 100%;"><a id="권익침해" name="권익침해"><span style="font-size: 10pt;">&nbsp;</span></a><br></h2> 
+<h4>□ 권익침해&nbsp; 구제방법&nbsp; <img style="vertical-align: middle;" src="https://www.bok.or.kr/crosseditor/attachs/images/000019/image19.png" alt=""></h4> 
+
+
+
+<ul class=""> 
+	<li>① 정보주체는 개인정보침해로 인한 구제를 받기 위하여 한국인터넷진흥원 개인정보 침해신고센터, 개인정보분쟁조정위원회 등에 분쟁 해결이나 상담 등을 신청할 수 있습니다. 이 밖에 기타 개인정보침해의 신고, 상담에 대하여는 아래의 기관에 문의하시기 바랍니다.
+		<div class="table"> 
+			<table> 
+			<caption>권익침해 구제방법</caption> 
+			<colgroup>
+				<col style="width: 30%;">
+				<col>
+			</colgroup>
+			<tbody> 
+			<tr> 
+			<th class="NamoSE_border_show">개인정보 침해신고센터<br> (한국인터넷진흥원 운영)</th> 
+			<td> 
+			<ul> 
+			<li>소관업무 : 개인정보 침해사실 신고, 상담 신청</li> 
+			<li>홈페이지 :&nbsp;<a href="http://privacy.kisa.or.kr/">http://privacy.kisa.or.kr</a></li> 
+			<li>전화 : (국번 없이) 118</li> 
+			<li>주소 : (58324) 전남 나주시 진흥길 9(빛가람동 301-2) 3층 개인정보침해신고센터</li> 
+			</ul> 
+			</td> 
+			</tr> 
+			<tr> 
+			<th class="NamoSE_border_show" scope="row">개인정보 분쟁조정위원회</th> 
+			<td> 
+			<ul> 
+			<li>소관업무 : 개인정보 분쟁조정신청, 집단분쟁조정 (민사적 해결)</li> 
+			<li>홈페이지 :&nbsp;<a href="http://www.kopico.go.kr/">http://www.kopico.go.kr</a></li> 
+			<li>전화&nbsp;: (국번 없이) 1833-6972</li> 
+			<li>주소 : (03171)서울특별시 종로구 세종대로 209 정부서울청사 4층</li> 
+			</ul> </td> 
+			</tr> 
+			<tr> 
+			<th class="NamoSE_border_show" scope="row">대검찰청</th> 
+			<td> 
+			<ul> 
+			<li>홈페이지 :&nbsp;<a href="http://www.spo.go.kr/">http://www.spo.go.kr</a></li> 
+			<li>전화 : (국번 없이) 1301</li> 
+			</ul> </td> 
+			</tr> 
+			<tr> 
+			<th class="NamoSE_border_show" scope="row">경찰청</th> 
+			<td> 
+			<ul> 
+			<li>홈페이지 :&nbsp;<a href="https://ecrm.police.go.kr/">https://ecrm.police.go.kr</a></li> 
+			<li>전화 : (국번 없이) 182</li> 
+			</ul> </td> 
+			</tr> 
+			</tbody> 
+			</table>
+		</div>
+	</li> 
+	<li>&#9313; 「개인정보 보호법」 제35조(개인정보의 열람), 제36조(개인정보의 정정&middot;삭제), 제37조(개인정보의 처리정지 등)에 따른 요구에 대하여 공공기관의 장이 행한 처분 또는 부작위로 인하여 권리 또는 이익의 침해를 받은 자는 행정심판법이 정하는 바에 따라 행정심판을 청구할 수 있습니다.</li> 
+</ul>
+
+<p>※ 행정심판에 대한 자세한 사항은 중앙행정심판위원회(www.simpan.go.kr) 홈페이지를 참고하시기 바랍니다.</p> 
+<h2 style="line-height: 100%;"><a id="개인정보 처리방침 변경" name="개인정보 처리방침 변경"></a></h2> 
+
+<h4>□ 개인정보&nbsp; 처리방침&nbsp; 변경 &nbsp;<img style="vertical-align: middle;" src="https://www.bok.or.kr/crosseditor/attachs/images/000019/image20.png" alt=""></h4> 
+<ul class="referList"> 
+	<li>&#9312; 이 개인정보 처리방침은 2024. 4. 02.부터 적용됩니다.</li> 
+	<li>&#9313; 이전의 개인정보 처리방침은 아래에서 확인하실 수 있습니다.</li> 
+	<li>&nbsp; &nbsp;- 2022.04.29 ~ 2024.04.01. 적용 <a href="/static/view/popup/200235_popup8.html" class="b-pop b-go xs" data-size="900, 600, yes" target="_blank" title="새창열림">바로가기</a></li> 
+	<li>&nbsp; &nbsp;- 2020.05.17 ~ 2022.04.28. 적용 <a href="/static/view/popup/200235_popup7.html" class="b-pop b-go xs" data-size="900, 600, yes" target="_blank" title="새창열림">바로가기</a></li> 
+	<li>&nbsp; &nbsp;-&nbsp;2020.04.03 ~ 2021.05.16. 적용 <a href="/static/view/popup/200235_popup6.html" class="b-pop b-go xs" data-size="900, 600, yes" target="_blank" title="새창열림">바로가기</a></li> 
+	<li>&nbsp; &nbsp;-&nbsp;2018.03.13 ~ 2020.04.02. 적용 <a href="/static/view/popup/200235_popup5.html" class="b-pop b-go xs" data-size="900, 600, yes" target="_blank" title="새창열림">바로가기</a></li> 
+	<li>&nbsp; &nbsp;-&nbsp;2016.09.01 ~ 2018.03.12. 적용 <a href="/static/view/popup/200235_popup4.html" class="b-pop b-go xs" data-size="900, 600, yes" target="_blank" title="새창열림">바로가기</a></li> 
+	<li>&nbsp; &nbsp;-&nbsp;2015.08.01 ~ 2016.08.31. 적용 <a href="/static/view/popup/200235_popup1.html" class="b-pop b-go xs" data-size="900, 600, yes" target="_blank" title="새창열림">바로가기</a></li> 
+	<li>&nbsp; &nbsp;-&nbsp;2012.04.01 ~ 2015.07.31. 적용 <a href="/static/view/popup/200235_popup2.html" class="b-pop b-go xs" data-size="900, 600, yes" target="_blank" title="새창열림">바로가기</a></li> 
+	<li>&nbsp; &nbsp;-&nbsp;2012.04.01 이전 적용 <a href="/static/view/popup/200235_popup3.html" class="b-pop b-go xs" data-size="900, 600, yes" target="_blank" title="새창열림">바로가기</a></li> 
+</ul> 
+
+<script>
+$(function() {
+	$(".ckTxt>a").click(function(){ 
+		$(this).parent().toggleClass("on");
+		$(this).parent().next().toggleClass("on");
+		return false;
+	});
+});
+</script>			
+
+
+			
+			
+			</div>
+		</main>			
+	</div>
+	<!-- //content -->
+
+</div>
+
+<footer id="footer">
+<div class="container">
+	<div class="f_l">
+		<nav class="footer-nav">
+			<ul>
+				<li>
+					<a href="">자작권보호</a>
+				</li>
+				<li class="point">
+					<a href="">개인정보처리방침</a>
+				</li>
+				<li>
+					<a href="">이메일무단수집거부</a>
+				</li>
+				<li>
+					<a href="">홈페이지이용안내</a>
+				</li>
+				<li>
+					<a href="">관련사이트</a>
+				</li>
+			</ul>
+		</nav>
+		<div class="footer-bottom">
+			<address>04531 서울특별시 중구 남대문로 39 (남대문로3가)<br class="mobile">
+			대표전화 : 02-759-4114</address>
+			<p class="copyright">Copyright(c) Bank of Korea. All rights reserved.</p>
+		</div>
+	</div>
+	<div class="f_r">
+		<div class="site_go">
+			<button type="button" title="fmaily site 열기">fmaily site</button>
+			<ul>
+				<li>
+					<a href="/imer/main/main.do" target="_blank" title="새창열림">경제연구원</a>
+				</li>
+				<li>
+					<a href="/museum/main/main.do" target="_blank" title="새창열림">화폐박물관</a>
+				</li>
+				<li>
+					<a href="">지역본부</a>
+				</li>
+				<li>
+					<a href="https://ecos.bok.or.kr" target="_blank" title="새창열림">경제시스템(ecos)</a>
+				</li>
+				<li>
+					<a href="https://snapshot.bok.or.kr" target="_blank" title="새창열림">금융·경제스냅샷</a>
+				</li>
+				<li>
+					<a href="https://dl.bok.or.kr" target="_blank" title="새창열림">전자도서관</a>
+				</li>
+				<li>
+					<a href="https://apply.bok.or.kr" target="_blank" title="새창열림">채용</a>
+				</li>
+			</ul>
+		</div>
+		<div class="f_sns">
+			<a href="https://www.youtube.com/thebankofkoreakr" target="_blank" title="새창열림" class="sns-youtube"><span class="sr-only">한국은행 Youtube 바로가기 (https://www.youtube.com/thebankofkoreakr)</span></a>
+			<a href="https://www.instagram.com/thebankofkorea" target="_blank" title="새창열림" class="sns-instagram"><span class="sr-only">한국은행 인스타그램  바로가기 (https://www.instagram.com/thebankofkorea)</span></a>
+			<a href="https://www.facebook.com/bankofkoreahub" target="_blank" title="새창열림" class="sns-facebook"><span class="sr-only">한국은행 Facebook 바로가기 (https://www.facebook.com/bankofkoreahub)</span></a>
+			<a href="https://www.twitter.com/bok_hub" target="_blank" title="새창열림" class="sns-twitter"><span class="sr-only">한국은행 Twitter 바로가기 (https://www.twitter.com/bok_hub)</span></a>
+		</div>
+		<div class="f_banner">
+			<a href="" title="새창열림"><img src="/static/portal/img/common/mark.png" alt="(사)한국장애인단체총연합회 한국웹접근성인증평가원 웹 접근성 우수사이트 인증마크(WA인증마크)"></a>
+		</div>
+	</div>
+</div>
+</footer>
+<script src="/static/jslibrary/swiper@8/swiper-bundle.min.js"></script>
+<script src="/static/portal/js/common.js"></script>
+</body>
+</html>

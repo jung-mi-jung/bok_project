@@ -10,8 +10,7 @@
 .navigation {
 	position: relative;
 	z-index: 1;
-	background-color: #FCFCFC;
-	border-top: 1px solid #E6E6E6;
+	background-color: #FCFCFC;	
 	@include breakpoint($lg){
 		.nav-stiky & {
 			width: 100%;

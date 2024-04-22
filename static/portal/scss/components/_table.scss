@@ -55,9 +55,6 @@ table {
 				& + td {
 					border-left: 1px solid #E6E6E6;
 				}
-				&.line {
-					border-right: 1px solid #E6E6E6;
-				}
 			}
 			tr {
 				&:first-child {
@@ -68,6 +65,10 @@ table {
 			}
 			td, th {
 				border-bottom: 1px solid #E6E6E6;
+				&.line {
+					text-decoration: none;
+					border-right: 1px solid #E6E6E6;
+				}
 			}
 		}
 		td {

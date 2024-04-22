@@ -122,20 +122,20 @@ $(function () {
 		event.preventDefault();
 	});
 
-	// nav stiky
-	function goToScroll() {
-		// 주 메뉴
-		var h = 53;
-		if ($(window).scrollTop() > h) {
-			$('body').addClass('gnb-stiky');
-		} else {
-			$('body').removeClass('gnb-stiky');
-		}
-	}
-	$(window).on('scroll', function () {
-		goToScroll();
-	});
-	goToScroll();
+	// // nav stiky  메인만 적용
+	// function goToScroll() {
+	// 	// 주 메뉴
+	// 	var h = 96;
+	// 	if ($(window).scrollTop() > h) {
+	// 		$('body').addClass('gnb-stiky');
+	// 	} else {
+	// 		$('body').removeClass('gnb-stiky');
+	// 	}
+	// }
+	// $(window).on('scroll', function () {
+	// 	goToScroll();
+	// });
+	// goToScroll();
 
 	//gnb
 	//pc 메뉴
@@ -526,7 +526,7 @@ $(function() {
 	var $root = $("html, body");
 	var $window = $(window);
 
-	var fixNav = 196;
+	var fixNav = 60;
 	var amountScrolled = 129;
 	var backBtn = $(".goTop");
 	

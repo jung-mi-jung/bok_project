@@ -1546,19 +1546,19 @@ position: relative;
 font-size: 1.125rem;
 color: #1a1a1a;
 font-weight: 500;
-padding-left: 24px;
+padding-left: 22px;
 margin-top: 15px;
 margin-bottom: 5px;
 }
 #main-container h5::before {
 content: "";
 display: inline-block;
-width: 14px;
-height: 14px;
-background: #39A0FF;
-border-radius: 4px;
+width: 10px;
+height: 10px;
+background: #3E7CC8;
+border-radius: 50%;
 position: absolute;
-top: 7px;
+top: 10px;
 left: 0;
 }
 #main-container h6 {
@@ -1761,11 +1761,7 @@ z-index: 99;
 background-color: #fff;
 display: flex;
 flex-direction: column;
-}
-@media (max-width: 1199px) {
-#header {
-border-bottom: 1px solid #d9d9d9;
-}
+border-bottom: 1px solid #E6E6E6;
 }
 #header .container {
 position: relative;
@@ -3869,7 +3865,7 @@ width: calc(100% - 240px - 50px);
 .gnb > ul .depth2 {
 display: none;
 position: absolute;
-top: 98px;
+top: 96px;
 left: 0;
 width: 100%;
 z-index: 99;

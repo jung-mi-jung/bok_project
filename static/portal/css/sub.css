@@ -245,19 +245,19 @@ position: relative;
 font-size: 1.125rem;
 color: #1a1a1a;
 font-weight: 500;
-padding-left: 24px;
+padding-left: 22px;
 margin-top: 15px;
 margin-bottom: 5px;
 }
 #main-container h5::before {
 content: "";
 display: inline-block;
-width: 14px;
-height: 14px;
-background: #39A0FF;
-border-radius: 4px;
+width: 10px;
+height: 10px;
+background: #3E7CC8;
+border-radius: 50%;
 position: absolute;
-top: 7px;
+top: 10px;
 left: 0;
 }
 #main-container h6 {
@@ -572,7 +572,6 @@ background-image: url(/static/portal/img/sub/sub_visual_db_bg.png) !important;
 position: relative;
 z-index: 1;
 background-color: #FCFCFC;
-border-top: 1px solid #E6E6E6;
 }
 @media (min-width: 1200px) {
 .nav-stiky .navigation {
@@ -1462,14 +1461,15 @@ background-color: #FAFAFA;
 .table table tbody th + th, .table table tbody th + td {
 border-left: 1px solid #E6E6E6;
 }
-.table table tbody th.line {
-border-right: 1px solid #E6E6E6;
-}
 .table table tbody tr:first-child th, .table table tbody tr:first-child td {
 border-top: 1px solid #fff;
 }
 .table table tbody td, .table table tbody th {
 border-bottom: 1px solid #E6E6E6;
+}
+.table table tbody td.line, .table table tbody th.line {
+text-decoration: none;
+border-right: 1px solid #E6E6E6;
 }
 .table table td {
 color: #666;
@@ -7925,6 +7925,10 @@ padding-right: 30px;
 border-radius: 16px;
 overflow: hidden;
 margin-bottom: 40px;
+background-color: #DBF1FF;
+}
+.history-set .text-set .img img {
+vertical-align: middle;
 }
 .history-set .text-set strong {
 font-family: "Spoqa Han Sans Neo";
@@ -8015,31 +8019,31 @@ justify-content: flex-start;
 align-items: flex-start;
 }
 .conZone > ul > li strong {
-width: 100px;
+width: 118px;
 }
 .conZone > ul > li + li {
 margin-top: 6px;
 }
 .conZone > ul > li ul {
 color: #808080;
-padding-left: 100px;
+padding-left: 119px;
 display: flex;
 width: 100%;
 flex-direction: column;
 }
 .conZone > ul > li ul.bu-dash {
-color: #1454FF;
+color: #808080;
 margin-top: 4px;
 }
 .conZone > ul > li ul.bu-dash li::before {
 top: 11px;
-background-color: #1454FF;
+background-color: #808080;
 }
 .conZone > ul > li ul.bu-dash li + li {
 margin-top: 3px;
 }
 .conZone > ul.type2 strong {
-width: 124px;
+width: 142px;
 }
 #main-container .conZone h3 {
 color: #002A99;
@@ -9690,6 +9694,111 @@ background: url(/static/portal/img/ico/ico-b-download.svg);
 background-color: #FAFAFA;
 }
 
+.indicator ul {
+display: flex;
+flex-wrap: wrap;
+margin: 0 -20px;
+}
+.indicator ul li {
+width: 25%;
+padding: 20px;
+}
+.indicator ul li a {
+text-align: center;
+color: #4D4D4D;
+}
+.indicator ul li a:hover {
+color: #005596;
+font-weight: 500;
+}
+.indicator ul li a:hover .txt span::after {
+content: "\e315";
+font-family: "Material Icons Outlined";
+font-weight: normal;
+font-style: normal;
+display: inline-block;
+line-height: 1;
+vertical-align: text-bottom;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+font-feature-settings: "liga";
+font-size: 20px;
+margin-bottom: 2px;
+color: #005596;
+}
+.indicator ul li a .txt {
+display: block;
+margin-top: 10px;
+}
+
+.ckCont {
+display: none;
+}
+.ckCont.on {
+display: block;
+}
+
+.emailPolicyW {
+background: #005596 url(/static/portal/img/sub/bg_emailPolicyW.png) right bottom no-repeat;
+border-radius: 16px;
+padding: 45px 440px 45px 40px;
+}
+@media (max-width: 749px) {
+.emailPolicyW {
+padding: 20px 20px 170px;
+background-size: auto 200px;
+}
+}
+.emailPolicyW .tit {
+font-size: 1.875rem;
+font-weight: 500;
+color: #fff;
+}
+.emailPolicyW .cont {
+color: #fff;
+}
+
+.viewerDown {
+border: 1px solid #E6E6E6;
+margin-top: 40px;
+padding: 10px;
+}
+.viewerDown ul {
+display: flex;
+flex-wrap: wrap;
+}
+.viewerDown ul li {
+width: 33.3%;
+padding: 12px;
+}
+@media (min-width: 1200px) {
+.viewerDown ul li {
+width: 20%;
+}
+}
+@media (max-width: 749px) {
+.viewerDown ul li {
+width: 50%;
+}
+}
+.viewerDown ul li a {
+display: block;
+text-align: center;
+padding: 30px;
+background-color: #FAFAFA;
+}
+.viewerDown ul li a .txt {
+display: block;
+color: #005596;
+font-weight: 500;
+margin: 10px 0 15px;
+}
+
 .dbdata,
 .dbData {
 min-height: 250px;
@@ -10734,6 +10843,9 @@ background-image: url(/static/portal/img/ico/ico-box1.png);
 .ico-box.ico2 {
 background-color: #E5ECFF;
 background-image: url(/static/portal/img/ico/ico-box2.png);
+}
+.ico-box.ico3 {
+background-image: url(/static/portal/img/ico/ico-box3.png);
 }
 
 .datepicker {

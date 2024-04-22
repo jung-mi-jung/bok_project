@@ -1781,6 +1781,10 @@ p.subject {
 			border-radius: 16px;
 			overflow: hidden;
 			margin-bottom: 40px;
+			background-color: #DBF1FF;
+			img {
+				vertical-align: middle;
+			}
 		}
 		color: $point;
 		font-size: rem(20);
@@ -1871,29 +1875,28 @@ p.subject {
 		> li {
 			width: 100%;
 			display: flex;
-			flex-wrap: wrap;
-			
+			flex-wrap: wrap;			
 			justify-content: flex-start;
 			align-items: flex-start;
 			strong {
-				width: 100px;
+				width: 118px;
 			}
 			& + li {
 				margin-top: 6px;
 			}
 			ul {
 				color: #808080;
-				padding-left: 100px;
+				padding-left: 119px;
 				display: flex;
 				width: 100%;
 				flex-direction: column;			
 				&.bu-dash {
-					color: #1454FF;
+					color: #808080;
 					margin-top: 4px;				
 					li {
 						&::before {
 							top: 11px;
-							background-color: #1454FF;
+							background-color: #808080;
 						}
 						& + li {
 							margin-top: 3px;
@@ -1904,7 +1907,7 @@ p.subject {
 		}
 		&.type2 {
 			strong {
-				width: 124px;
+				width: 142px;
 			}
 		}
 	}
@@ -3292,3 +3295,101 @@ p.subject {
 		}
 	}
 } 
+
+
+//주요통계해설
+.indicator {
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -20px;
+		li {
+			width: 25%;
+			padding: 20px;
+			a {				
+				text-align: center;
+				color: #4D4D4D;
+				&:hover {
+					color: $color-point;
+					font-weight: 500;
+					.txt {
+						span {
+							&::after {
+								@include font-ico-outline('\e315');
+								font-size: 20px;
+								margin-bottom: 2px;
+								color: $color-point;
+							}
+						}
+					}
+				}
+				.img {}
+				.txt {
+					display: block;
+					margin-top: 10px;
+				}
+			}
+		}
+	}
+}
+
+//개인정보처리방침
+.ckCont {
+	display: none;
+	&.on {
+		display: block;
+	}
+}
+
+//이메일주소 무단 수집거부
+.emailPolicyW {
+	background: $color-point url(/static/portal/img/sub/bg_emailPolicyW.png) right bottom no-repeat;
+	border-radius: 16px;
+	padding: 45px 440px 45px 40px;
+	@include breakpoint($sm){
+		padding: 20px 20px 170px;
+		background-size: auto 200px;
+	}
+	.tit {
+		font-size: rem(30);
+		font-weight: 500;
+		color: #fff;		
+	}
+	.cont {
+		color: #fff;
+
+	}
+}
+
+//파일 뷰어 다운로드
+.viewerDown {
+	border: 1px solid $bd-color;
+	margin-top: 40px;
+	padding: 10px;
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		li {
+			width: 33.3%;
+			padding: 12px;
+			@include breakpoint($lg){
+				width: 20%;
+			}
+			@include breakpoint($sm){
+				width: 50%;
+			}
+			a {
+				display: block;
+				text-align: center;
+				padding: 30px;
+				background-color: #FAFAFA;
+				.txt {
+					display: block;
+					color: $color-point;
+					font-weight: 500;
+					margin: 10px 0 15px;
+				}
+			}
+		}
+	}
+}
