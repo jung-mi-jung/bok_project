@@ -77,6 +77,9 @@ table {
 				border-right: 1px solid $tb-border-color;
 				border-bottom: 1px solid $tb-border-color;
 				background-color: #fff;
+				&[rowspan] {
+					border-left: 1px solid $tb-border-color;
+				}
 				@include breakpoint($sm) {
 					padding: 10px 12px;
 				}
