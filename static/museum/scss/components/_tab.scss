@@ -118,8 +118,10 @@
 			display: inline-flex;
 			align-items: center;
 			justify-content: center;
-			flex: 1;
+			// flex: 1;
 			// min-width: 25%;
+			min-width: 25%;
+			width: auto;
 			min-height: 40px;
 			line-height: 1.2;
 			padding: 8px;

@@ -627,6 +627,7 @@
 					border: 0;
 					height: 48px;
 					padding: 10px 16px;
+					color: #1a1a1a;
 					@include breakpoint($sm){
 						padding: 5px 16px;
 						height: 40px;
@@ -714,14 +715,14 @@
 						position: relative;
 						// display: inline-flex;
 						align-items: center;
-						color: $color-point;
+						color: #4d4d4d;
 						i {
 							position: absolute;
 							top: 4px;
 							right: -25px;
 							display: inline-block;
 							width: 20px;
-							height: 20px;
+							height: 20px; 
 							margin-left: 8px;
 							// transform: translateY(4px);
 							background: url(/static/portal/img/ico/ico-dropdown-down.png);
@@ -729,6 +730,7 @@
 					}
 					&.on {
 						> a  {
+							color: $color-point;
 							i {
 								background: url(/static/portal/img/ico/ico-dropdown-up.png);
 							}
