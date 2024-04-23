@@ -122,6 +122,18 @@ $(function () {
 		event.preventDefault();
 	});
 
+/*
+	var max_h=0; // 최대 높이 구하기
+	$(".gnb > li > a.on + .depth2").each(function(){
+		var h = parseInt($(this).css("height"));
+		if(max_h<h){ max_h = h; }
+	});
+	$(".gnb .depth2").each(function(){ // 최대 높이로 설정
+		//$(this).css({height:max_h + 160});
+		$(this).css({height:max_h});
+	});
+	$('.gnb_bg').height($('.gnb .depth2').height());  //gnb_bg 높이 구하기
+*/
 	// // nav stiky  메인만 적용
 	// function goToScroll() {
 	// 	// 주 메뉴

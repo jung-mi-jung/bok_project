@@ -634,5 +634,9 @@
 .pdf-cont {
 	iframe {
 		width: 100%;
+		height: 700px;
+		@include breakpoint($sm){
+			height: 500px;
+		}
 	}
 }

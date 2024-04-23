@@ -523,250 +523,68 @@ position: fixed;
 background: rgba(0, 0, 0, 0.6);
 -webkit-backdrop-filter: blur(4px);
         backdrop-filter: blur(4px);
+border-bottom: none !important;
 }
-#header .container {
-position: relative;
-display: flex;
-justify-content: space-between;
-align-items: center;
-width: 100%;
-max-width: 1920px;
-padding-left: 50px;
-padding-right: 146px;
-margin: 0 auto;
+@media (min-width: 1200px) {
+#header .globalHeader .container ul li + li::before {
+background-color: rgba(255, 255, 255, 0.3);
 }
-@media (max-width: 1199px) {
-#header .container {
-padding-left: 20px;
-padding-right: 116px;
+#header .globalHeader .container ul a {
+color: #fff;
+font-weight: 400;
 }
 }
 @media (min-width: 1200px) {
-#header .globalHeader .container {
-border-bottom: none !important;
-height: auto !important;
-line-height: inherit !important;
+#header .toggle-set > .search {
+background-color: #fff;
 }
-#header .globalHeader ul {
-border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
-max-width: 1728px;
-display: flex;
-flex-direction: row;
-flex-grow: 1;
-padding: 7px 0;
+#header .toggle-set > .search::before {
+color: #005596;
 }
-#header .globalHeader ul li + li::before {
-content: "";
-display: inline-block;
-vertical-align: middle;
-width: 1px;
-height: 14px;
-background-color: rgba(255, 255, 255, 0.2);
 }
-#header .globalHeader ul a {
-color: #fff !important;
-display: inline-block;
-font-size: 14px !important;
-font-weight: 400 !important;
-border-radius: 4px;
-border: 1px solid rgba(255, 255, 255, 0.4);
-background: rgba(0, 0, 0, 0.2);
-padding: 2px 9px;
+#header .toggle-set .all-nav-toggle::before {
+color: #fff;
 }
-#header .globalHeader ul a:hover {
-text-decoration: underline;
+#header.over {
+background-color: #fff;
+}
+@media (min-width: 1200px) {
+#header.over .logo a {
+background: url(/static/portal/img/main/logo.png) 50% no-repeat;
+}
+#header.over .gnb > ul > li > a {
+color: #000E33;
+}
+#header.over .gnb > ul > li:hover > a,
+#header.over .gnb > ul > li.on > a,
+#header.over .gnb > ul > li.active > a {
+color: #005596;
+}
+#header.over .globalHeader .container ul li + li::before {
+background-color: rgba(0, 85, 150, 0.3);
+}
+#header.over .globalHeader .container ul a {
+color: #005596;
+font-weight: 500;
+}
+}
+@media (min-width: 1200px) and (min-width: 1200px) {
+#header.over .toggle-set > .search {
+background-color: #005596;
+}
+#header.over .toggle-set > .search::before {
+color: #fff;
+}
+#header.over .toggle-set .all-nav-toggle::before {
+color: #005596;
 }
 }
 #header .logo a {
 background: url(/static/portal/img/common/logo.png) 50% no-repeat;
 }
-#header .g-info {
-display: flex;
-align-items: center;
-}
-#header .g-info .global {
-display: none;
-}
-#header .g-info > .search {
-position: absolute;
-top: 0;
-right: 0;
-width: 60px;
-height: 60px;
-z-index: 9;
-background-color: #fff;
-}
-#header .g-info > .search::before {
-content: "\e8b6";
-font-family: "Material Icons Outlined";
-font-weight: normal;
-font-style: normal;
-display: inline-block;
-line-height: 1;
-vertical-align: text-bottom;
-text-transform: none;
-letter-spacing: normal;
-word-wrap: normal;
-white-space: nowrap;
--webkit-font-smoothing: antialiased;
-text-rendering: optimizeLegibility;
--moz-osx-font-smoothing: grayscale;
-font-feature-settings: "liga";
-color: #131547;
-font-size: 2.5rem;
-}
-@media (max-width: 1199px) {
-#header .g-info > .search::before {
-font-size: 2rem;
-}
-}
-#header .g-info > .search:focus {
-outline-color: #fff;
-outline-style: dashed;
-outline-offset: -1PX;
-}
 @media (min-width: 1200px) {
-#header .g-info > .search {
-width: 114px;
-height: 114px;
-background-color: #3B63C4;
-top: -42px;
-}
-#header .g-info > .search::before {
-color: #fff;
-font-size: 1.5rem;
-}
-}
-@media (min-width: 1200px) {
-#header .g-info .global {
-display: flex;
-align-items: center;
-}
-#header .g-info .global ul {
-display: flex;
-align-items: center;
-white-space: nowrap;
-}
 #header .g-info .global ul li a {
 color: #fff;
-font-size: 15px;
-}
-#header .g-info .global ul li + li {
-padding-left: 8px;
-}
-#header .g-info .global ul li + li::before {
-content: "";
-display: inline-block;
-vertical-align: middle;
-width: 1px;
-height: 14px;
-background-color: #fff;
-margin: 0 6px;
-}
-#header .g-info .global ul li .userInfoOpBxSet {
-padding: 3px 0;
-position: relative;
-}
-#header .g-info .global ul li .userInfoOpBxSet .userInfoOpener {
-border-radius: 30px;
-background: #fff;
-display: inline-block;
-padding: 1px 10px;
-color: #131547;
-font-size: 14px;
-}
-#header .g-info .global ul li .userInfoOpBxSet .userInfoOpBx {
-display: none;
-width: 280px;
-position: absolute;
-top: 30px;
-left: -100%;
-margin-left: -40px;
-border: 1px solid #3B63C4;
-border-radius: 5px;
-padding: 24px;
-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-background-color: #fff;
-z-index: 99;
-}
-#header .g-info .global ul li .userInfoOpBxSet .userInfoOpBx.on {
-display: block;
-}
-#header .g-info .global ul li .userInfoOpBxSet .userInfoOpBx .userInfoSnsBx {
-display: flex;
-align-items: center;
-}
-#header .g-info .global ul li .userInfoOpBxSet .userInfoOpBx .userInfoSnsBx .infoTxts {
-margin-left: 14px;
-line-height: 1.2;
-}
-#header .g-info .global ul li .userInfoOpBxSet .userInfoOpBx .userInfoSnsBx .infoTxts strong {
-font-weight: 500;
-}
-#header .g-info .global ul li .userInfoOpBxSet .userInfoOpBx .userInfoSnsBx i {
-text-align: center;
-display: inline-block;
-width: 64px;
-height: 64px;
-line-height: 64px;
-border-radius: 50%;
-background-color: #B1C1E7;
-}
-#header .g-info .global ul li .userInfoOpBxSet .userInfoOpBx .userInfoSnsBx i::before {
-content: "\e7fd";
-font-family: "Material Icons";
-font-size: 35px;
-color: #fff;
-margin-top: 14px;
-}
-#header .g-info .global ul li .userInfoOpBxSet .userInfoOpBx .myLogoutBx {
-margin-top: 15px;
-display: flex;
-justify-content: space-between;
-}
-#header .g-info .global ul li .userInfoOpBxSet .userInfoOpBx .myLogoutBx a {
-text-align: center;
-width: calc(50% - 2px);
-display: block;
-color: #fff;
-font-size: 14px;
-font-weight: 300;
-border-radius: 4px;
-padding: 4px;
-}
-#header .g-info .global ul li .userInfoOpBxSet .userInfoOpBx .myLogoutBx a.mypg {
-background-color: #005596;
-}
-#header .g-info .global ul li .userInfoOpBxSet .userInfoOpBx .myLogoutBx a.mypg::before {
-content: "";
-display: inline-block;
-vertical-align: middle;
-width: 21px;
-height: 20px;
-background: url(/static/portal/img/ico/ico-person_edit.png);
-margin-right: 4px;
-}
-#header .g-info .global ul li .userInfoOpBxSet .userInfoOpBx .myLogoutBx a.logout {
-background-color: #4D4D4D;
-}
-#header .g-info .global ul li .userInfoOpBxSet .userInfoOpBx .myLogoutBx a.logout::before {
-content: "\e9ba";
-font-family: "Material Icons Outlined";
-font-weight: normal;
-font-style: normal;
-display: inline-block;
-line-height: 1;
-vertical-align: text-bottom;
-text-transform: none;
-letter-spacing: normal;
-word-wrap: normal;
-white-space: nowrap;
--webkit-font-smoothing: antialiased;
-text-rendering: optimizeLegibility;
--moz-osx-font-smoothing: grayscale;
-font-feature-settings: "liga";
-font-size: 18px;
-margin-right: 4px;
 }
 }
 @media (min-width: 1200px) {
@@ -788,50 +606,26 @@ height: 72px;
 top: 0;
 }
 .gnb-stiky #header .gnb > ul > li > a:hover {
-color: #39A0FF;
+color: #005596;
 }
 .gnb-stiky #header .gnb > ul > li > a,
 .gnb-stiky #header .gnb .all-nav-toggle::before {
 color: #000E33;
+}
+.gnb-stiky #header .toggle-set > .search {
+background-color: #005596;
+}
+.gnb-stiky #header .toggle-set > .search::before {
+color: #fff;
+}
+.gnb-stiky #header .toggle-set .all-nav-toggle::before {
+color: #005596;
 }
 }
 
 @media (min-width: 1200px) {
 .gnb > ul > li > a {
 color: #fff;
-height: 72px !important;
-line-height: 72px !important;
-}
-.gnb > ul .depth2 {
-top: 72px !important;
-}
-}
-.gnb .all-nav-toggle::before {
-content: "\e5d2";
-font-family: "Material Icons Outlined";
-font-weight: normal;
-font-style: normal;
-display: inline-block;
-line-height: 1;
-vertical-align: text-bottom;
-text-transform: none;
-letter-spacing: normal;
-word-wrap: normal;
-white-space: nowrap;
--webkit-font-smoothing: antialiased;
-text-rendering: optimizeLegibility;
--moz-osx-font-smoothing: grayscale;
-font-feature-settings: "liga";
-color: #fff;
-font-size: 32px;
-}
-@media (max-width: 1199px) {
-.gnb .all-nav-toggle {
-position: absolute;
-top: 0;
-right: 60px;
-width: 60px;
-height: 60px;
 }
 }
 

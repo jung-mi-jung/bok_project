@@ -3278,6 +3278,12 @@ margin-bottom: 10px;
 
 .pdf-cont iframe {
 width: 100%;
+height: 700px;
+}
+@media (max-width: 749px) {
+.pdf-cont iframe {
+height: 500px;
+}
 }
 
 .photo-list {
@@ -3814,6 +3820,7 @@ background-color: #005596;
 }
 .category ul li a {
 width: 100%;
+height: 100%;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -8552,7 +8559,7 @@ display: table;
 display: table-cell;
 }
 .dllist dt {
-width: 118px;
+width: 132px;
 position: relative;
 padding-left: 20px;
 }
@@ -12261,11 +12268,12 @@ border-radius: 4px;
 padding: 7px 15px;
 display: block;
 background: #fff;
+font-size: 16px;
 border: 1px solid #D8E0E8;
 }
 @media (max-width: 749px) {
 .sub-main .zone_main .section_bg .top .button_link button {
-width: 170px;
+width: 180px;
 }
 }
 .sub-main .zone_main .section_bg .top .button_link button::after {
@@ -12295,7 +12303,7 @@ position: absolute;
 top: 39px;
 left: 0;
 width: 100%;
-z-index: 9;
+z-index: 99;
 background-color: #fff;
 border: 1px solid #D8E0E8;
 border-radius: 4px;
@@ -12407,7 +12415,7 @@ padding-left: 40px;
 }
 }
 .sub-main .zone_main .section2 .go_link {
-margin-bottom: 56px;
+margin-bottom: 65px;
 }
 @media (max-width: 749px) {
 .sub-main .zone_main .section2 .go_link {
@@ -12442,39 +12450,42 @@ font-size: 1.125rem;
 color: #005596;
 text-decoration: underline;
 }
-.sub-main .zone_main .section2 .go_link ul li a::before {
-content: "";
-display: inline-block;
-width: 1px;
-height: 18px;
-margin-top: -9px;
-background: #CACCD8;
-position: absolute;
-top: 50%;
-right: 0;
-margin-left: -50%;
+.sub-main .zone_main .section2 h2 {
+font-size: 3rem !important;
+margin-bottom: 30px !important;
 }
 #main-container .sub-main .zone_main .section2 h2 h2 {
 color: #000E33;
 font-size: 1.25rem;
 font-weight: 500;
 padding-bottom: 10px;
+margin-bottom: 17px;
 }
 @media (min-width: 1200px) {
 #main-container .sub-main .zone_main .section2 h2 h2 {
-font-size: 1.75rem;
+font-size: 1.5rem;
 padding-bottom: 18px;
+}
+}
+@media (max-width: 749px) {
+.sub-main .zone_main .section2 h2 {
+font-size: 1.875rem !important;
 }
 }
 .sub-main .zone_main .section2 .tit {
 overflow: hidden;
-height: 122px;
+overflow: hidden;
+text-overflow: ellipsis;
+display: block;
+display: -webkit-box;
+-webkit-line-clamp: 5;
+-webkit-box-orient: vertical;
 line-height: 1.4;
 }
-@media (max-width: 749px) {
-.sub-main .zone_main .section2 .tit {
-height: 108px;
-}
+.ie .sub-main .zone_main .section2 .tit {
+display: block;
+height: 80px;
+overflow: hidden;
 }
 .sub-main .zone_main .section2 .tit p {
 margin-bottom: 10px;
@@ -12584,14 +12595,15 @@ width: calc(33.3% - 79px);
 }
 .sub-main .notice-set .notice h2 {
 color: #000E33;
-font-size: 1.25rem;
+font-size: 1.25rem !important;
 font-weight: 500;
 border-bottom: 2px solid #000E33;
 padding-bottom: 10px;
+margin-bottom: 0 !important;
 }
 @media (min-width: 1200px) {
 .sub-main .notice-set .notice h2 {
-font-size: 1.75rem;
+font-size: 1.75rem !important;
 padding-bottom: 18px;
 }
 }
@@ -12636,6 +12648,7 @@ overflow: hidden;
 @media (max-width: 749px) {
 .sub-main .notice-set .notice ul li span.txt {
 height: 42px;
+font-size: 14px;
 }
 }
 .sub-main .notice-set .notice ul li span.date {
@@ -13246,7 +13259,7 @@ justify-content: flex-start;
 .reference2 {
 margin-top: 80px;
 padding: 45px 120px;
-background-color: #F2F6FA;
+background-color: #EBF3F7;
 border-radius: 8px;
 }
 @media (min-width: 750px) and (max-width: 1199px) {
@@ -13265,10 +13278,11 @@ color: #000E33;
 font-size: 1.25rem;
 font-weight: 500;
 padding-bottom: 10px;
+margin-bottom: 17px;
 }
 @media (min-width: 1200px) {
 #main-container .reference2 h2 {
-font-size: 1.75rem;
+font-size: 1.5rem;
 padding-bottom: 18px;
 }
 }
@@ -13294,7 +13308,7 @@ width: 100%;
 border-bottom: 1px solid #B1C1E7;
 }
 .reference2 .set ul.list-type1 li a {
-padding: 25px 0;
+padding: 24px 0;
 display: flex;
 justify-content: space-between;
 align-items: center;
@@ -13305,11 +13319,11 @@ padding: 18px 0;
 }
 }
 .reference2 .set ul.list-type1 li a .t {
-width: 120px;
+width: 160px;
 color: #005596;
 }
 .reference2 .set ul.list-type1 li a .title {
-width: calc(100% - 120px - 100px);
+width: calc(100% - 120px - 160px);
 font-weight: 400;
 font-size: 1.125rem;
 overflow: hidden;
@@ -13367,7 +13381,7 @@ margin: 12px 0 12px;
 .reference2 .set ul.list-type1 li:first-child a .txt {
 display: block;
 overflow: hidden;
-height: 40px;
+height: 46px;
 color: #4D4D4D;
 line-height: 1.3;
 }
@@ -13500,7 +13514,7 @@ width: 100%;
 display: block;
 overflow: hidden;
 font-size: 1.125rem;
-height: 52px;
+height: 58px;
 margin: 8px 0 12px;
 }
 @media (max-width: 749px) {
@@ -13685,6 +13699,7 @@ width: 100%;
 }
 }
 .index-menu4.type2 ul li .info {
+margin-top: 10px;
 text-align: center;
 color: #005596;
 display: block;
@@ -13967,10 +13982,11 @@ color: #000E33;
 font-size: 1.25rem;
 font-weight: 500;
 padding-bottom: 10px;
+margin-bottom: 17px;
 }
 @media (min-width: 1200px) {
 #main-container .stati-set > div h2 {
-font-size: 1.75rem;
+font-size: 1.5rem;
 padding-bottom: 18px;
 }
 }
@@ -14091,10 +14107,11 @@ color: #000E33;
 font-size: 1.25rem;
 font-weight: 500;
 padding-bottom: 10px;
+margin-bottom: 17px;
 }
 @media (min-width: 1200px) {
 #main-container .notice-list .notice h2 {
-font-size: 1.75rem;
+font-size: 1.5rem;
 padding-bottom: 18px;
 }
 }
@@ -14108,7 +14125,8 @@ border-top: 1px solid #000E33;
 border-bottom: 1px solid #B1C1E7;
 }
 .notice-list .notice ul li a {
-display: block;
+display: flex;
+justify-content: space-between;
 padding: 18px 0;
 }
 @media (max-width: 749px) {
@@ -14117,12 +14135,19 @@ padding: 10px 0;
 }
 }
 .notice-list .notice ul li a .title {
+width: calc(100% - 110px);
 font-size: 1.125rem;
 color: #000E33;
+overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+display: inline-block;
 }
 .notice-list .notice ul li a .date {
+width: 100px;
 color: #666;
 font-size: 14px;
+text-align: right;
 }
 .notice-list .notice.type2 a {
 display: flex;
@@ -14193,12 +14218,13 @@ background-position: 60% 50% !important;
 }
 .edu-go li a strong {
 display: block;
-margin-bottom: 18px;
+margin-bottom: 14px;
 color: #233B76;
 font-size: 1.25rem;
 font-weight: 500;
 }
 .edu-go li a .go {
+font-size: 16px;
 color: #131547;
 font-weight: 500;
 }

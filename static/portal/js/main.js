@@ -13,6 +13,15 @@ $(function () {
 		goToScroll();
 	});
 	goToScroll();
+
+	//header 오버시
+	$('#header, #gnb').on('mouseover focusin', function () {
+		$('#header').addClass('over');
+	});
+	$('#header, #gnb').on('mouseleave', function () {
+		$('#header').removeClass('over');
+	});
+
 });
 
 $(function () {
