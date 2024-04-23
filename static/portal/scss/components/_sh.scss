@@ -1090,6 +1090,7 @@
 
 
 .date-set {
+	font-size: 16px;
 	@include breakpoint($sm){
 		display: flex;
 		align-items: center;

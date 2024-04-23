@@ -1427,9 +1427,6 @@ display: block !important;
 display: none !important;
 }
 }
-.table.table_line {
-border-top: 2px solid #182252;
-}
 .table table {
 width: 100%;
 table-layout: fixed;
@@ -5662,6 +5659,9 @@ font-size: 19px;
 margin: 0 2px 2px 0;
 }
 
+.date-set {
+font-size: 16px;
+}
 @media (max-width: 749px) {
 .date-set {
 display: flex;
@@ -8011,39 +8011,48 @@ background-color: #FAFAFA;
 margin: 15px 0;
 }
 
-.conZone > ul > li {
+.conZone > ul.bu > li {
 width: 100%;
 display: flex;
 flex-wrap: wrap;
 justify-content: flex-start;
 align-items: flex-start;
 }
-.conZone > ul > li strong {
+.conZone > ul.bu > li strong {
 width: 118px;
 }
-.conZone > ul > li + li {
+.conZone > ul.bu > li + li {
 margin-top: 6px;
 }
-.conZone > ul > li ul {
+.conZone > ul.bu > li ul {
 color: #808080;
 padding-left: 119px;
 display: flex;
 width: 100%;
 flex-direction: column;
 }
-.conZone > ul > li ul.bu-dash {
+.conZone > ul.bu > li ul.bu-dash {
 color: #808080;
 margin-top: 4px;
 }
-.conZone > ul > li ul.bu-dash li::before {
+.conZone > ul.bu > li ul.bu-dash li::before {
 top: 11px;
 background-color: #808080;
 }
-.conZone > ul > li ul.bu-dash li + li {
+.conZone > ul.bu > li ul.bu-dash li + li {
 margin-top: 3px;
 }
-.conZone > ul.type2 strong {
+.conZone > ul.bu > li ul.bu-dash.type2 {
+margin-top: -26px;
+}
+.conZone > ul.bu.type2 strong {
 width: 142px;
+}
+.conZone > ul.bu.type3 strong {
+width: 180px;
+}
+.conZone > ul.bu.type3 ul {
+padding-left: 180px;
 }
 #main-container .conZone h3 {
 color: #002A99;

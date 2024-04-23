@@ -1871,7 +1871,7 @@ p.subject {
 	margin: 15px 0;
 }
 .conZone {
-	> ul {
+	> ul.bu {
 		> li {
 			width: 100%;
 			display: flex;
@@ -1902,12 +1902,23 @@ p.subject {
 							margin-top: 3px;
 						}
 					}
+					&.type2 {
+						margin-top: -26px;
+					}
 				}
 			}
 		}
 		&.type2 {
 			strong {
 				width: 142px;
+			}
+		}
+		&.type3 {
+			strong {
+				width: 180px;
+			}
+			ul {
+				padding-left: 180px;
 			}
 		}
 	}
