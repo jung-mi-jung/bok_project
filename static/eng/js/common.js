@@ -124,21 +124,6 @@ $(function () {
 		event.preventDefault();
 	});
 
-	// nav stiky
-	function goToScroll() {
-		// 주 메뉴
-		var h = 53;
-		if ($(window).scrollTop() > h) {
-			$('body').addClass('gnb-stiky');
-		} else {
-			$('body').removeClass('gnb-stiky');
-		}
-	}
-	$(window).on('scroll', function () {
-		goToScroll();
-	});
-	goToScroll();
-
 	//gnb
 	//pc 메뉴
 	var tshActive = false;
@@ -528,8 +513,8 @@ $(function() {
 	var $root = $("html, body");
 	var $window = $(window);
 
-	var fixNav = 94;
-	var amountScrolled = 120;
+	var fixNav = 60;
+	var amountScrolled = 129;
 	var backBtn = $(".goTop");
 	
 

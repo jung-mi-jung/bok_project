@@ -1,4 +1,21 @@
 $(function () {
+	// gnb stiky
+	function goToScroll() {
+		// 주 메뉴
+		var h = 96;
+		if ($(window).scrollTop() > h) {
+			$('body').addClass('gnb-stiky');
+		} else {
+			$('body').removeClass('gnb-stiky');
+		}
+	}
+	$(window).on('scroll', function () {
+		goToScroll();
+	});
+	goToScroll();
+});
+
+$(function () {
 	const section1Visual = new Swiper('.section1-visual', {
 		// Optional parameters
 		// direction: 'vertical',
@@ -272,8 +289,8 @@ $(function () {
 			},
 		},
 		navigation: {
-			prevEl: '#section4 .board-list-prev',
-			nextEl: '#section4 .board-list-next',
+			prevEl: '#section3 .board-list-prev',
+			nextEl: '#section3 .board-list-next',
 		},
 		// And if we need scrollbar
 		scrollbar: {
@@ -329,8 +346,8 @@ $(function () {
 			},
 		},
 		navigation: {
-			prevEl: '#section5 .board-list-prev',
-			nextEl: '#section5 .board-list-next',
+			prevEl: '#section4 .board-list-prev',
+			nextEl: '#section4 .board-list-next',
 		},
 		// And if we need scrollbar
 		scrollbar: {

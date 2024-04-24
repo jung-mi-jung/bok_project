@@ -1757,11 +1757,7 @@ z-index: 99;
 background-color: #fff;
 display: flex;
 flex-direction: column;
-}
-@media (max-width: 1199px) {
-#header {
 border-bottom: 1px solid #d9d9d9;
-}
 }
 #header .container {
 position: relative;
@@ -3854,7 +3850,7 @@ width: calc(100% - 240px - 50px);
 .gnb > ul .depth2 {
 display: none;
 position: absolute;
-top: 98px;
+top: 96px;
 left: 0;
 width: 100%;
 z-index: 99;

@@ -1,4 +1,30 @@
 $(function () {
+	// gnb stiky
+	function goToScroll() {
+		// 주 메뉴
+		var h = 96;
+		if ($(window).scrollTop() > h) {
+			$('body').addClass('gnb-stiky');
+		} else {
+			$('body').removeClass('gnb-stiky');
+		}
+	}
+	$(window).on('scroll', function () {
+		goToScroll();
+	});
+	goToScroll();
+
+	//header 오버시
+	$('#header, #gnb').on('mouseover focusin', function () {
+		$('#header').addClass('over');
+	});
+	$('#header, #gnb').on('mouseleave', function () {
+		$('#header').removeClass('over');
+	});
+
+});
+
+$(function () {
 	const section1Visual = new Swiper('.section1-visual', {
 		// Optional parameters
 		// direction: 'vertical',

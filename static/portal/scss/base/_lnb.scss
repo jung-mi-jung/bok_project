@@ -1,9 +1,16 @@
+//게시판 상세 비주얼
+.bd-body .sub-_visual {
+	@include breakpoint($lg){			
+		background-image: url(/static/portal/img/sub/sub_visual_db_bg.png) !important;
+	}
+}
+
+
 //navigation
 .navigation {
 	position: relative;
 	z-index: 1;
-	background-color: #FCFCFC;
-	border-top: 1px solid #E6E6E6;
+	background-color: #FCFCFC;	
 	@include breakpoint($lg){
 		.nav-stiky & {
 			width: 100%;
@@ -36,15 +43,42 @@
 			background-repeat: no-repeat;
 			background-position: 50%;
 			background-image: url(/static/portal/img/sub/sub_visual_bg1.png);
+			&.menu_200716 {
+				background-image: url(/static/portal/img/sub/sub_visual_bg1.png);
+			}
+			&.menu_201149 {
+				background-image: url(/static/portal/img/sub/sub_visual_bg2.png);
+			}
+			&.menu_201150 {
+				background-image: url(/static/portal/img/sub/sub_visual_bg1.png);
+			}
+			&.menu_201151 {
+				background-image: url(/static/portal/img/sub/sub_visual_bg1.png);
+			}
+
+			&.menu_201152 {
+				background-image: url(/static/portal/img/sub/sub_visual_bg1.png);
+			}
+			&.menu_200227 { //이용안내
+				background-image: url(/static/portal/img/sub/sub_visual_bg1.png);
+			}
 		}	
 		div {
 			width: $pc-wide;
+			max-width: 100%;
 			margin: 0 auto;
-			padding-top: 90px;
+			padding-top: 20px;
+			@include breakpoint($lg){
+				padding-top: 90px;
+			}
 			h1 {
 				color: $black;
 				font-weight: 500;
 				font-size: rem(48);
+				@include breakpoint($sm){
+					font-size: rem(36);
+					text-align: center;
+				}
 				.bd-body & {
 					font-size: rem(20);
 				}
@@ -265,6 +299,7 @@
 		color: #222;
 		font-size: rem(16);
 		font-weight: 500;
+		margin-bottom: 6px;
 		&::before {
 			@include font-ico-outline('\e0ee');
 			font-size: 24px;
@@ -284,9 +319,10 @@
 					color: $black;
 					font-weight: 500;
 					&::after {
-						@include font-ico-outline('\e313');
+						@include font-ico-outline('\e5df');
 						font-size: 18px;
 						float: right;
+						color: #1C1B1F;
 					}
 				}
 			}
@@ -301,14 +337,14 @@
 					&.on {
 						a {
 							position: relative;
-							color: #2F4F9D;
+							color: #0040CC;
 							font-weight: 500;
 							background-color: #F2F6FA;
 							border-radius: 4px;
 							&::after {
 								@include font-ico('\e315');
 								font-size: 18px;
-								color: #2F4F9D;
+								color: $color-point;
 								position: absolute;
 								top: 2px;
 								right: 8px;
