@@ -67,7 +67,6 @@ underline-top | underline-bottom | underline-left-right | underline-right-left |
 	position: relative;
 	&::before{
 		content: "";
-		display: block;
 		position: absolute;
 		width: 100%;
 		height: 1px;
@@ -75,6 +74,12 @@ underline-top | underline-bottom | underline-left-right | underline-right-left |
 		bottom: 0;
 		left: 50%;
 		transform: translateX(-50%);
+		display: none;
+	}
+	&:hover {
+		&::before {
+			display: block;
+		}
 	}
 }
 
@@ -122,16 +127,28 @@ underline-top | underline-bottom | underline-left-right | underline-right-left |
 
 .a-hover {
 	color: inherit;
-	@include a-hover(#1454FF);
-	// &:hover {
-	// 	@include breakpoint($lg) {
-	// 		@include a-hover(#1454FF);
-	// 	}
-	// }
+	@include breakpoint($lg) {
+		@include a-hover(#1454FF);
+	}
+	&.a-always {
+		@include a-hover(#1454FF);
+		&::before {
+			display: inline-block !important;
+		}
+	} 
 	&.colorBk {
 		color: inherit;
-		@include a-hover(#1a1a1a);
+		@include breakpoint($lg) {
+			@include a-hover(#1a1a1a);
+		}
+		&.a-always {
+			@include a-hover(#1a1a1a);
+			&::before {
+				display: inline-block !important;
+			}
+		} 
 	}
+	
 }
 
 .a-hover2 {

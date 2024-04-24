@@ -476,6 +476,13 @@ display: block;
 color: #4D4D4D;
 height: 70px;
 }
+#section2 .board-list1 .swiper-wrapper .swiper-slide span.txt span {
+display: block;
+width: 100%;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+}
 #section2 .board-list1 .swiper-wrapper .swiper-slide {
 padding: 16px 16px 50px;
 text-align: center;
@@ -623,6 +630,13 @@ padding: 0 16px;
 display: block;
 color: #4D4D4D;
 height: 70px;
+}
+#section3 .board-list2 .swiper-wrapper .swiper-slide span.txt span {
+display: block;
+width: 100%;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
 }
 #section3 .board-list2 .swiper-wrapper .swiper-slide span.txt span {
 color: #4D4D4D;

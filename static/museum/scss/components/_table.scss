@@ -21,6 +21,9 @@ table {
 				display: none !important;
 			}
 		}
+		&.noBorder {
+			border-top: 0;
+		}
 		table {
 			width: 100%;
 			table-layout: fixed;
@@ -137,11 +140,6 @@ table {
 				}
 			}
 		}
-		// &.borderTop {
-		// 	table {
-		// 		border-top: 2px solid $point;
-		// 	}
-		// }
 		&.type2 {
 			font-size: rem(18);
 			border-top: 2px solid #182252;

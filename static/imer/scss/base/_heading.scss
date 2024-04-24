@@ -59,7 +59,7 @@
 .bu-dot {
 	> li {
 		@include bu-dot;
-		margin: 8px 0;
+		margin: 12px 0;
 	}
 }
 .bu-dot2 {
@@ -103,7 +103,7 @@
 		font-size: rem(36);
 		font-weight: 700;
 		margin-bottom: 20px;
-		line-height: 90%;
+		line-height: 1.2;
 		& + h3 {
 			margin-top: 22px;
 		}
@@ -220,6 +220,7 @@ ul.bu {
 	> li {
 		clear: both;
 		@include bu-dot;
+		margin: 12px 0;
 		> ul {
 			font-size: rem(16);
 			> li {

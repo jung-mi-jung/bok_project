@@ -1,14 +1,14 @@
 //navigation
 .navigation {
 	position: relative;
-	z-index: 2;
+	// z-index: 2;
 	// height: 48px;
 	line-height: 48px;
 	background-color: #FCFCFC;
 	border-top: 1px solid #E5E5E5;
 	border-bottom: 1px solid #E5E5E5;
 	@include breakpoint($lg){ 
-		.nav-stiky & {
+		.gnb-stiky & {
 			width: 100%;
 			position: fixed;
 			top: 0;
@@ -30,19 +30,48 @@
 	}
 	.sub-_visual {
 		border-top: 1px solid #E6E6E6;
-		height: 216px;
-		background-color: #CBDEF4;
-		//background-image: url(/static/portal/img/sub/sub_visual_bg1.png);
-		background-repeat: no-repeat;
-		background-position: 50%;		
+		background: #fff;
+		@include breakpoint($lg){
+			height: 216px;
+			background-color: #CBDEF4;
+			background-repeat: no-repeat;
+			background-position: 50%;
+			background-image: url(/static/portal/img/sub/sub_visual_bg1.png);
+			&.menu_700107 {
+				background-image: url(/static/museum/img/visual/bg_700107.png);
+			}
+			&.menu_700795 {
+				background-image: url(/static/museum/img/visual/bg_700795.png);
+			}
+			&.menu_700108 {
+				background-image: url(/static/museum/img/visual/bg_700108.png);
+			}
+			&.menu_700109 {
+				background-image: url(/static/museum/img/visual/bg_700109.png);
+			}
+			&.menu_700836 {
+				background-image: url(/static/museum/img/visual/bg_700836.png);
+			}
+			&.menu_700111 {
+				background-image: url(/static/museum/img/visual/bg_700111.png);
+			}
+		}
 		div {
-			max-width: $pc-wide;
+			width: $pc-wide;
+			max-width: 100%;
 			margin: 0 auto;
-			padding-top: 90px;
+			padding-top: 20px;
+			@include breakpoint($lg){
+				padding-top: 90px;
+			}
 			h1 {
 				color: $black;
 				font-weight: 500;
 				font-size: rem(48);
+				@include breakpoint($sm){
+					font-size: rem(36);
+					text-align: center;
+				}
 				.bd-body & {
 					font-size: rem(20);
 				}
@@ -86,6 +115,8 @@
 	// 	line-height: 36px;
 	// }
 	nav {		
+		height: 60px;
+		line-height: 60px;
 		@include breakpoint($lg){
 			display: flex;
 			justify-content: space-between;
@@ -238,6 +269,30 @@
 		display: block;
 	}
 }
+
+/* 상세페이지 비쥬얼 */
+body.bd-body .sub-_visual {
+	@include breakpoint($lg) {
+		&.menu_700107 {
+			background-image: url(/static/museum/img/visual/view_700107.png);
+		}
+		&.menu_700795 {
+			background-image: url(/static/museum/img/visual/view_700795.png);
+		}
+		&.menu_700108 {
+			background-image: url(/static/museum/img/visual/view_700108.png);
+		}
+		&.menu_700109 {
+			background-image: url(/static/museum/img/visual/view_700109.png);
+		}
+		&.menu_700836 {
+			background-image: url(/static/museum/img/visual/view_700836.png);
+		}
+	}
+}
+
+
+
 
 
 //목차형

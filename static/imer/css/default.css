@@ -1517,11 +1517,13 @@ transform: scale(1, 1);
 
 .a-hover {
 color: inherit;
+}
+@media (min-width: 1200px) {
+.a-hover {
 position: relative;
 }
 .a-hover::before {
 content: "";
-display: block;
 position: absolute;
 width: 100%;
 height: 1px;
@@ -1529,14 +1531,41 @@ background: #1a1a1a;
 bottom: 0;
 left: 50%;
 transform: translateX(-50%);
+display: none;
+}
+.a-hover:hover::before {
+display: block;
+}
+}
+.a-hover.a-always {
+position: relative;
+}
+.a-hover.a-always::before {
+content: "";
+position: absolute;
+width: 100%;
+height: 1px;
+background: #1a1a1a;
+bottom: 0;
+left: 50%;
+transform: translateX(-50%);
+display: none;
+}
+.a-hover.a-always:hover::before {
+display: block;
+}
+.a-hover.a-always::before {
+display: inline-block !important;
 }
 .a-hover.colorBk {
 color: inherit;
+}
+@media (min-width: 1200px) {
+.a-hover.colorBk {
 position: relative;
 }
 .a-hover.colorBk::before {
 content: "";
-display: block;
 position: absolute;
 width: 100%;
 height: 1px;
@@ -1544,6 +1573,31 @@ background: #1a1a1a;
 bottom: 0;
 left: 50%;
 transform: translateX(-50%);
+display: none;
+}
+.a-hover.colorBk:hover::before {
+display: block;
+}
+}
+.a-hover.colorBk.a-always {
+position: relative;
+}
+.a-hover.colorBk.a-always::before {
+content: "";
+position: absolute;
+width: 100%;
+height: 1px;
+background: #1a1a1a;
+bottom: 0;
+left: 50%;
+transform: translateX(-50%);
+display: none;
+}
+.a-hover.colorBk.a-always:hover::before {
+display: block;
+}
+.a-hover.colorBk.a-always::before {
+display: inline-block !important;
 }
 
 .a-hover2 {
@@ -1563,7 +1617,6 @@ position: relative;
 }
 .a-hover2.colorBk:hover > strong::before {
 content: "";
-display: block;
 position: absolute;
 width: 100%;
 height: 1px;
@@ -1571,6 +1624,10 @@ background: #1a1a1a;
 bottom: 0;
 left: 50%;
 transform: translateX(-50%);
+display: none;
+}
+.a-hover2.colorBk:hover > strong:hover::before {
+display: block;
 }
 }
 
@@ -1591,7 +1648,7 @@ content: "";
 .bu-dot > li {
 position: relative;
 padding-left: 10px;
-margin: 8px 0;
+margin: 12px 0;
 }
 .bu-dot > li::before {
 position: absolute;
@@ -1660,7 +1717,7 @@ color: #333333;
 font-size: 2.25rem;
 font-weight: 700;
 margin-bottom: 20px;
-line-height: 90%;
+line-height: 1.2;
 }
 #main-container h2 + h3 {
 margin-top: 22px;
@@ -1769,6 +1826,7 @@ ul.bu > li {
 clear: both;
 position: relative;
 padding-left: 13px;
+margin: 12px 0;
 }
 ul.bu > li::before {
 position: absolute;
@@ -2556,19 +2614,22 @@ padding-left: 10px;
 padding-right: 10px;
 }
 }
+#header > .container {
+min-height: 96px;
+}
 #header .globalHeader {
 display: none;
 }
 @media (min-width: 1200px) {
 #header .globalHeader {
 display: block;
+min-height: 34px;
 }
 #header .globalHeader ul {
 max-width: 1728px;
 display: flex;
 flex-direction: row;
 flex-grow: 1;
-padding: 4px 0;
 gap: 0 2px;
 }
 #header .globalHeader ul li + li::before {
@@ -2583,6 +2644,7 @@ background-color: #e5e5e5;
 color: #005596;
 display: inline-block;
 font-size: 0.9375rem;
+font-weight: 500;
 padding: 2px 8px;
 }
 #header .globalHeader ul a:hover {
@@ -3060,7 +3122,7 @@ margin-top: 36px;
 }
 @media (min-width: 1200px) {
 #content {
-min-height: 1020px;
+min-height: 950px;
 }
 }
 #content .hgroup {
@@ -3194,6 +3256,9 @@ max-width: 100%;
 min-height: calc(100vh - 246px - 196px - 80px);
 display: block;
 }
+#main-container p {
+font-size: 1.125rem;
+}
 #main-container:before, #main-container:after {
 content: ".";
 display: block;
@@ -3204,6 +3269,9 @@ visibility: hidden;
 @media (max-width: 749px) {
 #main-container {
 padding: 0 10px;
+}
+#main-container p {
+font-size: 1rem;
 }
 }
 @media (max-width: 1199px) {
@@ -4241,7 +4309,7 @@ margin: 0 -12px;
 }
 @media (max-width: 1199px) {
 .reference-news dl dd ul {
-width: -moz-max-content;
+width: -webkit-max-content;
 width: max-content;
 }
 }
@@ -4374,7 +4442,7 @@ margin: -12px -12px 0;
 }
 @media (max-width: 1199px) {
 .reference-media dl dd ul {
-width: -moz-max-content;
+width: -webkit-max-content;
 width: max-content;
 }
 }
@@ -5519,11 +5587,6 @@ color: #1A1A1A;
 
 html {
 font-size: 1rem;
-}
-@media (max-width: 749px) {
-html {
-font-size: 1.125rem;
-}
 }
 
 body {

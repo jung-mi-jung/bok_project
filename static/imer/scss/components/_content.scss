@@ -1,10 +1,10 @@
 .fc1 {
 	// color: #118DB4;
-	color: #3B63C4;
+	color: #005596;
 	font-weight: 500;
 }
 .fc2 {
-	color: #3B63C4;
+	color: #005596;
 	font-weight: 500;
 }
 .first {
@@ -38,6 +38,9 @@
     padding: 26px;
     text-align: center;
     background-color: #F2F6FA;
+	h2 {
+		line-height: 1.4 !important;
+	}
 }
 .btns {
 	position: relative;
@@ -101,7 +104,13 @@
 		}
 	}
 }
-
+.bu .btns{
+	@include breakpoint($sm) {
+		position: inherit;
+		bottom: inherit;
+		right: inherit;
+	}
+}
 
 
 
@@ -246,6 +255,7 @@
 				font-size: rem(18);
 				font-weight: 400;
 				color: #1A1A1A;
+				margin-bottom: 8px;
 			}
 		}
 		.address {
@@ -254,19 +264,20 @@
 			padding: 10px 15px;
 			color: #fff;
 			font-size: rem(16);
-			margin-top: 20px;
+			margin-top: 40px;
 		}
 		& + p {
 			margin: 30px 0;
+			font-size: rem(18);
 		}
 	}
-	> h3 {
+	> h3, h2 {
 		&:first-of-type {
 			margin-top: 0 !important;
 		}
 	}
 	.schList {
-		margin-top: 30px;
+		margin-top: 50px;
 		li {
 			display: flex;
 			align-items: flex-start;
@@ -277,8 +288,9 @@
 			flex-wrap: wrap;
 			span {
 				display: block;
-				font-weight: 500;
+				font-weight: 700;
 				padding: 0 0 10px;
+				// color: #4d4d4d;
 				> span {
 					display: inline-block;
 					margin-right: 5px;
@@ -299,9 +311,9 @@
 					width: 110px;
 					padding: 0 0;
 				}
-				> span {
-					font-weight: 500 !important;
-				}
+				// > span {
+				// 	font-weight: 500 !important;
+				// }
 			}
 			.schTxt2 {
 				width: calc(100% - 180px);
@@ -329,6 +341,9 @@
 		background: #F2F6FA;
 		border-radius: 16px;
 		text-align: center;
+		@include breakpoint ($sm) { 
+			padding: 20px 10px 30px;
+		}
 		i {
 			display: block;
 			width: 76px;
@@ -337,42 +352,97 @@
 			@include background-image-retina("/static/imer/img/ico/ico-noData", png, auto, 100%);
 		}
 		p {
-			font-size: rem(36);
+			font-size: rem(36) !important;
 			font-weight: 300;
 			color: #131547;
 			@include breakpoint ($sm) {
-				font-size: rem(24);
+				font-size: rem(20) !important;
 			}		
 		}
 	}
 	> img {
 		width: 100%;
 	}
+	p {
+		font-size: rem(18);
+	}
+}
+.row.speakers {
+	gap: 0 80px;
+	align-items: stretch;
+	margin-bottom: 64px;
+	.profile {
+		padding: 48px 48px;
+		width: 276px;
+		border-radius: 16px 16px;
+		background: #FAFAFA;
+		img {
+			width: 100%;
+		}
+		span {
+			display: block;
+			font-size: rem(18);
+			text-align: center;
+			&.fc1 {
+				font-size: rem(16);
+				margin-bottom: 8px;
+			}
+		}
+		.btn-wrap {
+			padding-top: 24px;
+			margin-top: 24px;
+			border-top: 1px solid #E5E5E5;
+			.b-go {
+				width: 100%;
+				height: 32px;
+				background: #143D66;
+				&::after {
+					display: none;
+				}
+			}
+		}
+	}
+	.profile-desc {
+		width: calc(100% - 276px - 80px);
+		p + p {
+			margin-top: 16px;
+		}
+	}
 }
 
-//오시는 길
-.bokHead{
-	background:#f4f5f7;padding:15px;overflow:hidden;
-	@include breakpoint($sm){
-		.map{width:100%;}
-		.bankMap{width:100%;margin:20px 0 0 0;}
-	}
-	.map{
-		float:left;
-		width:60%;
-		@include breakpoint($sm){
+@include breakpoint($sm) {
+	.row.speakers {
+		gap: 16px 0;
+		flex-direction: column;
+		.profile, .profile-desc {
 			width: 100%;
+		}
+		.profile {
+			text-align: center;
+			padding: 20px 20px;
+			img {
+				max-width: 180px;
+			}
+		}
+	}
+}
+
+
+//오시는길
+.bokHead{
+	.map{
+		min-height: 600px;
+		@include breakpoint($sm){ 
+			min-height: 400px;
 		}
 	}
 	.bankMap{
-		float:left;
-		width:38%;
-		margin-left:2%;
-		@include breakpoint($sm){
-			width: 100%;
-			margin-left: 0;
-			margin-top: 20px;
-		}
+		margin-top: 24px;
+		// @include breakpoint($sm){
+		// 	width: 100%;
+		// 	margin-left: 0;
+		// 	margin-top: 20px;
+		// }
 		// font-size: rem(18);
 		&.type{
 			dt{
@@ -380,10 +450,12 @@
 			}
 		}
 		dt, dd{
-			padding-left: 35px;
+			padding-left: 32px;
 		}
 		dt{
 			margin-top:10px;
+			color: #1a1a1a;
+			font-weight: 500;
 			&::before {
 				font-size: 16px;
 				color:#fff;
@@ -399,26 +471,41 @@
 				margin: 3px 3px 0 0;
 			}
 		}
+		dd {
+			color: #4d4d4d;
+			font-weight: 400;
+		}
 		.pic img{
 			display:inline-block;border:3px solid #fff;
 		}
 		.ad{
 			position:relative;
 			&:before{
+				color: #1a1a1a;
+				background: none;
 				@include font-ico-outline('\e0c8');
 				display: inline-flex;
 				align-items: center;
 				justify-content: center;
+				width: 24px;
+				height: 24px;
+				font-size: 22px;
 				
 			}
 		}
 		.ph{
 			position:relative;
+			margin-top: 24px;
 			&:before{
+				color: #1a1a1a;
+				background: none;
 				@include font-ico-outline('\e0b0');
 				display: inline-flex;
 				align-items: center;
 				justify-content: center;
+				width: 24px;
+				height: 24px;
+				font-size: 22px;
 			}
 		}
 		.fx{
@@ -440,24 +527,16 @@
 /* 학술지 논문목록 */
 .cont-tableList {
 	.table {
-		border-top: 2px solid #17294D;
-		thead {
-			th {
-				background: #EBF3F7 !important;
-				border-radius: 0 !important;
-				border-left: 1px solid #e5e5e5 !important;
-				border-right: 1px solid #e5e5e5 !important;
-				border-bottom: 1px solid #e5e5e5 !important;
-				&:first-of-type {
-					border-right: 0 !important;
-				}
-			}
-		}
 		tbody {
 			td {
-				border-left: 1px solid #e5e5e5 !important;
-				border-right: 1px solid #e5e5e5 !important;
+				min-height: 52px;
+				height: auto !important;
+				font-size: rem(16) !important;
+				border-top: 0 !important;
 				&:first-of-type {
+					border-left: 0 !important;
+				}
+				&:last-of-type {
 					border-right: 0 !important;
 				}
 			}

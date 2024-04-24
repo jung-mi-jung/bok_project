@@ -583,17 +583,17 @@ $(function() {
 
 	$window.on("scroll", function () {
 		//gnbFixed 		//fixLogo
-		if ($window.scrollTop() > fixNav) {
-			$("body").addClass("nav-stiky");
-			//$(".gnbRtSet .logo").addClass("fixLogo");
+		// if ($window.scrollTop() > fixNav) {
+		// 	$("body").addClass("nav-stiky");
+		// 	//$(".gnbRtSet .logo").addClass("fixLogo");
 
-		}else{
-			if($("body").hasClass("nav-stiky")){
-				$("body").addClass("nav-stiky");
-			}
-			$("body").removeClass("nav-stiky");
-			//$(".gnbRtSet .logo").removeClass("fixLogo");
-		}
+		// }else{
+		// 	if($("body").hasClass("nav-stiky")){
+		// 		$("body").addClass("nav-stiky");
+		// 	}
+		// 	$("body").removeClass("nav-stiky");
+		// 	//$(".gnbRtSet .logo").removeClass("fixLogo");
+		// }
 		if ($window.scrollTop() > amountScrolled) {
 				backBtn.fadeIn("slow");
 		} else {

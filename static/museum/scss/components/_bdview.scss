@@ -254,7 +254,7 @@
 }
 .bd-view {
 	position: relative;
-    z-index: 9;
+    z-index: 2;
 	//@include dl-table;	
 	.subject {
 		color: $black;
@@ -618,7 +618,7 @@
 		width: 100%;
     	min-height: 700px;
 		@include breakpoint($sm) {
-			min-height: 480px;
+			min-height: 500px;
 		}
 	}
 

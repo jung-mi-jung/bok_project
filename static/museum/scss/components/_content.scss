@@ -291,6 +291,31 @@
 				&:last-of-type {
 					max-width: calc(100% - 46.649% - 4.72%);
 				}
+				&.exhbt-img {
+					//max-width: calc(100% - 39.69% - 64px);
+					&.left {
+						max-width : 65.29%;
+						& + .exhbt-desc {
+							max-width: calc(100% - 65.29% - 4.72%);
+						}
+					}
+					.img-full {
+						border-radius: 32px;
+						> img {
+							display: block;
+							border-radius: 32px;
+							& + img {
+								margin-top: 8px;
+							}
+						}
+					}
+				}
+				.exhbt-desc,
+				.exhbt-img {
+					&.w100p {
+						max-width: 100%;
+					}
+				}
 			}
 		}
 		h3  {
@@ -341,59 +366,6 @@
 				}
 			}
 		}
-		.exhbt-desc {
-			// max-width: 39.69%;
-			// .img-list {
-			// 	display: grid;
-			// 	padding: 30px 20px 20px;
-			// 	margin-top: 48px;
-			// 	gap: 20px 48px;
-			// 	border: 1px solid #E5E5E5;
-			// 	border-radius: 8px;
-			// 	box-sizing: border-box; 
-			// 	grid-template-columns: repeat(2, 1fr);
-			// 	@include breakpoint($smd) {
-			// 		grid-template-columns: repeat(4, 1fr);
-			// 	}
-			// 	@include breakpoint($sm) {
-			// 		grid-template-columns: repeat(2, 1fr);
-			// 	}
-			// 	li {
-			// 		max-width: 196px;
-			// 		span {
-			// 			display: block;
-			// 			width: 100%;
-			// 			font-size: rem(14);
-			// 			margin-top: 8px;
-			// 			text-align: center;
-			// 		}
-			// 		img {
-			// 			display: block;
-			// 			width: 100%;
-			// 			border-radius: 8px;
-			// 		}
-			// 	}
-			// }
-		}
-		.exhbt-img {
-			//max-width: calc(100% - 39.69% - 64px);
-			&.left {
-				max-width : 65.29% !important;
-				& + .exhbt-desc {
-					max-width: calc(100% - 65.29% - 64px) !important;;
-				}
-			}
-			.img-full {
-				> img {
-					display: block;
-					border-radius: 32px;
-					& + img {
-						margin-top: 8px;
-					}
-				}
-			}
-		}
-		
 		.img-list {
 			display: flex;
 			flex-direction: column;
@@ -431,12 +403,7 @@
 				}
 			}
 		}
-		.exhbt-desc ,
-		.exhbt-img {
-			&.w100p {
-				max-width: 100%;
-			}
-		}
+		
 	}
 }
 
@@ -453,14 +420,6 @@
 			}
 		}
 		.tab-content {
-			.row {
-				display: block;
-			}
-			.exhbt-desc, 
-			.exhbt-img {
-				width: 100%;
-				max-width: 100%;
-			} 
 			.exhbt-desc +  .exhbt-img,
 			.exhbt-img +  .exhbt-desc {
 				margin-top: 30px;
@@ -478,6 +437,26 @@
 }
 @include breakpoint ($sm) {
 	.exhbt {
+		.tab-content {
+			.row {
+				display: block;
+				> div {
+					width: 100% !important;
+					max-width: 100% !important;
+				}
+			}
+			.img-list {
+				flex-direction: row;
+				flex-wrap: wrap;
+				justify-content: flex-start;
+				padding: 12px 12px;
+				gap: 16px 8px;
+				li {
+					width: 100%;
+					max-width: calc(50% - 6px);
+				}
+			}
+		}
 		.imgSetBox {
 			padding: 80px 12px 12px 12px;
 		}
@@ -488,11 +467,6 @@
 		}
 	}
 }
-
-
-
-
-
 
 //오시는길
 .bokHead{
@@ -938,7 +912,6 @@
 		font-size: rem(24);
 	}
 }
-
 @include breakpoint($sm) {
 	.intro_museum  {
 		aspect-ratio: 344/96;
