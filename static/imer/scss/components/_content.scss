@@ -102,6 +102,13 @@
 	}
 }
 
+.bu .btns{
+	@include breakpoint($sm) {
+		position: inherit;
+		bottom: inherit;
+		right: inherit;
+	}
+}
 
 
 
@@ -246,6 +253,7 @@
 				font-size: rem(18);
 				font-weight: 400;
 				color: #1A1A1A;
+				margin-bottom: 8px;
 			}
 		}
 		.address {
@@ -254,10 +262,11 @@
 			padding: 10px 15px;
 			color: #fff;
 			font-size: rem(16);
-			margin-top: 20px;
+			margin-top: 40px;
 		}
 		& + p {
 			margin: 30px 0;
+			font-size: rem(18);
 		}
 	}
 	> h3 {
@@ -348,31 +357,57 @@
 	> img {
 		width: 100%;
 	}
+	p {
+		font-size: rem(18);
+	}
+}
+.row.speakers {
+	gap: 20px 20px;
+	align-items: stretch;
+	margin-bottom: 60px;
+	.profile {
+		width: 154px;
+		span {
+			display: block;
+			margin-bottom: 8px;
+		}
+	}
+	.profile-desc {
+		width: calc(100% - 154px - 20px);
+		p + p {
+			margin-top: 16px;
+		}
+	}
+}
+@include breakpoint($sm) {
+	.row.speakers {
+		gap: 16px 0;
+		flex-direction: column;
+		.profile, .profile-desc {
+			width: 100%;
+		}
+		.profile {
+			text-align: center;
+		}
+	}
 }
 
-//오시는 길
+
+//오시는길
 .bokHead{
-	background:#f4f5f7;padding:15px;overflow:hidden;
-	@include breakpoint($sm){
-		.map{width:100%;}
-		.bankMap{width:100%;margin:20px 0 0 0;}
-	}
 	.map{
-		float:left;
-		width:60%;
-		@include breakpoint($sm){
-			width: 100%;
+		min-height: 600px;
+		@include breakpoint($sm){ 
+			min-height: 400px;
 		}
 	}
 	.bankMap{
-		float:left;
-		width:38%;
-		margin-left:2%;
-		@include breakpoint($sm){
-			width: 100%;
-			margin-left: 0;
-			margin-top: 20px;
-		}
+		margin-top: 24px;
+		// @include breakpoint($sm){
+		// 	width: 100%;
+		// 	margin-left: 0;
+		// 	margin-top: 20px;
+		// }
 		// font-size: rem(18);
 		&.type{
 			dt{
@@ -380,10 +415,12 @@
 			}
 		}
 		dt, dd{
-			padding-left: 35px;
+			padding-left: 32px;
 		}
 		dt{
 			margin-top:10px;
+			color: #1a1a1a;
+			font-weight: 500;
 			&::before {
 				font-size: 16px;
 				color:#fff;
@@ -399,26 +436,41 @@
 				margin: 3px 3px 0 0;
 			}
 		}
+		dd {
+			color: #4d4d4d;
+			font-weight: 400;
+		}
 		.pic img{
 			display:inline-block;border:3px solid #fff;
 		}
 		.ad{
 			position:relative;
 			&:before{
+				color: #1a1a1a;
+				background: none;
 				@include font-ico-outline('\e0c8');
 				display: inline-flex;
 				align-items: center;
 				justify-content: center;
+				width: 24px;
+				height: 24px;
+				font-size: 22px;
 				
 			}
 		}
 		.ph{
 			position:relative;
+			margin-top: 24px;
 			&:before{
+				color: #1a1a1a;
+				background: none;
 				@include font-ico-outline('\e0b0');
 				display: inline-flex;
 				align-items: center;
 				justify-content: center;
+				width: 24px;
+				height: 24px;
+				font-size: 22px;
 			}
 		}
 		.fx{
@@ -440,24 +492,16 @@
 /* 학술지 논문목록 */
 .cont-tableList {
 	.table {
-		border-top: 2px solid #17294D;
-		thead {
-			th {
-				background: #EBF3F7 !important;
-				border-radius: 0 !important;
-				border-left: 1px solid #e5e5e5 !important;
-				border-right: 1px solid #e5e5e5 !important;
-				border-bottom: 1px solid #e5e5e5 !important;
-				&:first-of-type {
-					border-right: 0 !important;
-				}
-			}
-		}
 		tbody {
 			td {
-				border-left: 1px solid #e5e5e5 !important;
-				border-right: 1px solid #e5e5e5 !important;
+				min-height: 52px;
+				height: auto !important;
+				font-size: rem(16) !important;
+				border-top: 0 !important;
 				&:first-of-type {
+					border-left: 0 !important;
+				}
+				&:last-of-type {
 					border-right: 0 !important;
 				}
 			}

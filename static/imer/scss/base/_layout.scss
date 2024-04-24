@@ -574,7 +574,7 @@
 
 #content {
 	@include breakpoint($lg) {
-		min-height: 1020px;
+		min-height: 950px;
 	}
 	margin-top: 36px;
 	.hgroup { //기존 소스 삭제
@@ -710,9 +710,15 @@
 	max-width: 100%;
 	min-height: calc(100vh - 246px - 196px - 80px);
 	// padding-top: 30px;
+	p {
+		font-size: rem(18);
+	}
 	@include clearfix();
 	@include breakpoint($sm){
 		padding: 0 10px;
+		p {
+			font-size: rem(16);
+		}
 	}
 	@include breakpoint($smd){
 		display: flex;

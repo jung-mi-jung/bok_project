@@ -1563,6 +1563,7 @@ content: "";
 .bu-dot > li {
 position: relative;
 padding-left: 10px;
+margin: 12px 0;
 }
 .bu-dot > li::before {
 position: absolute;
@@ -1740,6 +1741,7 @@ ul.bu > li {
 clear: both;
 position: relative;
 padding-left: 13px;
+margin: 12px 0;
 }
 ul.bu > li::before {
 position: absolute;
@@ -4309,7 +4311,7 @@ margin-top: 36px;
 }
 @media (min-width: 1200px) {
 #content {
-min-height: 1020px;
+min-height: 950px;
 }
 }
 #content .hgroup {
@@ -4323,6 +4325,9 @@ max-width: 100%;
 min-height: calc(100vh - 246px - 196px - 80px);
 display: block;
 }
+#main-container p {
+font-size: 1.125rem;
+}
 #main-container:before, #main-container:after {
 content: ".";
 display: block;
@@ -4333,6 +4338,9 @@ visibility: hidden;
 @media (max-width: 749px) {
 #main-container {
 padding: 0 10px;
+}
+#main-container p {
+font-size: 1rem;
 }
 }
 @media (max-width: 1199px) {
@@ -4579,14 +4587,14 @@ font-weight: 500;
 .gnb > ul > li > a.on + .depth2 {
 display: flex;
 justify-content: space-between;
-background-color: rgba(19, 21, 71, 0.95);
+background: #fff;
 }
 .gnb > ul > li > a.on + .depth2::before, .gnb > ul > li > a.on + .depth2::after {
 content: "";
 display: block;
 width: 50%;
 height: 100%;
-background-color: rgba(19, 21, 71, 0.95);
+background-color: #fff;
 position: absolute;
 top: 0;
 }
@@ -4647,12 +4655,12 @@ padding: 15px 0;
 display: inline-block;
 font-size: 1.25rem;
 font-weight: 500;
-color: #fff;
+color: #17294D;
 }
 .gnb > ul .depth2 .e {
 width: 376px;
 padding: 35px 48px;
-background-color: rgba(177, 193, 231, 0.1);
+background: #F3F7F9;
 }
 .gnb > ul .depth2 .e .img {
 padding-top: 56.2%;
@@ -4681,16 +4689,16 @@ padding-top: 5px;
 .gnb > ul .depth3 > ul > li > a {
 position: relative;
 display: inline-block;
-color: #B1C1E7;
+color: #4d4d4d;
 font-weight: 400;
 padding: 1px 0;
 }
 .gnb > ul .depth3 > ul > li > a:hover, .gnb > ul .depth3 > ul > li > a.on, .gnb > ul .depth3 > ul > li > a.active {
-color: #fff;
+color: #005596;
 text-decoration: underline;
 }
 .gnb > ul .depth3 > ul > li.active > a {
-color: #fff;
+color: #005596;
 font-weight: 500;
 text-decoration: underline;
 }

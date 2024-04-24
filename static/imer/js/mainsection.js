@@ -73,14 +73,14 @@ var resizeDone = function () {
     }
     sectionNavSetup()
 };
-// function sectionNavSetup() {
-//     if (currentMainSection > 0) {
-//         // $('#section2 .section2-set .section2-set__list .item').addClass('animated');
-//         $('.section-nav').addClass('section-nav--color')
-//     } else {
-//         $('.section-nav').removeClass('section-nav--color')
-//     }
-// }
+function sectionNavSetup() {
+    if (currentMainSection > 0) {
+        // $('#section2 .section2-set .section2-set__list .item').addClass('animated');
+        $('.section-nav').addClass('section-nav--color')
+    } else {
+        $('.section-nav').removeClass('section-nav--color')
+    }
+}
 function scrollDiectionCheck(e) {
     var st = window.pageYOffset || document.documentElement.scrollTop;
     // if(Math.abs(lastScrollTop - st) <= 5)
@@ -133,68 +133,71 @@ $('#wrap').on('wheel', function (event) {
 
 
 
-// $(function () {
-//     // 섹션 네비게이션 휠처리
-//     var prevHtmlClassName = null;
-//     $(window).on('scroll', function (event) {
-//         scrollDiectionCheck(event);
-//         var sectionNavItemIndex;
-//         mainSection.each(function (index, element) {
-//             if (Utils.isElementInView($(this), 50)) {
-//                 sectionNavItemIndex = index;
-//             }
-//         });
-//         $('.section-nav a').removeClass('active').removeAttr('title').eq(sectionNavItemIndex).addClass('active').attr('title', '선택 됨');
-//         cname = 'section_' + sectionNavItemIndex;
-//         if ($('html').hasClass(cname) == false) {
-//             if (prevHtmlClassName != null) {
-//                 $('html').removeClass(prevHtmlClassName);
-//             }
-//             $('html').addClass(cname);
-//             prevHtmlClassName = 'section_' + sectionNavItemIndex;
-//         }
-//         if (Utils.isElementInView('#footer', 99)) {
-//             $('body').addClass('custom-nav--stiky');
-//         } else {
-//             $('body').removeClass('custom-nav--stiky');
-//         }
-//         // console.log(currentMainSection)
 
-//     });
-//     // 섹션 메뉴 이동
-//     var _sectionTarget
-//     $('.section-nav a').each(function (index) {
-//         $(this).on('click', function (event) {
-//             event.preventDefault();
-//             _sectionTarget = $(this).attr('href')
-//             inMotion = true
-//             $('html, body')
-//                 .stop()
-//                 .animate(
-//                     { scrollTop: mainSection.eq(index).offset().top },
-//                     {
-//                         duration: 650,
-//                         complete: function () {
-//                             $(_sectionTarget).focus();
-//                             inMotion = false
-//                         },
-//                     }
-//                 );
-//         });
-//     });
-//     // 페이지 새로고침 처리
-//     setTimeout(function () {
-//         // mainSection.each(function (index, element) {
-//         //     if ($(this).offset().top >= $(window).scrollTop() && Utils.isElementInView($(this), 50)) {
-//         //         currentMainSection = index;
-//         //     }
-//         // });
-//         if (currentMainSection == 1) {
-//             // 특정 섹션이 보일때 처리
-//             // $('#section2 .section2-set .section2-set__list .item').addClass('animated');
-//         }
-//     }, 1000);
-// });
+
+$(function () {
+    // 섹션 네비게이션 휠처리
+    var prevHtmlClassName = null;
+    $(window).on('scroll', function (event) {
+        scrollDiectionCheck(event);
+        var sectionNavItemIndex;
+        mainSection.each(function (index, element) {
+            if (Utils.isElementInView($(this), 50)) {
+                sectionNavItemIndex = index;
+            }
+        });
+        $('.section-nav a').removeClass('active').removeAttr('title').eq(sectionNavItemIndex).addClass('active').attr('title', '선택 됨');
+        cname = 'section_' + sectionNavItemIndex;
+        if ($('html').hasClass(cname) == false) {
+            if (prevHtmlClassName != null) {
+                $('html').removeClass(prevHtmlClassName);
+            }
+            $('html').addClass(cname);
+            prevHtmlClassName = 'section_' + sectionNavItemIndex;
+        }
+        if (Utils.isElementInView('#footer', 99)) {
+            $('body').addClass('custom-nav--stiky');
+        } else {
+            $('body').removeClass('custom-nav--stiky');
+        }
+        // console.log(currentMainSection)
+
+    });
+    //섹션 메뉴 이동
+    var _sectionTarget
+    $('.section-nav a').each(function (index) {
+        $(this).on('click', function (event) {
+            event.preventDefault();
+            _sectionTarget = $(this).attr('href')
+            inMotion = true
+            $('html, body')
+                .stop()
+                .animate(
+                    { scrollTop: mainSection.eq(index).offset().top },
+                    {
+                        duration: 650,
+                        complete: function () {
+                            $(_sectionTarget).focus();
+                            inMotion = false
+                        },
+                    }
+                );
+        });
+    });
+
+    // 페이지 새로고침 처리
+    setTimeout(function () {
+        // mainSection.each(function (index, element) {
+        //     if ($(this).offset().top >= $(window).scrollTop() && Utils.isElementInView($(this), 50)) {
+        //         currentMainSection = index;
+        //     }
+        // });
+        if (currentMainSection == 1) {
+            // 특정 섹션이 보일때 처리
+            // $('#section2 .section2-set .section2-set__list .item').addClass('animated');
+        }
+    }, 1000);
+});
 
 $(function () {
     // 페이지 새로고침 처리

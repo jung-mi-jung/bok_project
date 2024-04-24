@@ -66,9 +66,9 @@ a {
 }
 html {
 	font-size: $html-font-size;
-	@include breakpoint($sm){
-		font-size: rem(18);
-	}
+	// @include breakpoint($sm){
+	// 	font-size: rem(18);
+	// }
 }
 body {
 	overflow-x: hidden !important;

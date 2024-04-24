@@ -49,6 +49,45 @@
 							<a href="https://apply.bok.or.kr" target="_blank" title="새창열림">채용</a>
 						</li>
 					</ul>
+					<!-- 본인인증 -->
+					<div class="g-info">				
+						<div class="global">
+							<ul>
+								<li>
+									<!-- <a href="">본인인증</a> -->
+									<div class="userInfoOpBxSet">
+										<a href="javascript:void(0)" class="userInfoOpener" title="로그인 정보 페이지 열고 닫기">홍길동</a>
+										<div class="userInfoOpBx">
+											<div class="userInfoSnsBx">
+												<i class="ico"></i>
+												<span class="infoTxts"><strong>홍길동</strong>님 <br>로그인중입니다.</span>
+											</div>
+											<div class="myLogoutBx">
+												<a href="/portal/bbs/U0000555/listMy.do?menuNo=200263" class="mypg">마이페이지</a>
+												<a href="/portal/member/user/logout.do" class="logout">로그아웃</a>
+											</div>
+										</div>								
+									</div>
+								</li>
+								<li>
+									<a href="/eng/main/main.do" target="_blank" title="새창열림">ENGLISH</a>
+								</li>
+							</ul>
+						</div>
+						<!-- <button type="button" class="search" title="검색레이어 열기"><i class="ico-srchW"></i></button>
+						<div class="search_wrap">
+							<form action="">
+								<div class="search_wrap_input">
+									<input type="text" class="search_keyword" placeholder="검색어를 입력해 주세요.">	
+									<button type="button" class="search" aria-label="검색"></button>
+								</div>
+								<div class="keyword">
+									HOT 이슈키워드
+								</div>
+								<button type="button" class="search_close" aria-label="검색 닫기"></button>
+							</form>
+						</div> -->
+					</div>
 				</div>
 			</div>
 			<div class="container">			
@@ -176,67 +215,254 @@
 							</div> -->
 						</li>
 					</ul>
-					<button type="button" class="all-nav-toggle" title="전체 메뉴 열기"></button>
-				</nav>
-				<nav class="mobileGnb" id="mobileGnb">
-					<button type="button" class="m-all-nav-toggle" title="전체 메뉴 열기"></button>
-					<div class="mobileGnb__set">
-						<div class="top">
-							<span class="sr-only">전체메뉴</span>
-							<button type="button" class="mobileGnb-close" title="전체 메뉴 닫기"></button>
-						</div>
-						<div class="mobileGnb__nav"></div>
-					</div>
-				</nav>
-		
-				<div class="g-info">				
-					<div class="global">
-						<ul>
-							<li>
-								<!-- <a href="">본인인증</a> -->
-								<div class="userInfoOpBxSet">
-									<a href="javascript:void(0)" class="userInfoOpener" title="로그인 정보 페이지 열고 닫기">홍길동</a>
-									<div class="userInfoOpBx">
-										<div class="userInfoSnsBx">
-											<i class="ico"></i>
-											<span class="infoTxts"><strong>홍길동</strong>님 <br>로그인중입니다.</span>
+					<div class="gnb-btn-wrap">
+						<button type="button" class="all-nav-toggle" data-toggle="modal" data-target="#totalMenu" title="전체 메뉴 열기"></button>
+						<button type="button" class="search" title="검색레이어 열기">
+							<i class="ico-srchW"></i>
+						</button>
+						<div class="search_wrap">
+							<form action="">
+								<div class="search_wrap_input">
+									<input type="text" class="search_keyword" name="query" id="queryTop" placeholder="검색어를 입력해 주세요." autocomplete="off" maxlength="50">
+									<div class="dqAuto" tabindex="0" style="display: none;">
+										<ul class="autoList">
+											<li>
+												<a href=""><font style="color:#005596">환</font>율</a>
+											</li>
+											<li>
+												<a href=""><font style="color:#005596">환</font>율</a>
+											</li>
+											<li>
+												<a href=""><font style="color:#005596">환</font>율</a>
+											</li>
+											<li>
+												<a href=""><font style="color:#005596">환</font>율</a>
+											</li>
+											<li>
+												<a href=""><font style="color:#005596">환</font>율</a>
+											</li>
+											<li>
+												<a href=""><font style="color:#005596">환</font>율</a>
+											</li>
+											<li>
+												<a href=""><font style="color:#005596">환</font>율</a>
+											</li>
+											<li>
+												<a href=""><font style="color:#005596">환</font>율</a>
+											</li>
+											<li>
+												<a href=""><font style="color:#005596">환</font>율</a>
+											</li>
+										</ul>
+										<div class="bottom">
+											<a href="javascript:void(0);" id="topSrchClose" class="btnClose">자동완성 닫기</a>
 										</div>
-										<div class="myLogoutBx">
-											<a href="/portal/bbs/U0000555/listMy.do?menuNo=200263" class="mypg">마이페이지</a>
-											<a href="/portal/member/user/logout.do" class="logout">로그아웃</a>
-										</div>
-									</div>								
+									</div>	
+									<button type="button" class="btn_search search" aria-label="검색"></button>
 								</div>
-							</li>
-							<li>
-								<a href="/eng/main/main.do" target="_blank" title="새창열림">ENGLISH</a>
-							</li>
-						</ul>
+								<button type="button" class="search_close" aria-label="검색 닫기"></button>
+							</form>
+						</div>
 					</div>
-					<button type="button" class="search" title="검색레이어 열기"><i class="ico-srchW"></i></button>
-					<div class="search_wrap">
-						<form action="">
-							<div class="search_wrap_input">
-								<input type="text" class="search_keyword" placeholder="검색어를 입력해 주세요.">	
-								<button type="button" class="search" aria-label="검색"></button>
-							</div>
-							<div class="keyword">
-								HOT 이슈키워드
-							</div>
-							<button type="button" class="search_close" aria-label="검색 닫기"></button>
-						</form>
-					</div>
-				</div>
+				</nav>
 			</div>
 			<!-- 전체메뉴 -->
-			<div class="total-nav">
-				<!-- <section>
-					<div>
-						<h2 class="total-nav-title">전체 메뉴</h2>
-						<div class="nav"></div>
-						<button type="button" class="ico-close"></button>	
+			<div class="modal fade total-nav" id="totalMenu" tabindex="-1" role="dialog">
+				<div class="lpop modal-dialog" role="document">
+					<div class="set modal-content">
+						<div class="modal-header">
+							<div class="container">
+								<button type="button" class="close" data-dismiss="modal"><i class="ti-close"></i><span class="sr-only">레이어 창닫기</span></button>
+								<h1 class="modal-title" id="modal-label1">
+									<span class="totalnav-logo"></span>전체메뉴
+								</h1>
+								<form>
+									<fieldset>
+										<legend class="sr-only">전체메뉴 검색</legend>
+										<div class="keyword-set">
+											<span class="keyword"><input type="text" title="검색어"></span>
+											<button type="button" class="search" onclick="" aria-label="검색"></button>
+										</div>
+									</fieldset>
+								</form>
+							</div>
+						</div>
+						<div class="modal-body">
+							<div class="container">
+								<ul class="dp1">
+									<li>
+										<a href=""><span>한국은행</span></a>
+										<a href="javascropt:void(0)" class="m-dp1"><span>한국은행</span></a>
+										<ul class="dp2">
+											<li>
+												<a href="">개요</a>
+											</li>
+											<li>
+												<a href="">설립목적 및 역사</a>
+											</li>
+											<li>
+												<a href="">금융통화위원회</a>
+											</li>
+											<li>
+												<a href="">조직도</a>
+											</li>
+											<li>
+												<a href="">운영 및 법규</a>
+												<ul class="dp3">
+													<li>
+														<a href="">전략 및 조직가치</a>
+													</li>
+													<li>
+														<a href="">경영정보</a>
+													</li>
+													<li>
+														<a href="">계약정보</a>
+													</li> 
+													<li>
+														<a href="">윤리경영</a>
+													</li>
+													<li>
+														<a href="">법규정보</a>
+													</li>
+													<li>
+														<a href="">사회공헌</a>
+													</li>
+													<li>
+														<a href="">채용</a>
+													</li>
+												</ul>
+											</li>
+											<li>
+												<a href="">오시는 길</a>
+											</li>
+											<li>
+												<a href="">지역본부(종합)</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+								<ul class="dp1">
+									<li>
+										<a href=""><span>정책 및 업무</span></a>
+										<a href="javascropt:void(0)" class="m-dp1"><span>정책 및 업무</span></a>
+									</li>
+								</ul>
+								<ul class="dp1">
+									<li>
+										<a href=""><span>뉴스 및 자료</span></a>
+										<a href="javascropt:void(0)" class="m-dp1"><span>뉴스 및 자료</span></a>
+										<ul class="dp2">
+											<li>
+												<a href="">개요</a>
+											</li>
+											<li>
+												<a href="">설립목적 및 역사</a>
+											</li>
+											<li>
+												<a href="">금융통화위원회</a>
+											</li>
+											<li>
+												<a href="">조직도</a>
+											</li>
+											<li>
+												<a href="">운영 및 법규</a>
+												<ul class="dp3">
+													<li class="dropdown">
+														<a href="javascript:void(0)" title="하위메뉴 열기">
+															<span><span class="highlight">전략</span> 및 조직가치</span>
+															<i class="ico-arrow"></i>
+														</a>
+														<ul class="dp4">
+															<li>
+																<a href="">
+																	<span><span class="highlight">전략</span></span>
+																</a>
+															</li>
+															<li>
+																<a href=""><span>조직가치</span></a>
+															</li>
+															<li>
+																<a href=""><span>운영리스트 관리</span></a>
+															</li>
+															<li>
+																<a href=""><span>CI소개</span></a>
+															</li>
+														</ul>
+													</li>
+													<li>
+														<a href=""><span>경영정보</span></a>
+													</li>
+													<li>
+														<a href=""><span>계약정보</span></a>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+								</ul>
+								<ul class="dp1">
+									<li>
+										<a href=""><span>멀티콘텐츠</span></a>
+										<a href="javascropt:void(0)" class="m-dp1"><span>멀티콘텐츠</span></a>
+									</li>
+								</ul>
+								<ul class="dp1">
+									<li>
+										<a href=""><span>주요서비스</span></a>
+										<a href="javascropt:void(0)" class="m-dp1"><span>주요서비스</span></a>
+										<ul class="dp2">
+											<li>
+												<a href="">개요</a>
+											</li>
+											<li>
+												<a href="">설립목적 및 역사</a>
+											</li>
+											<li>
+												<a href="">금융통화위원회</a>
+											</li>
+											<li>
+												<a href="">조직도</a>
+											</li>
+											<li>
+												<a href="">운영 및 법규</a>
+												<ul class="dp3">
+													<li class="dropdown">
+														<a href="javascript:void(0)" title="하위메뉴 열기">
+															<span><span class="highlight">전략</span> 및 조직가치</span>
+															<i class="ico-arrow"></i>
+														</a>
+														<ul class="dp4">
+															<li>
+																<a href="">
+																	<span><span class="highlight">전략</span></span>
+																</a>
+															</li>
+															<li>
+																<a href=""><span>조직가치</span></a>
+															</li>
+															<li>
+																<a href=""><span>운영리스트 관리</span></a>
+															</li>
+															<li>
+																<a href=""><span>CI소개</span></a>
+															</li>
+														</ul>
+													</li>
+													<li>
+														<a href=""><span>경영정보</span></a>
+													</li>
+													<li>
+														<a href=""><span>계약정보</span></a>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
 					</div>
-				</section> -->
+				</div>
 			</div>
 			<!-- //전체메뉴 -->
 		</header>	
@@ -334,6 +560,11 @@
 					</div>
 				</div>
 			</nav>
+			<div class="sub-_visual">
+				<div class="hgroup">
+					<h1>뉴스 및 의사록</h1>
+				</div>
+			</div>
 		</div>
 		<!-- //navigation -->
 
@@ -354,7 +585,7 @@
 
 
 
-<div class="tab-list">
+<div class="tab-list col-3">
 	<div class="swiper">
 		<div class="swiper-wrapper">
 			<a href="javascript:void(0)" role="group" aria-controls="panel1-1" class="swiper-slide on" id="tap1-1">경제자문 패널</a>
@@ -365,7 +596,7 @@
 </div>
 <div class="tab-content">
 	<div class="tab-pannel on" id="panel1-1" aria-labelledby="tap1-1" role="tabpanel">
-        <h2>제도 안내</h2>
+        <h2 class="mt50">제도 안내</h2>
         <p>한국은행 경제연구원은 다양한 학술정보 습득, 저명학자들과의 협력 강화 등을 통해 경제연구원의 조사연구 역량을 강화하고 대내외 위상을 제고하고자 경제자문 패널을 운영하고 있습니다.<br>
         경제 자문패널은 경제연구원의 조사연구 업무 전반에 대한 자문을 제공합니다. 특히 경제연구원에서 발간하는 논문과 보고서에 대해 의견을 제시할 수 있고, 경제연구원에서 개최하는 각종 세미나, 학술토론회의의 구성과 진행에 대해서도 도움을 줄 수 있습니다.</p>
         <h2 class="mt50">경제자문 패널 구성</h2>
@@ -577,7 +808,7 @@
         </div>
     </div>
     <div class="tab-pannel" id="panel1-3" aria-labelledby="tap1-3" role="tabpanel">
-        <h2>제도 안내</h2>
+        <h2 class="mt50">제도 안내</h2>
         <p>한국은행은 국내외 학자들의 통화금융 등 경제관련 이론 및 주요 정책과제에 대한 연구를 장려하고 학계와의 연구교류 협력관계를 긴밀히 하고자 객원연구위원제도를 운영하고 있습니다<br>
             소정의 절차를 거쳐 객원연구위원으로 초빙된 분들은 응모시 제출한 연구과제에 대하여 한국은행 본부에서 일정기간 연구활동을 할 수 있으며 세미나 등을 통해 한국은행 직원과 연구분야에 대한 토론기회를 갖거나 공동연구를 진행할 수 있습니다.
             <br>객원연구위원은 근무기간 동안 연구실을 제공받고 한국은행 정보자료실을 이용할 수 있습니다.<br>
@@ -585,7 +816,7 @@
             한편 한국은행은 지역본부 객원연구위원제도를 별도로 운영하고 있습니다. 지역본부 객원연구위원제도와 관련한 자세한 사항은 아래의 연락처로 문의하시기 바랍니다.
             <br>
             <br>
-            &lt;지역본부 객원연구위원제도 담당자 전화번호 : 02-759-5445&gt;
+            <strong>&lt;지역본부 객원연구위원제도 담당자 전화번호 : 02-759-5445&gt;</strong>
 
         </p>
     </div>
