@@ -56,17 +56,21 @@
 		// 	padding-left: 10px;
 		// }
 	}	
+	> .container {
+		min-height: 96px;
+	}
 	.globalHeader {	
 		display: none;	
 		@include breakpoint($lg){
 			display: block;
+			min-height: 34px;
 			ul {
 				max-width: calc(1920px - 192px);
 				display: flex;
 				flex-direction: row;
 				flex-grow: 1;
 				// border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-				padding: 4px 0;
+				// padding: 4px 0;
 				gap: 0 2px;
 				li {
 					& + li {
@@ -82,8 +86,10 @@
 				}
 				a {
 					//color: #fff;
+					color: #005596;
 					display: inline-block;
 					font-size: rem(15);
+					font-weight: 500;
 					//border-radius: 4px;
 					//border: 1px solid rgba(255, 255, 255, 0.40);
 					// background: rgba(0, 0, 0, 0.20);
@@ -1736,9 +1742,6 @@
 	width: $pc-wide;
 	max-width: 100%;
 	min-height: calc(100vh - 246px - 196px - 80px);
-	p {
-		font-size: rem(18);
-	}
 	// padding-top: 30px;
 	@include clearfix();
 	@include breakpoint($sm){
@@ -1772,6 +1775,11 @@
 		.sh-db + .content {
 			// width: per(1441px, $pc-wide);
 		}
+	}
+}
+main {
+	p {
+		font-size: rem(18);
 	}
 }
 .content {	

@@ -934,32 +934,68 @@ border-top: 1px solid #E5E5E5;
 border-bottom: 1px solid #E5E5E5;
 }
 @media (min-width: 1200px) {
-.nav-stiky .navigation {
+.gnb-stiky .navigation {
 width: 100%;
 position: fixed;
 top: 0;
 z-index: 100;
 }
-.nav-stiky .navigation .sub-_visual {
+.gnb-stiky .navigation .sub-_visual {
 display: none;
 }
 }
 .navigation .sub-_visual {
 border-top: 1px solid #E6E6E6;
+background: #fff;
+}
+@media (min-width: 1200px) {
+.navigation .sub-_visual {
 height: 216px;
 background-color: #CBDEF4;
 background-repeat: no-repeat;
 background-position: 50%;
+background-image: url(/static/portal/img/sub/sub_visual_bg1.png);
+}
+.navigation .sub-_visual.menu_700107 {
+background-image: url(/static/museum/img/visual/bg_700107.png);
+}
+.navigation .sub-_visual.menu_700795 {
+background-image: url(/static/museum/img/visual/bg_700795.png);
+}
+.navigation .sub-_visual.menu_700108 {
+background-image: url(/static/museum/img/visual/bg_700108.png);
+}
+.navigation .sub-_visual.menu_700109 {
+background-image: url(/static/museum/img/visual/bg_700109.png);
+}
+.navigation .sub-_visual.menu_700836 {
+background-image: url(/static/museum/img/visual/bg_700836.png);
+}
+.navigation .sub-_visual.menu_700111 {
+background-image: url(/static/museum/img/visual/bg_700111.png);
+}
 }
 .navigation .sub-_visual div {
-max-width: 1440px;
+width: 1440px;
+max-width: 100%;
 margin: 0 auto;
+padding-top: 20px;
+}
+@media (min-width: 1200px) {
+.navigation .sub-_visual div {
 padding-top: 90px;
+}
 }
 .navigation .sub-_visual div h1 {
 color: #1A1A1A;
 font-weight: 500;
 font-size: 3rem;
+}
+@media (max-width: 749px) {
+.navigation .sub-_visual div h1 {
+font-size: 2.25rem;
+text-align: center;
+}
 }
 .bd-body .navigation .sub-_visual div h1 {
 font-size: 1.25rem;
@@ -987,6 +1023,10 @@ margin: 0;
 }
 .navigation .top-page-toolbar .page-toolbar .page-rss::before {
 margin-left: 9px;
+}
+.navigation nav {
+height: 60px;
+line-height: 60px;
 }
 @media (min-width: 1200px) {
 .navigation nav {
@@ -1174,7 +1214,25 @@ display: none;
 display: block;
 }
 }
+/* 상세페이지 비쥬얼 */
+body.bd-body .sub-_visual.menu_700107 {
+background-image: url(/static/museum/img/visual/view_700107.png);
+}
+body.bd-body .sub-_visual.menu_700795 {
+background-image: url(/static/museum/img/visual/view_700795.png);
+}
+body.bd-body .sub-_visual.menu_700108 {
+background-image: url(/static/museum/img/visual/view_700108.png);
+}
+body.bd-body .sub-_visual.menu_700109 {
+background-image: url(/static/museum/img/visual/view_700109.png);
+}
+body.bd-body .sub-_visual.menu_700836 {
+background-image: url(/static/museum/img/visual/view_700836.png);
+}
+
 .lnb-nav {
+position: -webkit-sticky;
 position: sticky;
 top: 48px;
 padding-top: 30px;
@@ -3177,7 +3235,7 @@ min-height: 700px;
 }
 @media (max-width: 749px) {
 .pdf-cont iframe {
-min-height: 480px;
+min-height: 500px;
 }
 }
 
@@ -5226,6 +5284,7 @@ justify-content: center;
 
 .sh-db {
 margin-bottom: 40px;
+position: -webkit-sticky;
 position: sticky;
 top: 48px;
 }
@@ -6819,7 +6878,55 @@ margin-right: 0;
 margin-bottom: 30px;
 }
 }
-.cont-right h3 {
+.content-row .cont-nav ul {
+position: -webkit-sticky;
+position: sticky;
+top: 48px;
+}
+@media (max-width: 749px) {
+.content-row .cont-nav ul {
+margin-top: 8px;
+display: none;
+}
+}
+.content-row .cont-nav ul > li {
+margin-bottom: 4px;
+}
+.content-row .cont-nav ul > li > a {
+display: block;
+padding: 6px 0;
+color: #333;
+scroll-behavior: smooth;
+}
+.content-row .cont-nav ul > li > a i {
+display: none;
+}
+.content-row .cont-nav ul > li.on {
+background: #F2F6FA;
+border-radius: 8px;
+}
+.content-row .cont-nav ul > li.on > a {
+display: flex;
+padding: 6px;
+font-weight: 500;
+align-items: center;
+justify-content: space-between;
+color: #1A1A1A;
+}
+.content-row .cont-nav ul > li.on > a i {
+display: inline-block;
+}
+.content-row .cont-right {
+width: calc(100% - 240px - 36px);
+padding-left: 36px;
+}
+@media (max-width: 749px) {
+.content-row .cont-right {
+width: 100%;
+padding-left: 0;
+}
+}
+.content-row .cont-right h3 {
 margin: 0 auto 16px;
 }
 .content-row .cont-right .cont {

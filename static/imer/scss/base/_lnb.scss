@@ -8,7 +8,7 @@
 	border-top: 1px solid #E5E5E5;
 	border-bottom: 1px solid #E5E5E5;
 	@include breakpoint($lg){ 
-		.nav-stiky & {
+		.gnb-stiky & {
 			width: 100%;
 			position: fixed;
 			top: 0;
@@ -37,11 +37,32 @@
 	// }
 	.sub-_visual {
 		border-top: 1px solid #E6E6E6;
-		height: 216px;
-		background-color: #CBDEF4;
-		//background-image: url(/static/portal/img/sub/sub_visual_bg1.png);
-		background-repeat: no-repeat;
-		background-position: 50%;		
+		background: #fff;
+		@include breakpoint($lg){
+			height: 216px;
+			background-color: #CBDEF4;
+			background-image: url(/static/imer/img/visual/sub_visual_bg1.png);
+			background-repeat: no-repeat;
+			background-position: 50%;
+			&.menu_500214 {
+				background-image: url(/static/imer/img/visual/bg_500214.png);
+			}		
+			&.menu_500216 {
+				background-image: url(/static/imer/img/visual/bg_500216.png);
+			}		
+			&.menu_500536 {
+				background-image: url(/static/imer/img/visual/bg_500536.png);
+			}	
+			&.menu_500045 {
+				background-image: url(/static/imer/img/visual/bg_500045.png);
+			}	
+			&.menu_500218 {
+				background-image: url(/static/imer/img/visual/bg_500218.png);
+			}	
+			&.menu_500831 {
+				background-image: url(/static/imer/img/visual/bg_500831.png);
+			}	
+		}
 		div {
 			max-width: $pc-wide;
 			margin: 0 auto;
@@ -92,7 +113,9 @@
 	// 	height: 36px;
 	// 	line-height: 36px;
 	// }
-	nav {		
+	nav {
+		height: 60px;
+		line-height: 60px;		
 		@include breakpoint($lg){
 			display: flex;
 			justify-content: space-between;
@@ -250,6 +273,19 @@
 		display: block;
 	}
 }
+
+/* 상세페이지 비쥬얼 */
+body.bd-body .sub-_visual {
+	@include breakpoint($lg) {
+		&.menu_500216 {
+			background-image: url(/static/imer/img/visual/view_500216.png);
+		}
+		&.menu_500831 {
+			background-image: url(/static/imer/img/visual/view_500831.png);
+		}
+	}
+}
+
 
 //목차형
 .lnb-nav{

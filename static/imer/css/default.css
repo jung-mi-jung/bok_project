@@ -1717,7 +1717,7 @@ color: #333333;
 font-size: 2.25rem;
 font-weight: 700;
 margin-bottom: 20px;
-line-height: 90%;
+line-height: 1.2;
 }
 #main-container h2 + h3 {
 margin-top: 22px;
@@ -2614,19 +2614,22 @@ padding-left: 10px;
 padding-right: 10px;
 }
 }
+#header > .container {
+min-height: 96px;
+}
 #header .globalHeader {
 display: none;
 }
 @media (min-width: 1200px) {
 #header .globalHeader {
 display: block;
+min-height: 34px;
 }
 #header .globalHeader ul {
 max-width: 1728px;
 display: flex;
 flex-direction: row;
 flex-grow: 1;
-padding: 4px 0;
 gap: 0 2px;
 }
 #header .globalHeader ul li + li::before {
@@ -2641,6 +2644,7 @@ background-color: #e5e5e5;
 color: #005596;
 display: inline-block;
 font-size: 0.9375rem;
+font-weight: 500;
 padding: 2px 8px;
 }
 #header .globalHeader ul a:hover {
@@ -4305,7 +4309,7 @@ margin: 0 -12px;
 }
 @media (max-width: 1199px) {
 .reference-news dl dd ul {
-width: -moz-max-content;
+width: -webkit-max-content;
 width: max-content;
 }
 }
@@ -4438,7 +4442,7 @@ margin: -12px -12px 0;
 }
 @media (max-width: 1199px) {
 .reference-media dl dd ul {
-width: -moz-max-content;
+width: -webkit-max-content;
 width: max-content;
 }
 }
