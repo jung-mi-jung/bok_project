@@ -529,6 +529,22 @@ $(function () {
 
 $(function() {
 
+		// gnb stiky
+		function goToScroll() {
+			// 주 메뉴
+			var h = 96;
+			if ($(window).scrollTop() > h) {
+				$('body').addClass('gnb-stiky');
+			} else {
+				$('body').removeClass('gnb-stiky');
+			}
+		}
+		$(window).on('scroll', function () {
+			goToScroll();
+		});
+		goToScroll();
+
+
 	//navigation  고정용 page-toolbar
 	// var toolbarhtml = $('.hgroup .page-toolbar').clone()
 	// $(".top-page-toolbar").html(toolbarhtml.clone())
@@ -539,22 +555,20 @@ $(function() {
 	var $window = $(window);
 
 	var fixNav = 60;
-	var amountScrolled = 129;
+	var amountScrolled = 1200; //129
 	var backBtn = $(".goTop");
 	
-
+/*
 	$window.on("scroll", function () {
 		//gnbFixed 		//fixLogo
 		if ($window.scrollTop() > fixNav) {
 			$("body").addClass("nav-stiky");
-			//$(".gnbRtSet .logo").addClass("fixLogo");
 
 		}else{
 			if($("body").hasClass("nav-stiky")){
 				$("body").addClass("nav-stiky");
 			}
 			$("body").removeClass("nav-stiky");
-			//$(".gnbRtSet .logo").removeClass("fixLogo");
 		}
 		if ($window.scrollTop() > amountScrolled) {
 				backBtn.fadeIn("slow");
@@ -562,7 +576,7 @@ $(function() {
 				backBtn.fadeOut("slow");
 		}
 	});
-
+*/
 	backBtn.on("click", function () {
 		$root.animate({
 				scrollTop: 0

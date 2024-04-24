@@ -574,7 +574,7 @@ z-index: 1;
 background-color: #FCFCFC;
 }
 @media (min-width: 1200px) {
-.nav-stiky .navigation {
+.gnb-stiky .navigation {
 width: 100%;
 height: 60px;
 position: fixed;
@@ -582,7 +582,7 @@ top: 0;
 z-index: 99;
 background-color: #fff;
 }
-.nav-stiky .navigation::before {
+.gnb-stiky .navigation::before {
 content: "";
 display: block;
 width: 100%;
@@ -593,7 +593,7 @@ bottom: -1px;
 left: 0;
 z-index: 1;
 }
-.nav-stiky .navigation .sub-_visual {
+.gnb-stiky .navigation .sub-_visual {
 display: none;
 }
 }
@@ -764,6 +764,7 @@ padding: 0 10px;
 @media (min-width: 1200px) {
 .navigation nav > ul > li:last-child > span,
 .navigation nav > ul > li > a {
+min-width: 144px;
 padding: 0 26px;
 }
 }
@@ -787,6 +788,8 @@ font-feature-settings: "liga";
 color: #6D6E72;
 font-size: 22px;
 margin-left: 10px;
+float: right;
+margin-top: 19px;
 }
 @media (max-width: 749px) {
 .navigation nav > ul > li:last-child > span::after,
@@ -809,9 +812,9 @@ color: #1A1C46;
 .navigation nav > ul > li .depth2 {
 display: none;
 position: absolute;
-top: 47px;
+top: 60px;
 left: -1px;
-z-index: 9;
+z-index: 99;
 width: calc(100% + 2px);
 background-color: #fff;
 }
@@ -2554,6 +2557,9 @@ padding: 10px 14px;
 border-bottom: 1px solid #E5E5E5;
 border-radius: 8px;
 }
+.bd-view .down.type2 {
+margin-top: 50px;
+}
 .bd-view .down dd {
 display: flex;
 justify-content: space-between;
@@ -2998,7 +3004,7 @@ border-top: none;
 font-size: 1rem;
 }
 .view-table table th {
-color: #fff;
+color: #fff !important;
 background-color: #233B76;
 padding: 10px 0;
 }
@@ -10417,7 +10423,7 @@ margin-left: 7px;
 }
 
 .input-xs {
-width: 50px;
+width: 42px;
 }
 
 .c-box {
@@ -11607,16 +11613,18 @@ overflow: hidden;
 position: relative;
 padding: 0;
 vertical-align: top;
+background-color: #F5F5F5;
 }
 .calendarSet.type2 td .date {
-position: absolute;
-top: 12px;
-left: 12px;
+display: block;
 color: #000E33;
+padding: 15px 15px 5px;
 }
 .calendarSet.type2 td .con {
+color: #4D4D4D;
 text-align: left;
 display: block;
+padding: 0 16px;
 }
 .calendarSet.type2 td .con span {
 display: block;
@@ -11633,13 +11641,25 @@ background-color: #666;
 border-radius: 50%;
 content: "";
 }
+.calendarSet.type2 a,
 .calendarSet.type2 button {
+margin-top: 0;
 width: 100%;
 height: 100%;
-padding: 18px;
+padding: 0;
+background-color: #fff;
 }
+.calendarSet.type2 a[disabled],
 .calendarSet.type2 button[disabled] {
 background-color: #F5F5F5;
+}
+.calendarSet.type2 a:hover,
+.calendarSet.type2 button:hover {
+text-decoration: none;
+}
+.calendarSet.type2 a:hover .con,
+.calendarSet.type2 button:hover .con {
+text-decoration: underline;
 }
 
 .calendarWrap .ico,

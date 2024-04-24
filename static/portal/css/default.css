@@ -3876,7 +3876,6 @@ display: inline-block;
 font-size: 1.25rem;
 font-weight: 500;
 color: #17294D;
-text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 .gnb > ul .depth2 .e {
 width: 376px;
@@ -3917,7 +3916,6 @@ color: #4d4d4d;
 font-size: 16px;
 font-weight: 400;
 padding: 1px 0;
-text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 .gnb > ul .depth3 > ul > li > a:hover, .gnb > ul .depth3 > ul > li > a.on, .gnb > ul .depth3 > ul > li > a.active {
 color: #005596;

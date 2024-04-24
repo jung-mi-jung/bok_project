@@ -1,18 +1,11 @@
 $(function () {
-	// gnb stiky
-	function goToScroll() {
-		// 주 메뉴
-		var h = 96;
-		if ($(window).scrollTop() > h) {
-			$('body').addClass('gnb-stiky');
-		} else {
-			$('body').removeClass('gnb-stiky');
-		}
-	}
-	$(window).on('scroll', function () {
-		goToScroll();
+	//header 오버시
+	$('#header, #gnb').on('mouseover focusin', function () {
+		$('#header').addClass('over');
 	});
-	goToScroll();
+	$('#header, #gnb').on('mouseleave', function () {
+		$('#header').removeClass('over');
+	});
 });
 
 $(function () {
