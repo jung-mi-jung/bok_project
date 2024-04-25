@@ -2617,6 +2617,11 @@ padding-right: 10px;
 #header > .container {
 min-height: 96px;
 }
+@media (max-width: 1199px) {
+#header > .container {
+min-height: 60px;
+}
+}
 #header .globalHeader {
 display: none;
 }
@@ -3140,8 +3145,8 @@ display: none;
 }
 }
 .page-toolbar .sns-toggle {
-width: 48px;
-height: 48px;
+width: 60px;
+height: 60px;
 border: 1px solid #666;
 border-radius: 50%;
 }
@@ -3171,17 +3176,14 @@ display: none;
 .page-toolbar .sns-wrap.active {
 display: block;
 position: absolute;
-width: 48px;
-height: 236px;
-top: 60px;
-left: 0;
+width: 60px;
+top: 12px;
+left: 6px;
 z-index: 9;
 }
 .page-toolbar .sns-wrap.active .sns-wrap__set {
 display: flex;
 width: 48px;
-height: 236px;
-flex-wrap: wrap;
 align-items: center;
 flex-direction: column;
 border-radius: 30px;
@@ -3193,7 +3195,18 @@ padding: 10px 0;
 display: flex;
 align-items: center;
 justify-content: center;
-margin: 4px 0;
+margin: 0 auto;
+}
+.page-toolbar .sns-wrap.active .sns-wrap__set button + button {
+margin-top: 7px;
+}
+.page-toolbar .sns-wrap.active .sns-wrap__set button::before {
+content: "";
+display: inline-block;
+width: 36px;
+height: 36px;
+background-position: 50%;
+background-repeat: no-repeat;
 }
 .page-toolbar .sns-wrap.active .sns-wrap__set button.close {
 height: 30px;
@@ -3218,15 +3231,15 @@ font-feature-settings: "liga";
 font-size: 26px;
 }
 .page-toolbar .page-print {
-width: 48px;
-height: 48px;
+width: 60px;
+height: 60px;
 background: url(/static/portal/img/ico/ico-print.svg) 50% no-repeat;
 margin-left: 6px;
 margin-right: 10px;
 }
 .page-toolbar .page-rss {
-width: 48px;
-height: 48px;
+width: 60px;
+height: 60px;
 }
 .page-toolbar .page-rss::before {
 content: "\e0e5";
@@ -4309,7 +4322,7 @@ margin: 0 -12px;
 }
 @media (max-width: 1199px) {
 .reference-news dl dd ul {
-width: -moz-max-content;
+width: -webkit-max-content;
 width: max-content;
 }
 }
@@ -4442,7 +4455,7 @@ margin: -12px -12px 0;
 }
 @media (max-width: 1199px) {
 .reference-media dl dd ul {
-width: -moz-max-content;
+width: -webkit-max-content;
 width: max-content;
 }
 }
@@ -4921,7 +4934,7 @@ margin-top: 12px;
 @media (max-width: 1199px) {
 .gnb .gnb-btn-wrap {
 margin-top: -24px;
-gap: 0 10px;
+gap: 0 16px;
 }
 }
 @media (max-width: 749px) {

@@ -196,7 +196,7 @@
 		margin-top: 12px;
 		@include breakpoint($smd) {
 			margin-top: -24px;
-			gap: 0 10px;
+			gap: 0 16px;
 		}
 		@include breakpoint($sm) {
 			margin-top: -18px;
