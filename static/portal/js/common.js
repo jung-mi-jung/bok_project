@@ -134,20 +134,20 @@ $(function () {
 	});
 	$('.gnb_bg').height($('.gnb .depth2').height());  //gnb_bg 높이 구하기
 */
-	// // nav stiky  메인만 적용
-	// function goToScroll() {
-	// 	// 주 메뉴
-	// 	var h = 96;
-	// 	if ($(window).scrollTop() > h) {
-	// 		$('body').addClass('gnb-stiky');
-	// 	} else {
-	// 		$('body').removeClass('gnb-stiky');
-	// 	}
-	// }
-	// $(window).on('scroll', function () {
-	// 	goToScroll();
-	// });
-	// goToScroll();
+	// gnb stiky
+	function goToScroll() {
+		// 주 메뉴
+		var h = 60;  96
+		if ($(window).scrollTop() > h) {
+			$('body').addClass('gnb-stiky');
+		} else {
+			$('body').removeClass('gnb-stiky');
+		}
+	}
+	$(window).on('scroll', function () {
+		goToScroll();
+	});
+	goToScroll();
 
 	//gnb
 	//pc 메뉴

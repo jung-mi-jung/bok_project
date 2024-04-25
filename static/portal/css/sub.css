@@ -4417,6 +4417,16 @@ background-color: #fff;
 height: auto;
 margin-bottom: 0;
 }
+.sh-db + .content::after {
+content: "";
+display: inline-block;
+background-color: #d9d9d9;
+position: absolute;
+top: 0;
+left: 16.6666666667%;
+width: 1px;
+height: calc(100% - 120px);
+}
 }
 .sh-db .db-search {
 margin-bottom: 30px;

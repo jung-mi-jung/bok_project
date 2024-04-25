@@ -3090,6 +3090,7 @@ border-top: 1px solid #DCE2F1;
 }
 
 .reference {
+clear: both;
 margin-top: 30px;
 padding: 50px 120px;
 background-color: #F2F6FA;

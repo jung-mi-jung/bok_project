@@ -4,17 +4,20 @@
 @import 'base/color'; // colors
 
 
+$tsh-height : 56px;
+$tsh-m-height : 32px;
+
 .tsh-wrap {
 	position: relative;
-	margin-top: -30px;
+	margin-top: -36px;
 	@include breakpoint($smd){
 		margin-top: 0;
-	}
-	.best-tsh {		
+	}	
+	.best-tsh {
 		margin-bottom: 10px;
 		@include breakpoint($lg){
 			position: absolute;
-			top: -102px;
+			top: 60px;
 			right: 0;
 			z-index: 9;
 			width: 280px;
@@ -22,7 +25,7 @@
 		.best-txt {
 			display: flex;
 			justify-content: space-between;
-			margin-bottom: 5px;
+			margin-bottom: 8px;
 			h2 {
 				font-size: rem(16) !important;
 				color: $black;
@@ -151,7 +154,7 @@
 			border-radius: 4px;
 			position: absolute;
 			z-index: 9;
-			top: 29px;
+			top: 30px;
 			left: 0;
 			width: 100%;
 			background-color: #fff;
@@ -159,19 +162,40 @@
 		}
 	}
 	.tsh {
-		padding: 36px;
+		position: relative;
+		padding: 50px 0;
 		margin-bottom: 15px;
-		background-color: #F2F6FA;
+		background-color: #CBDEF6;
+		&::before {
+			content: "";
+			display: inline-block;
+			width: 20000px;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: -50%;
+			background-color: #CBDEF6;
+			z-index: -1;
+		}
 		@include breakpoint($mdw){
 			padding: 45px 20px 20px;
 		}
 		@include breakpoint($sm){
 			padding: 36px 10px 10px;
 		}
+		.hgroup {
+			display: block !important;
+			h1 {
+				color: $black;
+				font-size: rem(32);
+				font-weight: 600;
+				margin-bottom: 8px;
+			}
+		}
 		> div {
-		width: 884px;
-		max-width: 100%;
-		margin: 0 auto;
+		// width: 884px;
+		// max-width: 100%;
+		// margin: 0 auto;
 		}
 		input[type=radio],
 		input[type=checkbox] {
@@ -226,7 +250,8 @@
 			position: relative;
 			display: flex;
 			.keyword-set {
-				width: 769px;
+				width: 624px;
+				height: $tsh-height;
 				max-width: calc(100% - 111px);
 				display: flex;
 				align-items: center;
@@ -243,21 +268,35 @@
 					input[type=text] {
 						width: 100%;
 						border: 0;
-						height: 56px;
-						padding: 10px 24px;
+						height: $tsh-height;
+						padding: 0 24px;
 						@include breakpoint($sm){
 							padding: 5px 15px;
 							height: 40px;
 						}
 					}
-				}		
+					.twitter-typeahead {
+						display: block !important;
+						.tt-menu {
+							width: calc(100% + 65px);
+							&.tt-open {
+								display: block;
+								background-color: #fff;
+								line-height: 1.6;
+								padding: 15px 20px;
+								font-size: 16px;
+								border: 1px solid $bd-color;
+							}
+						}
+					}
+				}					
 				.search {
 					width: 66px;
-					height: 56px;
+					height: $tsh-height;
 					text-align: center;
 					@include breakpoint($sm){
-						width: 40px;
-						height: 40px;
+						width: $tsh-m-height;
+						height: $tsh-m-height;
 					}
 					&::before {
 						@include font-ico-outline('\e8b6');
@@ -271,7 +310,8 @@
 				width: 111px;
 				background: #fff;
 				border-radius: 4px;
-				line-height: 56px;
+				height: $tsh-height;
+				line-height: $tsh-height;
 				margin-left: 2px;
 				@include breakpoint($sm){
 					width: 100px;
@@ -296,12 +336,14 @@
 				}
 			}
 			.etc {
-				position: absolute;
-				top: 16px;
-				right: -140px;
+				margin-top: 15px;
+				padding-left: 10px;
+				// position: absolute;
+				// top: 16px;
+				// right: -156px;
 				@include breakpoint($smd){
-					right: 0;
-					top: -28px;
+					// right: 0;
+					// top: -28px;
 				}
 			}
 		 }		
@@ -463,6 +505,7 @@
 				margin-right: 36px;
 				.label-list {
 					label {
+						margin-left: 0;
 						font-size: rem(18);
 						padding: 15px 0;
 						border-bottom: 1px solid #E6E6E6;
@@ -552,7 +595,7 @@
 			.sh-list {
 				li {
 					padding: 17px 0;
-					border-bottom: 1px solid #C2C2C2;
+					border-bottom: 1px solid #E6E6E6;
 					a {
 						display: block;
 						> * {
@@ -594,13 +637,15 @@
 					.txt {
 						color: #4D4D4D;
 						@include line-clamp(2);
-						height: 48px;
+						height: 52px;
 						@include breakpoint($sm){
 							height: 42px;
+							font-size: 14px;
 						}
 					}
 					.keyword {
-						margin: 15px 0;
+						margin-top: 15px;
+						//margin: 15px 0;
 						span {
 							color: #666;
 							font-size: 14px;
@@ -611,6 +656,7 @@
 						}
 					}
 					.link {
+						margin-top: 12px;
 						color: $color-point;
 						font-size: 14px;
 						text-decoration: underline;

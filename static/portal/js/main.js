@@ -228,6 +228,11 @@ function slider(){
 					slideShadows: false,
 					stretch: -59,
 				},
+				speed : 3000,
+				autoplay: {
+					delay: 3000,
+					disableOnInteraction: false,
+				},
 				navigation: {
 					//nextEl: $('.slider-' + index).find('.media-next'),
 					//prevEl: $('.slider-' + index).find('.media-prev'),
@@ -261,7 +266,7 @@ $(function () {
 		init: false,
 		//freeMode: true,
 		// Optional parameters
-		loop: false,
+		loop: true,
 		slidesPerView : '4',
 		spaceBetween : 20, 
 		breakpoints: {
@@ -292,10 +297,11 @@ $(function () {
 		a11y:{
 			enabled:true,
 		},
-		//autoplay: {
-		//	delay: 3000,
-		//	disableOnInteraction: false,
-		//},
+		speed : 3000,
+		autoplay: {
+			delay: 3000,
+			disableOnInteraction: false,
+		},
 		observer: true,
 		observeParents: true,
 	});
@@ -318,7 +324,7 @@ $(function () {
 		init: false,
 		//freeMode: true,
 		// Optional parameters
-		loop: false,
+		loop: true,
 		slidesPerView : '4',
 		spaceBetween : 20,
 		breakpoints: {
@@ -349,10 +355,10 @@ $(function () {
 		a11y:{
 			enabled:true,
 		},
-		//autoplay: {
-		//	delay: 3000,
-		//	disableOnInteraction: false,
-		//},
+		autoplay: {
+			delay: 3000,
+			disableOnInteraction: false,
+		},
 		observer: true,
 		observeParents: true,
 	});

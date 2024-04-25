@@ -21,6 +21,20 @@
 		// 	width: 1px;
 		// 	height: 100%;
 		// }
+		& + .content {
+			&::after {
+				content: "";
+				display: inline-block;
+				background-color: #d9d9d9;
+				position: absolute;
+				top: 0;
+				left:per(240px, $pc-wide);
+				//right: -1px;
+				width: 1px;
+				//height: 100%;
+				height: calc(100% - 120px);
+			}
+		}
 	}
 	.db-search {
 		margin-bottom: 30px;
