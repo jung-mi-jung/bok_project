@@ -1215,6 +1215,7 @@ display: block;
 }
 }
 /* 상세페이지 비쥬얼 */
+@media (min-width: 1200px) {
 body.bd-body .sub-_visual.menu_700107 {
 background-image: url(/static/museum/img/visual/view_700107.png);
 }
@@ -1230,9 +1231,9 @@ background-image: url(/static/museum/img/visual/view_700109.png);
 body.bd-body .sub-_visual.menu_700836 {
 background-image: url(/static/museum/img/visual/view_700836.png);
 }
+}
 
 .lnb-nav {
-position: -webkit-sticky;
 position: sticky;
 top: 48px;
 padding-top: 30px;
@@ -5284,7 +5285,6 @@ justify-content: center;
 
 .sh-db {
 margin-bottom: 40px;
-position: -webkit-sticky;
 position: sticky;
 top: 48px;
 }
@@ -6879,7 +6879,6 @@ margin-bottom: 30px;
 }
 }
 .content-row .cont-nav ul {
-position: -webkit-sticky;
 position: sticky;
 top: 48px;
 }
