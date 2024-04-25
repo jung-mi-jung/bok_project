@@ -8,25 +8,23 @@
 	border-top: 1px solid #E5E5E5;
 	border-bottom: 1px solid #E5E5E5;
 	@include breakpoint($lg){ 
-		.gnb-stiky & {
-			width: 100%;
-			position: fixed;
-			top: 0;
-			z-index: 100;
-			// &::before {
-			// 	content: "";
-			// 	display: block;
-			// 	width: 100%;
-			// 	height: 2px;
-			// 	background-color: $black;
-			// 	position: absolute;
-			// 	bottom: -1px;
-			// 	left: 0;
-			// 	z-index: 1;
-			// }
-			.sub-_visual {
-				display: none;
-			}
+		width: 100%;
+		position: sticky;
+		top: 0;
+		z-index: 10;
+		// &::before {
+		// 	content: "";
+		// 	display: block;
+		// 	width: 100%;
+		// 	height: 2px;
+		// 	background-color: $black;
+		// 	position: absolute;
+		// 	bottom: -1px;
+		// 	left: 0;
+		// 	z-index: 1;
+		// }
+		.sub-_visual {
+			display: none;
 		}
 	}
 	// .container {
@@ -63,14 +61,29 @@
 				background-image: url(/static/imer/img/visual/bg_500831.png);
 			}	
 		}
+		@include breakpoint($smd) {
+			border-bottom: 2px solid #1a1a1a;
+		}
 		div {
-			max-width: $pc-wide;
+			width: $pc-wide;
+			max-width: 100%;
 			margin: 0 auto;
-			padding-top: 90px;
+			padding: 20px 10px 0;
+			@include breakpoint($lg){
+				padding-top: 90px;
+			}
+			@include breakpoint($smd){
+				padding: 30px 0;
+			}
 			h1 {
-				color: $black;
-				font-weight: 500;
+				// color: $black;
+				color: #000E33;
+				font-weight: 700;
 				font-size: rem(48);
+				@include breakpoint($smd){
+					font-size: rem(36);
+					text-align: center;
+				}
 				.bd-body & {
 					font-size: rem(20);
 				}
@@ -104,7 +117,7 @@
 			}
 			.page-rss {
 				&::before {
-					margin-left: 9px;
+					margin-left: 16px;
 				}
 			}
 		}
@@ -120,18 +133,36 @@
 			display: flex;
 			justify-content: space-between;
 		}
+		@include breakpoint($smd) {
+			height: 36px;
+			line-height: 36px;
+		}
 		> ul {
 			display: flex;
 			border-left: 1px solid #E5E5E5;
 			> li {
 				position: relative;
 				border-right: 1px solid #E5E5E5;
-				color: #666;
-				@include breakpoint($sm){
-					width: 100%;
-					&:last-child {
-						border-right: none;
+				> a {
+					display: block;	
+					padding: 0 10px;
+					color: #6D6E72;
+					@include breakpoint($lg){
+						padding: 0 26px;
 					}
+					&::after {
+						@include font-ico-outline('\e5c6');
+						color: #6D6E72;
+						font-size: 22px;
+						margin-left: 10px;
+						@include breakpoint($sm){
+							position: absolute;
+							top: 50%;
+							right: 8px;
+							margin-top: -11px;
+						}
+					}
+					
 				}
 				&:last-of-type {
 					> a {
@@ -184,39 +215,39 @@
 						margin-bottom: -2px;
 						@include breakpoint($smd){
 							position: absolute;
-							top: 5px;
+							top: 0;
 							left: 0;
 							z-index: 9;
 							text-align: center;
 							width: 36px;
-							height: 36px;
+							height: 100%;
 							margin-right: 0;
 						}
-						@include breakpoint($sm) {
-							top: 0;
-							height: 48px;
-						}
+						// @include breakpoint($sm) {
+						// 	top: 0;
+						// 	height: 48px;
+						// }
 					}	
 				}
-				> a {
-					display: block;	
-					padding: 0 10px;
-					@include breakpoint($lg){
-						padding: 0 26px;
-					}
-					&::after {
-						@include font-ico-outline('\e5c6');
-						color: #666;
-						font-size: 22px;
-						margin-left: 10px;
-						@include breakpoint($sm){
-							position: absolute;
-							top: 50%;
-							right: 8px;
-							margin-top: -11px;
-						}
-					}
-				}
+				// > a {
+				// 	display: block;	
+				// 	padding: 0 10px;
+				// 	@include breakpoint($lg){
+				// 		padding: 0 26px;
+				// 	}
+				// 	&::after {
+				// 		@include font-ico-outline('\e5c6');
+				// 		color: #666;
+				// 		font-size: 22px;
+				// 		margin-left: 10px;
+				// 		@include breakpoint($sm){
+				// 			position: absolute;
+				// 			top: 50%;
+				// 			right: 8px;
+				// 			margin-top: -11px;
+				// 		}
+				// 	}
+				// }
 				.depth2 {
 					display: none;
 					position: absolute;

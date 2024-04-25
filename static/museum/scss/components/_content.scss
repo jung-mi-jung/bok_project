@@ -35,17 +35,17 @@
 .content-row {
 	.cont-nav {
 		width: 240px;
-		margin-right: 36px;
+		margin-right: 3%;
 		// margin-top: 30px;
-		@include breakpoint($sm) {
+		@include breakpoint($smd) {
 			width: 100%;
 			margin-right: 0;
 			margin-bottom: 30px;
 		}
 		ul {
 			position: sticky;
-			top: 48px;
-			@include breakpoint($sm){
+			top: 60px;
+			@include breakpoint($smd){
 				margin-top: 8px;
 				display: none;
 			}
@@ -79,9 +79,9 @@
 		}
 	}
 	.cont-right {
-		width: calc(100% - 240px - 36px);
-		padding-left: 36px;
-		@include breakpoint($sm) {
+		width: calc(100% - 240px - 3%);
+		padding-left: 3%;
+		@include breakpoint($smd) {
 			width: 100%;
 			padding-left: 0;
 		}
@@ -89,6 +89,7 @@
 			margin: 0 auto 16px;
 		}
 		.cont  {
+			display: block;
 			margin-bottom: 80px;
 		}
 		.tab-list {
@@ -114,7 +115,7 @@
 
 	}
 }
-@include breakpoint($sm) {
+@include breakpoint($smd) {
 	.js-tab {
 		display: block;
 		background: #fff;
@@ -133,7 +134,6 @@
 			}
 		}
 	}
-
 	.js-tab.on {
 		button {
 			i {
@@ -145,7 +145,6 @@
 			display: block !important;
 		}
 	}
-
 	.content-row .cont-nav ul {
 		display: none;
 		> li {
@@ -764,8 +763,8 @@
 	}
 	.fc1 {
 		@include breakpoint($sm) {
-			display: block;
-			font-size: rem(20);
+			display: inline-block;
+			// font-size: rem(20);
 		}
 	}
 	.b-go {

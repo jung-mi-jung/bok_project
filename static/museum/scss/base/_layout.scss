@@ -34,7 +34,7 @@
 	display: flex;
 	flex-direction: column;
 	@include breakpoint($smd){
-		border-bottom: 1px solid #d9d9d9;	
+		// border-bottom: 1px solid #d9d9d9;	
 		box-sizing: border-box;
 	}	
 	.container {
@@ -58,6 +58,9 @@
 	}	
 	> .container {
 		min-height: 96px;
+		@include breakpoint($smd) {
+			min-height: 60px;
+		}
 	}
 	.globalHeader {	
 		display: none;	
@@ -1649,12 +1652,6 @@
 
 /* 툴바 */
 .page-toolbar {
-	.nav-stiky & {
-		// position: fixed;
-		// top: 94px;
-		// right: 0;
-		// z-index: 9;
-	}
 	position: relative;
 	display: flex;
 	align-items: center;
@@ -1662,8 +1659,8 @@
 		display: none;
 	}
 	.sns-toggle {
-		width: 48px;
-		height: 48px;
+		width: 60px;
+		height: 60px;
 		border: 1px solid #666;
 		border-radius: 50%;
 		&::before {
@@ -1677,16 +1674,14 @@
 		&.active {
 			display: block;
 			position: absolute;
-			width: 48px;
-			height: 236px;
-			top: 60px;
-			left: 0;
+			width: 60px;
+			// height: 236px;
+			top: 12px;
+			left: 6px;
 			z-index: 9;
 			.sns-wrap__set {
 				display: flex;
 				width: 48px;
-				height: 236px;
-				flex-wrap: wrap;
 				align-items: center;
 				flex-direction: column;
 				border-radius: 30px;
@@ -1697,7 +1692,18 @@
 					display: flex;
 					align-items: center;
 					justify-content: center;
-					margin: 4px 0;
+					margin: 0 auto;
+					& + button {
+						margin-top: 7px;
+					}
+					&::before {
+						content: "";
+						display: inline-block;
+						width: 36px;
+						height: 36px;
+						background-position: 50%;
+						background-repeat: no-repeat;
+					}
 					&.close {
 						height: 30px;
 						&::before {
@@ -1710,15 +1716,15 @@
 		}
 	}
 	.page-print {	
-		width: 48px;
-		height: 48px;
+		width: 60px;
+		height: 60px;
 		background: url(/static/portal/img/ico/ico-print.svg) 50% no-repeat;
 		margin-left: 6px;
 		margin-right: 10px;
 	}
 	.page-rss {	
-		width: 48px;
-		height: 48px;
+		width: 60px;
+		height: 60px;
 		&::before {
 			@include font-ico-outline('\e0e5');
 			font-size: 40px;
@@ -1737,6 +1743,7 @@
 		display: none;
 	}
 }
+
 #main-container {
 	clear: both;
 	width: $pc-wide;
@@ -1800,7 +1807,7 @@ main {
 .content-row {
 	display: flex;
 	flex-wrap: wrap;
-	@include breakpoint($sm) {
+	@include breakpoint($smd) {
 		display: block;
 	}
 }

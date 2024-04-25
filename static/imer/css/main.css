@@ -29,6 +29,32 @@ color: #C81720;
 color: #3B63C4;
 }
 
+[class^=ico-].ico-youtube::before {
+background-image: url(/static/portal/img/ico/ico-youtube.svg);
+}
+[class^=ico-].ico-instagram::before {
+background-image: url(/static/portal/img/ico/ico-instagram.svg);
+}
+[class^=ico-].ico-facebook::before {
+background-image: url(/static/portal/img/ico/ico-facebook.svg);
+}
+[class^=ico-].ico-twitter::before {
+background-image: url(/static/portal/img/ico/ico-twitter.svg);
+}
+
+[class^=sns-].sns-youtube::before {
+background-image: url(/static/portal/img/ico/sns-youtube.svg);
+}
+[class^=sns-].sns-instagram::before {
+background-image: url(/static/portal/img/ico/sns-instagram.svg);
+}
+[class^=sns-].sns-facebook::before {
+background-image: url(/static/portal/img/ico/sns-facebook.svg);
+}
+[class^=sns-].sns-twitter::before {
+background-image: url(/static/portal/img/ico/sns-twitter.svg);
+}
+
 /* 레이아웃 */
 #wrap {
 padding-top: 0;
