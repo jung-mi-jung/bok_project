@@ -3124,10 +3124,11 @@ margin: 40px 0 0;
 
 #content {
 margin-top: 36px;
+margin-top: 36px;
 }
 @media (min-width: 1200px) {
 #content {
-min-height: 950px;
+min-height: 1020px;
 }
 }
 #content .hgroup {

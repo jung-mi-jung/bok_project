@@ -578,8 +578,9 @@
 }
 
 #content {
+	margin-top: 36px;
 	@include breakpoint($lg) {
-		min-height: 950px;
+		min-height: 1020px;
 	}
 	margin-top: 36px;
 	.hgroup { //기존 소스 삭제
