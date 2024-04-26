@@ -3,6 +3,8 @@ $(function () {
 		//'sublayout_A_type',  //뉴스 및 자료형
 		'sublayout_B_type',  //컨텐츠 목차형
 		//'sublayout_C_type',		//관련자료형
+
+		'400079',
 	
 		
 		

@@ -456,13 +456,7 @@ $('#content a').each(function () {
 		$(this).attr('title', '새창열림');
 	}
 });
-// 게시물 이미지
-$('.dbdata img')
-.each(function (index, element) {
-	if($(this).attr('alt').trim() == ''){
-		$(this).attr('alt','')
-	}
-});
+
 // 접근성 타이틀 제공
 if ($('.step-agg .on').text().trim() != '') {
 	document.title = $('.step-agg .on').text() + '단계 - ' + document.title
@@ -1009,4 +1003,12 @@ $(function () {
 			$(this).attr("title", "자막 열기");
 		}
 	})
+});
+
+// 게시물 이미지
+$('.dbdata img')
+.each(function (index, element) {
+	if($(this).attr('alt').trim() == ''){
+		$(this).attr('alt','')
+	}
 });

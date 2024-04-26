@@ -387,13 +387,14 @@ background: url(/static/portal/img/ico/ico-b-view.png);
 margin-right: 5px;
 }
 
-.popupWrap h1 {
+.bgn .popupWrap h1 {
 background: #484d58;
 color: #fff;
 font-size: 1em;
 padding: 9px 15px;
 font-weight: 500;
 }
+
 .popupWrap .popupBody {
 margin: 20px;
 }
@@ -491,6 +492,7 @@ font-size: 60px;
 text-align: center;
 margin: 60px 0;
 letter-spacing: 20px;
+background-color: transparent;
 }
 .certifi_wrap .subject {
 font-size: 28px;
