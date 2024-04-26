@@ -962,7 +962,6 @@ border-bottom: 1px solid #E5E5E5;
 @media (min-width: 1200px) {
 .gnb-stiky .navigation {
 width: 100%;
-position: -webkit-sticky;
 position: sticky;
 top: -2px;
 z-index: 10;
@@ -1272,7 +1271,6 @@ background-image: url(/static/museum/img/visual/view_700836.png);
 }
 
 .lnb-nav {
-position: -webkit-sticky;
 position: sticky;
 top: 48px;
 padding-top: 30px;
@@ -5324,7 +5322,6 @@ justify-content: center;
 
 .sh-db {
 margin-bottom: 40px;
-position: -webkit-sticky;
 position: sticky;
 top: 48px;
 }
@@ -6919,7 +6916,6 @@ margin-bottom: 30px;
 }
 }
 .content-row .cont-nav ul {
-position: -webkit-sticky;
 position: sticky;
 top: 60px;
 }

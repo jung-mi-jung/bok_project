@@ -286,14 +286,40 @@ padding: 40px;
 padding: 20px;
 }
 }
-.modal-body .b-close {
+.modal-body button {
+font-size: 16px;
 min-width: 82px;
 height: 32px;
 line-height: 32px;
+}
+.modal-body .b-close {
 font-weight: 300;
 }
 .modal-body .b-close::before {
 content: "\e5cd";
+font-family: "Material Icons Outlined";
+font-weight: normal;
+font-style: normal;
+display: inline-block;
+line-height: 1;
+vertical-align: text-bottom;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+font-feature-settings: "liga";
+font-size: 18px;
+margin-right: 4px;
+margin-bottom: 2px;
+}
+.modal-body .b-print {
+background-color: #005596;
+}
+.modal-body .b-print::before {
+content: "\e8ad";
 font-family: "Material Icons Outlined";
 font-weight: normal;
 font-style: normal;
