@@ -133,21 +133,21 @@ $(function () {
 	});
 
 	// nav stiky
-	// function goToScroll() {
-	// 	// 주 메뉴
-	// 	var h = 96;
-	// 	if ($(window).scrollTop() > h) {
-	// 		$('body').addClass('gnb-stiky');
-	// 		//$(".lnb-nav, .sh-db").addClass('sticky');
-	// 	} else {
-	// 		$('body').removeClass('gnb-stiky');
-	// 		//$(".lnb-nav, .sh-db").remo`veClass('sticky');
-	// 	}
-	// }
-	// $(window).on('scroll', function () {
-	// 	goToScroll();
-	// });
-	//goToScroll();
+	function goToScroll() {
+		// 주 메뉴
+		var h = 96;
+		if ($(window).scrollTop() > h) {
+			$('body').addClass('gnb-stiky');
+		} else {
+			$('body').removeClass('gnb-stiky');
+		}
+	}
+	$(window).on('scroll', function () {
+		goToScroll();
+	});
+	goToScroll();
+
+
 
 	//gnb
 	//pc 메뉴
@@ -575,12 +575,13 @@ $(function() {
 
 	var fixNav = 94;
 	var amountScrolled = 120;
+	var headerHeihgt = $("#header").innerHeight();
 	var backBtn = $(".goTop");
 	
 	$window.on("scroll", function () {
-
+		
 		if ($window.scrollTop() > amountScrolled) {
-				backBtn.fadeIn("slow");
+			backBtn.fadeIn("slow");
 		} 
 		else {
 			backBtn.fadeOut("slow");

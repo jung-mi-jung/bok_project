@@ -960,17 +960,18 @@ border-top: 1px solid #E5E5E5;
 border-bottom: 1px solid #E5E5E5;
 }
 @media (min-width: 1200px) {
-.navigation {
+.gnb-stiky .navigation {
 width: 100%;
 position: sticky;
-top: 0;
+top: -2px;
 z-index: 10;
 }
-.navigation .sub-_visual {
+.gnb-stiky .navigation .sub-_visual {
 display: none;
 }
 }
 .navigation .sub-_visual {
+background-image: none;
 border-top: 1px solid #E6E6E6;
 background: #fff;
 }
