@@ -162,13 +162,25 @@ body > .popwrap {
 		@include breakpoint($sm){
 			padding: 20px;
 		}
-		.b-close {
+		button {
+			font-size: 16px;
 			min-width: 82px;
 			height: 32px;
 			line-height: 32px;
+		}
+		.b-close {			
 			font-weight: 300;
 			&::before {
 				@include font-ico-outline('\e5cd');
+				font-size: 18px;
+				margin-right: 4px;
+				margin-bottom: 2px;
+			}
+		}
+		.b-print {
+			background-color: $color-point;
+			&::before {
+				@include font-ico-outline('\e8ad');
 				font-size: 18px;
 				margin-right: 4px;
 				margin-bottom: 2px;

@@ -570,7 +570,6 @@ background-image: url(/static/portal/img/sub/sub_visual_db_bg.png) !important;
 
 .navigation {
 position: relative;
-z-index: 1;
 background-color: #FCFCFC;
 }
 @media (min-width: 1200px) {
@@ -1550,23 +1549,40 @@ vertical-align: top;
 background: #FAFAFA;
 }
 
-.table-view {
-border-top: 2px solid #182252;
+.table-view.table table {
+border-collapse: separate;
+border-spacing: 8px;
+}
+@media (max-width: 749px) {
+.table-view.table table {
+border-spacing: 4px;
+}
 }
 .table-view.table th {
-text-align: left;
-font-weight: 400;
 color: #000E33;
-background-color: #F2F6FA;
-font-size: 1.125rem;
-border: 1px solid #dee0e6;
+background-color: #E8EAED;
+font-size: 16px;
+border-radius: 8px;
 padding-left: 15px;
 padding-right: 15px;
 }
+@media (max-width: 749px) {
+.table-view.table th {
+padding-left: 8px;
+padding-right: 8px;
+}
+}
 .table-view.table td {
-min-height: 55px;
-border-bottom: 1px solid #E6E6E6;
+min-height: 52px;
+border: none;
 padding: 7px 15px;
+background-color: #FAFAFA;
+border-radius: 8px;
+}
+@media (max-width: 749px) {
+.table-view.table td {
+padding: 3px 8px;
+}
 }
 .table-view [class^=b-] {
 font-size: 1rem;
@@ -11170,14 +11186,40 @@ padding: 40px;
 padding: 20px;
 }
 }
-.modal-body .b-close {
+.modal-body button {
+font-size: 16px;
 min-width: 82px;
 height: 32px;
 line-height: 32px;
+}
+.modal-body .b-close {
 font-weight: 300;
 }
 .modal-body .b-close::before {
 content: "\e5cd";
+font-family: "Material Icons Outlined";
+font-weight: normal;
+font-style: normal;
+display: inline-block;
+line-height: 1;
+vertical-align: text-bottom;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+font-feature-settings: "liga";
+font-size: 18px;
+margin-right: 4px;
+margin-bottom: 2px;
+}
+.modal-body .b-print {
+background-color: #005596;
+}
+.modal-body .b-print::before {
+content: "\e8ad";
 font-family: "Material Icons Outlined";
 font-weight: normal;
 font-style: normal;

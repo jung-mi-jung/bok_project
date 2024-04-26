@@ -9,7 +9,7 @@
 //navigation
 .navigation {
 	position: relative;
-	z-index: 1;
+	//z-index: 1;
 	background-color: #FCFCFC;	
 	@include breakpoint($lg){
 		.gnb-stiky & {
