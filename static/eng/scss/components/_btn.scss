@@ -183,6 +183,9 @@ $btn: "[class^=b-]";
 		font-size: 14px;
 		color: #fff;
 		background-color: $color-point;
+		&:hover {
+			color: #fff;
+		}
 		&::before {
 			content: "";
 			display: inline-block;
@@ -293,6 +296,6 @@ li {
 		}
 	}
 }
-.input-xs {
-	width: 50px;
+.input-xs {  //청소년경제강좌 - 신청폼
+	width: 42px;
 }

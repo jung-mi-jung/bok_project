@@ -1,6 +1,6 @@
 // @import url('/static/commons/css/common.css');
 @import url('/static/eng/css/default.css');
-
+@import url('/static/font/NotoSans/notosans.css');
 
 @import 'base/util'; //mixins
 @import '../../commons/scss/breakpoint'; //반응형 플러그인
@@ -16,7 +16,7 @@
 		$sprite-name: nth($retina-group, 1);
 		.#{$sprite-name} {
 			@include retina-sprite($retina-group);
-		}	
+		}
 	}
 }
 [class^='ico-'] {
@@ -52,16 +52,7 @@
 @import 'components/calendar';// calendar
 
 
-
-
 @import url('/static/jslibrary/bootstrap-datepicker-1.9.0-dist/css/bootstrap-datepicker3.standalone.css');
-
-
-
-.pdf {
-	overflow-x: hidden;overflow-y: auto;width: 100%;height: 200px;
-}
-
 
 
 
@@ -302,7 +293,6 @@
 		}
 	}
 }
-
 
 
 // 한줄에 h3 + p
@@ -686,11 +676,11 @@ mark {
 							margin: 40px 0;
 						}
 						&.ico-certi1 {
-							background-image: url(/static/portal/img/ico/ico-certi1.svg);
+							background-image: url(/static/eng/img/ico/ico-certi1.svg);
 							
 						}
 						&.ico-certi2 {
-							background-image: url(/static/portal/img/ico/ico-certi2.svg);
+							background-image: url(/static/eng/img/ico/ico-certi2.svg);
 						}
 					}
 					strong {

@@ -41,12 +41,12 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	z-index: 99;
+	z-index: 999;
 	background-color: #fff;
 	//background-color: $point;
 	display: flex;
 	flex-direction: column;
-	border-bottom: 1px solid #d9d9d9;
+	border-bottom: 1px solid #E6E6E6;
 	.container {
 		position: relative;
 		display: flex;
@@ -83,7 +83,7 @@
 					display: flex;
 					flex-direction: row;
 					flex-grow: 1;
-					border-bottom: 1px solid rgba(255, 255, 255, 0.2);					
+					//border-bottom: 1px solid rgba(255, 255, 255, 0.2);					
 					li {
 						& + li {
 							&::before {
@@ -119,8 +119,8 @@
 		a {
 			display: block;
 			background: url(/static/eng/img/main/logo.png) 50% no-repeat;
-			width: 208px;
-			height: 52px;
+			width: 127px;
+			height: 60px;
 			@include breakpoint($sm){
 				background-position: 0 50%;
 			}
@@ -270,7 +270,7 @@
 			height: 48px;
 			border-radius: 50%;
 			z-index: 9;
-			background-color: #fff;
+			//background-color: #fff;
 			&::before  {
 				@include font-ico-outline("\e8b6");
 				color: $point;
@@ -366,6 +366,9 @@
 }
 #content {
 	margin-top: 36px;
+	@include breakpoint($sm){
+		margin-top: 20px;
+	}
 	.hgroup { //기존 소스 삭제
 		display: none;
 	}
@@ -624,6 +627,7 @@
 					border: 0;
 					height: 48px;
 					padding: 10px 16px;
+					color: #1a1a1a;
 					@include breakpoint($sm){
 						padding: 5px 16px;
 						height: 40px;
@@ -711,14 +715,14 @@
 						position: relative;
 						// display: inline-flex;
 						align-items: center;
-						color: $color-point;
+						color: #4d4d4d;
 						i {
 							position: absolute;
 							top: 4px;
 							right: -25px;
 							display: inline-block;
 							width: 20px;
-							height: 20px;
+							height: 20px; 
 							margin-left: 8px;
 							// transform: translateY(4px);
 							background: url(/static/eng/img/ico/ico-dropdown-down.png);
@@ -726,6 +730,7 @@
 					}
 					&.on {
 						> a  {
+							color: $color-point;
 							i {
 								background: url(/static/eng/img/ico/ico-dropdown-up.png);
 							}
@@ -1286,7 +1291,7 @@
 	}
 }
 
-@mixin reference {	
+@mixin reference {
 	dl {
 		dt {
 			color: $black;
@@ -1337,6 +1342,7 @@
 }
 
 [class^=reference-] {
+	position: relative;
 	&:first-child {
 		margin-top: 0;
 		padding-top: 0;
@@ -1346,6 +1352,7 @@
 	}
 }
 .reference {	
+	clear: both;
 	margin-top: 30px;
 	padding: 50px 120px;
 	background-color: #F2F6FA;
@@ -1512,7 +1519,7 @@
 									margin-bottom: 4px;
 								}
 								&.title {
-									max-height: 72px;
+									max-height: 78px;
 									@include line-clamp(3);
 								}
 								&.date {
@@ -1592,7 +1599,7 @@
 								&.tit {
 									color: $black;
 									@include line-clamp(2);
-									height: 48px;
+									height: 52px;
 									margin: 5px 0 10px;
 								}
 								&.date {
@@ -1715,13 +1722,15 @@
 
 
 sup {
-    top: 0;
-	font-size: 100%;
-	vertical-align: middle;	
+	color: $color-point;
+    //top: 0;
+	//font-size: 100%;
+	//vertical-align: middle;	
 	.table & {
 		vertical-align: super;
 		font-size: 75%;
 		color: #39A0FF;
+		top: 2px;
 	}
 }
 
@@ -1773,6 +1782,9 @@ sup {
 		font-size: 23px;
 		margin: 0 5px 0 0;
 	}
+}
+span.help3 {
+	display: inline-block;
 }
 .help3 {
 	display: block;

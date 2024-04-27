@@ -201,7 +201,7 @@
 	th,
 	td {
 		color: $black;
-		font-size: rem(18);
+		font-size: 16px;
 		font-weight: 400;
 		border: 1px solid $bd-color;
 		padding: 13px 15px;
@@ -233,6 +233,9 @@
 			}
 		}
 		.title {
+			text-align: left;
+		}
+		&.title {
 			text-align: left;
 		}
 	}
@@ -510,6 +513,9 @@
 				font-size: rem(18);
 				width: calc(100% - 250px);
 				@include ellipsis();
+				@include breakpoint($sm){
+					width: 100%;
+				}
 			}
 			.dataInfo {
 				margin-top: 20px;
@@ -540,10 +546,7 @@
 						margin-right: 5px;
 					}
 				}
-			}
-			// .icon-etc {	
-			// 	@include fileload();
-			// }			
+			}			
 		}
 		.fileLink {
 			position: absolute;
@@ -597,107 +600,11 @@
 										}
 									}
 								}
-								/*&.viewerLink {
-									width: auto;
-									&::before {
-										content: "";
-										display: inline-block;
-										vertical-align: middle;
-										width: 1px;
-										height: 12px;
-										background-color: rgba(255, 255, 255, 0.2);
-										margin-right: 8px;
-									}
-									&::after {
-										content: "";
-										display: inline-block;
-										vertical-align: middle;
-										width: 19px;
-										height: 16px;
-										background: url(/static/eng/img/ico/i-viewer_off.png) no-repeat;;
-									}
-									&:hover {
-										&::before {
-											background: url(/static/eng/img/ico/ico-viewer_on.png) no-repeat;
-										}
-									}
-								}*/
 							}								
 						}
 					}
 				}
 			}
 		}			
-	}
-	/*
-	clear: both;
-	.badge{border:1px solid #ddd;}
-	.title{font-size:17px;font-weight:600;letter-spacing:-1px;color:#757575; @include ellipsis;  position:relative;}
-	.titlesub{max-width:90%; @include ellipsis;display:inline-block; vertical-align:top;padding-right:3px;}
-	.active .title{color:$1; }
-	.secretSet{ position:relative;display:block;
-		.icon_secret{width:20px;height:30px;}	
-	} 
-	.close, 
-	.fa-chevron-down{transition:all .3s;}
-	.on .fa-chevron-down{transform:rotate(180deg);}
-	.close{
-		&:hover,
-		&:focus,
-		&:active{transform:rotate(180deg)};
-	}
-	.row .row{margin-left:0;margin-right:0; margin-top:10px;display:block;float:left;width:100%;}
-	>ul{border-top:3px solid $spotBg;
-		>li{border-bottom:1px solid #ddd; padding:10px 0;
-			&.nofile{text-align:center;}
-			.col{padding:0 10px;min-height:27px;
-				&.descinfo>div span{line-height:20px; text-indent:-22px;padding-left:22px;
-					&.txts{text-indent:0;padding-left:0; margin-right:15px;font-weight:600;color:#757575}
-				}
-			}
-		}	
-	}
-
-	.reportViews{clear:both;float:left;width:100%;position:relative;overflow:hidden;
-		.close{position:absolute;right:10px;top:20px;font-size:20px;}
-	}
-	.reportAjaxData{
-		.reportInDb{background:#f5f5f5;clear:both; border-top:1px solid #ccc; padding:30px;margin:10px 0;}
-	}
-	.dataInfo{text-align:right;}
-	.dataInfo1{text-align:right;font-size:14px;
-		.fs_date{color:#000;margin-left:5px;display:inline-block;font-weight:bold;}
-	}
-	.fileLink{text-align:right;}
-	&.type2{
-		.dataInfo{float:left; text-align:right;}
-		>ul>li{padding:15px 0;}
-	}
-	&.type3{
-		.dataInfo{float:left; text-align:right;}
-		>ul>li{padding:15px 0;}
-		.writer{margin-left:10px;
-			span{font-weight:bold;}
-		}
-	}
-	&.type4{
-		>ul>li{min-height:90px;
-			&.style{
-				.row{padding-top:25px;}
-			}
-		}
-		.serviceL{text-align:right;}
-		.ser{
-			&:before{content:"\f0e3";display: inline-block;@include fa; background: none;margin-right:5px;font-size:19px;font-weight:normal;}
-		}
-	}
-	.fileLink1{text-align:right;
-		.fileType{margin-right:15px;font-size:16px;
-			&:before{content:"\f0f6";display: inline-block;@include fa; background: none;margin-right:5px;font-size:19px;font-weight:normal;}
-		}
-		.fileView{
-			&:before{content:"\f002";display: inline-block;@include fa; background: none;margin-right:5px;font-size:19px;font-weight:normal;}
-		}
-	}
-	*/
+	}	
 }

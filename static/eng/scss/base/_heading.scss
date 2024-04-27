@@ -30,7 +30,7 @@
 @mixin h-caption() {
 	color: #005596;
 	//font-size: rem(20);
-	font-size: rem(16);
+	font-size: rem(20);
 	font-weight: 500;
 	margin: 20px 0 10px;
 	padding-left: 0;
@@ -38,11 +38,11 @@
 		content: "";
 		display: inline-block;
 		vertical-align: middle;
-		width: 15px;
-		height: 15px;
+		width: 16px;
+		height: 16px;
 		background-image: url(/static/eng/img/ico/ico-caption.png);
 		background-color: transparent;
-		background-size: 15px 15px;
+		//background-size: 15px 15px;
 		margin-right: 7px;
 		border-radius: 0;
 		margin-top: -3px;
@@ -104,6 +104,14 @@ p.bu-dot {
 		text-indent: -18px;
 		margin-bottom: 5px;
 	}
+	&.type2 {
+		> li {
+			color: #808080;
+			strong {
+				color: #4D4D4D;
+			}
+		}
+	}
 }
 
 
@@ -114,7 +122,7 @@ p.bu-dot {
 		font-size: rem(36);
 		//font-weight: 300;
 		font-weight: 500;
-		margin-bottom: 20px;
+		margin-bottom: 55px;
 		& + h3 {
 			margin-top: 22px;
 		}
@@ -159,7 +167,7 @@ p.bu-dot {
 		//margin-top: 18px; 일반?
 		//margin-top: 25px;	// 지역본부 이용안내
 		margin-top: 45px;
-		margin-bottom: 5px;
+		margin-bottom: 10px;
 		/*&:first-child {
 			margin-top: 0;
 		}*/
@@ -172,18 +180,18 @@ p.bu-dot {
 		font-size: rem(18);
 		color: #1a1a1a;
 		font-weight: 500;
-		padding-left: 24px;
+		padding-left: 22px;
 		margin-top: 15px;
 		margin-bottom: 5px;
 		&::before {
 			content: "";
 			display: inline-block;
-			width: 14px;
-			height: 14px;			
-			background: #39A0FF;
-			border-radius: 4px;
+			width: 10px;
+			height: 10px;			
+			background: #3E7CC8;
+			border-radius: 50%;
 			position: absolute;
-			top: 7px;
+			top: 10px;
 			left: 0;
 		}
 	}

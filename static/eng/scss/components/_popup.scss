@@ -110,7 +110,7 @@ body > .popwrap {
 		border-radius: 16px;		
 	}
 	&-header {
-		color: #fff;
+		//color: #fff;
 		background-color: $point;
 		border-radius: 12px 12px 0 0;
 		h4 {
@@ -162,13 +162,25 @@ body > .popwrap {
 		@include breakpoint($sm){
 			padding: 20px;
 		}
-		.b-close {
+		button {
+			font-size: 16px;
 			min-width: 82px;
 			height: 32px;
 			line-height: 32px;
+		}
+		.b-close {			
 			font-weight: 300;
 			&::before {
 				@include font-ico-outline('\e5cd');
+				font-size: 18px;
+				margin-right: 4px;
+				margin-bottom: 2px;
+			}
+		}
+		.b-print {
+			background-color: $color-point;
+			&::before {
+				@include font-ico-outline('\e8ad');
 				font-size: 18px;
 				margin-right: 4px;
 				margin-bottom: 2px;
@@ -237,8 +249,12 @@ body > .popwrap {
 
 
 //기존 popup (현용은행권...)
-.popupWrap{
-	h1 {background:#484d58;color:#fff;font-size:1.0em;padding:9px 15px;font-weight:500;}
+.bgn {
+	.popupWrap{
+		h1 {background:#484d58;color:#fff;font-size:1.0em;padding:9px 15px;font-weight:500;}
+	}
+}
+.popupWrap{	
 	.popupBody {margin:20px;}
 	.view {border-top:1px solid #dee0e6;}
 	.btn_close {position:absolute;top:9px;right:9px;
@@ -281,6 +297,7 @@ body > .popwrap {
 		text-align: center;
 		margin: 60px 0;
 		letter-spacing: 20px;
+		background-color: transparent;
 	}
 	.subject {
 		font-size: 28px;

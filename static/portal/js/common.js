@@ -19,9 +19,15 @@ $(window).bind("orientationchange", function (e) {
 	}
 });
 
+
 var ismobile = false;
+$(".content-row .cont").show();
+
 if (window.innerWidth < 1200) {
 	ismobile = true;
+	$("body").addClass("mobile");
+	var selectedNum = $(".content-row .cont-nav li.on").index();
+	$(".content-row .cont").eq(selectedNum).show().siblings().hide();
 }
 if( window.innerWidth < 750 ) {
 	$(".total-nav").addClass("m-total-nav");
@@ -29,9 +35,14 @@ if( window.innerWidth < 750 ) {
 		$(this).parent("li").toggleClass("on");
 	})
 } 
+
+
 $(window).resize(function () {
 	if (window.innerWidth < 1200) {
 		ismobile = true;
+		$("body").addClass("mobile")
+		var selectedNum = $(".content-row .cont-nav li.on").index();
+		$(".content-row .cont").eq(selectedNum).show().siblings().hide();
 		
 		if( window.innerWidth < 750 ) {
 			$(".total-nav").addClass("m-total-nav");
@@ -45,8 +56,41 @@ $(window).resize(function () {
 	} 
 	else {
 		ismobile = false;
+		$("body").removeClass("mobile")
+		$(".content-row .cont").show();
 	}
 });
+
+
+// var ismobile = false;
+// if (window.innerWidth < 1200) {
+// 	ismobile = true;
+// }
+// if( window.innerWidth < 750 ) {
+// 	$(".total-nav").addClass("m-total-nav");
+// 	$(".m-total-nav .dp1 > li > a").on("click", function(e){
+// 		$(this).parent("li").toggleClass("on");
+// 	})
+// } 
+// $(window).resize(function () {
+// 	if (window.innerWidth < 1200) {
+// 		ismobile = true;
+		
+// 		if( window.innerWidth < 750 ) {
+// 			$(".total-nav").addClass("m-total-nav");
+// 			$(".m-total-nav .dp1 > li > a").on("click", function(e){
+// 				$(this).parent("li").toggleClass("on");
+// 			})
+// 		} 
+// 		else {
+// 			$(".total-nav").removeClass("m-total-nav");
+// 		}
+// 	} 
+// 	else {
+// 		ismobile = false;
+// 	}
+// });
+
 
 function isMobile() {
 	var UserAgent = navigator.userAgent;
@@ -340,6 +384,37 @@ $(function () {
 				$('[aria-labelledby="' + _id + '"]').show().siblings().hide()
 			})
 	});	
+
+	// 모바일 탭 활성화(스크롤 컨텐츠)
+	$(".js-tab2 button").on('click', function(){
+		var $parent = $(this).closest(".js-tab2");
+		var index = $(this).parent().index();
+
+		$parent.toggleClass("on");
+	});
+
+	//콘텐츠 내부 래프트 엥커
+	$(".cont-nav li").on("click", function(){
+		var thisInx = $(this).index();
+		var thisScrollTop = $(".content-row .cont").eq(thisInx).offset().top;
+		var currentScrollTop = $(window).scrollTop();
+		var selectedTxt = $(this).find("a").text();
+
+		$(this).addClass("on").siblings().removeClass("on");
+		$(this).find("a").addClass("on").siblings().removeClass("on");
+		$(".js-tab2").removeClass("on").find("button").html(selectedTxt)
+
+		// 1200이상일때
+		if ( !$("body").hasClass("mobile") ){
+			$("html, body").animate({ scrollTop: thisScrollTop - 60}, 200);
+		}
+		// 1200미만 일때
+		else {
+			$(".content-row .cont").eq(thisInx).show().siblings().hide();
+		}
+
+		return false;
+	})
 
 
 	// 이미지맵 반응형

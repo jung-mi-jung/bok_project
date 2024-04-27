@@ -349,15 +349,15 @@ input {
 	}
 }
 
-.label-list {
-	label {
-		margin-left: 15px;
-		&:first-child {
-			margin-left: 0;
+
+.view {
+	dd {
+		label {
+			margin-left: 15px;
+			&:first-child {
+				margin-left: 0;
+			}
 		}
-	}
-	.view & {
-		input {height: 20px;}
 		input[type=checkbox] {
 			width: 20px;
 			height: 20px;
@@ -371,7 +371,7 @@ input {
 				& + i {
 					&::after {
 						top: 5px;
-						left: 1px;
+						left: -2px;
 					}
 					& + span {
 						color: $point;
@@ -389,6 +389,11 @@ input {
 						}
 					}
 				}
+			}
+		}
+		input[type=radio] {
+			& + i + span {
+				margin-left: 4px;
 			}
 		}
 	}
