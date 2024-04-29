@@ -3441,7 +3441,7 @@ background-repeat: no-repeat;
 border-radius: 8px;
 margin-bottom: 15px;
 }
-.reference-media dl dd ul li a span.img::before {
+.reference-media dl dd ul li a span.img.media::before {
 content: "";
 display: inline-block;
 width: 40px;

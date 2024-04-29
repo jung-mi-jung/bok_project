@@ -1353,7 +1353,7 @@ p.subject {
 		position: absolute;
 		right: 10px;
 		bottom: 10px;
-		background: url(https://www.bok.or.kr/static/jslibrary/prettyPhoto/images/prettyPhoto/light_square/zoom_in.png) no-repeat;
+		background: url(/static/jslibrary/prettyPhoto/images/prettyPhoto/light_square/zoom_in.png) no-repeat;
 		width: 80px;
 		height: 60px;
 	}
@@ -1366,6 +1366,15 @@ p.subject {
     margin-bottom: 10px;
     background: #fff;
     text-align: center;
+	&.img2 {
+		@include breakpoint($lg){
+			display: flex;
+			p {
+				width: 50%;
+				margin-bottom: 0;
+			}
+		}
+	}
 }
 
 .img-set {
@@ -2112,13 +2121,14 @@ p.subject {
 		.bankMap{width:100%;margin:20px 0 0 0;}
 	}
 	.map {	
-		width:60%;
+		width: 528px;
 		@include breakpoint($sm){
 			width: 100%;
 		}
 	}
 	.bankMap {	
-		width:38%;
+		//width:38%;
+		width: calc(100% - 528px - 4px);
 		margin-left:2%;
 		@include breakpoint($sm){
 			width: 100%;
@@ -2178,12 +2188,12 @@ p.subject {
 			}
 			&.ad{
 				&:before{
-					background: url(/static/eng/img/sub/zone/ico-ad.png);
+					background: url(/static/eng/img/sub/ico-ad.png);
 				}
 			}
 			&.ph{
 				&:before{
-					background: url(/static/eng/img/sub/zone/ico-call.png);
+					background: url(/static/eng/img/sub/ico-call.png);
 				}
 			}
 			&.fx{
@@ -2198,7 +2208,7 @@ p.subject {
 			}
 			&.way {
 				&::before {
-					background: url(/static/eng/img/sub/zone/ico-way.png);
+					background: url(/static/eng/img/sub/ico-way.png);
 				}
 			}
 		}
@@ -2902,6 +2912,7 @@ p.subject {
 			width: 50%;
 		}
 		.his-img {
+			position: relative;
 			width: calc(50% - 80px);
 			margin-right: 40px;
 			overflow: hidden;
@@ -2936,10 +2947,10 @@ p.subject {
 		.his-txt {
 			position: relative;
 			width: calc(100% - 344px - 30px);
-			padding-top: 30px;
+			//padding-top: 30px;
 			@include breakpoint($sm){
 				width: 100%;
-				padding-top: 0;
+				//padding-top: 0;
 			}
 			dl {
 				dt {
@@ -3556,3 +3567,13 @@ p.subject {
 		}
 	}
 }
+
+// .Values_bg {
+// 	position: relative;
+// 	background-color: #0063A5;
+// 	overflow: hidden;
+// 	display: block;
+// 	img {
+// 		float: right;
+// 	}
+// }

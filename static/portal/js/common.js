@@ -789,12 +789,12 @@ $(function() {
 
 
 	//.table thead 없을 경우 처리 (디자인 처리)
-	$(".table")
-		.not("thead")
+	// $(".table")
+	// 	.not("thead")
 		
-		.each(function () {
-			$(this).addClass("table_line");
-		});
+	// 	.each(function () {
+	// 		$(this).addClass("table_line");
+	// 	});
 	
 		
 

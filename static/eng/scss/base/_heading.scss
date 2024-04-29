@@ -146,6 +146,9 @@ p.bu-dot {
 		// 	margin-right: 10px;
 		// 	margin-bottom: 4px;
 		// }
+		a {
+			color: #26447D;
+		}
 		&.h3 {
 			margin: 40px 0 16px;
 			@include h-caption();

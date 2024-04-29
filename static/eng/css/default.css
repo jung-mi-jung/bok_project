@@ -1498,6 +1498,9 @@ font-size: 1.75rem;
 font-weight: 500;
 margin: 70px 0 16px;
 }
+#main-container h3 a {
+color: #26447D;
+}
 #main-container h3.h3 {
 margin: 40px 0 16px;
 color: #005596;
@@ -3441,7 +3444,7 @@ background-repeat: no-repeat;
 border-radius: 8px;
 margin-bottom: 15px;
 }
-.reference-media dl dd ul li a span.img::before {
+.reference-media dl dd ul li a span.img.media::before {
 content: "";
 display: inline-block;
 width: 40px;

@@ -1366,6 +1366,15 @@ p.subject {
     margin-bottom: 10px;
     background: #fff;
     text-align: center;
+	&.img2 {
+		@include breakpoint($lg){
+			display: flex;
+			p {
+				width: 50%;
+				margin-bottom: 0;
+			}
+		}
+	}
 }
 
 .img-set {
@@ -2902,6 +2911,7 @@ p.subject {
 			width: 50%;
 		}
 		.his-img {
+			position: relative;
 			width: calc(50% - 80px);
 			margin-right: 40px;
 			overflow: hidden;

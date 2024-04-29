@@ -1,6 +1,7 @@
 table {	
 	font-size: 16px;
-	word-break: break-all;
+	//word-break: break-all;
+	word-break: break-word;
 	width: 100%;
 	border-collapse: collapse;
     border-spacing: 0;
@@ -21,19 +22,19 @@ table {
 			display: none !important;
 		}
 	}
-	// &.table_line {  //임시? 삭제?
-	// 	border-top: 2px solid #182252;
-	// }
+	&.table_line {  //thead 없는..
+		border-top: 2px solid #182252;
+	}
 	table {
 		width: 100%;
 		table-layout: fixed;
-		thead {
-			background-color: #E8EBED;
+		thead {			
 			margin-bottom: 1px;
 			th {
 				color: $black;
 				font-weight: 400;
 				padding: 15px 5px;
+				background-color: #E8EBED;
 				&:first-child {
 					border-radius: 8px 0 0 8px;
 				}
@@ -44,12 +45,19 @@ table {
 					border-left: 1px solid #BDBCBC;
 				}
 			}
+			// tr {
+			// 	&:nth-child(2) {
+			// 		th {
+			// 			border-top: 1px solid #BDBCBC;
+			// 		}
+			// 	}
+			// }
 		}
 		tbody {
-			th {		
+			th {
 				padding: 13px 10px;		
 				font-weight: 400;
-				color: #4d4d4d;		
+				color: #4d4d4d;
 				background-color: #FAFAFA;	
 				& + th,
 				& + td {
@@ -62,6 +70,11 @@ table {
 						border-top: 1px solid #fff;
 					}
 				}
+				th, td {
+					&:first-child  {
+						border-right: 1px solid $bd-color !important;
+					}
+				}
 			}
 			td, th {
 				border-bottom: 1px solid #E6E6E6;
@@ -69,7 +82,7 @@ table {
 					text-decoration: none;
 					border-right: 1px solid #E6E6E6;
 				}
-			}
+			}			
 		}
 		td {
 			color: #666;
@@ -110,6 +123,12 @@ table {
 			padding: 12px 15px;
 		}
 	}
+	// &.t_double {
+	// 	thead {
+	// 		border-collapse: separate;
+  	// 		border-spacing: 8px;
+	// 	}
+	// }
 	&.m {
 		@include breakpoint($smd){
 			thead {
@@ -168,13 +187,23 @@ table {
 				border-spacing: 4px;
 			}
 		}
+		th, td {
+			border: none !important;
+		}
+		tr {
+			td:first-child,
+			th:first-child {
+				border-right: 0 !important;
+			}
+		}
 		th {
 			//text-align: left;
-			color: $black;
+			color: #1A1A1A;
+			font-weight: 400 !important;
 			background-color: #E8EAED;
 			font-size: 16px;
 			//border: 1px solid #dee0e6;
-			border-radius: 8px;
+			border-radius: 8px !important;
 			padding-left: 15px;
 			padding-right: 15px;
 			@include breakpoint($sm){
@@ -192,7 +221,7 @@ table {
 			@include breakpoint($sm){
 				padding: 3px 8px;
 			}
-		}
+		}				
 	}
 	[class^=b-] {
 		font-size: rem(16);

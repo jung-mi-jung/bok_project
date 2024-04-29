@@ -197,6 +197,9 @@ font-size: 1.75rem;
 font-weight: 500;
 margin: 70px 0 16px;
 }
+#main-container h3 a {
+color: #26447D;
+}
 #main-container h3.h3 {
 margin: 40px 0 16px;
 color: #005596;
@@ -1406,7 +1409,7 @@ margin-left: 4px;
 
 table {
 font-size: 16px;
-word-break: break-all;
+word-break: break-word;
 width: 100%;
 border-collapse: collapse;
 border-spacing: 0;
@@ -1429,18 +1432,21 @@ display: block !important;
 display: none !important;
 }
 }
+.table.table_line {
+border-top: 2px solid #182252;
+}
 .table table {
 width: 100%;
 table-layout: fixed;
 }
 .table table thead {
-background-color: #E8EBED;
 margin-bottom: 1px;
 }
 .table table thead th {
 color: #000E33;
 font-weight: 400;
 padding: 15px 5px;
+background-color: #E8EBED;
 }
 .table table thead th:first-child {
 border-radius: 8px 0 0 8px;
@@ -1462,6 +1468,9 @@ border-left: 1px solid #E6E6E6;
 }
 .table table tbody tr:first-child th, .table table tbody tr:first-child td {
 border-top: 1px solid #fff;
+}
+.table table tbody tr th:first-child, .table table tbody tr td:first-child {
+border-right: 1px solid #E6E6E6 !important;
 }
 .table table tbody td, .table table tbody th {
 border-bottom: 1px solid #E6E6E6;
@@ -1558,11 +1567,19 @@ border-spacing: 8px;
 border-spacing: 4px;
 }
 }
+.table-view.table th, .table-view.table td {
+border: none !important;
+}
+.table-view.table tr td:first-child,
+.table-view.table tr th:first-child {
+border-right: 0 !important;
+}
 .table-view.table th {
-color: #000E33;
+color: #1A1A1A;
+font-weight: 400 !important;
 background-color: #E8EAED;
 font-size: 16px;
-border-radius: 8px;
+border-radius: 8px !important;
 padding-left: 15px;
 padding-right: 15px;
 }
@@ -7410,7 +7427,7 @@ content: "";
 position: absolute;
 right: 10px;
 bottom: 10px;
-background: url(https://www.bok.or.kr/static/jslibrary/prettyPhoto/images/prettyPhoto/light_square/zoom_in.png) no-repeat;
+background: url(/static/jslibrary/prettyPhoto/images/prettyPhoto/light_square/zoom_in.png) no-repeat;
 width: 80px;
 height: 60px;
 }
@@ -7423,6 +7440,15 @@ position: relative;
 margin-bottom: 10px;
 background: #fff;
 text-align: center;
+}
+@media (min-width: 1200px) {
+.imgSet.img2 {
+display: flex;
+}
+.imgSet.img2 p {
+width: 50%;
+margin-bottom: 0;
+}
 }
 
 .img-set {
@@ -8307,7 +8333,7 @@ margin: 20px 0 0 0;
 }
 }
 .bokHead .map {
-width: 60%;
+width: 528px;
 }
 @media (max-width: 749px) {
 .bokHead .map {
@@ -8315,7 +8341,7 @@ width: 100%;
 }
 }
 .bokHead .bankMap {
-width: 38%;
+width: calc(100% - 528px - 4px);
 margin-left: 2%;
 }
 @media (max-width: 749px) {
@@ -8364,10 +8390,10 @@ margin: 1px 3px 0 0;
 font-size: 24px;
 }
 .bokHead .bankMap dt.ad:before {
-background: url(/static/eng/img/sub/zone/ico-ad.png);
+background: url(/static/eng/img/sub/ico-ad.png);
 }
 .bokHead .bankMap dt.ph:before {
-background: url(/static/eng/img/sub/zone/ico-call.png);
+background: url(/static/eng/img/sub/ico-call.png);
 }
 .bokHead .bankMap dt.fx:before {
 content: "\ead8";
@@ -8404,7 +8430,7 @@ text-rendering: optimizeLegibility;
 font-feature-settings: "liga";
 }
 .bokHead .bankMap dt.way::before {
-background: url(/static/eng/img/sub/zone/ico-way.png);
+background: url(/static/eng/img/sub/ico-way.png);
 }
 .bokHead .bankMap .pic {
 display: none;
@@ -9170,6 +9196,7 @@ display: block;
 width: 50%;
 }
 .histroy2 .his-con .his-img {
+position: relative;
 width: calc(50% - 80px);
 margin-right: 40px;
 overflow: hidden;
@@ -9211,12 +9238,10 @@ display: inline-block;
 .histroy2 .his-con .his-txt {
 position: relative;
 width: calc(100% - 344px - 30px);
-padding-top: 30px;
 }
 @media (max-width: 749px) {
 .histroy2 .his-con .his-txt {
 width: 100%;
-padding-top: 0;
 }
 }
 .histroy2 .his-con .his-txt dl dt {
