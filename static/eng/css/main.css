@@ -542,6 +542,12 @@ z-index: 1;
 vertical-align: middle;
 }
 
+.scrollContB {
+border: 1px solid #E6E6E6;
+padding: 15px;
+position: relative;
+}
+
 #wrap {
 padding-top: 0;
 }

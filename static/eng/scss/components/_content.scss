@@ -258,11 +258,33 @@ p.subject {
 
 
 .tab-content {
+	clear: both;
 	.tab-pane {
 		display: none;
 		&.active,
 		&.on {
 			display: block;
+		}
+	}
+	&.bg {
+		position: relative;
+		background-color: #FAFAFA;
+		padding: 70px 40px;
+		.b-print {
+			font-size: 16px;
+			position: absolute;
+			top: 24px;
+			right: 48px;
+			background-color: $black;
+			border-radius: 4px;
+			color: #fff;
+			padding: 3px 12px;
+			&::before {
+				@include font-ico-outline('\e8ad');
+				font-size: 20px;
+				color: #fff;
+				margin-right: 8px;
+			}
 		}
 	}
 }

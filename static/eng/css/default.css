@@ -2185,7 +2185,7 @@ width: 48px;
 position: absolute;
 top: 12px;
 left: 0;
-z-index: 9;
+z-index: 99;
 }
 .page-toolbar .sns-wrap.active .sns-wrap__set {
 width: 48px;

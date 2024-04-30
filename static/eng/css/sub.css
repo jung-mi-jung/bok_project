@@ -3868,6 +3868,12 @@ overflow: hidden;
 .faqList.type1 dd {
 padding-left: 20px;
 }
+.faqList.type2 dt {
+padding: 0 20px;
+}
+.faqList.type2 dd {
+padding: 22px 20px;
+}
 .faqList dt,
 .faqList dd {
 position: relative;
@@ -6415,11 +6421,49 @@ width: auto;
 }
 }
 
+.tab-content {
+clear: both;
+}
 .tab-content .tab-pane {
 display: none;
 }
 .tab-content .tab-pane.active, .tab-content .tab-pane.on {
 display: block;
+}
+.tab-content.bg {
+position: relative;
+background-color: #FAFAFA;
+padding: 70px 40px;
+}
+.tab-content.bg .b-print {
+font-size: 16px;
+position: absolute;
+top: 24px;
+right: 48px;
+background-color: #000E33;
+border-radius: 4px;
+color: #fff;
+padding: 3px 12px;
+}
+.tab-content.bg .b-print::before {
+content: "\e8ad";
+font-family: "Material Icons Outlined";
+font-weight: normal;
+font-style: normal;
+display: inline-block;
+line-height: 1;
+vertical-align: text-bottom;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+font-feature-settings: "liga";
+font-size: 20px;
+color: #fff;
+margin-right: 8px;
 }
 
 .fade {
@@ -11558,6 +11602,12 @@ z-index: 1;
 }
 .certifi_wrap .bottom .sin img {
 vertical-align: middle;
+}
+
+.scrollContB {
+border: 1px solid #E6E6E6;
+padding: 15px;
+position: relative;
 }
 
 .calSec {
