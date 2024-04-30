@@ -2502,6 +2502,15 @@ p.subject {
 			}
 		}
 	}
+	&.type2 {
+		ul {
+			text-align: left;
+			display: block;
+			li + li {
+				margin-left: 0;
+			}
+		}
+	}
 }
 
 

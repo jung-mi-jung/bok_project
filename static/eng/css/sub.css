@@ -4230,7 +4230,11 @@ color: #fff;
 text-decoration: none;
 }
 .tabsub ul li a {
-display: block;
+display: flex;
+align-items: center;
+width: 100%;
+height: 100%;
+justify-content: center;
 color: #005596;
 text-align: center;
 padding: 8px;
@@ -5547,6 +5551,9 @@ height: 56px;
 .sh.sh3 .c [class^=b-] {
 min-width: auto;
 padding: 0 20px;
+}
+.sh.sh3 .c .select-box {
+max-width: 600px;
 }
 .sh.sh3 .c .select-box select {
 width: 100%;
@@ -8764,6 +8771,13 @@ text-align: left;
 .info-btn ul li + li {
 margin-left: 70px;
 }
+}
+.info-btn.type2 ul {
+text-align: left;
+display: block;
+}
+.info-btn.type2 ul li + li {
+margin-left: 0;
 }
 
 .info-box2 {

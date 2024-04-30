@@ -1,0 +1,87 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<title>popup</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="author" content="한국은행" />
+<meta name="keywords" content='<c:out value="${title }" escapeXml="false" />' />
+<meta name="description" content="한국은행" />
+<link type="text/css" rel="stylesheet" href="/static/commons/common.css" />
+<link type="text/css" rel="stylesheet" href="/static/eng/css/sub.css" />
+
+<script src="/static/jslibrary/jquery-1.12.2.min.js"></script>
+<!--[if lt IE 9]>
+	<link rel="stylesheet" type="text/css" href="/static/portal/css/ie.css">
+	<script type="text/javascript" src="/static/jslibrary/html5shiv.js"></script>
+	<script type="text/javascript" src="/static/jslibrary/respond.min.js"></script>
+	<script type="text/javascript"> $('html').attr('id','ie');</script>
+<![endif]-->
+
+</head>
+<body class="bgn">
+
+<div class="popupWrap">
+	<h1>ExampleⅠ (Imitation)</h1>
+	<div class="popupBody">
+		<p>The size of imitations must be either at least 200 percent or at most 50 percent of the respective banknote while maintaining that banknote's length-to-width ratio.</p>
+		<h2>50% reduced image</h2>
+		<div class="conImg">
+			<p class="img"><img src="/static/eng/img/cts/old/ECRpop_02.jpg" alt="50% reduced image" /></p>
+		</div>  
+		<h2>200% enlarged image</h2>
+		<div class="conImg">
+			<p class="img"><img src="/static/eng/img/cts/old/ECRpop_03.jpg" alt="200% enlarged image" /></p>
+		</div>  
+		<h2>Maximum/Minimum Size of Imitations</h2>
+		<!-- data table1 S -->
+		<div class="table">
+			<table>
+				<caption class="cp_off">Maximum/Minimum Size of Imitations</caption>
+				<colgroup>
+					<col />
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col"></th>
+						<th scope="col">actual size(100%)</th>
+						<th scope="col">reduced size<br/>(50% or less)</th>
+						<th scope="col">enlarged size<br/>(200% or more)</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row">50,000-won note</th>
+						<td>154×68 mm</td>
+						<td>109×48 mm or less</td>
+						<td>217×97 mm or more</td>
+					</tr>
+					<tr>
+						<th scope="row">10,000-won note    </th>
+						<td>148×68 mm</td>
+						<td>104×48 mm or less</td>
+						<td>210×97 mm or more</td>
+					</tr>
+					<tr>
+						<th scope="row">5,000-won note</th>
+						<td>142×68 mm</td>
+						<td>100×48 mm or less</td>
+						<td>201×97 mm or more</td>
+					</tr>
+					<tr>
+						<th scope="row">1,000-won note</th>
+						<td>136×68 mm</td>
+						<td>96×48 mm or less</td>
+						<td>193×97 mm or more</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
