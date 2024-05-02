@@ -1631,8 +1631,8 @@ color: #757575;
 color: #333333;
 font-size: 2.25rem;
 font-weight: 700;
-margin-bottom: 20px;
-line-height: 90%;
+margin-bottom: 48px;
+line-height: 1.2;
 }
 #main-container h2 + h3 {
 margin-top: 22px;
@@ -1642,7 +1642,7 @@ clear: both;
 color: #26447D;
 font-size: 1.75rem;
 font-weight: 500;
-margin: 30px 0 16px;
+margin: 40px 0 32px;
 }
 #main-container h3.h3 {
 margin: 40px 0 16px;
@@ -2359,19 +2359,8 @@ position: relative;
 .container {
 max-width: 1440px;
 margin: 0 auto;
-margin-left: 10px;
-margin-right: 10px;
-}
-@media (min-width: 1480px) {
-.container {
-margin-left: auto;
-margin-right: auto;
-}
-}
-@media (max-width: 749px) {
-.container {
-margin: 0;
-}
+padding-left: 10px;
+padding-right: 10px;
 }
 
 @media (max-width: 1199px) {
@@ -2492,7 +2481,7 @@ background-color: #005596;
 @media (min-width: 1200px) {
 #header .g-info > .search {
 width: 104px;
-height: 114px;
+height: 132px;
 background-color: #005596;
 top: -42px;
 }
@@ -4335,12 +4324,19 @@ min-height: 1020px;
 display: none;
 }
 
+#content.bd-view_wrap {
+margin-top: 0;
+}
+
 #main-container {
 clear: both;
 width: 1440px;
 max-width: 100%;
 min-height: calc(100vh - 246px - 196px - 80px);
 display: block;
+}
+#main-container p {
+font-size: 1.125rem;
 }
 #main-container:before, #main-container:after {
 content: ".";
@@ -4350,9 +4346,6 @@ clear: both;
 visibility: hidden;
 }
 @media (max-width: 749px) {
-#main-container {
-padding: 0 10px;
-}
 #main-container p {
 font-size: 1rem;
 }
@@ -4443,7 +4436,7 @@ display: inline-block !important;
 font-size: 1.25rem;
 }
 .bd-body .navigation .sub-_visual div {
-padding-top: 48px;
+padding: 48px 10px 0;
 }
 .bd-body .navigation .sub-_visual div h1 {
 font-weight: 600;
@@ -4451,8 +4444,10 @@ font-weight: 600;
 .bd-body #main-container h2 {
 color: #1A1A1A;
 }
+@media (min-width: 1200px) {
 .bd-body .bd-view {
-margin-top: -156px;
+margin-top: -126px;
+}
 }
 .bd-body .bd-view .subject {
 width: 100%;
@@ -4460,11 +4455,46 @@ overflow: hidden;
 white-space: nowrap;
 text-overflow: ellipsis;
 display: inline-block;
+margin-bottom: 0 !important;
 }
 .bd-body .bd-view .dataInfoSet .keyword a {
 background-color: #fff;
 }
 
+@media (max-width: 1199px) {
+.bd-body .navigation {
+border-bottom: 0;
+}
+.bd-body .navigation .sub-_visual {
+width: calc(100% - 20px);
+padding: 16px;
+margin: 0 auto;
+background-color: #CBDEF4;
+}
+.bd-body .navigation .sub-_visual div {
+padding: 0;
+margin-bottom: 10px;
+}
+.bd-body .navigation .sub-_visual div h1 {
+text-align: left;
+line-height: 1.5;
+}
+.bd-body .bd-view .subject {
+font-size: 1.25rem !important;
+padding: 68px 16px 16px;
+background-color: #CBDEF4;
+overflow: auto;
+white-space: initial;
+text-overflow: initial;
+}
+.bd-body .bd-view .subject + .dataInfoSet {
+background-color: #CBDEF4;
+padding: 0 16px;
+margin-top: -35px;
+margin-bottom: 20px;
+padding-bottom: 24px;
+}
+}
 .bd-view_wrap .hgroup {
 border-bottom: none;
 padding-bottom: 0;
@@ -4579,6 +4609,7 @@ display: flex;
 width: calc(100% - 243px);
 }
 .gnb > ul {
+margin-left: -40px;
 display: none;
 }
 @media (min-width: 1200px) {
@@ -4605,22 +4636,30 @@ font-weight: 500;
 .gnb > ul > li > a.on + .depth2 {
 display: flex;
 justify-content: space-between;
-background: #fff;
+background-color: #fff;
+/*&::after {
+	right: 0;
+	width: 10000px;
+	//right: -50%;
+	//right: calc(-50% + 10px);
+	border: 1px solid blue;
+}*/
 }
 .gnb > ul > li > a.on + .depth2::before, .gnb > ul > li > a.on + .depth2::after {
 content: "";
 display: block;
-width: 50%;
 height: 100%;
 background-color: #fff;
 position: absolute;
 top: 0;
+margin-top: -1px;
+border-top: 1px solid #E6E6E6;
+box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 .gnb > ul > li > a.on + .depth2::before {
 left: -50%;
-}
-.gnb > ul > li > a.on + .depth2::after {
-right: -50%;
+width: 100000px;
+z-index: -1;
 }
 .gnb > ul > li:hover > a, .gnb > ul > li.on > a, .gnb > ul > li.active > a {
 color: #005596;
@@ -5441,4 +5480,4 @@ font-style: normal;
 img {
 max-width: 100%;
 }
-/*# sourceMappingURL=../maps/default.css.map */
+/*# sourceMappingURL=../external/staticmuseum/maps/default.css.map */

@@ -112,10 +112,11 @@
 		.swiper {
 			a.swiper-slide {
 				flex: 1;
+				min-width: auto;
 				@include breakpoint($sm) {
 					flex: none;
-					min-width: auto;
-					width: 100%;
+					min-width: 140px;
+					// width: 100%;
 				}
 			}
 		}

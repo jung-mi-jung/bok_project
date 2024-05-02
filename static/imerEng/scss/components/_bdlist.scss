@@ -1,15 +1,40 @@
+.sh-BxSet {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	// border-bottom: 2px solid $black;
+	border-bottom: 1px solid #D9D9D9;
+	padding-bottom: 15px;
+	// margin-bottom: 20px;
+	// @include breakpoint($smd) {
+	// 	flex-wrap: wrap;
+	// }
+	@include breakpoint($sm){
+		display: block;
+		.count-total {
+			margin-bottom: 10px;
+		}
+	}
+	.sh-select {
+		margin-bottom: 0;
+	}
+}
+
+/* 게시판 목록 */
 .bd-line {
-	ul {		
-		li {
+	clear: both;
+	> ul {		
+		> li {
 			position: relative;
 			padding: 15px 15px 10px 15px;
 			border-bottom: 1px solid #D9D9D9;
+			min-height: 86px;
 			@include breakpoint($sm){
 				padding: 15px 8px 10px;
 			}
 			.i {
 				font-size: 14px;
-				display: block;
+				display: inline-block;
 				margin-bottom: 8px;
 				>span {
 					display: inline-block;
@@ -30,50 +55,61 @@
 				display: flex;
 				justify-content: space-between;
 				@include breakpoint($sm){
-					display: block;
+					flex-wrap: wrap;
+					margin-bottom: 8px;
 				}
 				.title {
-					width: calc(100% - 250px);
+					max-width: calc(100% - 100px);
 					@include ellipsis;
 					color: #222;
 					font-size: rem(20);
 					@include breakpoint($sm){
 						font-size: rem(16);
-						width: 100%;
-						margin-bottom: 8px;
+						// width: 100%;
+						max-width: 100%;
 						@include line-clamp(3);
 						white-space: inherit;
 					}
-				}
-				.btns {
-					@include breakpoint($sm){
-						position: absolute;
-						bottom: 10px;
-						right: 8px;
-					}
-					a {
-						color: #666;
+					.ico-notice {
 						display: inline-block;
-						&::before {
-							font-size: 19px;
-							margin-right: 5px;
+						width: 24px;
+						height: 25px;	
+						margin-right: 4px;
+						@include background-image-retina("/static/museum/img/ico/ico-notice", png, auto, 100%);
+						background-repeat: no-repeat;
+						background-position-y: -3px;
+					}
+				}
+			}
+			.btns {
+				position: relative;
+				@include breakpoint($sm){
+					position: absolute;
+					bottom: 10px;
+					right: 24px;
+				}
+				> a {
+					color: #666;
+					display: inline-block;
+					&::before {
+						font-size: 19px;
+						margin-right: 5px;
+					}
+					& + a {
+						position: relative;
+						margin-left: 11px;
+						padding-left: 13px;
+						&::after {
+							content: "";
+							position: absolute;
+							top: 7px;
+							left: 0;
+							background: #666;
+							width: 1px;
+							height: 10px;
 						}
-						& + a {
-							position: relative;
-							margin-left: 15px;
-							padding-left: 15px;
-							&::after {
-								content: "";
-								position: absolute;
-								top: 7px;
-								left: 0;
-								background: #666;
-								width: 1px;
-								height: 10px;
-							}
-						}
-					}					
-					.i-download {
+					}
+					&.i-download {
 						&::before {
 							content: "";
 							display: inline-block;
@@ -81,13 +117,92 @@
 							background: url(/static/portal/img/common/ico-download.png);
 							width: 20px;
 							height: 20px;
-							//@include font-ico-outline("\f824");
 						}
 					}
-					.i-view {
+					&.i-download2 {
+						display: inline-flex;
+						height: 32px;
+						align-items: center;
+						justify-content: center;
+						gap: 0 8px;
+						padding: 0 12px;
+						color: #3B63C4;
+						border: 1px solid #3B63C4;
+						background: #fff;
+						border-radius: 4px;
+					}
+					&.i-view {
 						&::before {
 							@include font-ico-outline("\e666");
+							background-color: transparent;
 						}
+					}
+					.icon {
+						display: inline-block;
+					}
+				}
+			}
+			.dataInfo {
+				align-items: center;
+				margin-top: 8px;
+				span {
+					display: inline-flex;
+					align-items: center;
+				}
+				.date {
+					color: #767676;
+					&::before {
+						content: "";
+						display: inline-block;
+						vertical-align: middle;
+						width: 16px;
+						height: 16px;
+						background: url(/static/portal/img/ico/ico-date.png) no-repeat;
+						margin-right: 5px;
+					}
+				}
+				.hits {
+					margin-left: 20px;
+					color: #767676;
+					&::before {
+						content: "";
+						display: inline-block;
+						vertical-align: middle;
+						width: 14px;
+						height: 16px;
+						background: url(/static/portal/img/ico/ico-hits.png) no-repeat;
+						margin-right: 5px;
+					}
+				}
+			}
+			//저자 등 상세 요약정보
+			.data-info {		
+				@include breakpoint($sm) { 
+					padding-bottom: 10px;
+					// margin-bottom: 10px;
+					// border-bottom: 1px solid #E5E5E5;
+				}
+				dl {
+					display: flex;
+					align-items: center;
+					gap: 0 8px;
+					// display: table;
+					// width: 100%;
+					// table-layout: fixed;
+					// padding: 2px 0;
+					// @include breakpoint($sm) {
+					// 	width: calc(100% - 75px);
+					// }
+					> * {
+						font-size: rem(14);
+					}
+					dt {
+						width: 40px;
+						color: #808080;
+					}
+					dd {
+						width: calc(100% - 40px - 8px);
+						color: #1A1A1A;
 					}
 				}
 			}
@@ -100,7 +215,7 @@
 					background: url(/static/portal/img/common/arr01_on.png) 50% no-repeat;
 				}
 				.btns {
-					a {
+					a.i-view {
 						color: $point;
 						&::before {
 							background: #F2F6FA;
@@ -143,80 +258,144 @@
 							background: url(/static/portal/img/common/arr01_on.png) 50% no-repeat;
 						}
 					}
-				}				
+				}
+				.set {
+					align-items: center;
+					justify-content: flex-start;
+					.ico-lock {
+						display: inline-block;
+						margin-left: 8px;
+						width: 20px;
+						height: 21px;
+						@include background-image-retina("/static/museum/img/ico/ico-lock", png, auto, 100%);
+						background-repeat: no-repeat;
+					}	
+				}			
 			}
 		}
 	}	
 }
 
-/* 여기까지 */
-
-
-
-/* 아래는 아직 사용무 */
-
-
-.bd-list {
-	table {
-		thead {
-			@include breakpoint($sm) {
-				display: none;
+/* 뉴스 및 자료형 타입 */
+.bd-line.data-type {
+	position: relative;
+	&.border {
+		> ul > li {
+			border-radius: 16px;
+			border: 1px solid #E5E5E5;
+			padding: 18px 24px;
+			margin: 16px 0;
+			&:hover {
+				background: #fff;
+				border: 1px solid #3B63C4;
+			}
+			.data-info {		
+				@include breakpoint($sm) { 
+					padding-bottom: 10px;
+					margin-bottom: 10px;
+					border-bottom: 1px solid #E5E5E5;
+				}
 			}
 		}
-		tbody {
+	}
+	> ul > li {
+		//cursor: pointer;
+		@include breakpoint($sm) {
+			padding: 10px 16px;
+		}
+	}
+	.i {
+		display: flex;
+		align-items: center;
+		margin-bottom: 0;
+		font-size: rem(16);
+		.t2 {
+			border: 0;
+			color: #3B63C4;
+		}
+	}
+	.dataInfo {
+		position: absolute;
+		top: 18px;
+		right: 24px;
+		margin-top: 0;
+		@include breakpoint($sm) { 
+			position: static;
+		}
+	}
+	.set {
+		margin: 12px 0;
+		@include breakpoint($sm) {
+			margin: 4px 0;
+		}
+		.title {
 			@include breakpoint($sm) {
-				display: block;
+				margin-bottom: 0;
 			}
 		}
-		img {
-			vertical-align: middle;
-		}
 	}
-}
-thead th {
-	&.no {
-		width: 55px;
-		@include breakpoint($lg) {
-			width: 75px;
-		}
-	}
-	&.date {
-		width: 90px;
-		@include breakpoint($lg) {
-			width: 100px;
-		}
-	}
-	&.file {
-		width: 80px;
-		@include breakpoint($lg) {
-			width: 105px;
-		}
-	}
-	&.count,
-	&.hits {
-		width: 90px;
-		@include breakpoint($lg) {
-			width: 100px;
-		}
-	}
-	&.ckek {
-		width: 50px;
-	}
-	&.depart {
-		width: 110px;
-	}
-	&.time {
-		width: 110px;
+	.btns {
+		display: flex;
+		justify-content: flex-end;
+		text-align: right;
+		margin-top: -24px;
 	}
 }
 
+/* 파일없는 게시판 */
+.bd-line.noFile {
+	.btns {
+		display: none !important;
+	}
+	ul {
+		li {
+			a.title {
+				max-width: calc(100% - 100px) !important;
+				@include breakpoint($lg) {
+					&::before {
+						content: "";
+						display: inline-block;
+						width: 48px;
+						height: 48px;
+						position: absolute;
+						top: 50%;
+						right: 15px;
+						margin-top: -24px;
+						background: url(/static/portal/img/common/arr01_off.png) 50% no-repeat;
+					}
+				}
+			}
+			&:hover {
+				@include breakpoint($lg) { 
+					a {
+						&::before {
+							background: url(/static/portal/img/common/arr01_on.png) 50% no-repeat;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+}
 
 // 게시물 카운트
 .count-total {
+	color: $black;
+	font-size: rem(15);
 	margin-top: 15px;
 	line-height: 0.8rem;
 	display: flex;
 	font-size: 14px;
+	&::before {
+		content: "";
+		display: inline-block;
+		width: 3px;
+		height: 3px;
+		background-color: $black;
+		border-radius: 50%;
+		margin: 5px 8px 0 0;
+	}
 	em {
 		color: #5772e8;
 		font-weight: 600;
@@ -224,157 +403,36 @@ thead th {
 		display: inline-block;
 		margin-left: 4px;
 	}
+	strong {
+		font-weight: 600;
+		text-decoration: underline;
+	}
 }
 
-.bd-list {
-	margin-top: 10px;
-	border-top: 2px solid $bd-top-color;	
-	a {
-		&:hover,
-		&.focus, 
-		&:active {
-			color: $point;
-			text-decoration: underline;
+
+/* 옛날 소스 */
+.bdList {
+	border-top: 2px solid #222;	
+	th,
+	td {
+		color: $black;
+		font-size: rem(18);
+		// font-size: rem(16);
+		font-weight: 400;
+		border: 1px solid $bd-color;
+		padding: 13px 15px;
+	}
+	th {
+		background-color: #F2F6FA;
+		border-bottom: none;
+		&.no {
+			width: 8%;
 		}
-		&[class^="b-"] {
-			color: #fff;
-		}
+	}
+	td {
+		
 	}
 	.nodata {
-		padding: 40px;
 		text-align: center;
-		border-bottom: 1px solid $bd-color;
-	}
-	table {
-		width: 100%;
-		text-align: center;		
-        table-layout: fixed;
-		@include breakpoint($sm) {
-			text-align: left;
-			display: block;
-		}
-		thead {
-			color: $bd-list-head-color;
-			@include breakpoint($sm) {
-				display: none;
-			}
-		}
-		tr {
-			height: 60px;
-		}
-		th {
-			height: 60px;
-			background-color: $bd-list-th-bg-color;
-			border-bottom: 1px solid #ccc;
-			font-weight: 400;
-			font-size: 18px;
-		}
-		tbody {
-			@include breakpoint($sm) {
-				display: block;
-			}
-			tr {
-				@include breakpoint($sm) {
-					position: relative;
-					padding: 10px 0;
-					height: auto;
-					display: block;
-					border-top: 1px solid $bd-color;
-				}
-				&:first-child {
-					border-top: none;
-				}
-			}
-			&.notice {
-				.no i {
-					color: $red;
-					font-size: 1.375rem;
-					display: inline-block;
-					padding-top: 0.3125em;
-				}
-			}
-			td {
-				color: #757575;
-				padding-bottom: 3px;
-				@include breakpoint($md) {
-					border-bottom: 1px solid $bd-color;
-				}
-				@include breakpoint($sm) {
-					display: flex;
-					align-items: center;
-					&.no {
-						display: none;
-					}
-				}
-				&.tal {
-					@include breakpoint($md) {
-						padding-left: 20px;
-					}
-				}
-				&.title {
-					text-align: left;
-					span + a {
-						width: calc(100% - 70px);
-						vertical-align: middle;
-						padding-left: 5px;
-					}
-					a {
-						color: #757575;
-						@include ellipsis;
-						width: 100%;				
-						@include breakpoint($sm) {
-							display: block;
-							margin: 0;
-							padding: 0 4px;
-						}
-						@include breakpoint($md) {
-							padding-left: 20px;
-						}
-						&:hover {
-							text-decoration: underline;
-						}
-					}
-				}
-				a.link {
-					text-decoration: underline;
-				}
-				.only-m {
-					display: none;
-					@include breakpoint($sm) {
-						color: #000;
-						font-weight: 400;
-						margin-right: 10px;
-						display: block;
-						font-size: 14px;
-						line-height: 1;
-						height: auto;
-						padding: 4px;
-						border-radius: 3px;
-						flex-basis: 32%;
-						max-width: 70px;
-					}
-				}				
-			}
-			.a.file {
-				width: 30px;
-				height: 30px;
-				display: block;
-				background: url(/static/fss/img/common/ico-file.png) 0 0 no-repeat;
-				margin: 0 auto;
-			}
-		}
-	}
-	[class^=tag] {
-		display: inline-block;
-		color: #fff;
-		font-size: 13px;
-		padding: 1px 5px;
-		border-radius: 30px;
-	}
-	.tag1 {
-		background-color: #8b3793;
-	}
-	.tag2 {
-		background-color: #344ba1;
 	}
 }

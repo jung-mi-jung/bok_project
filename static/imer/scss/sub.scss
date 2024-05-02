@@ -211,6 +211,37 @@
 	}	
 }
 
+.i-no-data {
+	display: flex;
+	justify-content: center;
+	color: $black;
+	p {
+		padding-top: 68px;
+		position: relative;
+		font-size: rem(18);
+		font-weight: 400;
+		
+		&::before {
+			@include font-ico-outline('\e88e');
+			font-size: rem(65);
+			margin-bottom: 10px;
+			position: absolute;
+			top: 0;
+			left: 50%;
+			margin-left: -32px;
+			transform: rotate(180deg);
+			color: $point;
+		}
+	}
+	&.pad {
+		margin: 50px 0;
+		@include breakpoint($lg){
+			margin: 100px 0;
+		}
+	}	
+}
+
+
 mark {
 	background-color: #FFE100 !important;
 }

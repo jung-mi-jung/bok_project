@@ -112,10 +112,11 @@
 		.swiper {
 			a.swiper-slide {
 				flex: 1;
+				min-width: auto;
 				@include breakpoint($sm) {
 					flex: none;
-					min-width: auto;
-					width: 100%;
+					min-width: 140px;
+					// width: 100%;
 				}
 			}
 		}
@@ -138,9 +139,8 @@
 			padding: 8px;
 			color: #005596;
 			background: #fff;
-			border-top: 1px solid #2373B0;
-			// border-bottom: 1px solid #89A1DC;
-			border-right: 1px solid #2373B0;
+			border-top: 1px solid #89A1DC;
+			border-right: 1px solid #89A1DC;
 			text-align: center;
 			box-sizing: border-box;
 			cursor: grab;

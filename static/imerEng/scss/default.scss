@@ -27,12 +27,13 @@
 
 
 @import '../../commons/scss/common.scss';
-@import 'static/commons/scss/breakpoint'; //반응형 플러그인
+@import '../../commons/scss/breakpoint'; //반응형 플러그인
 @import 'base/variables'; //환경 설정
 @import 'base/color'; // colors
 
 @import 'base/util'; //mixins
 @import 'mixins/layerfixed'; //mixins
+@import 'mixins/underline'; //mixins
 @import 'base/heading'; //해딩스타일
 @import 'base/font-material';
 
@@ -57,6 +58,7 @@
 @import 'base/footer'; //푸터
 
 @import 'components/visible'; //반응형 스타일
+@import 'components/popup'; //전체메뉴
 
 
 a {
@@ -64,12 +66,12 @@ a {
 }
 html {
 	font-size: $html-font-size;
-	@include breakpoint($sm){
-		font-size: rem(14);
-	}
+	// @include breakpoint($sm){
+	// 	font-size: rem(18);
+	// }
 }
 body {
-	overflow-x: hidden;
+	overflow-x: hidden !important;
 	color: $body-font-color;
 	line-height: 1.5;
 	font-family: $font-set;
@@ -79,10 +81,11 @@ body {
 	@include breakpoint($sm) {
 		word-break: keep-all;
 	}
-	&.ovh {
-		position: relative;
-		overflow: hidden;
-		height: 100vh;
+	&.ovh, 
+	&.modal-open {
+		//position: relative;
+		overflow: hidden !important;
+		//height: 100vh;
 	}
 }
 
@@ -102,4 +105,5 @@ i {
 }
 img {
 	max-width: 100%;
+	// width: 100%;
 }

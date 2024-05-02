@@ -5,15 +5,15 @@
 .container {
 	max-width: $pc-wide;
 	margin: 0 auto;
-	margin-left: 10px;
-	margin-right: 10px;
-	@include breakpoint(min-width 1480px) {
-		margin-left: auto;
-		margin-right: auto;
-	}
-	@include breakpoint($sm){
-		margin: 0;
-	}
+	padding-left: 10px;
+    padding-right: 10px;
+	// @include breakpoint($lg) {
+	// 	padding-left: 0;
+    // 	padding-right: 0;
+	// }
+	// @include breakpoint($sm){
+	// 	margin: 0;
+	// }
 }
 
 .hgroup {
@@ -150,6 +150,7 @@
 					display: flex;
 					align-items: center;
 					white-space: nowrap;
+					padding: 3px 0px;
 					li {
 						a {
 							//color: #fff;
@@ -525,7 +526,7 @@
 	.navigation {
 		.sub-_visual {
 			div {
-				padding-top: 48px;
+				padding: 48px 10px 0; 
 				h1 {
 					font-weight: 600;
 				}
@@ -535,17 +536,60 @@
 	#main-container h2 {
 		color: $black;
 	}
-	.bd-view {
-		margin-top: -156px;
+	.bd-view {		
+		@include breakpoint($lg){
+			margin-top: -126px;
+		}
 		.subject {
 			width: 100%;
 			@include ellipsis();
+			margin-bottom: 0 !important;
 		}
 		.dataInfoSet .keyword a {
 			background-color: #fff;
 		}
 	}
 }
+@include breakpoint($smd) {
+	.bd-body {
+		.navigation {
+			border-bottom: 0;
+			.sub-_visual {
+				width: calc(100% - 20px);
+				padding: 16px;
+				margin: 0 auto;
+				background-color: #CBDEF4;
+				div {
+					padding: 0; 
+					margin-bottom: 10px;
+					h1 {
+						text-align: left;
+						line-height: 1.5;
+					}
+				}
+			}
+		}
+		.bd-view {
+			.subject {
+				font-size: rem(20) !important;
+				padding: 60px 16px 16px;
+				background-color: #CBDEF4;
+				overflow: auto;
+				white-space: initial;
+				text-overflow: initial;
+				& + .dataInfoSet {
+					background-color: #CBDEF4;
+					padding: 0 16px;
+					margin-top: -35px;
+					margin-bottom: 20px;
+					padding-bottom: 24px;
+				}
+			}
+		}
+	}
+}
+
+
 
 // 일반형 게시판 상세 페이지일 경우
 .bd-view_wrap {
@@ -578,14 +622,17 @@
 }
 
 #content {
-	margin-top: 36px;
+	margin-top: 0;
 	@include breakpoint($lg) {
+		margin-top: 36px;
 		min-height: 1020px;
 	}
-	margin-top: 36px;
 	.hgroup { //기존 소스 삭제
 		display: none;
 	}
+}
+#content.bd-view_wrap {
+	margin-top: 0;
 }
 
 // .hgroup {
@@ -726,7 +773,7 @@
 	}
 	@include clearfix();
 	@include breakpoint($sm){
-		padding: 0 10px;
+		// padding: 0 10px;
 		p {
 			font-size: rem(16);
 		}
@@ -857,6 +904,7 @@
 					border: 0;
 					height: 48px;
 					padding: 10px 16px;
+					color: #1A1A1A;
 					@include breakpoint($sm){
 						padding: 5px 16px;
 						height: 40px;

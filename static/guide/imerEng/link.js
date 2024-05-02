@@ -1,14 +1,28 @@
 $(function () {
     link = [
-        // '200781',
-        
+        'bd-list-news',
+        'bd-view',
+        'bd-list-default',
+        'bd-list-forum',
+        '600285',
+        '600290',
+        '600284',
+        '600289',
+        '600344',
+        '600345',
+        '600313',
+        '600384',
+        '600383',
+        '600388'
+
+
     ]
     link.forEach(element => {
         let _s = element.split('/')
         if (_s.length > 1) {
             // dist 폴더에 없는 파일들에 대한 예외 처리
             $('td:contains("' + _s[1] + '")').addClass('ok')
-            url = `/static/guide/museum/${element}.html`;
+            url = `/static/guide/imerEng/${element}.html`;
             try {
                 $.ajax({
                     url: url,

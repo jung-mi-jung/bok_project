@@ -52,6 +52,24 @@ margin-top: 0;
 }
 
 /* 헤더, gnb */
+@media (min-width: 1200px) {
+#section2 section,
+#section3 section,
+#section4 section,
+#section5 section,
+#section6 section {
+padding-top: calc((100vh - 1274px) / 2 + 194px);
+}
+.gnb-stiky #section1,
+.gnb-stiky #section2,
+.gnb-stiky #section3,
+.gnb-stiky #section4,
+.gnb-stiky #section5,
+.gnb-stiky #section6 {
+height: 100vh;
+padding: 74px 0 0px;
+}
+}
 /* footer */
 #footer {
 margin: 0;
@@ -865,4 +883,4 @@ width: 0%;
 width: 100%;
 }
 }
-/*# sourceMappingURL=../maps/main.css.map */
+/*# sourceMappingURL=../external/staticmuseum/maps/main.css.map */

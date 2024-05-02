@@ -341,7 +341,7 @@
 		}
 		.exhbt-subtit {
 			width: 100%;
-			font-size: rem(36);
+			font-size: rem(36) !important;
 			font-weight: 300;
 			line-height: 1.3;
 			color: #4D4D4D;
@@ -661,72 +661,72 @@
 .info_icon {
 	> div {
 		position: relative;
-		padding-left: 77px;
-		@include breakpoint($sm) {
-			padding-left: 0;
-		}
-		> i {
-			position: absolute;
-			display: inline-block;
-			top: 0;
-			left: 0;
-			width: 60px;
-			height: 60px;
-			font-size: 30px;
-			background-color: #f2f3f7;
-			border-radius: 50px;
-			color: #5b79b9;
-			text-align: center;
-			vertical-align: top;
-			// margin-top: 20px;
-			background-size: cover;
-			@include breakpoint($sm) {
-				display: none;
-			}
-			&::before {
-				content: "";
-				display: block;
-				position: absolute;
-				left: 50%;
-				top: 50%;
-				transform: translate(-50%, -50%);
-				width: 30px;
-				height: 30px;
-				font-size: 30px;
-				line-height: 60px;
-				background-size: cover;
-				color: #5b79b9;
+		// padding-left: 77px;
+		// @include breakpoint($sm) {
+		// 	padding-left: 0;
+		// }
+		// > i {
+		// 	position: absolute;
+		// 	display: inline-block;
+		// 	top: 0;
+		// 	left: 0;
+		// 	width: 60px;
+		// 	height: 60px;
+		// 	font-size: 30px;
+		// 	background-color: #f2f3f7;
+		// 	border-radius: 50px;
+		// 	color: #5b79b9;
+		// 	text-align: center;
+		// 	vertical-align: top;
+		// 	// margin-top: 20px;
+		// 	background-size: cover;
+		// 	@include breakpoint($sm) {
+		// 		display: none;
+		// 	}
+		// 	&::before {
+		// 		content: "";
+		// 		display: block;
+		// 		position: absolute;
+		// 		left: 50%;
+		// 		top: 50%;
+		// 		transform: translate(-50%, -50%);
+		// 		width: 30px;
+		// 		height: 30px;
+		// 		font-size: 30px;
+		// 		line-height: 60px;
+		// 		background-size: cover;
+		// 		color: #5b79b9;
 
-			}
-		}
-		.ti-layout-slider-alt {
-			&::before {
-				background-image: url(/static/museum/img/layout-slider-alt.svg);
-				background-position: center center;
-				background-repeat: no-repeat;
-			}
-		}
-		.ti-info-alt{
-			&::before {
-				background-image: url(/static/museum/img/info-alt.svg);
-				background-position: center center;
-				background-repeat: no-repeat;
-			}
-		}
-		.ti-blackboard {
-			&::before {
-				background-image: url(/static/museum/img/blackboard.svg);
-				background-position: center center;
-				background-repeat: no-repeat;
-			}
-		}
-		.ti-bookmark-alt {
-			&::before {
-				background-image: url(/static/museum/img/bookmark-alt.svg);
-				background-position: center center;
-				background-repeat: no-repeat;
-			}
-		}
+		// 	}
+		// }
+		// .ti-layout-slider-alt {
+		// 	&::before {
+		// 		background-image: url(/static/museum/img/layout-slider-alt.svg);
+		// 		background-position: center center;
+		// 		background-repeat: no-repeat;
+		// 	}
+		// }
+		// .ti-info-alt{
+		// 	&::before {
+		// 		background-image: url(/static/museum/img/info-alt.svg);
+		// 		background-position: center center;
+		// 		background-repeat: no-repeat;
+		// 	}
+		// }
+		// .ti-blackboard {
+		// 	&::before {
+		// 		background-image: url(/static/museum/img/blackboard.svg);
+		// 		background-position: center center;
+		// 		background-repeat: no-repeat;
+		// 	}
+		// }
+		// .ti-bookmark-alt {
+		// 	&::before {
+		// 		background-image: url(/static/museum/img/bookmark-alt.svg);
+		// 		background-position: center center;
+		// 		background-repeat: no-repeat;
+		// 	}
+		// }
 	}
 	h3 {
 		margin-top: 0 !important;
@@ -780,7 +780,7 @@
 		align-items: center;
 		width: auto;
 		min-height: 60px;
-		left: 80px;
+		left: 30px;
 		margin-top: 20px;
 		padding-left: 30px;
 		padding-right: 10px;
@@ -1166,7 +1166,8 @@
 
 /* 화폐이야기 */
 .worldMap {
-	padding: 26.5px 124.4px 26.21px 123.5px;
+	padding: 26.5px 84.4px 26.21px 83.5px;
+	margin-bottom: 40px;
 	background: #F2F6FA;
 	box-sizing: border-box;
 	@include breakpoint($smd) {
@@ -1175,7 +1176,9 @@
 	@include breakpoint($sm) {
 		padding: 20px 8px;	
 	}
-
+	> svg {
+		height: auto;
+	}
 	g {
 		cursor: pointer;
 		path {

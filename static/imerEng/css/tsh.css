@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
 font-family: "Material Icons";
 font-style: normal;
@@ -16,20 +15,15 @@ strong {
 font-weight: 500;
 }
 
-/*
-
-$url-img	: "/static/portal/img/";	//background: url($url-images + "폴더명/파일명.png");
-
-
-// sh
-$sh-form-height: 40px;
-$sh-bd-radius: 5px;
-
-// input
-$form-height: 40px;
-
-*/
 .red {
-color: #e24b44;
+color: #C81720 !important;
 }
-/*# sourceMappingURL=../maps/tsh.css.map */
+
+.fc_red {
+color: #C81720;
+}
+
+.point2 {
+color: #3B63C4;
+}
+/*# sourceMappingURL=../external/staticimerEng/maps/tsh.css.map */
