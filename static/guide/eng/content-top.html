@@ -27,35 +27,14 @@
 			<div class="container">
 				<ul>
 					<li>
-						<a href="/imer/main/main.do" target="_blank" title="새창열림">경제연구원</a>
-					</li>
-					<li>
-						<a href="/museum/main/main.do" target="_blank" title="새창열림">화폐박물관</a>
-					</li>
-					<li>
-						<a href="/portal/submain/submain/rgHqt.do?menuNo=200219">지역본부</a>
-					</li>
-					<li>
-						<a href="https://ecos.bok.or.kr" target="_blank" title="새창열림">경제시스템(ecos)</a>
-					</li>
-					<li>
-						<a href="https://snapshot.bok.or.kr" target="_blank" title="새창열림">금융·경제스냅샷</a>
-					</li>
-					<li>
-						<a href="https://dl.bok.or.kr" target="_blank" title="새창열림">전자도서관</a>
-					</li>
-					<li>
-						<a href="https://apply.bok.or.kr" target="_blank" title="새창열림">채용</a>
+						<a href="/imerEng/main/main.do" target="_blank" title="새창열림">Economic Research Institute</a>
 					</li>
 				</ul>
 				<div class="g-info">
 					<div class="global">
 						<ul>
 							<li>
-								<a href="">본인인증</a>
-							</li>
-							<li>
-								<a href="/eng/main/main.do" target="_blank" title="새창열림">English</a>
+								<a href="/portal/main/main.do" target="_blank" title="새창열림">KOREAN</a>
 							</li>
 						</ul>
 					</div>					
@@ -87,20 +66,252 @@
 			</nav>
 			<!-- //gnb -->
 			<div class="toggle-set">
-				<button type="button" class="all-nav-toggle" data-toggle="modal" data-target="#totalMenu" title="전체 메뉴 열기"></button>
-				<button type="button" class="search" title="검색레이어 열기"></button>
+				<button type="button" class="all-nav-toggle" data-toggle="modal" data-target="#totalMenu" title="Open Total Menu"></button>
+				<button type="button" class="search" title="Open Search Layer"></button>
 				<div class="search_wrap">
-					<form action="/">
-						검색 레이어 영역
+					<form action="">
+						<div class="search_wrap_input">
+							<input type="text" class="search_keyword" name="query" id="queryTop" placeholder="검색어를 입력해 주세요." autocomplete="off" maxlength="50">
+							<div class="dqAuto" tabindex="0" style="display: none;">
+								<ul class="autoList">
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+								</ul>
+								<div class="bottom">
+									<a href="javascript:void(0);" id="topSrchClose" class="btnClose">자동완성 닫기</a>
+								</div>
+							</div>	
+							<button type="button" class="btn_search search" aria-label="검색"></button>
+						</div>
+						<button type="button" class="search_close" aria-label="검색 닫기"></button>
 					</form>
 				</div>
 			</div>			
 		</div>
 
 		<!-- 전체메뉴 -->
-		<!-- <div class="modal fade total-nav" id="totalMenu" tabindex="-1" role="dialog">
-			
-		</div> -->
+		<div class="modal fade total-nav" id="totalMenu" tabindex="-1" role="dialog">
+			<div class="lpop modal-dialog" role="document">
+				<div class="set modal-content">
+					<div class="modal-header">
+						<div class="container">
+							<button type="button" class="close" data-dismiss="modal"><i class="ti-close"></i><span class="sr-only">레이어 창닫기</span></button>
+							<h1 class="modal-title" id="modal-label1">
+								<span class="totalnav-logo"></span>전체메뉴
+							</h1>
+							<form>
+								<fieldset>
+									<legend class="sr-only">전체메뉴 검색</legend>
+									<div class="keyword-set">
+										<span class="keyword"><input type="text" title="검색어"></span>
+										<button type="button" class="search" onclick="" aria-label="검색"></button>
+									</div>
+								</fieldset>
+							</form>
+						</div>
+					</div>
+					<div class="modal-body">
+						<div class="container">
+							<ul class="dp1">
+								<li>
+									<a href=""><span>한국은행</span></a>
+									<a href="javascropt:void(0)" class="m-dp1"><span>한국은행</span></a>
+									<ul class="dp2">
+										<li>
+											<a href="">개요</a>
+										</li>
+										<li>
+											<a href="">설립목적 및 역사</a>
+										</li>
+										<li>
+											<a href="">금융통화위원회</a>
+										</li>
+										<li>
+											<a href="">조직도</a>
+										</li>
+										<li>
+											<a href="">운영 및 법규</a>
+											<ul class="dp3">
+												<li>
+													<a href="">전략 및 조직가치</a>
+												</li>
+												<li>
+													<a href="">경영정보</a>
+												</li>
+												<li>
+													<a href="">계약정보</a>
+												</li> 
+												<li>
+													<a href="">윤리경영</a>
+												</li>
+												<li>
+													<a href="">법규정보</a>
+												</li>
+												<li>
+													<a href="">사회공헌</a>
+												</li>
+												<li>
+													<a href="">채용</a>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href="">오시는 길</a>
+										</li>
+										<li>
+											<a href="">지역본부(종합)</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<ul class="dp1">
+								<li>
+									<a href=""><span>정책 및 업무</span></a>
+									<a href="javascropt:void(0)" class="m-dp1"><span>정책 및 업무</span></a>
+								</li>
+							</ul>
+							<ul class="dp1">
+								<li>
+									<a href=""><span>뉴스 및 자료</span></a>
+									<a href="javascropt:void(0)" class="m-dp1"><span>뉴스 및 자료</span></a>
+									<ul class="dp2">
+										<li>
+											<a href="">개요</a>
+										</li>
+										<li>
+											<a href="">설립목적 및 역사</a>
+										</li>
+										<li>
+											<a href="">금융통화위원회</a>
+										</li>
+										<li>
+											<a href="">조직도</a>
+										</li>
+										<li>
+											<a href="">운영 및 법규</a>
+											<ul class="dp3">
+												<li class="dropdown">
+													<a href="javascript:void(0)" title="하위메뉴 열기">
+														<span><span class="highlight">전략</span> 및 조직가치</span>
+														<i class="ico-arrow"></i>
+													</a>
+													<ul class="dp4">
+														<li>
+															<a href="">
+																<span><span class="highlight">전략</span></span>
+															</a>
+														</li>
+														<li>
+															<a href=""><span>조직가치</span></a>
+														</li>
+														<li>
+															<a href=""><span>운영리스트 관리</span></a>
+														</li>
+														<li>
+															<a href=""><span>CI소개</span></a>
+														</li>
+													</ul>
+												</li>
+												<li>
+													<a href=""><span>경영정보</span></a>
+												</li>
+												<li>
+													<a href=""><span>계약정보</span></a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<ul class="dp1">
+								<li>
+									<a href=""><span>멀티콘텐츠</span></a>
+									<a href="javascropt:void(0)" class="m-dp1"><span>멀티콘텐츠</span></a>
+								</li>
+							</ul>
+							<ul class="dp1">
+								<li>
+									<a href=""><span>주요서비스</span></a>
+									<a href="javascropt:void(0)" class="m-dp1"><span>주요서비스</span></a>
+									<ul class="dp2">
+										<li>
+											<a href="">개요</a>
+										</li>
+										<li>
+											<a href="">설립목적 및 역사</a>
+										</li>
+										<li>
+											<a href="">금융통화위원회</a>
+										</li>
+										<li>
+											<a href="">조직도</a>
+										</li>
+										<li>
+											<a href="">운영 및 법규</a>
+											<ul class="dp3">
+												<li class="dropdown">
+													<a href="javascript:void(0)" title="하위메뉴 열기">
+														<span><span class="highlight">전략</span> 및 조직가치</span>
+														<i class="ico-arrow"></i>
+													</a>
+													<ul class="dp4">
+														<li>
+															<a href="">
+																<span><span class="highlight">전략</span></span>
+															</a>
+														</li>
+														<li>
+															<a href=""><span>조직가치</span></a>
+														</li>
+														<li>
+															<a href=""><span>운영리스트 관리</span></a>
+														</li>
+														<li>
+															<a href=""><span>CI소개</span></a>
+														</li>
+													</ul>
+												</li>
+												<li>
+													<a href=""><span>경영정보</span></a>
+												</li>
+												<li>
+													<a href=""><span>계약정보</span></a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<!-- //전체메뉴 -->
 		
 	</header>	
@@ -112,69 +323,57 @@
 			<ul>
 				<li class="home"><span>Home</span></li>
 				<li>
-					<a href="" title="하위메뉴 열기">뉴스 및 자료</a>
+					<a href="" title="하위메뉴 열기">News&Publications</a>
 					<div class="depth2">
 						<ul>
 							<li>
-								<a href="">BOK이슈노트</a>
+								<a href="">About BOK</a>
 							</li>
 							<li>
-								<a href="">BOK경제연구</a>
-							</li>
-							<li>
-								<a href="">해외경제포커스</a>
+								<a href="">Topics</a>
 							</li>
 							<li class="on">
-								<a href="">연차보고서</a>
+								<a href="">News&Publications</a>
 							</li>
 							<li>
-								<a href="">통화신용정책보고서</a>
-							</li>
-							<li>
-								<a href="">금융안정보고서</a>
-							</li>
-							<li>
-								<a href="">경제전망보고서</a>
-							</li>
-							<li>
-								<a href="">지역경제보고서</a>
-							</li>
-							<li>
-								<a href="">지급결제보고서</a>
-							</li>
-							<li>
-								<a href="">정기간행물</a>
-							</li>
-							<li>
-								<a href="">단행본</a>
+								<a href="">Money Museum</a>
 							</li>
 						</ul>
 					</div>
 				</li>
 				<li>
-					<a href="" title="하위메뉴 열기">뉴스 및 의사록</a>
+					<a href="" title="하위메뉴 열기">news</a>
 					<div class="depth2">
 						<ul>
-							<li>
-								<a href="">보도자료</a>
+							<li class="on">
+								<a href="">news</a>
 							</li>
 							<li>
-								<a href="">주간보도계획</a>
+								<a href="">Notice</a>
 							</li>
 							<li>
-								<a href="">언론보도해명자료</a>
+								<a href="">Events</a>
 							</li>
 							<li>
-								<a href="">금융통화위원회 의사록</a>
+								<a href="">Speeches</a>
 							</li>
 							<li>
-								<a href="">금융통화위원회 의결사항</a>
+								<a href="">Research</a>
+							</li>
+							<li>
+								<a href="">Periodicals</a>
+							</li>
+							<li>
+								<a href="">Books</a>
+							</li>
+							<li>
+								<a href="">documents</a>
 							</li>
 						</ul>
 					</div>
 				</li>
 				<li>
-					<a href="">보도자료</a>
+					<a href="">Press Releases</a>
 				</li>
 			</ul>
 			<div class="top-page-toolbar">
@@ -192,80 +391,52 @@
 					<a href="/static/view/forPrint.html" data-size="1200, 700, yes" target="_blank" title="새창열림" class="page-print b-pop">
 						<span class="sr-only">프린트</span>
 					</a>
-					<a href="/static/guide/portal/popup/rss_popup.html" data-size="800, 500, yes" class="page-rss b-pop" target="_blank" title="새창열림">
-						<span class="sr-only">rss 한국은행</span>
+					<a href="/static/view/eng/popup/rss_popup.html" data-size="800, 500, yes" class="page-rss b-pop" target="_blank" title="새창열림">
+						<span class="sr-only">rss BANK OF KOREA</span>
 					</a>
 				</div>
 			</div>
 		</nav>
+		<div class="sub-_visual">
+			<div class="hgroup">
+				<h1>News&Publications</h1>	
+			</div>
+		</div>
 	</div>
 	<!-- //navigation -->
 
 	<!-- content -->
 	<div class="container" id="content">
-		<div class="hgroup">
-			<h1>News&Publications</h1>			
-		</div>
 		<main id="main-container">
 
 			<div class="lnb-nav">
-				<h1>목차</h1>	
+				<h1>Index</h1>
 				<ul>
 					<li class="on">
-						<a href="">금융안정 개요</a>
+						<a href="">Treasury Service</a>
 						<ul>
 							<li class="on">
-								<a href="">정의</a>
+								<a href="">Treasury Service</a>
 							</li>
 							<li>
-								<a href="">금융시스템 불안의 요인</a>
+								<a href="">Overview of Securities Business</a>
+							</li>
+							<li>
+								<a href="">[Appendix] Overview of Treasury Bond</a>
 							</li>
 						</ul>
 					</li>
 					<li>
-						<a href="">금융안정 정책수단</a>
-						<ul>
-							<li>
-								<a href="">개요</a>
-							</li>
-							<li>
-								<a href="">예방적 정책수단</a>
-							</li>
-							<li>
-								<a href="">금융불균형 확대방지 정책수단</a>
-							</li>
-							<li>
-								<a href="">금융위기 관리 및 치유를 위한 정책수단</a>
-							</li>
-						</ul>
+						<a href="">Overview of Securities Business</a>
 					</li>
 					<li>
-						<a href="">정책당국간 역할분담</a>
-					</li>
-					<li>
-						<a href="">중앙은행과 금융안정</a>
-					</li>
-					<li>
-						<a href="">FSB와 BCBS</a>
-						<ul>
-							<li>
-								<a href="">참여 현황</a>
-							</li>
-							<li>
-								<a href="">금융안정위원회(FSB)</a>
-							</li>
-							<li>
-								<a href="">바젤은행감독위원회(BCBS)</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="">금융안정 관련 해외사이트</a>
+						<a href="">Securities Custody Services for overseas official institutions</a>
 					</li>
 				</ul>
 			</div>
 
 			
 			<div class="content">
+
 
 

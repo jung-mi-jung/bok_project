@@ -36,6 +36,7 @@
 			}
 			a {
 				width: 100%;
+				height: 100%;
 				display: flex;
 				justify-content: center;
 				align-items: center;
@@ -131,6 +132,14 @@
 		dt, 
 		dd{
 			padding-left:20px;
+		}
+	}
+	&.type2 {  //Payments and Transactions (영문만)
+		dt {
+			padding: 0 20px;
+		}
+		dd {
+			padding: 22px 20px;
 		}
 	}
 	dt,

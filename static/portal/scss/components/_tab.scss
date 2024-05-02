@@ -32,7 +32,11 @@
 				text-decoration:none;
 			}
 			a{
-				display: block;
+				display: flex;
+				align-items: center;
+				width: 100%;
+				height: 100%;
+				justify-content: center;
 				color: $color-point;
 				text-align: center; 
 				padding: 8px;
@@ -40,46 +44,6 @@
 		}
 	}
 }
-// .tabsub {
-// 	&.type {
-// 		float:none !important;
-// 		overflow:hidden;
-// 		ul {
-// 			border-bottom:1px solid #ddd;
-// 			border-width:0 0 1px 0 !important;
-// 			overflow:hidden;
-// 			clear:both;
-// 			li { 
-// 				background: #FBFBFC;
-// 				display:table;
-// 				line-height:17px;
-// 				a{
-// 					display:table-cell;
-// 					line-height:17px;
-// 					height:43px;
-// 					padding:0 5px;
-// 				}
-// 				@include breakpoint ($md) {
-// 					text-align:center;
-// 					a{
-// 						line-height:1em;
-// 						text-align:center;
-// 					}
-// 				}
-// 				&.active{
-// 					border-bottom:3px solid #5b79b9;
-// 				}
-// 				&:first-child{
-// 					background:none;
-// 				}
-// 				&:nth-child(4n+1){
-// 					clear:both;
-// 					background-image:none;
-// 				}
-// 			}
-// 		}
-// 	}
-// }
 
 
 //step

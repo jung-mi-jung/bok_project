@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>서브명 | Bank of Korea</title>
+	<link type="text/css" rel="stylesheet" href="/static/eng/css/sub.css">
+	<script src="/static/jslibrary/jquery-3.5.1.min.js"></script>
+	<script src="/static/jslibrary/jquery.cookie.js"></script>
+	<script src="/static/jslibrary/bootstrap/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="/static/jslibrary/swiper@8/swiper-bundle.min.css">
+	<script src="/static/jslibrary/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js"></script>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta property="og:type"			content="website">
+	<meta property="og:title"			content="${title}">
+	<meta property="og:description"		content="${title}">
+</head>
+<body>
+<div class="skip">
+	<a href="#content">Skip to content</a>
+</div>
+<div id="wrap">
+	<div class="gnb_bg"></div>
+	<!-- header -->
+	<header id="header">
+		<div class="globalHeader">
+			<div class="container">
+				<ul>
+					<li>
+						<a href="/imerEng/main/main.do" target="_blank" title="새창열림">Economic Research Institute</a>
+					</li>
+				</ul>
+				<div class="g-info">
+					<div class="global">
+						<ul>
+							<li>
+								<a href="/portal/main/main.do" target="_blank" title="새창열림">KOREAN</a>
+							</li>
+						</ul>
+					</div>					
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<h1 class="logo">
+				<a href="">
+					<span class="sr-only">Bank of Korea</span>
+				</a>
+			</h1>
+			<!-- gnb -->
+			<nav class="gnb" id="gnb">
+				<ul>
+					<li class="menu01">
+						<a href=""><span>About BOK</span></a>
+					</li>
+					<li class="menu02 active">
+						<a href=""><span>Topics</span></a>
+					</li>
+					<li class="menu03">
+						<a href=""><span>News&Publications</span></a>
+					</li>
+					<li class="menu04">
+						<a href=""><span>Money Museum</span></a>
+					</li>
+				</ul>
+			</nav>
+			<!-- //gnb -->
+			<div class="toggle-set">
+				<button type="button" class="all-nav-toggle" data-toggle="modal" data-target="#totalMenu" title="Open Total Menu"></button>
+				<button type="button" class="search" title="Open Search Layer"></button>
+				<div class="search_wrap">
+					<form action="">
+						<div class="search_wrap_input">
+							<input type="text" class="search_keyword" name="query" id="queryTop" placeholder="검색어를 입력해 주세요." autocomplete="off" maxlength="50">
+							<div class="dqAuto" tabindex="0" style="display: none;">
+								<ul class="autoList">
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+								</ul>
+								<div class="bottom">
+									<a href="javascript:void(0);" id="topSrchClose" class="btnClose">자동완성 닫기</a>
+								</div>
+							</div>	
+							<button type="button" class="btn_search search" aria-label="검색"></button>
+						</div>
+						<button type="button" class="search_close" aria-label="검색 닫기"></button>
+					</form>
+				</div>
+			</div>			
+		</div>
+
+		<!-- 전체메뉴 -->
+		<div class="modal fade total-nav" id="totalMenu" tabindex="-1" role="dialog">
+			<div class="lpop modal-dialog" role="document">
+				<div class="set modal-content">
+					<div class="modal-header">
+						<div class="container">
+							<button type="button" class="close" data-dismiss="modal"><i class="ti-close"></i><span class="sr-only">레이어 창닫기</span></button>
+							<h1 class="modal-title" id="modal-label1">
+								<span class="totalnav-logo"></span>전체메뉴
+							</h1>
+							<form>
+								<fieldset>
+									<legend class="sr-only">전체메뉴 검색</legend>
+									<div class="keyword-set">
+										<span class="keyword"><input type="text" title="검색어"></span>
+										<button type="button" class="search" onclick="" aria-label="검색"></button>
+									</div>
+								</fieldset>
+							</form>
+						</div>
+					</div>
+					<div class="modal-body">
+						<div class="container">
+							<ul class="dp1">
+								<li>
+									<a href=""><span>한국은행</span></a>
+									<a href="javascropt:void(0)" class="m-dp1"><span>한국은행</span></a>
+									<ul class="dp2">
+										<li>
+											<a href="">개요</a>
+										</li>
+										<li>
+											<a href="">설립목적 및 역사</a>
+										</li>
+										<li>
+											<a href="">금융통화위원회</a>
+										</li>
+										<li>
+											<a href="">조직도</a>
+										</li>
+										<li>
+											<a href="">운영 및 법규</a>
+											<ul class="dp3">
+												<li>
+													<a href="">전략 및 조직가치</a>
+												</li>
+												<li>
+													<a href="">경영정보</a>
+												</li>
+												<li>
+													<a href="">계약정보</a>
+												</li> 
+												<li>
+													<a href="">윤리경영</a>
+												</li>
+												<li>
+													<a href="">법규정보</a>
+												</li>
+												<li>
+													<a href="">사회공헌</a>
+												</li>
+												<li>
+													<a href="">채용</a>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href="">오시는 길</a>
+										</li>
+										<li>
+											<a href="">지역본부(종합)</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<ul class="dp1">
+								<li>
+									<a href=""><span>정책 및 업무</span></a>
+									<a href="javascropt:void(0)" class="m-dp1"><span>정책 및 업무</span></a>
+								</li>
+							</ul>
+							<ul class="dp1">
+								<li>
+									<a href=""><span>뉴스 및 자료</span></a>
+									<a href="javascropt:void(0)" class="m-dp1"><span>뉴스 및 자료</span></a>
+									<ul class="dp2">
+										<li>
+											<a href="">개요</a>
+										</li>
+										<li>
+											<a href="">설립목적 및 역사</a>
+										</li>
+										<li>
+											<a href="">금융통화위원회</a>
+										</li>
+										<li>
+											<a href="">조직도</a>
+										</li>
+										<li>
+											<a href="">운영 및 법규</a>
+											<ul class="dp3">
+												<li class="dropdown">
+													<a href="javascript:void(0)" title="하위메뉴 열기">
+														<span><span class="highlight">전략</span> 및 조직가치</span>
+														<i class="ico-arrow"></i>
+													</a>
+													<ul class="dp4">
+														<li>
+															<a href="">
+																<span><span class="highlight">전략</span></span>
+															</a>
+														</li>
+														<li>
+															<a href=""><span>조직가치</span></a>
+														</li>
+														<li>
+															<a href=""><span>운영리스트 관리</span></a>
+														</li>
+														<li>
+															<a href=""><span>CI소개</span></a>
+														</li>
+													</ul>
+												</li>
+												<li>
+													<a href=""><span>경영정보</span></a>
+												</li>
+												<li>
+													<a href=""><span>계약정보</span></a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<ul class="dp1">
+								<li>
+									<a href=""><span>멀티콘텐츠</span></a>
+									<a href="javascropt:void(0)" class="m-dp1"><span>멀티콘텐츠</span></a>
+								</li>
+							</ul>
+							<ul class="dp1">
+								<li>
+									<a href=""><span>주요서비스</span></a>
+									<a href="javascropt:void(0)" class="m-dp1"><span>주요서비스</span></a>
+									<ul class="dp2">
+										<li>
+											<a href="">개요</a>
+										</li>
+										<li>
+											<a href="">설립목적 및 역사</a>
+										</li>
+										<li>
+											<a href="">금융통화위원회</a>
+										</li>
+										<li>
+											<a href="">조직도</a>
+										</li>
+										<li>
+											<a href="">운영 및 법규</a>
+											<ul class="dp3">
+												<li class="dropdown">
+													<a href="javascript:void(0)" title="하위메뉴 열기">
+														<span><span class="highlight">전략</span> 및 조직가치</span>
+														<i class="ico-arrow"></i>
+													</a>
+													<ul class="dp4">
+														<li>
+															<a href="">
+																<span><span class="highlight">전략</span></span>
+															</a>
+														</li>
+														<li>
+															<a href=""><span>조직가치</span></a>
+														</li>
+														<li>
+															<a href=""><span>운영리스트 관리</span></a>
+														</li>
+														<li>
+															<a href=""><span>CI소개</span></a>
+														</li>
+													</ul>
+												</li>
+												<li>
+													<a href=""><span>경영정보</span></a>
+												</li>
+												<li>
+													<a href=""><span>계약정보</span></a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //전체메뉴 -->
+		
+	</header>	
+	<!-- //header -->
+
+	<!-- navigation -->
+	<div class="navigation">
+		<nav class="container">
+			<ul>
+				<li class="home"><span>Home</span></li>
+				<li>
+					<a href="" title="하위메뉴 열기">News&Publications</a>
+					<div class="depth2">
+						<ul>
+							<li>
+								<a href="">About BOK</a>
+							</li>
+							<li>
+								<a href="">Topics</a>
+							</li>
+							<li class="on">
+								<a href="">News&Publications</a>
+							</li>
+							<li>
+								<a href="">Money Museum</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="" title="하위메뉴 열기">news</a>
+					<div class="depth2">
+						<ul>
+							<li class="on">
+								<a href="">news</a>
+							</li>
+							<li>
+								<a href="">Notice</a>
+							</li>
+							<li>
+								<a href="">Events</a>
+							</li>
+							<li>
+								<a href="">Speeches</a>
+							</li>
+							<li>
+								<a href="">Research</a>
+							</li>
+							<li>
+								<a href="">Periodicals</a>
+							</li>
+							<li>
+								<a href="">Books</a>
+							</li>
+							<li>
+								<a href="">documents</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="">Press Releases</a>
+				</li>
+			</ul>
+			<div class="top-page-toolbar">
+				<div class="page-toolbar">
+					<button type="button" class="sns-toggle" aria-label="SNS 공유"></button>
+					<div class="sns-wrap">
+						<div class="sns-wrap__set">
+							<button type="button" data-type="close" class="close" aria-label="SNS 공유 닫기"></button>
+							<button type="button" data-type="youtube" class="ico-youtube" aria-label="유튜브 공유 새창열림"></button>
+							<button type="button" data-type="instagram" class="ico-instagram" aria-label="인스타그램 공유 새창열림"></button>
+							<button type="button" data-type="facebook" class="ico-facebook" aria-label="페이스북 공유 새창열림"></button>
+							<button type="button" data-type="twitter" class="ico-twitter" aria-label="트위터 공유 새창열림"></button>
+						</div>
+					</div>
+					<a href="/static/view/forPrint.html" data-size="1200, 700, yes" target="_blank" title="새창열림" class="page-print b-pop">
+						<span class="sr-only">프린트</span>
+					</a>
+					<a href="/static/view/eng/popup/rss_popup.html" data-size="800, 500, yes" class="page-rss b-pop" target="_blank" title="새창열림">
+						<span class="sr-only">rss BANK OF KOREA</span>
+					</a>
+				</div>
+			</div>
+		</nav>
+		<div class="sub-_visual">
+			<div class="hgroup">
+				<h1>News&Publications</h1>	
+			</div>
+		</div>
+	</div>
+	<!-- //navigation -->
+
+	<!-- content -->
+	<div class="container" id="content">
+		<main id="main-container">
+
+			<div class="lnb-nav">
+				<h1>Index</h1>
+				<ul>
+					<li class="on">
+						<a href="">Treasury Service</a>
+						<ul>
+							<li class="on">
+								<a href="">Treasury Service</a>
+							</li>
+							<li>
+								<a href="">Overview of Securities Business</a>
+							</li>
+							<li>
+								<a href="">[Appendix] Overview of Treasury Bond</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="">Overview of Securities Business</a>
+					</li>
+					<li>
+						<a href="">Securities Custody Services for overseas official institutions</a>
+					</li>
+				</ul>
+			</div>
+
+			
+			<div class="content">
+
+
+
+<h2>Monetary Policy</h2>
+<h3>Monetary Policy Instruments </h3>
+
+<p>The reserve requirement system is that whereby financial institutions are obliged to hold a certain ratio of their liabilities subject to reserve requirements (reserve requirement ratio) in their accounts with the central bank. The central bank can adjust liquidity in the markets and promote financial stability by changing financial institutions' funding situation through adjustment of the reserve requirement ratios. For example, since raising the reserve requirement ratios causes banks to deposit more money as their required reserves, their capacity to provide loans and purchase securities is reduced, thus leading to a decline in the volume of money in circulation. Consequently, liquidity is reduced and the possibility of financial unrest arising from an excessive increase in lending can be averted.</p>
+<p>Reserve requirements are still regarded as an important monetary policy tool in a number of major countries including Korea, although used less frequently than in the past as the monetary base-focused orientation of monetary policy has shifted to an interest rate-focused orientation around the world from the 1980s. This is ascribable to its great usefulness in that it not only ensures seamless payments and settlements among financial institutions across their checking accounts with the central bank by having them hold a certain proportion of their reserves in the accounts, but it also enhances the efficiency of interest rate policy by stabilizing short-term market rates<sup>*</sup>.</p>
+<p>The financial institutions subject to the current reserve requirement regime include commercial banks and specialized banks. These institutions are required to maintain reserves corresponding to their reserve requirement ratios differentiated within a range between 0~7% depending upon their deposit liability types<sup>**</sup>. Meanwhile, under the revised Bank of Korea Act, from December 17, 2011*** reserve requirements can be imposed on some types of bank debentures as well as the existing deposit liabilities. Financial institutions should maintain the required reserve in the Bank of Korea in the form of current deposits, but they may hold up to 35% of their reserves in the form of vault cash consisting of banknotes of the Bank of Korea.</p>
+
+
+
+<p>* Financial institutions' maintenance of reserve requirement deposits brings greater stability to interest rates in the interbank short-term trading market (call market) than would otherwise be the case by reducing the demand for borrowing of funds for payment and settlement.</p>
+<p>** The Monetary Policy Board may determine reserve requirement ratios within a range not exceeding 50% for different types or scales of liabilities subject to reserve requirements. In periods of pronounced monetary expansion, however, the Monetary Policy Board may impose marginal reserve requirements of up to 100% against any increase in liabilities subject to reserve requirements above the amount outstanding as of the date specified, thus making financial institutions maintain additional required reserves.</p>
+<p>*** Reserve requirements may be imposed on the following Korean won denominated bank debentures whose maturity is less than 2 years: In periods of pronounced or likely monetary expansion, bank debentures issued by commercial banks during the periods deemed necessary to accumulate more reserves; or in periods of pronounced monetary expansion, bank debentures issued by specialized banks ㅡ National Agricultural Cooperative Federation, National Federation of Fisheries Cooperatives, Industrial Bank of Korea, Korea Development Bank ㅡ during periods determined by the Monetary Policy Board after consultation with the government regarding whether reserves should be accumulated and the periods of such accumulation. (Article 12. (2) of the Enforcement Decree of the Bank of Korea Act.).</p>
+
+
+<div class="h-group">
+	<h4>Reserve Requirement Ratio by Deposit Type</h4>
+	<p>(as of end-December 2024)</p>
+</div>
+
+<div class="table tac">
+	<table>
+		<thead>
+			<tr>
+				<th>Deposit type</th>
+				<th style="width: 30%;">Reserve Requirement Ratio</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Long-term savings deposits for housing, Property formation savings</td>
+				<td>0.0%</td>
+			</tr>
+			<tr>
+				<td>Time deposits, installment savings, mutual installments, housing installments, CDs<sup>*</sup></td>
+				<td>2.0%</td>
+			</tr>
+			<tr>
+				<td>Others</td>
+				<td>7.0%</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<h4>Example of Calculation and maintaining reserve requirements (Oct. 2024)</h4>
+<div class="imgSet img2"> 
+	<p class="visible-md "><img alt="Reserve calcuation period(January 1~31 day)" src="/static/eng/img/sub/img_400029_01.gif"></p> 
+	<p class="visible-md "><img alt="Reserve maintenance period(February 8(Thu) ~ March 7(Wed))" src="/static/eng/img/sub/img_400029_02.gif"></p> 
+
+
+	<p class="visible-sm"><a href="/static/eng/img/sub/img_400029_01.gif" data-rel="prettyPhoto" title="zoom in" data-num="0"><img alt="Reserve calcuation period(January 1~31 day)" src="/static/eng/img/sub/img_400029_01.gif"></a></p> 
+	<p class="visible-sm"><a href="img_400029_02.gif" data-rel="prettyPhoto" title="zoom in" data-num="1"><img alt="Reserve maintenance period(February 8(Thu) ~ March 7(Wed))" src="/static/eng/img/sub/img_400029_02.gif"></a></p> 
+</div>
+
+
+
+</div>
+
+<script src="/static/jslibrary/swiper@8/swiper-bundle.min.js"></script>
+<script src="/static/eng/js/common.js"></script>
+</body>
+</html>

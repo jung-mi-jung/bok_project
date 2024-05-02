@@ -33,11 +33,87 @@
 			padding: 50px 0 0 0;
 		}		
 	}	
-	.contact {
-		font-size: rem(16);
-		color: $black;
-		margin-bottom: 20px;
-	}	
+	.footer-nav {		
+		ul {
+			display: flex;
+			@include breakpoint($smd){
+				flex-wrap: wrap;
+				//max-width: 410px;
+				//margin: 0 auto;
+			}
+			@include breakpoint($sm){
+				max-width: 315px;
+				justify-content: left;
+				margin: 0 auto;
+			}
+			li {
+				position: relative;
+				padding-left: 15px;
+				margin-right: 15px;
+				@include breakpoint($smd){
+					margin-top: 2px;
+					margin-bottom: 2px;
+				}
+				&:last-child {
+					margin-right: 0;
+				}
+				@include breakpoint($lg){
+					
+					&:first-child {
+						padding-left: 0;
+					}
+				}				
+				a {
+					position: relative;
+					color: #4D4D4D;
+					//padding-left: 15px;
+					display: block;
+					white-space:nowrap;
+					&::before {
+						@include breakpoint($lg){
+							display: none;
+						}
+						content: "";
+						display: inline-block;
+						vertical-align: middle;
+						width: 4px;
+						height: 4px;
+						background-color: #4D4D4D;
+						border-radius: 50%;
+						position: absolute;
+						top: 50%;
+						margin-top: -2px;
+						left: -10px;
+					}
+				}
+				& + li {
+					&::before {
+						content: "";
+						display: inline-block;
+						vertical-align: middle;
+						width: 1px;
+						height: 14px;
+						background-color: #BFBFBF;
+						position: absolute;
+						top: 5px;
+						left: 0;
+						@include breakpoint($smd){
+							display: none;
+						}
+					}
+				}
+				&.point {
+					a {
+						color: #3B63C4;
+						font-weight: 500;
+						&::before {
+							background-color: #6db5f9;
+						}
+					}
+				}
+			}
+		}
+	}
 	.footer-bottom {
 		@include breakpoint($sm){
 			text-align: center;
@@ -50,10 +126,6 @@
 			font-size: rem(14);
 			@include breakpoint($sm){
 				margin-top: 5px;
-			}
-			em {
-				font-size: rem(16);
-				display: block;
 			}
 		}
 	}	
@@ -102,7 +174,7 @@
 			ul {
 				display: none;
 				position: absolute;
-				top: -203px;
+				top: -224px;
 				left: 0;
 				z-index: 9;
 				width: 100%;
@@ -138,7 +210,7 @@
 		.f_sns {
 			display: flex;
 			justify-content: space-between;
-			margin-left: 35px;
+			margin: 0 35px;
 			@include breakpoint($mdw){
 				padding-top: 15px;
 				width: 192px;

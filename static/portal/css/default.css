@@ -2182,7 +2182,7 @@ width: 48px;
 position: absolute;
 top: 12px;
 left: 0;
-z-index: 9;
+z-index: 99;
 }
 .page-toolbar .sns-wrap.active .sns-wrap__set {
 width: 48px;
@@ -3441,7 +3441,7 @@ background-repeat: no-repeat;
 border-radius: 8px;
 margin-bottom: 15px;
 }
-.reference-media dl dd ul li a span.img::before {
+.reference-media dl dd ul li a span.img.media::before {
 content: "";
 display: inline-block;
 width: 40px;

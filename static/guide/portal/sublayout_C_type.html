@@ -752,11 +752,49 @@
 				<button type="button" class="all-nav-toggle" data-toggle="modal" data-target="#totalMenu" title="전체 메뉴 열기"></button>
 				<button type="button" class="search" title="검색레이어 열기"></button>
 				<div class="search_wrap">
-					<form action="/">
-						검색 레이어 영역
+					<form action="">
+						<div class="search_wrap_input">
+							<input type="text" class="search_keyword" name="query" id="queryTop" placeholder="검색어를 입력해 주세요." autocomplete="off" maxlength="50">
+							<div class="dqAuto" tabindex="0" style="display: none;">
+								<ul class="autoList">
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+								</ul>
+								<div class="bottom">
+									<a href="javascript:void(0);" id="topSrchClose" class="btnClose">자동완성 닫기</a>
+								</div>
+							</div>	
+							<button type="button" class="btn_search search" aria-label="검색"></button>
+						</div>
+						<button type="button" class="search_close" aria-label="검색 닫기"></button>
 					</form>
 				</div>
-			</div>	
+			</div>
 		</div>
 		<!-- 전체메뉴 -->
 		<div class="modal fade total-nav" id="totalMenu" tabindex="-1" role="dialog">
@@ -783,7 +821,8 @@
 						<div class="container">
 							<ul class="dp1">
 								<li>
-									<a href="">한국은행</a>
+									<a href=""><span>한국은행</span></a>
+									<a href="javascropt:void(0)" class="m-dp1"><span>한국은행</span></a>
 									<ul class="dp2">
 										<li>
 											<a href="">개요</a>
@@ -834,12 +873,14 @@
 							</ul>
 							<ul class="dp1">
 								<li>
-									<a href="">정책 및 업무</a>
+									<a href=""><span>정책 및 업무</span></a>
+									<a href="javascropt:void(0)" class="m-dp1"><span>정책 및 업무</span></a>
 								</li>
 							</ul>
 							<ul class="dp1">
 								<li>
-									<a href="">뉴스 및 자료</a>
+									<a href=""><span>뉴스 및 자료</span></a>
+									<a href="javascropt:void(0)" class="m-dp1"><span>뉴스 및 자료</span></a>
 									<ul class="dp2">
 										<li>
 											<a href="">개요</a>
@@ -891,12 +932,14 @@
 							</ul>
 							<ul class="dp1">
 								<li>
-									<a href="">멀티콘텐츠</a>
+									<a href=""><span>멀티콘텐츠</span></a>
+									<a href="javascropt:void(0)" class="m-dp1"><span>멀티콘텐츠</span></a>
 								</li>
 							</ul>
 							<ul class="dp1">
 								<li>
-									<a href="">주요서비스</a>
+									<a href=""><span>주요서비스</span></a>
+									<a href="javascropt:void(0)" class="m-dp1"><span>주요서비스</span></a>
 									<ul class="dp2">
 										<li>
 											<a href="">개요</a>
@@ -1177,7 +1220,7 @@
 					</li>
 					<li>
 						<a href="">
-							<span class="img" style="background-image: url(/static/portal/img/img_card08.png);"></span>
+							<span class="img media" style="background-image: url(/static/portal/img/img_card08.png);"></span>
 							<span class="t">홍보기획영상</span>
 							<span class="tit">알쓸신화 10화 | 기념주화 속 국립공원 2부</span>
 							<span class="date">2024.01.03</span>

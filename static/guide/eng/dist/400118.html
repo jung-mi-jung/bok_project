@@ -1,0 +1,1339 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>서브명 | Bank of Korea</title>
+	<link type="text/css" rel="stylesheet" href="/static/eng/css/sub.css">
+	<script src="/static/jslibrary/jquery-3.5.1.min.js"></script>
+	<script src="/static/jslibrary/jquery.cookie.js"></script>
+	<script src="/static/jslibrary/bootstrap/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="/static/jslibrary/swiper@8/swiper-bundle.min.css">
+	<script src="/static/jslibrary/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js"></script>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta property="og:type"			content="website">
+	<meta property="og:title"			content="${title}">
+	<meta property="og:description"		content="${title}">
+</head>
+<body>
+<div class="skip">
+	<a href="#content">Skip to content</a>
+</div>
+<div id="wrap">
+	<div class="gnb_bg"></div>
+	<!-- header -->
+	<header id="header">
+		<div class="globalHeader">
+			<div class="container">
+				<ul>
+					<li>
+						<a href="/imerEng/main/main.do" target="_blank" title="새창열림">Economic Research Institute</a>
+					</li>
+				</ul>
+				<div class="g-info">
+					<div class="global">
+						<ul>
+							<li>
+								<a href="/portal/main/main.do" target="_blank" title="새창열림">KOREAN</a>
+							</li>
+						</ul>
+					</div>					
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<h1 class="logo">
+				<a href="">
+					<span class="sr-only">Bank of Korea</span>
+				</a>
+			</h1>
+			<!-- gnb -->
+			<nav class="gnb" id="gnb">
+				<ul>
+					<li class="menu01">
+						<a href=""><span>About BOK</span></a>
+					</li>
+					<li class="menu02 active">
+						<a href=""><span>Topics</span></a>
+					</li>
+					<li class="menu03">
+						<a href=""><span>News&Publications</span></a>
+					</li>
+					<li class="menu04">
+						<a href=""><span>Money Museum</span></a>
+					</li>
+				</ul>
+			</nav>
+			<!-- //gnb -->
+			<div class="toggle-set">
+				<button type="button" class="all-nav-toggle" data-toggle="modal" data-target="#totalMenu" title="Open Total Menu"></button>
+				<button type="button" class="search" title="Open Search Layer"></button>
+				<div class="search_wrap">
+					<form action="">
+						<div class="search_wrap_input">
+							<input type="text" class="search_keyword" name="query" id="queryTop" placeholder="검색어를 입력해 주세요." autocomplete="off" maxlength="50">
+							<div class="dqAuto" tabindex="0" style="display: none;">
+								<ul class="autoList">
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+								</ul>
+								<div class="bottom">
+									<a href="javascript:void(0);" id="topSrchClose" class="btnClose">자동완성 닫기</a>
+								</div>
+							</div>	
+							<button type="button" class="btn_search search" aria-label="검색"></button>
+						</div>
+						<button type="button" class="search_close" aria-label="검색 닫기"></button>
+					</form>
+				</div>
+			</div>			
+		</div>
+
+		<!-- 전체메뉴 -->
+		<div class="modal fade total-nav" id="totalMenu" tabindex="-1" role="dialog">
+			<div class="lpop modal-dialog" role="document">
+				<div class="set modal-content">
+					<div class="modal-header">
+						<div class="container">
+							<button type="button" class="close" data-dismiss="modal"><i class="ti-close"></i><span class="sr-only">레이어 창닫기</span></button>
+							<h1 class="modal-title" id="modal-label1">
+								<span class="totalnav-logo"></span>전체메뉴
+							</h1>
+							<form>
+								<fieldset>
+									<legend class="sr-only">전체메뉴 검색</legend>
+									<div class="keyword-set">
+										<span class="keyword"><input type="text" title="검색어"></span>
+										<button type="button" class="search" onclick="" aria-label="검색"></button>
+									</div>
+								</fieldset>
+							</form>
+						</div>
+					</div>
+					<div class="modal-body">
+						<div class="container">
+							<ul class="dp1">
+								<li>
+									<a href=""><span>한국은행</span></a>
+									<a href="javascropt:void(0)" class="m-dp1"><span>한국은행</span></a>
+									<ul class="dp2">
+										<li>
+											<a href="">개요</a>
+										</li>
+										<li>
+											<a href="">설립목적 및 역사</a>
+										</li>
+										<li>
+											<a href="">금융통화위원회</a>
+										</li>
+										<li>
+											<a href="">조직도</a>
+										</li>
+										<li>
+											<a href="">운영 및 법규</a>
+											<ul class="dp3">
+												<li>
+													<a href="">전략 및 조직가치</a>
+												</li>
+												<li>
+													<a href="">경영정보</a>
+												</li>
+												<li>
+													<a href="">계약정보</a>
+												</li> 
+												<li>
+													<a href="">윤리경영</a>
+												</li>
+												<li>
+													<a href="">법규정보</a>
+												</li>
+												<li>
+													<a href="">사회공헌</a>
+												</li>
+												<li>
+													<a href="">채용</a>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href="">오시는 길</a>
+										</li>
+										<li>
+											<a href="">지역본부(종합)</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<ul class="dp1">
+								<li>
+									<a href=""><span>정책 및 업무</span></a>
+									<a href="javascropt:void(0)" class="m-dp1"><span>정책 및 업무</span></a>
+								</li>
+							</ul>
+							<ul class="dp1">
+								<li>
+									<a href=""><span>뉴스 및 자료</span></a>
+									<a href="javascropt:void(0)" class="m-dp1"><span>뉴스 및 자료</span></a>
+									<ul class="dp2">
+										<li>
+											<a href="">개요</a>
+										</li>
+										<li>
+											<a href="">설립목적 및 역사</a>
+										</li>
+										<li>
+											<a href="">금융통화위원회</a>
+										</li>
+										<li>
+											<a href="">조직도</a>
+										</li>
+										<li>
+											<a href="">운영 및 법규</a>
+											<ul class="dp3">
+												<li class="dropdown">
+													<a href="javascript:void(0)" title="하위메뉴 열기">
+														<span><span class="highlight">전략</span> 및 조직가치</span>
+														<i class="ico-arrow"></i>
+													</a>
+													<ul class="dp4">
+														<li>
+															<a href="">
+																<span><span class="highlight">전략</span></span>
+															</a>
+														</li>
+														<li>
+															<a href=""><span>조직가치</span></a>
+														</li>
+														<li>
+															<a href=""><span>운영리스트 관리</span></a>
+														</li>
+														<li>
+															<a href=""><span>CI소개</span></a>
+														</li>
+													</ul>
+												</li>
+												<li>
+													<a href=""><span>경영정보</span></a>
+												</li>
+												<li>
+													<a href=""><span>계약정보</span></a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<ul class="dp1">
+								<li>
+									<a href=""><span>멀티콘텐츠</span></a>
+									<a href="javascropt:void(0)" class="m-dp1"><span>멀티콘텐츠</span></a>
+								</li>
+							</ul>
+							<ul class="dp1">
+								<li>
+									<a href=""><span>주요서비스</span></a>
+									<a href="javascropt:void(0)" class="m-dp1"><span>주요서비스</span></a>
+									<ul class="dp2">
+										<li>
+											<a href="">개요</a>
+										</li>
+										<li>
+											<a href="">설립목적 및 역사</a>
+										</li>
+										<li>
+											<a href="">금융통화위원회</a>
+										</li>
+										<li>
+											<a href="">조직도</a>
+										</li>
+										<li>
+											<a href="">운영 및 법규</a>
+											<ul class="dp3">
+												<li class="dropdown">
+													<a href="javascript:void(0)" title="하위메뉴 열기">
+														<span><span class="highlight">전략</span> 및 조직가치</span>
+														<i class="ico-arrow"></i>
+													</a>
+													<ul class="dp4">
+														<li>
+															<a href="">
+																<span><span class="highlight">전략</span></span>
+															</a>
+														</li>
+														<li>
+															<a href=""><span>조직가치</span></a>
+														</li>
+														<li>
+															<a href=""><span>운영리스트 관리</span></a>
+														</li>
+														<li>
+															<a href=""><span>CI소개</span></a>
+														</li>
+													</ul>
+												</li>
+												<li>
+													<a href=""><span>경영정보</span></a>
+												</li>
+												<li>
+													<a href=""><span>계약정보</span></a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //전체메뉴 -->
+		
+	</header>	
+	<!-- //header -->
+
+	<!-- navigation -->
+	<div class="navigation">
+		<nav class="container">
+			<ul>
+				<li class="home"><span>Home</span></li>
+				<li>
+					<a href="" title="하위메뉴 열기">News&Publications</a>
+					<div class="depth2">
+						<ul>
+							<li>
+								<a href="">About BOK</a>
+							</li>
+							<li>
+								<a href="">Topics</a>
+							</li>
+							<li class="on">
+								<a href="">News&Publications</a>
+							</li>
+							<li>
+								<a href="">Money Museum</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="" title="하위메뉴 열기">news</a>
+					<div class="depth2">
+						<ul>
+							<li class="on">
+								<a href="">news</a>
+							</li>
+							<li>
+								<a href="">Notice</a>
+							</li>
+							<li>
+								<a href="">Events</a>
+							</li>
+							<li>
+								<a href="">Speeches</a>
+							</li>
+							<li>
+								<a href="">Research</a>
+							</li>
+							<li>
+								<a href="">Periodicals</a>
+							</li>
+							<li>
+								<a href="">Books</a>
+							</li>
+							<li>
+								<a href="">documents</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="">Press Releases</a>
+				</li>
+			</ul>
+			<div class="top-page-toolbar">
+				<div class="page-toolbar">
+					<button type="button" class="sns-toggle" aria-label="SNS 공유"></button>
+					<div class="sns-wrap">
+						<div class="sns-wrap__set">
+							<button type="button" data-type="close" class="close" aria-label="SNS 공유 닫기"></button>
+							<button type="button" data-type="youtube" class="ico-youtube" aria-label="유튜브 공유 새창열림"></button>
+							<button type="button" data-type="instagram" class="ico-instagram" aria-label="인스타그램 공유 새창열림"></button>
+							<button type="button" data-type="facebook" class="ico-facebook" aria-label="페이스북 공유 새창열림"></button>
+							<button type="button" data-type="twitter" class="ico-twitter" aria-label="트위터 공유 새창열림"></button>
+						</div>
+					</div>
+					<a href="/static/view/forPrint.html" data-size="1200, 700, yes" target="_blank" title="새창열림" class="page-print b-pop">
+						<span class="sr-only">프린트</span>
+					</a>
+					<a href="/static/view/eng/popup/rss_popup.html" data-size="800, 500, yes" class="page-rss b-pop" target="_blank" title="새창열림">
+						<span class="sr-only">rss BANK OF KOREA</span>
+					</a>
+				</div>
+			</div>
+		</nav>
+		<div class="sub-_visual">
+			<div class="hgroup">
+				<h1>News&Publications</h1>	
+			</div>
+		</div>
+	</div>
+	<!-- //navigation -->
+
+	<!-- content -->
+	<div class="container" id="content">
+		<main id="main-container">
+
+			<div class="lnb-nav">
+				<h1>Index</h1>
+				<ul>
+					<li class="on">
+						<a href="">Treasury Service</a>
+						<ul>
+							<li class="on">
+								<a href="">Treasury Service</a>
+							</li>
+							<li>
+								<a href="">Overview of Securities Business</a>
+							</li>
+							<li>
+								<a href="">[Appendix] Overview of Treasury Bond</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="">Overview of Securities Business</a>
+					</li>
+					<li>
+						<a href="">Securities Custody Services for overseas official institutions</a>
+					</li>
+				</ul>
+			</div>
+
+			
+			<div class="content">
+
+
+
+<h2>Currency Timelin</h2>
+<h3>1962 ~ 1970</h3>
+<p>When new banknotes and coins whose denominations were identical but designs and sizes differed, were issued, their classification titles used to be '原&lsquo;, &rsquo;新&lsquo;, &rsquo;改&lsquo;, &rsquo;改甲&lsquo; (in the order of issuance). However, since May 1, 1993, the classification titles of banknotes issued since the Third Currency Reform in 1962 have become 'Ga' (first), 'Na' (second), 'Da' (third), 'Ra' (fourth).</p>
+<h3>From the Currency Reform in 1962 to 1969</h3>
+<p class="fc1">The new government carried out the Currency Reform in 1962 to replace 圓-denominated notes with won-denominated ones and to use the unit 'jeon' for small value transactions. This measure is significant in terms of the adoption of won-denominated notes rather than the achievement of economic goals.</p>
+<p>From 1962, the government carried out a series of five-year economic development plans. Another Currency Reform was carried out on June 10, 1962 to support the initiatives and to channel hoarded wealth into industrial development. New won-denominated currency, which had a face value ten times higher than that of the hwan-denominated currency, was issued as legal tender, and the circulation of and transactions in hwan-denominated currency were prohibited (However, 50- and 10-hwan coins remained in circulation until March 21, 1975). Under the Currency Reform, the Bank of Korea issued new notes in six denominations: 500-, 100-, 50-, 10-, 5- and 1-won. Furthermore, the Bank introduced into circulation 50- and 10-jeon notes to provide change notes for low value transactions on December 1, 1962. Accordingly, after the Currency Reform in 1962, eight denominations were in circulation in Korea, including the 500-, 100-, 50-, 10-, 5- and 1-won notes and the 50- and 10-jeon notes. Subsequently, the Bank of Korea issued new notes several times in the same denominations but with different designs. The Bank replaced 50- and 10-hwan coins, that had remained in circulation as an exception under the ordinance on temporary measures for the circulation of coins, with newly issued 10-, 5- and 1-won coins on August 16, 1966. Although failing to accomplishing its intended economic goal, the Currency Reform in 1962 is important in the history of money that it introduced the won-denominated currency still in use. Furthermore, banknotes and coins issued prior to the Currency Reform in 1962 are no longer in circulation and accepted as legal tender, while all currency issued after the Reform is legal tender.</p>
+
+<div class="coinimgtxt type1">
+<div class="tabsub type">
+	<ul role="tablist">
+		<li role="presentation" class="active"><a href="#tabSubmenu1_1" aria-expanded="true"  data-toggle="tab" role="tab">After the Currency Reform in 1962</a></li>
+		<li role="presentation"><a href="#tabSubmenu1_2" aria-expanded="true"  data-toggle="tab" role="tab">1965</a></li>
+		<li role="presentation"><a href="#tabSubmenu1_3" aria-expanded="true"  data-toggle="tab" role="tab">1966</a></li>
+		<li role="presentation"><a href="#tabSubmenu1_4" aria-expanded="true"  data-toggle="tab" role="tab">1968</a></li>
+		<li role="presentation"><a href="#tabSubmenu1_5" aria-expanded="true"  data-toggle="tab" role="tab">1969</a></li>
+	</ul>
+</div>
+<div class="tab-content">
+	<div id="tabSubmenu1_1"  class="tab-pane fade in active" role="tabpanel">
+		<h2 class="hidden">After the Currency Reform in 1962</h2>
+		<dl class="dlbox">
+			<dt>June 10, 1962 </dt>
+			<dd>Third Currency Reform implemented </dd>
+		</dl>
+		<h3>Ga (first) 500-won note</h3>
+		<div class="imgtxtW">
+		<div class="img imgType3">
+			<p>
+				<img src="/static/portal/img/cts/sub1/d_money25_1.jpg" alt="front of 500-won note issued on 10.June,1962, back of 500-won note issued on 10.June,1962" /> 
+				<img src="/static/portal/img/cts/sub1/d_money25_2.jpg" alt="front of 500-won note issued on 10.June,1962, back of 500-won note issued on 10.June,1962" /> 
+			</p>
+		</div>
+		<!-- data table2 S -->
+		<div class="table table-view">
+			<table>
+				<caption>
+				Ga (first) 500-won note
+				</caption>
+				<colgroup>
+					<col style="width: 30%;">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th class="w30p" scope="row">Date first issued</th>
+						<td class="w70p">June 10, 1962</td>
+					</tr>
+					<tr>
+						<th scope="row">Design</th>
+						<td>South Gate of Seoul (Sungnyemun); flame</td>
+					</tr>
+					<tr>
+						<th scope="row">Size</th>
+						<td>156 &times; 66㎜</td>
+					</tr>
+					<tr>
+						<th scope="row">Printed by</th>
+						<td>Thomas De La Rue Co.(UK)</td>
+					</tr>
+					<tr>
+						<th scope="row">Issue ceased</th>
+						<td>1967. 02. 03</td>
+					</tr>
+					<tr>
+						<th scope="row">Notes</th>
+						<td>7-digit serial numbers; The Bank of Korea written in Korean; metallic wire embedded</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		</div>
+		<!-- data table2 E// -->
+		<h3>Ga (first) 100-won note</h3>
+		<div class="imgtxtW">
+		<div class="img imgType3">
+			<p>
+				<img src="/static/portal/img/cts/sub1/d_money26_1.jpg" alt="front of 100-won note issued on 10.June,1962, back of 100-won note issued on 10.June,1962" /> 
+				<img src="/static/portal/img/cts/sub1/d_money26_2.jpg" alt="front of 100-won note issued on 10.June,1962, back of 100-won note issued on 10.June,1962" /> 
+			</p>
+		</div>
+		<!-- data table2 S -->
+		<div class="table table-view">
+			<table>
+				<caption>
+				Ga (first) 100-won note
+				</caption>
+				<colgroup>
+					<col style="width: 30%;">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th class="w30p" scope="row">Date first issued</th>
+						<td class="w70p">June 10, 1962</td>
+					</tr>
+					<tr>
+						<th scope="row">Design</th>
+						<td>South Gate of Seoul (Sungnyemun); flame</td>
+					</tr>
+					<tr>
+						<th scope="row">Size</th>
+						<td>156 &times; 66㎜</td>
+					</tr>
+					<tr>
+						<th scope="row">Printed by</th>
+						<td>Thomas De La Rue Co.(UK)</td>
+					</tr>
+					<tr>
+						<th scope="row">Issue ceased</th>
+						<td>February 14, 1969</td>
+					</tr>
+					<tr>
+						<th scope="row">Notes</th>
+						<td>7-digit serial numbers; without serial numbers; alphabetic characters marked before and after the numbers; security fiber embedded</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		</div>
+		<!-- data table2 E// -->
+		<h3>Ga (first) 50-won note</h3>
+		<div class="imgtxtW">
+		<div class="img imgType3">
+			<p>
+				<img src="/static/portal/img/cts/sub1/d_money27_1.jpg" alt="front of 50-won note issued on 10.June,1962, back of 50-won note issued on 10.June,1962" /> 
+				<img src="/static/portal/img/cts/sub1/d_money27_2.jpg" alt="front of 50-won note issued on 10.June,1962, back of 50-won note issued on 10.June,1962" /> 
+			</p>
+		</div>
+		<!-- data table2 S -->
+		<div class="table table-view">
+			<table>
+				<caption>
+				Ga (first) 50-won note
+				</caption>
+				<colgroup>
+					<col style="width: 30%;">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th class="w30p" scope="row">Date first issued</th>
+						<td class="w70p">June 10, 1962</td>
+					</tr>
+					<tr>
+						<th scope="row">Design</th>
+						<td>Rock Pillars (Chongseokjeong); flame</td>
+					</tr>
+					<tr>
+						<th scope="row">Size</th>
+						<td>156 &times; 66㎜</td>
+					</tr>
+					<tr>
+						<th scope="row">Printed by</th>
+						<td>Thomas De La Rue Co.(UK)</td>
+					</tr>
+					<tr>
+						<th scope="row">Issue ceased</th>
+						<td>May 20, 1970</td>
+					</tr>
+					<tr>
+						<th scope="row">Notes</th>
+						<td>7-digit serial numbers; without serial number; alphabetic characters marked before and after the numbers; security fiber embedded</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		</div>
+		<!-- data table2 E// -->
+		<h3>Ga (first) 10-won note</h3>
+		<div class="imgtxtW">
+		<div class="img imgType3">
+			<p>
+				<img src="/static/portal/img/cts/sub1/d_money28_1.jpg" alt="front of 10-won note issued on 10.June,1962, back of 10-won note issued on 10.June,1962" /> 
+				<img src="/static/portal/img/cts/sub1/d_money28_2.jpg" alt="front of 10-won note issued on 10.June,1962, back of 10-won note issued on 10.June,1962" /> 
+			</p>
+		</div>
+		<!-- data table2 S -->
+		<div class="table table-view">
+			<table>
+				<caption>
+				Ga (first) 10-won note962
+				</caption>
+				<colgroup>
+					<col style="width: 30%;">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th class="w30p" scope="row">Date first issued</th>
+						<td class="w70p">June 10, 1962</td>
+					</tr>
+					<tr>
+						<th scope="row">Design</th>
+						<td>Bank's symbol; denomination</td>
+					</tr>
+					<tr>
+						<th scope="row">Size</th>
+						<td>108 &times; 54㎜</td>
+					</tr>
+					<tr>
+						<th scope="row">Printed by</th>
+						<td>Thomas De La Rue Co.(UK)</td>
+					</tr>
+					<tr>
+						<th scope="row">Issue ceased</th>
+						<td>September. 01. 1962</td>
+					</tr>
+					<tr>
+						<th scope="row">Notes</th>
+						<td>7-digit serial numbers; without serial number; alphabetic characters marked before and after the numbers; security fiber embedded</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		</div>
+		<!-- data table2 E// -->
+		<h3>5-won note</h3>
+		<div class="imgtxtW">
+		<div class="img imgType3">
+			<p>
+				<img src="/static/portal/img/cts/sub1/d_money29_1.jpg" alt="front of 5-won note issued on 10.June,1962, back of 5-won note issued on 10.June,1962" /> 
+				<img src="/static/portal/img/cts/sub1/d_money29_2.jpg" alt="front of 5-won note issued on 10.June,1962, back of 5-won note issued on 10.June,1962" /> 
+			</p>
+		</div>
+		<!-- data table2 S -->
+		<div class="table table-view">
+			<table>
+				<caption>
+				5-won note
+				</caption>
+				<colgroup>
+					<col style="width: 30%;">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th class="w30p" scope="row">Date first issued</th>
+						<td class="w70p">June 10, 1962</td>
+					</tr>
+					<tr>
+						<th scope="row">Design</th>
+						<td>Bank's symbol; denomination</td>
+					</tr>
+					<tr>
+						<th scope="row">Size</th>
+						<td>94 &times; 50㎜</td>
+					</tr>
+					<tr>
+						<th scope="row">Printed by</th>
+						<td>Thomas De La Rue Co.(UK)</td>
+					</tr>
+					<tr>
+						<th scope="row">Issue ceased</th>
+						<td>May 1, 1969</td>
+					</tr>
+					<tr>
+						<th scope="row">Notes</th>
+						<td>security fiber embedded</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		</div>
+		<!-- data table2 E// -->
+		<h3>1-won note</h3>
+		<div class="imgtxtW">
+		<div class="img imgType3">
+			<p>
+				<img src="/static/portal/img/cts/sub1/d_money30_1.jpg" alt="front of 1-won note issued on 10.June,1962, back of 1-won note issued on 10.June,1962" /> 
+				<img src="/static/portal/img/cts/sub1/d_money30_2.jpg" alt="front of 1-won note issued on 10.June,1962, back of 1-won note issued on 10.June,1962" /> 
+			</p>
+		</div>
+		<!-- data table2 S -->
+		<div class="table table-view">
+			<table>
+				<caption>
+				1-won note
+				</caption>
+				<colgroup>
+					<col style="width: 30%;">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th class="w30p" scope="row">Date first issued</th>
+						<td class="w70p">June 10, 1962</td>
+					</tr>
+					<tr>
+						<th scope="row">Design</th>
+						<td>Bank's symbol; denomination</td>
+					</tr>
+					<tr>
+						<th scope="row">Size</th>
+						<td>94 &times; 50㎜</td>
+					</tr>
+					<tr>
+						<th scope="row">Printed by</th>
+						<td>Thomas De La Rue Co.(UK)</td>
+					</tr>
+					<tr>
+						<th scope="row">Issue ceased</th>
+						<td>May 20, 1970</td>
+					</tr>
+					<tr>
+						<th scope="row">Notes</th>
+						<td><div></div>
+							<br /></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		</div>
+		<!-- data table2 E// -->
+		<dl class="dlbox mt30">
+			<dt>August 28, 1962 </dt>
+			<dd class="dd2">Ordinance on temporary measures for the circulation of coins proclaimed and implemented 50- and 10-hwan coins remained in circulation at one tenth of their face value in won. </dd>
+		</dl>
+		<dl class="dlbox dlbox2">
+			<dt>September 21 </dt>
+			<dd class="dd2">Na (second) 10-won notes issued The UK-made notes were replaced by new Korean-made notes. </dd>
+		</dl>
+		<h3>Na (second) 10-won note</h3>
+		<div class="imgtxtW">
+		<div class="img imgType3">
+			<p>
+				<img src="/static/portal/img/cts/sub1/d_money31_1.jpg" alt="front of 10-won note issued on 21.September,1962" /> 
+				<img src="/static/portal/img/cts/sub1/d_money31_2.jpg" alt="back of 10-won note issued on 21.September,1962" /> 
+			</p>
+		</div>
+		<!-- data table2 S -->
+		<div class="table table-view">
+			<table>
+				<caption>
+				Na (second) 10-won note
+				</caption>
+				<colgroup>
+					<col style="width: 30%;">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th class="w30p" scope="row">Date first issued</th>
+						<td class="w70p">September 21, 1962</td>
+					</tr>
+					<tr>
+						<th scope="row">Design</th>
+						<td>Astronomical observatory in Gyeongju (Cheomseongdae); Turtle ship (Geobukseon)</td>
+					</tr>
+					<tr>
+						<th scope="row">Size</th>
+						<td>140 &times; 63㎜</td>
+					</tr>
+					<tr>
+						<th scope="row">Printed by</th>
+						<td>KOMSCO</td>
+					</tr>
+					<tr>
+						<th scope="row">Issue ceased</th>
+						<td>October 30, 1973</td>
+					</tr>
+					<tr>
+						<th scope="row">Notes</th>
+						<td>Notes without serial numbers; the Bank of Korea's seal changed from Chinese characters to Korean syllables</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		</div>
+		<!-- data table2 E// -->
+		<dl class="dlbox mt30">
+			<dt>November 1, 1962 </dt>
+			<dd class="dd2">Na (second) 100-won notes issued The UK-made notes were replaced by new Korean-made notes. </dd>
+		</dl>
+		<h3>Na (second) 100-won note</h3>
+		<div class="imgtxtW">
+		<div class="img imgType3">
+			<p>
+				<img src="/static/portal/img/cts/sub1/d_money32_1.jpg" alt="front of 100-won note issued on 1. November,1962" /> 
+				<img src="/static/portal/img/cts/sub1/d_money32_2.jpg" alt="back of 100-won note issued on 1. November,1962" /> 
+			</p>
+		</div>
+		<!-- data table2 S -->
+		<div class="table table-view">
+			<table>
+				<caption>
+				Na (second) 100-won note
+				</caption>
+				<colgroup>
+					<col style="width: 30%;">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th class="w30p" scope="row">Date first issued</th>
+						<td class="w70p">November 1, 1962</td>
+					</tr>
+					<tr>
+						<th scope="row">Design</th>
+						<td>Independence Gate (Dongnimmun); pavilion in Gyeongbokgung Palace (Gyeonghoeru)</td>
+					</tr>
+					<tr>
+						<th scope="row">Size</th>
+						<td>156 &times; 66㎜</td>
+					</tr>
+					<tr>
+						<th scope="row">Printed by</th>
+						<td>KOMSCO</td>
+					</tr>
+					<tr>
+						<th scope="row">Issue ceased</th>
+						<td>October 30, 1973</td>
+					</tr>
+					<tr>
+						<th scope="row">Notes</th>
+						<td><div></div>
+							<br /></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		</div>
+		<!-- data table2 E// -->
+		<dl class="dlbox mt30">
+			<dt>December 1, 1962 </dt>
+			<dd class="dd2">50- and 10-jeon notes issued To provide convenience in small value transactions </dd>
+		</dl>
+		<h3>50-jeon note</h3>
+		<div class="imgtxtW">
+		<div class="img imgType3">
+			<p>
+				<img src="/static/portal/img/cts/sub1/d_money33_1.jpg" alt="front of 50-jeon note issued on 1.December,1962" /> 
+				<img src="/static/portal/img/cts/sub1/d_money33_2.jpg" alt="back of 50-jeon note issued on 1.December,1962" /> 
+			</p>
+		</div>
+		<!-- data table2 S -->
+		<div class="table table-view">
+			<table>
+				<caption>
+				50-jeon note
+				</caption>
+				<colgroup>
+					<col style="width: 30%;">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th class="w30p" scope="row">Date first issued</th>
+						<td class="w70p">December 1, 1962</td>
+					</tr>
+					<tr>
+						<th scope="row">Design</th>
+						<td>Trellis patterns</td>
+					</tr>
+					<tr>
+						<th scope="row">Size</th>
+						<td>90 &times; 50㎜</td>
+					</tr>
+					<tr>
+						<th scope="row">Printed by</th>
+						<td>KOMSCO</td>
+					</tr>
+					<tr>
+						<th scope="row">Issue ceased</th>
+						<td>December 1, 1980</td>
+					</tr>
+					<tr>
+						<th scope="row">Notes</th>
+						<td><div></div>
+							<br /></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		</div>
+		<!-- data table2 E// -->
+		<h3>10-jeon note</h3>
+		<div class="imgtxtW">
+		<div class="img imgType3">
+			<p>
+				<img src="/static/portal/img/cts/sub1/d_money34_1.jpg" alt="front of 10-jeon note issued on 1.December,1962" /> 
+				<img src="/static/portal/img/cts/sub1/d_money34_2.jpg" alt="back of 10-jeon note issued on 1.December,1962" /> 
+			</p>
+		</div>
+		<!-- data table2 S -->
+		<div class="table table-view">
+			<table>
+				<caption>
+				10-jeon note
+				</caption>
+				<colgroup>
+					<col style="width: 30%;">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th class="w30p" scope="row">Date first issued</th>
+						<td class="w70p">December 1, 1962</td>
+					</tr>
+					<tr>
+						<th scope="row">Design</th>
+						<td>Trellis patterns</td>
+					</tr>
+					<tr>
+						<th scope="row">Size</th>
+						<td>90 &times; 50㎜</td>
+					</tr>
+					<tr>
+						<th scope="row">Printed by</th>
+						<td>KOMSCO</td>
+					</tr>
+					<tr>
+						<th scope="row">Issue ceased</th>
+						<td>December 1, 1980</td>
+					</tr>
+					<tr>
+						<th scope="row">Notes</th>
+						<td><div></div>
+							<br /></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		</div>
+		<!-- data table2 E// --></div>
+	<div id="tabSubmenu1_2"  class="tab-pane fade" role="tabpanel">
+		<h2 class="hidden">1965</h2>
+		<dl class="dlbox">
+			<dt>August 14, 1965 </dt>
+			<dd class="dd2">Da (third) 100-won notes issued The first intaglio printed notes manufactured in Korea </dd>
+		</dl>
+		<h3>100-won note</h3>
+		<div class="imgtxtW">
+		<div class="img imgType3">
+			<p>
+				<img src="/static/portal/img/cts/sub1/d_money35_1.jpg" alt="front of 100-won note issued on 14.August,1965" /> 
+				<img src="/static/portal/img/cts/sub1/d_money35_2.jpg" alt="back of 100-won note issued on 14.August,1965" /> 
+			</p>
+		</div>
+		<!-- data table2 S -->
+		<div class="table table-view">
+			<table>
+				<caption>
+				100-won note
+				</caption>
+				<colgroup>
+					<col style="width: 30%;">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th class="w30p" scope="row">Date first issued</th>
+						<td class="w70p">August 14, 1965</td>
+					</tr>
+					<tr>
+						<th scope="row">Design</th>
+						<td>King Sejong the Great; Bank of Korea's main building</td>
+					</tr>
+					<tr>
+						<th scope="row">Size</th>
+						<td>156 &times; 66㎜</td>
+					</tr>
+					<tr>
+						<th scope="row">Printed by</th>
+						<td>KOMSCO</td>
+					</tr>
+					<tr>
+						<th scope="row">Issue ceased</th>
+						<td>December 1, 1980</td>
+					</tr>
+					<tr>
+						<th scope="row">Notes</th>
+						<td><div></div>
+							<br /></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		</div>
+		<!-- data table2 E// --></div>
+	<div id="tabSubmenu1_3"  class="tab-pane fade" role="tabpanel">
+		<h2 class="hidden">1966</h2>
+		<dl class="dlbox">
+			<dt>August 16, 1966 </dt>
+			<dd>Na (second) 500-won notes, Ga (first) 10-, 5- and 1-won coins issued </dd>
+		</dl>
+		<h3>Na (second) 500-won note</h3>
+		<div class="imgtxtW">
+		<div class="img imgType3">
+			<p>
+				<img src="/static/portal/img/cts/sub1/d_money36_1.jpg" alt="front of 500-won note issued on 16.August,1966" /> 
+				<img src="/static/portal/img/cts/sub1/d_money36_2.jpg" alt="back of 500-won note issued on 16.August,1966" /> 
+			</p>
+		</div>
+		<!-- data table2 S -->
+		<div class="table table-view">
+			<table>
+				<caption>
+				Na (second) 500-won note
+				</caption>
+				<colgroup>
+					<col style="width: 30%;">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th class="w30p" scope="row">Date first issued</th>
+						<td class="w70p">Augst 16, 1966</td>
+					</tr>
+					<tr>
+						<th scope="row">Design</th>
+						<td>South Gate of Seoul (Sungnyemun); Turtle ship (Geobukseon)</td>
+					</tr>
+					<tr>
+						<th scope="row">Size</th>
+						<td>165 &times; 73㎜</td>
+					</tr>
+					<tr>
+						<th scope="row">Printed by</th>
+						<td>KOMSCO</td>
+					</tr>
+					<tr>
+						<th scope="row">Issue ceased</th>
+						<td>May 10, 1975</td>
+					</tr>
+					<tr>
+						<th scope="row">Notes</th>
+						<td><div></div>
+							<br /></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		</div>
+		<!-- data table2 E// -->
+		<h3>Ga (first) 10-won coin</h3>
+		<div class="imgtxtW">
+		<div class="img imgType3">
+			<p>
+				<img src="/static/portal/img/cts/old/d_money37.jpg" alt="front of 10-won coin issued on 16.August,1966, back of 10-won coin issued on 16.August,1966" /> 
+			</p>
+		</div>
+		<!-- data table2 S -->
+		<div class="table table-view">
+			<table>
+				<caption>
+				Ga (first) 10-won coin
+				</caption>
+				<colgroup>
+					<col style="width: 30%;">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th class="w30p" scope="row">Material</th>
+						<td class="w70p">Cu(88%), Zn(12%)</td>
+					</tr>
+					<tr>
+						<th scope="row">Design</th>
+						<td>Stone pagoda in Bulguksa Temple (Dabotap); denomination</td>
+					</tr>
+					<tr>
+						<th scope="row">Diameter</th>
+						<td>22.86㎜</td>
+					</tr>
+					<tr>
+						<th scope="row">Weight</th>
+						<td>4.22g</td>
+					</tr>
+					<tr>
+						<th scope="row">Printed by</th>
+						<td>KOMSCO</td>
+					</tr>
+					<tr>
+						<th scope="row">Issue ceased</th>
+						<td><div></div>
+							<br /></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		</div>
+		<!-- data table2 E// -->
+		<h3>Ga (first) 5-won coin</h3>
+		<div class="imgtxtW">
+		<div class="img imgType3">
+			<p>
+				<img src="/static/portal/img/cts/old/d_money38.jpg" alt="front of 5-won coin issued on 16.August,1966, back of 5-won coin issued on 16.August,1966" />
+			</p>
+		</div>
+		<!-- data table2 S -->
+		<div class="table table-view">
+			<table>
+				<caption>
+				Ga (first) 5-won coin
+				</caption>
+				<colgroup>
+					<col style="width: 30%;">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th class="w30p" scope="row">Material</th>
+						<td class="w70p">Cu(88%), Zn(12%)</td>
+					</tr>
+					<tr>
+						<th scope="row">Design</th>
+						<td>Turtle ship (Geobukseon); denomination</td>
+					</tr>
+					<tr>
+						<th scope="row">Diameter</th>
+						<td>20.40㎜</td>
+					</tr>
+					<tr>
+						<th scope="row">Weight</th>
+						<td>3.09g</td>
+					</tr>
+					<tr>
+						<th scope="row">Printed by</th>
+						<td>KOMSCO</td>
+					</tr>
+					<tr>
+						<th scope="row">Issue ceased</th>
+						<td><div></div>
+							<br /></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		</div>
+		<!-- data table2 E// -->
+		<h3>Ga (first) 1-won coin</h3>
+		<div class="imgtxtW">
+		<div class="img imgType3">
+			<p>
+				<img src="/static/portal/img/cts/old/d_money39.jpg" alt="front of 1-won coin issued on 16.August,1966, back of 1-won coin issued on 16.August,1966" /> 
+			</p>
+		</div>
+		<!-- data table2 S -->
+		<div class="table table-view">
+			<table>
+				<caption>
+				Ga (first) 1-won coin
+				</caption>
+				<colgroup>
+					<col style="width: 30%;">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th class="w30p" scope="row">Material</th>
+						<td class="w70p">Cu(60%), Zn(40%)</td>
+					</tr>
+					<tr>
+						<th scope="row">Design</th>
+						<td>Rose of Sharon; denomination</td>
+					</tr>
+					<tr>
+						<th scope="row">Diameter</th>
+						<td>17.20㎜</td>
+					</tr>
+					<tr>
+						<th scope="row">Weight</th>
+						<td>1.70g</td>
+					</tr>
+					<tr>
+						<th scope="row">Printed by</th>
+						<td>KOMSCO</td>
+					</tr>
+					<tr>
+						<th scope="row">Issue ceased</th>
+						<td>December 1, 1980</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		</div>
+		<!-- data table2 E// --></div>
+	<div id="tabSubmenu1_4"  class="tab-pane fade" role="tabpanel">
+		<h2 class="hidden">1968</h2>
+		<dl class="dlbox">
+			<dt>August 26, 1968 </dt>
+			<dd>Na (second) 1-won coins issued </dd>
+		</dl>
+		<h3>Na (second) 1-won coin</h3>
+		<div class="imgtxtW">
+		<div class="img imgType3">
+			<p>
+				<img src="/static/portal/img/cts/old/d_money40.jpg" alt="front of 1-won coin issued on 26.August,1968, back of 1-won coin issued on 26.August,1968" /> 
+			</p>
+		</div>
+		<!-- data table2 S -->
+		<div class="table table-view">
+			<table>
+				<caption>
+				Na (second) 1-won coin
+				</caption>
+				<colgroup>
+					<col style="width: 30%;">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th class="w30p" scope="row">Material</th>
+						<td class="w70p">Al(100%)</td>
+					</tr>
+					<tr>
+						<th scope="row">Design</th>
+						<td>Rose of Sharon; denomination</td>
+					</tr>
+					<tr>
+						<th scope="row">Diameter</th>
+						<td>17.20㎜</td>
+					</tr>
+					<tr>
+						<th scope="row">Weight</th>
+						<td>0.729g</td>
+					</tr>
+					<tr>
+						<th scope="row">Printed by</th>
+						<td>KOMSCO</td>
+					</tr>
+					<tr>
+						<th scope="row">Issue ceased</th>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		</div>
+		<!-- data table2 E// --></div>
+	<div id="tabSubmenu1_5"  class="tab-pane fade" role="tabpanel">
+		<h2 class="hidden">1969</h2>
+		<dl class="dlbox">
+			<dt>March 21, 1969 </dt>
+			<dd>Na (second) 50-won notes issued </dd>
+		</dl>
+		<h3>Na (second) 50-won note</h3>
+		<div class="imgtxtW">
+		<div class="img imgType3">
+			<p>
+				<img src="/static/portal/img/cts/sub1/d_money36_1.jpg" alt="front of 50-won coin issued on 21.March,1969" /> 
+				<img src="/static/portal/img/cts/sub1/d_money36_2.jpg" alt="back of 50-won coin issued on 21.March,1969" /> 
+			</p>
+		</div>
+		<!-- data table2 S -->
+		<div class="table table-view">
+			<table>
+				<caption>
+				Na (second) 50-won note
+				</caption>
+				<colgroup>
+					<col style="width: 30%;">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th class="w30p" scope="row">Date first issued</th>
+						<td class="w70p">March 21, 1969</td>
+					</tr>
+					<tr>
+						<th scope="row">Design</th>
+						<td>Tapkol Park; Rose of Sharon</td>
+					</tr>
+					<tr>
+						<th scope="row">Size</th>
+						<td>149 &times; 64㎜</td>
+					</tr>
+					<tr>
+						<th scope="row">Printed by</th>
+						<td>KOMSCO</td>
+					</tr>
+					<tr>
+						<th scope="row">Issue ceased</th>
+						<td>October 30, 1973</td>
+					</tr>
+					<tr>
+						<th scope="row">Notes</th>
+						<td>Notes without serial numbers</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		</div>
+		<!-- data table2 E// -->
+	</div>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script src="/static/jslibrary/swiper@8/swiper-bundle.min.js"></script>
+<script src="/static/eng/js/common.js"></script>
+</body>
+</html>

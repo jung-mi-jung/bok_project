@@ -183,6 +183,9 @@ $btn: "[class^=b-]";
 		font-size: 14px;
 		color: #fff;
 		background-color: $color-point;
+		&:hover {
+			color: #fff;
+		}
 		&::before {
 			content: "";
 			display: inline-block;

@@ -256,7 +256,7 @@
 			&.details {
 				.check-ctrl  {
 					margin-top: 5px;
-				}
+				}				
 			}
 		}
 		&.details {
@@ -473,6 +473,16 @@
 			}
 		}
 	}
+	.details {
+		h3 {
+			#content & {
+				&::before {
+					width: calc(100% - 70px);
+				}
+			}			
+		}
+	}
+	
 	h3 {
 		#content & {
 			position: relative;
@@ -518,9 +528,11 @@
 			display: none;
 		}
 		h3 {
-			&::before {
-				width: calc(100% - 75px);
-			}
+			#content & {
+				&::before {
+					width: calc(100% - 55px);
+				}
+			}			
 		}
 		ul {
 			display: flex;

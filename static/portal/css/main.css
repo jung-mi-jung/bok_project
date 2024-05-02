@@ -387,13 +387,14 @@ background: url(/static/portal/img/ico/ico-b-view.png);
 margin-right: 5px;
 }
 
-.popupWrap h1 {
+.bgn .popupWrap h1 {
 background: #484d58;
 color: #fff;
 font-size: 1em;
 padding: 9px 15px;
 font-weight: 500;
 }
+
 .popupWrap .popupBody {
 margin: 20px;
 }
@@ -491,6 +492,7 @@ font-size: 60px;
 text-align: center;
 margin: 60px 0;
 letter-spacing: 20px;
+background-color: transparent;
 }
 .certifi_wrap .subject {
 font-size: 28px;
@@ -552,6 +554,9 @@ background: rgba(0, 0, 0, 0.6);
 border-bottom: none !important;
 }
 @media (min-width: 1200px) {
+#header .globalHeader .container {
+border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
 #header .globalHeader .container ul li + li::before {
 background-color: rgba(255, 255, 255, 0.3);
 }
@@ -585,6 +590,9 @@ color: #000E33;
 #header.over .gnb > ul > li.on > a,
 #header.over .gnb > ul > li.active > a {
 color: #005596;
+}
+#header.over .globalHeader .container {
+border-bottom: 1px solid #E6E6E6;
 }
 #header.over .globalHeader .container ul li + li::before {
 background-color: rgba(0, 85, 150, 0.3);
@@ -1380,7 +1388,7 @@ height: 52px;
 }
 }
 #section2 .swiper .swiper-wrapper a.swiper-slide-active span.txt {
-height: 82px;
+height: 92px;
 color: #4D4D4D;
 font-size: 1.125rem;
 }

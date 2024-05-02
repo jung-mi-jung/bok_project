@@ -1366,6 +1366,15 @@ p.subject {
     margin-bottom: 10px;
     background: #fff;
     text-align: center;
+	&.img2 {
+		@include breakpoint($lg){
+			display: flex;
+			p {
+				width: 50%;
+				margin-bottom: 0;
+			}
+		}
+	}
 }
 
 .img-set {
@@ -2689,7 +2698,7 @@ p.subject {
 			h2 {				
 				color: #000 !important;
 				font-weight: 300 !important;
-				font-size: rem(48) !important;
+				font-size: rem(40) !important;
 				line-height: 1.2;
 				margin-bottom: 30px !important;
 				@include breakpoint($sm){
@@ -2902,6 +2911,7 @@ p.subject {
 			width: 50%;
 		}
 		.his-img {
+			position: relative;
 			width: calc(50% - 80px);
 			margin-right: 40px;
 			overflow: hidden;
@@ -3093,7 +3103,10 @@ p.subject {
 		}
 		.top {
 			h2 {
-				color: #17294D !important;
+				#main-container & {
+					color: #17294D;
+					margin-bottom: 0;
+				}				
 				.t {
 					display: block;
 					color: $color-point;
@@ -3115,6 +3128,10 @@ p.subject {
 						font-size: rem(20);
 					}
 				}
+			}
+			dl {
+				margin-top: 15px;
+				margin-bottom: 50px;
 			}
 		}
 	}
@@ -3399,6 +3416,151 @@ p.subject {
 					color: $color-point;
 					font-weight: 500;
 					margin: 10px 0 15px;
+				}
+			}
+		}
+	}
+}
+
+
+/* 콘텐츠 내부 래프트메뉴 */
+.content-row {
+	display: flex;
+	flex-wrap: wrap;
+	@include breakpoint($smd){
+		display: block;
+	}
+	.js-tab2 {
+		display: none;
+	}
+	.cont-nav {
+		width: 240px;
+		margin-right: 3%;
+		// margin-top: 30px;
+		@include breakpoint($smd) {
+			width: 100%;
+			margin-right: 0;
+			margin-bottom: 30px;
+		}
+		ul {
+			position: sticky;
+			top: 60px;
+			@include breakpoint($smd){
+				margin-top: 8px;
+				display: none;
+			}
+			> li {
+				margin-bottom: 4px;
+				> a {
+					display: block;
+					padding: 6px;
+					color: #333;
+					scroll-behavior: smooth;
+					i {
+						display: none;
+					}
+				}
+				&.on {
+					background: #F2F6FA;
+					border-radius: 8px;
+					> a {
+						display: flex;
+						font-weight: 500;
+						align-items: center;
+						justify-content: space-between;
+						color: #1A1A1A;
+						i {
+							display: inline-block;
+						}
+					}
+				}
+			}
+		}
+	}
+	.cont-right {
+		width: calc(100% - 240px - 3%);
+		padding-left: 3%;
+		@include breakpoint($smd) {
+			width: 100%;
+			padding-left: 0;
+		}
+		h3 {
+			margin: 0 auto 16px;
+		}
+		.cont  {
+			display: block;
+			margin-bottom: 80px;
+		}
+		.tab-list {
+			position: relative;
+			// margin-top: 20px;
+			a {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				flex: none;
+				padding: 8px;
+				// min-width: 190px;
+				min-width: 25%;
+				width: auto;
+				min-height: 40px;
+				box-sizing: border-box;
+				@include breakpoint($sm) {
+					flex: none;
+					min-width: 140px;
+				}
+			}
+		}
+
+	}
+}
+@include breakpoint($smd) {
+	.js-tab2 {
+		display: block;
+		background: #fff;
+		border: 1px solid #E5E5E5;
+		border-radius: 0;
+		button {
+			display: flex;
+			width: 100%;
+			padding: 8px 6px;
+			font-weight: 500;
+			align-items: center;
+			justify-content: space-between;
+			color: #000;
+			&::after {
+				@include font-ico-outline('\e5c5');
+			}
+		}
+		&.on {
+			button {
+				&::after {
+					transform: rotate(180deg);
+					transition: transform .4s;
+				}
+			}
+			+ ul {
+				display: block !important;
+			}
+		}
+	}
+	.content-row .cont-nav ul {
+		display: none;
+		> li {
+			margin-bottom: 0;
+			margin-top: -1px;
+			border: 1px solid #E5E5E5;
+			> a {
+				padding: 8px 6px;
+			}
+			&.on {
+				border-radius: 0;
+				> a {
+					padding: 8px 6px;
+					font-weight: 400;
+					i {
+						display: none;
+					}
 				}
 			}
 		}

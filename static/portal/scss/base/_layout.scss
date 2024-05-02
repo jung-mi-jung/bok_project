@@ -426,7 +426,7 @@
 			position: absolute;
 			top: 12px;
 			left: 0;
-			z-index: 9;
+			z-index: 99;
 			.sns-wrap__set {
 				width: 48px;
 				display: flex;
@@ -1579,17 +1579,19 @@
 									background-repeat: no-repeat;
 									border-radius: 8px;
 									margin-bottom: 15px;
-									&::before {
-										content: "";
-										display: inline-block;
-										width: 40px;
-										height: 40px;
-										background-image: url(/static/portal/img/ico/ico-play.svg);
-										position: absolute;
-										top: 50%;
-										left: 50%;
-										margin-left: -20px;
-										margin-top: -20px;
+									&.media {
+										&::before {
+											content: "";
+											display: inline-block;
+											width: 40px;
+											height: 40px;
+											background-image: url(/static/portal/img/ico/ico-play.svg);
+											position: absolute;
+											top: 50%;
+											left: 50%;
+											margin-left: -20px;
+											margin-top: -20px;
+										}
 									}
 								}
 								&.t {

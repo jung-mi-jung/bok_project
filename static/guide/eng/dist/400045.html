@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>서브명 | Bank of Korea</title>
+	<link type="text/css" rel="stylesheet" href="/static/eng/css/sub.css">
+	<script src="/static/jslibrary/jquery-3.5.1.min.js"></script>
+	<script src="/static/jslibrary/jquery.cookie.js"></script>
+	<script src="/static/jslibrary/bootstrap/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="/static/jslibrary/swiper@8/swiper-bundle.min.css">
+	<script src="/static/jslibrary/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js"></script>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta property="og:type"			content="website">
+	<meta property="og:title"			content="${title}">
+	<meta property="og:description"		content="${title}">
+</head>
+<body>
+<div class="skip">
+	<a href="#content">Skip to content</a>
+</div>
+<div id="wrap">
+	<div class="gnb_bg"></div>
+	<!-- header -->
+	<header id="header">
+		<div class="globalHeader">
+			<div class="container">
+				<ul>
+					<li>
+						<a href="/imerEng/main/main.do" target="_blank" title="새창열림">Economic Research Institute</a>
+					</li>
+				</ul>
+				<div class="g-info">
+					<div class="global">
+						<ul>
+							<li>
+								<a href="/portal/main/main.do" target="_blank" title="새창열림">KOREAN</a>
+							</li>
+						</ul>
+					</div>					
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<h1 class="logo">
+				<a href="">
+					<span class="sr-only">Bank of Korea</span>
+				</a>
+			</h1>
+			<!-- gnb -->
+			<nav class="gnb" id="gnb">
+				<ul>
+					<li class="menu01">
+						<a href=""><span>About BOK</span></a>
+					</li>
+					<li class="menu02 active">
+						<a href=""><span>Topics</span></a>
+					</li>
+					<li class="menu03">
+						<a href=""><span>News&Publications</span></a>
+					</li>
+					<li class="menu04">
+						<a href=""><span>Money Museum</span></a>
+					</li>
+				</ul>
+			</nav>
+			<!-- //gnb -->
+			<div class="toggle-set">
+				<button type="button" class="all-nav-toggle" data-toggle="modal" data-target="#totalMenu" title="Open Total Menu"></button>
+				<button type="button" class="search" title="Open Search Layer"></button>
+				<div class="search_wrap">
+					<form action="">
+						<div class="search_wrap_input">
+							<input type="text" class="search_keyword" name="query" id="queryTop" placeholder="검색어를 입력해 주세요." autocomplete="off" maxlength="50">
+							<div class="dqAuto" tabindex="0" style="display: none;">
+								<ul class="autoList">
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+								</ul>
+								<div class="bottom">
+									<a href="javascript:void(0);" id="topSrchClose" class="btnClose">자동완성 닫기</a>
+								</div>
+							</div>	
+							<button type="button" class="btn_search search" aria-label="검색"></button>
+						</div>
+						<button type="button" class="search_close" aria-label="검색 닫기"></button>
+					</form>
+				</div>
+			</div>			
+		</div>
+
+		<!-- 전체메뉴 -->
+		<div class="modal fade total-nav" id="totalMenu" tabindex="-1" role="dialog">
+			<div class="lpop modal-dialog" role="document">
+				<div class="set modal-content">
+					<div class="modal-header">
+						<div class="container">
+							<button type="button" class="close" data-dismiss="modal"><i class="ti-close"></i><span class="sr-only">레이어 창닫기</span></button>
+							<h1 class="modal-title" id="modal-label1">
+								<span class="totalnav-logo"></span>전체메뉴
+							</h1>
+							<form>
+								<fieldset>
+									<legend class="sr-only">전체메뉴 검색</legend>
+									<div class="keyword-set">
+										<span class="keyword"><input type="text" title="검색어"></span>
+										<button type="button" class="search" onclick="" aria-label="검색"></button>
+									</div>
+								</fieldset>
+							</form>
+						</div>
+					</div>
+					<div class="modal-body">
+						<div class="container">
+							<ul class="dp1">
+								<li>
+									<a href=""><span>한국은행</span></a>
+									<a href="javascropt:void(0)" class="m-dp1"><span>한국은행</span></a>
+									<ul class="dp2">
+										<li>
+											<a href="">개요</a>
+										</li>
+										<li>
+											<a href="">설립목적 및 역사</a>
+										</li>
+										<li>
+											<a href="">금융통화위원회</a>
+										</li>
+										<li>
+											<a href="">조직도</a>
+										</li>
+										<li>
+											<a href="">운영 및 법규</a>
+											<ul class="dp3">
+												<li>
+													<a href="">전략 및 조직가치</a>
+												</li>
+												<li>
+													<a href="">경영정보</a>
+												</li>
+												<li>
+													<a href="">계약정보</a>
+												</li> 
+												<li>
+													<a href="">윤리경영</a>
+												</li>
+												<li>
+													<a href="">법규정보</a>
+												</li>
+												<li>
+													<a href="">사회공헌</a>
+												</li>
+												<li>
+													<a href="">채용</a>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href="">오시는 길</a>
+										</li>
+										<li>
+											<a href="">지역본부(종합)</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<ul class="dp1">
+								<li>
+									<a href=""><span>정책 및 업무</span></a>
+									<a href="javascropt:void(0)" class="m-dp1"><span>정책 및 업무</span></a>
+								</li>
+							</ul>
+							<ul class="dp1">
+								<li>
+									<a href=""><span>뉴스 및 자료</span></a>
+									<a href="javascropt:void(0)" class="m-dp1"><span>뉴스 및 자료</span></a>
+									<ul class="dp2">
+										<li>
+											<a href="">개요</a>
+										</li>
+										<li>
+											<a href="">설립목적 및 역사</a>
+										</li>
+										<li>
+											<a href="">금융통화위원회</a>
+										</li>
+										<li>
+											<a href="">조직도</a>
+										</li>
+										<li>
+											<a href="">운영 및 법규</a>
+											<ul class="dp3">
+												<li class="dropdown">
+													<a href="javascript:void(0)" title="하위메뉴 열기">
+														<span><span class="highlight">전략</span> 및 조직가치</span>
+														<i class="ico-arrow"></i>
+													</a>
+													<ul class="dp4">
+														<li>
+															<a href="">
+																<span><span class="highlight">전략</span></span>
+															</a>
+														</li>
+														<li>
+															<a href=""><span>조직가치</span></a>
+														</li>
+														<li>
+															<a href=""><span>운영리스트 관리</span></a>
+														</li>
+														<li>
+															<a href=""><span>CI소개</span></a>
+														</li>
+													</ul>
+												</li>
+												<li>
+													<a href=""><span>경영정보</span></a>
+												</li>
+												<li>
+													<a href=""><span>계약정보</span></a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<ul class="dp1">
+								<li>
+									<a href=""><span>멀티콘텐츠</span></a>
+									<a href="javascropt:void(0)" class="m-dp1"><span>멀티콘텐츠</span></a>
+								</li>
+							</ul>
+							<ul class="dp1">
+								<li>
+									<a href=""><span>주요서비스</span></a>
+									<a href="javascropt:void(0)" class="m-dp1"><span>주요서비스</span></a>
+									<ul class="dp2">
+										<li>
+											<a href="">개요</a>
+										</li>
+										<li>
+											<a href="">설립목적 및 역사</a>
+										</li>
+										<li>
+											<a href="">금융통화위원회</a>
+										</li>
+										<li>
+											<a href="">조직도</a>
+										</li>
+										<li>
+											<a href="">운영 및 법규</a>
+											<ul class="dp3">
+												<li class="dropdown">
+													<a href="javascript:void(0)" title="하위메뉴 열기">
+														<span><span class="highlight">전략</span> 및 조직가치</span>
+														<i class="ico-arrow"></i>
+													</a>
+													<ul class="dp4">
+														<li>
+															<a href="">
+																<span><span class="highlight">전략</span></span>
+															</a>
+														</li>
+														<li>
+															<a href=""><span>조직가치</span></a>
+														</li>
+														<li>
+															<a href=""><span>운영리스트 관리</span></a>
+														</li>
+														<li>
+															<a href=""><span>CI소개</span></a>
+														</li>
+													</ul>
+												</li>
+												<li>
+													<a href=""><span>경영정보</span></a>
+												</li>
+												<li>
+													<a href=""><span>계약정보</span></a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //전체메뉴 -->
+		
+	</header>	
+	<!-- //header -->
+
+	<!-- navigation -->
+	<div class="navigation">
+		<nav class="container">
+			<ul>
+				<li class="home"><span>Home</span></li>
+				<li>
+					<a href="" title="하위메뉴 열기">News&Publications</a>
+					<div class="depth2">
+						<ul>
+							<li>
+								<a href="">About BOK</a>
+							</li>
+							<li>
+								<a href="">Topics</a>
+							</li>
+							<li class="on">
+								<a href="">News&Publications</a>
+							</li>
+							<li>
+								<a href="">Money Museum</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="" title="하위메뉴 열기">news</a>
+					<div class="depth2">
+						<ul>
+							<li class="on">
+								<a href="">news</a>
+							</li>
+							<li>
+								<a href="">Notice</a>
+							</li>
+							<li>
+								<a href="">Events</a>
+							</li>
+							<li>
+								<a href="">Speeches</a>
+							</li>
+							<li>
+								<a href="">Research</a>
+							</li>
+							<li>
+								<a href="">Periodicals</a>
+							</li>
+							<li>
+								<a href="">Books</a>
+							</li>
+							<li>
+								<a href="">documents</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="">Press Releases</a>
+				</li>
+			</ul>
+			<div class="top-page-toolbar">
+				<div class="page-toolbar">
+					<button type="button" class="sns-toggle" aria-label="SNS 공유"></button>
+					<div class="sns-wrap">
+						<div class="sns-wrap__set">
+							<button type="button" data-type="close" class="close" aria-label="SNS 공유 닫기"></button>
+							<button type="button" data-type="youtube" class="ico-youtube" aria-label="유튜브 공유 새창열림"></button>
+							<button type="button" data-type="instagram" class="ico-instagram" aria-label="인스타그램 공유 새창열림"></button>
+							<button type="button" data-type="facebook" class="ico-facebook" aria-label="페이스북 공유 새창열림"></button>
+							<button type="button" data-type="twitter" class="ico-twitter" aria-label="트위터 공유 새창열림"></button>
+						</div>
+					</div>
+					<a href="/static/view/forPrint.html" data-size="1200, 700, yes" target="_blank" title="새창열림" class="page-print b-pop">
+						<span class="sr-only">프린트</span>
+					</a>
+					<a href="/static/view/eng/popup/rss_popup.html" data-size="800, 500, yes" class="page-rss b-pop" target="_blank" title="새창열림">
+						<span class="sr-only">rss BANK OF KOREA</span>
+					</a>
+				</div>
+			</div>
+		</nav>
+		<div class="sub-_visual">
+			<div class="hgroup">
+				<h1>News&Publications</h1>	
+			</div>
+		</div>
+	</div>
+	<!-- //navigation -->
+
+	<!-- content -->
+	<div class="container" id="content">
+		<main id="main-container">
+
+			<div class="lnb-nav">
+				<h1>Index</h1>
+				<ul>
+					<li class="on">
+						<a href="">Treasury Service</a>
+						<ul>
+							<li class="on">
+								<a href="">Treasury Service</a>
+							</li>
+							<li>
+								<a href="">Overview of Securities Business</a>
+							</li>
+							<li>
+								<a href="">[Appendix] Overview of Treasury Bond</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="">Overview of Securities Business</a>
+					</li>
+					<li>
+						<a href="">Securities Custody Services for overseas official institutions</a>
+					</li>
+				</ul>
+			</div>
+
+			
+			<div class="content">
+
+
+
+<h2>Payment and Settlement Systems in Korea</h2>
+<h3>General Overview</h3>
+<p>The payment and settlement systems in Korea were for long heavily dependent on paper-based payment instruments. This is attributable to individuals' traditionally strong preference for cash as a payment instrument and the well-developed bill and cashiers check system. Nevertheless, the use of non-paper based payment instruments has grown steadily since the 1980s with electronic funds transfer systems such as Interbank Funds Transfer System and the Interbank CD/ATM System being established. The spread of e-commerce transactions and introduction of Internet banking in recent years are accelerating the movement toward a further diversification of the range of electronic payment and settlement systems.</p>
+<p>The payment and settlement system in Korea consists mainly of a large-value settlement system, various retail payment systems, securities settlement systems, and foreign exchange settlement systems. The main large-value payment system is the Bank of Korea Financial Wire Network (BOK-Wire+), which is a hybrid settlement system owned and operated by the Bank of Korea (BOK). Most of the major retail payment systems are run by Korea Financial Telecommunications &amp; Clearings Institute (KFTC). Representatives of such systems are the Check Clearing System, the Giro System, the Interbank Shared Network Systems, and the B2C &amp; B2B E-commerce Payment Systems. There are credit card payment systems as well. Recently, a few retail payment systems which are run by non-financial institutions such as telecommunication companies have also appeared. Securities settlement systems include the Securities Market Settlement System and the KOSDAQ Market Settlement System managed by Korea Exchange(KRX) and the OTC Bond Market Settlement System run by Korea Securities Depository(KSD). In December 2004, the Korean won has become a settlement currency in CLS bank&rsquo;s Payment versus Payment (PvP) settlement system for foreign exchange transactions.</p><!-- <div class="conImg"> <p class="img"><img src="/static/eng/img/cts/old/org.png" alt="" /></p> </div> -->
+<div class="imgSet"> 
+<p class="visible-md"><img alt="General Overview" src="/static/eng/img/cts/sub2/400045.gif"></p> 
+<p class="visible-sm"><a title="zoom in" href="/static/eng/img/cts/sub2/400045.gif" data-rel="prettyPhoto"><img alt="General Overview" src="/static/eng/img/cts/sub2/400045.gif"></a></p></div>
+<div class="hidden"> 
+<ul> 
+<li><dl><dt>Bank of Korea (BOK-Wire+)</dt><dd> Designated-Time Net Settlement, - Real-Time Gross Settlement, - Bilateral and multilateral offsetting settlement, - Delivery versus Payment settlement</dd></dl> 
+<ul> 
+<li>Designated-Time Net Settlement <dl><dt>KFTC (Retail Payment Systems)</dt><dd> Check Clearing System, - GIRO System, - Interbank Shared Network : CD, IFT, etc., - E-commerce Payment System : B2C, B2B</dd></dl> 
+<ul> 
+<li>Retail Transactions <dl><dt>Financial Institutions</dt><dd>- Domestic Banks, - Korean Branches of Foreign Banks, - Post Office, - Korean Federation of Savings Banks, - Federation of Community Credit Cooperatives, - National Credit Union Federation of Korea, - Financial investment Companies</dd></dl></li> 
+</ul></li> 
+<li>Delivery versus Payment Settlement <dl><dt>Korea Securities Depository, Korea Exchange (Securities Settlement System)</dt><dd>- Securities Market Settlement System, - KOSDAQ Market Settlement System, - OTC Bond Market Settlement System</dd></dl> 
+<ul> 
+<li>Securities Trades <dl><dt>Securities Trading Institutions</dt><dd>- Domestic Banks, - Korean Branches of Foreign Banks, - Securities Companies, - Investment Trust Companies, - Other Institutional Investors</dd></dl></li> 
+</ul></li> 
+<li>Payment versus Payment Settlement 
+<p>CLS Bank(Foreign Exchange Settlement System)</p> 
+<ul> 
+<li>Foreign Exchange Transactions <dl><dt>Foreign Exchange Settlement Institutions</dt><dd>- Domestic Banks, - Settlement Member Banks, - Third Party Customer Banks, - Korean Branches of Foreign Banks</dd></dl></li> 
+</ul></li> 
+<li>RIGS <dl><dt>BOK-Wire+ Participant institutions</dt><dd>- Domestic Banks, - Korean Branches of foreign Banks, - Securities Compaines, - Insurance Companies, - Other Related Institutions</dd></dl></li> 
+</ul></li> 
+</ul></div>
+<h3>Roles of the Bank of Korea</h3>
+<p>The central bank roles are rapidly growing in the payment and settlement system worldwide with a view to heightening its safety and efficiency. In line with these international trends, the BOK was given the authority for the holistic management and oversight of the payment and settlement system in Korea by the revised Bank of Korea Act of 2003. Even before the revision of the Bank of Korea Act, the BOK had already been involved in various functions aimed at ensuring the safety and efficiency of the payment system, which serves not only as an important part of the financial system infrastructure but also a pivotal monetary policy transmission channel.</p>
+<p>As is the case with most other central banks, the BOK issues legal tender, provides payment services for final settlement to financial institutions by operating the large-value settlement system, extends loans to financial institutions in its role as lender of last resort, and improves the payment systems by helping financial institutions introduce new payment instruments.</p>
+<h4>Provision of Final Settlement Service</h4>
+<p>As the exclusive provider of payment instruments with settlement finality, the BOK provides finality of settlement to financial institutions across their current accounts with the BOK. Funds transfer across their current accounts with the BOK is used for transactions among financial institutions or transactions between the BOK and financial institutions, the net settlement of retail payment systems, and the disbursement and receipt of Treasury funds.</p>
+<h4>Operation of BOK-Wire+</h4>
+<p>The BOK has operated a large-value settlement system, BOK-Wire, since December 1994, with the aim of effectively satisfying the growing demand for large-value payments amid expansion of the nation&rsquo;s economy and financial markets. BOK-Wire is a real-time gross settlement system providing funds transfers for various types of transactions including short-term financial market transactions, securities settlement, foreign exchange settlement and net settlements arising from the retail payment systems. BOK-Wire was renamed BOK-Wire+ from April 2009, when a hybrid system was added to the old system to help save participants' settlement liquidity through such features as a continuous bilateral and multilateral offsetting mechanism.</p>
+<h4>Provision of Liquidity</h4>
+<p>The BOK may provide liquidity for financial institutions facing unexpected temporary liquidity shortages, in order to prevent chain defaults and ensure financial stability. In this regard, the BOK supplies settlement liquidity to financial institutions - especially banks and securities broker-dealers - lacking it, through intraday overdrafts, liquidity adjustment loans or intraday repo transactions in order to prevent delays in overall settlement caused by temporary liquidity shortages. The BOK is able to fulfil this key role not only because of its exclusive right as the central bank to issue legal tender, but also because it is entitled to promptly intervene in the market in times of crisis as a provider of liquidity to financial institutions.</p>
+<h4>Improvement and Development of Payment and Settlement Systems</h4>
+<p>Apart from operating BOK-Wire+ directly as a large-value payment system, the BOK also acts as the secretariat of the Financial Informatization Promotion Subcommittee to lead the nation&rsquo;s financial informatization as prescribed in the Framework Act on Informatization Promotion of 1996. The BOK also supports the improvement and expansion of retail payment systems by taking part in major decision-making processes at the board of directors meetings and general meetings of KFTC, which operates most of the major retail payment systems including the Check Clearing System, the Giro System, and the Electronic Banking System.</p>
+<h4>Oversight of Payment and Settlement Systems</h4>
+<p>To heighten safety and efficiency of payment and settlement systems, the BOK exercises oversight of payment instruments, participants, operating organizations, regulations and business procedures, and computer systems, etc.</p>
+<p>The BOK's oversight business involves the selection and classification of payment systems subject to oversight, the collection and analysis of materials related to payments and settlements, assessment of the safety and efficiency of payment systems subject to oversight, requests for improvements of payment systems subject to oversight and measures taken in the event of emergency.</p>
+
+<div class="info-btn type2">
+	<ul class="bu-dot">
+		<li><span>Systemically Important Payment and Settlement Systems</span><span class="btnStyle"><a class="b-download" href="/portal/cmmn/file/fileDown.do?atchFileId=FILE_000000000001491&amp;fileSn=4">PDF download</a></span></li> 
+		<li><span>Settlement Finality Guaranteed Payment and Settlement Systems</span><span class="btnStyle"><a class="b-download" href="/portal/cmmn/file/fileDown.do?atchFileId=FILE_000000000001491&amp;fileSn=3">PDF download</a></span></li> 
+		<li><span>Payment and Settlement Systems in Korea (full text)</span><span class="btnStyle"><a class="b-download" href="/portal/cmmn/file/fileDown.do?atchFileId=FILE_000000000001491&amp;fileSn=2">PDF download</a></span></li> 
+		<li><span>Payment and Settlement Systems Report 2021 (full text) &nbsp;</span><span class="btnStyle"><a class="b-download" href="/portal/cmmn/file/fileDown.do?atchFileId=FILE_000000000001491&amp;fileSn=5">PDF download</a></span></li> 
+	</ul>
+</div>
+
+
+
+
+</div>
+
+<script src="/static/jslibrary/swiper@8/swiper-bundle.min.js"></script>
+<script src="/static/eng/js/common.js"></script>
+</body>
+</html>
