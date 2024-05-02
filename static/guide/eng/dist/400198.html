@@ -8,8 +8,8 @@
 	<script src="/static/jslibrary/jquery-3.5.1.min.js"></script>
 	<script src="/static/jslibrary/jquery.cookie.js"></script>
 	<script src="/static/jslibrary/bootstrap/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="/static/jslibrary/swiper@8/swiper-bundle.min.css">
 	<script src="/static/jslibrary/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js"></script>
+	<link rel="stylesheet" href="/static/jslibrary/swiper@8/swiper-bundle.min.css">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta property="og:type"			content="website">
 	<meta property="og:title"			content="${title}">
@@ -37,7 +37,7 @@
 								<a href="/portal/main/main.do" target="_blank" title="새창열림">KOREAN</a>
 							</li>
 						</ul>
-					</div>					
+					</div>
 				</div>
 			</div>
 		</div>
@@ -52,22 +52,129 @@
 				<ul>
 					<li class="menu01">
 						<a href=""><span>About BOK</span></a>
+						<div class="depth2">
+							<ul>
+								<li>
+									<a href="">History and Mission</a>
+								</li>
+								<li>
+									<a href="">Former Governors</a>
+								</li>
+								<li>
+									<a href="">Function</a>
+								</li>
+								<li>
+									<a href="">Organization</a>
+								</li>
+								<li>
+									<a href="">Vision, Values and Strategies</a>
+								</li>
+								<li>
+									<a href="">Bank of Korea CI</a>
+								</li>
+								<li>
+									<a href="">Releases & Publications</a>
+								</li>
+								<li>
+									<a href="">Contacts</a>
+								</li>
+							</ul>
+						</div>
 					</li>
 					<li class="menu02 active">
 						<a href=""><span>Topics</span></a>
+						<div class="depth2">
+							<ul>
+								<li>
+									<a href="">Monetary Policy</a>
+								</li>
+								<li>
+									<a href="">Financial Stability</a>
+								</li>
+								<li>
+									<a href="">Currency</a>
+								</li>
+								<li>
+									<a href="">Payment and Settlement Systems</a>
+								</li>
+								<li>
+									<a href="">Central Bank Digital Currency</a>
+								</li>
+								<li>
+									<a href="">Treasury & Debt Securities</a>
+								</li>
+								<li>
+									<a href="">Foreign Exchange System</a>
+								</li>
+								<li>
+									<a href="">International Relations</a>
+								</li>
+							</ul>
+						</div>
 					</li>
 					<li class="menu03">
 						<a href=""><span>News&Publications</span></a>
+						<div class="depth2">
+							<ul>
+								<li>
+									<a href="">news</a>
+								</li>
+								<li>
+									<a href="">Notice</a>
+								</li>
+								<li>
+									<a href="">Events</a>
+								</li>
+								<li>
+									<a href="">Speeches</a>
+								</li>
+								<li>
+									<a href="">Research</a>
+								</li>
+								<li>
+									<a href="">Periodicals</a>
+								</li>
+								<li>
+									<a href="">Books</a>
+								</li>
+								<li>
+									<a href="">documents</a>
+								</li>
+								<li>
+									<a href="">Videos</a>
+								</li>
+							</ul>
+						</div>
 					</li>
 					<li class="menu04">
 						<a href=""><span>Money Museum</span></a>
+						<div class="depth2">
+							<ul>
+								<li>
+									<a href="">About Bank of Korea Money Museum</a>
+								</li>
+								<li>
+									<a href="">Guide</a>
+								</li>
+								<li>
+									<a href="">Exhibitions</a>
+								</li>
+								<li>
+									<a href="">Collection</a>
+								</li>
+								<li>
+									<a href="">Exhibition at Branches</a>
+								</li>
+							</ul>
+						</div>
 					</li>
-				</ul>
+				</ul>				
+				<!-- //gnb -->
+				<button type="button" class="all-nav-toggle" data-toggle="modal" data-target="#totalMenu" title="전체 메뉴 열기"></button>
 			</nav>
-			<!-- //gnb -->
 			<div class="toggle-set">
-				<button type="button" class="all-nav-toggle" data-toggle="modal" data-target="#totalMenu" title="Open Total Menu"></button>
-				<button type="button" class="search" title="Open Search Layer"></button>
+				<button type="button" class="all-nav-toggle" data-toggle="modal" data-target="#totalMenu" title="전체 메뉴 열기"></button>
+				<button type="button" class="search" title="검색레이어 열기"></button>
 				<div class="search_wrap">
 					<form action="">
 						<div class="search_wrap_input">
@@ -111,9 +218,8 @@
 						<button type="button" class="search_close" aria-label="검색 닫기"></button>
 					</form>
 				</div>
-			</div>			
+			</div>
 		</div>
-
 		<!-- 전체메뉴 -->
 		<div class="modal fade total-nav" id="totalMenu" tabindex="-1" role="dialog">
 			<div class="lpop modal-dialog" role="document">
@@ -140,7 +246,6 @@
 							<ul class="dp1">
 								<li>
 									<a href=""><span>한국은행</span></a>
-									<a href="javascropt:void(0)" class="m-dp1"><span>한국은행</span></a>
 									<ul class="dp2">
 										<li>
 											<a href="">개요</a>
@@ -192,13 +297,11 @@
 							<ul class="dp1">
 								<li>
 									<a href=""><span>정책 및 업무</span></a>
-									<a href="javascropt:void(0)" class="m-dp1"><span>정책 및 업무</span></a>
 								</li>
 							</ul>
 							<ul class="dp1">
 								<li>
 									<a href=""><span>뉴스 및 자료</span></a>
-									<a href="javascropt:void(0)" class="m-dp1"><span>뉴스 및 자료</span></a>
 									<ul class="dp2">
 										<li>
 											<a href="">개요</a>
@@ -251,13 +354,11 @@
 							<ul class="dp1">
 								<li>
 									<a href=""><span>멀티콘텐츠</span></a>
-									<a href="javascropt:void(0)" class="m-dp1"><span>멀티콘텐츠</span></a>
 								</li>
 							</ul>
 							<ul class="dp1">
 								<li>
 									<a href=""><span>주요서비스</span></a>
-									<a href="javascropt:void(0)" class="m-dp1"><span>주요서비스</span></a>
 									<ul class="dp2">
 										<li>
 											<a href="">개요</a>
@@ -313,12 +414,11 @@
 			</div>
 		</div>
 		<!-- //전체메뉴 -->
-		
 	</header>	
 	<!-- //header -->
 
 	<!-- navigation -->
-	<div class="navigation">
+	<div class="navigation">		
 		<nav class="container">
 			<ul>
 				<li class="home"><span>Home</span></li>
@@ -409,53 +509,257 @@
 	<div class="container" id="content">
 		<main id="main-container">
 
-			<div class="lnb-nav">
-				<h1>Index</h1>
-				<ul>
-					<li class="on">
-						<a href="">Treasury Service</a>
-						<ul>
-							<li class="on">
-								<a href="">Treasury Service</a>
-							</li>
-							<li>
-								<a href="">Overview of Securities Business</a>
-							</li>
-							<li>
-								<a href="">[Appendix] Overview of Treasury Bond</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="">Overview of Securities Business</a>
-					</li>
-					<li>
-						<a href="">Securities Custody Services for overseas official institutions</a>
-					</li>
-				</ul>
-			</div>
-
-			
 			<div class="content">
 
 
 
-<h2>International Reserves and External Debts</h2>
-<p>Korea's international reserves stood at <span class="point">420.1</span> billion dollars at the end of Dec. <span class="point">2023</span>, the world's ninth largest total after those of <span class="point">China, Japan, Switzerland, India, Russia, Taiwan, Saudi Arabia and Hongkong.</span> The amount has increased sharply due to sizeable current account surpluses and large inflows of foreign investment, from 20.4 billion dollars (8.9 billion dollars on the basis of usable reserves) at the end of 1997.</p>
-<p>Korea's net external debts recorded <span class="point">63.8 billion dollars</span> at the end of 1997. Korea became a creditor country in 2000, and its net external assets stood at <span class="point">364.2 billion dollars as of the end of Dec. 2023.</span></p>
+
+<h3 class="mt0">Current Status of the Bank of Korea’s Currency Swap Arrangements</h3>
+
+<p>Bank of Korea has actively pursued currency swap arrangements with major central banks to enhance financial safety nets and other initiatives. Korea also participates in the Chiang Mai Initiative Multilateralization (CMIM), a multilateral currency swap arrangement that promotes stability in regional financial markets by preventing liquidity crises and supporting ex-post resolution in the ASEAN+3 economies.</p>
+<p>Thanks to these efforts, as of the end of February 2024, the Bank has currency swap arrangements totaling approximately $148.2 billion (excluding Canada, which does not have a pre-set limit) in value.</p>
 
 
-<h3>International Reserves and External Debts in Korea</h3><!-- <div class="imgSet"> <p><img alt="" src="/static/eng/img/cts/old/noname02.png" /></p> </div> -->
-<div class="imgSet"> 
-<p class="visible-md">
-	<img src="/static/eng/img/sub/img_400196.png" alt="This image is an example graph showing the International Reserves and External Debts in Korea by year. The horizontal axis of this graph shows the year from 1997 to 2017. Korea's net external debts recorded 63.7 billion dollars at the end of 1997. Korea's net external assets stood at 407.4 billion dollars as of the end of Dec. 2017."></p> 
-	<p class="visible-sm"><a href="/static/eng/img/sub/img_400196.png" data-rel="prettyPhoto" title="zoom in"><img src="/static/eng/img/sub/img_400196.png" alt="This image is an example graph showing the International Reserves and External Debts in Korea by year. The horizontal axis of this graph shows the year from 1997 to 2017. Korea's net external debts recorded 63.7 billion dollars at the end of 1997. Korea's net external assets stood at 407.4 billion dollars as of the end of Dec. 2017."></a></p>
+<h2 class="tac"><span style="color: rgb(51, 51, 51); font-size: 16pt; font-weight: bold;"><span style="text-decoration: underline; font-size: 12pt;">Current Status of the BOK’s Currency Swap Arrangements</span></span> <br>
+<span style="color: rgb(51, 51, 51);font-size: 12pt;">(as of the end 2022)</span><br></h2>
+
+
+<div class="table tac scrollX">
+	<table> 
+		<thead>
+			<tr>
+				<th></th>
+				<th colspan="9">Bilateral</th>
+				<th>Multilateral</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr style="background-color: #eee;">
+				<td></td>
+				<td>Canada<br>
+					(KRW↔CAD)</td>
+				<td>China<br>
+					(KRW↔CNY)</td>
+				<td>Switzerland<br>
+					(KRW↔CHF)</td>
+
+				<td>Japan<br>
+					(KRW↔USD)</td>
+				<td>Indonesia<br>
+					(KRW↔IDR)</td>
+				<td>Australia<br>
+					(KRW↔AUD)</td>
+				<td>UAE<br>
+					(KRW↔AED)
+				</td>
+				<td>Malaysia<br>
+					(KRW↔MYR)</td>
+				<td>Türkiye
+					(KRW↔TRY)</td>
+				<td>CMIM</td>
+			</tr>
+			<tr>
+				<td rowspan="2">Total principal amount</td>
+				<td rowspan="2" class="line">(+α)1)</td>
+				<td>70 trillion KRW	<br>↔<br> 400 billion CNY</td>
+				<td>11.2 trillion KRW <br>↔<br> 10 billion</td>
+				<td rowspan="2">10 billion USD</td>
+				<td>CHF 10.7 trillion KRW <br>↔<br> 115 trillion IDR</td>
+				<td>9.6 trillion KRW <br>↔<br> 12 billion AUD</td>
+				<td>6.1 trillion KRW <br>↔<br> 20 billion AED</td>
+				<td>5 trillion KRW <br>↔<br> 15 billion</td>
+				<td>MYR 2.3 trillion KRW <br>↔<br> 17.5 billion TRY</td>
+				<td rowspan="2">38.4 billion USD</td>
+			</tr>
+			<tr>
+				<td>(59 billion USD)</td>
+				<td>(10.6 billion USD)</td>
+				<td>(10 billion USD)</td>
+				<td>(8.1 billion USD)</td>
+				<td>(5.4 billion USD)</td>
+				<td>(4.7 billion USD)</td>
+				<td>(2 billion USD)</td>
+			</tr>
+			<tr>
+				<td>Arranged (extended) in</td>
+				<td>Nov.2017</td>
+				<td>Oct.2020</td>
+				<td>Mar.2021</td>
+				<td>Dec.2023</td>
+				<td>Mar.2023</td>
+				<td>Feb.2023</td>
+				<td>Apr.2022</td>
+				<td>Feb.2020</td>
+				<td>Aug.2021</td>
+				<td>Jul.2014</td>
+			</tr>
+		</tbody>
+	</table> 
 </div>
 
 
+			</div>
+
+
+<!-- 만족도 -->
+<div class="admin-set">
+	<div class="satisfact">
+		<p class="title">유용한 정보가 되었나요?</p>
+		<div class="radio-group">
+			<label for="sati1">
+				<input type="radio" name="stsfdgIdex" id="sati1">
+				<i></i>
+				<span>매우만족</span>
+			</label>
+			<label for="sati2">
+				<input type="radio" name="stsfdgIdex" id="sati2">
+				<i></i>
+				<span>만족</span>
+			</label>
+			<label for="sati3">
+				<input type="radio" name="stsfdgIdex" id="sati3">
+				<i></i>
+				<span>보통</span>
+			</label>
+			<label for="sati4">
+				<input type="radio" name="stsfdgIdex" id="sati4">
+				<i></i>
+				<span>불만족</span>
+			</label>
+			<label for="sati5">
+				<input type="radio" name="stsfdgIdex" id="sati5">
+				<i></i>
+				<span>매우불만족</span>
+			</label>
+		</div>
+		<button>확인</button>
+	</div>
+	<div class="info">
+		<dl>
+			<dt>담당부서</dt>
+			<dd>기획협력국 전략기획팀</dd>
+			<dt class="sr-only">전화번호</dt>
+			<dd>02-759-4507</dd>
+		</dl>
+	</div>
+</div>
+<!-- //만족도 -->
+
+			<!-- 내가 본 콘텐츠	-->
+			<div class="my_memo">
+				<button type="button" class="btn" title="내가 본 콘텐츠 열기">
+					<span class="sr-only">내가 본 콘텐츠</span>
+				</button>
+				<div class="swiper">
+					<div class="top">
+						<h2>내가 본 콘텐츠</h2>
+						<button type="button" class="close" title="내가 본 콘텐츠 닫기"></button>
+					</div>
+					<div class="swiper_body">
+						<div class="swiper-wrapper">
+							<a href="" class="swiper-slide">
+								<span class="i">보도자료</span>
+								<span class="txt">2023년 4/4분기 및 연간 실질 국내총생산(속보)</span>
+							</a>
+							<a href="" class="swiper-slide">
+								<span class="i">공지사항</span>
+								<span class="txt">경제통계국 국민소득총괄팀 통계조사보조원 채용 안내</span>
+							</a>
+							<a href="" class="swiper-slide">
+								<span class="i">블로그</span>
+								<span class="txt">2023년 한국계 외화채권 시장의 특징 및 2024년 전망</span>
+							</a>
+							<a href="" class="swiper-slide">
+								<span class="i">연구자료</span>
+								<span class="txt">기후변화 물리적리스크가 글로벌가치사슬을 통해 국내 거시경제에 미치는 영향</span>
+							</a>
+							<a href="" class="swiper-slide">
+								<span class="i">공지사항</span>
+								<span class="txt">경제통계국 국민소득총괄팀 통계조사보조원 채용 안내</span>
+							</a>
+							<a href="" class="swiper-slide">
+								<span class="i">블로그</span>
+								<span class="txt">2023년 한국계 외화채권 시장의 특징 및 2024년 전망</span>
+							</a>
+						</div>
+					</div>
+					<div class="ctrl">
+						<button type="button" class="prev memo-prev">
+							<i class="ctrl-prev"></i>
+							<span class="sr-only">이전 동영상 보기</span>
+						</button>
+						<div class="swiper-pagination"></div>
+						<button type="button" class="next memo-next">
+							<i class="ctrl-next"></i>
+							<span class="sr-only">다음 동영상 보기</span>
+						</button>
+					</div>
+					<button type="button" class="b-close close" title="내가 본 콘텐츠 닫기"></button>
+				</div>
+			</div>
+			<!-- //내가 본 콘텐츠 -->
+
+			<p class="goTop">
+				<a href="javascript:void(0);">
+					<span class="sr-only">페이지 위로 이동</span>
+				</a>
+			</p>
+
+
+		</main>
+			
+	</div>
+	<!-- //content -->
 
 </div>
 
+<footer id="footer">
+<div class="container">
+	<div class="f_l">
+		<nav class="footer-nav">
+			<ul>
+				<li>
+					<a href="">자작권보호</a>
+				</li>
+				<li class="point">
+					<a href="">개인정보처리방침</a>
+				</li>
+				<li>
+					<a href="">이메일무단수집거부</a>
+				</li>
+				<li>
+					<a href="">홈페이지이용안내</a>
+				</li>
+				<li>
+					<a href="">관련사이트</a>
+				</li>
+			</ul>
+		</nav>
+		<div class="footer-bottom">
+			<address>04531 서울특별시 중구 남대문로 39 (남대문로3가)<br class="mobile">
+			대표전화 : 02-759-4114</address>
+			<p class="copyright">Copyright(c) Bank of Korea. All rights reserved.</p>
+		</div>
+	</div>
+	<div class="f_r">
+		<div class="site_go">
+			<button type="button" title="fmaily site 열기">fmaily site</button>
+			<ul>
+				<li>
+					<a href="/imerEng/main/main.do" target="_blank" title="새창열림">Economic Research Institute
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="f_sns">
+			<a href="https://www.youtube.com/thebankofkoreakr" target="_blank" title="새창열림" class="sns-youtube"><span class="sr-only">한국은행 Youtube 바로가기 (https://www.youtube.com/thebankofkoreakr)</span></a>
+			<a href="https://www.instagram.com/thebankofkorea" target="_blank" title="새창열림" class="sns-instagram"><span class="sr-only">한국은행 인스타그램  바로가기 (https://www.instagram.com/thebankofkorea)</span></a>
+			<a href="https://www.facebook.com/bankofkoreahub" target="_blank" title="새창열림" class="sns-facebook"><span class="sr-only">한국은행 Facebook 바로가기 (https://www.facebook.com/bankofkoreahub)</span></a>
+			<a href="https://www.twitter.com/bok_hub" target="_blank" title="새창열림" class="sns-twitter"><span class="sr-only">한국은행 Twitter 바로가기 (https://www.twitter.com/bok_hub)</span></a>
+		</div>
+	</div>
+</div>
+</footer>
 <script src="/static/jslibrary/swiper@8/swiper-bundle.min.js"></script>
 <script src="/static/eng/js/common.js"></script>
 </body>
