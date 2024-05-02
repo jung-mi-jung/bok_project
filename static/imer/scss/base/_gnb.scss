@@ -6,6 +6,7 @@
 	display: flex;
     width: calc(100% - 243px);
 	> ul {
+		margin-left: -60px;
 		display: none;
 		@include breakpoint($lg){
 			display: flex;

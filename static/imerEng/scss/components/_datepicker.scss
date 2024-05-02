@@ -1,6 +1,7 @@
 .datepicker {
 	z-index: 10000 !important;
 	table {
+		font-size: 15px;
 		table-layout: inherit;
 		td {
 			&.today {
@@ -68,5 +69,5 @@
 }
 .sdate, 
 .edate { 
-	background: url(/static/aieth/img/ico/sh-calendar.png) calc(100% - 10px) 50% no-repeat;
+	background: url(/static/museum/img/ico/ico-arrow-bk.png) 100% 100% no-repeat;
 }

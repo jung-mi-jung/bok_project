@@ -1,20 +1,85 @@
 //navigation
 .navigation {
-	.nav-stiky & {
-		width: 100%;
-		position: fixed;
-		top: 0;
-		z-index: 100;
-		&::before {
-			content: "";
-			display: block;
+	position: relative;
+	// z-index: 2;
+	// height: 48px;
+	line-height: 48px;
+	background-color: #FCFCFC;
+	border-top: 1px solid #E5E5E5;
+	@include breakpoint($lg){ 
+		.gnb-stiky & {
 			width: 100%;
-			height: 2px;
-			background-color: $black;
-			position: absolute;
-			bottom: -1px;
-			left: 0;
-			z-index: 1;
+			position: sticky;
+			border-bottom: 1px solid #E5E5E5;
+			top: -2px;
+			z-index: 10;
+			.sub-_visual {
+				display: none;
+			}
+		}
+	}
+	.sub-_visual {
+		background-image: none;
+		background: #fff;
+		@include breakpoint($lg){
+			height: 216px;
+			border-top: 1px solid #E6E6E6;
+			background-color: #CBDEF4;
+			background-image: url(/static/imer/img/visual/sub_visual_bg1.png);
+			background-repeat: no-repeat;
+			background-position: 50%;
+			&.menu_500214,
+			&.menu_600089 {
+				background-image: url(/static/imer/img/visual/bg_500214.png);
+			}		
+			&.menu_500216,
+			&.menu_600093{
+				background-image: url(/static/imer/img/visual/bg_500216.png);
+			}		
+			&.menu_500536,
+			&.menu_600381 {
+				background-image: url(/static/imer/img/visual/bg_500536.png);
+			}	
+			&.menu_500045,
+			&.menu_600092 {
+				background-image: url(/static/imer/img/visual/bg_500045.png);
+			}	
+			&.menu_500218,
+			&.menu_600090 {
+				background-image: url(/static/imer/img/visual/bg_500218.png);
+			}	
+			&.menu_500831,
+			&.menu_600288 {
+				background-image: url(/static/imer/img/visual/bg_500831.png);
+			}	
+		}
+		// @include breakpoint($smd) {
+		// 	border-bottom: 2px solid #1a1a1a;
+		// }
+		div {
+			width: $pc-wide;
+			max-width: 100%;
+			margin: 0 auto;
+			padding: 0 10px;
+			@include breakpoint($lg){
+				padding-top: 90px;
+			}
+			@include breakpoint($smd){
+				padding: 30px 0;
+			}
+			h1 {
+				// color: $black;
+				color: #000E33;
+				font-weight: 700;
+				font-size: rem(48);
+				@include breakpoint($smd){
+					font-size: rem(28);
+					text-align: center;
+				}
+				.bd-body & {
+					font-size: rem(20);
+				}
+			}
 		}
 	}
 	.top-page-toolbar {
@@ -44,25 +109,23 @@
 			}
 			.page-rss {
 				&::before {
-					margin-left: 9px;
+					margin-left: 16px;
 				}
 			}
 		}
 	}
-	position: relative;
-	z-index: 1;
-	height: 48px;
-	line-height: 48px;
-	background-color: #FCFCFC;
-	border-bottom: 1px solid #E5E5E5;
-	@include breakpoint($sm){
-		height: 36px;
-		line-height: 36px;
-	}
-	nav {		
+	nav {
+		height: 60px;
+		line-height: 60px;		
 		@include breakpoint($lg){
 			display: flex;
 			justify-content: space-between;
+		}
+		@include breakpoint($smd) {
+			height: 36px;
+			line-height: 36px;
+			margin: 0 auto;
+			border-bottom: 1px solid #E5E5E5;
 		}
 		> ul {
 			display: flex;
@@ -70,7 +133,43 @@
 			> li {
 				position: relative;
 				border-right: 1px solid #E5E5E5;
-				color: #666;
+				> a {
+					display: block;	
+					padding: 0 10px;
+					color: #6D6E72;
+					@include breakpoint($lg){
+						padding: 0 26px;
+					}
+					&::after {
+						@include font-ico-outline('\e5c6');
+						color: #6D6E72;
+						font-size: 22px;
+						margin-left: 10px;
+						@include breakpoint($sm){
+							position: absolute;
+							top: 50%;
+							right: 8px;
+							margin-top: -11px;
+						}
+					}
+				}
+				&:last-of-type {
+					> a {
+						color: #000E33;
+						text-decoration: underline;
+						&::after {
+							content: "";
+							display: inline-block;
+							width: 24px;
+							height: 24px;
+							transform: translateY(2px);
+							background: url('/static/museum/img/ico/ico-lnb-last.png');
+							@include breakpoint($sm){ 
+								transform: translateY(0);
+							}
+						}
+					}
+				}
 				@include breakpoint($sm){
 					width: 100%;
 					&:last-child {
@@ -78,13 +177,15 @@
 					}
 				}
 				&.home {
-					color: #000;
+					// color: #000;
+					color: #6D6E72;
 					padding: 0 16px;
 					@include breakpoint($lg){
 						padding: 0 26px;
 					}
 					@include breakpoint($smd){
 						width: 36px;
+						height: 36px;
 						text-align: center;
 						span {
 							display: none;
@@ -109,52 +210,36 @@
 							z-index: 9;
 							text-align: center;
 							width: 36px;
-							height: 36px;
+							height: 100%;
 							margin-right: 0;
 						}
 					}	
 				}
-				> a {
-					display: block;	
-					padding: 0 10px;
-					@include breakpoint($lg){
-						padding: 0 26px;
-					}
-					&::after {
-						@include font-ico-outline('\e5c6');
-						color: #666;
-						font-size: 22px;
-						margin-left: 10px;
-						@include breakpoint($sm){
-							position: absolute;
-							top: 50%;
-							right: 8px;
-							margin-top: -11px;
-						}
-					}
-				}
 				.depth2 {
 					display: none;
 					position: absolute;
-					top: 47px;
+					top: 60px;
 					left: -1px;
+					min-width: 200px;
 					z-index: 9;
 					width: calc(100% + 2px);
 					background-color: #fff;
-					@include breakpoint($sm){
-						top: 36px;
+					@include breakpoint($smd){
+						top: 35px;
 					}
 					ul {
 						width: 100%;
-						padding: 10px 15px;
+						padding: 10px 15px 0; 
 						line-height: 1.8;
 						border: 1px solid #E5E5E5;
 						border-radius: 0 0 4px 4px;
 						box-shadow: 0 4px 2px rgba(127, 24, 24, 0.15);
 						li {
+							margin: 10px 0;
 							a {
 								color: #666;
 								display: block;
+								line-height: 1.3;
 								&:hover {
 									text-decoration: underline;
 								}	
@@ -181,27 +266,46 @@
 	}
 }
 
+@include breakpoint($sm) {
+	.navigation nav > ul > li {
+		display: none;
+		&.home,
+		&:last-of-type {
+			display: block;
+		}
+	}
+}
+
+/* 상세페이지 비쥬얼 */
+body.bd-body .sub-_visual {
+	@include breakpoint($lg) {
+		&.menu_500216,
+		&.menu_600093 {
+			background-image: url(/static/imer/img/visual/view_500216.png);
+		}
+		&.menu_500831,
+		&.menu_600288  {
+			background-image: url(/static/imer/img/visual/view_500831.png);
+		}
+	}
+}
+
 
 //목차형
 .lnb-nav{
+	position: relative;
+	padding-top: 0;
+	margin-top: -60px;
+    margin-bottom: 30px;
 	@include breakpoint($lg){
-		position: relative;
-		display: block;
+		position: sticky;
+		top: 48px;
 		float: left;
-		width: per(240px + 35px, $pc-wide);
+		width: 275px;
+		height: auto;
+		padding-top: 30px;
 		padding-right: 36px;
 		background-color: #fff;
-		height: auto;
-		&::after {
-			content: "";
-			display: inline-block;
-			background-color: #d9d9d9;
-			position: absolute;
-			top: 0;
-			right: -1px;
-			width: 1px;
-			height: 100%;
-		}
 	}
 	h1 {
 		padding-bottom: 6px;
@@ -217,7 +321,9 @@
 	}	
 	.lnb  {
 		@include breakpoint($smd) {
-			display: none;
+			// display: none;
+			border-top: 1px solid #e5e5e5;
+    		border-bottom: 1px solid #e5e5e5;
 		}
 		ul {
 			> li {
@@ -266,58 +372,9 @@
 		}
 	}
 }
-
-//연관자료
-.lnb-reference {
-	padding: 24px 0;
-    margin: 18px 0;
-	border-top: 1px solid #E5E5E5;
+.lnb-nav + .content {
+	border-left: 1px solid #d9d9d9;
 	@include breakpoint($smd) {
-		margin: 0 0 18px;
-		border-top: none;
-	}
-	h1 {
-		&::before {
-			@include background-image-retina("/static/museum/img/ico/ico-relate", png, auto, 100%);
-		}
-	}
-	ul {
-		margin-bottom: 12px;
-		li {
-			margin: 4px 0;
-			a {
-				position: relative;
-				display: flex;
-				align-items: center;
-				padding: 8px 8px 8px 36px;
-				background: #F2F6FA;
-				border-radius: 8px;
-				word-break: initial;
-				&::before {
-					content: "";
-					display: inline-block;
-					position: absolute;
-					top: 10px;
-					left: 8px;
-					width: 20px;
-					height: 20px;
-				}
-				&.reference-m {
-					&::before {
-						@include background-image-retina("/static/museum/img/ico/ico-relateM", png, auto, 100%);
-					}
-				}
-				&.reference-c {
-					&::before {
-						@include background-image-retina("/static/museum/img/ico/ico-relateC", png, auto, 100%);
-					}
-				}
-				&.reference-h {
-					&::before {
-						@include background-image-retina("/static/museum/img/ico/ico-relateH", png, auto, 100%);
-					}
-				}
-			}
-		}
+		border-left: none;
 	}
 }

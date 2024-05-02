@@ -463,6 +463,32 @@
 // // 	}
 // // }
 
+
+@include breakpoint($lg){
+
+	#section2 section,
+	#section3 section,
+	#section4 section,
+	#section5 section,
+	#section6 section {
+		padding-top: calc((100vh - (1080px + 194px)) / 2 + 194px);
+		//padding-top: calc((100vh - (778px + 75px)) / 2 + 75px);
+	}
+
+
+	.gnb-stiky #section1, 
+	.gnb-stiky #section2, 
+	.gnb-stiky #section3,
+	.gnb-stiky #section4,
+	.gnb-stiky #section5,
+	.gnb-stiky #section6 {
+		height: 100vh;
+		padding: 74px 0 0px;
+	}
+}
+
+
+
 /* footer */
 #footer {
 	margin: 0;

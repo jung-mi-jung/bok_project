@@ -1,23 +1,25 @@
 #wrap {
 	position: relative;	
-	//padding-top: $m-header-height;
-	overflow: hidden;
-	@include breakpoint($lg){
-		padding-top: $header-height;
-	}
 }
 
 .container {
 	max-width: $pc-wide;
 	margin: 0 auto;
-	margin-left: 10px;
-	margin-right: 10px;
-	@include breakpoint(min-width 1720px) {
-		margin-left: auto;
-		margin-right: auto;
-	}
-	@include breakpoint($sm){
-		margin: 0;
+	padding-left: 10px;
+	padding-right: 10px;
+	// @include breakpoint(min-width 1480px) {
+	// 	margin-left: auto;
+	// 	margin-right: auto;
+	// }
+	// @include breakpoint($sm){
+	// 	margin: 0;
+	// }
+}
+
+.hgroup {
+	@include breakpoint($smd) {
+		padding: 0 10px;
+		box-sizing: border-box;
 	}
 }
 
@@ -41,29 +43,37 @@
 		align-items: center;
 		//height: $header-height;
 		width: 100%;
-		max-width: 1920px;
-		padding-left: 50px;
-		padding-right: 154px;
-		margin: 0 auto;	
+		max-width: 1824px;
+		margin: 0 auto;
+		// padding-left: 48px;
+		// padding-right: 152px;
 		@include breakpoint($smd){
-			padding-left: 16px;
-			padding-right: 60px;
-		}
-		@include breakpoint($sm){
 			padding-left: 10px;
+			padding-right: 10px;
 		}
+		// @include breakpoint($sm){
+		// 	padding-left: 10px;
+		// }
 	}	
+	> .container {
+		min-height: 96px;
+		@include breakpoint($smd) {
+			min-height: 60px;
+		}
+	}
 	.globalHeader {	
 		display: none;	
 		@include breakpoint($lg){
 			display: block;
+			min-height: 34px;
 			ul {
 				max-width: calc(1920px - 192px);
 				display: flex;
 				flex-direction: row;
 				flex-grow: 1;
-				border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-				padding: 7px 0;
+				//border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+				// padding: 4px 0;
+				gap: 0 2px;
 				li {
 					& + li {
 						&::before {
@@ -72,18 +82,19 @@
 							vertical-align: middle;
 							width: 1px;
 							height: 14px;
-							background-color: rgba(255, 255, 255, 0.2);
+							background-color: #e5e5e5;
 						}
 					}
 				}
 				a {
-					color: #fff;
+					color: #005596;
 					display: inline-block;
-					font-size: 14px;
-					border-radius: 4px;
-					border: 1px solid rgba(255, 255, 255, 0.40);
-					background: rgba(0, 0, 0, 0.20);
-					padding: 2px 9px;
+					font-size: rem(15);
+					font-weight: 500;
+					// border-radius: 4px;
+					// border: 1px solid rgba(255, 255, 255, 0.40);
+					// background: rgba(0, 0, 0, 0.20);
+					padding: 2px 8px;
 					&:hover {
 						text-decoration: underline;
 					}
@@ -99,7 +110,7 @@
 		}
 		a {
 			display: block;
-			background: url(/static/portal/img/common/logo.png) 50% no-repeat;
+			background: url(/static/imerEng/img/common/logo-portal-eng-blue.png) 50% no-repeat;
 			width: 127px;
 			height: 60px;
 			@include breakpoint($sm){
@@ -113,19 +124,22 @@
 		.global {
 			display: none;
 		}
-		.search {
+		> .search {
 			position: absolute;
 			top: 0;
 			right: 0;
 			width: $m-header-height;
 			height: $m-header-height;
 			z-index: 9;
-			background-color: #3B63C4;
+			background-color: #005596;
 			@include breakpoint($lg){
 				width: 104px;
 				height: $header-height;
-				background-color: #3B63C4;
+				background-color: #005596;
 				top: -42px;
+			}
+			&:focus {
+				@include focus;
 			}
 		}	
 		@include breakpoint($lg){
@@ -136,26 +150,118 @@
 					display: flex;
 					align-items: center;
 					white-space: nowrap;
+					padding: 3px 0px;
 					li {
 						a {
-							color: #fff;
+							//color: #fff;
 							font-size: 15px;
-							// &[target=_blank]::after {
-							// 	@include font-ico("\e89e");
-							// 	font-size: 16px;
-							// 	margin: 0 0 2px 5px;
-							// }
+							padding: 2px 12px;
+							&:last-of-type {
+								padding-right: 0;
+							}
 						}
 						& + li {
-							padding-left: 8px;
+							padding-left: 12px;
 							&::before {
 								content: "";
 								display: inline-block;
 								vertical-align: middle;
 								width: 1px;
 								height: 14px;
-								background-color: rgba(255,255,255,0.3);
-								margin: 0 6px;
+								background-color: #e5e5e5;
+								// margin: 0 6px;
+							}
+						}
+						//로그인후
+						.userInfoOpBxSet {
+							padding: 3px 0;
+							position: relative;
+							.userInfoOpener {
+								border-radius: 30px;
+								background: #005596;
+								display: inline-block;
+								padding: 1px 10px;
+								color: #fff;
+								font-size: 14px;
+							}
+							.userInfoOpBx {
+								display: none;
+								width: 280px;
+								position: absolute;
+								top: 30px;
+								left: -100%;
+								margin-left: -40px;
+								border: 1px solid #3B63C4;
+								border-radius: 5px;
+								padding: 24px;
+								box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+								background-color: #fff;
+								z-index: 99;
+								&.on {
+									display: block;
+								}
+								.userInfoSnsBx {
+									display: flex;
+									//justify-content: space-between;
+									align-items: center;
+									.infoTxts {
+										margin-left: 14px;
+										line-height: 1.2;
+										strong {
+											font-weight: 500;
+										}
+									}
+									i {
+										text-align: center;
+										display: inline-block;
+										width: 64px;
+										height: 64px;
+										line-height: 64px;
+										border-radius: 50%;
+										background-color: #B1C1E7;
+										&::before {
+											@include font-ico('\e7fd');
+											font-size: 35px;
+											color: #fff;
+											margin-top: 14px;
+										}
+									}
+								}
+								.myLogoutBx {
+									margin-top: 15px;
+									display: flex;
+									justify-content: space-between;
+									a {
+										text-align: center;
+										width: calc(50% - 2px);
+										display: block;
+										color: #fff;
+										font-size: 14px;
+										font-weight: 300;
+										border-radius: 4px;
+										padding: 4px;
+										&.mypg {
+											background-color: $color-point;
+											&::before {
+												content: "";
+												display: inline-block;
+												vertical-align: middle;
+												width: 21px;
+												height: 20px;
+												background: url(/static/portal/img/ico/ico-person_edit.png);
+												margin-right: 4px;
+											}
+										}
+										&.logout {
+											background-color: #4D4D4D;
+											&::before {
+												@include font-ico-outline('\e9ba');
+												font-size: 18px;
+												margin-right: 4px;
+											}
+										}
+									}
+								}
 							}
 						}
 					}
@@ -164,40 +270,412 @@
 		}
 	}
 }
-
-.hgroup {
+/* 추가된 설정 */
+#header.family {
 	position: relative;
-	display: flex;
-	justify-content: space-between;
-	margin: 50px 0 0;
-	border-bottom: 2px solid #222;
-	padding-bottom: 30px;
-	@include breakpoint($sm){
-		margin: 0 10px 15px;
-		padding-bottom: 0;
+	background: #fff;
+	//border-bottom: 1px solid #E5E5E5;
+	backdrop-filter: blur(4px);
+	.globalHeader {
+		> .container {
+			border-bottom: 1px solid #e5e5e5;
+		}
 	}
-	h1 {
-		display: block;
-		font-size: rem(48);
-		color: $point;
-		font-weight: 600;
-		font-family: 'Spoqa Han Sans Neo Bold';
-		width: calc(100% - 140px);
-		@include breakpoint($sm){
-			width: 100%;
-			font-size: rem(36);
-			text-align: center;
-			padding: 30px 0 25px;
+	.logo {
+		> a {
+			display: inline-flex;
+			width: auto;
+			align-items: center;
+			background: transparent;
+			gap: 0 32px;
+			@include breakpoint($sm){ 
+				gap: 0 24px;
+			}
+		}
+		&-portal {
+			display: inline-block;
+			width: 208px;
+			height:  52px;
+			@include background-image-retina("/static/imerEng/img/common/logo-portal-eng-blue", png, auto, 100%);
+			background-size: cover;
+			@include breakpoint($sm){
+				width: 166.4px;
+				height: 41.6px;
+			}
+		}
+		// &-imer {
+		// 	display: inline-block;
+		// 	position: relative;
+		// 	width: 108px;
+		// 	height:  31px;
+		// 	padding-left: 24px;
+		// 	@include background-image-retina("/static/imer/img/common/logo-imer-bl", png, auto, 100%);
+		// 	background-size: contain;
+		// 	background-position: center center;
+		// 	@include breakpoint($sm){
+		// 		width: 75.6px;
+		// 		height: 21.7px;
+		// 	}
+		// 	&::before {
+		// 		content: '';
+		// 		position: absolute;
+		// 		display: inline-block;
+		// 		left: -16px;
+		// 		width: 2px;
+		// 		height: 34px;
+		// 		background: #005596;
+		// 		opacity: .3;
+		// 		@include breakpoint($sm){ 
+		// 			left: -12px;
+		// 			height: 24px;
+		// 		}
+		// 	}
+		// }
+	}
+}
+#header.main {
+	position: absolute;
+	background: rgba(0,0,0,0.6);
+	
+	.globalHeader {
+		> .container {
+			border-bottom: 1px solid rgba(255,255,255,0.1);
+			> ul li {
+				& + li::before {
+					background: transparent;
+				}
+				a {
+					border: 1px solid rgba(255, 255, 255, 0.40);
+					background: rgba(0, 0, 0, 0.20);
+					border-radius: 4px;
+					color: #fff;
+				}
+			}
+		}
+	}
+	.g-info .global ul li {
+		> a {
+			color: #fff;
+		}
+		& + li::before {
+			background: rgba(255,255,255,0.1);
+		}
+	}
+	.gnb {
+		> ul > li {
+			&.active > a {
+				span {
+					color: #005596;
+					&::before {
+						background: #005596;
+					}
+				}
+			}
+			> a {
+				color: #fff;
+			}
+		}
+	
+		.gnb-btn-wrap > .search {
+			background: #3B63C4;	
+		}
+		.all-nav-toggle::before {
+			color: #fff;
+		}
+	} 
+	.logo-portal {
+		@include background-image-retina("/static/imerEng/img/common/logo-portal-eng", png, auto, 100%);
+	}
+	// .logo-imer {
+	// 	background-image: url(/static/imer/img/common/logo-imer.png);
+	// 	&::before {
+	// 		background: #fff;
+	// 		opacity: 0.3;
+	// 	}
+	// }
+}
+#header.main.active {
+	background: #fff;
+	//border-bottom: 1px solid #E5E5E5;
+	.g-info .global ul li {
+		.userInfoOpBxSet {
+			> a {
+				color: #fff;
+			}
+		}
+		a {
+			color: #005596;
+		}
+		& + li::before {
+			background: #005596;
+			opacity: 0.3;
+		}
+	}
+	.globalHeader {
+		> .container {
+			border-bottom: 1px solid #E5E5E5;
+			> ul li  {
+				& + li::before {
+					background: #005596;
+					opacity: 0.3;
+				}
+				a {
+					border: 0;
+					background: transparent;
+					border-radius: 4px;
+					color: #004274;
+				}
+			}
+		}
+	}
+	.gnb {
+		> ul > li {
+			&.active > a {
+				span {
+					color: #005596;
+					&::before {
+						background: #005596;
+					}
+				}
+			}
+			> a {
+				color: #1A1A1A;
+			}
+		}
+	
+		.gnb-btn-wrap > .search {
+			background: #005596;	
+		}
+		.all-nav-toggle::before {
+			color: #005596;
+		}
+	} 
+	.logo-portal {
+		@include background-image-retina("/static/imerEng/img/common/logo-portal-eng-blue", png, auto, 100%);
+	}
+	// .logo-imer {
+	// 	background-image: url(/static/imer/img/common/logo-imer-bl.png);
+	// 	&::before {
+	// 		background: #005596;
+	// 		opacity: 0.3;
+	// 	}
+	// }
+
+}
+
+
+.gnb {
+	> ul {
+		@include breakpoint($lg){
+			> li {
+				> a {
+					color: #fff;
+				}
+			}
 		}
 	}
 }
-.page-toolbar {
-	.nav-stiky & {
-		// position: fixed;
-		// top: 94px;
-		// right: 0;
-		// z-index: 9;
+
+// 전체메뉴 모바일
+.total-nav {
+	&.m-total-nav {
+		.dp1 {
+			> li {
+				&.on {
+					> a > span {
+						&::before {
+							background: url(/static/portal/img/ico/ico-dropdown-up.png);
+						}
+					}
+					.dp2 {
+						display: block;
+					}
+				}
+				> a > span {
+					position: relative;
+					&::before {
+						content: "";
+						position: absolute;
+						top: 4px;
+						right: -25px;
+						display: inline-block;
+						width: 20px;
+						height: 20px;
+						margin-left: 8px;
+						background: url(/static/portal/img/ico/ico-dropdown-down.png);
+					}
+				}
+			}
+			.dp2 {
+				display: none;
+			}
+		}
 	}
+}
+
+//게시판일 경우 비주얼 영역 예외처리
+.bd-body {
+	.hgroup {
+		//@include hide();
+		font-size: rem(20);
+	}
+	.navigation {
+		.sub-_visual {
+			div {
+				padding: 48px 10px 0; 
+				h1 {
+					font-weight: 600;
+				}
+			}
+		}
+	}
+	#main-container h2 {
+		color: $black;
+	}
+	.bd-view {		
+		@include breakpoint($lg){
+			margin-top: -126px;
+		}
+		.subject {
+			width: 100%;
+			@include ellipsis();
+			margin-bottom: 0 !important;
+		}
+		.dataInfoSet .keyword a {
+			background-color: #fff;
+		}
+	}
+}
+@include breakpoint($smd) {
+	.bd-body {
+		.navigation {
+			border-bottom: 0;
+			.sub-_visual {
+				width: calc(100% - 20px);
+				padding: 16px;
+				margin: 0 auto;
+				background-color: #CBDEF4;
+				div {
+					padding: 0; 
+					margin-bottom: 10px;
+					h1 {
+						text-align: left;
+						line-height: 1.5;
+					}
+				}
+			}
+		}
+		.bd-view {
+			.subject {
+				font-size: rem(20) !important;
+				padding: 68px 16px 16px;
+				background-color: #CBDEF4;
+				overflow: auto;
+				white-space: initial;
+				text-overflow: initial;
+				& + .dataInfoSet {
+					background-color: #CBDEF4;
+					padding: 0 16px;
+					margin-top: -35px;
+					margin-bottom: 20px;
+					padding-bottom: 24px;
+				}
+			}
+		}
+	}
+}
+
+
+
+// 일반형 게시판 상세 페이지일 경우
+.bd-view_wrap {
+	.hgroup {
+		border-bottom: none;
+		padding-bottom: 0;
+		margin: 40px 0 0;
+		@include breakpoint($sm){
+			margin: 0;
+			padding: 0 0 15px;
+		}
+		h1 {
+			color: $point;
+			font-size: rem(20);
+			font-weight: 700;
+			@include breakpoint($sm){
+				text-align: left;
+				margin: 0 10px;				
+			}
+		}
+	}
+}
+// 블로그형
+.bd-blog_wrap {
+	.hgroup {
+		border-bottom: none;
+		padding-bottom: 0;
+		margin: 40px 0 0;
+	}
+}
+
+#content {
+	margin-top: 0;
+	@include breakpoint($lg) {
+		margin-top: 36px;
+		min-height: 1020px;
+	}
+	.hgroup { //기존 소스 삭제
+		display: none;
+	}
+}
+#content.bd-view_wrap {
+	margin-top: 0;
+}
+
+// .hgroup {
+// 	position: relative;
+// 	display: flex;
+// 	justify-content: space-between;
+// 	margin: 50px 0 30px;
+// 	border-bottom: 2px solid #222;
+// 	padding-bottom: 30px;
+// 	// & + * {
+// 	// 	margin-top: 30px;
+// 	// }
+// 	@include breakpoint($sm){
+// 		margin: 0 10px 15px;
+// 		padding-bottom: 0;
+// 	}
+// 	h1 {
+// 		display: block;
+// 		font-size: rem(48);
+// 		color: $point;
+// 		font-weight: 600;
+// 		font-family: 'Spoqa Han Sans Neo Bold';
+// 		width: calc(100% - 140px);
+// 		@include breakpoint($sm){
+// 			width: 100%;
+// 			font-size: rem(36);
+// 			text-align: center;
+// 			padding: 30px 0 25px;
+// 		}
+// 	}
+// 	& + .tab-list {
+// 		margin: 0 0 24px !important;
+// 		@include breakpoint($sm) {
+// 			margin: 0 10px 24px !important;
+// 		}
+// 		.swiper {
+// 			a.swiper-slide {
+// 				@include breakpoint($sm) {
+// 					flex: 1;
+// 					max-width: none;
+// 				}
+// 			}
+// 		}
+// 	}
+// }
+
+.page-toolbar {
 	position: relative;
 	display: flex;
 	align-items: center;
@@ -205,8 +683,8 @@
 		display: none;
 	}
 	.sns-toggle {
-		width: 48px;
-		height: 48px;
+		width: 60px;
+		height: 60px;
 		border: 1px solid #666;
 		border-radius: 50%;
 		&::before {
@@ -220,16 +698,15 @@
 		&.active {
 			display: block;
 			position: absolute;
-			width: 48px;
-			height: 236px;
-			top: 60px;
-			left: 0;
+			width: 60px;
+			// height: 236px;
+			top: 12px;
+			left: 6px;
 			z-index: 9;
 			.sns-wrap__set {
 				display: flex;
 				width: 48px;
-				height: 236px;
-				flex-wrap: wrap;
+				align-items: center;
 				flex-direction: column;
 				border-radius: 30px;
 				border: 1px solid #666;
@@ -239,7 +716,18 @@
 					display: flex;
 					align-items: center;
 					justify-content: center;
-					margin: 4px 0;
+					margin: 0 auto;
+					& + button {
+						margin-top: 7px;
+					}
+					&::before {
+						content: "";
+						display: inline-block;
+						width: 36px;
+						height: 36px;
+						background-position: 50%;
+						background-repeat: no-repeat;
+					}
 					&.close {
 						height: 30px;
 						&::before {
@@ -252,15 +740,15 @@
 		}
 	}
 	.page-print {	
-		width: 48px;
-		height: 48px;
+		width: 60px;
+		height: 60px;
 		background: url(/static/portal/img/ico/ico-print.svg) 50% no-repeat;
 		margin-left: 6px;
 		margin-right: 10px;
 	}
 	.page-rss {	
-		width: 48px;
-		height: 48px;
+		width: 60px;
+		height: 60px;
 		&::before {
 			@include font-ico-outline('\e0e5');
 			font-size: 40px;
@@ -268,196 +756,431 @@
 		}
 	}
 }
+
+
 #main-container {
 	clear: both;
 	width: $pc-wide;
 	max-width: 100%;
 	min-height: calc(100vh - 246px - 196px - 80px);
+	// padding-top: 30px;
+	p {
+		font-size: rem(18);
+	}
 	@include clearfix();
-	// > main {
-	// 	@include breakpoint($lg){
-	// 		float: right;
-	// 		width: per(1336px, $pc-wide);
-	// 		border-left: 1px solid $bd-color;
-	// 		padding-left: 34px;
-	// 	}
-	// }
 	@include breakpoint($sm){
-		padding: 0 10px;
+		// padding: 0 10px;
+		p {
+			font-size: rem(16);
+		}
+	}
+	@include breakpoint($smd){
+		display: flex;
+		flex-direction: column;
 	}
 	@include breakpoint($lg){
-		.lnb-nav {
-			padding-top: 30px;
+		.lnb-nav, .sh-db {
+			margin-top: -30px;
+			& + .content {
+				margin-top: -30px;
+			}
 		}
 		.lnb-nav + .content,
 		.sh-db + .content {
 			float: right;
 			border-left: 1px solid $bd-color;
-			padding-top: 30px;
 			padding-left: 36px;
+			padding-top: 30px;
 		}
 		.lnb-nav + .content {
-			width: per(1405px, $pc-wide);
+			// width: per(1405px, $pc-wide);
+			width: calc(100% - 240px);
 		}
 		.sh-db + .content {
-			width: per(1441px, $pc-wide);
-		}
-	}
-	//연관자료 있는 서브
-	&.refer_wrap {
-		position: relative;
-		&::before {
-			content: "";
-			display: inline-block;
-			width: 1px;
-			height: calc(100% + 30px + 50px);
-			background-color: #E5E5E5;
-			position: absolute;
-			top: -30px;
-			z-index: 9;
-			right: calc(240px + 36px);
-			visibility: visible;
-			//@include breakpoint($smd){
-			//	display: none;
-			//}
-		}
-		.content {
-			@include breakpoint($lg){
-				float: left;
-				width: per(1368px, $pc-wide);
-			}
-		}
-		.refer_right {
-			@include breakpoint($lg){
-				float: right;
-				width: 240px;
-			}
-			> dl {				
-				dt {
-					font-weight: 500;
-					color: #222;
-					margin-bottom: 20px;
-					&::before {
-						content: "";
-						display: inline-block;
-						vertical-align: middle;
-						width: 20px;
-						height: 21px;
-						background: url(/static/portal/img/ico/ico-reference.png);
-						margin: 0 6px 0 0;
-					}
-				}
-				dd {					
-					&.data {
-						border-bottom: 1px solid #E5E5E5;
-						padding-bottom: 16px;
-						margin-bottom: 16px;
-						a {
-							color: #666;
-							font-size: rem(14);
-							&::before {
-								content: "";
-								display: inline-block;
-								width: 4px;
-								height: 4px;
-								background-color: #666;
-								border-radius: 50%;
-								margin: 0 7px 2px 0;
-							}
-						}
-					}
-					&.file {
-						a {
-							position: relative;
-							color: #1A1A1A;
-							font-size: rem(14);
-							display: block;
-							padding: 8px 34px 8px 12px;
-							background-color: #F2F6FA;
-							border-radius: 4px;
-							&::after {
-								content: "";
-								display: inline-block;
-								width: 12px;
-								height: 17px;
-								background: url(/static/portal/img/ico/ico_attach_file.png) 50% no-repeat;
-								position: absolute;
-								top: 50%;
-								margin-top: -8px;
-								right: 12px;
-							}
-							&::before {
-								content: "";
-								display: inline-block;
-								float: right;
-								width: 1px;
-								height: 100%;
-								background-color: #B1C1E7;
-							}
-						}
-						li {
-							margin-bottom: 4px;
-						}
-					}
-				}
-			}
+			// width: per(1441px, $pc-wide);
+			width: calc(100% - 240px);
 		}
 	}
 }
 
+
+/* 전체메뉴 */
 .total-nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 100vh;
+	background: #fff;
+	z-index: 100;
+	overflow-y: auto !important;
 	display: none;
-	@include breakpoint($lg){
-		&.active {
-			display: block;
+	&::before {
+		display: none;
+	}
+	&.fade.in {
+		&::before {
+			background: none !important;
+		}
+	}
+	.modal-dialog,
+	.modal-content {
+		width: 100%;
+		min-width: 100vh;
+		min-height: 100vh;
+		height: auto;
+		background-color: #fff;
+		border: 0;
+		border-radius: 0;
+	}
+	.container {
+		max-width: 1680px !important;   
+		margin: 0 auto;
+		padding: 0 10px !important;
+	}
+	.modal-header {
+		background: #F6F6F6;
+		padding: 40px 0;
+		border-radius: 0;
+		.modal-title {
+			display: flex;
+			align-items: center;
+			gap: 0 24px;
+			color: #005596;
+		}
+		.totalnav-logo {
+			display: flex;
+			position: relative;
+			width: 160px;
+			height: 52px;
+			background: url(/static/portal/img/common/logo-totalNav.png) center center no-repeat;
+			margin-right: 24px;
+			&::before {
+				content: "";
+				position: absolute;
+				display: block;
+				width: 1px;
+				height: 36px;
+				background: #005596;
+				top: 50%;
+				right: -24px;
+				transform: translateY(-50%);
+			}
+		}
+		.close {
 			position: absolute;
 			top: 0;
-			left: 0;
-			width: 100%;
-			z-index: 99;
-			background-color: rgba(0, 0, 0, 0.6);
-			section {
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				height: 100vh;
-				> div { //임시
-					position: relative;
-					padding: 30px;
-					background-color: #fff;
-					.nav {
-						> ul {
-							display: flex;
-							flex-wrap: wrap;
-							flex-direction: row;
-							width: 1000px;
-							max-width: 100%;
-							margin: 0 auto;
-							> li {
-								width: calc(100% / 5);
-							}
-							strong {
-								display: none;
-							}
-						}
-						.depth4 {
-							display: none;
-						}
+			right: 10px;
+			width: 48px;
+			height: 48px;
+			&::before {
+				color: #000;	
+				@include font-ico-outline('\e5cd');
+				font-size: 40px;	
+			}
+		}
+		.keyword-set {
+			width: 320px;
+			margin-right: 88px;
+			display: flex;
+			align-items: center;
+			background-color: #fff;
+			border: 1px solid #e5e5e5;
+			border-radius: 4px;
+			overflow: hidden;
+			@include breakpoint($sm){
+				width: 100%;
+				margin-top: 4px;
+				//flex-basis: calc(100% - 100px - 2px);
+			}
+			.keyword {
+				width: calc(100% - 24px - 8px);	
+				input[type=text] {
+					width: 100%;
+					border: 0;
+					height: 48px;
+					padding: 10px 16px;
+					color: #1A1A1A;
+					@include breakpoint($sm){
+						padding: 5px 16px;
+						height: 40px;
 					}
 				}
-			}
-			button {
-				position: absolute;
-				top: 0;
-				right: -40px;
+			}		
+			.search {
+				width: 48px;
+				height: 48px;
+				text-align: center;
+				// @include breakpoint($sm){
+				// 	width: 40px;
+				// 	height: 40px;
+				// }
 				&::before {
-					color: #fff;
-					font-size: 30px;
+					@include font-ico-outline('\e8b6');
+					font-size: 26px;
+					color: #222;
 				}
 			}
 		}
 	}
+	.modal-body {
+		padding: 50px 0;
+		.container {
+			max-width: 1680px;
+			align-items: stretch !important;
+			justify-content: flex-start !important;
+			flex-wrap: wrap;
+			gap: 0 30px;
+		}
+		.highlight {
+			display: inline-block;
+			padding: 0 2px;
+			margin-right: 2px;
+			background: #FFE100;
+		}
+		.dp1 {
+			flex: 1;
+			> li {
+				font-size: rem(32);
+				font-weight: 500;
+				
+				> a {
+					color: #333333;
+					@include breakpoint($sm) {
+						display: none;
+					}
+				}
+				> a.m-dp1 {
+					display: none;
+					@include breakpoint($sm) {
+						display: inline-block;
+					}
+				}
+			}
+		}
+		.dp2 {
+			margin-top: 24px;
+			> li {
+				font-size: rem(20);
+				padding: 6px 0;
+				> a {
+					color: #26447D;
+				}
+			}
+		}
+		.dp3 {
+			margin-top: 6px;
+			> li {
+				position: relative;
+				font-size: rem(18);
+				padding: 4px 0 4px 4px;
+				&::before {
+					content: "";
+					display: inline-block;
+					position: absolute;
+					top: 16px;
+					left: 4px;
+					width: 4px;
+					height: 4px;
+					border-radius: 50%;
+					background: #3E7CC8;
+				}
+				> a {
+					display: inline-flex;
+					align-items: flex-start;
+					padding-left: 16px;
+					color: #4D4D4D;
+				}
+				&.dropdown {
+					padding: 4px 28px 4px 4px;
+					> a {
+						position: relative;
+						// display: inline-flex;
+						align-items: center;
+						i {
+							position: absolute;
+							top: 2px;
+							right: -25px;
+							display: inline-block;
+							width: 20px;
+							height: 20px;
+							margin-left: 8px;
+							// transform: translateY(4px);
+							background: url(/static/portal/img/ico/ico-dropdown-down.png);
+						}
+					}
+					&.on {
+						> a  {
+							color: #005596;
+							i {
+								background: url(/static/portal/img/ico/ico-dropdown-up.png);
+							}
+						}
+						> .dp4 {
+							display: block;
+						}
+					}
+				}
+				
+			}
+		}
+		.dp4 {
+			display: none;
+			> li {
+				position: relative;
+				font-size: rem(16);
+				padding: 4px 0 4px 16px;
+				&::before {
+					content: "- ";
+					display: inline-block;
+					margin-right: 4px;
+					font-size: rem(16);
+					
+				}
+				> a {
+					color: #4D4D4D;
+					font-weight: 400;
+				}
+			}
+			
+		}
+	}
+
+	// display: none;
+	// @include breakpoint($lg){
+	// 	&.active {
+	// 		display: block;
+	// 		position: absolute;
+	// 		top: 0;
+	// 		left: 0;
+	// 		width: 100%;
+	// 		z-index: 99;
+	// 		background-color: rgba(0, 0, 0, 0.6);
+	// 		section {
+	// 			display: flex;
+	// 			justify-content: center;
+	// 			align-items: center;
+	// 			height: 100vh;
+	// 			> div { //임시
+	// 				position: relative;
+	// 				padding: 30px;
+	// 				background-color: #fff;
+	// 				.nav {
+	// 					> ul {
+	// 						display: flex;
+	// 						flex-wrap: wrap;
+	// 						flex-direction: row;
+	// 						width: 1000px;
+	// 						max-width: 100%;
+	// 						margin: 0 auto;
+	// 						> li {
+	// 							width: calc(100% / 5);
+	// 						}
+	// 						strong {
+	// 							display: none;
+	// 						}
+	// 					}
+	// 					.depth4 {
+	// 						display: none;
+	// 					}
+	// 				}
+	// 			}
+	// 		}
+	// 		button {
+	// 			position: absolute;
+	// 			top: 0;
+	// 			right: -40px;
+	// 			&::before {
+	// 				color: #fff;
+	// 				font-size: 30px;
+	// 			}
+	// 		}
+	// 	}
+	// }
+	// .e {
+	// 	display: none;
+	// }
 }
+.total-nav.active {
+	display: block !important;
+	opacity: 1 !important;
+}
+@include breakpoint($smd) {
+	.total-nav {
+		// overflow: auto !important;
+		.modal-dialog,
+		.modal-content {
+			min-width: auto;
+		}
+		.modal-header {
+			padding: 20px 0;
+		}
+		.modal-body {
+			padding:  30px 0;
+			.container {
+				display: grid !important;
+				grid-template-columns: repeat(3, 1fr);
+				flex-wrap: wrap;
+				gap: 16px 0;
+				.dp1 {
+					//width: calc(33.33% - 30px);	
+					flex: none;
+				}
+			}
+		}
+		
+	}
+}
+@include breakpoint($sm) {	
+	.total-nav {
+		.modal-header {
+			.totalnav-logo {
+				width: 140px;
+				height: 45.5px;
+				background-size: contain;
+			}
+			.modal-title {
+				font-size: rem(24);
+			}
+		}
+		.container {
+			flex-direction: column;
+			align-items: flex-start !important;
+			form {
+				width: 100%;
+				margin-top: 10px;
+			}
+		}
+		.keyword-set {
+			width: 100%;
+			margin-top: 4px;
+			input[type=text] {
+				padding: 5px 16px;
+				height: 40px;
+			}
+		}
+		.modal-body {
+			.container {
+				grid-template-columns: repeat(1, 1fr);
+			}
+			.dp1 > li{
+				font-size: rem(24);
+			}
+			.dp2 {
+				margin-top: 10px;
+				margin-bottom: 40px;
+				> li {
+					font-size: rem(20);
+				}
+			}
+			.dp3 > li {
+				font-size: rem(18);
+			}
+		}
+		
+	}
+}
+
 
 .goTop {
 	//.gnb-stiky & {
@@ -468,6 +1191,9 @@
 	right: 30px;
 	z-index: 9;
 	display: none;
+	@include breakpoint($sm) {
+		bottom: 30px;
+	}
 	a {
 		display: block;
 		width: 40px;
@@ -487,11 +1213,17 @@
 	clear: both;
 	width: 100%;
 	padding-top: 60px;
+	@include breakpoint($smd){
+		padding-top: 20px;
+	}
 	.satisfact {
 		position: relative;		
 		display: flex;
 		border-radius: 8px;
 		border: 1px solid #BFBFBF;
+		@include breakpoint($smd){
+			display: block;
+		}
 		.title {
 			text-align: center;
 			width: 242px;
@@ -500,6 +1232,15 @@
 			height: 64px;
 			line-height: 64px;
 			margin-bottom: 0;
+			@include breakpoint($smd){
+				width: 100%;
+				text-align: left;
+				height: 32px;
+				line-height: 32px;
+				padding: 0 18px;
+				border-radius: 8px 8px 0 0;
+				border-bottom: 1px solid #BFBFBF;
+			}
 			&::before {
 				content: "";
 				display: inline-block;
@@ -509,20 +1250,48 @@
 				background: url(/static/portal/img/common/ico_edit_square.png) 50% no-repeat;
 				margin-right: 8px;
 				margin-bottom: 1px;
+				@include breakpoint($sm){
+					width: 15px;
+					height: 15px;
+					background-size: 15px;
+				}
 			}
 		}
 		.radio-group {
 			display: flex;
 			align-items: center;
+			padding: 20px 30px;
+			@include breakpoint($smd){
+				display: block;
+				padding: 10px 3px;
+			}
+			label {
+				@include breakpoint($sm){
+					&:first-child {
+						margin-left: 14px;
+					}
+				}
+				& + label {
+					margin-left: 14px;
+				}
+			}
 			input[type=radio] {	
 				& + i + span {
 					color: #4D4D4D;
-					margin-left: 12px;
+					margin-left: 10px;
 				}
-				&:checked + i + span {
-					font-weight: 500;
-					color: $point;
-					text-decoration: underline;
+				&:checked + i {
+					& + span {
+						font-weight: 500;
+						color: $point;
+						text-decoration: underline;
+					}
+				}
+			}
+			@include breakpoint($smd){
+				label {
+					width: 100%;
+					margin: 3px 0;
 				}
 			}
 		}
@@ -535,6 +1304,10 @@
 			background-color: $point;
 			border-radius: 4px;
 			padding: 4px 14px;
+			@include breakpoint($smd){
+				top: auto;
+				bottom: 10px;
+			}
 			&::before {
 				@include font-ico-outline('\e5ca');
 				font-size: 18px;
@@ -554,6 +1327,9 @@
 		dl {
 			display: flex;
 			justify-content: right;
+			@include breakpoint($smd){
+				justify-content: left;
+			}
 			&::before {
 				content: "";
 				display: inline-block;
@@ -583,16 +1359,22 @@
 	}
 }
 
+
 //내가 본 콘텐츠
 .my_memo {
 	position: fixed;
 	bottom: 250px;  //임시 위치
 	right: 30px;
 	z-index: 9;
-	width: 200px;
+	// width: 200px;
+	@include breakpoint($sm) {
+		bottom: 80px;
+	}
 	.btn {
 		float: right;
-		width: 40px;
+		width: 40px;    clear: both;
+		// width: 100%;
+		// padding-top: 60px;
 		height: 40px;
 		border: 1px solid #131547;
 		border-radius: 50%;
@@ -627,6 +1409,8 @@
 			border-bottom: 1px solid #BFBFBF;
 		}
 		.close {
+			display: flex;
+			justify-content: center;
 			position: absolute;
 			top: 10px;
 			right: 10px;
@@ -646,7 +1430,7 @@
 		bottom: 52px;
 		right: 0;
 		z-index: 9;
-		width: 100%;
+		width: 200px;
 		padding: 16px;
 		background-color: #fff;
 		border: 1px solid #131547;
@@ -731,6 +1515,9 @@
 		}
 		.b-close {
 			position: absolute;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 			bottom: -53px;
 			right: 0;
 			z-index: 1;
@@ -797,16 +1584,14 @@
 .reference {
 	margin-top: 30px;
 	padding: 50px 120px;
-	background-color: #F2F6FA;
+	background-color: #E5ECFF;
 	@include breakpoint($smd){
-		padding: 30px;
-	}
-	@include breakpoint($sm){
-		padding: 20px;
+		padding: 16px;
+		margin: 30px -10px 0;
 	}
 	&-data {
 		@include reference();
-		dl {				
+		dl {
 			dt {
 				font-weight: 500;
 				color: #222;
@@ -822,15 +1607,22 @@
 				}
 			}
 			dd {
+				@include breakpoint($sm){
+					margin-right: -10px;
+				}
 				ul {
 					display: flex;
 					flex-wrap: wrap;
 					margin: -12px -12px 0;
+					@include breakpoint($smd){
+						margin: -12px 0 0 -5px;
+					}
 					li {
 						width: calc(100% / 4);
 						padding: 12px;
-						@include breakpoint($sm){
-							width: calc(100% / 2);
+						@include breakpoint($smd){
+							width: 100%;
+							padding: 3px 5px;
 						}
 					}
 				}
@@ -839,7 +1631,11 @@
 					color: $black;
 					background-color: #fff;
 					border-radius: 8px;
-					padding: 15px 15px;					
+					padding: 15px 15px;		
+					@include breakpoint($smd){
+						padding: 8px 12px;
+						font-size: 12px;
+					}			
 					i {
 						&::before {
 							content: "";
@@ -847,6 +1643,11 @@
 							vertical-align: middle;
 							width: 24px;
 							height: 24px;
+							@include breakpoint($smd){
+								width: 18px;
+								height: 18px;
+								background-size: cover;
+							}
 						}
 						&.m {
 							&::before {
@@ -899,7 +1700,7 @@
 		margin-top: 20px;
 		padding-top: 30px;
 		border-top: 1px solid #DCE2F1;
-		@include reference();
+		@include reference();		
 		dl {
 			dt {
 				&::before {	
@@ -910,7 +1711,15 @@
 				}
 			}
 			dd {
+				@include breakpoint($smd){
+					width: calc(100%  + 16px);
+					overflow-x: auto;
+					overflow-y: hidden;
+				}
 				ul {
+					@include breakpoint($smd){
+						width: max-content;
+					}
 					display: flex;
 					flex-wrap: wrap;
 					flex-direction: row;
@@ -918,8 +1727,8 @@
 					li {
 						width: calc(100% / 4);
 						padding: 12px;
-						@include breakpoint($sm){
-							width: calc(100% / 2);
+						@include breakpoint($smd){
+							width: 270px;
 						}
 						a {
 							display: block;
@@ -958,7 +1767,7 @@
 		border-top: 1px solid #DCE2F1;
 		@include reference();
 		margin-top: 25px;
-		padding-top: 30px;
+		padding-top: 30px;				
 		dl {
 			dt {
 				&::before {
@@ -967,17 +1776,25 @@
 					margin: 0 8px 4px 0;
 				}
 			}
-			dd {				
+			dd {
+				@include breakpoint($smd){
+					width: calc(100%  + 16px);
+					overflow-x: auto;
+					overflow-y: hidden;
+				}			
 				ul {
 					padding-top: 12px;
 					display: flex;
 					flex-wrap: wrap;
 					margin: -12px -12px 0;
+					@include breakpoint($smd){
+						width: max-content;
+					}					
 					li {
 						width: calc(100% / 4);
 						padding: 12px;
-						@include breakpoint($sm){
-							width: calc(100% / 2);
+						@include breakpoint($smd){
+							width: 270px;
 						}
 						a {							
 							display: block;
@@ -1027,103 +1844,108 @@
 }
 
 
+// .search_wrap {
+// 	display: none;
+// 	&.active {
+// 		display: block;
+// 		position: absolute;
+// 		top: 0;
+// 	}
+// }
 .search_wrap {
 	display: none;
 	&.active {
 		display: block;
-		position: absolute;
+		position: fixed;
 		top: 0;
+		//top: -33px;
+		left: 0;
+		z-index: 99;
+		width: 100%;
+		background-color: rgba(255, 255, 255, 0.9);
+		padding: 80px 10px;
+		backdrop-filter: blur(15px);
 	}
-}
-
-.content {	
-	p {
-		margin-bottom: 12px;
-	}	
-}
-
-
-/* 추가된 내용, hym */
-#wrap {
-	padding-top: 0;
-}
-#header {
-	position: relative;
-	background: #131547;
-	backdrop-filter: blur(4px);
-	.globalHeader {
-		@include breakpoint($lg){
-			ul {
-				border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	form {
+		width: 720px;
+		max-width: 100%;
+		margin: 0 auto;
+	}
+	.search_wrap_input {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		border: 4px solid $color-point;
+		border-radius: 50px;
+		background-color: #fff;
+		padding: 15px 15px;
+		.search_keyword {
+			border: 0;
+			width: calc(100% - 70px);
+			height: 40px;
+			padding: 0 15px;
+		}
+		.btn_search {
+			width: 60px;
+			&::before {
+				@include font-ico-outline("\e8b6");
+				font-size: 30px;
+				color: $color-point;
+			}			
+		}
+		.dqAuto {
+			position: absolute;
+			top: 74px;
+			left: 0;
+			z-index: 1;
+			border: 1px solid #BDBCBC;
+			border-width: 0 1px 1px;
+			border-radius: 0 0 8px 8px;
+			padding: 15px;
+			background-color: #fff;
+			margin: 0 30px;
+			width: calc(100% - 60px);
+			.autoList {
+				max-height: 180px;
+				overflow-y: auto;
 				li {
 					a {
-						color: #fff;
+						font-size: 16px;
+						display: block;
+						padding: 3px 8px;
+						&:hover {
+							background-color: #EBF3F7;
+						}
+					}
+				}
+			}
+			.bottom {
+				display: flex;
+				justify-content: right;
+				margin-top: 15px;
+				background-color: #FAFAFA;
+				padding: 8px;
+				.btnClose {
+					font-size: 14px;
+					color: #6D6E72;
+					&::before {
+						@include font-ico('\e5c9');
+						font-size: 21px;
+						color: #6D6E72;
+						margin-right: 3px;
 					}
 				}
 			}
 		}
 	}
-}
-#header.family {
-	.logo {
-		> a {
-			display: inline-flex;
-			width: auto;
-			align-items: center;
-			background: transparent;
-			gap: 0 32px;
-			@include breakpoint($sm){ 
-				gap: 0 24px;
-			}
-		}
-		&-portal {
-			display: inline-block;
-			width: 128px;
-			height:  41px;
-			@include background-image-retina("/static/museum/img/common/logo-portal", png, auto, 100%);
-			background-size: cover;
-			@include breakpoint($sm){
-				width: 110px;
-				height: 36px;
-			}
-		}
-		&-museum {
-			display: inline-block;
-			position: relative;
-			width: 83px;
-			height:  37px;
-			padding-left: 24px;
-			@include background-image-retina("/static/museum/img/common/logo-museum", png, auto, 100%);
-			background-size: contain;
-			background-position: center center;
-			@include breakpoint($sm){
-				width: 72px;
-				height: 32px;
-			}
-			&::before {
-				content: '';
-				position: absolute;
-				display: inline-block;
-				left: -16px;
-				width: 1px;
-				height: 38px;
-				background: rgba(255,255,255,.2);
-				@include breakpoint($sm){ 
-					left: -12px;
-					height: 32px;
-				}
-			}
-		}
-	}
-}
-.gnb {
-	> ul {
-		@include breakpoint($lg){
-			> li {
-				> a {
-					color: #fff;
-				}
-			}
+	.search_close {
+		position: absolute;
+		top: 25px;
+		right: 25px;
+		&::before {
+			@include font-ico-outline('\e5cd');
+			font-size: 40px;
+			color: $black;
 		}
 	}
 }
@@ -1131,9 +1953,56 @@
 
 
 
-@include breakpoint($lg) {
+
+#main-container,
+.content {	
+	p {
+		// margin-bottom: 12px;
+		// white-space: pre-line;
+		
+		& + h3 {
+			margin-top: 60px;
+		}
+	}	
+	em {
+		font-weight: 600;
+	}
+	small {
+		display: block;
+		font-size: rem(14);
+	}
+	& + .reference {
+		margin-top: 60px;
+	}
+}
+.content-row {
+	display: flex;
+	flex-wrap: wrap;
+	@include breakpoint($sm) {
+		display: block;
+	}
+}
+
+// visibility
+.visible-xs, 
+.visible-sm, 
+.visible-md, 
+.visible-lg { 
+	display: none !important; 
+}
+.xs-block, 
+.sm-block, 
+.md-block { 
+	display: inline; 
+}
+
+
+@include breakpoint($md) {
 	//.visible-lg { display: inline-block !important; }
 	.hidden-lg { display: none !important; }
+	.visible-md {
+		display: block !important;
+	}
 }
 @include breakpoint($smd) {
 	.hidden-smd { display: none !important; }
@@ -1141,5 +2010,39 @@
 @include breakpoint($sm) {
 	//.visible-sm { display: inline-block !important; }
 	.hidden-sm { display: none !important; }
+
+	.visible-sm {
+		display: inline-block !important;
+	}
 	//.sm-block{display: inline-block !important;}
+}
+
+
+.help {
+	&::before {
+		@include font-ico-outline('\e88e');
+	}
+}
+.help2 {
+	color: $red;
+	margin-top: 10px;
+	margin-bottom: 5px !important;
+	font-size: rem(16);
+	&::before {
+		@include font-ico-outline('\e88e');
+		font-size: rem(18);
+		margin: 0 5px 2px 0;
+	}
+}
+.help3 {
+	color: #4D4D4D;
+	margin-top: 10px;
+	margin-bottom: 5px !important;
+	font-size: rem(16);
+	&::before {
+		@include font-ico-outline('\e88e');
+		font-size: rem(18);
+		margin: 0 5px 2px 0;
+		color: #4D4D4D;
+	}
 }

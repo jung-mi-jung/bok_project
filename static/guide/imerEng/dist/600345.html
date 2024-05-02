@@ -1,0 +1,3090 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>서브명 | 한국은행</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+	<link type="text/css" rel="stylesheet" href="/static/imerEng/css/sub.css">
+	<script src="/static/jslibrary/jquery-3.5.1.min.js"></script>
+	<script src="/static/jslibrary/jquery.cookie.js"></script>
+	<script src="/static/jslibrary/bootstrap/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="/static/jslibrary/swiper@8/swiper-bundle.min.css">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta property="og:type"			content="website">
+	<meta property="og:title"			content="${title}">
+	<meta property="og:description"		content="${title}">
+</head>
+
+<body>
+	<div class="skip">
+		<a href="#gnb">주메뉴 바로가기</a>
+		<a href="#content">본문내용 바로가기</a>
+	</div>
+
+	<div id="wrap">
+		<div class="gnb_bg"></div>
+		
+		<!-- header -->
+		<header id="header" class="family">
+			<div class="globalHeader">
+				<div class="container">
+					<ul>
+						<li>
+							<a href="/museum/main/main.do" target="_blank" title="새창열림">화폐박물관</a>
+						</li>
+						<li>
+							<a href="/portal/submain/submain/rgHqt.do?menuNo=200219">지역본부</a>
+						</li>
+						<li>
+							<a href="https://ecos.bok.or.kr" target="_blank" title="새창열림">경제시스템(ecos)</a>
+						</li>
+						<li>
+							<a href="https://snapshot.bok.or.kr" target="_blank" title="새창열림">금융·경제스냅샷</a>
+						</li>
+						<li>
+							<a href="https://dl.bok.or.kr" target="_blank" title="새창열림">전자도서관</a>
+						</li>
+						<li>
+							<a href="https://apply.bok.or.kr" target="_blank" title="새창열림">채용</a>
+						</li>
+					</ul>
+					<!-- 본인인증 -->
+					<div class="g-info">				
+						<div class="global">
+							<ul>
+								<li>
+									<!-- <a href="">본인인증</a> -->
+									<div class="userInfoOpBxSet">
+										<a href="javascript:void(0)" class="userInfoOpener" title="로그인 정보 페이지 열고 닫기">홍길동</a>
+										<div class="userInfoOpBx">
+											<div class="userInfoSnsBx">
+												<i class="ico"></i>
+												<span class="infoTxts"><strong>홍길동</strong>님 <br>로그인중입니다.</span>
+											</div>
+											<div class="myLogoutBx">
+												<a href="/portal/bbs/U0000555/listMy.do?menuNo=200263" class="mypg">마이페이지</a>
+												<a href="/portal/member/user/logout.do" class="logout">로그아웃</a>
+											</div>
+										</div>								
+									</div>
+								</li>
+								<li>
+									<a href="/eng/main/main.do" target="_blank" title="새창열림">ENGLISH</a>
+								</li>
+							</ul>
+						</div>
+						<!-- <button type="button" class="search" title="검색레이어 열기"><i class="ico-srchW"></i></button>
+						<div class="search_wrap">
+							<form action="">
+								<div class="search_wrap_input">
+									<input type="text" class="search_keyword" placeholder="검색어를 입력해 주세요.">	
+									<button type="button" class="search" aria-label="검색"></button>
+								</div>
+								<div class="keyword">
+									HOT 이슈키워드
+								</div>
+								<button type="button" class="search_close" aria-label="검색 닫기"></button>
+							</form>
+						</div> -->
+					</div>
+				</div>
+			</div>
+			<div class="container">			
+				<h1 class="logo">
+					<a href="/">
+						<span class="logo-portal" role="img" aria-label="한국은행"></span>
+						<span class="logo-imer" role="img" aria-label="경제연구원"></span>
+					</a>
+				</h1>
+				<!-- gnb -->
+				<nav class="gnb" id="gnb">
+					<ul>
+						<li class="menu01">
+							<a href=""><span>About Us</span></a>
+							<div class="depth2">
+								<ul>
+									<li>
+										<a href="">원장 약력</a>
+									</li>
+									<li>
+										<a href="">연구원 연혁</a>
+									</li>
+									<li>
+										<a href="">연구원 사람들</a>
+									</li>
+									<li>
+										<a href="">외부전문가 그룹</a>
+									</li>
+									<li>
+										<a href="">오시는 길</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="menu02 active">
+							<a href=""><span>Research</span></a>
+							<div class="depth2">
+								<ul>
+									<li>
+										<a href="">BOK 경제연구</a>
+									</li>
+									<li class="on">
+										<a href="">경제분석</a>
+									</li>
+									<li>
+										<a href="">경제전망보고서 심층연구</a>
+									</li>
+									<li>
+										<a href="">BOK 이슈노트</a>
+									</li>
+									<li>
+										<a href="">최신 해외학술정보</a>
+									</li>
+									<li>
+										<a href="">기타 간행물</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="menu03">
+							<a href=""><span>Publications</span></a>
+							<div class="depth2">
+								<ul>
+									<li>
+										<a href="">경제분석</a>
+									</li>
+									<li>
+										<a href="">경제분석 안내</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="menu04">
+							<a href=""><span>Conference</span></a>
+							<div class="depth2">
+								<ul>
+									<li>
+										<a href="">BOK 국제 컨퍼런스</a>
+									</li>
+									<li>
+										<a href="">공동 컨퍼런스</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="menu05">
+							<a href=""><span>Forums</span></a>
+							<div class="depth2">
+								<ul>
+									<li>
+										<a href="">전체자료</a>
+									</li>
+									<li>
+										<a href="">통화금융연구회</a>
+									</li>
+									<li>
+										<a href="">금융연구포럼</a>
+									</li>
+									<li>
+										<a href="">국제경제포럼</a>
+									</li>
+									<li>
+										<a href="">경제연구포럼</a>
+									</li>
+									<li>
+										<a href="">미시제도포럼</a>
+									</li>
+									<li>
+										<a href="">북한금융경제포럼</a>
+									</li>
+									<li>
+										<a href="">기타 세미나</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="menu06">
+							<a href=""><span>Notice</span></a>
+							<!-- <div class="depth2">
+								<ul>
+									<li>
+										<a href="">전체자료</a>
+									</li>
+								</ul>
+							</div> -->
+						</li>
+					</ul>
+					<div class="gnb-btn-wrap">
+						<button type="button" class="all-nav-toggle" data-toggle="modal" data-target="#totalMenu" title="전체 메뉴 열기"></button>
+						<button type="button" class="search" title="검색레이어 열기">
+							<i class="ico-srchW"></i>
+						</button>
+						<div class="search_wrap">
+							<form action="">
+								<div class="search_wrap_input">
+									<input type="text" class="search_keyword" name="query" id="queryTop" placeholder="검색어를 입력해 주세요." autocomplete="off" maxlength="50">
+									<button type="button" class="btn_search search" aria-label="검색"></button>
+								</div>
+								<button type="button" class="search_close" aria-label="검색 닫기"></button>
+							</form>
+						</div>
+					</div>
+				</nav>
+			</div>
+			<!-- 전체메뉴 -->
+			<div class="modal fade total-nav" id="totalMenu" tabindex="-1" role="dialog">
+				<div class="lpop modal-dialog" role="document">
+					<div class="set modal-content">
+						<div class="modal-header">
+							<div class="container">
+								<button type="button" class="close" data-dismiss="modal"><i class="ti-close"></i><span class="sr-only">레이어 창닫기</span></button>
+								<h1 class="modal-title" id="modal-label1">
+									<span class="totalnav-logo"></span>전체메뉴
+								</h1>
+								<form>
+									<fieldset>
+										<legend class="sr-only">전체메뉴 검색</legend>
+										<div class="keyword-set">
+											<span class="keyword"><input type="text" title="검색어"></span>
+											<button type="button" class="search" onclick="" aria-label="검색"></button>
+										</div>
+									</fieldset>
+								</form>
+							</div>
+						</div>
+						<div class="modal-body">
+							<div class="container">
+								<ul class="dp1">
+									<li>
+										<a href=""><span>About Us</span></a>
+										<a href="javascropt:void(0)" class="m-dp1"><span>About Us</span></a>
+										<ul class="dp2">
+											<li>
+												<a href="">개요</a>
+											</li>
+											<li>
+												<a href="">설립목적 및 역사</a>
+											</li>
+											<li>
+												<a href="">금융통화위원회</a>
+											</li>
+											<li>
+												<a href="">조직도</a>
+											</li>
+											<li>
+												<a href="">운영 및 법규</a>
+												<ul class="dp3">
+													<li>
+														<a href="">전략 및 조직가치</a>
+													</li>
+													<li>
+														<a href="">경영정보</a>
+													</li>
+													<li>
+														<a href="">계약정보</a>
+													</li> 
+													<li>
+														<a href="">윤리경영</a>
+													</li>
+													<li>
+														<a href="">법규정보</a>
+													</li>
+													<li>
+														<a href="">사회공헌</a>
+													</li>
+													<li>
+														<a href="">채용</a>
+													</li>
+												</ul>
+											</li>
+											<li>
+												<a href="">오시는 길</a>
+											</li>
+											<li>
+												<a href="">지역본부(종합)</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+								<ul class="dp1">
+									<li>
+										<a href=""><span>Research</span></a>
+										<a href="javascropt:void(0)" class="m-dp1"><span>Research</span></a>
+									</li>
+								</ul>
+								<ul class="dp1">
+									<li>
+										<a href=""><span>Publications</span></a>
+										<a href="javascropt:void(0)" class="m-dp1"><span>Publications</span></a>
+										<ul class="dp2">
+											<li>
+												<a href="">개요</a>
+											</li>
+											<li>
+												<a href="">설립목적 및 역사</a>
+											</li>
+											<li>
+												<a href="">금융통화위원회</a>
+											</li>
+											<li>
+												<a href="">조직도</a>
+											</li>
+											<li>
+												<a href="">운영 및 법규</a>
+												<ul class="dp3">
+													<li class="dropdown">
+														<a href="javascript:void(0)" title="하위메뉴 열기">
+															<span><span class="highlight">전략</span> 및 조직가치</span>
+															<i class="ico-arrow"></i>
+														</a>
+														<ul class="dp4">
+															<li>
+																<a href="">
+																	<span><span class="highlight">전략</span></span>
+																</a>
+															</li>
+															<li>
+																<a href=""><span>조직가치</span></a>
+															</li>
+															<li>
+																<a href=""><span>운영리스트 관리</span></a>
+															</li>
+															<li>
+																<a href=""><span>CI소개</span></a>
+															</li>
+														</ul>
+													</li>
+													<li>
+														<a href=""><span>경영정보</span></a>
+													</li>
+													<li>
+														<a href=""><span>계약정보</span></a>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+								</ul>
+								<ul class="dp1">
+									<li>
+										<a href=""><span>Conferences</span></a>
+										<a href="javascropt:void(0)" class="m-dp1"><span>Conferences</span></a>
+									</li>
+								</ul>
+								<ul class="dp1">
+									<li>
+										<a href=""><span>Forums</span></a>
+										<a href="javascropt:void(0)" class="m-dp1"><span>Forums</span></a>
+										<ul class="dp2">
+											<li>
+												<a href="">개요</a>
+											</li>
+											<li>
+												<a href="">설립목적 및 역사</a>
+											</li>
+											<li>
+												<a href="">금융통화위원회</a>
+											</li>
+											<li>
+												<a href="">조직도</a>
+											</li>
+											<li>
+												<a href="">운영 및 법규</a>
+												<ul class="dp3">
+													<li class="dropdown">
+														<a href="javascript:void(0)" title="하위메뉴 열기">
+															<span><span class="highlight">전략</span> 및 조직가치</span>
+															<i class="ico-arrow"></i>
+														</a>
+														<ul class="dp4">
+															<li>
+																<a href="">
+																	<span><span class="highlight">전략</span></span>
+																</a>
+															</li>
+															<li>
+																<a href=""><span>조직가치</span></a>
+															</li>
+															<li>
+																<a href=""><span>운영리스트 관리</span></a>
+															</li>
+															<li>
+																<a href=""><span>CI소개</span></a>
+															</li>
+														</ul>
+													</li>
+													<li>
+														<a href=""><span>경영정보</span></a>
+													</li>
+													<li>
+														<a href=""><span>계약정보</span></a>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //전체메뉴 -->
+		</header>	
+		<!-- //header -->
+
+		<!-- navigation -->
+		<div class="navigation">
+			<nav class="container">
+				<ul>
+					<li class="home"><span>Home</span></li>
+					<li>
+						<a href="" title="하위메뉴 열기">뉴스 및 자료</a>
+						<div class="depth2">
+							<ul>
+								<li>
+									<a href="">BOK이슈노트</a>
+								</li>
+								<li>
+									<a href="">BOK경제연구</a>
+								</li>
+								<li>
+									<a href="">해외경제포커스</a>
+								</li>
+								<li class="on">
+									<a href="">연차보고서</a>
+								</li>
+								<li>
+									<a href="">통화신용정책보고서</a>
+								</li>
+								<li>
+									<a href="">금융안정보고서</a>
+								</li>
+								<li>
+									<a href="">경제전망보고서</a>
+								</li>
+								<li>
+									<a href="">지역경제보고서</a>
+								</li>
+								<li>
+									<a href="">지급결제보고서</a>
+								</li>
+								<li>
+									<a href="">정기간행물</a>
+								</li>
+								<li>
+									<a href="">단행본</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="" title="하위메뉴 열기">뉴스 및 의사록</a>
+						<div class="depth2">
+							<ul>
+								<li>
+									<a href="">보도자료</a>
+								</li>
+								<li>
+									<a href="">주간보도계획</a>
+								</li>
+								<li>
+									<a href="">언론보도해명자료</a>
+								</li>
+								<li>
+									<a href="">금융통화위원회 의사록</a>
+								</li>
+								<li>
+									<a href="">금융통화위원회 의결사항</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="">보도자료</a>
+					</li>
+				</ul>
+				<div class="top-page-toolbar">
+					<div class="page-toolbar">
+						<button type="button" class="sns-toggle" aria-label="SNS 공유"></button>
+						<div class="sns-wrap">
+							<div class="sns-wrap__set">
+								<button type="button" data-type="close" class="close" aria-label="SNS 공유 닫기"></button>
+								<button type="button" data-type="youtube" class="ico-youtube" aria-label="유튜브 공유 새창열림"></button>
+								<button type="button" data-type="instagram" class="ico-instagram" aria-label="인스타그램 공유 새창열림"></button>
+								<button type="button" data-type="facebook" class="ico-facebook" aria-label="페이스북 공유 새창열림"></button>
+								<button type="button" data-type="twitter" class="ico-twitter" aria-label="트위터 공유 새창열림"></button>
+							</div>
+						</div>
+						<a href="/static/view/forPrint.html" data-size="1200, 700, yes" target="_blank" title="새창열림" class="page-print b-pop">
+							<span class="sr-only">프린트</span>
+						</a>
+						<a href="/static/guide/portal/popup/rss_popup.html" data-size="800, 500, yes" class="page-rss b-pop" target="_blank" title="새창열림">
+							<span class="sr-only">rss 한국은행</span>
+						</a>
+					</div>
+				</div>
+			</nav>
+			<div class="sub-_visual">
+				<div class="hgroup">
+					<h1>뉴스 및 의사록</h1>
+				</div>
+			</div>
+		</div>
+		<!-- //navigation -->
+
+		<!-- content -->
+		<div class="container" id="content">
+			<div class="hgroup">
+				<h1>뉴스 및 자료</h1>
+			</div>
+			<main id="main-container">
+				
+
+
+
+				
+			<!-- </main>
+		</div>
+	</div> -->
+
+
+<div class="tab-list col-2">
+	<div class="swiper">
+		<div class="swiper-wrapper">
+			<a href="/imerEng/main/contents.do?menuNo=600344" role="group" aria-controls="panel1-1" class="swiper-slide" id="tap1-1">Introduction</a>
+			<a href="/imerEng/main/contents.do?menuNo=600345" role="group" aria-controls="panel1-2" class="swiper-slide on" id="tap1-2">Publication List</a>
+		</div>
+    </div>
+</div>
+
+<div class="tab-content">
+	<div class="tab-pannel cont-tableList on" id="panel1-2" aria-labelledby="tap1-2" role="tabpanel">
+        <h3 class="h3 mt40">Vol.29 No.4 (2023.IV)</h3>
+        <div class="table borderTop scrollX table-striped" >
+            <table data-namo-copy-table="data-namo-copy-table" class="" status="default" style=" height: 174px;">
+                <tbody>
+                    <tr>
+                        <td class="w70p" style=" border-width: 0px 1.25px 1.25px;">
+                            <span style="color: rgb(0, 0, 0); font-family: '맑은 고딕';">A
+                                    Study on the Selection of Industries for Liquidity Support by Estimating the
+                                    Probability of Cash Crunch Risk: Focusing on the COVID-19 case</span>
+                        </td>
+                        <td class="w30p" style="width: 267px; border-width: 0px 1.25px 1.25px;">
+                            Eunsook Seo,&nbsp;Sanghyun Hwang
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border-width: 0px 1.25px 1.25px;">
+                            <span style="color: rgb(0, 0, 0); font-family: '맑은 고딕';">Financial Stability, Impossible
+                                    Trinity, and Macroprudential Policy</span>
+                        </td>
+                        <td style="border-width: 0px 1.25px 1.25px;">
+                            <span style="color: rgb(0, 0, 0); font-family: '맑은 고딕';">Jun-Hyung KO,&nbsp;Hitoshi
+                                    MOTOYAMA,&nbsp;Akio SASHIDA</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border-width: 0px 1.25px 1.25px; height: 60px;">
+                            <span style="color: rgb(0, 0, 0); font-family: '맑은 고딕';">An
+                                    Empirical Analysis of the Impact of Yen Exchange Rate Fluctuations on Japanese
+                                    Exports: A Comparison Before and After the Great East Japan Earthquake</span>
+                        </td>
+                        <td style="border-width: 0px 1.25px 1.25px; height: 60px;">
+                            <span style="color: rgb(0, 0, 0); font-family: '맑은 고딕';">Joon-heon Song</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.29 No.3 (2023.III)</h3>
+        <div class="table borderTop scrollX table-striped" >
+            <table data-namo-copy-table="data-namo-copy-table" class="" status="default" style=" height: 174px;">
+                <tbody>
+                    <tr>
+                        <td class="w70p" style=" border-width: 0px 1.25px 1.25px;">
+                            <span style="color: rgb(0, 0, 0); font-family: '맑은 고딕'; font-size: 12pt;">Analysis of the
+                                    Regime-Switching Property of Unspanned Macro Risks in the Korean Yield Curve</span>
+                            
+                        </td>
+                        <td class="w30p" style="width: 267px; border-width: 0px 1.25px 1.25px;">
+                            <span style="font-family: '맑은 고딕'; font-size: 12pt;">Sun Ho
+                                    Lee</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border-width: 0px 1.25px 1.25px;">
+                            <span style="color: rgb(0, 0, 0); font-family: '맑은 고딕'; font-size: 12pt;">Estimation of
+                                    Korea’s Knowledge Production Function Considering Population Structure Change</span>
+                            
+                        </td>
+                        <td style="border-width: 0px 1.25px 1.25px;">
+                            <span style="color: rgb(0, 0, 0); font-family: '맑은 고딕'; font-size: 12pt;">Won-Kyu
+                                    Kim</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border-width: 0px 1.25px 1.25px; height: 60px;">
+                            <span style="color: rgb(0, 0, 0); font-family: '맑은 고딕'; font-size: 12pt;">The Effects of
+                                    Changes in Population Structure and Policy Alternatives on Employment by Industry in
+                                    Korea</span>
+                        </td>
+                        <td style="border-width: 0px 1.25px 1.25px; height: 60px;">
+                            <span style="color: rgb(0, 0, 0); font-family: '맑은 고딕'; font-size: 12pt;">Hyejin
+                                    Kim,&nbsp;Jongwoo Chung</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div >
+        <h3 class="h3 mt40">Vol.29 No.2 (2023.II)</h3>
+        <div class="table borderTop scrollX table-striped" >
+            <table data-namo-copy-table="data-namo-copy-table" class="" status="default" >
+                <tbody>
+                    <tr>
+                        <td class="w70p" style=" border-width: 0px 1.25px 1.25px;">
+                            <span style="color: rgb(0, 0, 0); font-family: '맑은 고딕'; font-size: 12pt;">Analyzing the
+                                    Pro-Cyclicality of Household Consumption in Korea after the Global Financial Crisis:
+                                    Focusing on Consumption Behavior by Generation</span>
+                        </td>
+                        <td class="w30p" style="width: 267px; border-width: 0px 1.25px 1.25px;">
+                            <span style="font-size: 12pt; font-family: '맑은 고딕';">Young Jun
+                                    Choi</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border-width: 0px 1.25px 1.25px;">
+                            <span style="color: rgb(0, 0, 0); font-family: '맑은 고딕'; font-size: 12pt;">Analysis of
+                                    Determinants to Account for Changes in the Natural Rate of Interest before the
+                                    COVID-19 Pandemic in Korea, the US, and Japan</span>
+                        </td>
+                        <td style="border-width: 0px 1.25px 1.25px;">
+                            <span style="color: rgb(0, 0, 0); font-family: '맑은 고딕'; font-size: 12pt;">Junha Park,
+                                    Dooyeon Cho</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border-width: 0px 1.25px 1.25px; height: 61px;">
+                            <span style="color: rgb(0, 0, 0); font-family: '맑은 고딕'; font-size: 12pt;">Which Type of
+                                    Trust Matters?: Interpersonal vs. Institutional vs. Political Trust</span>
+                        </td>
+                        <td style="border-width: 0px 1.25px 1.25px; height: 61px;">
+                            <span style="color: rgb(0, 0, 0); font-family: '맑은 고딕'; font-size: 12pt;">In Do
+                                    Hwang</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.29 No.1 (2023.I)</h3>
+        <div class="table borderTop scrollX table-striped" >
+            <table data-namo-copy-table="data-namo-copy-table" class="" status="default" >
+                <tbody>
+                    <tr>
+                        <td class="w70p" style=" border-width: 0px 1.25px 1.25px;">
+                            <span style="color: rgb(0, 0, 0);">The Korea-U.S. Interest Rate Differential, Real
+                                    Exchange Rates &amp; the Dollar-Carry Currency Return on the Korean Won: A Present
+                                    Value Approach</span>
+                        </td>
+                        <td class="w30p" style="width: 267px; border-width: 0px 1.25px 1.25px;">
+                            <span style="color: rgb(0, 0, 0);">Jaeho Yun</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border-width: 0px 1.25px 1.25px;">
+                            <span style="color: rgb(0, 0, 0);">The Effects of School Starting Age on Academic
+                                    Achievement</span>
+                        </td>
+                        <td style="border-width: 0px 1.25px 1.25px;">
+                            <span style="color: rgb(0, 0, 0);">Taehoon Kim</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border-width: 0px 1.25px 1.25px; height: 61px;">
+                            <span style="color: rgb(0, 0, 0);">Analysis of the Effects of Debtor-in-Possession on
+                                    Performance of the Distressed Firms: Evidence from Kor</span>
+                        </td>
+                        <td style="border-width: 0px 1.25px 1.25px; height: 61px;">
+                            <span style="color: rgb(0, 0, 0);">Young Jun Choi</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.28 No.4 (2022.IV)</h3>
+        <div class="table borderTop scrollX table-striped" >
+            <table data-namo-copy-table="data-namo-copy-table" class="" status="default">
+                <tbody>
+                    <tr>
+                        <td class="w70p" style=" border-width: 0px 1.25px 1.25px;">
+                            <span style="color: rgb(0, 0, 0);">Essential Roles of CBDC in the Payment System</span>
+                            
+                        </td>
+                        <td class="w30p" style="width: 267px; border-width: 0px 1.25px 1.25px;">
+                            <span style="color: rgb(0, 0, 0);">Young Sik Kim, Ohik Kwon</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border-width: 0px 1.25px 1.25px;">
+                            <span style="color: rgb(0, 0, 0);">Central Bank Digital Currency and the Transmission
+                                    Channel of Monetary Policy: a Dynamic Stochastic General Equilibrium Approach</span>
+                            
+                        </td>
+                        <td style="border-width: 0px 1.25px 1.25px;">
+                            <span style="color: rgb(0, 0, 0);">Seonghoon Cho, In Do Hwang</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border-width: 0px 1.25px 1.25px; height: 61px;">
+                            <span style="color: rgb(0, 0, 0);">Effects of the Introduction of Central Bank Digital
+                                    Currency on Banking Industry and Macroeconomics</span>
+                        </td>
+                        <td style="border-width: 0px 1.25px 1.25px; height: 61px;">
+                            <span style="color: rgb(0, 0, 0);">Kee-Youn Kang,&nbsp;Inkee Jang,&nbsp;Byoungho
+                                    Choi</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border-width: 0px 1.25px 1.25px;">
+                            <span style="color: rgb(0, 0, 0);">CBDC and Card Payment Market</span>
+                        </td>
+                        <td style="border-width: 0px 1.25px 1.25px;">
+                            <span style="color: rgb(0, 0, 0);">Yeongwoong Do</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.28 No.3 (2022.III)</h3>
+        <div class="table borderTop scrollX table-striped" style=" letter-spacing: normal; font-family: 'malgun gothic', 맑은고딕, AppleGothic, 돋움, dotum, Helvetica, Arial, sans-serif; font-size: 13px; margin-top: 0px;">
+            <table  data-namo-copy-table="data-namo-copy-table" class="">
+                <tbody>
+                    <tr>
+                        <td class="w70p" style="border-width: 0px 1.25px 1.25px; ">
+                            <span style="color: rgb(0, 0, 0);">Predictive Probability Estimation of Stagflation in
+                                    Korea</span>
+                        </td>
+                        <td class="w30p" style="border-width: 0px 1.25px 1.25px;">
+                            <span style="color: rgb(0, 0, 0);">Keunhyeong Park, Kyu Ho Kang</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border-width: 0px 1.25px 1.25px;">
+                            <span style="color: rgb(0, 0, 0);">A Study on North Korea’s Economic System: Actual
+                                    Conditions &amp; Evaluation</span>
+                        </td>
+                        <td style="border-width: 0px 1.25px 1.25px;">
+                            <span style="color: rgb(0, 0, 0);">Moon-Soo Yang, Song Lim</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border-width: 0px 1.25px 1.25px; height: 61px;">
+                            <span style="color: rgb(0, 0, 0);">Field-of-study Mismatch and the Long-term Wage Effects
+                                    of Graduating During a Recession</span>
+                        </td>
+                        <td style="border-width: 0px 1.25px 1.25px; height: 61px;">
+                            <span style="color: rgb(0, 0, 0);">Young Jun Choi</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.28 No.2&nbsp; (2022.II)</h3>
+        <div class="table borderTop scrollX table-striped" style=" letter-spacing: normal; font-family: 'malgun gothic', 맑은고딕, AppleGothic, 돋움, dotum, Helvetica, Arial, sans-serif; font-size: 13px; margin-top: 0px;">
+            <table  data-namo-copy-table="data-namo-copy-table" class="">
+                <tbody>
+                    <tr>
+                        <td class="w70p" style="border-width: 0px 1.25px 1.25px; ">
+                            <span style="color: rgb(0, 0, 0);">Dynamic Factor Model and Deep Learning Algorithm for
+                                    GDP Nowcasting</span>
+                        </td>
+                        <td class="w30p" style="border-width: 0px 1.25px 1.25px;">
+                            <span style="color: rgb(0, 0, 0);">Hyun Chang Yi, Dongkyu Choi, Yonggun Kim</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border-width: 0px 1.25px 1.25px;">
+                            <span style="color: rgb(0, 0, 0);">Private Insurance and Precautionary Saving: Evidence
+                                    from the Korean Household Panel Survey</span>
+                        </td>
+                        <td style="border-width: 0px 1.25px 1.25px;">
+                            <span style="color: rgb(0, 0, 0);">Yunah Song</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border-width: 0px 1.25px 1.25px; height: 61px;">
+                            <span style="color: rgb(0, 0, 0);">Seasonal Adjustment of Korean Daily Data</span>
+                        </td>
+                        <td style="border-width: 0px 1.25px 1.25px; height: 61px;">
+                            <span style="color: rgb(0, 0, 0);">Geung-Hee Lee, Keunho Jang</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.28 No.1&nbsp; (2022.<span style="font-size: 14pt;">I</span>)</h3>
+        <div class="table borderTop scrollX table-striped" style=" letter-spacing: normal; font-family: 'malgun gothic', 맑은고딕, AppleGothic, 돋움, dotum, Helvetica, Arial, sans-serif; font-size: 13px; margin-top: 0px;">
+            <table  data-namo-copy-table="data-namo-copy-table" class="">
+                <tbody>
+                    <tr>
+                        <td class="w70p" style="border-width: 0px 1.25px 1.25px; ">
+                            <span style="color: rgb(0, 0, 0);">Analysis of Housing Price Changes in South Korea Using
+                                    the Structural Vector Autoregression Method: Estimating the Extent to Which
+                                    Speculative Demand for Houses Contributes to the Price Changes</span>
+                        </td>
+                        <td class="w30p" style="border-width: 0px 1.25px 1.25px;">
+                            <span style="color: rgb(0, 0, 0);">Woojin Lee, Cheolbeom Park</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border-width: 0px 1.25px 1.25px;">
+                            <span style="color: rgb(0, 0, 0);">Macroeconomic Implication of Foreign Currency Bond
+                                    Financing by Non-financial Firms in Korea</span>
+                        </td>
+                        <td style="border-width: 0px 1.25px 1.25px;">
+                            <span style="color: rgb(0, 0, 0);">Jongho Park</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border-width: 0px 1.25px 1.25px; height: 61px;">
+                            <span style="color: rgb(0, 0, 0);">Agent-based Systemic Risk Model</span>
+                        </td>
+                        <td style="border-width: 0px 1.25px 1.25px; height: 61px;">
+                            <span style="color: rgb(0, 0, 0);">Sangwon Suh</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.27 No.4&nbsp; (2021.<span style="font-size: 14pt;">IV</span>)</h3>
+        <div class="table borderTop scrollX table-striped" >
+            <table >
+                <tbody>
+                    <tr>
+                        <td class="w70p" style="border-width: 0px 1.25px 1.25px; ">Forecasting Korean CPI
+                            Inflation</td>
+                        <td class="w30p" style="border-width: 0px 1.25px 1.25px;">Kyuho Kang, Jungsung Kim,
+                            Serim Shin</td>
+                    </tr>
+                    <tr>
+                        <td style="border-width: 0px 1.25px 1.25px;">Transmission of Chinese Monetary Policy Shocks:
+                            Evidence from Korea</td>
+                        <td style="border-width: 0px 1.25px 1.25px;">Yujeong Cho</td>
+                    </tr>
+                    <tr>
+                        <td style="border-width: 0px 1.25px 1.25px; height: 61px;">Changes in North Korea's Financial System
+                            During the Kim Jong-un Era -Based on North Korean Literature -</td>
+                        <td style="border-width: 0px 1.25px 1.25px; height: 61px;">Minjung Kim, Sungmin Mun</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.27 No.3&nbsp; (2021.III)</h3>
+        <div class="table borderTop scrollX table-striped" >
+            <table >
+                <tbody>
+                    <tr>
+                        <td class="w70p" style="border-width: 0px 1.25px 1.25px; ">An Empirical Study on Bank
+                            Capital Channel and Risk-Taking Channel for Monetary Policy</td>
+                        <td class="w30p" style="border-width: 0px 1.25px 1.25px;">Sang Jin Lee</td>
+                    </tr>
+                    <tr>
+                        <td style="border-width: 0px 1.25px 1.25px;">The Government Expenditure Multiplier in Korea :
+                            Evidence From Input-Output Table Panel Data</td>
+                        <td style="border-width: 0px 1.25px 1.25px;">Minki Hong</td>
+                    </tr>
+                    <tr>
+                        <td style="border-width: 0px 1.25px 1.25px; height: 61px;">Inter-regional Income Inducement and
+                            Income Transfer Analysis Using Korean Regional Input-Output Tables</td>
+                        <td style="border-width: 0px 1.25px 1.25px; height: 61px;">Tae Hyun Kwon</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.27 No.2&nbsp; (2021.II)</h3>
+        <div class="table borderTop scrollX table-striped" >
+            <table >
+                <tbody>
+                    <tr>
+                        <td class="w70p" style="border-width: 0px 1.25px 1.25px; ">A Slowdown in Korea's GDP
+                            Trend Growth and Its Decomposition</td>
+                        <td class="w30p" style="border-width: 0px 1.25px 1.25px;">Byoung Hoon Seok, Nam Gang
+                            Lee</td>
+                    </tr>
+                    <tr>
+                        <td style="border-width: 0px 1.25px 1.25px;">The Effects of Job Training Programs on the Employment
+                            and Wages of Immigrants in Korea</td>
+                        <td style="border-width: 0px 1.25px 1.25px;">Hyejin Kim, Chulhee Lee</td>
+                    </tr>
+                    <tr>
+                        <td style="border-width: 0px 1.25px 1.25px; height: 61px;">Estimating Land Assets in North Korea:
+                            Framework Development &amp; Exploratory Application</td>
+                        <td style="border-width: 0px 1.25px 1.25px; height: 61px;">Song Lim</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.27 No.1&nbsp; (2021.I)</h3>
+        <div class="table borderTop scrollX table-striped" >
+            <table >
+                <tbody>
+                    <tr>
+                        <td class="w70p" style="border-width: 0px 1.25px 1.25px; ">Impacts of US Monetary
+                            Policy on Domestic Bond and FX Swap Markets</td>
+                        <td class="w30p" style="border-width: 0px 1.25px 1.25px;">Yongo Kwon, Mira Kim, Inhwan
+                            So</td>
+                    </tr>
+                    <tr>
+                        <td style="border-width: 0px 1.25px 1.25px;">Estimation of the Potential Impacts of COVID-19 on
+                            Poverty in ASEAN Countries</td>
+                        <td style="border-width: 0px 1.25px 1.25px;">Hokyung Bang, Eunjeong Yang</td>
+                    </tr>
+                    <tr>
+                        <td style="border-width: 0px 1.25px 1.25px; height: 61px;">The Impact of COVID-19 Pandemic on the
+                            Relationship Structure between Volatility and Trading Volume in the BTC Market: A CRQ approach
+                        </td>
+                        <td style="border-width: 0px 1.25px 1.25px; height: 61px;">Beum-Jo Park</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40"><span style="font-size: 14pt;">Vol.26 No.4&nbsp; (2020.</span><span style="font-size: 14pt;">IV</span><span style="font-size: 14pt;">)</span></h3>
+        <table style=" height: 236px;">
+            <tbody>
+                <tr>
+                    <td style="background: rgb(255, 255, 255); border-width: 1px 1.25px 1px 1px; border-style: solid; border-color: rgb(222, 222, 222); padding: 9px 5px 8px; width: 613px; line-height: 1.4;" rowspan="1">
+                        Effects of Industrial Restructuring on Employment and Growth
+                    </td>
+                    <td style="background: rgb(250, 250, 250); border-width: 1px 1px 1px 1.25px; border-style: solid; border-color: rgb(222, 222, 222); padding: 9px 5px 8px; width: 255px; line-height: 1.4;" rowspan="1">
+                        Byeongseon Seo · Taekyung Kim
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background: rgb(250, 250, 250); border-width: 1px 1.25px 1.25px; border-style: solid; border-color: rgb(222, 222, 222); padding: 9px 5px 8px; width: 613px; line-height: 1.4;" rowspan="1">
+                        Labor Market and Business Cycles in Korea: Bayesian Estimation of a Business Cycle Model with
+                            Labor Market Frictions
+                    </td>
+                    <td style="background: rgb(250, 250, 250); border-width: 1px 1.25px 1.25px; border-style: solid; border-color: rgb(222, 222, 222); padding: 9px 5px 8px; width: 255px; line-height: 1.4;" rowspan="1">
+                        Junhee Lee
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background: rgb(255, 255, 255); border-width: 0px 1.25px; border-style: none solid; padding: 9px 5px 8px; width: 613px; height: 61px; line-height: 1.4; border-right-color: rgb(222, 222, 222); border-bottom-color: rgb(211, 211, 211); border-left-color: rgb(222, 222, 222);" rowspan="1">
+                        <span style="background-color: rgb(250, 250, 250);">Korea’s Employment Embodied in Exports: a
+                                Multi-Regional Input-Output and Structural Decomposition&nbsp;</span><span style="background-color: rgb(250, 250, 250);">Analysis</span>
+                    </td>
+                    <td style="background: rgb(255, 255, 255); border-width: 0px 1.25px 1.25px; border-style: none solid solid; padding: 9px 5px 8px; width: 255px; height: 61px; line-height: 1.4; border-right-color: rgb(222, 222, 222); border-bottom-color: rgb(222, 222, 222); border-left-color: rgb(222, 222, 222);" rowspan="1">
+                        Tae-jin Kim
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background: rgb(250, 250, 250); border-width: 0px 1.25px 1.25px; border-style: none solid solid; border-color: rgb(211, 211, 211) rgb(222, 222, 222) rgb(222, 222, 222); padding: 9px 5px 8px; width: 613px; height: 61px; line-height: 1.4;">
+                        Determinants of a Firm’s Exit from Exporting: Evidence from Korean Manufacturing Firms</td>
+                    <td style="background: rgb(255, 255, 255); border-width: 0px 1.25px 1.25px; border-style: none solid solid; padding: 9px 5px 8px; width: 255px; height: 61px; line-height: 1.4; border-right-color: rgb(222, 222, 222); border-bottom-color: rgb(222, 222, 222); border-left-color: rgb(222, 222, 222);">
+                        Yunmi Nam&nbsp;·&nbsp;Moon Jung Choi</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3 class="h3 mt40">Vol.26 No.3&nbsp; (2020.III)</h3>
+        <div class="table borderTop scrollX table-striped" >
+            <table >
+                <tbody>
+                    <tr>
+                        <td class="w70p" style="border-width: 0px 1.25px 1.25px; ">Predicting Economic Activity
+                            via the Yield Spread: Literature Survey and Empirical Evidence in Korea</td>
+                        <td class="w30p" style="border-width: 0px 1.25px 1.25px;">Jaeho Yun</td>
+                    </tr>
+                    <tr>
+                        <td style="border-width: 0px 1.25px 1.25px;">Estimating a Precautionary Saving Motive under
+                            Consumption Uncertainty</td>
+                        <td style="border-width: 0px 1.25px 1.25px;">Jin-tae Hwang<span style="background-color: rgb(255, 255, 255);">&nbsp;·&nbsp;</span>Sung-min Kim</td>
+                    </tr>
+                    <tr>
+                        <td style="border-width: 0px 1.25px 1.25px; height: 61px;">The Bank of Korea Act Enacted as an
+                            Apparatus for Modern Central Banking: A Review and Evaluation</td>
+                        <td style="border-width: 0px 1.25px 1.25px; height: 61px;">Hong-Bum Kim</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.26 No.2&nbsp;&nbsp;(2019.II)</h3>
+        <div class="table borderTop scrollX table-striped" >
+            <table >
+                <tbody>
+                    <tr>
+                        <td class="w70p" style="border-width: 0px 1.25px 1.25px; ">Effects of Dollarization on
+                            Inflation and Exchange Rates in North Korea</td>
+                        <td class="w30p" style="border-width: 0px 1.25px 1.25px;">Sungmin
+                            Mun&nbsp;·&nbsp;Byoung-ki Kim</td>
+                    </tr>
+                    <tr>
+                        <td style="border-width: 0px 1.25px 1.25px;">Business Cycle Analysis on Korean Youth Labor Market
+                            using Alternative Unemployment Measures</td>
+                        <td style="border-width: 0px 1.25px 1.25px;">Taebong Kim<span style="background-color: rgb(255, 255, 255);">&nbsp;·&nbsp;</span>Keunhyeong Park</td>
+                    </tr>
+                    <tr>
+                        <td style="border-width: 0px 1.25px 1.25px; height: 61px;">The Effects of North Korea’s Mineral
+                            Export on Various Imports</td>
+                        <td style="border-width: 0px 1.25px 1.25px; height: 61px;">Dawool Kim&nbsp;·&nbsp;Minjung
+                            Kim&nbsp;·&nbsp;Byung-yeon Kim</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.26 No.1 (2020.I)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table style="height: 204px;" status="default">
+                <tbody>
+                    <tr>
+                        <td class="w70p" style="height: 55.75px;"><span>Minimum Wage and Productivity: Analysis of
+                                Manufacturing Industry in Korea</span></td>
+                        <td class="w30p" style="height: 55.75px;">Kyoo Il Kim&nbsp;· Seung Whan Ryuk</td>
+                    </tr>
+                    <tr>
+                        <td style="height: 55.75px;"><span>A Political Economic Analysis of Korean Reunification, Migration
+                                and Income Redistribution</span></td>
+                        <td style="height: 55.75px;">Weh-Sol Moon</td>
+                    </tr>
+                    <tr>
+                        <td style="height: 55.75px;">Estimation of the Korean Yield Curve via Bayesian Variable Selection
+                        </td>
+                        <td style="height: 55.75px;">Byungsoo Koo</td>
+                    </tr>
+                    <tr>
+                        <td style="height: 55.75px;">Impacts of Population Aging on Real Interest Rates</td>
+                        <td style="height: 55.75px;">Myunghyun Kim<span style="background-color: rgb(255, 255, 255);">&nbsp;·&nbsp;</span>Ohik Kwon</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">
+            <table data-namo-copy-table="data-namo-copy-table">
+            </table>
+        </h3>
+        <h2 style="line-height: 180%;"><span>Vol.25 No.4</span><span>&nbsp;</span><span>&nbsp;(2019.IV)</span></h3>
+        <div class="table borderTop scrollX table-striped" >
+            <table >
+                <tbody>
+                    <tr>
+                        <td class="w70p" style="border-width: 0px 1px 1px; ">The Impacts of Student Loans on
+                            Early Labor Market Performance<br></td>
+                        <td class="w30p" style="border-width: 0px 1px 1px;">Dongkyu Yang&nbsp;·&nbsp;Jaesung
+                            Choi</td>
+                    </tr>
+                    <tr>
+                        <td style="border-width: 0px 1px 1px;">Patene Citations and Localizations of Knowledge Spillovers:
+                            Evidence from Korea<br></td>
+                        <td style="border-width: 0px 1px 1px;">Jihong Lee&nbsp;·&nbsp;Yunmi Nam</td>
+                    </tr>
+                    <tr>
+                        <td style="border-width: 0px 1px 1px; height: 61px;">Comparative Analysis of Youth Unemployment in
+                            Korea and Japan: Implications for Korea</td>
+                        <td style="border-width: 0px 1px 1px; height: 61px;">SaangJoon Baak ·&nbsp;Keunho Jang</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.25 No.3 (2019. III)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>The Impact of Dual Labor Market on Labor Productivity: Evidence from the
+                                OECD<br></span></td>
+                        <td class="w30p">Koangsung Choi ·&nbsp;Jieun Lee ·&nbsp;Chung Choe</td>
+                    </tr>
+                    <tr>
+                        <td><span>International Trade and Labor Demand of Korean Firms: Focusing on Heterogeneous Firm
+                                Productivity<br></span></td>
+                        <td>Jihyun Eum ·&nbsp;Jinho Park ·&nbsp;Moon Jung Choi</td>
+                    </tr>
+                    <tr>
+                        <td><span>The Effects of Financial Market Uncertainty: Does Regime Change Occur During Financial
+                                Market Crises?<br></span></td>
+                        <td>Seewon Kim</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="1">
+                            The Effects of Government Spending in Korea: a FAVAR Approach<br>
+                        </td>
+                        <td rowspan="1">
+                            Wongi Kim<br>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">
+            <table data-namo-copy-table="data-namo-copy-table">
+            </table>
+        </h3>
+        <h3 class="h3 mt40">Vol.25 No.2 (2019.II)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>Monetary Policy in a Two-Agent Economy with Debt-Constrained
+                                Households&nbsp;<br></span></td>
+                        <td class="w30p">Yongseung Jung, SungJu Song</td>
+                    </tr>
+                    <tr>
+                        <td><span>A study about the effects of online commerce on the local retail commercial
+                                area<br></span></td>
+                        <td>Kangbae Lee</td>
+                    </tr>
+                    <tr>
+                        <td><span>The Analysis of Hysteresis in Youth Unemployment<br></span></td>
+                        <td>Namju Kim</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="1">
+                            The Impact of US Monetary Policy upon Korea's Financial Markets and Capital Flows: Based on
+                                TVP-VAR Analysis<br>
+                        </td>
+                        <td rowspan="1">
+                            Hyunduck Suh, Tae Soo Kang<br>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">
+            <table data-namo-copy-table="data-namo-copy-table">
+            </table>
+        </h3>
+        <h3 class="h3 mt40">Vol.25 No.1 (2019.I)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>Determinants of Variance Risk Premium <br></span></td>
+                        <td class="w30p">Sun-Joong Yoon</td>
+                    </tr>
+                    <tr>
+                        <td><span>Import Demand in Developed Economies &amp; Korean Exports <br></span></td>
+                        <td>Moon Jung Choi ·&nbsp;Kyung Kuen Kim</td>
+                    </tr>
+                    <tr>
+                        <td><span>Employment Structure in Korea: Characteristics &amp; Problems <br></span></td>
+                        <td>Keunho Jang</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">
+            <table data-namo-copy-table="data-namo-copy-table">
+            </table>
+        </h3>
+        <h3 class="h3 mt40">Vol.24 No.4 (2018.IV)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>Monetary Policy and Corporate Investment: Analysis of the Asset Price Channel
+                                and the Balance Sheet Channel <br></span></td>
+                        <td class="w30p">SaangJoon Baak ·&nbsp;Seung Whan Ryuk</td>
+                    </tr>
+                    <tr>
+                        <td><span>An Empirical Study on the Risk-taking Channel of Monetary Policy in Korea <br></span></td>
+                        <td>Choi, Won Hyung ·&nbsp;Yoon, Young Man</td>
+                    </tr>
+                    <tr>
+                        <td><span>Which determines new housing supply? Demand versus Supply <br></span></td>
+                        <td>Jiyoon Oh</td>
+                    </tr>
+                    <tr>
+                        <td><span>The Demographic Structure, Firm Age and Economic Performance: A Local Level Analysis
+                                <br></span></td>
+                        <td>Jisoo Kang ·&nbsp;Janghee Cho</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.24 No.3 (2018. III)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>Analysis on Korean Inter-industry Productivity Spillover Effects <br></span>
+                        </td>
+                        <td class="w30p">Won-Kyu Kim</td>
+                    </tr>
+                    <tr>
+                        <td><span>Fourth Industrial Revolution and Innovative Capacity: Comparative Analysis of Major
+                                Industrial Nations with US Patent Data, 1976-2015 <br></span></td>
+                        <td>Lee, Jihong ·&nbsp;Lim, Hyunkyeong ·&nbsp;Jeong, Daeyoung</td>
+                    </tr>
+                    <tr>
+                        <td><span>Inventory Investment and Business Cycle: Asymmetric Dynamics of Inventory Investment over
+                                the Business Cycle Phases <br></span></td>
+                        <td>Byeongseon Seo ·&nbsp;Keunho Jang</td>
+                    </tr>
+                    <tr>
+                        <td><span>The Analysis on the Sources of the Excessive Consumption Volatility in Emerging countries:
+                                Based on the Comparison of Korea with Mexico&nbsp; <br></span></td>
+                        <td>Kwang Hwan Kim ·&nbsp;Taekyung Kim</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.24 No.2 (2018.II)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>The Effects of Job Training Programs on Employability among College Graduates
+                                <br></span></td>
+                        <td class="w30p">Chung Choe ·&nbsp;Namju Kim ·&nbsp;Koangsung Choi</td>
+                    </tr>
+                    <tr>
+                        <td><span>A Construction of an Employment Multiplier in the Input-Output Model: The Analyses of
+                                Industrial Labor Linkages and Opportunity Costs <br></span></td>
+                        <td>Haemyoung Ji</td>
+                    </tr>
+                    <tr>
+                        <td><span>Analysis of the Relationship between Negative Interest Rate and Bank Profitability
+                                <br></span></td>
+                        <td>Jae-Joon Han ·&nbsp;Inhwan So</td>
+                    </tr>
+                    <tr>
+                        <td style="height: 18px;"><span>Structural Relationships between Equity Flows, Stock Prices and
+                                Exchange Rate <br></span></td>
+                        <td style="height: 35px;" rowspan="1">Cheonggu Cho</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.24 No.1 (2018.I)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p" style="height: 18px;"><span>An Empirical Study on Savings Banks’ Ownership
+                                Structure and Dividends <br></span></td>
+                        <td class="w30p" style="height: 34px;" rowspan="1">Hakkon Kim</td>
+                    </tr>
+                    <tr>
+                        <td class="w70p" style="height: 18px;" rowspan="1" colspan="1">
+                            Analysis on Determinant Factors of Local Government Expenditure with Panel Data Ridge
+                                Regression<br>
+                        </td>
+                        <td class="w30p" style="height: 34px;" rowspan="1" colspan="1">
+                            Seung-Jun Park ·&nbsp;Dae Chul Kim<br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span>The Effect of the Cash Receipt System on Preventing Tax Evasion from Consumers’
+                                Perspective <br></span></td>
+                        <td style="width: 305px;">Eunbi Ko ·&nbsp;Heonjae Song</td>
+                    </tr>
+                    <tr>
+                        <td><span>Dispersion of Household Debt and Its Macroeconomic Implications: Evidence from South Korea
+                                <br></span></td>
+                        <td style="width: 305px;">Ki Young Park ·&nbsp;Soohyon Kim</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.23 No.4 (2017.IV)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table style="height: 173.33px;">
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>The Effect of Population Aging on Growth <br></span></td>
+                        <td class="w30p">Byung Kwun Ahn ·&nbsp;Ki-Ho Kim ·&nbsp;Seung&nbsp;Whan Ryuk</td>
+                    </tr>
+                    <tr>
+                        <td style="height: 27.33px;"><span>The Effects of Population Aging on the Labor Market <br></span>
+                        </td>
+                        <td style="height: 27.33px;">Chulhee Lee ·&nbsp;Jieun Lee</td>
+                    </tr>
+                    <tr>
+                        <td><span>Analysis of Regional Categorization by Employment and Wages and the Possibility of the
+                                Virtuous Cycle <br></span></td>
+                        <td>Jeonghong Kim</td>
+                    </tr>
+                    <tr>
+                        <td><span>Changes in Global Value Chains and Factor Decomposition Analysis of GDP Changes in Korean
+                                Industries Based on Brexit Scenarios <br></span></td>
+                        <td>Tae-jin Kim ·&nbsp;Jungu Kang ·&nbsp;Seung-jin Shim</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.23 No.3 (2017. III)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>The Role of Unobservable Fundamentals in Korea Exchange Rate Fluctuations:
+                                Bayesian Approach <br></span></td>
+                        <td class="w30p">Young Min Kim ·&nbsp;Seojin Lee</td>
+                    </tr>
+                    <tr>
+                        <td style="height: 20px;"><span>Demographic Change and Long Term Trend of Inflation: The Case of
+                                South Korea <br></span></td>
+                        <td style="height: 20px;">Hwan Koo Kang</td>
+                    </tr>
+                    <tr>
+                        <td style="height: 28.99px;"><span>Main Bank Relationship and Firm's Income-Increasing Earnings
+                                Management <br></span></td>
+                        <td style="height: 28.99px;">Sang wook Lee</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.23 No.2 (2017.II)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>An Empirical Analysis of Mortgage Loan Delinquency Using Personal Panel Data
+                                in Korea <br></span></td>
+                        <td class="w30p">Hosung Jung</td>
+                    </tr>
+                    <tr>
+                        <td><span>The Effects of Household Debt on Consumption and Economic Growth - Flow Effect and Stock
+                                Effect - <br></span></td>
+                        <td>Jong Ku Kang</td>
+                    </tr>
+                    <tr>
+                        <td><span>Estimation of Formal and Informal Sectors in Social Accounting Matrix for the North Korean
+                                Economy <br></span></td>
+                        <td>Jiyoung Choi</td>
+                    </tr>
+                    <tr>
+                        <td><span>The Effects of Relationship Banking on Bank Lending to Small and Medium-sized Enterprises:
+                                Evidence from Korea <br></span></td>
+                        <td>Sangwon Suh ·&nbsp;Kyung rok Wi</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.23 No.1 (2017.I)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>Effects of Increasing Non-regular Workers on Wage Distribution <br></span>
+                        </td>
+                        <td class="w30p">Chung Choe ·&nbsp;Sungyup Chung</td>
+                    </tr>
+                    <tr>
+                        <td><span>Analysis of Call Rate Behaviour Using Regime-switching Diffusion Process Model <br></span>
+                        </td>
+                        <td>Seungmoon Choi ·&nbsp;Byungkuk Kim</td>
+                    </tr>
+                    <tr>
+                        <td><span>Fiscal Multipliers of Korea: A Bayesian VAR Approach <br></span></td>
+                        <td>Kang Koo Lee ·&nbsp;Joonyoung Hur</td>
+                    </tr>
+                    <tr>
+                        <td><span>China Effects on Labor Markets in Korean Manufacturing Industries: Empirical Analysis
+                                <br></span></td>
+                        <td>Taegoo Kwon ·&nbsp;Nakil Sung ·&nbsp;Minchang Kim</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.22 No.4 (2016.IV)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>Marginal Efficiency of Investment (MEI) Shock and Comovement of Consumption
+                                <br></span></td>
+                        <td class="w30p">Kwang Hwan Kim ·&nbsp;Chang-kee Lee</td>
+                    </tr>
+                    <tr>
+                        <td><span>Implied Liquidity Estimation <br></span></td>
+                        <td>Joon Myoung Woo ·&nbsp;Jieun Lee</td>
+                    </tr>
+                    <tr>
+                        <td><span>Credit Cycle and the Macroeconomy: Empirical Evidence from Korea <br></span></td>
+                        <td>Jaehoon Hahn ·&nbsp;Ho-Seong Moon</td>
+                    </tr>
+                    <tr>
+                        <td><span>Central Bank Losses and Monetary Policy Implementation <br></span></td>
+                        <td>Yongho Lee ·&nbsp;Youngman Yoon</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.22 No.3 (2016. III)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p" style="height: 33.66px;"><span>An Interpretive Analysis of Direct and Indirect
+                                Input Requirements in the Input-Output Model <br></span></td>
+                        <td class="w30p" style="height: 33.66px;">Sang Yul Shim ·&nbsp;Yoon Kyung Kim</td>
+                    </tr>
+                    <tr>
+                        <td><span>The Effect of Pension Wealth of National Pension and Special Occupational Pension on
+                                Household Savings <br></span></td>
+                        <td>Wonjin Jang ·&nbsp;Heonjae Song</td>
+                    </tr>
+                    <tr>
+                        <td><span>Investors’ Herd Behavior and its Relation with Volatility in the Korean Stock Market
+                                <br></span></td>
+                        <td>Beum-Jo Park</td>
+                    </tr>
+                    <tr>
+                        <td><span>Internationalization of the German Financial System: Structural Features and Implications
+                                <br></span></td>
+                        <td>Hee-Sik Kim</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.22 No.2 (2016.II)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>Population Aging and Extension of Retirement Age (Quantitative Analysis using
+                                Overlapping Generation Model) <br></span></td>
+                        <td class="w30p">Jay H. Hong ·&nbsp;Youngjae Lee ·&nbsp;Taesu Kang</td>
+                    </tr>
+                    <tr>
+                        <td><span>Intergenerational Equity and Sustainability of the Korean National Pension: A Generational
+                                Accounting <br></span></td>
+                        <td>Ki-Hong Choi</td>
+                    </tr>
+                    <tr>
+                        <td><span>The Role of Foreign Currency Deposits, and the Impacts of External Shocks on CDS Spreads
+                                for EMEs <br></span></td>
+                        <td>Hosung Jung ·&nbsp;Woo Joon Myung</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.22 No.1 (2016.I)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>The impacts of Dual Labour Markets on Unemployment and Productivity
+                                <br></span></td>
+                        <td class="w30p">Sun-Bin Kim ·&nbsp;Yongsung Chang ·&nbsp;Taesu Kang</td>
+                    </tr>
+                    <tr>
+                        <td><span>Inference and Dynamic Analyses of Non-stationarity of Real Interest Rate <br></span></td>
+                        <td>Yun-Yeong Kim</td>
+                    </tr>
+                    <tr>
+                        <td><span>Non-Recourse Mortgage Loans and Implied Option Prices <br></span></td>
+                        <td>Sun-Joong Yoon ·&nbsp;Chang Gyun Park</td>
+                    </tr>
+                    <tr>
+                        <td><span>Comovement of Won/Dollar Exchange Rates with Yen/Dollar Exchange Rates Revisited
+                                <br></span></td>
+                        <td>Keun Yeong Lee</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.21 No.4 (2015.IV)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>An Analysis on the Inflation Differentials by Income and Age Group : Focusing
+                                on the Democratic CPI <br></span></td>
+                        <td class="w30p">Hyun-Jeong Kim ·&nbsp;Hyungsik Kim ·&nbsp;Jungick Lee</td>
+                    </tr>
+                    <tr>
+                        <td><span>GVAR Analysis on 6 Korean Broad Regions - Bayesian Cointegration Approach <br></span></td>
+                        <td>Ki-Ho Kim</td>
+                    </tr>
+                    <tr>
+                        <td><span>Understanding the Effects of Different Types of Oil Shocks on Korean Manufacturing
+                                Industry <br></span></td>
+                        <td>Kyungsoo Cha</td>
+                    </tr>
+                    <tr>
+                        <td style="height: 27px;"><span>Maximum Likelihood Estimation of Continuous-Time Diffusion Models
+                                for Korean Short-Term Interest Rates <br></span></td>
+                        <td style="height: 44px;" rowspan="1">Seungmoon Choi</td>
+                    </tr>
+                    <tr>
+                        <td style="height: 27px;" rowspan="1" colspan="1">
+                            Inflation Dynamics and Monetary Policy : Markov Switching Model Approach<br>
+                        </td>
+                        <td style="height: 44px;" rowspan="1" colspan="1">
+                            Woo Joon Myung<br>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.21 No.3 (2015. III)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table style="height: 184px;">
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>The Korean Financial Cycle <br></span></td>
+                        <td class="w30p">Jungyeoun Lee ·&nbsp;Yang Su Park</td>
+                    </tr>
+                    <tr>
+                        <td style="height: 20px;"><span>Forecasting CPI Inflation Using Combination of Point Forecast and
+                                Density Forecast <br></span></td>
+                        <td style="height: 20px;">Hyun Hak Kim</td>
+                    </tr>
+                    <tr>
+                        <td><span>Artificial Market Approach to Employment Targeting: A Possibility of ‘Smart’ Employment
+                                Policy <br></span></td>
+                        <td>Du Yong Kang</td>
+                    </tr>
+                    <tr>
+                        <td><span>The Value-Added and the Productivity of Korean Banking Industry <br></span></td>
+                        <td>Se-Jik Kim ·&nbsp;Seungki Hong</td>
+                    </tr>
+                    <tr>
+                        <td><span>An Empirical Analysis on the Sources of Agglomeration Economies : Focusing on
+                                Coagglomeration Patterns <br></span></td>
+                        <td>Changuk Byeon</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.21 No.2 (2015.II)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>The Determinants of FDI and Suggestions of Recent Changes in Korea
+                                <br></span></td>
+                        <td class="w30p">Chang Hyun Park ·&nbsp;Hangseo Cho ·&nbsp;Sung Hee Ahn ·&nbsp;Jongik Park</td>
+                    </tr>
+                    <tr>
+                        <td><span>Reasons for Recent Decline in Economic Volatility, and Implications <br></span></td>
+                        <td>Hwan-Koo Kang ·&nbsp;Sei-joon Park ·&nbsp;Jihoon Ahn ·&nbsp;Jongik Park ·&nbsp;Sunghee Ahn</td>
+                    </tr>
+                    <tr>
+                        <td><span>The Relationship between Exchange Rate Fluctuations and Export Prices Considering Imported
+                                Input Costs <br></span></td>
+                        <td>Kyungmin Kim</td>
+                    </tr>
+                    <tr>
+                        <td><span>Risk Preferences in Decision Making and Cognitive Ability: An Experimental Analysis
+                                <br></span></td>
+                        <td>Beum-Jo Park</td>
+                    </tr>
+                    <tr>
+                        <td style="height: 18px;"><span>Bank Loan Portfolio and Bank Risk <br></span></td>
+                        <td style="height: 35px;" rowspan="1">Sang Wook Lee ·&nbsp;Sung Wook Cho</td>
+                    </tr>
+                    <tr>
+                        <td style="height: 18px;" rowspan="1" colspan="1">
+                            The Effect of House Prices on Consumption: Evidence from Micro Panel Data on Mortgage
+                                Borrowers<br>
+                        </td>
+                        <td style="height: 35px;" rowspan="1" colspan="1">
+                            Sungho Choi ·&nbsp;SangYoon Song ·&nbsp;Youngsik Kim<br>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.21 No.1 (2015.I)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>Is There Diversification Incentive in Foreign Equity Fund Investment?:
+                                Evidence from Korean Equity Fund Market <br></span></td>
+                        <td class="w30p">Kim, Sei-Wan ·&nbsp;Park, Jee-Won</td>
+                    </tr>
+                    <tr>
+                        <td><span>Impacts of Employment Protection on Labor Market Duality and Productivity <br></span></td>
+                        <td>Seungwon Kim</td>
+                    </tr>
+                    <tr>
+                        <td><span>Impacts of Population Aging on Employment in Korea <br></span></td>
+                        <td>Sunyoung Jung</td>
+                    </tr>
+                    <tr>
+                        <td><span>Monetary and Macroprudential Policies Considering Business and Financial Cycles
+                                <br></span></td>
+                        <td>Yong Min Kim ·&nbsp;Jung Yeoun Lee</td>
+                    </tr>
+                    <tr>
+                        <td style="height: 18px;"><span>The Effects of Outward FDI on Domestic Investment in Korea: Using
+                                Firm-Level Data <br></span></td>
+                        <td style="height: 35px;" rowspan="1">Bong Geul Chun ·&nbsp;Hyounjin Yi</td>
+                    </tr>
+                    <tr>
+                        <td style="height: 18px;" rowspan="1" colspan="1">
+                            Nominal Wage Contracts, Search Frictions and the Macroeconomy<br>
+                        </td>
+                        <td style="height: 35px;" rowspan="1" colspan="1">
+                            Weh-Sol Moon<br>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.20 No.4 (2014.IV)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>Forecasting Korean Macroeconomic Variables with Autoregressions and Vector
+                                Autoregressions <br></span></td>
+                        <td class="w30p">Jinhee Lee ·&nbsp;Dukpa Kim</td>
+                    </tr>
+                    <tr>
+                        <td><span>Predictive Density Simulation of the Korean Yield Curve: Pooling Method Approach
+                                <br></span></td>
+                        <td>Ah Jin Choi ·&nbsp;Kyu Ho Kang</td>
+                    </tr>
+                    <tr>
+                        <td><span>Effects of Demographic Changes on Economic Growth in an Open Economy: The Relationship
+                                between Population Ageing and Capital Movements <br></span></td>
+                        <td>Jong Chil Son</td>
+                    </tr>
+                    <tr>
+                        <td><span>Business Cycle Indicator Using Big Data: Compilation of the Naver Search Business Index
+                                <br></span></td>
+                        <td>Geung-Hee Lee ·&nbsp;SangPil Hwang</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.20 No.3 (2014. III)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>Market Concentration and Labor Income Share: A Panel Analysis based on the
+                                Korean Manufacturing Sector <br></span></td>
+                        <td class="w30p">Hyein Shim</td>
+                    </tr>
+                    <tr>
+                        <td><span>Institutional Quality and Economic Growth<br></span></td>
+                        <td>Young Soo Shin ·&nbsp;Yong-Hwan Noh ·&nbsp;Dongwon Lee ·&nbsp;Weh-Sol Moon</td>
+                    </tr>
+                    <tr>
+                        <td><span>Estimation of Current Account Benchmarks via Bayesian Model Averaging <br></span></td>
+                        <td>Min-Ho Nam ·&nbsp;Hyuntae Kim</td>
+                    </tr>
+                    <tr>
+                        <td><span>International Portfolio Investment Behavior: Relationship between Bond and Equity Flows
+                                <br></span></td>
+                        <td>Joo Yong Lee ·&nbsp;Geun-young Kim</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.20 No.2 (2014.II)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>Panel Econometric Analysis on the Determinants Affecting Default Probability
+                                of Saving Banks in Korea <br></span></td>
+                        <td class="w30p">Jeong Hwan Bae</td>
+                    </tr>
+                    <tr>
+                        <td><span>Effects of Large Distribution Firms on the Number of Small Retail Stores : An Empirical
+                                Analysis <br></span></td>
+                        <td>Taegoo Kwon ·&nbsp;Nakil Sung</td>
+                    </tr>
+                    <tr>
+                        <td><span>A Research on the Relation between Capital Intensity and Value-added : The Application of
+                                the Hypothesis of Galenson and Leibenstein using IRIO Model <br></span></td>
+                        <td>Haemyoung Ji</td>
+                    </tr>
+                    <tr>
+                        <td style="height: 18px;"><span>The Short-Term Risk Premium Puzzle : Revisited by Dynamic Herd
+                                Behavior <br></span></td>
+                        <td style="height: 35px;" rowspan="1">Beum-Jo Park</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.20 No.1 (2014.I)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>Recent Developments and Challenges in DSGE Modeling at Central Banks : A
+                                Survey <br></span></td>
+                        <td class="w30p" style="width: 305px;">Hwan-Koo Kang ·&nbsp;Yang Su Park ·&nbsp;Jinho Choi</td>
+                    </tr>
+                    <tr>
+                        <td><span>Income Tax Burden by Income Groups and Bracket Creep Effect <br></span></td>
+                        <td style="width: 305px;">Nak Nyeon Kim</td>
+                    </tr>
+                    <tr>
+                        <td><span>An Empirical Analysis on the Regional Output-Employment Relationship <br></span></td>
+                        <td style="width: 305px;">Young-Duk Kim</td>
+                    </tr>
+                    <tr>
+                        <td><span>In Search of Better Labor-Market Indicators : Assessment of Inflation Predictability
+                                <br></span></td>
+                        <td style="width: 305px;">Kangwoo Park ·&nbsp;Sangwoo Lee</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.19 No.4 (2013.IV)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>Estimating the Neutral Real Interest Rate (NRIR) and Analyzing Factors of its
+                                Fluctuation in Korea<br></span></td>
+                        <td class="w30p">Minsu Kim ·&nbsp;Yang Su Park</td>
+                    </tr>
+                    <tr>
+                        <td><span>A Study on the Interaction between House Prices and the Real Economy in Korea<br></span>
+                        </td>
+                        <td>Kyungsoo Cha ·&nbsp;Sangyeon Hwang</td>
+                    </tr>
+                    <tr>
+                        <td><span>A Study on Merchant Membership Obligations in the Korean Credit Card Industry<br></span>
+                        </td>
+                        <td>Sun-Joong Yoon ·&nbsp;Kyeong-Hoon Kang ·&nbsp;Jeong Gyu Kim</td>
+                    </tr>
+                    <tr>
+                        <td><span>Foreign banks and Main Bank Relations<br></span></td>
+                        <td>Sang Wook Lee</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.19 No.3 (2013. III)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>Recent Theories Regarding Financial Contagion<br></span></td>
+                        <td class="w30p">Frederick Dongchuhl Oh ·&nbsp;Hyunjoon Lim</td>
+                    </tr>
+                    <tr>
+                        <td style="height: 20px;"><span>Determinants of Per Capita Income Volatility Across Countries
+                                Focusing on the Stabilization Effect of Government Spending<br></span></td>
+                        <td style="height: 20px;">Noh-Sun Kwark</td>
+                    </tr>
+                    <tr>
+                        <td><span>Analysis on Wage Gap responses to Education level and Skill<br></span></td>
+                        <td>Eun Suk Kim ·&nbsp;GBong Geul Chun</td>
+                    </tr>
+                    <tr>
+                        <td><span>What Explains Movements in the Labor Income Share in the Korean Economy?<br></span></td>
+                        <td>Bae-Geun Kim</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.19 No.2 (2013.II)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>Assessing Korean Households Credit Risk - Stress Tests with Household Level
+                                Data<br></span></td>
+                        <td class="w30p">Young Il Kim ·&nbsp;Joo Hee Yoo</td>
+                    </tr>
+                    <tr>
+                        <td><span>Productivity Performance and Exporting Activity of Korean Manufacturing Firms - Quantile
+                                Regression Approach<br></span></td>
+                        <td>Minjung Kim</td>
+                    </tr>
+                    <tr>
+                        <td><span>Volatility Regimes and the Relationship between Volatility Trading Volume and Spreads in
+                                the FX market<br></span></td>
+                        <td>Beum-Jo Park</td>
+                    </tr>
+                    <tr>
+                        <td><span>Total Factor Productivity and Growth Potential - A Macro-Perspective Analysis on R and D
+                                Investment in OECD Countries<br></span></td>
+                        <td>Joonkyung Ha ·&nbsp;Eunseok Lee</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.19 No.1 (2013.I)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>On the Determinants of Currency Internationalization - Implications for
+                                Korean Won Internationalization<br></span></td>
+                        <td class="w30p">Suk Hyun ·&nbsp;Sangheon Lee</td>
+                    </tr>
+                    <tr>
+                        <td><span>An Empirical Study on the Effects of Bank-Firm Relationship on Small Firm
+                                Borrowings<br></span></td>
+                        <td>Jung-Jin Lee ·&nbsp;Soo-Young Hwang</td>
+                    </tr>
+                    <tr>
+                        <td><span>Corruption Technological Progress and Economic Growth - An Empirical Evaluation Using
+                                Cross-Country Data<br></span></td>
+                        <td>Seewon Kim</td>
+                    </tr>
+                    <tr>
+                        <td><span>The Evolution of Industry Comovement in Korea - A Wavelet Analysis<br></span></td>
+                        <td>Sunoong Hwang</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.18 No.4 (2012.IV)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>Analysis of Changes in the Welfare of Middle and Low Income Families in Korea
+                                after the Global Financial Crisis Based on Stochastic Dominance Approaches<br></span></td>
+                        <td class="w30p">Mijung Choi ·&nbsp;Jin Lee</td>
+                    </tr>
+                    <tr>
+                        <td><span>The Yen Real Exchange Rate May Not be stationary After All - New Evidence from Non-linear
+                                Unit-Root Tests<br></span></td>
+                        <td>Hyeongwoo Kim ·&nbsp;Young-Kyu Moh</td>
+                    </tr>
+                    <tr>
+                        <td style="height: 41.99px;"><span>The Nature and Determinants of the Loss Given Default of
+                                Residential Mortgage Loans - Evidence from the Apartment Market<br></span></td>
+                        <td style="height: 41.99px;">Doo Won Bang ·&nbsp;Yun Woo Park</td>
+                    </tr>
+                    <tr>
+                        <td><span>Asymmetry and Non-Linearity in the Exchange Rate Pass-Through to Korean Export
+                                Prices<br></span></td>
+                        <td>Cheonggu Cho</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.18 No.3 (2012. III)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table style="height: 168.83px;">
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>Inflation Persistence in Korea<br></span></td>
+                        <td class="w30p">Tae-Jeong Kim ·&nbsp;Kwangyong Park ·&nbsp;Kumhwa Oh</td>
+                    </tr>
+                    <tr>
+                        <td><span>Dynamics of Asset Prices Based on Time-varying Risk Aversion and Adaptive Beliefs
+                                System<br></span></td>
+                        <td>Beum-Jo Park</td>
+                    </tr>
+                    <tr>
+                        <td><span>Extracting the Nominal Risk-Free Rate from Stock Returns and the Purchasing Power Parity
+                                Hypothesis of the Won-Dollar Exchange Rate<br></span></td>
+                        <td>Hyein Shim ·&nbsp;Heechae Ko</td>
+                    </tr>
+                    <tr>
+                        <td><span>Expenditures on Education and Household Saving Ratio<br></span></td>
+                        <td>Hyunjoon Lim ·&nbsp;Kangwoo Park</td>
+                    </tr>
+                    <tr>
+                        <td style="height: 22.83px;"><span>Income Concentration in Korea 1976-2010 - Evidence from Income
+                                Tax Statistics<br></span></td>
+                        <td style="height: 22.83px;">Nak Nyeon Kim</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.18 No.2 (2012.II)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>Regional Financial Market Integration in Korea 1876-1942<br></span></td>
+                        <td class="w30p">Dae Hyun Kim</td>
+                    </tr>
+                    <tr>
+                        <td><span>A New Measure for Core Inflation Based on Generalized Dynamic-Factor Model<br></span></td>
+                        <td>Jinill Kim ·&nbsp;Byung Kwun Ahn</td>
+                    </tr>
+                    <tr>
+                        <td><span>Structural Break in the Term Structure of the Korean Government Bond Yields<br></span>
+                        </td>
+                        <td>Kyu Ho Kang</td>
+                    </tr>
+                    <tr>
+                        <td><span>The Impacts of Single Bank Relationship on Firm Performance<br></span></td>
+                        <td>Sang Wook Lee</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.18 No.1 (2012.I)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>Analysis on the Causes of Increase in Income Inequality using Country Panel
+                                Data<br></span></td>
+                        <td class="w30p">Kang, Jong=Ku ·&nbsp;Park, Chang-Gui ·&nbsp;Cho, Yoon-Je</td>
+                    </tr>
+                    <tr>
+                        <td><span>Inflation Differentials between Korea and 9 OECD Countries<br></span></td>
+                        <td>Myung Kee Kim ·&nbsp;Ehung Gi Baek</td>
+                    </tr>
+                    <tr>
+                        <td style="height: 18px;"><span>The Increase in Household Debt and Borrowing Constraints<br></span>
+                        </td>
+                        <td style="height: 35px;" rowspan="1">Kyeongwon Yoo ·&nbsp;Hae Won Byun</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.17 No.4 (2011.IV)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>Analysis on the Forecasting Performance of KOSPI200 Volatility between Long
+                                Memory Model and Regime-Switching Model<br></span></td>
+                        <td class="w30p">Joonhyuk Song</td>
+                    </tr>
+                    <tr>
+                        <td><span>Comparison of Employment Policies Aimed to Deal With Aging Population with respect to
+                                Their Effect of Improving Growth Rate<br></span></td>
+                        <td>Ki-Ho Kim</td>
+                    </tr>
+                    <tr>
+                        <td><span>Cumulative Effects of Trade Liberalization - The Case of Korean Manufacturing<br></span>
+                        </td>
+                        <td>Soonchan Park</td>
+                    </tr>
+                    <tr>
+                        <td><span>The Effect of Housing Price Changes on Household Debt - An Overlapping Generations Model
+                                Approach<br></span></td>
+                        <td>Hyun Jeong Kim ·&nbsp;Jong Chil Son ·&nbsp;Myung-Soo Yie</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.17 No.3 (2011. III)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>A Cause Analysis of Low Fertility and Population Aging in Korea - Evidence
+                                from Economic Factors in Marriage Determination<br></span></td>
+                        <td class="w30p">Sangho Yi ·&nbsp;Sangheon Lee</td>
+                    </tr>
+                    <tr>
+                        <td style="height: 20px;"><span>Systemic Risk and Financial Regulation<br></span></td>
+                        <td style="height: 20px;">Seung Hwan Lee</td>
+                    </tr>
+                    <tr>
+                        <td><span>Analysis on the Effect of Foreign Factors on the Korean Bond market and Prediction using
+                                Two-country Nelson-Siegel Model<br></span></td>
+                        <td>Do-wan Kim</td>
+                    </tr>
+                    <tr>
+                        <td><span>The Effect of Sector-Biased Technological Progress on Economic Growth - An Approach Based
+                                on a Multi-Sector Growth Model<br></span></td>
+                        <td>Bae-Geun Kim</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.17 No.2 (2011.II)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>Are Korean Recessions affected by Oil Price Shocks<br></span></td>
+                        <td class="w30p">Kwon Sik Kim</td>
+                    </tr>
+                    <tr>
+                        <td><span>Industrial Diversity and Frictional Unemployment<br></span></td>
+                        <td>Sangheon Lee</td>
+                    </tr>
+                    <tr>
+                        <td><span>The Cash Flow Sensitivity of Investment - A Switching Regression Approach Based on Korean
+                                Firm Data<br></span></td>
+                        <td>Jaewoon Koo ·&nbsp;Kyunghee Maeng</td>
+                    </tr>
+                    <tr>
+                        <td><span>The extension of a continuous beliefs system and analyzing herd behavior in stock
+                                markets<br></span></td>
+                        <td>Beum-Jo Park</td>
+                    </tr>
+                    <tr>
+                        <td><span>A Study on the construction and application of fossil energy Input-Output table<br></span>
+                        </td>
+                        <td>Park, Chang-Gui ·&nbsp;Lee, Kihoon</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.17 No.1 (2011.I)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>An Estimate of Consumer Price Index of Colonial Korea 1907-1939<br></span>
+                        </td>
+                        <td class="w30p">Ki-Joo Park ·&nbsp;Nak Nyeon Kim</td>
+                    </tr>
+                    <tr>
+                        <td><span>The Relationship between Retirement and Household Consumption<br></span></td>
+                        <td>Jaeho Yun ·&nbsp;Hyun-Jeong Kim</td>
+                    </tr>
+                    <tr>
+                        <td><span>Comparison of Stochastic Frontier Models in Application to Analysis on R and D and
+                                Production Efficiency<br></span></td>
+                        <td>Young Hoon Lee</td>
+                    </tr>
+                    <tr>
+                        <td><span>The Role of Money and Banking in Monetary Policy Does It Matter Quan itatively for the
+                                Korean Economy<br></span></td>
+                        <td>Hyun Euy Kim ·&nbsp;Sang Min Aum</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.16 No.4 (2010.IV)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>An Analysis of Factors Affecting Korean Banks Maturity Mismatch<br></span>
+                        </td>
+                        <td class="w30p">Jong Ku Kang</td>
+                    </tr>
+                    <tr>
+                        <td><span>Estimating Real Effective Exchange Rate by Industry in Korea and Panel Unit-Root
+                                Tests<br></span></td>
+                        <td>Hokyung Bang</td>
+                    </tr>
+                    <tr>
+                        <td><span>Autonomous Stability Mechanism of Won Dollar Foreign Exchange Rate through Lagged Own
+                                Volatility<br></span></td>
+                        <td>Yun-Yeong Kim</td>
+                    </tr>
+                    <tr>
+                        <td><span>Post Crisis Foreign Exchange Market of Korea Decomposition of Financial and Real
+                                Factors<br></span></td>
+                        <td>Dongchul Cho</td>
+                    </tr>
+                    <tr>
+                        <td><span>Microstructure Approach to Private Information in the Won Dollar FX Market The Influence
+                                of Domestic and Foreign Dealers Order Flows<br></span></td>
+                        <td>Junghoon Seon ·&nbsp;Kyong Shik Eom</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.16 No.3 (2010. III)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>Extracting Stochastic Volatilities and Jumps for the Korean Stock Index Using
+                                Optimal Filter<br></span></td>
+                        <td class="w30p">Jaeho Yun</td>
+                    </tr>
+                    <tr>
+                        <td><span>The Efficiency of Price Discovery in the Korean Government Bond Markets<br></span></td>
+                        <td>Junghoon Seon ·&nbsp;Seung Hyun Oh</td>
+                    </tr>
+                    <tr>
+                        <td><span>The Effect of Elite High Schools on Households Private Tutoring Expenditures<br></span>
+                        </td>
+                        <td>Joonkyung Ha</td>
+                    </tr>
+                    <tr>
+                        <td><span>The Stress test of Household Loan Sector considering Heteroscedasticity Autocorrelation
+                                and Conditional Loss at Given Default(LGD)<br></span></td>
+                        <td>Do-wan Kim ·&nbsp;Kibeom Kim</td>
+                    </tr>
+                    <tr>
+                        <td><span>The Relationship between Uncertainty of Price Variables and Economic
+                                Fluctuations<br></span></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.16 No.2 (2010.II)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>Global Production Networks and Trade Balance Structures<br></span></td>
+                        <td class="w30p">Hongshik Lee ·&nbsp;Jungu Kang</td>
+                    </tr>
+                    <tr>
+                        <td><span>Assessment of Deflation Risk in Korea<br></span></td>
+                        <td>Woong Kim</td>
+                    </tr>
+                    <tr>
+                        <td><span>The Intra and Inter-generational Welfare Impact of the Financing Policies of the National
+                                Pension System<br></span></td>
+                        <td>Sungwhee Shin ·&nbsp;Ki-Hong Choi</td>
+                    </tr>
+                    <tr>
+                        <td style="height: 18px;"><span>On Return and Volatility Timing Abilities in Korean Equity
+                                Funds<br></span></td>
+                        <td style="height: 35px;" rowspan="1">Sangbae Kim ·&nbsp;Taehun Jung</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.16 No.1 (2010.I)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p" style="height: 18px;"><span>Empirical Estimation of Banks Herding in the Korean
+                                Loan Markets<br></span></td>
+                        <td class="w30p" style="height: 34px;" rowspan="1">Jong-Ku Kang</td>
+                    </tr>
+                    <tr>
+                        <td class="w70p" style="height: 18px;" rowspan="1" colspan="1">
+                            An Empirical Analysis of the Relationship between Monetary Policy and Stock Returns in Korea
+                                and Its Implications<br>
+                        </td>
+                        <td class="w30p" style="height: 34px;" rowspan="1" colspan="1">
+                            Sangkyu Lee ·&nbsp;Yang Woo Kim ·&nbsp; Joonmyung Woo<br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span>The Factors Affecting Distribution of Fund Fees between Managing Firms and Selling
+                                Channels<br></span></td>
+                        <td style="width: 305px;">Sejin Min ·&nbsp;Kyoungwon Rhee</td>
+                    </tr>
+                    <tr>
+                        <td><span>Productivity and the Timing of Foreign Direct Investment<br></span></td>
+                        <td style="width: 305px;">Sangho Kim</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.15 No.4 (2009.IV)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>Demand for Risky Assets with Uncertain Labor Income A Panel Study<br></span>
+                        </td>
+                        <td class="w30p">Seewon Kim</td>
+                    </tr>
+                    <tr>
+                        <td><span>The Price-setting Behavior of Korean Firms Survey Evidence<br></span></td>
+                        <td>Woong Kim ·&nbsp;Seung Je Hong</td>
+                    </tr>
+                    <tr>
+                        <td><span><span style="background-color: rgb(190, 231, 252);"></span>Household Debt in Korea
+                                Empirical Evidence from Micro Data<br></span></td>
+                        <td>Kyeongwon Yoo</td>
+                    </tr>
+                    <tr>
+                        <td><span>Herding in Financial Markets Its Causes and Implications<br></span></td>
+                        <td>Jong-Ku Kang</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.15 No.3 (2009. III)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>Monetary Policy Effects on Disaggregated Prices in Korea<br></span></td>
+                        <td class="w30p">Kangwoo Park</td>
+                    </tr>
+                    <tr>
+                        <td style="height: 20px;"><span>Does the Price Gap Predict Inflation An Approach Based on the Theory
+                                of the Price Level<br></span></td>
+                        <td style="height: 20px;">Bae-Geun Kim</td>
+                    </tr>
+                    <tr>
+                        <td><span>Roemers Conception of Equal Opportunity and Koreas Income Tax-Benefit Policy<br></span>
+                        </td>
+                        <td>Woocheol Kim ·&nbsp;Woojin Lee</td>
+                    </tr>
+                    <tr>
+                        <td><span>The Impact on Consumption of the Household Indebtedness in Korea<br></span></td>
+                        <td>Hyun Jeong Kim ·&nbsp;Wooyoung Kim</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.15 No.2 (2009.II)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>Determinants of Net Interest Margin in Korean Banking Industry<br></span>
+                        </td>
+                        <td class="w30p">Chang-Gyun Park ·&nbsp;Taehoon Youn</td>
+                    </tr>
+                    <tr>
+                        <td><span>Decomposition of Interest Rate Differentials<br></span></td>
+                        <td>Bok-Keun Yu ·&nbsp;Hwagyun Kim</td>
+                    </tr>
+                    <tr>
+                        <td><span>National Accounts of Korea 1911-2007 A Long Term Series of Principal Indicators<br></span>
+                        </td>
+                        <td>Nak Nyeon Kim</td>
+                    </tr>
+                    <tr>
+                        <td><span>Estimating monthly Macro-Finance Model for Korea<br></span></td>
+                        <td>Seonghoon Cho</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.15 No.1 (2009.I)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>Forecasting Economic Variables Using Disaggregated Data for Consumer
+                                Expectations A Comparison of Forecast Combination Methods<br></span></td>
+                        <td class="w30p">Ha-Hyun Jo ·&nbsp;Sun-Oong Hwang</td>
+                    </tr>
+                    <tr>
+                        <td><span>Exchange Market Pressure and Net Foreign Assets in Korea<br></span></td>
+                        <td>Yongbok Kim</td>
+                    </tr>
+                    <tr>
+                        <td><span>The Trade Creation Effects of Hallyu<br></span></td>
+                        <td>Soonchan Park ·&nbsp;Jong Il Choe</td>
+                    </tr>
+                    <tr>
+                        <td><span>The Determinant of Employment Decision on Foreign Workers<br></span></td>
+                        <td>Chul-Woo Kwon ·&nbsp;Bong Geul Chun</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.14 No.4 (2008.IV)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>Bond Risk Premia and Business Cycle<br></span></td>
+                        <td class="w30p">Joonhyuk Song ·&nbsp;Youngsoo Choi</td>
+                    </tr>
+                    <tr>
+                        <td><span>A Study on the Relationship between Volatility and Trading Volumes Using a
+                                Surprising-Information-Stochastic-Volatility(SISV) Model<br></span></td>
+                        <td>Beum-Jo Park</td>
+                    </tr>
+                    <tr>
+                        <td><span>The Analysis of daily Korea call rate<br></span></td>
+                        <td>Dong Heon Kim ·&nbsp;Myoungjae Lee</td>
+                    </tr>
+                    <tr>
+                        <td><span>Explaining the Cyclical Behavior of the Korean Labor Market<br></span></td>
+                        <td>Weh-Sol Moon</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.14 No.3 (2008. III)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table style="height: 179.66px;">
+                <tbody>
+                    <tr>
+                        <td class="w70p" style="height: 33.66px;"><span>A Look at Habit Persistence over Business
+                                Cycles<br></span></td>
+                        <td class="w30p" style="height: 33.66px;">Yongseung Jung</td>
+                    </tr>
+                    <tr>
+                        <td><span>External Supply Shocks and the Optimal Interest Rate Rule in an Open Economy<br></span>
+                        </td>
+                        <td>Geun-Young Kim</td>
+                    </tr>
+                    <tr>
+                        <td><span>An Assessment of the New Keynesian Phillips Curve in the Korean Economy<br></span></td>
+                        <td>Bae-Geun Kim ·&nbsp;Byung Kwun Ahn</td>
+                    </tr>
+                    <tr>
+                        <td><span>The Cost Channel Effect of Monetary Policy in Korea<br></span></td>
+                        <td>Myung-Soo Yie</td>
+                    </tr>
+                    <tr>
+                        <td><span>Interest Arbitrage and Interest Rates in Korea<br></span></td>
+                        <td>Byoung Hark Yoo</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.14 No.2 (2008.II)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>A Study on the Stability of Korean Banks Household Lending Sector_A Stress
+                                Test under a Macroeconomic Credit Risk Model<br></span></td>
+                        <td class="w30p">Heung Bae Chun ·&nbsp;Jung-Jin Lee ·&nbsp;Woon Youl Choi</td>
+                    </tr>
+                    <tr>
+                        <td><span>Chinese Banks' Efficiency and Productivity Change during the Financial Reform Era of 1998
+                                to 2006<br></span></td>
+                        <td>Dae-Won Oh</td>
+                    </tr>
+                    <tr>
+                        <td><span>An Empirical Analysis of the Propagation Mechanism of Financial Globalization<br></span>
+                        </td>
+                        <td>Heesik KIM ·&nbsp;Seung-je HONG</td>
+                    </tr>
+                    <tr>
+                        <td><span>Empirical Analysis of the Crowding Out Effect of the National Pension on Household Private
+                                Savings<br></span></td>
+                        <td>Kim Dae Chul ·&nbsp;Kim Jin Young ·&nbsp;Lee Man Woo</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.14 No.1 (2008.I)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>Testing Purchasing Power Parity in Transformed ECM with Nonstationary
+                                Disequilibrium Error<br></span></td>
+                        <td class="w30p">Yun-Yeong Kim ·&nbsp;Joon Y. Park</td>
+                    </tr>
+                    <tr>
+                        <td><span>Asymmetric Responses to the Business Cycle in Korean Labor Market<br></span></td>
+                        <td>Wooyoung Kim</td>
+                    </tr>
+                    <tr>
+                        <td><span>The Effect of Foreign Direct Investment on Domestic Investment<br></span></td>
+                        <td>Hyun-Jeong Kim</td>
+                    </tr>
+                    <tr>
+                        <td><span>Uncovering Structural Change in U.S. Economy_ The Analysis of Single Source of Error
+                                Beveridge-Nelson Decomposition<br></span></td>
+                        <td>Dong Heon Kim ·&nbsp;Chang-Jin Kim ·&nbsp;Do-wan Kim</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.13 No.4 (2007.IV)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>Changing Temporary Employment Dynamics in the Korean Economy<br></span></td>
+                        <td class="w30p">Sun-Ung Hwang</td>
+                    </tr>
+                    <tr>
+                        <td><span>Money Demand and House Prices in Korea<br></span></td>
+                        <td>Byoung Hark Yoo</td>
+                    </tr>
+                    <tr>
+                        <td><span>The Probability of Being Credit-Constrained Households and Labor-Income Risk<br></span>
+                        </td>
+                        <td>Jinsuk Choi ·&nbsp;Youngduk Kim</td>
+                    </tr>
+                    <tr>
+                        <td><span>Welfare Implications of Alternative Monetary Policy Rules under Imperfect
+                                Information<br></span></td>
+                        <td>Yong-seung Jung</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.13 No.3 (2007. III)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table style="height: 184px;">
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>Changes in Financial Environment and the Stability of Korean Banks<br></span>
+                        </td>
+                        <td class="w30p">Jong-Ku Kang</td>
+                    </tr>
+                    <tr>
+                        <td style="height: 20px;"><span>The Optimal Tax Burden Ratio in Korea<br></span></td>
+                        <td style="height: 20px;">Young Jun Chun&nbsp;·&nbsp;Chong-Bum An</td>
+                    </tr>
+                    <tr>
+                        <td><span>Are Korean Consumers Prudent<br></span></td>
+                        <td>Seewon Kim</td>
+                    </tr>
+                    <tr>
+                        <td><span>Estimation of Korean Monthly GDP with Mixed-Frequency Data using the Unobserved Component
+                                Error Correction Model<br></span></td>
+                        <td>Ki-Ho Kim</td>
+                    </tr>
+                    <tr>
+                        <td><span>Empirical Investigation of Stochastic Volatility Interest Rate Models using the EMM The
+                                Case of Korea<br></span></td>
+                        <td>Chae-Shick Chung ·&nbsp;Jong Sung Lee</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.13 No.2 (2007.II)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>An Analysis on the Characteristics of Recent Business Cycles<br></span></td>
+                        <td class="w30p">Nam, Sang-Ho</td>
+                    </tr>
+                    <tr>
+                        <td><span>Macroeconomic policy Mix and Social Welfare<br></span></td>
+                        <td>Kim, Hyun-Jeong ·&nbsp;Seong Hun Yun</td>
+                    </tr>
+                    <tr>
+                        <td><span>Decrease in the household Savings Rate and the Effecriveness of Monetary policy<br></span>
+                        </td>
+                        <td>Chung, Kyuil</td>
+                    </tr>
+                    <tr>
+                        <td><span>The Impact of Pension Funds on Capital Markets_ The Mechanism and Conditions<br></span>
+                        </td>
+                        <td>Kim, Hee-Sik</td>
+                    </tr>
+                    <tr>
+                        <td><span>Research on Long-term Memory of interest Rate Fluctuations in Korea Using Wavelet
+                                OLS<br></span></td>
+                        <td>Jin, Hyung Joung ·&nbsp;Jun Mo Park</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.13 No.1 (2007.I)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>Accessibility to Capital Markets and the Sensitivity of Investment to Cash
+                                Flows<br></span></td>
+                        <td class="w30p">Kwangwoo Park ·&nbsp;Rae Soo Park ·&nbsp;Suk Heun Yoon</td>
+                    </tr>
+                    <tr>
+                        <td><span>The Interest Rate Channel of Monetary Transmission under Low Inflation in Korea<br></span>
+                        </td>
+                        <td>Hyun-Euy Kim</td>
+                    </tr>
+                    <tr>
+                        <td><span>The Impact of Surprise Information on the Relation between Volatility and Trading Volume
+                                in Exchange Rate Markets<br></span></td>
+                        <td>Beum-Jo Park</td>
+                    </tr>
+                    <tr>
+                        <td><span>Preemptive Monetary Policy and the Zero Interest Rate Bound<br></span></td>
+                        <td>Taehun Jung</td>
+                    </tr>
+                    <tr>
+                        <td style="height: 18px;"><span>Transparency of Financial Regulation and Financial
+                                Stability<br></span></td>
+                        <td style="height: 35px;" rowspan="1">Chul-Woo Kwon ·&nbsp;Bong Geul Chun</td>
+                    </tr>
+                    <tr>
+                        <td style="height: 18px;" rowspan="1" colspan="1">
+                            An Analysis of the Demand For Cash in korea<br>
+                        </td>
+                        <td style="height: 35px;" rowspan="1" colspan="1">
+                            Byoung Hark Yoo<br>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.12 No.4 (2006.IV)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>Information Technology and Polarization - Analysis of the Heterogeneous
+                                Effects Associated with Differences in Firm-Size, Industrial Sector and the Role of
+                                IT<br></span></td>
+                        <td class="w30p">Ilsoon Shin&nbsp;·&nbsp;Sang Won Lee</td>
+                    </tr>
+                    <tr>
+                        <td><span>A Causal Analysis of Changes in Korea Household Consumption Behavior after the 1997
+                                Currency Crisis<br></span></td>
+                        <td>Youngjun Choi</td>
+                    </tr>
+                    <tr>
+                        <td><span>Market Structure and Market Performance in the Korean Manufacturing Industries - Panel
+                                Data Approach<br></span></td>
+                        <td>Gwang-hoon Lee</td>
+                    </tr>
+                    <tr>
+                        <td><span>The Shift to the Service Economy - Causes and Effects<br></span></td>
+                        <td>Hyun-Jeong Kim</td>
+                    </tr>
+                    <tr>
+                        <td><span>Understanding the Synchronisation of the Movements of Korean won and Japanese yen from an
+                                FX Market Micro-structural Approach<br></span></td>
+                        <td>Haesik Park ·&nbsp;Chi-Young Song</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.12 No.3 (2006. III)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>Macroeconomic Impacts of the Accelerating Depreciation of Human Capital and
+                                Rising Social Insurance Contributions<br></span></td>
+                        <td class="w30p">Cuhl-In Lee</td>
+                    </tr>
+                    <tr>
+                        <td><span>An Analysis of Personal Bankruptcy Decisions in Korea<br></span></td>
+                        <td>Kyeongwon Yoo</td>
+                    </tr>
+                    <tr>
+                        <td><span>The Optimal Structure of Technology Adoption and Creation - Basic Research vs. Development
+                                in view of Distance to Technological Frontier<br></span></td>
+                        <td>Yongjin Kim ·&nbsp;Jongwha Lee&nbsp;·&nbsp;Joonkyung Ha</td>
+                    </tr>
+                    <tr>
+                        <td><span>Monetary Policy and Stock Market - Intraday Transaction Data Analysis<br></span></td>
+                        <td>Wook Sohn&nbsp;·&nbsp;Yunsung Eom</td>
+                    </tr>
+                    <tr>
+                        <td><span>The Stabilizing Effect of Active KRW-JPY Transactions on KRW Exchange Rate
+                                Movements<br></span></td>
+                        <td>Sangwon Suh</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.12 No.2 (2006.II)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>Benchmarking of Korean Economic Time Series<br></span></td>
+                        <td class="w30p">Geunghee Lee</td>
+                    </tr>
+                    <tr>
+                        <td><span>Income Redistribution Structure of the Korean Economy - A Social Accounting Matrix
+                                Perspective<br></span></td>
+                        <td>Yong-Hwan Noh</td>
+                    </tr>
+                    <tr>
+                        <td><span>Estimation of the Asymmetric Monetary Policy Reaction Functions in Korea<br></span></td>
+                        <td>Young-Sun Kwon</td>
+                    </tr>
+                    <tr>
+                        <td style="height: 18px;"><span>Job Flow and Unemployment in Korea - A Search-Theoretic
+                                Approach<br></span></td>
+                        <td style="height: 35px;" rowspan="1">Hyewon Kim</td>
+                    </tr>
+                    <tr>
+                        <td style="height: 18px;" rowspan="1" colspan="1">
+                            The Effect of the Trade Pattern of the Automobile Industry on Productivity<br>
+                        </td>
+                        <td style="height: 35px;" rowspan="1" colspan="1">
+                            Dukhee Lee&nbsp;· Hyunjeong Kim ·&nbsp;Misuk Jung<br>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.12 No.1 (2006.I)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>Technology Innovation and Employment<br></span></td>
+                        <td class="w30p" style="width: 305px;">KyuHo Kang</td>
+                    </tr>
+                    <tr>
+                        <td><span>A Microdata Analysis of Recent Corporate Investment in Korea<br></span></td>
+                        <td style="width: 305px;">Kiseok Hong</td>
+                    </tr>
+                    <tr>
+                        <td><span>The Influence of Foreign Stock Investment on Korean Stock Prices and Its
+                                Implications<br></span></td>
+                        <td style="width: 305px;">Sangwon Suh</td>
+                    </tr>
+                    <tr>
+                        <td><span>The Impact of Regional Economic Integration on the Technology - Intensive Intermediate
+                                Goods Industry<br></span></td>
+                        <td style="width: 305px;">YoungHan Kim</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.11 No.4 (2005.IV)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span><span>Cointegration Analysis of Financial Imbalances and
+                                    Bankruptcies</span><br></span></td>
+                        <td class="w30p">WooSik Moon ·&nbsp;YoungRok Cheong</td>
+                    </tr>
+                    <tr>
+                        <td><span>An Empirical Study on the Determinants of the Cost of Financial Intermediation in the
+                                Korean Banking Industry<br></span></td>
+                        <td>JungHee Park</td>
+                    </tr>
+                    <tr>
+                        <td><span>Equity Return's Effect on Consumption - Empirical Evidence from Nonlinear
+                                Estimation<br></span></td>
+                        <td>Seiwan Kim</td>
+                    </tr>
+                    <tr>
+                        <td><span>Industry Level Real Effective Exchange Rates for Korea<br></span></td>
+                        <td>Jaerang Lee ·&nbsp;ByungChang Yi</td>
+                    </tr>
+                    <tr>
+                        <td><span>The Financial Markets' Responses to Monetary Policy Announcements<br></span></td>
+                        <td>Wook Sohn ·&nbsp;Byungmook Sung&nbsp;·&nbsp;Hyosung Kwon</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.11 No.3 (2005. III)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>Banks' Financial Intermediation Role in Korea<br></span></td>
+                        <td class="w30p">Jong-Ku Kang</td>
+                    </tr>
+                    <tr>
+                        <td style="height: 20px;"><span>A Study on Credit Information Sharing<br></span></td>
+                        <td style="height: 20px;">Hyung-Kwon Jeong</td>
+                    </tr>
+                    <tr>
+                        <td><span>SME Financing and Bank Lending - A Study on the Innovative SMEs<br></span></td>
+                        <td>Joon-Ho Hahm&nbsp;·&nbsp;Jong-Ku Kang</td>
+                    </tr>
+                    <tr>
+                        <td><span><span style="background-color: rgb(190, 231, 252);"></span>Use of Information Variables in
+                                Inflation Forecasting<br></span></td>
+                        <td>Jong Hwa Kim&nbsp;·&nbsp;Joong Shik Lee</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.11 No.2 (2005.II)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>Estimation of the Term Structure of Interest Rates and its
+                                Features<br></span></td>
+                        <td class="w30p">Hyoung-Seok Lim</td>
+                    </tr>
+                    <tr>
+                        <td><span>Aging and Aggregate Labor Productivity<br></span></td>
+                        <td>Kwan-ho Shin · Yoon-Jae Whang</td>
+                    </tr>
+                    <tr>
+                        <td><span>An Analysis on the Growth Effect of R&amp;D in Korea<br></span></td>
+                        <td>Joonkyung Ha</td>
+                    </tr>
+                    <tr>
+                        <td><span>Employment Rate - A concept and Its Empirical Usefulness<br></span></td>
+                        <td>Ki-Ho Kim ·&nbsp;Dongkoo Chang</td>
+                    </tr>
+                    <tr>
+                        <td><span>An Empirical Study of the Crowding - out Effect of the Public Pension on the Private
+                                Savings by Household Characteristics<br></span></td>
+                        <td>Sung-ho Kang ·&nbsp;Byung-in LIM</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.11 No.1 (2005.I)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>An Analysis of Brisk Exports and Sluggish Domestic Demand Using a
+                                Nontradables Model_The Case of Korea</span></td>
+                        <td class="w30p">Dongkoo Chang ·&nbsp;Youngjun Choi</td>
+                    </tr>
+                    <tr>
+                        <td><span>On an Effective Way of Implementing Bancassurance</span></td>
+                        <td>Sangche Lee ·&nbsp;Jaewook Chung</td>
+                    </tr>
+                    <tr>
+                        <td><span>Economic Effects of WTO Agricultural Liberalization_Focusing on Rice</span></td>
+                        <td>Chang-soo Lee</td>
+                    </tr>
+                    <tr>
+                        <td><span>The Predictive Power of the Index of Consumer Sentiment</span></td>
+                        <td>Seung-Nyeon Kim ·&nbsp;Youngwan Goo</td>
+                    </tr>
+                    <tr>
+                        <td><span>The Adjustment of Bank Loans Responding to the Change of Bank Capital</span></td>
+                        <td>Ick Jin</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.10 No.4 (2004.IV)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>International Finance Center_its conditions and effects<br></span></td>
+                        <td class="w30p">Sangyong Joo</td>
+                    </tr>
+                    <tr>
+                        <td><span>Bank Consolidation and Bank Competition_An Empirical Analysis of the Korean Banking
+                                Industry<br></span></td>
+                        <td>Sangkyu Lee ·&nbsp;Jong-Kun Lee</td>
+                    </tr>
+                    <tr>
+                        <td><span>Seigniorage and Policy Implication for Korean Economy<br></span></td>
+                        <td>Seung-Je Hong ·&nbsp;Jeong-Ho Hahm</td>
+                    </tr>
+                    <tr>
+                        <td><span>An Analysis of the Effect of North Koreas and Inter-orean Trade on the economic growth of
+                                North Korea<br></span></td>
+                        <td>Young-Hoon Lee</td>
+                    </tr>
+                    <tr>
+                        <td><span>The Analysis of Knowledge Spillover Effects from Foreign Direct Investments in the IT
+                                sector<br></span></td>
+                        <td>Gwnag hoon Lee</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.10 No.3 (2004. III)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>Does Employment Resolve Poverty<br></span></td>
+                        <td class="w30p">Jae-Ho Keum</td>
+                    </tr>
+                    <tr>
+                        <td><span>Change in Growth Potential of Korean Economy<br></span></td>
+                        <td>Jong-Il Kim</td>
+                    </tr>
+                    <tr>
+                        <td><span>An Essay on Invoicing Practices of Korean Exports<br></span></td>
+                        <td>Yun Seong Hun</td>
+                    </tr>
+                    <tr>
+                        <td><span>Quantitative Estimation of Industrial Hollowing Out<br></span></td>
+                        <td>Do Yong Kang</td>
+                    </tr>
+                    <tr>
+                        <td><span>Empirical Analysis of Precautionary Portfolio Allocation_Evidence for Korea<br></span>
+                        </td>
+                        <td>Kyeongwon Yoo</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.10 No.2 (2004.II)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>What should be a Future Financial System in Korea</span></td>
+                        <td class="w30p">Taehon Jinn · Duck-Young Kim· Jeong Ho Hahm</td>
+                    </tr>
+                    <tr>
+                        <td><span>The Optimal Size of Public Sectorand Endogenous Growth under Rent-Seeking
+                                Competition</span></td>
+                        <td>Changmin Kim · Hyun Park</td>
+                    </tr>
+                    <tr>
+                        <td><span>Financial Stability and the Public Agencies Concerned_The Case for Supervisory Cooperation
+                                and Checks and Balances</span></td>
+                        <td>Hong-Bum Kim</td>
+                    </tr>
+                    <tr>
+                        <td><span>Factor Substitution of IT Capital_Empirical Evidence from Korean Firms</span></td>
+                        <td>Sung-Bae Moon · Dong-pyo Hong</td>
+                    </tr>
+                    <tr>
+                        <td><span>Bank Consolidation and Monetary Policy</span></td>
+                        <td>Dongwook Yang · Seungje Hong</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.10 No.1 (2004.I)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>Regional Segregation of Financial Markets in Korea</span></td>
+                        <td class="w30p">Jaewoon Koo · Ho Seong Moon</td>
+                    </tr>
+                    <tr>
+                        <td><span>The Effect of Deindustrialization on Economic Growth and Fluctuation</span></td>
+                        <td>Du Yong Kang</td>
+                    </tr>
+                    <tr>
+                        <td><span>Volatility Spillovers in the Korean Financial Markets</span></td>
+                        <td>Ok-Ja Yoon · Kyu-Ho Kang</td>
+                    </tr>
+                    <tr>
+                        <td><span>Compensation Schemes and Investment Behavior Venture Capital Firms</span></td>
+                        <td>Kyungwon Rhee</td>
+                    </tr>
+                    <tr>
+                        <td><span>Identifying Business Cycle Turning Points in Korea with a New Index of Aggregate
+                                Economic</span></td>
+                        <td>Joong Shik Lee</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.9 No.4 (2003.IV)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>Fiscal Inflation_Theory and Applicability in Korea<br></span></td>
+                        <td class="w30p">Joo Kyung Ree</td>
+                    </tr>
+                    <tr>
+                        <td><span>A Study on the Structural Change of Fiscal Policy after Korean Currency Crisis<br></span>
+                        </td>
+                        <td>Seong-Suhn Kim</td>
+                    </tr>
+                    <tr>
+                        <td><span>Impact of Direct Regulations on the Korean Credit Card Market and Consumer
+                                Welfare<br></span></td>
+                        <td>Seong-Hun Yun</td>
+                    </tr>
+                    <tr>
+                        <td><span>Is korea Being Deindustrialized<br></span></td>
+                        <td>Hyun-Joon Lim</td>
+                    </tr>
+                    <tr>about:blank#blocked
+                        <td><span>Internet-Only Banks_Uncertain Innovation<br></span></td>
+                        <td>Sangche Lee</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="h3 mt40">Vol.9 No.3 (2003. III)</h3>
+        <div class="table borderTop scrollX table-striped">
+            <table style="height: 184px;">
+                <tbody>
+                    <tr>
+                        <td class="w70p"><span>The effect of financial Restructuring on the Degree of Competition of the
+                                Korean Banking Sector<br></span></td>
+                        <td class="w30p">Byungyoon Lee</td>
+                    </tr>
+                    <tr>
+                        <td style="height: 20px;"><span>Rebuilding the Transmission System for Monetary Policy<br></span>
+                        </td>
+                        <td style="height: 20px;">Jeong Ho Hahn · Byung Han Seo</td>
+                    </tr>
+                    <tr>
+                        <td><span>A study of the Relationship between the Korean Won and the Japanese Yen after the
+                                financial Crisis<br></span></td>
+                        <td>Bong Han Kim</td>
+                    </tr>
+                    <tr>
+                        <td><span>The Natural Rate of Unemployment in Korea and Its Usefulness<br></span></td>
+                        <td>So-Sang Moon</td>
+                    </tr>
+                    <tr>
+                        <td><span>Sources of Fluctuations of the Real<br></span></td>
+                        <td>Myoungchul Chung</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="mt20">(Adding the list is in progress, the latest is 2023.I)</div>
+    </div>
+</div>			<!-- </div> -->
+			<!-- //컨텐츠 끝 -->
+
+			<!-- 내가 본 콘텐츠 -->
+			<div class="my_memo">
+				<button type="button" class="btn" title="내가 본 콘텐츠 열기">
+					<span class="sr-only">내가 본 콘텐츠</span>
+				</button>
+				<div class="swiper">
+					<div class="top">
+						<h2>내가 본 콘텐츠</h2>
+						<button type="button" class="close" title="내가 본 콘텐츠 닫기"></button>
+					</div>
+					<div class="swiper_body swiper-initialized swiper-horizontal swiper-pointer-events swiper-free-mode swiper-grid swiper-grid-column swiper-backface-hidden">
+						<div class="swiper-wrapper" id="swiper-wrapper-2f10167b653be3e10d" aria-live="off" style="transition-duration: 0ms; width: 332px; transform: translate3d(0px, 0px, 0px);">
+							<a href="" class="swiper-slide swiper-slide-active" role="group" aria-label="1 / 6" style="width: 166px;">
+								<span class="i">보도자료</span>
+								<span class="txt">2023년 4/4분기 및 연간 실질 국내총생산(속보)</span>
+							</a>
+							<a href="" class="swiper-slide swiper-slide-next" role="group" aria-label="2 / 6" style="width: 166px; margin-top: 0px;">
+								<span class="i">공지사항</span>
+								<span class="txt">경제통계국 국민소득총괄팀 통계조사보조원 채용 안내</span>
+							</a>
+							<a href="" class="swiper-slide" role="group" aria-label="3 / 6" style="width: 166px; margin-top: 0px;">
+								<span class="i">블로그</span>
+								<span class="txt">2023년 한국계 외화채권 시장의 특징 및 2024년 전망</span>
+							</a>
+							<a href="" class="swiper-slide" role="group" aria-label="4 / 6" style="width: 166px; margin-top: 0px;">
+								<span class="i">연구자료</span>
+								<span class="txt">기후변화 물리적리스크가 글로벌가치사슬을 통해 국내 거시경제에 미치는 영향</span>
+							</a>
+							<a href="" class="swiper-slide" role="group" aria-label="5 / 6" style="width: 166px;">
+								<span class="i">공지사항</span>
+								<span class="txt">경제통계국 국민소득총괄팀 통계조사보조원 채용 안내</span>
+							</a>
+							<a href="" class="swiper-slide" role="group" aria-label="6 / 6" style="width: 166px; margin-top: 0px;">
+								<span class="i">블로그</span>
+								<span class="txt">2023년 한국계 외화채권 시장의 특징 및 2024년 전망</span>
+							</a>
+						</div>
+						<!-- <ul class="swiper-wrapper">
+							<li class="swiper-slide">
+								<a href="">
+									<span class="i">보도자료</span>
+									<span class="txt">2023년 4/4분기 및 연간 실질 국내총생산(속보)</span>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="">
+									<span class="i">공지사항</span>
+									<span class="txt">경제통계국 국민소득총괄팀 통계조사보조원 채용 안내</span>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="">
+									<span class="i">블로그</span>
+									<span class="txt">2023년 한국계 외화채권 시장의 특징 및 2024년 전망</span>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="">
+									<span class="i">연구자료</span>
+									<span class="txt">기후변화 물리적리스크가 글로벌가치사슬을 통해 국내 거시경제에 미치는 영향</span>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="">
+									<span class="i">공지사항</span>
+									<span class="txt">경제통계국 국민소득총괄팀 통계조사보조원 채용 안내</span>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="">
+									<span class="i">블로그</span>
+									<span class="txt">2023년 한국계 외화채권 시장의 특징 및 2024년 전망</span>
+								</a>
+							</li>
+						</ul> -->
+					<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+					<div class="ctrl">
+						<button type="button" class="prev memo-prev swiper-button-disabled" tabindex="-1" aria-label="Previous slide" aria-controls="swiper-wrapper-2f10167b653be3e10d" aria-disabled="true" disabled="">
+							<i class="ctrl-prev"></i>
+							<span class="sr-only">이전 동영상 보기</span>
+						</button>
+						<div class="swiper-pagination swiper-pagination-fraction swiper-pagination-horizontal"><span class="swiper-pagination-current">1</span> / <span class="swiper-pagination-total">2</span></div>
+						<button type="button" class="next memo-next" tabindex="0" aria-label="Next slide" aria-controls="swiper-wrapper-2f10167b653be3e10d" aria-disabled="false">
+							<i class="ctrl-next"></i>
+							<span class="sr-only">다음 동영상 보기</span>
+						</button>
+					</div>
+					<button type="button" class="b-close close" title="내가 본 콘텐츠 닫기"></button>
+				</div>
+			</div>
+
+			<!-- 맨 위로 이동 -->
+			<div class="goTop">
+				<a href="javascript:void(0);"><span class="sr-only">페이지 위로 이동</span></a>
+			</div>
+
+		</main>
+	</div>
+	<!-- //#content -->
+</div>
+<!-- //#wrap -->
+
+<!-- footer -->
+<footer id="footer">
+	<div class="container">
+		<div class="f_l">
+			<nav class="footer-nav">
+				<ul>
+					<li>
+						<a href="">저작권보호</a>
+					</li>
+					<li class="point">
+						<a href="">개인정보처리방침</a>
+					</li>
+					<li>
+						<a href="">이메일무단수집거부</a>
+					</li>
+					<li>
+						<a href="">홈페이지이용안내</a>
+					</li>
+					<li>
+						<a href="">관련사이트</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="footer-bottom">
+				<address>04531 서울특별시 중구 남대문로 39 (남대문로3가)<br class="mobile">
+				대표전화 : 02-759-4114</address>
+				<p class="copyright">Copyright(c) Bank of Korea. All rights reserved.</p>
+			</div>
+		</div>
+		<div class="f_r">
+			<div class="site_go">				
+				<button type="button" title="Family site 열기">Family site</button>
+				<ul>
+					<li>
+						<a href="/portal/main/main.do" target="_blank" title="새창열림">한국은행</a>
+					</li>
+					<li>
+						<a href="/imer/main/main.do" target="_blank" title="새창열림">경제연구원</a>
+					</li>
+					<li>
+						<a href="">지역본부</a>
+					</li>
+					<li>
+						<a href="https://ecos.bok.or.kr" target="_blank" title="새창열림">경제시스템(ecos)</a>
+					</li>
+					<li>
+						<a href="https://snapshot.bok.or.kr" target="_blank" title="새창열림">금융·경제스냅샷</a>
+					</li>
+					<li>
+						<a href="https://dl.bok.or.kr" target="_blank" title="새창열림">전자도서관</a>
+					</li>
+					<li>
+						<a href="https://apply.bok.or.kr" target="_blank" title="새창열림">채용</a>
+					</li>
+				</ul>
+			</div>
+			<div class="f_sns">
+				<a href="https://www.youtube.com/thebankofkoreakr" target="_blank" title="새창열림" class="sns-youtube">
+					<i class="ico-youtube"></i>
+					<span class="sr-only">한국은행 Youtube 바로가기 (https://www.youtube.com/thebankofkoreakr)</span>
+				</a>
+				<a href="https://www.instagram.com/thebankofkorea" target="_blank" title="새창열림" class="sns-instagram">
+					<i class="ico-insta"></i>
+					<span class="sr-only">한국은행 인스타그램  바로가기 (https://www.instagram.com/thebankofkorea)</span>
+				</a>
+				<a href="https://www.facebook.com/bankofkoreahub" target="_blank" title="새창열림" class="sns-facebook">
+					<i class="ico-facebook"></i>
+					<span class="sr-only">한국은행 Facebook 바로가기 (https://www.facebook.com/bankofkoreahub)</span>
+				</a>
+				<a href="https://www.twitter.com/bok_hub" target="_blank" title="새창열림" class="sns-twitter">
+					<i class="ico-x"></i>
+					<span class="sr-only">한국은행 Twitter 바로가기 (https://www.twitter.com/bok_hub)</span>
+				</a>
+			</div>
+			<div class="f_banner">
+				<a href="" title="새창열림"><img src="/static/portal/img/common/mark.png" alt="(사)한국장애인단체총연합회 한국웹접근성인증평가원 웹 접근성 우수사이트 인증마크(WA인증마크)"></a>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- //footer -->
+
+<script src="/static/jslibrary/swiper@8/swiper-bundle.min.js"></script>
+<script src="/static/imer/js/common.js"></script>
+</body>
+</html>

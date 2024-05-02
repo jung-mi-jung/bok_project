@@ -5,15 +5,15 @@
 .container {
 	max-width: $pc-wide;
 	margin: 0 auto;
-	margin-left: 10px;
-	margin-right: 10px;
-	@include breakpoint(min-width 1480px) {
-		margin-left: auto;
-		margin-right: auto;
-	}
-	@include breakpoint($sm){
-		margin: 0;
-	}
+	padding-left: 10px;
+    padding-right: 10px;
+	// @include breakpoint(min-width 1480px) {
+	// 	margin-left: auto;
+	// 	margin-right: auto;
+	// }
+	// @include breakpoint($sm){
+	// 	margin: 0;
+	// }
 }
 
 .hgroup {
@@ -1743,6 +1743,9 @@
 		display: none;
 	}
 }
+#content.bd-view_wrap {
+	margin-top: 0;
+}
 
 #main-container {
 	clear: both;
@@ -1750,9 +1753,12 @@
 	max-width: 100%;
 	min-height: calc(100vh - 246px - 196px - 80px);
 	// padding-top: 30px;
+	p {
+		font-size: rem(18);
+	}
 	@include clearfix();
 	@include breakpoint($sm){
-		padding: 0 10px;
+		// padding: 0 10px;
 		p {
 			font-size: rem(16);
 		}
@@ -1854,7 +1860,7 @@ main {
 	.navigation {
 		.sub-_visual {
 			div {
-				padding-top: 48px;
+				padding: 48px 10px 0; 
 				h1 {
 					font-weight: 600;
 				}
@@ -1864,17 +1870,60 @@ main {
 	#main-container h2 {
 		color: $black;
 	}
-	.bd-view {
-		margin-top: -156px;
+	.bd-view {		
+		@include breakpoint($lg){
+			margin-top: -126px;
+		}
 		.subject {
 			width: 100%;
 			@include ellipsis();
+			margin-bottom: 0 !important;
 		}
 		.dataInfoSet .keyword a {
 			background-color: #fff;
 		}
 	}
 }
+@include breakpoint($smd) {
+	.bd-body {
+		.navigation {
+			border-bottom: 0;
+			.sub-_visual {
+				width: calc(100% - 20px);
+				padding: 16px;
+				margin: 0 auto;
+				background-color: #CBDEF4;
+				div {
+					padding: 0; 
+					margin-bottom: 10px;
+					h1 {
+						text-align: left;
+						line-height: 1.5;
+					}
+				}
+			}
+		}
+		.bd-view {
+			.subject {
+				font-size: rem(20) !important;
+				padding: 68px 16px 16px;
+				background-color: #CBDEF4;
+				overflow: auto;
+				white-space: initial;
+				text-overflow: initial;
+				& + .dataInfoSet {
+					background-color: #CBDEF4;
+					padding: 0 16px;
+					margin-top: -35px;
+					margin-bottom: 20px;
+					padding-bottom: 24px;
+				}
+			}
+		}
+	}
+}
+
+
 
 // 일반형 게시판 상세 페이지일 경우
 .bd-view_wrap {

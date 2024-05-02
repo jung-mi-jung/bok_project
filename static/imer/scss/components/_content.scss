@@ -532,7 +532,14 @@
 				min-height: 52px;
 				height: auto !important;
 				font-size: rem(16) !important;
+				font-family: "Spoqa Han Sans Neo" !important;
 				border-top: 0 !important;
+				color: #1a1a1a !important;
+				* {
+					font-size: rem(16) !important;
+					font-family: "Spoqa Han Sans Neo"  !important;
+					color: #1a1a1a !important;
+				}
 				&:first-of-type {
 					border-left: 0 !important;
 				}

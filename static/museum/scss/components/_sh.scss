@@ -521,7 +521,9 @@
 	justify-content: right;
 	margin-bottom: 25px;
 	@include breakpoint($sm){
+		align-items: flex-start;
 		justify-content: flex-start;
+		flex-wrap: wrap;
 	}
 	> * {
 		margin: 0 4px;

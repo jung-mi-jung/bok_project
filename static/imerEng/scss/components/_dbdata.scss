@@ -1,8 +1,9 @@
-.dbdata {
-	min-height: 200px;
-	padding: 32px 30px;
+.dbdata, 
+.dbData  {
+	min-height: 250px;
+	padding: 32px 0;
 	word-break: break-all;
-	border-bottom: 1px solid $bd-color;
+	// border-bottom: 1px solid $bd-color;
 	@include breakpoint($sm) {
 		padding: 15px 0;
 	}
@@ -23,4 +24,33 @@
 		color: $point;
 		text-decoration: underline;
 	}
+}
+
+.dbdata + .dbdata {
+	// margin-top: 20px;
+	border-top: 1px solid $bd-color;
+}
+
+
+.dbdata2 {
+	width: 960px;
+	margin: 0 auto;
+	border-bottom: 0;
+	.view {
+		font-size: rem(16);
+		ul {
+			li {
+				margin: 8px 0;
+				.ing {
+					display: inline-flex;
+					align-items: center;
+					margin-left: 10px;
+					background: #118DB4;
+					padding: 4px 12px;
+					font-size: rem(14);
+					color: #fff;
+				}
+			}
+		}
+	} 
 }

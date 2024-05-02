@@ -1,187 +1,553 @@
 .fc1 {
-	color: #118DB4;
+	// color: #118DB4;
+	color: #005596;
 	font-weight: 500;
 }
-
-// .swiper-container {
-// 	width: 100%;
-// 	height: auto;
-// 	margin-left: auto;
-// 	margin-right: auto;
-//   }
-// .swiper-slide {
-// 	width:100%;
-// 	/* Center slide text vertically */
-// 	display: flex;
-// 	justify-content: center;
-// 	align-items: center;
-// }
-
-/*
-.img-box {
-	border: 1px solid #d5d5d5;
-	border-radius: 10px;
-	padding: 50px 0;
-	img {
-		margin: 0 auto;
-		display: block;
+.fc2 {
+	color: #005596;
+	font-weight: 500;
+}
+.first {
+	color: #666;
+}
+.fade {
+	opacity: 0;
+	transition: opacity 0.15s linear;
+	&.in {
+		opacity: 1;
 	}
+}
+
+.fnote {
+	margin-top: 20px;
+	margin-bottom: 30px;
+	.title {
+		.ml25 {
+			margin-left: 29px !important;
+		}
+	}
+}
+.cont {
+	p, li {
+		margin-bottom: 4px;
+		color: #1A1A1A;
+		font-size: rem(18);
+	}
+}
+.top-txt {
+    padding: 26px;
+    text-align: center;
+    background-color: #F2F6FA;
+	h2 {
+		line-height: 1.4 !important;
+	}
+}
+.btns {
+	position: relative;
+	display: inline-flex;
 	@include breakpoint($sm){
-		padding: 40px 0;
+		position: absolute;
+		bottom: 10px;
+		right: 8px;
 	}
-	picture{
-		margin:0 auto;
-		img{
-			margin: 0 auto;
-			display: block;
+	> a {
+		color: #666;
+		display: inline-block;
+		&::before {
+			font-size: 19px;
+			margin-right: 5px;
 		}
-		.img-mobile{
-			display: block;
-		}
-		.img-pc{
-			display: none;
-		}
-		@include breakpoint($md){
-			.img-pc{
-				display: block;
-				margin: 0 auto;
+		& + a {
+			position: relative;
+			margin-left: 11px;
+			padding-left: 13px;
+			&::after {
+				content: "";
+				position: absolute;
+				top: 7px;
+				left: 0;
+				background: #666;
+				width: 1px;
+				height: 10px;
 			}
-			.img-mobile{
+		}
+		&.i-download {
+			&::before {
+				content: "";
+				display: inline-block;
+				vertical-align: middle;
+				background: url(/static/portal/img/common/ico-download.png);
+				width: 20px;
+				height: 20px;
+			}
+		}
+		&.i-download2 {
+			display: inline-flex;
+			height: 32px;
+			align-items: center;
+			justify-content: center;
+			gap: 0 8px;
+			padding: 0 12px;
+			color: #3B63C4;
+			border: 1px solid #3B63C4;
+			background: #fff;
+			border-radius: 4px;
+		}
+		&.i-view {
+			&::before {
+				@include font-ico-outline("\e666");
+				background-color: transparent;
+			}
+		}
+		.icon {
+			display: inline-block;
+		}
+	}
+}
+.bu .btns{
+	@include breakpoint($sm) {
+		position: inherit;
+		bottom: inherit;
+		right: inherit;
+	}
+}
+
+
+
+/* 콘텐츠 내부 래프트메뉴 */
+.content-row {
+	.cont-nav {
+		width: 240px;
+		margin-right: 4.28571%;
+		@include breakpoint($sm) {
+			width: 100%;
+			margin-right: 0;
+			margin-bottom: 30px;
+		}
+		ul {
+			position: sticky;
+			top: 48px;
+			@include breakpoint($sm){
+				margin-top: 8px;
 				display: none;
 			}
+			> li {
+				margin-bottom: 4px;
+				> a {
+					display: block;
+					padding: 6px 0;
+					color: #333;
+					scroll-behavior: smooth;
+					i {
+						display: none;
+					}
+				}
+				&.on {
+					background: #F2F6FA;
+					border-radius: 8px;
+					> a {
+						display: flex;
+						padding: 6px;
+						font-weight: 500;
+						align-items: center;
+						justify-content: space-between;
+						color: #1A1A1A;
+						i {
+							display: inline-block;
+						}
+					}
+				}
+			}
 		}
 	}
-}
-
-
-@include breakpoint($md){
-	.img-lg {
-		position: relative;
-		&::after{
-			content: '\f0b2'; 
-			@include la;
-			display: block; 
-			position: absolute; 
-			right: 10px; 
-			top: 10px; 
-			width: 60px; 
-			height: 60px; 
-			text-align: center; 
-			background-color: rgba(0, 0, 0, 0.6); 
-			color: #fff; 
-			padding-top: 0.4375em; 
-			font-size: 1.25rem; 
-			line-height: 1; 
-			//vertical-align: top; 
-			border-radius: 0.3125em;
+	.cont-right {
+		width: calc(100% - 240px - 4.28571%);
+		@include breakpoint($sm) {
+			width: 100%;
 		}
-		&::before {
-			content: '원본';
-			text-align: center;
-			position: absolute;
-			z-index: 2;
-			right: 10px;
-			top: 40px;
-			width: 60px;
-			text-align: center;
-			color: #fff;
+		h3 {
+			margin: 0 auto 16px;
 		}
+		.cont  {
+			margin-bottom: 80px;
+		}
+		.tab-list {
+			position: relative;
+			margin-top: 20px;
+			a {
+				padding: 8px;
+				min-width: 228px;
+				width: auto;
+				min-height: 40px;
+				box-sizing: border-box;
+				@include breakpoint($sm) {
+					min-width: 128px;
+				}
+			}
+		}
+
 	}
 }
-
-
-.login-box {
-	border-radius: 10px;
-	background-color: #f9f9f9;
-	padding: 50px 75px;
-	text-align: center;
-	@include breakpoint($sm){
-		padding: 30px;
-	}
-	h2 {
-		font-size: 28px !important;
-		margin-bottom: 10px !important;
-	}	
-}
-
-.sitemap {
-	border: 2px solid $point;
-	border-width: 2px 0;
-	> ul {
+@include breakpoint($sm) {
+	.content-row  .js-tab {
 		display: block;
-		> li {
-			display: table;
-			table-layout: fixed;
+		background: #fff;
+		border: 1px solid #E5E5E5;
+		border-radius: 0;
+		button {
+			display: flex;
 			width: 100%;
-			> * {
-				display: table-cell;
-				vertical-align: middle;
+			padding: 8px 6px;
+			font-weight: 500;
+			align-items: center;
+			justify-content: space-between;
+			color: #000;
+			i {
+				transform: rotate(90deg);
 			}
-			> a {
-				width: 282px;
-				font-size: 22px;
-				font-weight: 600;
-				padding: 55px 40px;
-				background-color: #eef5fb;
-			}
-			& + li {
-				border-top: 1px solid #ccc;
-			}			
 		}
 	}
-}
 
-.policy {
-	font-size: 18px;
-	h2 {
-		padding-top: 24px;
-		margin-top: 24px;
-		border-top: 1px solid #ccc;
-		font-size: 22px !important;
-		font-weight: 600;
-		&:first-child {
-			border-top: none;
-			margin-top: 0;
-		}
-	}
-	ul {
-		list-style: none;
-		ul {
-			padding: 5px 0 5px 15px;
-		}
-		&.list-num {
-			padding-left: 10px;
-			p {
-				padding: 5px 0 5px 19px;
-				font-size: 16px;
+	.content-row .js-tab.on {
+		button {
+			i {
+				transform: rotate(270deg);
+				transition: transform .4s;
 			}
 		}
-		li + li {
-			margin-top: 5px;
-		}
-	}	
-}
-
-.download {
-	padding: 30px 0;
-	text-align: right;
-	a {
-		padding: 13px 18px;
-		color: #fff;
-		background-color: $point;
-		border-radius: 5px;
-		@include breakpoint($sm){
-			width: 100%;
+		+ ul {
 			display: block;
-			text-align: center;
 		}
-		&::after {
-			@include font-ico-outline('\e2c0');
-			font-size: 22px;
-			vertical-align: middle;
-			margin-left: 8px;
-			margin-bottom: 2px;
+	}
+
+	.content-row .cont-nav ul {
+		display: none;
+		> li {
+			margin-bottom: 0;
+			margin-top: -1px;
+			border: 1px solid #E5E5E5;
+			> a {
+				padding: 8px 6px;
+			}
+			&.on {
+				border-radius: 0;
+				> a {
+					padding: 8px 6px;
+					font-weight: 400;
+					i {
+						display: none;
+					}
+				}
+			}
 		}
 	}
 }
-*/
+
+/* 컨퍼런스 */
+.conference {
+	.top-txt {
+		margin-bottom: 30px;
+		text-align: left;
+		.subject {
+			margin-bottom: 0 !important;
+			span {
+				display: block;
+				font-size: rem(18);
+				font-weight: 400;
+				color: #1A1A1A;
+				margin-bottom: 8px;
+			}
+		}
+		.address {
+			display: inline-block;
+			background: linear-gradient(to right, #728bc2, #305e96);
+			padding: 10px 15px;
+			color: #fff;
+			font-size: rem(16);
+			margin-top: 40px;
+		}
+		& + p {
+			margin: 30px 0;
+			font-size: rem(18);
+		}
+	}
+	> h3, h2 {
+		&:first-of-type {
+			margin-top: 0 !important;
+		}
+	}
+	.schList {
+		margin-top: 50px;
+		li {
+			display: flex;
+			align-items: flex-start;
+			border-bottom: 1px solid #e8e8e8;
+			padding-bottom: 16px;
+			margin-bottom: 16px;
+			// margin-bottom: 8px;			
+			flex-wrap: wrap;
+			span {
+				display: block;
+				font-weight: 700;
+				padding: 0 0 10px;
+				// color: #4d4d4d;
+				> span {
+					display: inline-block;
+					margin-right: 5px;
+					padding: 0;
+				}
+			}
+			p {
+				font-weight: 400;
+				padding: 0 0 10px;
+			}
+			.schTxt1 {
+				width: 180px;
+				padding: 0 20px;
+				color: #1A1A1A;
+				box-sizing: border-box;
+				font-weight: 500 !important;
+				@include breakpoint($sm) {
+					width: 110px;
+					padding: 0 0;
+				}
+				// > span {
+				// 	font-weight: 500 !important;
+				// }
+			}
+			.schTxt2 {
+				width: calc(100% - 180px);
+				color: #1A1A1A;
+				padding: 0 20px;
+				box-sizing: border-box;
+				@include breakpoint($sm) {
+					width: calc(100% - 110px);
+					padding: 0 0;
+				}
+				& + .schTxt1 {
+					margin-top: 20px;
+					& + .schTxt2 {
+						margin-top: 20px;
+					}
+				}
+			}
+		}
+		& + h3 {
+			margin-top: 60px !important;
+		}
+	}
+	.nodata {
+		padding: 40px 24px 56px;
+		background: #F2F6FA;
+		border-radius: 16px;
+		text-align: center;
+		@include breakpoint ($sm) { 
+			padding: 20px 10px 30px;
+		}
+		i {
+			display: block;
+			width: 76px;
+			height: 56px;
+			margin: 0 auto 24px;
+			@include background-image-retina("/static/imer/img/ico/ico-noData", png, auto, 100%);
+		}
+		p {
+			font-size: rem(36) !important;
+			font-weight: 300;
+			color: #131547;
+			@include breakpoint ($sm) {
+				font-size: rem(20) !important;
+			}		
+		}
+	}
+	> img {
+		width: 100%;
+	}
+	p {
+		font-size: rem(18);
+	}
+}
+.row.speakers {
+	gap: 0 80px;
+	align-items: stretch;
+	margin-bottom: 64px;
+	.profile {
+		padding: 48px 48px;
+		width: 276px;
+		border-radius: 16px 16px;
+		background: #FAFAFA;
+		img {
+			width: 100%;
+		}
+		span {
+			display: block;
+			font-size: rem(18);
+			text-align: center;
+			&.fc1 {
+				font-size: rem(16);
+				margin-bottom: 8px;
+			}
+		}
+		.btn-wrap {
+			padding-top: 24px;
+			margin-top: 24px;
+			border-top: 1px solid #E5E5E5;
+			.b-go {
+				width: 100%;
+				height: 32px;
+				background: #143D66;
+				&::after {
+					display: none;
+				}
+			}
+		}
+	}
+	.profile-desc {
+		width: calc(100% - 276px - 80px);
+		p + p {
+			margin-top: 16px;
+		}
+	}
+}
+
+@include breakpoint($sm) {
+	.row.speakers {
+		gap: 16px 0;
+		flex-direction: column;
+		.profile, .profile-desc {
+			width: 100%;
+		}
+		.profile {
+			text-align: center;
+			padding: 20px 20px;
+			img {
+				max-width: 180px;
+			}
+		}
+	}
+}
+
+
+//오시는길
+.bokHead{
+	.map{
+		min-height: 600px;
+		@include breakpoint($sm){ 
+			min-height: 400px;
+		}
+	}
+	.bankMap{
+		margin-top: 24px;
+		// @include breakpoint($sm){
+		// 	width: 100%;
+		// 	margin-left: 0;
+		// 	margin-top: 20px;
+		// }
+		// font-size: rem(18);
+		&.type{
+			dt{
+				font-weight:600;color: $point;margin-top:5px;
+			}
+		}
+		dt, dd{
+			padding-left: 32px;
+		}
+		dt{
+			margin-top:10px;
+			color: #1a1a1a;
+			font-weight: 500;
+			&::before {
+				font-size: 16px;
+				color:#fff;
+				position:absolute;
+				top:0;
+				left:0;
+				border-radius: 30px;
+				background:#3B63C4;
+				width: 26px;
+				height: 26px;
+				line-height: 22px;
+				text-align:center;
+				margin: 3px 3px 0 0;
+			}
+		}
+		dd {
+			color: #4d4d4d;
+			font-weight: 400;
+		}
+		.pic img{
+			display:inline-block;border:3px solid #fff;
+		}
+		.ad{
+			position:relative;
+			&:before{
+				color: #1a1a1a;
+				background: none;
+				@include font-ico-outline('\e0c8');
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				width: 24px;
+				height: 24px;
+				font-size: 22px;
+				
+			}
+		}
+		.ph{
+			position:relative;
+			margin-top: 24px;
+			&:before{
+				color: #1a1a1a;
+				background: none;
+				@include font-ico-outline('\e0b0');
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				width: 24px;
+				height: 24px;
+				font-size: 22px;
+			}
+		}
+		.fx{
+			position:relative;
+			&:before{
+				@include font-ico-outline('\ead8');
+			}
+		}
+		.em{
+			position:relative;
+			&:before{
+				content:"\f003";
+				color:#fff;font-size:13px;position:absolute;top:0;left:0;border-radius: 30px;background:#3B63C4;width:20px;height:20px;text-align:center;
+			}
+		}
+	}
+}
+
+/* 학술지 논문목록 */
+.cont-tableList {
+	.table {
+		tbody {
+			td {
+				min-height: 52px;
+				height: auto !important;
+				font-size: rem(16) !important;
+				font-family: "Spoqa Han Sans Neo" !important;
+				border-top: 0 !important;
+				color: #1a1a1a !important;
+				* {
+					font-size: rem(16) !important;
+					font-family: "Spoqa Han Sans Neo"  !important;
+					color: #1a1a1a !important;
+				}
+				&:first-of-type {
+					border-left: 0 !important;
+				}
+				&:last-of-type {
+					border-right: 0 !important;
+				}
+			}
+		}
+	}
+	
+}
