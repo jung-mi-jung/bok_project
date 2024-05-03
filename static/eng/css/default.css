@@ -1793,8 +1793,8 @@ display: flex;
 justify-content: space-between;
 max-width: 1824px;
 border-bottom: 1px solid #E6E6E6;
-height: 33px;
-line-height: 33px;
+height: 50px;
+line-height: 50px;
 }
 }
 @media (min-width: 1200px) and (max-width: 1199px) {
@@ -1834,9 +1834,9 @@ vertical-align: middle;
 }
 #header .logo a {
 display: block;
-background: url(/static/eng/img/main/logo.png) 50% no-repeat;
-width: 127px;
-height: 60px;
+background: url(/static/eng/img/common/logo.png) 50% no-repeat;
+width: 208px;
+height: 52px;
 }
 @media (max-width: 749px) {
 #header .logo a {
@@ -2882,6 +2882,7 @@ font-size: 0.875rem !important;
 font-weight: 400;
 display: block;
 padding-bottom: 10px;
+margin-bottom: 10px !important;
 border-bottom: 1px solid #BFBFBF;
 }
 .my_memo .top .close {
@@ -2950,12 +2951,12 @@ display: block;
 }
 .my_memo .swiper .swiper_body .swiper-slide span.i {
 color: #3B63C4;
-font-size: 0.75rem;
+font-size: 12px;
 }
 .my_memo .swiper .swiper_body .swiper-slide span.txt {
 display: block;
 color: #333;
-font-size: 0.875rem;
+font-size: 14px;
 height: 38px;
 overflow: hidden;
 text-overflow: ellipsis;
@@ -3788,12 +3789,8 @@ display: flex;
 max-width: 100%;
 width: 900px;
 display: flex;
-flex-direction: row;
-justify-content: space-around;
-flex-grow: 1;
-}
-.gnb > ul > li {
-flex: 1;
+justify-content: center;
+gap: 0 40px;
 }
 .gnb > ul > li > a {
 display: block;
@@ -3806,19 +3803,11 @@ height: 96px;
 line-height: 96px;
 font-size: 1.5rem;
 font-weight: 500;
-padding: 0 11%;
 }
 .gnb > ul > li > a.on + .depth2 {
 display: flex;
 justify-content: space-between;
 background-color: #fff;
-/*&::after {
-	right: 0;
-	width: 10000px;
-	//right: -50%;
-	//right: calc(-50% + 10px);
-	border: 1px solid blue;
-}*/
 }
 .gnb > ul > li > a.on + .depth2::before, .gnb > ul > li > a.on + .depth2::after {
 content: "";

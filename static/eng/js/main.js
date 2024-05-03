@@ -20,40 +20,24 @@ $(function () {
 			loop: true, //무한반복 할지말지,
 		},
 		grabCursor: true,
-		//effect: "creative",
-		effect: "fade",
+		effect: "fade",  // fade
 		fadeEffect: { 
 			crossFade: true 
 		},
-		creativeEffect: {
-			prev: {
-				shadow: true,
-				origin: "left center",
-				translate: ["-5%", 0, -200],
-				rotate: [0, 100, 0],
-			},
-			next: {
-				origin: "right center",
-				translate: ["5%", 0, -200],
-				rotate: [0, -100, 0],
-			},
-		},
+		// creativeEffect: {
+		// 	prev: {
+		// 		shadow: true,
+		// 		origin: "left center",
+		// 		translate: ["-5%", 0, -200],
+		// 		rotate: [0, 100, 0],
+		// 	},
+		// 	next: {
+		// 		origin: "right center",
+		// 		translate: ["5%", 0, -200],
+		// 		rotate: [0, -100, 0],
+		// 	},
+		// },
 		grabCursor: true,		
-		//effect: "creative",
-		/*effect: "fade",
-		fadeEffect: { 
-			crossFade: true 
-		},
-		creativeEffect: {
-			prev: {
-				shadow: true,
-				translate: ["-20%", 0, -1],
-			},
-			next: {
-				translate: ["100%", 0, 0],
-			},
-		},*/
-
 		// Navigation arrows
 		navigation: {
 			nextEl: '.section1-visual__swiper-button-next',

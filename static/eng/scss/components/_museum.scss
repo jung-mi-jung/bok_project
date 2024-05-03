@@ -361,6 +361,12 @@
 			font-weight: 700;
 		}
 	}
+	.tabsub {
+		margin-bottom: 60px;
+	}
+	h2 {
+		margin-bottom: 40px !important;
+	}
 	.cont {
 		margin-top: 80px;
 		@include breakpoint($sm){
@@ -502,13 +508,6 @@
 				}
 			}
 		}
-		h3  {
-			//color: $blue002 !important;
-			margin-top: 0 !important;
-			&::before {
-				display: none !important;
-			}
-		}
 		p {
 			color: #4D4D4D;
 			line-height: 1.6; 
@@ -614,6 +613,9 @@
 				font-size: 16px;
 			}
 		}
+	}
+	.gallery-set2 {
+		background-color: #F2F6FA;
 	}
 }
 

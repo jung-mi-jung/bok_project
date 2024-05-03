@@ -730,6 +730,9 @@ $(function() {
 	});
 
 
+
+
+
 	//.table thead 없을 경우 처리 (디자인 처리)
 	// $(".table")
 	// 	.not("thead")

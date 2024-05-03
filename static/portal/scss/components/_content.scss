@@ -287,7 +287,7 @@ p.subject {
 			padding: 0 18px;
 			margin-top: 16px;
 			font-size: rem(18);
-			background: #1454FF;
+			background: #005596;
 			color: #fff;
 			i {
 				display: inline-flex;
@@ -351,7 +351,7 @@ p.subject {
 			position: relative;
 			z-index: 1;
 			width: 192px;
-			border: 1px solid #1454FF;
+			border: 1px solid #3B63C4;
 			background: #fff;
 			border-radius: 8px;
 			// overflow: hidden;
@@ -364,7 +364,7 @@ p.subject {
 				top: calc(50% + 22px);
 				right: -339px;
 				transform: translateY(-50%);
-				background: #1454FF;
+				background: #3B63C4;
 			}
 		}
 		.org-dp1 {
@@ -376,7 +376,7 @@ p.subject {
 				justify-content: center;
 				height: 100%;
 				font-size: rem(18);
-				background: #000E33;
+				background: #3B63C4;
 				color: #fff;
 				padding: 8px;
 				border-radius: 4px;
@@ -419,10 +419,10 @@ p.subject {
 				height: 100%;
 				font-size: rem(16);
 				background: #fff;
-				color: #0038CC;
+				color: #3B63C4;
 				padding: 4px;
 				border-radius: 4px;
-				border: 2px solid #1454FF;
+				border: 2px solid #3B63C4;
 				@include breakpoint($sm) {
 					border-width: 1px;
 				}
@@ -459,7 +459,7 @@ p.subject {
 			border-bottom: 1px solid #0038CC;
 			box-sizing: border-box;
 			border-radius: 8px 8px 0 0;
-			background: #E5ECFF;
+			background: #F2F6FA;
 			a {
 				display: flex;
 				align-items: center;
@@ -653,7 +653,7 @@ p.subject {
 		.org-box {
 			position: relative;
 			padding: 16px 20px;
-			border: 2px solid #1454FF;
+			border: 2px solid #3B63C4;
 			border-radius: 16px;
 			&::before {
 				content: "";
@@ -672,12 +672,12 @@ p.subject {
 				margin-bottom: 0.8888em;
 				font-size: rem(18);
 				font-weight: 500;
-				color: #0038CC;
+				color: #118DB4;
 			}
 			> ul{
 				display: flex;
 				align-items: flex-start;
-				gap: 16px;
+				gap: 16px;				
 				&.col {
 					display: grid;
 					grid-template-columns: repeat(3, 168px);
@@ -694,7 +694,7 @@ p.subject {
 		} 
 		.org-dp1 {
 			width: 168px;
-			border: 1px solid #E5E5E5;
+			border: 1px solid #118DB4;
 			border-bottom: 0;
 			border-radius: 4px;
 			box-sizing: border-box;
@@ -703,7 +703,7 @@ p.subject {
 			}
 			&.br-top{
 				> a {
-					border-radius: 8px 8px 0 0; 
+					border-radius: 4px 4px 0 0;
 					@include breakpoint($sm) {
 						border-radius: 2.8px 2.8px 0 0;
 					}
@@ -716,8 +716,8 @@ p.subject {
 				font-weight: 500;
 				background: #FAFAFA;
 				border-radius: 4px; 
-				border-bottom: 1px solid #E5E5E5;
-				color: #1A1A1A;
+				border-bottom: 1px solid #118DB4;
+				color: #118DB4;
 				text-align: center;
 				@include breakpoint($sm) {
 					border-radius: 2.8px;
@@ -749,8 +749,8 @@ p.subject {
 				
 			}
 			> ul {
-				border-bottom: 1px solid #E5E5E5;
-				border-radius: 0 0 8px 8px; 
+				border-bottom: 1px solid #118DB4;
+				border-radius: 0 0 4px 4px; 
 				@include breakpoint($sm) {
 					border-radius: 0 0 2.8px 2.8px;
 				}
@@ -758,8 +758,7 @@ p.subject {
 		}
 		.org-dp2 {
 			font-size: rem(16);
-			font-weight: 400;
-			
+			font-weight: 400;			
 			a {
 				display: block;
 				padding: 4px 16px;
@@ -785,14 +784,11 @@ p.subject {
 						height: 1px;
 						transform: translateX(-50%);
 						background: #4D4D4D;
-					}
-					
+					}					
 				}
 			}
-		}
-		
-	}
-	
+		}		
+	}	
 }
 @include breakpoint($smd) {
 	.org {
