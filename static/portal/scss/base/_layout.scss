@@ -55,8 +55,9 @@
 		//height: $header-height;
 		width: 100%;
 		//max-width: 1920px;
-		max-width: 1824px;		
+		max-width: 1824px;
 		margin: 0 auto;	
+		padding: 0 10px;
 		@include breakpoint($smd){
 			padding-left: 48px;
 			padding-right: 48px;

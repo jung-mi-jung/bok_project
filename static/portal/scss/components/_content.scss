@@ -2675,7 +2675,7 @@ p.subject {
 						color: #fff;
 						font-size: rem(20);
 						background-color: rgba(0, 0, 0, 0.5);
-						@include ellipsis();
+						// @include ellipsis();
 					}
 				}
 			}

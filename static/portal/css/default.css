@@ -1729,7 +1729,7 @@ padding-top: 60px;
 }
 @media (min-width: 1200px) {
 #wrap {
-padding-top: 131px;
+padding-top: 146px;
 }
 }
 
@@ -1771,6 +1771,7 @@ align-items: center;
 width: 100%;
 max-width: 1824px;
 margin: 0 auto;
+padding: 0 10px;
 }
 @media (max-width: 1199px) {
 #header .container {

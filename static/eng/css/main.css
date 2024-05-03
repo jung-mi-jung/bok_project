@@ -548,6 +548,10 @@ padding: 15px;
 position: relative;
 }
 
+#content {
+margin-top: 0;
+}
+
 #wrap {
 padding-top: 0;
 }

@@ -8962,10 +8962,6 @@ display: block;
 color: #fff;
 font-size: 1.25rem;
 background-color: rgba(0, 0, 0, 0.5);
-overflow: hidden;
-white-space: nowrap;
-text-overflow: ellipsis;
-display: inline-block;
 }
 .histroy .his-con .his-txt {
 position: relative;
@@ -13508,11 +13504,11 @@ padding: 18px 0;
 }
 }
 .reference2 .set ul.list-type1 li a .t {
-width: 160px;
+width: 227px;
 color: #005596;
 }
 .reference2 .set ul.list-type1 li a .title {
-width: calc(100% - 120px - 160px);
+width: calc(100% - 120px - 227px);
 font-weight: 400;
 font-size: 1.125rem;
 overflow: hidden;
