@@ -27,7 +27,7 @@ var mainSectionMoveing = function (direction) {
             currentMainSection = index;
         }
     });
-    if (direction == 'down' && currentMainSection < mainSection.length - 1) {
+    if (direction == 'down' && currentMainSection < mainSection.length - 1 && !$("body").hasClass("popupOpened modal-open")) {
         currentMainSection++;
     } else if (direction == 'up' && currentMainSection > 0) {
         currentMainSection--;

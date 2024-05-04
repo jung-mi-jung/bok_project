@@ -674,6 +674,15 @@
 				
 				> a {
 					color: #333333;
+					@include breakpoint($sm) {
+						display: none;
+					}
+				}
+				> a.m-dp1 {
+					display: none;
+					@include breakpoint($sm) {
+						display: inline-block;
+					}
 				}
 			}
 		}
