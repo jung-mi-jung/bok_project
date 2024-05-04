@@ -938,28 +938,28 @@ background-repeat: no-repeat;
 background-position: 50%;
 }
 #section4 .info-list ul li a.i1::after {
-background-image: url(/static/imer/img/main/ico-info1_off.png);
-}
-#section4 .info-list ul li a.i1:hover::after {
 background-image: url(/static/imer/img/main/ico-info1.png);
 }
-#section4 .info-list ul li a.i2::after {
-background-image: url(/static/imer/img/main/ico-info2_off.png);
+#section4 .info-list ul li a.i1:hover::after {
+background-image: url(/static/imer/img/main/ico-info1-off.png);
 }
-#section4 .info-list ul li a.i2:hover::after {
+#section4 .info-list ul li a.i2::after {
 background-image: url(/static/imer/img/main/ico-info2.png);
 }
-#section4 .info-list ul li a.i3::after {
-background-image: url(/static/imer/img/main/ico-info3_off.png);
+#section4 .info-list ul li a.i2:hover::after {
+background-image: url(/static/imer/img/main/ico-info2-off.png);
 }
-#section4 .info-list ul li a.i3:hover::after {
+#section4 .info-list ul li a.i3::after {
 background-image: url(/static/imer/img/main/ico-info3.png);
 }
+#section4 .info-list ul li a.i3:hover::after {
+background-image: url(/static/imer/img/main/ico-info3-off.png);
+}
 #section4 .info-list ul li a.i4::after {
-background-image: url(/static/imer/img/main/ico-info4_off.png);
+background-image: url(/static/imer/img/main/ico-info4.png);
 }
 #section4 .info-list ul li a.i4:hover::after {
-background-image: url(/static/imer/img/main/ico-info4.png);
+background-image: url(/static/imer/img/main/ico-info4-off.png);
 }
 #section4 .info-list ul li a:hover {
 color: #fff;

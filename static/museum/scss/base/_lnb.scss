@@ -277,21 +277,22 @@
 /* 상세페이지 비쥬얼 */
 body.bd-body .sub-_visual {
 	@include breakpoint($lg) {
-		&.menu_700107 {
-			background-image: url(/static/museum/img/visual/view_700107.png);
-		}
-		&.menu_700795 {
-			background-image: url(/static/museum/img/visual/view_700795.png);
-		}
-		&.menu_700108 {
-			background-image: url(/static/museum/img/visual/view_700108.png);
-		}
-		&.menu_700109 {
-			background-image: url(/static/museum/img/visual/view_700109.png);
-		}
-		&.menu_700836 {
-			background-image: url(/static/museum/img/visual/view_700836.png);
-		}
+		background-image: url(/static/museum/img/visual/view_700836.png) !important;
+		// &.menu_700107 {
+		// 	background-image: url(/static/museum/img/visual/view_700107.png);
+		// }
+		// &.menu_700795 {
+		// 	background-image: url(/static/museum/img/visual/view_700795.png);
+		// }
+		// &.menu_700108 {
+		// 	background-image: url(/static/museum/img/visual/view_700108.png);
+		// }
+		// &.menu_700109 {
+		// 	background-image: url(/static/museum/img/visual/view_700109.png);
+		// }
+		// &.menu_700836 {
+		// 	background-image: url(/static/museum/img/visual/view_700836.png);
+		// }
 	}
 }
 

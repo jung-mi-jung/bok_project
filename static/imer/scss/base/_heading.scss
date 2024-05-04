@@ -102,10 +102,13 @@
 		color: #333333;
 		font-size: rem(36);
 		font-weight: 700;
-		margin-bottom: 48px;
+		margin: 40px 0 48px;
 		line-height: 1.2;
 		& + h3 {
-			margin-top: 22px;
+			margin-top: -20px;
+		}
+		&:first-of-type {
+			margin-top: 0;
 		}
 	}
 	h3 {
@@ -129,6 +132,9 @@
 		&.h3 {
 			margin: 40px 0 16px;
 			@include h-caption();
+		}
+		& + .table {
+			margin-top: -20px;
 		}
 	}
 	.bu2,

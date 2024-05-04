@@ -351,14 +351,15 @@
 	ul {
 		li {
 			a.title {
-				max-width: calc(100% - 100px) !important;
+				max-width: 100% !important;
 				@include breakpoint($lg) {
+					max-width: calc(100% - 100px) !important;
 					&::before {
 						content: "";
 						display: inline-block;
 						width: 48px;
 						height: 48px;
-						position: absolute;
+						position: absolute;	
 						top: 50%;
 						right: 15px;
 						margin-top: -24px;

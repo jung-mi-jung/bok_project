@@ -40,6 +40,9 @@
     background-color: #F2F6FA;
 	h2 {
 		line-height: 1.4 !important;
+		& + span.mt10 {
+			display: block;
+		}
 	}
 }
 .btns {
@@ -289,8 +292,10 @@
 			span {
 				display: block;
 				font-weight: 700;
-				padding: 0 0 10px;
 				// color: #4d4d4d;
+				& + span {
+					padding-top: 10px;
+				}
 				> span {
 					display: inline-block;
 					margin-right: 5px;
