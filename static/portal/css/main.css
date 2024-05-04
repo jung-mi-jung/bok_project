@@ -542,6 +542,10 @@ z-index: 1;
 vertical-align: middle;
 }
 
+#content {
+margin-top: 0;
+}
+
 #wrap {
 padding-top: 0;
 }
@@ -1539,10 +1543,6 @@ border-radius: 16px;
 background-color: #fff;
 padding: 12px;
 margin-top: 30px;
-opacity: 0;
-}
-#section3 .media .swiper-slide.swiper-slide-prev, #section3 .media .swiper-slide.swiper-slide-active, #section3 .media .swiper-slide.swiper-slide-next {
-opacity: 1;
 }
 @media (min-width: 1200px) {
 #section3 .media .swiper-slide.swiper-slide-active {

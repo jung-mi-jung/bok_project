@@ -273,29 +273,33 @@
 		padding-right: 36px;
 		background-color: #fff;
 		height: auto;
-		// &::after {
-		// 	content: "";
-		// 	display: inline-block;
-		// 	background-color: #d9d9d9;
-		// 	position: absolute;
-		// 	top: 0;
-		// 	right: -1px;
-		// 	width: 1px;
-		// 	height: 100%;
-		// }
+		&::after {
+			content: "";
+			display: inline-block;
+			background-color: #d9d9d9;
+			position: absolute;
+			top: 0;
+			right: -2px;
+			width: 1px;
+			height: 100%;
+		}
 		& + .content {
-			&::after {
-				content: "";
-				display: inline-block;
-				background-color: #d9d9d9;
-				position: absolute;
-				top: 0;
-				left:per(240px + 35px, $pc-wide);
-				//right: -1px;
-				width: 1px;
-				//height: 100%;
-				height: calc(100% - 120px);
+			border-left: 1px solid #d9d9d9;
+			@include breakpoint($smd) {
+				border-left: none;
 			}
+			// &::after {
+			// 	content: "";
+			// 	display: inline-block;
+			// 	background-color: #d9d9d9;
+			// 	position: absolute;
+			// 	top: 0;
+			// 	left:per(240px + 35px, $pc-wide);
+			// 	//right: -1px;
+			// 	width: 1px;
+			// 	//height: 100%;
+			// 	height: calc(100% - 120px);
+			// }
 		}
 	}
 	h1 {

@@ -10,30 +10,31 @@
 		background-color: #fff;
 		height: auto;
 		margin-bottom: 0;
-		// &::after {
-		// 	content: "";
-		// 	display: inline-block;
-		// 	//border-right: 1px solid #d9d9d9;
-		// 	background-color: #d9d9d9;
-		// 	position: absolute;
-		// 	top: 0;
-		// 	right: -1px;
-		// 	width: 1px;
-		// 	height: 100%;
-		// }
+		&::after {
+			content: "";
+			display: inline-block;
+			//border-right: 1px solid #d9d9d9;
+			background-color: #d9d9d9;
+			position: absolute;
+			top: 0;
+			right: -2px;
+			width: 1px;
+			height: 100%;
+		}
 		& + .content {
-			&::after {
-				content: "";
-				display: inline-block;
-				background-color: #d9d9d9;
-				position: absolute;
-				top: 0;
-				left:per(240px, $pc-wide);
-				//right: -1px;
-				width: 1px;
-				//height: 100%;
-				height: calc(100% - 120px);
-			}
+			border-left: 1px solid #d9d9d9;
+			// &::after {
+			// 	content: "";
+			// 	display: inline-block;
+			// 	background-color: #d9d9d9;
+			// 	position: absolute;
+			// 	top: 0;
+			// 	left:per(240px, $pc-wide);
+			// 	//right: -1px;
+			// 	width: 1px;
+			// 	//height: 100%;
+			// 	height: calc(100% - 120px);
+			// }
 		}
 	}
 	.db-search {

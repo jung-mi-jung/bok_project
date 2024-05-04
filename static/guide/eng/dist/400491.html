@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>서브명 | Bank of Korea</title>
+	<link type="text/css" rel="stylesheet" href="/static/eng/css/sub.css">
+	<script src="/static/jslibrary/jquery-3.5.1.min.js"></script>
+	<script src="/static/jslibrary/jquery.cookie.js"></script>
+	<script src="/static/jslibrary/bootstrap/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="/static/jslibrary/swiper@8/swiper-bundle.min.css">
+	<script src="/static/jslibrary/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js"></script>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta property="og:type"			content="website">
+	<meta property="og:title"			content="${title}">
+	<meta property="og:description"		content="${title}">
+</head>
+<body>
+<div class="skip">
+	<a href="#content">Skip to content</a>
+</div>
+<div id="wrap">
+	<div class="gnb_bg"></div>
+	<!-- header -->
+	<header id="header">
+		<div class="globalHeader">
+			<div class="container">
+				<ul>
+					<li>
+						<a href="/imerEng/main/main.do" target="_blank" title="새창열림">Economic Research Institute</a>
+					</li>
+				</ul>
+				<div class="g-info">
+					<div class="global">
+						<ul>
+							<li>
+								<a href="/portal/main/main.do" target="_blank" title="새창열림">KOREAN</a>
+							</li>
+						</ul>
+					</div>					
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<h1 class="logo">
+				<a href="">
+					<span class="sr-only">Bank of Korea</span>
+				</a>
+			</h1>
+			<!-- gnb -->
+			<nav class="gnb" id="gnb">
+				<ul>
+					<li class="menu01">
+						<a href=""><span>About BOK</span></a>
+					</li>
+					<li class="menu02 active">
+						<a href=""><span>Topics</span></a>
+					</li>
+					<li class="menu03">
+						<a href=""><span>News&Publications</span></a>
+					</li>
+					<li class="menu04">
+						<a href=""><span>Money Museum</span></a>
+					</li>
+				</ul>
+			</nav>
+			<!-- //gnb -->
+			<div class="toggle-set">
+				<button type="button" class="all-nav-toggle" data-toggle="modal" data-target="#totalMenu" title="Open Total Menu"></button>
+				<button type="button" class="search" title="Open Search Layer"></button>
+				<div class="search_wrap">
+					<form action="">
+						<div class="search_wrap_input">
+							<input type="text" class="search_keyword" name="query" id="queryTop" placeholder="검색어를 입력해 주세요." autocomplete="off" maxlength="50">
+							<div class="dqAuto" tabindex="0" style="display: none;">
+								<ul class="autoList">
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+								</ul>
+								<div class="bottom">
+									<a href="javascript:void(0);" id="topSrchClose" class="btnClose">자동완성 닫기</a>
+								</div>
+							</div>	
+							<button type="button" class="btn_search search" aria-label="검색"></button>
+						</div>
+						<button type="button" class="search_close" aria-label="검색 닫기"></button>
+					</form>
+				</div>
+			</div>			
+		</div>
+
+		<!-- 전체메뉴 -->
+		<div class="modal fade total-nav" id="totalMenu" tabindex="-1" role="dialog">
+			<div class="lpop modal-dialog" role="document">
+				<div class="set modal-content">
+					<div class="modal-header">
+						<div class="container">
+							<button type="button" class="close" data-dismiss="modal"><i class="ti-close"></i><span class="sr-only">레이어 창닫기</span></button>
+							<h1 class="modal-title" id="modal-label1">
+								<span class="totalnav-logo"></span>전체메뉴
+							</h1>
+							<form>
+								<fieldset>
+									<legend class="sr-only">전체메뉴 검색</legend>
+									<div class="keyword-set">
+										<span class="keyword"><input type="text" title="검색어"></span>
+										<button type="button" class="search" onclick="" aria-label="검색"></button>
+									</div>
+								</fieldset>
+							</form>
+						</div>
+					</div>
+					<div class="modal-body">
+						<div class="container">
+							<ul class="dp1">
+								<li>
+									<a href=""><span>한국은행</span></a>
+									<a href="javascropt:void(0)" class="m-dp1"><span>한국은행</span></a>
+									<ul class="dp2">
+										<li>
+											<a href="">개요</a>
+										</li>
+										<li>
+											<a href="">설립목적 및 역사</a>
+										</li>
+										<li>
+											<a href="">금융통화위원회</a>
+										</li>
+										<li>
+											<a href="">조직도</a>
+										</li>
+										<li>
+											<a href="">운영 및 법규</a>
+											<ul class="dp3">
+												<li>
+													<a href="">전략 및 조직가치</a>
+												</li>
+												<li>
+													<a href="">경영정보</a>
+												</li>
+												<li>
+													<a href="">계약정보</a>
+												</li> 
+												<li>
+													<a href="">윤리경영</a>
+												</li>
+												<li>
+													<a href="">법규정보</a>
+												</li>
+												<li>
+													<a href="">사회공헌</a>
+												</li>
+												<li>
+													<a href="">채용</a>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href="">오시는 길</a>
+										</li>
+										<li>
+											<a href="">지역본부(종합)</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<ul class="dp1">
+								<li>
+									<a href=""><span>정책 및 업무</span></a>
+									<a href="javascropt:void(0)" class="m-dp1"><span>정책 및 업무</span></a>
+								</li>
+							</ul>
+							<ul class="dp1">
+								<li>
+									<a href=""><span>뉴스 및 자료</span></a>
+									<a href="javascropt:void(0)" class="m-dp1"><span>뉴스 및 자료</span></a>
+									<ul class="dp2">
+										<li>
+											<a href="">개요</a>
+										</li>
+										<li>
+											<a href="">설립목적 및 역사</a>
+										</li>
+										<li>
+											<a href="">금융통화위원회</a>
+										</li>
+										<li>
+											<a href="">조직도</a>
+										</li>
+										<li>
+											<a href="">운영 및 법규</a>
+											<ul class="dp3">
+												<li class="dropdown">
+													<a href="javascript:void(0)" title="하위메뉴 열기">
+														<span><span class="highlight">전략</span> 및 조직가치</span>
+														<i class="ico-arrow"></i>
+													</a>
+													<ul class="dp4">
+														<li>
+															<a href="">
+																<span><span class="highlight">전략</span></span>
+															</a>
+														</li>
+														<li>
+															<a href=""><span>조직가치</span></a>
+														</li>
+														<li>
+															<a href=""><span>운영리스트 관리</span></a>
+														</li>
+														<li>
+															<a href=""><span>CI소개</span></a>
+														</li>
+													</ul>
+												</li>
+												<li>
+													<a href=""><span>경영정보</span></a>
+												</li>
+												<li>
+													<a href=""><span>계약정보</span></a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<ul class="dp1">
+								<li>
+									<a href=""><span>멀티콘텐츠</span></a>
+									<a href="javascropt:void(0)" class="m-dp1"><span>멀티콘텐츠</span></a>
+								</li>
+							</ul>
+							<ul class="dp1">
+								<li>
+									<a href=""><span>주요서비스</span></a>
+									<a href="javascropt:void(0)" class="m-dp1"><span>주요서비스</span></a>
+									<ul class="dp2">
+										<li>
+											<a href="">개요</a>
+										</li>
+										<li>
+											<a href="">설립목적 및 역사</a>
+										</li>
+										<li>
+											<a href="">금융통화위원회</a>
+										</li>
+										<li>
+											<a href="">조직도</a>
+										</li>
+										<li>
+											<a href="">운영 및 법규</a>
+											<ul class="dp3">
+												<li class="dropdown">
+													<a href="javascript:void(0)" title="하위메뉴 열기">
+														<span><span class="highlight">전략</span> 및 조직가치</span>
+														<i class="ico-arrow"></i>
+													</a>
+													<ul class="dp4">
+														<li>
+															<a href="">
+																<span><span class="highlight">전략</span></span>
+															</a>
+														</li>
+														<li>
+															<a href=""><span>조직가치</span></a>
+														</li>
+														<li>
+															<a href=""><span>운영리스트 관리</span></a>
+														</li>
+														<li>
+															<a href=""><span>CI소개</span></a>
+														</li>
+													</ul>
+												</li>
+												<li>
+													<a href=""><span>경영정보</span></a>
+												</li>
+												<li>
+													<a href=""><span>계약정보</span></a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //전체메뉴 -->
+		
+	</header>	
+	<!-- //header -->
+
+	<!-- navigation -->
+	<div class="navigation">
+		<nav class="container">
+			<ul>
+				<li class="home"><span>Home</span></li>
+				<li>
+					<a href="" title="하위메뉴 열기">News&Publications</a>
+					<div class="depth2">
+						<ul>
+							<li>
+								<a href="">About BOK</a>
+							</li>
+							<li>
+								<a href="">Topics</a>
+							</li>
+							<li class="on">
+								<a href="">News&Publications</a>
+							</li>
+							<li>
+								<a href="">Money Museum</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="" title="하위메뉴 열기">news</a>
+					<div class="depth2">
+						<ul>
+							<li class="on">
+								<a href="">news</a>
+							</li>
+							<li>
+								<a href="">Notice</a>
+							</li>
+							<li>
+								<a href="">Events</a>
+							</li>
+							<li>
+								<a href="">Speeches</a>
+							</li>
+							<li>
+								<a href="">Research</a>
+							</li>
+							<li>
+								<a href="">Periodicals</a>
+							</li>
+							<li>
+								<a href="">Books</a>
+							</li>
+							<li>
+								<a href="">documents</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="">Press Releases</a>
+				</li>
+			</ul>
+			<div class="top-page-toolbar">
+				<div class="page-toolbar">
+					<button type="button" class="sns-toggle" aria-label="SNS 공유"></button>
+					<div class="sns-wrap">
+						<div class="sns-wrap__set">
+							<button type="button" data-type="close" class="close" aria-label="SNS 공유 닫기"></button>
+							<button type="button" data-type="youtube" class="ico-youtube" aria-label="유튜브 공유 새창열림"></button>
+							<button type="button" data-type="instagram" class="ico-instagram" aria-label="인스타그램 공유 새창열림"></button>
+							<button type="button" data-type="facebook" class="ico-facebook" aria-label="페이스북 공유 새창열림"></button>
+							<button type="button" data-type="twitter" class="ico-twitter" aria-label="트위터 공유 새창열림"></button>
+						</div>
+					</div>
+					<a href="/static/view/forPrint.html" data-size="1200, 700, yes" target="_blank" title="새창열림" class="page-print b-pop">
+						<span class="sr-only">프린트</span>
+					</a>
+					<a href="/static/view/eng/popup/rss_popup.html" data-size="800, 500, yes" class="page-rss b-pop" target="_blank" title="새창열림">
+						<span class="sr-only">rss BANK OF KOREA</span>
+					</a>
+				</div>
+			</div>
+		</nav>
+		<div class="sub-_visual">
+			<div class="hgroup">
+				<h1>News&Publications</h1>	
+			</div>
+		</div>
+	</div>
+	<!-- //navigation -->
+
+	<!-- content -->
+	<div class="container" id="content">
+		<main id="main-container">
+
+			<div class="lnb-nav">
+				<h1>Index</h1>
+				<ul>
+					<li class="on">
+						<a href="">Treasury Service</a>
+						<ul>
+							<li class="on">
+								<a href="">Treasury Service</a>
+							</li>
+							<li>
+								<a href="">Overview of Securities Business</a>
+							</li>
+							<li>
+								<a href="">[Appendix] Overview of Treasury Bond</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="">Overview of Securities Business</a>
+					</li>
+					<li>
+						<a href="">Securities Custody Services for overseas official institutions</a>
+					</li>
+				</ul>
+			</div>
+
+			
+			<div class="content">
+
+
+
+<div class="exhbt">
+	<div class="imgSetBox">
+		<div class="imgSet">
+			<img src="/static/eng/img/imgmap/map_mf.svg" alt="">
+			<div class="imgLinkLayer">
+				<ul class="imgMapLink prettyPhotoSet">
+					<li class="link-1" style="top: 61%; left: 22%; width: 24%; height: 20%;">
+						<a href="javascript:void(0)" data-toggle="modal" data-target=".myModal_b1" title="옛 총재실"> 
+							<span class="bg" style="background-image: url(/static/eng/img/imgmap/map_mf_01.svg);"></span>
+							<span class="hidden">옛 총재실</span>
+						</a> 
+					</li>
+					<li class="link-2" style="top: 25%; left: 25.5%; width: 22%; height: 18%;">
+						<a href="javascript:void(0)" data-toggle="modal" data-target=".myModal_b1" title="화폐박물관 건축실"> 
+							<span class="bg" style="background-image: url(/static/eng/img/imgmap/map_mf_02.svg);"></span>
+							<span class="hidden">화폐박물관 건축실</span>
+						</a> 
+					</li>
+					<li class="link-3" style="top: 25%; left: 50%; width: 18%; height: 18%;">
+						<a href="javascript:void(0)" data-toggle="modal" data-target=".myModal_b1" title="옛 금융통화위원회 회의실"> 
+							<span class="bg" style="background-image: url(/static/eng/img/imgmap/map_mf_03.svg);"></span>
+							<span class="hidden">옛 금융통화위원회 회의실</span>
+						</a> 
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="floor-menu">
+			<a href="/eng/main/contents.do?menuNo=400490"><span>1F</span></a>
+			<a href="/eng/main/contents.do?menuNo=400491" class="on"><span>MF</span></a>
+			<a href="/eng/main/contents.do?menuNo=400492"><span>2F</span></a>
+		</div>
+	</div>
+
+	<div class="cont">
+		<div class="tabsub type">
+			<ul role="tablist">
+				<li role="presentation" class="active"><a href="#panel1-1" aria-expanded="true"  data-toggle="tab" role="tab">Bank of Korea Memorial hall</a></li>
+				<li role="presentation"><a href="#panel1-2" aria-expanded="false"  data-toggle="tab" role="tab">Money Museum Construction Room</a></li>
+				<li role="presentation"><a href="#panel1-3" aria-expanded="false"  data-toggle="tab" role="tab">Historical Monetary Policy Board Conference Room</a></li>
+			</ul>
+		</div>
+		<div class="tab-content">
+			<div class="tab-pane fade in active" id="panel1-1" role="tabpanel">
+				<h2>Bank of Korea Memorial hall</h2>
+
+				<div class="gallery-set2 gallery-1 slider">
+					<div class="swiper-container">
+						<div class="gallery-ctrl"> 
+							<button type="button" class="gallery-prev prev">
+								<span class="sr-only">이전 이미지 보기</span>
+							</button> 
+							<button type="button" class="gallery-next next">
+								<span class="sr-only">다음 이미지 보기</span>
+							</button>
+						</div> 
+						<div class="gallery__list"> 
+							<ul class="swiper-wrapper">
+								<li class="swiper-slide">
+									<span class="img" style="background-image: url('/static/eng/img/cts/sub05/6-1-0.jpg');"></span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<h3>Gallery Outline</h3>
+				<p>This room represents the office of the Bank of Korea's Governor before it was relocated to the newly-built head office in 1987. Visitors can be introduced to the former and incumbent governors' profiles, portraits, and relevant records through the touch screen. The seal of the governor stamped on the banknote and gifts that the governors had received when they attended international events or met with prominent figures in the field of economics abroad are also on display. Download a particular application, and visitors can take a commemorative photo with the current governor of the Bank of Korea.</p>
+
+				<h5>Highlights</h5>
+				<div class="img-box-set">
+					<div class="imgBox"> 
+						<div class="img"><img src="/static/eng/img/sub/img_400491_t0101.jpg" alt="Bank of Korea Governor’s Official Sea"></div>
+						<div class="imgDesc">Bank of Korea Governor’s Official Sea</div>
+					</div> 
+				</div> 
+
+			</div>
+
+			<div class="tab-pane fade" id="panel1-2" role="tabpanel">
+				<h2>Money Museum Construction Room</h2>
+
+				<div class="gallery-set2 gallery-2 slider">
+					<div class="swiper-container">
+						<div class="gallery-ctrl"> 
+							<button type="button" class="gallery-prev prev">
+								<span class="sr-only">이전 이미지 보기</span>
+							</button> 
+							<button type="button" class="gallery-next next">
+								<span class="sr-only">다음 이미지 보기</span>
+							</button>
+						</div> 
+						<div class="gallery__list"> 
+							<ul class="swiper-wrapper">
+								<li class="swiper-slide">
+									<span class="img" style="background-image: url('/static/eng/img/cts/sub05/6-2-0.jpg');"></span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<h3>Gallery Outline</h3>
+				<p>This room shows the history and characteristics of the Money Museum building as well as the information of the site and surrounding areas. The Bank of Korea's Money Museum is a historic building that is over 100 years old. Built in 1912, the building had served as the head office of the Bank of Joseon and the Bank of Korea and has been used as Money Museum since 2001. Surrounding areas, including Namdaemun street and Myeongdong, are historic sites that treasure the nation's stories and memories. The street miniature displayed here is the representation of the Namdaemun street after the 1945 liberation with the major institutions and agencies at that time. The present-time street and buildings can also be seen through the touch screen.</p>
+
+				<h5>Highlights</h5>
+				<div class="img-box-set">
+					<div class="imgBox"> 
+						<div class="img"><img src="/static/eng/img/sub/img_400491_t0201.png" alt="Proclamation of foundation of BOK"></div>
+						<div class="imgDesc">The Money Museum building</div>
+					</div> 
+					<div class="imgBox"> 
+						<div class="img"><img src="/static/eng/img/sub/img_400491_t0202.png" alt="Records of the first meeting of the Monetary Policy Committee"></div>
+						<div class="imgDesc">Namdaemun street</div> 
+					</div> 
+				</div> 
+
+			</div>
+
+			<div class="tab-pane fade" id="panel1-3" role="tabpanel">
+				<h2>Historical Monetary Policy Board Conference Room</h2>
+
+				<div class="gallery-set2 gallery-3 slider">
+					<div class="swiper-container">
+						<div class="gallery-ctrl"> 
+							<button type="button" class="gallery-prev prev">
+								<span class="sr-only">이전 이미지 보기</span>
+							</button> 
+							<button type="button" class="gallery-next next">
+								<span class="sr-only">다음 이미지 보기</span>
+							</button>
+						</div> 
+						<div class="gallery__list"> 
+							<ul class="swiper-wrapper">
+								<li class="swiper-slide">
+									<span class="img" style="background-image: url('/static/eng/img/cts/sub05/6-3-0.jpg');"></span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<h3>Gallery Outline</h3>
+				<p>The Monetary Policy Board is the highest decision-making authority that deliberates and resolves on monetary and credit policies. This room represents the board's first meeting on June 5, 1950, and the picture recording the moment can be enjoyed at the back of the chair. Visitors can search the Monetary Policy Board's chronological minutes after the foundation of the Bank of Korea through the touch screen and watch the meeting where the decision of the first issuance of the monetary stabilization bond was made in 1961 with the use of virtual reality.</p>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<script>
+	$(document).ready(function () {
+	slider();
+})
+function slider(){
+	$(".slider").each(function(index){
+		var $this = $(this);
+		var winW = window.innerWidth; //화면 가로사이즈
+		var swiper = undefined;
+		var viewNum = ''; //슬라이드 개수 (옵션)
+		var loopChk = ''; //무한반복 체크
+		var slideNum =  $this.find('.slider .swiper-slide').length //슬라이드 총 개수
+		var slideInx = 0; //현재 슬라이드 index
+		//디바이스 체크
+		var winWChk = '';
+		$(window).on('load resize', function (){
+			winW = window.innerWidth;
+			if(winWChk != 'mo' && winW <= 768){ //모바일 버전으로 전환할 때
+				sliderAct();
+				winWChk = 'mo';
+			}
+			if(winWChk != 'pc' && winW >= 769){ //PC 버전으로 전환할 때
+				sliderAct();
+				winWChk = 'pc';
+			}
+		})
+		function sliderAct(){
+			//슬라이드 인덱스 클래스 추가
+			$this.addClass("gallery-" + index);
+			//슬라이드 초기화 
+			if (swiper != undefined){ 
+				swiper.destroy();
+				swiper = undefined;
+			}
+			//slidesPerView 옵션 설정
+			if (winW > 768){ //PC 버전
+				viewNum = 1;
+			}else{ //mobile 버전
+				viewNum = 1;
+			}
+			//loop 옵션 체크
+			if (slideNum > viewNum){
+				loopChk = false;
+			}else{ 
+				loopChk = false;
+			}
+			swiper = new Swiper('.gallery-' + index + ' .gallery__list', {
+				slidesPerView: viewNum,
+				initialSlide :slideInx,
+				//spaceBetween: 0,
+				slidesPerGroup: 1,
+				loop: loopChk,
+				centeredSlides : true,		
+				navigation: {
+					nextEl: '.next',
+					prevEl: '.prev',
+				},
+				on: {
+					activeIndexChange: function () {
+						slideInx = this.realIndex; //현재 슬라이드 index 갱신
+					}
+				},
+				observer: true,	//swiper를 초기화
+				observeParents: true,
+			});
+		}        
+	});
+}
+</script>
+
+
+
+</div>
+
+<script src="/static/jslibrary/swiper@8/swiper-bundle.min.js"></script>
+<script src="/static/eng/js/common.js"></script>
+</body>
+</html>

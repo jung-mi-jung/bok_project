@@ -1429,11 +1429,11 @@
 						padding: 18px 0;
 					}
 					.t {
-						width: 160px;
+						width: 227px;
 						color: $color-point;
 					}
 					.title {
-						width: calc(100% - 120px - 160px);
+						width: calc(100% - 120px - 227px);
 						font-weight: 400;
 						font-size: rem(18);
 						@include ellipsis;
@@ -2203,7 +2203,7 @@
 			padding: 18px 20px;
 			display: block;
 			border-radius: 8px;
-			border: 1px solid #E6E6E6;
+			//border: 1px solid #E6E6E6;
 			&.ico1 {
 				background: url(/static/portal/img/submain/img_edugo1.png) no-repeat;
 			}

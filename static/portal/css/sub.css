@@ -874,15 +874,23 @@ padding-right: 36px;
 background-color: #fff;
 height: auto;
 }
-.lnb-nav + .content::after {
+.lnb-nav::after {
 content: "";
 display: inline-block;
 background-color: #d9d9d9;
 position: absolute;
 top: 0;
-left: 19.0972222222%;
+right: -2px;
 width: 1px;
-height: calc(100% - 120px);
+height: 100%;
+}
+.lnb-nav + .content {
+border-left: 1px solid #d9d9d9;
+}
+}
+@media (min-width: 1200px) and (max-width: 1199px) {
+.lnb-nav + .content {
+border-left: none;
 }
 }
 .lnb-nav h1 {
@@ -4356,15 +4364,18 @@ background-color: #fff;
 height: auto;
 margin-bottom: 0;
 }
-.sh-db + .content::after {
+.sh-db::after {
 content: "";
 display: inline-block;
 background-color: #d9d9d9;
 position: absolute;
 top: 0;
-left: 16.6666666667%;
+right: -2px;
 width: 1px;
-height: calc(100% - 120px);
+height: 100%;
+}
+.sh-db + .content {
+border-left: 1px solid #d9d9d9;
 }
 }
 .sh-db .db-search {
@@ -6434,7 +6445,7 @@ display: inline-block;
 padding: 0 18px;
 margin-top: 16px;
 font-size: 1.125rem;
-background: #1454FF;
+background: #005596;
 color: #fff;
 }
 .org-desc + .b-search i {
@@ -6522,7 +6533,7 @@ margin: 0 auto;
 position: relative;
 z-index: 1;
 width: 192px;
-border: 1px solid #1454FF;
+border: 1px solid #3B63C4;
 background: #fff;
 border-radius: 8px;
 }
@@ -6535,7 +6546,7 @@ position: absolute;
 top: calc(50% + 22px);
 right: -339px;
 transform: translateY(-50%);
-background: #1454FF;
+background: #3B63C4;
 }
 .org-lv1 .org-dp1 {
 width: 160px;
@@ -6547,7 +6558,7 @@ align-items: center;
 justify-content: center;
 height: 100%;
 font-size: 1.125rem;
-background: #000E33;
+background: #3B63C4;
 color: #fff;
 padding: 8px;
 border-radius: 4px;
@@ -6584,10 +6595,10 @@ justify-content: center;
 height: 100%;
 font-size: 1rem;
 background: #fff;
-color: #0038CC;
+color: #3B63C4;
 padding: 4px;
 border-radius: 4px;
-border: 2px solid #1454FF;
+border: 2px solid #3B63C4;
 box-sizing: border-box;
 }
 @media (max-width: 749px) {
@@ -6620,7 +6631,7 @@ text-align: center;
 border-bottom: 1px solid #0038CC;
 box-sizing: border-box;
 border-radius: 8px 8px 0 0;
-background: #E5ECFF;
+background: #F2F6FA;
 }
 .org-lv1 .org-name a {
 display: flex;
@@ -6768,7 +6779,7 @@ z-index: -1;
 .org-lv2 .org-box {
 position: relative;
 padding: 16px 20px;
-border: 2px solid #1454FF;
+border: 2px solid #3B63C4;
 border-radius: 16px;
 }
 .org-lv2 .org-box::before {
@@ -6788,7 +6799,7 @@ display: block;
 margin-bottom: 0.8888em;
 font-size: 1.125rem;
 font-weight: 500;
-color: #0038CC;
+color: #118DB4;
 }
 .org-lv2 .org-box > ul {
 display: flex;
@@ -6807,7 +6818,7 @@ gap: 16px 0;
 }
 .org-lv2 .org-dp1 {
 width: 168px;
-border: 1px solid #E5E5E5;
+border: 1px solid #118DB4;
 border-bottom: 0;
 border-radius: 4px;
 box-sizing: border-box;
@@ -6818,7 +6829,7 @@ border-radius: 2.8px;
 }
 }
 .org-lv2 .org-dp1.br-top > a {
-border-radius: 8px 8px 0 0;
+border-radius: 4px 4px 0 0;
 }
 @media (max-width: 749px) {
 .org-lv2 .org-dp1.br-top > a {
@@ -6832,8 +6843,8 @@ font-size: 1rem;
 font-weight: 500;
 background: #FAFAFA;
 border-radius: 4px;
-border-bottom: 1px solid #E5E5E5;
-color: #1A1A1A;
+border-bottom: 1px solid #118DB4;
+color: #118DB4;
 text-align: center;
 }
 @media (max-width: 749px) {
@@ -6861,8 +6872,8 @@ transform: translateX(-50%);
 background: #1A1A1A;
 }
 .org-lv2 .org-dp1 > ul {
-border-bottom: 1px solid #E5E5E5;
-border-radius: 0 0 8px 8px;
+border-bottom: 1px solid #118DB4;
+border-radius: 0 0 4px 4px;
 }
 @media (max-width: 749px) {
 .org-lv2 .org-dp1 > ul {
@@ -8951,10 +8962,6 @@ display: block;
 color: #fff;
 font-size: 1.25rem;
 background-color: rgba(0, 0, 0, 0.5);
-overflow: hidden;
-white-space: nowrap;
-text-overflow: ellipsis;
-display: inline-block;
 }
 .histroy .his-con .his-txt {
 position: relative;
@@ -13497,11 +13504,11 @@ padding: 18px 0;
 }
 }
 .reference2 .set ul.list-type1 li a .t {
-width: 160px;
+width: 227px;
 color: #005596;
 }
 .reference2 .set ul.list-type1 li a .title {
-width: calc(100% - 120px - 160px);
+width: calc(100% - 120px - 227px);
 font-weight: 400;
 font-size: 1.125rem;
 overflow: hidden;
@@ -14375,7 +14382,6 @@ margin: 5px 0;
 padding: 18px 20px;
 display: block;
 border-radius: 8px;
-border: 1px solid #E6E6E6;
 }
 .edu-go li a.ico1 {
 background: url(/static/portal/img/submain/img_edugo1.png) no-repeat;

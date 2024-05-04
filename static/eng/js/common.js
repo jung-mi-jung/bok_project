@@ -124,12 +124,7 @@ $(function () {
 })
 
 
-
 //전체메뉴
-// var navhtml = $('#gnb > ul').clone()
-// navhtml.find('div').removeAttr('id')
-// $('.total-nav .nav').html(navhtml.clone())
-
 $(".total-nav .dp3 .dropdown").on("click", function() {
 	$(this).toggleClass("on");	
 
@@ -145,18 +140,8 @@ $(".total-nav .dp3 .dropdown").on("click", function() {
 $(".all-nav-toggle").click(function (e){
 	$("body").addClass("popupOpened").attr("tabindex", -1);
 
-	// e.preventDefault()
-	// $(".total-nav").addClass("active");
-	// $('.total-nav .nav>ul>li:first-child>a').focus()
-
-	//$(".total-nav").attr("tabindex", 1);
 	$(".total-nav .modal-header .close").focus();
 });
-// $('.total-nav button').click(function (e) {
-// 	e.preventDefault()
-// 	$(".total-nav").removeClass('active');
-// 	$(".all-nav-toggle").focus();
-// });
 
 
 $(function () {
@@ -213,17 +198,6 @@ $(function () {
 		gnb1depth.removeClass('on');
 	});
 
-	//gnb - depth4 있을 경우  depth3에 클래스 추가
-	// $("#gnb .depth4").prev().addClass("bu");
-	// $("#gnb .depth3 .bu").attr("href", "javascript:viod(0)");
-
-	// $("#gnb .depth3 > ul > li > a").attr("title", "하위 메뉴 열기");
-	// $("#gnb .depth3 > ul > li.active > a").attr("title", "하위 메뉴 닫기");
-
-	// $(".gnb > ul .depth3 > ul > li > a.bu").on("click", function(){
-	// 	$(this).next().slideToggle();
-	// });
-	
 	$("#gnb .depth3 > ul > li > a.bu").click(function(){
 		$(this).parent().toggleClass("active")
 		if ($(this).parent().hasClass('active')){
@@ -237,38 +211,6 @@ $(function () {
 	$("#header h1 a").on('focusin', function (e) {
 		$('#gnb>ul>li>a.on').removeClass("on");
 	});
-
-
-	// 모바일
-	// $('.m-all-nav-toggle').on('click', function (e) {
-	// 	e.preventDefault()
-	// 	$('.mobileGnb__set').addClass('active')
-	// 	$('body').addClass('ovh')
-	// });
-	// $('.mobileGnb__nav').html(navhtml)
-
-	// 모바일 메뉴
-	// var mobileNav = $('.mobileGnb__set')
-	// mobileNav.find('ul').each(function() {
-	// 	if($(this).find('li').length==0)
-	// 	{
-	// 		$(this).remove()
-	// 	}
-	// })
-	// $(mobileNav)
-	// 	.find('> ul > li > a')
-	// 	.on('click', function (e) {
-	// 		if($(this).parent().find('>div,>ul').length > 0){
-	// 			e.preventDefault();
-	// 			$(this).parent().toggleClass('active')				
-	// 		}
-	// 	});
-		
-	// $('.mobileGnb-close').on('click', function (e) {
-	// 	e.preventDefault();
-	// 	mobileNav.removeClass('active')
-	// 	$('body').removeClass('ovh')
-	// });
 });
 
 // 콘텐츠 서비스
@@ -788,6 +730,9 @@ $(function() {
 	});
 
 
+
+
+
 	//.table thead 없을 경우 처리 (디자인 처리)
 	// $(".table")
 	// 	.not("thead")
@@ -1012,14 +957,12 @@ $(function () {
 		}
 	})
 
-	//목차 없는 컨텐츠일 경우 가로 사이즈 변경에 따른 예외처리
-	// $(".bd-view").parents().find(".content").addClass("wild-content");
 });
 
 
 $(function () {
-	//지역본부 > 화폐전시실(부산)
-	const swiper = new Swiper('.gallery__list', {
+	//오시는길
+	const swiper = new Swiper('.gallery-set .gallery__list', {
 		init: false,
 		freeMode: true,
 		// Optional parameters

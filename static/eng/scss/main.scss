@@ -9,6 +9,9 @@
 //@import 'base/heading';//해딩스타일
 @import 'components/popup';//팝업
 
+#content {
+	margin-top: 0;
+}
 #wrap {
 	padding-top: 0;
 }
@@ -20,7 +23,7 @@
 	.globalHeader {
 		@include breakpoint($lg){
 			.container {
-				border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+				border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 				ul {
 					li + li::before {
 						background-color: rgba(255, 255, 255, 0.3);
@@ -48,11 +51,14 @@
 			color: #fff;
 		}
 	}
+	.logo a {
+		background: url(/static/eng/img/main/logo.png) 50% no-repeat;
+	}
 	&.over {
 		background-color: #fff;
 		@include breakpoint($lg){
 			.logo a {
-				background: url(/static/eng/img/main/logo.png) 50% no-repeat;
+				background: url(/static/eng/img/common/logo.png) 50% no-repeat;
 			}
 			.gnb {
 				> ul > li > a {
@@ -93,9 +99,6 @@
 			}
 		}
 	}
-	.logo a {
-		background: url(/static/eng/img/common/logo.png) 50% no-repeat;
-	}
 	.g-info {
 		@include breakpoint($lg){
 			.global {
@@ -118,7 +121,7 @@
 					display: none;
 				}
 				.logo a {
-					background: url(/static/eng/img/main/logo.png) 50% no-repeat;
+					background: url(/static/eng/img/common/logo.png) 50% no-repeat;
 				}
 				.g-info > .search {
 					width: 75px;
