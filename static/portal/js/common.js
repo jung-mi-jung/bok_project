@@ -128,6 +128,15 @@ function lpopClose(target) {
 	if(currentfocus!==null) currentfocus.focus();
 }
 $(function () {
+	//esc 눌렀을때 레이어 닫기
+	$(".modal").on("keydown", function(e){
+		if(e.key === "Escape") {
+			$("body").removeClass("popupOpened modal-open");
+		}
+
+	})
+
+
 	// 레이어 닫기
 	$('.parent-close, .b-close, .close').on('click', function () {
 		lpopClose()
