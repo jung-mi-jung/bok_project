@@ -91,7 +91,8 @@
 @mixin dataInfoSet {	
 	display: flex;
 	justify-content: space-between;
-	margin: 10px 0 26px;
+	// margin: 10px 0 26px;
+	margin: 10px 0 42px;
 	.dataInfo {
 		position: absolute;
 		top: -34px;
@@ -271,6 +272,12 @@
 			font-size: rem(26) !important;
 			@include breakpoint($sm){
 				font-size: rem(18) !important;
+			}
+		}
+		& + .down {
+			margin-top: 107px;
+			@include breakpoint($smd) {
+				margin-top: 14px;
 			}
 		}
 	}

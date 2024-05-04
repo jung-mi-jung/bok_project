@@ -175,7 +175,7 @@
 	}
 	&-tit {
 		text-align: center;
-		font-size: rem(28);
+		font-size: rem(28) !important;
 		font-weight: 300;
 		color: #131547;
 		strong {
@@ -212,7 +212,8 @@
 					width: 30px;
 					height: 30px;
 					cursor: pointer;
-					&:hover {
+					&:hover,
+					&.on {
 						.bg {
 							transition: 0.2s;
 							opacity: 1;

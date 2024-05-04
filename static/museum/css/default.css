@@ -3622,6 +3622,7 @@ outline-offset: 2px;
 
 /* 연관자료 */
 .reference {
+clear: both;
 margin-top: 30px;
 padding: 50px 120px;
 background-color: #E5ECFF;
@@ -3843,7 +3844,7 @@ margin: 0 -12px;
 }
 @media (max-width: 1199px) {
 .reference-news dl dd ul {
-width: -moz-max-content;
+width: -webkit-max-content;
 width: max-content;
 }
 }
@@ -3976,7 +3977,7 @@ margin: -12px -12px 0;
 }
 @media (max-width: 1199px) {
 .reference-media dl dd ul {
-width: -moz-max-content;
+width: -webkit-max-content;
 width: max-content;
 }
 }
@@ -4368,9 +4369,10 @@ margin-top: -30px;
 float: right;
 padding-left: 36px;
 padding-top: 30px;
+margin-bottom: 40px;
 }
 #main-container .lnb-nav + .content {
-width: calc(100% - 275px);
+width: calc(100% - 240px);
 }
 }
 
@@ -5454,7 +5456,7 @@ body {
 word-break: keep-all;
 }
 }
-body.ovh, body.modal-open {
+body.ovh, body.modal-open, body.popupOpened {
 overflow: hidden !important;
 }
 
@@ -5480,4 +5482,4 @@ font-style: normal;
 img {
 max-width: 100%;
 }
-/*# sourceMappingURL=../external/staticmuseum/maps/default.css.map */
+/*# sourceMappingURL=../maps/default.css.map */

@@ -1084,6 +1084,7 @@ border-top: 1px solid #E5E5E5;
 @media (min-width: 1200px) {
 .gnb-stiky .navigation {
 width: 100%;
+position: -webkit-sticky;
 position: sticky;
 border-bottom: 1px solid #E5E5E5;
 top: -2px;
@@ -1392,6 +1393,7 @@ margin-bottom: 30px;
 }
 @media (min-width: 1200px) {
 .lnb-nav {
+position: -webkit-sticky;
 position: sticky;
 top: 48px;
 float: left;
@@ -2745,11 +2747,19 @@ font-size: 1.625rem !important;
 font-size: 1.125rem !important;
 }
 }
+.bd-view .subject + .down {
+margin-top: 107px;
+}
+@media (max-width: 1199px) {
+.bd-view .subject + .down {
+margin-top: 14px;
+}
+}
 .bd-view .dataInfoSet {
 min-height: 55px;
 display: flex;
 justify-content: space-between;
-margin: 10px 0 26px;
+margin: 10px 0 42px;
 align-items: flex-end;
 }
 .bd-view .dataInfoSet .dataInfo {
@@ -3401,7 +3411,7 @@ font-size: 2rem !important;
 .bd-blog .dataInfoSet {
 display: flex;
 justify-content: space-between;
-margin: 10px 0 26px;
+margin: 10px 0 42px;
 }
 .bd-blog .dataInfoSet .dataInfo {
 position: absolute;
@@ -7254,6 +7264,7 @@ margin-bottom: 30px;
 }
 }
 .content-row .cont-nav ul {
+position: -webkit-sticky;
 position: sticky;
 top: 48px;
 }
@@ -9750,4 +9761,4 @@ background-color: #3B63C4;
 .userType .auth .col #ipinLoginBtn strong {
 background-color: #39A0FF;
 }
-/*# sourceMappingURL=../external/staticimer/maps/sub.css.map */
+/*# sourceMappingURL=../maps/sub.css.map */

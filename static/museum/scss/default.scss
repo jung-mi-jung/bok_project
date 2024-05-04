@@ -82,7 +82,8 @@ body {
 		word-break: keep-all;
 	}
 	&.ovh, 
-	&.modal-open {
+	&.modal-open,
+	&.popupOpened {
 		// position: relative;
 		overflow: hidden !important;
 		// height: 100vh;

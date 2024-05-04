@@ -1290,6 +1290,7 @@
 	}
 }
 .reference {
+	clear: both;
 	margin-top: 30px;
 	padding: 50px 120px;
 	background-color: #E5ECFF;
@@ -1780,10 +1781,12 @@
 			// border-left: 1px solid $bd-color;
 			padding-left: 36px;
 			padding-top: 30px;
+			margin-bottom: 40px;
 		}
 		.lnb-nav + .content {
 			// width: per(1405px, $pc-wide);
-			width: calc(100% - 275px);
+			width: calc(100% - 240px);
+			
 		}
 		.sh-db + .content {
 			// width: per(1441px, $pc-wide);

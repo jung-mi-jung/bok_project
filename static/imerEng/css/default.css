@@ -3302,6 +3302,7 @@ float: right;
 border-left: 1px solid #E8EBED;
 padding-left: 36px;
 padding-top: 30px;
+margin-bottom: 40px;
 }
 #main-container .lnb-nav + .content {
 width: calc(100% - 240px);
@@ -4098,6 +4099,7 @@ outline-offset: 2px;
 
 /* 연관자료 */
 .reference {
+clear: both;
 margin-top: 30px;
 padding: 50px 120px;
 background-color: #E5ECFF;
@@ -4319,7 +4321,7 @@ margin: 0 -12px;
 }
 @media (max-width: 1199px) {
 .reference-news dl dd ul {
-width: -moz-max-content;
+width: -webkit-max-content;
 width: max-content;
 }
 }
@@ -4452,7 +4454,7 @@ margin: -12px -12px 0;
 }
 @media (max-width: 1199px) {
 .reference-media dl dd ul {
-width: -moz-max-content;
+width: -webkit-max-content;
 width: max-content;
 }
 }
@@ -5635,4 +5637,4 @@ font-style: normal;
 img {
 max-width: 100%;
 }
-/*# sourceMappingURL=../external/staticimerEng/maps/default.css.map */
+/*# sourceMappingURL=../maps/default.css.map */

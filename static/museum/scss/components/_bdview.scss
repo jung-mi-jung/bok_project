@@ -91,7 +91,7 @@
 @mixin dataInfoSet {	
 	display: flex;
 	justify-content: space-between;
-	margin: 10px 0 26px;
+	margin: 10px 0 42px;
 	.dataInfo {
 		position: absolute;
 		top: -34px;
@@ -270,6 +270,12 @@
 				font-size: rem(18) !important;
 			}
 		}
+		& + .down {
+			margin-top: 107px;
+			@include breakpoint($smd) {
+				margin-top: 14px;
+			}
+		}
 	}
 	.dataInfoSet {
 		min-height: 55px;
@@ -342,6 +348,117 @@
 	.subject {
 		@include breakpoint($sm){
 			margin-top: -50px;
+		}
+	}
+	.poster-row {
+		@include breakpoint($sm) {
+			flex-wrap: wrap;
+		}
+	}
+	.poster {
+		width: 44.44%;
+		margin-right: 4.44%;
+		@include breakpoint($smd) {
+			margin-right: 2.22%;
+		}
+		@include breakpoint($sm) {
+			width: 100%;
+			margin-right: 0;
+		}
+		span {
+			display: block;
+			width: 100%;
+			height: auto;
+			aspect-ratio: 640/886;
+			background-position: center top;
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+		& + .dbdata {
+			width: calc(100% - 44.44% - 4.44%);
+			@include breakpoint($smd) {
+				width: calc(100% - 44.44% - 2.22%);
+			}
+			@include breakpoint($sm) {
+				width: 100%;
+				margin-right: 0;
+			}
+			padding: 10px 0 0;
+			> .row {
+				position: relative;
+				flex-direction: column;
+			}
+			dl {
+				position: relative;
+				display: flex;
+				align-items: stretch;
+				width: calc(100% - 200px);
+				margin: 5px 0;
+				@include breakpoint($smd) {
+					width: 100%;
+				}
+				&::before {
+					content: "";
+					display: block;
+					position: absolute;
+					top: 10px;
+					left: 0;
+					background: #1A1A1A;
+					width: 5px;
+					height: 5px;
+					border-radius: 50%;
+					margin-right: 8px;
+				}	
+				dt {
+					padding-left: 16px;
+					padding-right: 24px;
+					font-size: rem(18);
+					color: #1a1a1a;
+					@include breakpoint($sm) {
+						font-size: rem(16);
+					}
+				}
+				dd {
+					font-size: rem(18);
+					color: #1a1a1a;
+					@include breakpoint($sm) {
+						font-size: rem(16);
+					}
+				}
+			}
+			.b-go  {
+				position: absolute;
+				top: 0;
+				right: 0;
+				height: 32px;
+				font-size: rem(16) !important;
+				background: #005596;
+				color: #fff;
+				text-decoration: none;
+				@include breakpoint($smd) {
+					position: initial;
+					margin-top: 10px;
+					margin-left: 16px;
+				}
+			}
+			h3 {
+				position: relative;
+				font-size: rem(18) !important;
+				margin: 30px 0 12px !important;
+				padding-left: 26px;
+				&::before {
+					content: "";
+					display: block;
+					position: absolute;
+					top: 10px;
+					left: 0;
+					background: #3E7CC8;
+					width: 10px;
+					height: 10px;
+					border-radius: 50%;
+					margin-right: 8px;
+				}	
+			}
 		}
 	}
 }

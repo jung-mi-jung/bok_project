@@ -649,7 +649,7 @@ $(function() {
 
 	//navigation
 	$(".navigation .depth2").prev().addClass("bu");
-	$(".navigation a.bu").attr("href", "javascript:viod(0)");
+	$(".navigation a.bu").attr("href", "javascript:void(0)");
 	//navigation toggle
 	$(".navigation a.bu").click(function(){
 		$(this).next().toggleClass("active");
