@@ -697,6 +697,12 @@ $(function() {
 		}
 	});
 
+	$(document).click(function(e){
+		if (!$(e.target).is('.navigation a.bu')) {
+			$('.navigation .depth2.active').removeClass('active');
+		}
+	});
+
 	//hgroup sns
 	$(".sns-toggle").click(function(){
 		$(".sns-wrap").addClass("active");		

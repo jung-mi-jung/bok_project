@@ -3,6 +3,7 @@ node_modules
 static/portal/maps
 static/imer/maps
 static/museum/maps
+static/eng/maps
 .css.map
 static/commons/maps
 static/commons/css/*.css.map
