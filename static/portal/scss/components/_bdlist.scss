@@ -35,6 +35,20 @@
 	}
 }
 
+.title {	//공지표시
+	.ti-announcement {
+		display: inline-block;
+		width: 24px;
+		height: 25px;
+		margin-right: 4px;
+		background-image: url(/static/portal/img/ico/ico-notice.png);
+		background-repeat: no-repeat;
+		background-size: auto 100%;
+		background-repeat: no-repeat;
+		background-position-y: -3px;
+	}
+}
+
 .bd-line {
 	clear: both;
 	> ul {		

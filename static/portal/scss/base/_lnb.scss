@@ -282,6 +282,9 @@
 			right: -2px;
 			width: 1px;
 			height: 100%;
+			@include breakpoint(min-width 1480px) {
+				right: -1px;
+			}
 		}
 		& + .content {
 			border-left: 1px solid #d9d9d9;

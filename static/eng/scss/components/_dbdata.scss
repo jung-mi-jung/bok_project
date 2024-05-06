@@ -188,3 +188,47 @@
 		}
 	}
 }
+
+.dbdata2 {
+	width: 960px;
+	margin: 0 auto;
+	border-bottom: 0;
+	.view {
+		border-top: 2px solid #222;
+		font-size: rem(16);
+		ul {
+			li {
+				margin: 8px 0;
+				.ing {
+					display: inline-flex;
+					align-items: center;
+					margin-left: 10px;
+					background: #118DB4;
+					padding: 4px 12px;
+					font-size: rem(14);
+					color: #fff;
+				}
+			}
+		}
+		dl {
+			dt {
+				background-color: transparent;
+				border-right: 0;
+			}
+			dd {
+				&::after {
+					content: "";
+					position: absolute;
+					left: 0;
+					top: 30%;
+					width: 1px;
+					height: 42%;
+					background: #E8EBED;
+				}
+				p {
+					margin-bottom: 0;
+				}
+			}
+		}
+	} 
+}

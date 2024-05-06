@@ -17,7 +17,8 @@
 }
 #header {
 	position: fixed;
-	background: #00000099;
+	//background: #00000099;
+	background-color: rgba(0, 14, 51, 0.7);
 	backdrop-filter: blur(4px);
 	border-bottom: none !important;
 	.globalHeader {
@@ -39,10 +40,7 @@
 	@include breakpoint($lg){
 		.toggle-set {
 			> .search {
-				background-color: #fff;
-				&::before {
-					color: $color-point;
-				}
+				background-color: #3B63C4;
 			}
 		}
 	}

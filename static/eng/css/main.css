@@ -386,6 +386,9 @@ height: 20px;
 background: url(/static/eng/img/ico/ico-b-view.png);
 margin-right: 5px;
 }
+.modal .calView ul.type2 li {
+display: block;
+}
 
 .bgn .popupWrap h1 {
 background: #484d58;
@@ -558,7 +561,7 @@ padding-top: 0;
 
 #header {
 position: fixed;
-background: rgba(0, 0, 0, 0.6);
+background-color: rgba(0, 14, 51, 0.7);
 -webkit-backdrop-filter: blur(4px);
         backdrop-filter: blur(4px);
 border-bottom: none !important;
@@ -577,10 +580,7 @@ font-weight: 400;
 }
 @media (min-width: 1200px) {
 #header .toggle-set > .search {
-background-color: #fff;
-}
-#header .toggle-set > .search::before {
-color: #005596;
+background-color: #3B63C4;
 }
 }
 #header .toggle-set .all-nav-toggle::before {

@@ -17,7 +17,8 @@
 }
 #header {
 	position: fixed;
-	background: #00000099;
+	//background: #00000099;
+	background-color: rgba(0, 14, 51, 0.7);
 	backdrop-filter: blur(4px);
 	border-bottom: none !important;
 	.globalHeader {
@@ -39,10 +40,7 @@
 	@include breakpoint($lg){
 		.toggle-set {
 			> .search {
-				background-color: #fff;
-				&::before {
-					color: $color-point;
-				}
+				background-color: #3B63C4;
 			}
 		}
 	}
@@ -439,8 +437,6 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	@include breakpoint($sm){
-	}
 	a {
 		width: calc(100% / 3);
 		position: relative;
@@ -452,7 +448,6 @@
 			text-align: center;
 		}
 		&:nth-child(2) {
-			border: 1px solid rgba(255, 255, 255, 0.2);
 			border-width: 1px 0;
 			@include breakpoint($sm){
 				border: none;
@@ -470,7 +465,7 @@
 				height: 65px;
 				margin-top: -32px;
 			}
-		}		
+		}
 	}
 	strong {
 		display: block;

@@ -884,6 +884,13 @@ right: -2px;
 width: 1px;
 height: 100%;
 }
+}
+@media (min-width: 1200px) and (min-width: 1480px) {
+.lnb-nav::after {
+right: -1px;
+}
+}
+@media (min-width: 1200px) {
 .lnb-nav + .content {
 border-left: 1px solid #d9d9d9;
 }
@@ -1609,6 +1616,9 @@ height: 40px;
 line-height: 40px;
 vertical-align: middle;
 }
+.table-view [class^=b-].sm {
+height: 24px;
+}
 .table-view label {
 display: inline-block;
 }
@@ -1655,7 +1665,7 @@ border-radius: 50%;
 border: 0px solid #dedede;
 }
 .pcWin .main_table {
-border: 1px solid #dedede;
+border: 1px solid #E6E6E6;
 border-collapse: collapse;
 text-align: center;
 table-layout: fixed;
@@ -1664,7 +1674,7 @@ border-right: none;
 border-top: none;
 }
 .pcWin .main_table td {
-border: 1px solid #dedede;
+border: 1px solid #E6E6E6;
 overflow: hidden;
 font-size: 11pt;
 border-right: none;
@@ -1677,26 +1687,26 @@ white-space: normal;
 text-overflow: clip;
 }
 .pcWin .head_table {
-border: 1px solid #dedede;
+border: 1px solid #E6E6E6;
 background-color: #627fa4;
 border-collapse: collapse;
 text-align: center;
 color: white;
 font-weight: 600;
 table-layout: fixed;
-border-spacing: 0px;
+border-spacing: 0;
 }
 .pcWin .left_table {
-border: 0px solid #dedede;
+border: 0 solid #E6E6E6;
 width: 140px;
 table-layout: fixed;
-border-spacing: 0px;
+border-spacing: 0;
 border-right: none;
 border-top: none;
 /*  margin			: -1px; */
 }
 .pcWin .left_table td {
-border: 1px solid #dedede;
+border: 1px solid #E6E6E6;
 border-collapse: collapse;
 border-right: none;
 border-top: none;
@@ -1706,7 +1716,7 @@ table-layout: fixed;
 font-weight: bold;
 }
 .pcWin .head_table th {
-border: 1px solid #dedede;
+border: 1px solid #E6E6E6;
 border-collapse: collapse;
 width: 120px;
 height: 70px;
@@ -1714,7 +1724,7 @@ text-align: center;
 table-layout: fixed;
 }
 .pcWin .headDivKey {
-border: 1px solid #dedede;
+border: 1px solid #E6E6E6;
 background-color: #627fa4;
 border-collapse: collapse;
 text-align: center;
@@ -1793,6 +1803,18 @@ margin: 5px 8px 0 0;
 .count-total strong {
 font-weight: 600;
 text-decoration: underline;
+}
+
+.title .ti-announcement {
+display: inline-block;
+width: 24px;
+height: 25px;
+margin-right: 4px;
+background-image: url(/static/portal/img/ico/ico-notice.png);
+background-repeat: no-repeat;
+background-size: auto 100%;
+background-repeat: no-repeat;
+background-position-y: -3px;
 }
 
 .bd-line {
@@ -2948,10 +2970,11 @@ font-size: 1rem;
 }
 .view-table table th {
 color: #fff !important;
-background-color: #233B76;
+background-color: #233B76 !important;
 padding: 10px 0;
 }
 .view-table table tbody th {
+color: #000E33 !important;
 background-color: #FAFAFA;
 }
 .view-table .inputGr {
@@ -3352,6 +3375,28 @@ color: #666;
 font-size: 0.875rem;
 padding: 0 10px;
 }
+.photo-list ul li a .badge2 {
+position: absolute;
+top: 6px;
+left: -6px;
+padding: 0 6px 0 0;
+z-index: 10;
+width: 82px;
+background: url(/static/commons/img/pattern/badge.png) right 0 no-repeat;
+background-size: contain;
+}
+.photo-list ul li a .badge2 .badge {
+display: block;
+position: static;
+background: #ea5a59;
+width: 74px;
+height: 28px;
+line-height: 28px;
+padding: 0;
+text-align: center;
+font-size: 14px;
+color: #fff;
+}
 
 .card-photo {
 position: relative;
@@ -3682,6 +3727,9 @@ border-radius: 10px;
 background-repeat: repeat;
 background-position: 50%;
 background-size: cover;
+}
+.gallery-set .gallery__list img {
+width: 100%;
 }
 .gallery-set .gallery-ctrl button {
 position: absolute;
@@ -13351,13 +13399,13 @@ width: 50%;
 height: 100%;
 padding: 17px 20px;
 display: block;
-color: #005596;
+color: #143D66;
 border-radius: 8px;
 border: 1px solid #E6E6E6;
 }
 .money-search .skip_link2 li a strong {
 display: block;
-font-size: 1.25rem;
+font-size: 1.125rem;
 font-weight: 500;
 margin-bottom: 17px;
 letter-spacing: -1px;
@@ -13365,6 +13413,7 @@ letter-spacing: -1px;
 .money-search .skip_link2 li a .go {
 color: #000E33;
 font-weight: 400;
+font-size: 16px;
 }
 .money-search .skip_link2 li a .go::after {
 content: "\e5cc";
@@ -13390,7 +13439,7 @@ color: #fff;
 background-color: #005596;
 border: 1px solid #005596;
 background-image: url(/static/portal/img/submain/bg_200016.png);
-background-position: 100%;
+background-position: right bottom;
 background-repeat: no-repeat;
 }
 .money-search .skip_link2 li a:hover .go {
@@ -13408,11 +13457,11 @@ margin-top: 30px;
 color: #000;
 font-size: 1.5rem !important;
 font-weight: 500 !important;
-margin-bottom: 20px;
+margin-bottom: 20px !important;
 }
 .money-search .money-sh .sh {
 border-radius: 8px;
-padding: 45px 30px 40px;
+padding: 45px 30px 35px;
 margin-bottom: 0;
 }
 @media (max-width: 749px) {

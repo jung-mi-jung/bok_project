@@ -259,7 +259,7 @@ $(function () {
 		inputdate
 			.datepicker({
 				format: 'yyyy-mm-dd',
-				language: 'ko',
+				language: 'en',
 				todayHighlight: true,
 				autoclose: true,
 				templates: {
@@ -267,11 +267,11 @@ $(function () {
 					rightArrow: '<i class=datepicker-next role=img aria-label=다음></i>'
 				}
 			})
-			.attr('placeholder', '연도 - 월 - 일')
+			.attr('placeholder', 'yy - mm - dd')
 		$('.month')
 			.datepicker({
 				format: 'yyyy-mm',
-				language: 'ko',
+				language: 'en',
 				todayHighlight: true,
 				autoclose: true,
 				templates: {
@@ -281,16 +281,16 @@ $(function () {
 				startView: 2,
 				minViewMode: 1
 			})
-			.attr('placeholder', '연도 - 월')
+			.attr('placeholder', 'yy - mm')
 			.attr('autocomplete', 'off')
 	}
-	$('input.sdate').attr('title', '검색기간 시작일 연도 - 월 - 일');
-	$('input.edate').attr('title', '검색기간 종료일 연도 - 월 - 일');
-	$('input.month').attr('title', '검색기간 연도 - 월');
-	$('input.smonth').attr('title', '검색기간 시작월 연도 - 월');
-	$('input.emonth').attr('title', '검색기간 종료월 연도 - 월');
+	// $('input.sdate').attr('title', '검색기간 시작일 연도 - 월 - 일');
+	// $('input.edate').attr('title', '검색기간 종료일 연도 - 월 - 일');
+	// $('input.month').attr('title', '검색기간 연도 - 월');
+	// $('input.smonth').attr('title', '검색기간 시작월 연도 - 월');
+	// $('input.emonth').attr('title', '검색기간 종료월 연도 - 월');
 	$('input.date').each(function () {
-		var title = $(this).attr('title') + ' 연도 - 월 - 일'
+		var title = $(this).attr('title') + ' yy - mm - dd'
 		$(this).attr('title', title)
 	});
 	// 달력
@@ -302,7 +302,7 @@ $(function () {
 				todayHighlight: true,
 				autoclose:true
 			})
-			.attr('placeholder','연도 - 월 - 일')
+			.attr('placeholder','yy - mm - dd')
 	}
 
 	// 탭 활성화
@@ -614,10 +614,11 @@ $(function() {
 	
 	//navigation
 	$(".navigation .depth2").prev().addClass("bu");
-	$(".navigation a.bu").attr("href", "javascript:viod(0)");
+	$(".navigation a.bu").attr("href", "javascript:void(0)");
 	//navigation toggle
 	$(".navigation a.bu").click(function(){
 		$(this).next().toggleClass("active");
+		$(this).parent().siblings().children().removeClass("active");
 		if ($(this).next().hasClass('active')){
 			$(this).attr("title", "하위메뉴 닫기");
 		} else {
@@ -916,7 +917,7 @@ $(function () {
 	$('.tabsub li.active a').attr('title', '선택됨');
 	$(linka).find('a').click(function(){
 		$(this).parent().siblings().removeClass('active').removeClass('title');
-		$(this).parent().addClass('active').al
+		$(this).parent().addClass('active');
 
 		//안됨
 		if ($(this).parent().hasClass('active')){

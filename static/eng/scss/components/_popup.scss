@@ -242,6 +242,11 @@ body > .popwrap {
 					}
 				}				
 			}
+			&.type2 {
+				li {
+					display: block;
+				}
+			}
 		}
 	}
 }

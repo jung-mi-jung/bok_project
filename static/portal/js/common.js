@@ -672,10 +672,11 @@ $(function() {
 	
 	//navigation
 	$(".navigation .depth2").prev().addClass("bu");
-	$(".navigation a.bu").attr("href", "javascript:viod(0)");
+	$(".navigation a.bu").attr("href", "javascript:void(0)");
 	//navigation toggle
 	$(".navigation a.bu").click(function(){
 		$(this).next().toggleClass("active");
+		$(this).parent().siblings().children().removeClass("active"); //요구사항 추가
 		if ($(this).next().hasClass('active')){
 			$(this).attr("title", "하위메뉴 닫기");
 		} else {
@@ -971,7 +972,7 @@ $(function () {
 	$('.tabsub li.active a').attr('title', '선택됨');
 	$(linka).find('a').click(function(){
 		$(this).parent().siblings().removeClass('active').removeClass('title');
-		$(this).parent().addClass('active').al
+		$(this).parent().addClass('active');
 
 		//안됨
 		if ($(this).parent().hasClass('active')){

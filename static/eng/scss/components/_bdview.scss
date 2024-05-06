@@ -232,6 +232,11 @@
 			font-size: rem(22) !important;
 			padding-top: 22px;
 		}
+		& + .videoSet {
+			@include breakpoint($lg){
+				padding-top: 90px;
+			}			
+		}
 	}
 	.dataInfoSet {
 		height: 55px;

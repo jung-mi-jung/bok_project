@@ -1303,7 +1303,7 @@
 	.skip_link2 {
 		display: flex;
 		flex-wrap: wrap;
-		margin: 0 -6px;
+		margin: 0 -6px;	
 		li {
 			width: calc(33.3% - 6px);
 			padding: 6px;
@@ -1314,12 +1314,12 @@
 				height: 100%;
 				padding: 17px 20px;
 				display: block;
-				color: $color-point;
+				color: #143D66;
 				border-radius: 8px;
 				border: 1px solid #E6E6E6;
 				strong {
 					display: block;
-					font-size: rem(20);
+					font-size: rem(18);
 					font-weight: 500;
 					margin-bottom: 17px;
 					letter-spacing: -1px;
@@ -1327,6 +1327,7 @@
 				.go {
 					color: $black;
 					font-weight: 400;
+					font-size: 16px;
 					&::after {
 						@include font-ico-outline('\e5cc');
 						font-size: 20px;
@@ -1335,10 +1336,10 @@
 				}
 				&:hover {
 					color: #fff;
-					background-color: $color-point;
-					border: 1px solid $color-point;
+					background-color: #005596;
+					border: 1px solid #005596;
 					background-image: url(/static/portal/img/submain/bg_200016.png);
-					background-position: 100%;
+					background-position: right bottom;
 					background-repeat: no-repeat;
 					.go {
 						color: #fff;
@@ -1358,11 +1359,11 @@
 			color: #000;
 			font-size: rem(24) !important;
 			font-weight: 500 !important;
-			margin-bottom: 20px;
+			margin-bottom: 20px !important;
 		}
 		.sh {
 			border-radius: 8px;
-			padding: 45px 30px 40px;
+			padding: 45px 30px 35px;
 			margin-bottom: 0;
 			@include breakpoint($sm){
 				padding: 20px;
