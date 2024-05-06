@@ -1716,11 +1716,17 @@ color: #757575;
 color: #333333;
 font-size: 2.25rem;
 font-weight: 700;
-margin-bottom: 48px;
+margin: 40px 0 48px;
 line-height: 1.2;
 }
 #main-container h2 + h3 {
-margin-top: 22px;
+margin-top: -20px;
+}
+#main-container h2 + .fc1 {
+margin-top: -30px;
+}
+#main-container h2:first-of-type {
+margin-top: 0;
 }
 #main-container h3 {
 clear: both;
@@ -1752,6 +1758,9 @@ position: static;
 }
 #main-container h3.h3::after {
 display: none;
+}
+#main-container h3 + .table {
+margin-top: -20px;
 }
 #main-container .bu2,
 #main-container h4 {
@@ -2896,19 +2905,16 @@ background: rgba(0, 0, 0, 0.6);
 border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 #header.main .globalHeader > .container > ul li + li::before {
-background: transparent;
+background: rgba(255, 255, 255, 0.3);
 }
 #header.main .globalHeader > .container > ul li a {
-border: 1px solid rgba(255, 255, 255, 0.4);
-background: rgba(0, 0, 0, 0.2);
-border-radius: 4px;
 color: #fff;
 }
 #header.main .g-info .global ul li > a {
 color: #fff;
 }
 #header.main .g-info .global ul li + li::before {
-background: rgba(255, 255, 255, 0.1);
+background: rgba(255, 255, 255, 0.3);
 }
 #header.main .gnb > ul > li.active > a span {
 color: #005596;
@@ -3296,6 +3302,7 @@ float: right;
 border-left: 1px solid #E8EBED;
 padding-left: 36px;
 padding-top: 30px;
+margin-bottom: 40px;
 }
 #main-container .lnb-nav + .content {
 width: calc(100% - 240px);
@@ -4092,6 +4099,7 @@ outline-offset: 2px;
 
 /* 연관자료 */
 .reference {
+clear: both;
 margin-top: 30px;
 padding: 50px 120px;
 background-color: #E5ECFF;
@@ -5629,4 +5637,4 @@ font-style: normal;
 img {
 max-width: 100%;
 }
-/*# sourceMappingURL=../external/staticimerEng/maps/default.css.map */
+/*# sourceMappingURL=../maps/default.css.map */

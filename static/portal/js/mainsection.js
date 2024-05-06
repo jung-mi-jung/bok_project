@@ -27,7 +27,7 @@ var mainSectionMoveing = function (direction) {
             currentMainSection = index;
         }
     });
-    if (direction == 'down' && currentMainSection < mainSection.length - 1) {
+    if (direction == 'down' && currentMainSection < mainSection.length - 1 && !$("body").hasClass("popupOpened modal-open")) {
         currentMainSection++;
     } else if (direction == 'up' && currentMainSection > 0) {
         currentMainSection--;
@@ -102,6 +102,9 @@ $('#wrap').on('wheel', function (event) {
     // 휠 제외 조건
     //if ($(event.target).hasClass('.gnb-sub-nav')) 		{return}
     //if ($(event.target).parents('.gnb-sub-nav').length)	{return}
+    if($("body").hasClass("popupOpened")) return;
+    if($("body").hasClass("modal-open")) return;
+
     if ($(event.target).hasClass('list-txt-cart') || $(event.target).parents('.list-txt-cart').length) {
         event.preventDefault();
 

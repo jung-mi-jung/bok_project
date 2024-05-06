@@ -66,7 +66,7 @@
 					@include breakpoint($sm){
 						font-size: rem(16);
 						// width: 100%;
-						max-width: 100%;
+						max-width: 100% !important;
 						@include line-clamp(3);
 						white-space: inherit;
 					}
@@ -350,8 +350,9 @@
 	ul {
 		li {
 			a.title {
-				max-width: calc(100% - 100px) !important;
+				max-width: 100% !important;
 				@include breakpoint($lg) {
+					max-width: calc(100% - 100px) !important;
 					&::before {
 						content: "";
 						display: inline-block;

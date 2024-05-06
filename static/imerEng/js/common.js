@@ -287,7 +287,7 @@ $(function () {
 					rightArrow: '<i class=datepicker-next role=img aria-label=다음></i>'
 				}
 			})
-			.attr('placeholder', '연도 - 월 - 일')
+			.attr('placeholder', '')
 		$('.month')
 			.datepicker({
 				format: 'yyyy-mm',
@@ -301,7 +301,7 @@ $(function () {
 				startView: 2,
 				minViewMode: 1
 			})
-			.attr('placeholder', '연도 - 월')
+			.attr('placeholder', '')
 			.attr('autocomplete', 'off')
 	}
 	$('input.sdate').attr('title', '검색기간 시작일 연도 - 월 - 일');
@@ -322,7 +322,7 @@ $(function () {
 				todayHighlight: true,
 				autoclose:true
 			})
-			.attr('placeholder','연도 - 월 - 일')
+			.attr('placeholder', '')
 	}
 
 
@@ -649,7 +649,7 @@ $(function() {
 
 	//navigation
 	$(".navigation .depth2").prev().addClass("bu");
-	$(".navigation a.bu").attr("href", "javascript:viod(0)");
+	$(".navigation a.bu").attr("href", "javascript:void(0)");
 	//navigation toggle
 	$(".navigation a.bu").click(function(){
 		$(this).next().toggleClass("active");

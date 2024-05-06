@@ -26,29 +26,34 @@ $(".content-row .cont").show();
 if (window.innerWidth < 1200) {
 	ismobile = true;
 	$("body").addClass("mobile");
+
 	var selectedNum = $(".content-row .cont-nav li.on").index();
 	$(".content-row .cont").eq(selectedNum).show().siblings().hide();
+	
+	if( window.innerWidth < 750 ) {
+		$(".total-nav").addClass("m-total-nav");
+		
+	} 
+	else {
+		$(".total-nav").removeClass("m-total-nav");
+	}
 }
-if( window.innerWidth < 750 ) {
-	$(".total-nav").addClass("m-total-nav");
-	$(".m-total-nav .dp1 > li > a").on("click", function(e){
-		$(this).parent("li").toggleClass("on");
-	})
-} 
+else {
+	ismobile = false;
+	$("body").removeClass("mobile");
+}
 
 
 $(window).resize(function () {
 	if (window.innerWidth < 1200) {
 		ismobile = true;
 		$("body").addClass("mobile")
+
 		var selectedNum = $(".content-row .cont-nav li.on").index();
 		$(".content-row .cont").eq(selectedNum).show().siblings().hide();
 		
 		if( window.innerWidth < 750 ) {
 			$(".total-nav").addClass("m-total-nav");
-			$(".m-total-nav .dp1 > li > a").on("click", function(e){
-				$(this).parent("li").toggleClass("on");
-			})
 		} 
 		else {
 			$(".total-nav").removeClass("m-total-nav");
@@ -57,9 +62,16 @@ $(window).resize(function () {
 	else {
 		ismobile = false;
 		$("body").removeClass("mobile")
-		$(".content-row .cont").show();
 	}
+
+	return false;
 });
+
+//전체메뉴 모바일일때 드롭다운 
+$(".total-nav .dp1 > li > .m-dp1").on("click", function(){
+	$(this).parent("li").toggleClass("on");
+})
+
 
 
 // var ismobile = false;
@@ -116,6 +128,15 @@ function lpopClose(target) {
 	if(currentfocus!==null) currentfocus.focus();
 }
 $(function () {
+	//esc 눌렀을때 레이어 닫기
+	$(".modal").on("keydown", function(e){
+		if(e.key === "Escape") {
+			$("body").removeClass("popupOpened modal-open");
+		}
+
+	})
+
+
 	// 레이어 닫기
 	$('.parent-close, .b-close, .close').on('click', function () {
 		lpopClose()
@@ -142,21 +163,13 @@ $(".total-nav .dp3 .dropdown").on("click", function() {
 })
 
 
+//전체메뉴 보기
 $(".all-nav-toggle").click(function (e){
-	$("body").addClass("popupOpened").attr("tabindex", -1);
+	$("body").addClass("popupOpened").attr("tabindex", -1).off("scroll touchmove mousewheel");
+	$(window).trigger("resize");
 
-	// e.preventDefault()
-	// $(".total-nav").addClass("active");
-	// $('.total-nav .nav>ul>li:first-child>a').focus()
-
-	//$(".total-nav").attr("tabindex", 1);
 	$(".total-nav .modal-header .close").focus();
 });
-// $('.total-nav button').click(function (e) {
-// 	e.preventDefault()
-// 	$(".total-nav").removeClass('active');
-// 	$(".all-nav-toggle").focus();
-// });
 
 
 $(function () {

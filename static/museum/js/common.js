@@ -124,14 +124,6 @@ $(".total-nav .dp3 .dropdown").on("click", function() {
 	}
 })
 
-//전체메뉴 보기
-$(".all-nav-toggle").click(function (e){
-	$("body").addClass("popupOpened").attr("tabindex", -1);
-	$(window).trigger("resize");
-
-	$(".total-nav .modal-header .close").focus();
-});
-
 $(function () {
 	//skip
 	$('.skip a[href="#content"]').click(function(event) {
@@ -154,6 +146,14 @@ $(function () {
 	});
 	goToScroll();
 
+
+	//전체메뉴 보기
+	$(".all-nav-toggle").click(function (e){
+		$("body").addClass("popupOpened").attr("tabindex", -1).off("scroll touchmove mousewheel");
+		$(window).trigger("resize");
+
+		$(".total-nav .modal-header .close").focus();
+	});
 
 
 	//gnb
@@ -914,6 +914,8 @@ $(function () {
 
 		var imgmapInx = $(this).index()
 
+		$(this).addClass("on").siblings().removeClass("on");
+		
 		$(".cont-nav ul li").eq(imgmapInx).addClass("on").siblings().removeClass("on");
 		$(".cont-nav ul li").eq(imgmapInx).trigger("click");
 

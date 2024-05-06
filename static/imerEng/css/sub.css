@@ -150,11 +150,17 @@ color: #757575;
 color: #333333;
 font-size: 2.25rem;
 font-weight: 700;
-margin-bottom: 48px;
+margin: 40px 0 48px;
 line-height: 1.2;
 }
 #main-container h2 + h3 {
-margin-top: 22px;
+margin-top: -20px;
+}
+#main-container h2 + .fc1 {
+margin-top: -30px;
+}
+#main-container h2:first-of-type {
+margin-top: 0;
 }
 #main-container h3 {
 clear: both;
@@ -186,6 +192,9 @@ position: static;
 }
 #main-container h3.h3::after {
 display: none;
+}
+#main-container h3 + .table {
+margin-top: -20px;
 }
 #main-container .bu2,
 #main-container h4 {
@@ -1373,11 +1382,8 @@ display: block;
 }
 /* 상세페이지 비쥬얼 */
 @media (min-width: 1200px) {
-body.bd-body .sub-_visual.menu_500216, body.bd-body .sub-_visual.menu_600093 {
-background-image: url(/static/imer/img/visual/view_500216.png);
-}
-body.bd-body .sub-_visual.menu_500831, body.bd-body .sub-_visual.menu_600288 {
-background-image: url(/static/imer/img/visual/view_500831.png);
+body.bd-body .sub-_visual {
+background-image: url(/static/imerEng/img/visual/view_500216.png) !important;
 }
 }
 
@@ -1392,7 +1398,7 @@ margin-bottom: 30px;
 position: sticky;
 top: 48px;
 float: left;
-width: 275px;
+width: 240px;
 height: auto;
 padding-top: 30px;
 padding-right: 36px;
@@ -2306,7 +2312,7 @@ font-size: 1.25rem;
 @media (max-width: 749px) {
 .bd-line > ul > li .set .title {
 font-size: 1rem;
-max-width: 100%;
+max-width: 100% !important;
 overflow: hidden;
 text-overflow: ellipsis;
 display: block;
@@ -2602,9 +2608,12 @@ margin-top: -24px;
 display: none !important;
 }
 .bd-line.noFile ul li a.title {
-max-width: calc(100% - 100px) !important;
+max-width: 100% !important;
 }
 @media (min-width: 1200px) {
+.bd-line.noFile ul li a.title {
+max-width: calc(100% - 100px) !important;
+}
 .bd-line.noFile ul li a.title::before {
 content: "";
 display: inline-block;
@@ -2742,11 +2751,19 @@ font-size: 1.625rem !important;
 font-size: 1.125rem !important;
 }
 }
+.bd-view .subject + .down {
+margin-top: 107px;
+}
+@media (max-width: 1199px) {
+.bd-view .subject + .down {
+margin-top: 14px;
+}
+}
 .bd-view .dataInfoSet {
 min-height: 55px;
 display: flex;
 justify-content: space-between;
-margin: 10px 0 26px;
+margin: 10px 0 42px;
 align-items: flex-end;
 }
 .bd-view .dataInfoSet .dataInfo {
@@ -3005,7 +3022,7 @@ display: none;
 padding: 30px 0;
 width: 1280px;
 max-width: 100%;
-margin: 0 auto;
+margin: 78px auto 0;
 }
 .videoSet .video .vjs-icon-placeholder:before {
 font-size: 24px;
@@ -3398,7 +3415,7 @@ font-size: 2rem !important;
 .bd-blog .dataInfoSet {
 display: flex;
 justify-content: space-between;
-margin: 10px 0 26px;
+margin: 10px 0 42px;
 }
 .bd-blog .dataInfoSet .dataInfo {
 position: absolute;
@@ -4522,17 +4539,17 @@ background-image: none;
 .tab-list {
 display: flex;
 position: relative;
-margin: 0 0 24px;
+margin: 0 0 30px;
 border-bottom: 1px solid #89A1DC;
 }
 .tab-list[class*=col-] .swiper a.swiper-slide {
 flex: 1;
+min-width: auto;
 }
 @media (max-width: 749px) {
 .tab-list[class*=col-] .swiper a.swiper-slide {
 flex: none;
-min-width: auto;
-width: 100%;
+min-width: 140px;
 }
 }
 .tab-list .swiper {
@@ -4549,6 +4566,7 @@ justify-content: center;
 min-width: 25%;
 width: auto;
 min-height: 40px;
+line-height: 1.2;
 padding: 8px;
 color: #005596;
 background: #fff;
@@ -4558,10 +4576,15 @@ text-align: center;
 box-sizing: border-box;
 cursor: grab;
 }
+@media (max-width: 1199px) {
+.tab-list .swiper a.swiper-slide {
+font-size: 0.875rem;
+}
+}
 @media (max-width: 749px) {
 .tab-list .swiper a.swiper-slide {
 flex: none;
-max-width: 140px !important;
+min-width: 140px;
 }
 }
 .tab-list .swiper a.swiper-slide:first-of-type {
@@ -5504,8 +5527,9 @@ margin-top: -16px;
 .sh .select-box .select-set select {
 width: 150px;
 border-radius: 5px 0 0 5px;
-padding: 4px 40px 4px 20px !important;
+padding: 4px 20px 4px 20px !important;
 background-position: calc(100% - 15px) 50%;
+font-size: 0.9375rem;
 }
 @media (min-width: 750px) and (max-width: 1199px) {
 .sh .select-box .select-set select {
@@ -6163,7 +6187,7 @@ input.sdate,
 input.edate {
 background: #fff url(/static/museum/img/ico/ico-date.png) calc(100% - 10px) center no-repeat;
 border-radius: 4px;
-padding: 0 30px 0 20px;
+padding: 0 30px 0 16px;
 }
 @media (max-width: 1199px) {
 input.date,
@@ -6656,6 +6680,7 @@ border: 1px solid #E5E5E5;
 box-sizing: border-box;
 border-radius: 16px;
 max-width: 402px;
+box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0);
 }
 .department .profile .left {
 margin-right: 7%;
@@ -6706,7 +6731,7 @@ color: #808080;
 
 @media (min-width: 1200px) {
 .department .profile:hover {
-border: 2px solid #3B63C4;
+border: 1px solid #3B63C4;
 box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.15);
 }
 }
@@ -7165,6 +7190,9 @@ background-color: #F2F6FA;
 .top-txt h2 {
 line-height: 1.4 !important;
 }
+.top-txt h2 + span.mt10 {
+display: block;
+}
 
 .btns {
 position: relative;
@@ -7421,7 +7449,9 @@ flex-wrap: wrap;
 .conference .schList li span {
 display: block;
 font-weight: 700;
-padding: 0 0 10px;
+}
+.conference .schList li span + span {
+padding-top: 10px;
 }
 .conference .schList li span > span {
 display: inline-block;
@@ -9756,4 +9786,4 @@ background-color: #3B63C4;
 .userType .auth .col #ipinLoginBtn strong {
 background-color: #39A0FF;
 }
-/*# sourceMappingURL=../external/staticimerEng/maps/sub.css.map */
+/*# sourceMappingURL=../maps/sub.css.map */

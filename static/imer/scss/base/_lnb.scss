@@ -278,12 +278,13 @@
 /* 상세페이지 비쥬얼 */
 body.bd-body .sub-_visual {
 	@include breakpoint($lg) {
-		&.menu_500216 {
-			background-image: url(/static/imer/img/visual/view_500216.png);
-		}
-		&.menu_500831 {
-			background-image: url(/static/imer/img/visual/view_500831.png);
-		}
+		background-image: url(/static/imer/img/visual/view_500216.png) !important;
+		// &.menu_500216 {
+		// 	background-image: url(/static/imer/img/visual/view_500216.png);
+		// }
+		// &.menu_500831 {
+		// 	background-image: url(/static/imer/img/visual/view_500831.png);
+		// }
 	}
 }
 
