@@ -589,7 +589,7 @@
 		position: absolute;
 		top: 0;
 		right: 50%;
-		margin-right: 57px;
+		margin-right: 76px;
 		background-image: url(/static/portal/img/main/bg_section2.png);
 		background-repeat: no-repeat;
 		background-position: 0 0;
@@ -608,7 +608,7 @@
 	}
 	.swiper {
 		overflow: visible;
-		margin-left: -8%;
+		margin-left: -6%;
 		.ctrl-set {
 			.swiper-pagination {
 				display: inline-block;
@@ -703,18 +703,38 @@
 				}
 			}
 		}
-		.swiper-wrapper {
-			a {				
-				width: 25% !important;
-				//width: calc(25% - 16px) !important;
-				padding: 16px;
-				background-color: #fff;
-				border-radius: 16px;
-				box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.15);
-				//margin: 0 16px;
-				@include breakpoint($sm){
-					width: 100% !important;
+		.swiper-wrapper {			
+			.swiper-slide {
+				width: 720px;
+				a {
+					width: 360px;
+					display: block;
+					padding: 16px;
+					background-color: #fff;
+					border-radius: 16px;
+					box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.15);
 				}
+			}
+			.swiper-slide-active {
+				a {
+					width:auto;
+					margin: 0;
+					background-color:transparent;
+					box-shadow:none
+				}
+			}
+			.swiper-slide-prev a{margin-left:360px;}
+			.swiper-slide-active+*+.swiper-slide a { margin-left: -360px; }
+			.swiper-slide-active+*+*+.swiper-slide a { margin-left: -720px; }
+			a {				
+				// width: 25% !important;
+				// padding: 16px;
+				// background-color: #fff;
+				// border-radius: 16px;
+				// box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.15);
+				// @include breakpoint($sm){
+				// 	width: 100% !important;
+				// }
 				span {				
 					&.img {
 						padding-top: 60%;
@@ -751,6 +771,7 @@
 						margin-bottom: 12px;
 						@include breakpoint($sm){
 							height: 40px;
+							font-size: 16px;
 						}
 					}
 					&.txt {
@@ -766,74 +787,78 @@
 						font-size: rem(12);
 						margin-top: 22px;
 					}
+				}				
+			}
+			.swiper-slide-prev {
+				margin-right: 0 !important;
+			}
+			.swiper-slide-active {
+				// width: 720px !important;
+				max-width: 100% !important;
+				box-shadow: none;
+				padding: 0 80px;
+				margin-top: -80px;
+				margin-right: 0 !important;
+				background-color: transparent;
+				a {
+					width:auto;
+					margin: 0;
+					background-color:transparent;
+					box-shadow:none
 				}
-				&.swiper-slide-prev {
-					margin-right: 0 !important;
+				@include breakpoint($sm){
+					background-color: #fff;
+					margin-top: 0;
+					padding: 16px;
+					margin: 0 10px !important;
 				}
-				&.swiper-slide-active {
-					//width: 45% !important;
-					//transform: scale(1.5) !important;
-					width: 720px !important;
-					max-width: 100% !important;
-					box-shadow: none;
-					padding: 0 80px;
-					margin-top: -80px;
-					//margin-left: 0 !important;
-					margin-right: 0 !important;
-					//margin: -80px 100px 0;
-					background-color: transparent;
+				.img {
+					//width: 560px;
+					padding-top: 57%;
+					border-radius: 16px;
 					@include breakpoint($sm){
-						background-color: #fff;
-						margin-top: 0;
-						padding: 16px;
-						margin: 0 10px !important;
+						width: 100%;
 					}
-					.img {
-						width: 560px;
-						padding-top: 57%;
-						border-radius: 16px;
-						@include breakpoint($sm){
-							width: 100%;
-						}
-					}
-					span {
-						&.t {							
-							font-size: rem(22);
-							margin: 28px 0 34px;
-							&::before {
-								width: 24px;
-								height: 4px;
-								margin-left: -12px;
-								bottom: -10px;
-								background-color: #39A0FF;
-							}
-						}
-						&.title {
-							height: 69px;
-							color: $point;
-							font-size: rem(24);
-							text-align: center;
-							margin-bottom: 22px;
-							@include breakpoint($sm){
-								height: 52px;
-							}
-						}
-						&.txt {
-							height: 92px;
-							color: #4D4D4D;
-							font-size: rem(18);	
-							@include breakpoint($sm){
-								height: 68px;
-							}					
-						}
-						&.date {
-							color: #4D4D4D;
-							text-align: center;
-							font-size: rem(14);
-						}
-					}
-					
 				}
+				span {
+					&.t {							
+						font-size: rem(22);
+						margin: 28px 0 34px;
+						&::before {
+							width: 24px;
+							height: 4px;
+							margin-left: -12px;
+							bottom: -10px;
+							background-color: #39A0FF;
+						}
+					}
+					&.title {
+						height: 69px;
+						color: $point;
+						font-size: rem(24);
+						text-align: center;
+						margin-bottom: 22px;
+						@include breakpoint($sm){
+							height: 52px;
+							font-size: rem(18);
+						}
+					}
+					&.txt {
+						height: 92px;
+						color: #4D4D4D;
+						font-size: rem(18);	
+						@include breakpoint($sm){
+							height: 68px;
+							font-size: 16px;
+						}					
+					}
+					&.date {
+						color: #4D4D4D;
+						text-align: center;
+						font-size: rem(14);
+					}
+				}
+				
 			}
 		}
 	}

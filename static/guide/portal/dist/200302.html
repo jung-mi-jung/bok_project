@@ -48,6 +48,18 @@
 						<a href="https://apply.bok.or.kr" target="_blank" title="새창열림">채용</a>
 					</li>
 				</ul>
+				<div class="g-info">
+					<div class="global">
+						<ul>
+							<li>
+								<a href="">본인인증</a>
+							</li>
+							<li>
+								<a href="/eng/main/main.do" target="_blank" title="새창열림">English</a>
+							</li>
+						</ul>
+					</div>					
+				</div>
 			</div>
 		</div>
 		<div class="container">
@@ -75,50 +87,25 @@
 						<a href=""><span>주요서비스</span></a>
 					</li>
 				</ul>
-				<!-- //gnb -->
-				<button type="button" class="all-nav-toggle" title="전체 메뉴 열기"></button>
 			</nav>
-			<nav class="mobileGnb" id="mobileGnb">
-				<button type="button" class="m-all-nav-toggle" title="전체 메뉴 열기"></button>
-				<div class="mobileGnb__set">
-					<div class="top">
-						<span>MENU</span>
-						<button type="button" class="mobileGnb-close" title="전체 메뉴 닫기"></button>
-					</div>
-					<div class="mobileGnb__nav"></div>
-				</div>
-			</nav>
-	
-			<div class="g-info">
-				<div class="global">
-					<ul>
-						<li>
-							<a href="">본인인증</a>
-						</li>
-						<li>
-							<a href="/eng/main/main.do" target="_blank" title="새창열림">English</a>
-						</li>
-					</ul>
-				</div>
+			<!-- //gnb -->
+			<div class="toggle-set">
+				<button type="button" class="all-nav-toggle" data-toggle="modal" data-target="#totalMenu" title="전체 메뉴 열기"></button>
 				<button type="button" class="search" title="검색레이어 열기"></button>
 				<div class="search_wrap">
 					<form action="/">
 						검색 레이어 영역
 					</form>
 				</div>
-			</div>
+			</div>			
 		</div>
+
 		<!-- 전체메뉴 -->
-		<div class="total-nav">
-			<section>
-				<div>
-					<h2 class="total-nav-title">전체 메뉴</h2>
-					<div class="nav"></div>
-					<button type="button" class="ico-close"></button>
-				</div>
-			</section>
-		</div>
+		<!-- <div class="modal fade total-nav" id="totalMenu" tabindex="-1" role="dialog">
+			
+		</div> -->
 		<!-- //전체메뉴 -->
+		
 	</header>	
 	<!-- //header -->
 
@@ -214,6 +201,11 @@
 				</div>
 			</div>
 		</nav>
+		<div class="sub-_visual">
+			<div class="hgroup">
+				<h1>뉴스 및 의사록</h1>
+			</div>
+		</div>
 	</div>
 	<!-- //navigation -->
 
@@ -299,9 +291,9 @@
 
 
 <h5>중소기업금융 지원체계</h5>
-<div class="imgSet"> 
-<p class="visible-md"><img alt="중소기업 금융지원제도는 한국은행의 자금공급, 금융기관이 취급하는 금융자금 지원제도, 정부의 재정자금 지원제도 등으로 구성되어 있습니다. 한국은행은 금융기관별로 저리자금을 배정하는 총액한도대출제도 및 수출환어음담보대출제도 등을 운용하며, 금융기관은 일반예금자의 예금과 정부에서의 자금위탁을 재원으로, 신용보증기관을 통하여 중소기업에 대출을 취급하는데, 대출절차는 7단계로 나누어 볼 수 있습니다. 1. 대출상담, 신청. 2. 신용조사. 3. 담보물설정, 신용보증. 4. 대출결정 통지. 5. 대출계약, 담보취득. 6. 대출실행. 7. 사후관리의 단계로 진행됩니다. 또, 정부의 재정자금을 위탁받아 지원하는 직접대출을 중소기업진흥공단에서 운용하고 있습니다.(담보제공, 이자지급, 만기시 원금상환)" src="/static/portal/img/cts/sub1/200302.gif"></p> 
-<p class="visible-sm"><a href="/static/portal/img/cts/sub1/200302.gif" data-rel="prettyPhoto" title="확대보기"><img alt="중소기업 금융지원제도는 한국은행의 자금공급, 금융기관이 취급하는 금융자금 지원제도, 정부의 재정자금 지원제도 등으로 구성되어 있습니다. 한국은행은 금융기관별로 저리자금을 배정하는 총액한도대출제도 및 수출환어음담보대출제도 등을 운용하며, 금융기관은 일반예금자의 예금과 정부에서의 자금위탁을 재원으로, 신용보증기관을 통하여 중소기업에 대출을 취급하는데, 대출절차는 7단계로 나누어 볼 수 있습니다. 1. 대출상담, 신청. 2. 신용조사. 3. 담보물설정, 신용보증. 4. 대출결정 통지. 5. 대출계약, 담보취득. 6. 대출실행. 7. 사후관리의 단계로 진행됩니다. 또, 정부의 재정자금을 위탁받아 지원하는 직접대출을 중소기업진흥공단에서 운용하고 있습니다.(담보제공, 이자지급, 만기시 원금상환)" src="/static/portal/img/cts/sub1/200302.gif"></a></p></div>
+<div class="img-box-round"> 
+<p class="visible-md"><img alt="중소기업 금융지원제도는 한국은행의 자금공급, 금융기관이 취급하는 금융자금 지원제도, 정부의 재정자금 지원제도 등으로 구성되어 있습니다. 한국은행은 금융기관별로 저리자금을 배정하는 총액한도대출제도 및 수출환어음담보대출제도 등을 운용하며, 금융기관은 일반예금자의 예금과 정부에서의 자금위탁을 재원으로, 신용보증기관을 통하여 중소기업에 대출을 취급하는데, 대출절차는 7단계로 나누어 볼 수 있습니다. 1. 대출상담, 신청. 2. 신용조사. 3. 담보물설정, 신용보증. 4. 대출결정 통지. 5. 대출계약, 담보취득. 6. 대출실행. 7. 사후관리의 단계로 진행됩니다. 또, 정부의 재정자금을 위탁받아 지원하는 직접대출을 중소기업진흥공단에서 운용하고 있습니다.(담보제공, 이자지급, 만기시 원금상환)" src="/static/portal/img/sub/img_200302.png"></p> 
+<p class="visible-sm"><a href="/static/portal/img/cts/sub/img_200302.png" data-rel="prettyPhoto" title="확대보기"><img alt="중소기업 금융지원제도는 한국은행의 자금공급, 금융기관이 취급하는 금융자금 지원제도, 정부의 재정자금 지원제도 등으로 구성되어 있습니다. 한국은행은 금융기관별로 저리자금을 배정하는 총액한도대출제도 및 수출환어음담보대출제도 등을 운용하며, 금융기관은 일반예금자의 예금과 정부에서의 자금위탁을 재원으로, 신용보증기관을 통하여 중소기업에 대출을 취급하는데, 대출절차는 7단계로 나누어 볼 수 있습니다. 1. 대출상담, 신청. 2. 신용조사. 3. 담보물설정, 신용보증. 4. 대출결정 통지. 5. 대출계약, 담보취득. 6. 대출실행. 7. 사후관리의 단계로 진행됩니다. 또, 정부의 재정자금을 위탁받아 지원하는 직접대출을 중소기업진흥공단에서 운용하고 있습니다.(담보제공, 이자지급, 만기시 원금상환)" src="/static/portal/img/sub/img_200302.png"></a></p></div>
 				
 
 <h2 class="mt40">한국은행의 지원제도</h2>
@@ -389,12 +381,85 @@
 	<div><a href="http://www.sbc.or.kr" target="_blank" title="새창열림"><span>중소기업진흥공단</span><i></i></a></div> 
 	<div><a href="http://www.kodit.co.kr" target="_blank" title="새창열림"><span>신용보증기금</span><i></i></a></div> 
 	<div><a href="http://www.kibo.or.kr" target="_blank" title="새창열림"><span>기술보증기금</span><i></i></a></div>
+</div>			
+
+
+			
+			
+			</div>
+		</main>			
+	</div>
+	<!-- //content -->
+
 </div>
 
-
-
+<footer id="footer">
+<div class="container">
+	<div class="f_l">
+		<nav class="footer-nav">
+			<ul>
+				<li>
+					<a href="">자작권보호</a>
+				</li>
+				<li class="point">
+					<a href="">개인정보처리방침</a>
+				</li>
+				<li>
+					<a href="">이메일무단수집거부</a>
+				</li>
+				<li>
+					<a href="">홈페이지이용안내</a>
+				</li>
+				<li>
+					<a href="">관련사이트</a>
+				</li>
+			</ul>
+		</nav>
+		<div class="footer-bottom">
+			<address>04531 서울특별시 중구 남대문로 39 (남대문로3가)<br class="mobile">
+			대표전화 : 02-759-4114</address>
+			<p class="copyright">Copyright(c) Bank of Korea. All rights reserved.</p>
+		</div>
+	</div>
+	<div class="f_r">
+		<div class="site_go">
+			<button type="button" title="fmaily site 열기">fmaily site</button>
+			<ul>
+				<li>
+					<a href="/imer/main/main.do" target="_blank" title="새창열림">경제연구원</a>
+				</li>
+				<li>
+					<a href="/museum/main/main.do" target="_blank" title="새창열림">화폐박물관</a>
+				</li>
+				<li>
+					<a href="">지역본부</a>
+				</li>
+				<li>
+					<a href="https://ecos.bok.or.kr" target="_blank" title="새창열림">경제시스템(ecos)</a>
+				</li>
+				<li>
+					<a href="https://snapshot.bok.or.kr" target="_blank" title="새창열림">금융·경제스냅샷</a>
+				</li>
+				<li>
+					<a href="https://dl.bok.or.kr" target="_blank" title="새창열림">전자도서관</a>
+				</li>
+				<li>
+					<a href="https://apply.bok.or.kr" target="_blank" title="새창열림">채용</a>
+				</li>
+			</ul>
+		</div>
+		<div class="f_sns">
+			<a href="https://www.youtube.com/thebankofkoreakr" target="_blank" title="새창열림" class="sns-youtube"><span class="sr-only">한국은행 Youtube 바로가기 (https://www.youtube.com/thebankofkoreakr)</span></a>
+			<a href="https://www.instagram.com/thebankofkorea" target="_blank" title="새창열림" class="sns-instagram"><span class="sr-only">한국은행 인스타그램  바로가기 (https://www.instagram.com/thebankofkorea)</span></a>
+			<a href="https://www.facebook.com/bankofkoreahub" target="_blank" title="새창열림" class="sns-facebook"><span class="sr-only">한국은행 Facebook 바로가기 (https://www.facebook.com/bankofkoreahub)</span></a>
+			<a href="https://www.twitter.com/bok_hub" target="_blank" title="새창열림" class="sns-twitter"><span class="sr-only">한국은행 Twitter 바로가기 (https://www.twitter.com/bok_hub)</span></a>
+		</div>
+		<div class="f_banner">
+			<a href="" title="새창열림"><img src="/static/portal/img/common/mark.png" alt="(사)한국장애인단체총연합회 한국웹접근성인증평가원 웹 접근성 우수사이트 인증마크(WA인증마크)"></a>
+		</div>
+	</div>
 </div>
-
+</footer>
 <script src="/static/jslibrary/swiper@8/swiper-bundle.min.js"></script>
 <script src="/static/portal/js/common.js"></script>
 </body>

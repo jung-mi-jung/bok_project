@@ -188,3 +188,56 @@
 		}
 	}
 }
+
+//게시물 기존 css 추가
+.bd-blog {
+	.ratioObject{ border: none; }
+	.ratio-39 { padding-bottom : 39%; }
+	.viewLine h3 { padding: 0px 5px 1px 5px; word-break: keep-all;}
+	.viewLine .dataInfoSet { border-bottom: 1px solid #ddd; }
+	.viewLine .dataInfoSet, .viewLine .bd1 { padding: 12px 8px; }
+	.dbData { margin-top: 0px; }
+	.viewLine > dl + .dbData { padding: 15px 8px; }
+	#content .viewLine h3 { font-size: 25px; }
+	.fulled{    
+		width: 75%;
+		padding: 0 1%;
+		margin: 0 12.5%;
+	}
+	.half1{   
+		width: 50%;
+		padding: 0 1.5%; 
+		margin: 10px 0;
+		float: left;
+	}
+	.half2{   
+		width: 50%;
+		padding: 0 1.5%;
+		margin: 10px 0;
+		float: right;
+	}
+	@media (max-width: 600px){
+		.fulled  {    
+			width: 100%;
+			padding: 0 0;
+			margin: 0 0;
+		} 
+		.half1 {   
+			width: 80%;
+			margin: 20px 10%;
+			height: auto;
+			float: none;
+		}
+		.half2 {    
+			width: 80%;
+			margin: 20px 10%; 
+			height: auto;
+			float: none;
+		}       
+	}
+	.viewLine .dataInfoSet .ti-user {
+		padding-left: 23px;
+		text-indent: -22px;
+		word-break: keep-all;
+	}
+}

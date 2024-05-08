@@ -92,10 +92,11 @@ $(function () {
 		//freeMode: true,
 		// Optional parameters
 		loop: true,
-		slidesPerView : '3.9',
+		slidesPerView: 'auto', 
+		//slidesPerView : '3.9',
 		spaceBetween : 30, 
 		loopAdditionalSlides : 1,
-		breakpoints: {
+		/*breakpoints: {
 			// window 넓이 640px ~ 767px
 			320: {
 				slidesPerView: 1,
@@ -111,7 +112,7 @@ $(function () {
 				slidesPerView : '3.9',
 				spaceBetween: 30,
 			},
-		},
+		},*/
 		navigation: {
 			prevEl: '.issue-prev',
 			nextEl: '.issue-next',
@@ -132,10 +133,20 @@ $(function () {
 			el: '.swiper-pagination',
 			type: "fraction",
 		},
-		observer: true,
-		observeParents: true,
+		// observer: true,
+		// observeParents: true,
 	});
 	issue.init();//초기화
+	issue.on('slideChange', function () {
+		var activeSlide = document.querySelector('.issue .swiper-slide-active');
+		if (activeSlide) {
+			// 활성화된 슬라이드가 센터에 오도록 조정
+			var swiperContainerWidth = document.querySelector('.issue .swiper-wrapper').offsetWidth;
+			var activeSlideWidth = activeSlide.offsetWidth;
+			var slideOffset = (swiperContainerWidth - activeSlideWidth) / 2;
+			// swiperContainerWidth.style.transform = 'translateX(' + slideOffset + 'px)';
+		}
+	});
 	// $('.issue-stop').on('click', function () {
 	// 	$(this).hide().next().show().focus()
 	// 	issue.autoplay.stop();

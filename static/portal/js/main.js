@@ -104,54 +104,66 @@ $(function () {
 //bok 이슈
 $(function () {
 	const issue = new Swiper('.issue', {
-		init: false,
-		//freeMode: true,
-		// Optional parameters
-		loop: true,
-		slidesPerView : '3.9',
-		spaceBetween : 30, 
-		loopAdditionalSlides : 1,
-		breakpoints: {
-			// window 넓이 640px ~ 767px
-			320: {
-				slidesPerView: 1,
-				spaceBetween: 10,
-			},
-			// window 넓이 768px ~ 1023px
-			768: {
-				slidesPerView: 2.5,
-				spaceBetween: 30,
-			},
-			// window 넓이 1024px ~
-			1024: {
-				slidesPerView : '3.9',
-				spaceBetween: 30,
-			},
-		},
-		navigation: {
-			prevEl: '.issue-prev',
-			nextEl: '.issue-next',
-		},		
-		// And if we need scrollbar
-		scrollbar: {
-			hide:true
-		},
-		a11y:{
-			enabled:true,
-		},
-		// speed : 3000,
-		// autoplay: {
-		// 	delay: 3000,
-		// 	disableOnInteraction: false,
-		// },
-		pagination: {
-			el: '.swiper-pagination',
-			type: "fraction",
-		},
-		observer: true,
-		observeParents: true,
-	});
-	issue.init();//초기화
+        init: false,
+        //freeMode: true,
+        // Optional parameters
+        loop: true,
+        // slidesPerView: '3.9',
+        slidesPerView: 'auto',
+        // centeredSlides: true,
+        spaceBetween: 30,
+        loopAdditionalSlides: 1,
+        // breakpoints: {
+        //     // window 넓이 640px ~ 767px
+        //     320: {
+        //         slidesPerView: 1,
+        //         spaceBetween: 10,
+        //     },
+        //     // window 넓이 768px ~ 1023px
+        //     768: {
+        //         slidesPerView: 2.5,
+        //         spaceBetween: 30,
+        //     },
+        //     // window 넓이 1024px ~
+        //     1024: {
+        //         slidesPerView: 'auto',
+        //         spaceBetween: 30,
+        //     },
+        // },
+        navigation: {
+            prevEl: '.issue-prev',
+            nextEl: '.issue-next',
+        },
+        // And if we need scrollbar
+        scrollbar: {
+            hide: true
+        },
+        a11y: {
+            enabled: true,
+        },
+        //speed: 300,
+        // autoplay: {
+        //     delay: 3000,
+        //     disableOnInteraction: false,
+        // },
+        pagination: {
+            el: '.swiper-pagination',
+            type: "fraction",
+        },
+        // observer: true,
+        // observeParents: true,
+    });
+    issue.init();//초기화
+    issue.on('slideChange', function () {
+        var activeSlide = document.querySelector('.issue .swiper-slide-active');
+        if (activeSlide) {
+            // 활성화된 슬라이드가 센터에 오도록 조정
+            var swiperContainerWidth = document.querySelector('.issue .swiper-wrapper').offsetWidth;
+            var activeSlideWidth = activeSlide.offsetWidth;
+            var slideOffset = (swiperContainerWidth - activeSlideWidth) / 2;
+            // swiperContainerWidth.style.transform = 'translateX(' + slideOffset + 'px)';
+        }
+    });
 	// $('.issue-stop').on('click', function () {
 	// 	$(this).hide().next().show().focus()
 	// 	issue.autoplay.stop();
