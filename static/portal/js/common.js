@@ -194,7 +194,7 @@ $(function () {
 	// gnb stiky
 	function goToScroll() {
 		// 주 메뉴
-		var h = 60;  96
+		var h = 60;  //96
 		if ($(window).scrollTop() > h) {
 			$('body').addClass('gnb-stiky');
 		} else {
@@ -216,27 +216,19 @@ $(function () {
 			//$(this).parent().parent().addClass('active').parent().siblings().find('>a').removeClass('active');
 			$(this).addClass('on').parent().siblings().find('>a').removeClass('on');
 			//안씀 $(".gnb_bg").show();
+			$("body").addClass("gnbOver");
 			return false;
 		}
 	});
 	$('#gnb > ul > li').on('mouseleave', function () {
 		$('#gnb > ul > li > a').removeClass('on');
+		$("body").removeClass("gnbOver");
 	});
 	$('#gnb .depth2>ul a:last').on('focusout', function (e) {
 		gnb1depth.removeClass('on');
+		$("body").removeClass("gnbOver");
 	});
 
-	//gnb - depth4 있을 경우  depth3에 클래스 추가
-	// $("#gnb .depth4").prev().addClass("bu");
-	// $("#gnb .depth3 .bu").attr("href", "javascript:viod(0)");
-
-	// $("#gnb .depth3 > ul > li > a").attr("title", "하위 메뉴 열기");
-	// $("#gnb .depth3 > ul > li.active > a").attr("title", "하위 메뉴 닫기");
-
-	// $(".gnb > ul .depth3 > ul > li > a.bu").on("click", function(){
-	// 	$(this).next().slideToggle();
-	// });
-	
 	$("#gnb .depth3 > ul > li > a.bu").click(function(){
 		$(this).parent().toggleClass("active")
 		if ($(this).parent().hasClass('active')){
@@ -614,7 +606,7 @@ $(function() {
 		// gnb stiky
 		function goToScroll() {
 			// 주 메뉴
-			var h = 96;
+			var h = 146; //96
 			if ($(window).scrollTop() > h) {
 				$('body').addClass('gnb-stiky');
 			} else {
@@ -762,10 +754,12 @@ $(function() {
 	$(".g-info .search, .toggle-set .search").click(function(){
 		$(".search_wrap").addClass("active");
 		$(".search_wrap .search_wrap_input .search_keyword") .focus();
+		$("body").addClass("gnbOver");
 	})
 	$(".search_wrap .search_close").click(function(){
 		$(".search_wrap").removeClass("active");
 		$(".g-info .search, .toggle-set .search").focus();
+		$("body").removeClass("gnbOver");
 	})
 
 	//search_wrap

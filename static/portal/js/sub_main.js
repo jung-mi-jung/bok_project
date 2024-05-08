@@ -4,7 +4,7 @@ $(function () {
 		init: false,
 		//freeMode: true,
 		// Optional parameters
-		loop: true,
+		loop: false,
 		loopAdditionalSlides : 1,
 		slidesPerView : '1',
 		navigation: {

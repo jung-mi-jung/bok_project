@@ -56,6 +56,14 @@
 @import url('/static/jslibrary/bootstrap-datepicker-1.9.0-dist/css/bootstrap-datepicker3.standalone.css');
 
 
+//컨텐츠 내부 링크 클릭시 navigation 겹치는 현상 보완
+@include breakpoint($lg){
+	.gnb-stiky {
+		main {
+			padding-top: 35px;
+		}
+	}
+}
 
 .img-box {
 	.img {

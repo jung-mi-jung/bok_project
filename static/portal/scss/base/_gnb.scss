@@ -30,9 +30,12 @@
 					&.on {
 						& + .depth2 {
 							display: flex;
-							justify-content: space-between;
+							// display: grid;
+							// grid-template-columns: auto 376px;
+							// gap: 0 10px;
+							//justify-content: space-between;
 							//background-color: rgba(19, 21, 71, 0.95); 변경전
-							background-color: #fff;
+							//background-color: #fff; 임시주석
 							&::before,
 							&::after {
 								content: "";
@@ -51,13 +54,6 @@
 								width: 100000px;
 								z-index: -1;
 							}
-							/*&::after {
-								right: 0;
-								width: 10000px;
-								//right: -50%;
-								//right: calc(-50% + 10px);
-								border: 1px solid blue;
-							}*/
 						}
 					}
 				}
@@ -83,6 +79,43 @@
 						}
 					}
 				}
+				&.menu01 {
+					.depth2 {
+						ul {
+							
+						}
+					}
+				}
+				&.menu02 {
+					.depth2 {
+						//display: block;
+						background-color: #fff;
+						> ul {
+							> li {
+								&:nth-child(1) {}
+								&:nth-child(2) {}
+								&:nth-child(3) {}
+								&:nth-child(4) {}
+								&:nth-child(5) {}
+							}							
+						}
+					}
+				}
+				&.menu03 {
+					.depth2 {
+						ul {}
+					}
+				}
+				&.menu04 {
+					.depth2 {
+						ul {}
+					}
+				}
+				&.menu05 {
+					.depth2 {
+						ul {}
+					}
+				}
 				// &.menu01 {
 				// 	.depth2 {
 				// 		> ul {
@@ -99,6 +132,14 @@
 				// 	}
 				// }
 			}
+			// > li:nth-child(2) {	//테스트중
+			// 	.depth2 {
+			// 		display: flex;
+			// 		justify-content: space-between;
+			// 		background-color: #fff;
+			// 		grid-template-columns: auto 376px;
+			// 	}
+			// }
 			.depth2 {
 				display: none;
 				position: absolute;
@@ -110,11 +151,15 @@
 				border-top: 1px solid #E6E6E6;
 				> ul {
 					width: 100%;
+					width: calc(100% - 376px);
 					display: flex;
 					flex-wrap: wrap;
 					flex-direction: row;
 					padding-left: 12%;
 					margin: 15px 0;
+					// display:grid;
+					// grid-template-columns: repeat(auto-fill, minmax(20%, auto));
+					// grid-auto-flow: dense;
 					> li {
 						flex-basis: calc(100% / 5);
 						padding: 15px 0;

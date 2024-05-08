@@ -823,9 +823,11 @@ top: 36px;
 }
 }
 .navigation nav > ul > li .depth2 ul {
-width: 100%;
+min-width: -moz-max-content;
+min-width: max-content;
+background-color: #fff;
 padding: 10px 15px;
-line-height: 1.8;
+line-height: 1.25;
 border: 1px solid #E5E5E5;
 border-radius: 0 0 4px 4px;
 box-shadow: 0 4px 2px rgba(127, 24, 24, 0.15);
@@ -833,6 +835,7 @@ box-shadow: 0 4px 2px rgba(127, 24, 24, 0.15);
 .navigation nav > ul > li .depth2 ul li a {
 color: #666;
 display: block;
+padding: 8px 0;
 }
 .navigation nav > ul > li .depth2 ul li a:hover {
 text-decoration: underline;
@@ -1807,10 +1810,24 @@ text-decoration: underline;
 
 .title .ti-announcement {
 display: inline-block;
+vertical-align: middle;
 width: 24px;
 height: 25px;
 margin-right: 4px;
 background-image: url(/static/portal/img/ico/ico-notice.png);
+background-repeat: no-repeat;
+background-size: auto 100%;
+background-repeat: no-repeat;
+background-position-y: -3px;
+}
+
+.icon_secret {
+display: inline-block;
+vertical-align: middle;
+width: 20px;
+height: 21px;
+margin-right: 4px;
+background-image: url(/static/portal/img/ico/ico-lock.png);
 background-repeat: no-repeat;
 background-size: auto 100%;
 background-repeat: no-repeat;
@@ -2185,7 +2202,7 @@ margin-right: 4px;
 margin-top: 15px;
 line-height: 0.8rem;
 display: flex;
-font-size: 14px;
+font-size: 16px;
 }
 .count-total em {
 color: #5772e8;
@@ -2258,6 +2275,10 @@ width: 14px;
 height: 16px;
 background: url(/static/portal/img/ico/ico-hits.png) no-repeat;
 margin-right: 5px;
+}
+.bdLine > ul > li .dataInfo .ico-reply-ing {
+color: #005596;
+margin-left: 20px;
 }
 .bdLine > ul .fileLink {
 position: absolute;
@@ -2671,7 +2692,7 @@ text-rendering: optimizeLegibility;
 font-feature-settings: "liga";
 }
 .videoSet .video-etc {
-padding: 18px 0 30px;
+padding-top: 18px;
 display: flex;
 justify-content: space-between;
 width: 100%;
@@ -2720,6 +2741,9 @@ font-feature-settings: "liga";
 font-size: 18px;
 color: #3B63C4;
 margin: 0 0 1px 5px;
+}
+.videoSet .subtitle {
+margin-top: 30px;
 }
 .videoSet .subtitle,
 .videoSet .detail {
@@ -6889,7 +6913,7 @@ display: block;
 padding: 7px 8px;
 font-size: 1rem;
 font-weight: 500;
-background: #FAFAFA;
+background: #F2F6FA;
 border-radius: 4px;
 border-bottom: 1px solid #118DB4;
 color: #118DB4;
@@ -14644,6 +14668,11 @@ width: 100%;
 height: 200px;
 }
 
+@media (min-width: 1200px) {
+.gnb-stiky main {
+padding-top: 35px;
+}
+}
 .img-box .img {
 display: block;
 height: 1px;

@@ -35,6 +35,33 @@
 	}
 }
 
+.title {	//공지표시
+	.ti-announcement {
+		display: inline-block;
+		vertical-align: middle;
+		width: 24px;
+		height: 25px;
+		margin-right: 4px;
+		background-image: url(/static/eng/img/ico/ico-notice.png);
+		background-repeat: no-repeat;
+		background-size: auto 100%;
+		background-repeat: no-repeat;
+		background-position-y: -3px;
+	}
+}
+.icon_secret {	//비밀글
+	display: inline-block;
+	vertical-align: middle;
+	width: 20px;
+	height: 21px;
+	margin-right: 4px;
+	background-image: url(/static/eng/img/ico/ico-lock.png);
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	background-position-y: -3px;
+}
+
 .bd-line {
 	clear: both;
 	> ul {		
@@ -471,7 +498,7 @@
 	margin-top: 15px;
 	line-height: 0.8rem;
 	display: flex;
-	font-size: 14px;
+	font-size: 16px;
 	em {
 		color: #5772e8;
 		font-weight: 600;

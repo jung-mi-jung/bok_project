@@ -166,7 +166,7 @@ $(function () {
 	// gnb stiky
 	function goToScroll() {
 		// 주 메뉴
-		var h = 60;  96
+		var h = 146;  //96
 		if ($(window).scrollTop() > h) {
 			$('body').addClass('gnb-stiky');
 		} else {
@@ -188,14 +188,17 @@ $(function () {
 			//$(this).parent().parent().addClass('active').parent().siblings().find('>a').removeClass('active');
 			$(this).addClass('on').parent().siblings().find('>a').removeClass('on');
 			//안씀 $(".gnb_bg").show();
+			$("body").addClass("gnbOver");
 			return false;
 		}
 	});
 	$('#gnb > ul > li').on('mouseleave', function () {
 		$('#gnb > ul > li > a').removeClass('on');
+		$("body").removeClass("gnbOver");
 	});
 	$('#gnb .depth2>ul a:last').on('focusout', function (e) {
 		gnb1depth.removeClass('on');
+		$("body").removeClass("gnbOver");
 	});
 
 	$("#gnb .depth3 > ul > li > a.bu").click(function(){
@@ -626,6 +629,12 @@ $(function() {
 		}
 	});
 
+	$(document).click(function(e){
+		if (!$(e.target).is('.navigation a.bu')) {
+			$('.navigation .depth2.active').removeClass('active');
+		}
+	});
+
 	//hgroup sns
 	$(".sns-toggle").click(function(){
 		$(".sns-wrap").addClass("active");		
@@ -685,10 +694,12 @@ $(function() {
 	$(".g-info .search, .toggle-set .search").click(function(){
 		$(".search_wrap").addClass("active");
 		$(".search_wrap .search_wrap_input .search_keyword") .focus();
+		$("body").addClass("gnbOver");
 	})
 	$(".search_wrap .search_close").click(function(){
 		$(".search_wrap").removeClass("active");
 		$(".g-info .search, .toggle-set .search").focus();
+		$("body").removeClass("gnbOver");
 	})
 
 	//search_wrap

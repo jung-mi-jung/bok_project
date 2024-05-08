@@ -123,11 +123,11 @@ $(function () {
 		a11y:{
 			enabled:true,
 		},
-		speed : 3000,
-		autoplay: {
-			delay: 3000,
-			disableOnInteraction: false,
-		},
+		// speed : 3000,
+		// autoplay: {
+		// 	delay: 3000,
+		// 	disableOnInteraction: false,
+		// },
 		pagination: {
 			el: '.swiper-pagination',
 			type: "fraction",
@@ -136,20 +136,20 @@ $(function () {
 		observeParents: true,
 	});
 	issue.init();//초기화
-	$('.issue-stop').on('click', function () {
-		$(this).hide().next().show().focus()
-		issue.autoplay.stop();
-	});
-	$('.issue-play').on('click', function () {
-		$(this).hide().prev().show().focus()
-		issue.autoplay.start();
-	});
-	$('.issue .swiper-slide').on('mouseover', function(){
-		issue.autoplay.stop();
-	});
-	$('.issue .swiper-slide').on('mouseout', function(){
-		issue.autoplay.start();
-	});	
+	// $('.issue-stop').on('click', function () {
+	// 	$(this).hide().next().show().focus()
+	// 	issue.autoplay.stop();
+	// });
+	// $('.issue-play').on('click', function () {
+	// 	$(this).hide().prev().show().focus()
+	// 	issue.autoplay.start();
+	// });
+	// $('.issue .swiper-slide').on('mouseover', function(){
+	// 	issue.autoplay.stop();
+	// });
+	// $('.issue .swiper-slide').on('mouseout', function(){
+	// 	issue.autoplay.start();
+	// });	
 });
 
 
@@ -212,6 +212,11 @@ function slider(){
 					slideShadows: false,
 					stretch: -59,
 				},
+				// speed : 3000,
+				// autoplay: {
+				// 	delay: 3000,
+				// 	disableOnInteraction: false,
+				// },
 				navigation: {
 					//nextEl: $('.slider-' + index).find('.media-next'),
 					//prevEl: $('.slider-' + index).find('.media-prev'),

@@ -1218,6 +1218,9 @@ background: url(/static/portal/img/main/ctrl-on2.png) 50% no-repeat;
 #section2 .swiper .ctrl-set .ctrl button.prev:hover::before {
 transform: rotate(180deg);
 }
+#section2 .swiper .ctrl-set .ctrl button.next {
+margin-left: 20px;
+}
 #section2 .swiper .ctrl-set .ctrl button.next::before {
 transform: rotate(180deg);
 }
@@ -1267,7 +1270,7 @@ width: 100% !important;
 }
 #section2 .swiper .swiper-wrapper a span.img {
 padding-top: 60%;
-border-radius: 2.2%;
+border-radius: 8px;
 }
 #section2 .swiper .swiper-wrapper a span.t {
 position: relative;
@@ -1358,6 +1361,7 @@ margin: 0 10px !important;
 #section2 .swiper .swiper-wrapper a.swiper-slide-active .img {
 width: 560px;
 padding-top: 57%;
+border-radius: 16px;
 }
 @media (max-width: 749px) {
 #section2 .swiper .swiper-wrapper a.swiper-slide-active .img {
@@ -1376,7 +1380,7 @@ bottom: -10px;
 background-color: #39A0FF;
 }
 #section2 .swiper .swiper-wrapper a.swiper-slide-active span.title {
-height: 63px;
+height: 69px;
 color: #131547;
 font-size: 1.5rem;
 text-align: center;
@@ -1539,6 +1543,10 @@ border-radius: 16px;
 background-color: #fff;
 padding: 12px;
 margin-top: 30px;
+opacity: 0;
+}
+#section3 .media .swiper-slide.swiper-slide-prev, #section3 .media .swiper-slide.swiper-slide-active, #section3 .media .swiper-slide.swiper-slide-next {
+opacity: 1;
 }
 @media (min-width: 1200px) {
 #section3 .media .swiper-slide.swiper-slide-active {
@@ -1750,44 +1758,7 @@ position: relative;
 padding: 16px 16px 48px;
 height: 561px;
 overflow: hidden;
-/* 기능 삭제
-@include breakpoint($lg){
-	//&:hover,
-	&.hover {
-		.img-set {
-			.img {
-				padding-top: 63.8%;
-				background-position: 50%;
-				transition: all .5s;
-			}
-		}
-		span {
-			&.txt {
-				@include line-clamp(8);
-				height: 194px;
-			}
-		}
-	}	
-	span {
-		&.txt {
-			@include line-clamp(5);
-			height: 120px;
-
-			transition: all .5s;
-		}
-	}
-	.bottom {
-		opacity: 0;					
-
-	}
-	&:hover,
-	&.hover {
-		padding: 16px 16px 90px;
-		.bottom {
-			opacity: 1;
-		}
-	}
-}*/
+/* 기능 삭제*/
 }
 @media (max-width: 1199px) {
 #section4 .board-list1 .swiper-wrapper .swiper-slide {
@@ -1800,7 +1771,6 @@ padding: 16px;
 }
 }
 #section4 .board-list1 .swiper-wrapper .swiper-slide .bottom {
-display: none !important; /* 기능 삭제 */
 opacity: 1;
 position: absolute;
 bottom: 0;
@@ -1814,7 +1784,7 @@ border-radius: 0 0 16px 16px;
 }
 #section4 .board-list1 .swiper-wrapper .swiper-slide .bottom a {
 position: relative;
-width: calc(50% - 2px);
+width: 100%;
 display: inline-block;
 vertical-align: middle;
 height: 60px;
@@ -1847,8 +1817,54 @@ top: 50%;
 left: -1px;
 margin-top: -11px;
 }
+@media (min-width: 1200px) {
+#section4 .board-list1 .swiper-wrapper .swiper-slide:hover .img-set .img, #section4 .board-list1 .swiper-wrapper .swiper-slide.hover .img-set .img {
+padding-top: 63.8%;
+background-position: 50%;
+transition: all 0.5s;
+}
+#section4 .board-list1 .swiper-wrapper .swiper-slide:hover span.txt, #section4 .board-list1 .swiper-wrapper .swiper-slide.hover span.txt {
+overflow: hidden;
+text-overflow: ellipsis;
+display: block;
+display: -webkit-box;
+-webkit-line-clamp: 8;
+-webkit-box-orient: vertical;
+height: 194px;
+}
+.ie #section4 .board-list1 .swiper-wrapper .swiper-slide:hover span.txt, .ie #section4 .board-list1 .swiper-wrapper .swiper-slide.hover span.txt {
+display: block;
+height: 128px;
+overflow: hidden;
+}
+#section4 .board-list1 .swiper-wrapper .swiper-slide span.txt {
+overflow: hidden;
+text-overflow: ellipsis;
+display: block;
+display: -webkit-box;
+-webkit-line-clamp: 5;
+-webkit-box-orient: vertical;
+height: 120px;
+transition: all 0.5s;
+}
+.ie #section4 .board-list1 .swiper-wrapper .swiper-slide span.txt {
+display: block;
+height: 80px;
+overflow: hidden;
+}
+#section4 .board-list1 .swiper-wrapper .swiper-slide .bottom {
+opacity: 0;
+}
+#section4 .board-list1 .swiper-wrapper .swiper-slide:hover, #section4 .board-list1 .swiper-wrapper .swiper-slide.hover {
+padding: 16px 16px 90px;
+}
+#section4 .board-list1 .swiper-wrapper .swiper-slide:hover .bottom, #section4 .board-list1 .swiper-wrapper .swiper-slide.hover .bottom {
+opacity: 1;
+}
+}
 @media (max-width: 1199px) {
 #section4 .board-list1 .swiper-wrapper .swiper-slide .img-set .img {
+padding-top: 63.8%;
 padding-top: 100%;
 background-position: 50%;
 }
@@ -1865,6 +1881,9 @@ height: 100px;
 display: block;
 height: 64px;
 overflow: hidden;
+}
+#section4 .board-list1 .swiper-wrapper .swiper-slide .bottom {
+opacity: 1;
 }
 }
 @media (max-width: 749px) {
@@ -2176,7 +2195,6 @@ outline-color: #fff;
 #section6 section {
 padding-top: calc((100vh - 1274px) / 2 + 194px);
 }
-.gnb-stiky #section1,
 .gnb-stiky #section2,
 .gnb-stiky #section3,
 .gnb-stiky #section4,

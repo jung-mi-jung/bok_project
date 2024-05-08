@@ -335,7 +335,8 @@
 			}
 		}
 		&-etc {
-			padding: 18px 0 30px;
+			padding-top: 18px;
+			//padding: 18px 0 30px;
 			display: flex;
 			justify-content: space-between;
 			width: 100%;
@@ -358,6 +359,9 @@
 			}
 		}
 	}		
+	.subtitle {
+		margin-top: 30px;
+	}
 	.subtitle,
 	.detail {
 		clear: both;

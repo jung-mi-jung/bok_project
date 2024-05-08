@@ -928,14 +928,14 @@
 									<i class="ctrl-prev"></i>
 									<span class="sr-only">이전 BOK 이슈 보기</span>
 								</button>
-								<button type="button" class="stop issue-stop">
+								<!-- <button type="button" class="stop issue-stop">
 									<i class="ctrl-stop"></i>
 									<span class="sr-only">BOK 이슈 일시정지</span>
 								</button>
 								<button type="button" class="play issue-play" style="display:none">
 									<i class="ctrl-play"></i>
 									<span class="sr-only">BOK 이슈 재생</span>
-								</button>
+								</button> -->
 								<button type="button" class="next issue-next">
 									<i class="ctrl-next"></i>
 									<span class="sr-only">다음 BOK 이슈 보기</span>
@@ -991,20 +991,76 @@
 				<div class="set">
 					<!-- 미디어 탭 -->
 					<div class="tab-sns">
-						<a href="javascript:void(0)" class="sns-youtube active" rel="tab01" title="선택됨">
-							<span>유튜브</span>
-						</a>
-						<a href="javascript:void(0)" class="sns-instagram" rel="tab02">
-							<span>인스타그램</span>
-						</a>
-						<a href="javascript:void(0)" class="sns-facebook" rel="tab03">
+						<a href="javascript:void(0)" class="sns-facebook active" rel="tab01" title="선택됨">
 							<span>페이스북</span>
 						</a>
+						<a href="javascript:void(0)" class="sns-youtube" rel="tab02">
+							<span>유튜브</span>
+						</a>
+						<a href="javascript:void(0)" class="sns-instagram" rel="tab03">
+							<span>인스타그램</span>
+						</a>
+						
 					</div>
 					<!-- // 미디어 탭 -->
 
-					<!-- 유튜브 -->
+					<!-- 페이스북 -->
 					<div class="tab_list slider tab01">
+						<h3 class="sr-only">페이스북</h3>
+						<!-- <div class="ctrl2">
+							<button type="button" class="prev media-prev">
+								<i class="board-ctrl-prev"></i>
+								<span class="sr-only">이전 페이스북 보기</span>
+							</button>
+							<button type="button" class="next media-next">
+								<i class="board-ctrl-next"></i>
+								<span class="sr-only">다음 페이스북 보기</span>
+							</button>
+						</div> -->
+						<div class="swiper-container inner">	
+							<div class="ctrl2">
+								<button type="button" class="prev media-prev">
+									<i class="board-ctrl-prev"></i>
+									<span class="sr-only">이전 페이스북 보기</span>
+								</button>
+								<button type="button" class="next media-next">
+									<i class="board-ctrl-next"></i>
+									<span class="sr-only">다음 페이스북 보기</span>
+								</button>
+							</div>
+							<div class="swiper-wrapper media">
+								<a href="" class="swiper-slide">
+									<span class="img" style="background-image: url('/static/portal/img/main/img_media03.png');"></span>
+									<span class="title">BOK금융안정보고서|2023년 12월|</span>
+									<span class="txt">한국은행법 제96조 제1항에 의거 한국은행의 「금융안정보고서」(2023년 12월)를 작성하였음. ※ 자세한 내용은 붙임을 참고하시기 바랍니다.</span>
+								</a>
+								<a href="" class="swiper-slide">
+									<span class="img" style="background-image: url('/static/portal/img/main/img_media02.png');"></span>
+									<span class="title">A.I와 노동시장 변화</span>
+									<span class="txt">지난 10년간 AI는 빠른 발전을 거듭하면서 다양한 분야에서 활용되고 있으며 앞으로도 그 활용도가 더욱 높아질 전망입니다. 연구에 따르면, 국내 일자리 중 전체 일자리의 12%에 해당하는 약 341만개의 일자리가 AI에 의해 대체될 가능성이 높은 것으로 추정된다는데요. 어떤 일자리가 AI에 의해 대체될 가능성이 높은지 알아보겠습니다</span>
+								</a>
+								<a href="" class="swiper-slide">
+									<span class="img" style="background-image: url('/static/portal/img/main/img_media01.png');"></span>
+									<span class="title">페이스북</span>
+									<span class="txt">지난 10년간 AI는 빠른 발전을 거듭하면서 다양한 분야에서 활용되고 있으며 앞으로도 그 활용도가 더욱 높아질 전망입니다. 연구에 따르면, 국내 일자리 중 전체 일자리의 12%에 해당하는 약 341만개의 일자리가 AI에 의해 대체될 가능성이 높은 것으로 추정된다는데요. 어떤 일자리가 AI에 의해 대체될 가능성이 높은지 알아보겠습니다</span>
+								</a>
+								<a href="" class="swiper-slide">
+									<span class="img" style="background-image: url('/static/portal/img/main/img_media02.png');"></span>
+									<span class="title">A.I와 노동시장 변화</span>
+									<span class="txt">지난 10년간 AI는 빠른 발전을 거듭하면서 다양한 분야에서 활용되고 있으며 앞으로도 그 활용도가 더욱 높아질 전망입니다. 연구에 따르면, 국내 일자리 중 전체 일자리의 12%에 해당하는 약 341만개의 일자리가 AI에 의해 대체될 가능성이 높은 것으로 추정된다는데요. 어떤 일자리가 AI에 의해 대체될 가능성이 높은지 알아보겠습니다</span>
+								</a>
+							</div>
+							<p class="more">
+								<a href="">
+									<span class="sr-only">페이스북 더보기</span>
+								</a>
+							</p>
+						</div>
+					</div>
+					<!-- //페이스북 -->
+
+					<!-- 유튜브 -->
+					<div class="tab_list slider tab02">
 						<h3 class="sr-only">유튜브</h3>
 						<!-- <div class="ctrl2">
 							<button type="button" class="prev media-prev">
@@ -1059,7 +1115,7 @@
 					<!-- //유튜브 -->
 
 					<!-- 인스타그램 -->
-					<div class="tab_list slider tab02">
+					<div class="tab_list slider tab03">
 						<h3 class="sr-only">인스타그램</h3>
 						<!-- <div class="ctrl2">
 							<button type="button" class="prev media-prev">
@@ -1112,61 +1168,7 @@
 						</div>
 					</div>
 					<!-- //인스타그램 -->
-
-					<!-- 페이스북 -->
-					<div class="tab_list slider tab03">
-						<h3 class="sr-only">페이스북</h3>
-						<!-- <div class="ctrl2">
-							<button type="button" class="prev media-prev">
-								<i class="board-ctrl-prev"></i>
-								<span class="sr-only">이전 페이스북 보기</span>
-							</button>
-							<button type="button" class="next media-next">
-								<i class="board-ctrl-next"></i>
-								<span class="sr-only">다음 페이스북 보기</span>
-							</button>
-						</div> -->
-						<div class="swiper-container inner">	
-							<div class="ctrl2">
-								<button type="button" class="prev media-prev">
-									<i class="board-ctrl-prev"></i>
-									<span class="sr-only">이전 페이스북 보기</span>
-								</button>
-								<button type="button" class="next media-next">
-									<i class="board-ctrl-next"></i>
-									<span class="sr-only">다음 페이스북 보기</span>
-								</button>
-							</div>
-							<div class="swiper-wrapper media">
-								<a href="" class="swiper-slide">
-									<span class="img" style="background-image: url('/static/portal/img/main/img_media03.png');"></span>
-									<span class="title">BOK금융안정보고서|2023년 12월|</span>
-									<span class="txt">한국은행법 제96조 제1항에 의거 한국은행의 「금융안정보고서」(2023년 12월)를 작성하였음. ※ 자세한 내용은 붙임을 참고하시기 바랍니다.</span>
-								</a>
-								<a href="" class="swiper-slide">
-									<span class="img" style="background-image: url('/static/portal/img/main/img_media02.png');"></span>
-									<span class="title">A.I와 노동시장 변화</span>
-									<span class="txt">지난 10년간 AI는 빠른 발전을 거듭하면서 다양한 분야에서 활용되고 있으며 앞으로도 그 활용도가 더욱 높아질 전망입니다. 연구에 따르면, 국내 일자리 중 전체 일자리의 12%에 해당하는 약 341만개의 일자리가 AI에 의해 대체될 가능성이 높은 것으로 추정된다는데요. 어떤 일자리가 AI에 의해 대체될 가능성이 높은지 알아보겠습니다</span>
-								</a>
-								<a href="" class="swiper-slide">
-									<span class="img" style="background-image: url('/static/portal/img/main/img_media01.png');"></span>
-									<span class="title">페이스북</span>
-									<span class="txt">지난 10년간 AI는 빠른 발전을 거듭하면서 다양한 분야에서 활용되고 있으며 앞으로도 그 활용도가 더욱 높아질 전망입니다. 연구에 따르면, 국내 일자리 중 전체 일자리의 12%에 해당하는 약 341만개의 일자리가 AI에 의해 대체될 가능성이 높은 것으로 추정된다는데요. 어떤 일자리가 AI에 의해 대체될 가능성이 높은지 알아보겠습니다</span>
-								</a>
-								<a href="" class="swiper-slide">
-									<span class="img" style="background-image: url('/static/portal/img/main/img_media02.png');"></span>
-									<span class="title">A.I와 노동시장 변화</span>
-									<span class="txt">지난 10년간 AI는 빠른 발전을 거듭하면서 다양한 분야에서 활용되고 있으며 앞으로도 그 활용도가 더욱 높아질 전망입니다. 연구에 따르면, 국내 일자리 중 전체 일자리의 12%에 해당하는 약 341만개의 일자리가 AI에 의해 대체될 가능성이 높은 것으로 추정된다는데요. 어떤 일자리가 AI에 의해 대체될 가능성이 높은지 알아보겠습니다</span>
-								</a>
-							</div>
-							<p class="more">
-								<a href="">
-									<span class="sr-only">페이스북 더보기</span>
-								</a>
-							</p>
-						</div>
-					</div>
-					<!-- //페이스북 -->
+					
 				</div>
 			</section>
 		</div>
@@ -1200,9 +1202,9 @@
 									<a href="" class="i-view">
 										<span class="sr-only">상세보기</span>
 									</a>
-									<a href="" class="i-download">
+									<!-- <a href="" class="i-download">
 										<span class="sr-only">다운로드</span>
-									</a>
+									</a> -->
 								</div>
 							</div>
 							<div class="swiper-slide">
@@ -1218,9 +1220,9 @@
 									<a href="" class="i-view">
 										<span class="sr-only">상세보기</span>
 									</a>
-									<a href="" class="i-download">
+									<!-- <a href="" class="i-download">
 										<span class="sr-only">다운로드</span>
-									</a>
+									</a> -->
 								</div>
 							</div>
 							<div class="swiper-slide">
@@ -1237,9 +1239,9 @@
 									<a href="" class="i-view">
 										<span class="sr-only">상세보기</span>
 									</a>
-									<a href="" class="i-download">
+									<!-- <a href="" class="i-download">
 										<span class="sr-only">다운로드</span>
-									</a>
+									</a> -->
 								</div>
 							</div>
 							<div class="swiper-slide">
@@ -1255,9 +1257,9 @@
 									<a href="" class="i-view">
 										<span class="sr-only">상세보기</span>
 									</a>
-									<a href="" class="i-download">
+									<!-- <a href="" class="i-download">
 										<span class="sr-only">다운로드</span>
-									</a>
+									</a> -->
 								</div>
 							</div>
 							<div class="swiper-slide">
@@ -1273,9 +1275,9 @@
 									<a href="" class="i-view">
 										<span class="sr-only">상세보기</span>
 									</a>
-									<a href="" class="i-download">
+									<!-- <a href="" class="i-download">
 										<span class="sr-only">다운로드</span>
-									</a>
+									</a> -->
 								</div>
 							</div>
 						</div>

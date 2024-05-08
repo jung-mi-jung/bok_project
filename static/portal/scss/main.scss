@@ -671,6 +671,7 @@
 						}
 					}
 					&.next {
+						margin-left: 20px;	//정지, 시작 버튼 없을 경우
 						&::before {
 							transform: rotate(180deg);
 						}
@@ -717,7 +718,8 @@
 				span {				
 					&.img {
 						padding-top: 60%;
-						border-radius: 2.2%;
+						//border-radius: 2.2%;
+						border-radius: 8px;
 					}
 					&.t {
 						position: relative;
@@ -789,6 +791,7 @@
 					.img {
 						width: 560px;
 						padding-top: 57%;
+						border-radius: 16px;
 						@include breakpoint($sm){
 							width: 100%;
 						}
@@ -806,7 +809,7 @@
 							}
 						}
 						&.title {
-							height: 63px;
+							height: 69px;
 							color: $point;
 							font-size: rem(24);
 							text-align: center;
@@ -979,12 +982,12 @@
 			background-color: #fff;
 			padding: 12px;
 			margin-top: 30px;	
-			// opacity: 0;	
-			// &.swiper-slide-prev,
-			// &.swiper-slide-active,
-			// &.swiper-slide-next {
-			// 	opacity: 1;
-			// }
+			opacity: 0;	
+			&.swiper-slide-prev,
+			&.swiper-slide-active,
+			&.swiper-slide-next {
+				opacity: 1;
+			}
 			@include breakpoint($lg){
 				&.swiper-slide-active {
 					margin-top: 0;
@@ -1189,7 +1192,7 @@
 					padding: 16px;
 				}
 				.bottom {
-					display: none !important; /* 기능 삭제 */
+					//display: none !important; /* 기능 삭제 */
 					opacity: 1;
 					position: absolute;
 					bottom: 0;
@@ -1202,7 +1205,8 @@
 					border-radius: 0 0 16px 16px;	
 					a {
 						position: relative;
-						width: calc(50% - 2px);
+						width: 100%;
+						//width: calc(50% - 2px);
 						display: inline-block;
 						vertical-align: middle;
 						height: 60px;
@@ -1239,9 +1243,9 @@
 						}
 					}
 				}
-				/* 기능 삭제
+				/* 기능 삭제*/
 				@include breakpoint($lg){
-					//&:hover,
+					&:hover,
 					&.hover {
 						.img-set {
 							.img {
@@ -1276,11 +1280,11 @@
 							opacity: 1;
 						}
 					}
-				}*/
+				}
 				@include breakpoint($smd){
 					.img-set {
 						.img {
-							//padding-top: 63.8%;  기능 삭제 전
+							padding-top: 63.8%;  //(기능 살림) 기능 삭제 전
 							padding-top: 100%;
 							background-position: 50%;
 						}
@@ -1292,7 +1296,7 @@
 						}
 					}
 					.bottom {
-						//opacity: 1;  삭제
+						opacity: 1;  //삭제
 					}					
 				}
 				@include breakpoint($sm){
@@ -1507,7 +1511,7 @@
 	}
 
 
-	.gnb-stiky #section1, 
+	//.gnb-stiky #section1, 
 	.gnb-stiky #section2, 
 	.gnb-stiky #section3,
 	.gnb-stiky #section4,
