@@ -6,21 +6,22 @@ $(function () {
 	//메인 비쥬얼 영역 swiper 설정
 	var section1Visual = new Swiper('.section1-visual', {
 		speed: 1000,
+		loop: true,
 		autoplay: {
 			delay: 5000,
 			disableOnInteraction: false,
 		},
 		grabCursor: true,
-		effect: "creative",
-		creativeEffect: {
-			prev: {
-				shadow: true,
-				translate: ["-20%", 0, -1],
-			},
-			next: {
-				translate: ["100%", 0, 0],
-			},
-		},
+		// effect: "creative",
+		// creativeEffect: {
+		// 	prev: {
+		// 		shadow: true,
+		// 		translate: ["-20%", 0, -1],
+		// 	},
+		// 	next: {
+		// 		translate: ["100%", 0, 0],
+		// 	},
+		// },
 		navigation: {
 			nextEl: '.section1-visual__swiper-button-next',
 			prevEl: '.section1-visual__swiper-button-prev',

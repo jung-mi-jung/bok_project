@@ -3319,7 +3319,7 @@ margin: 0 -12px;
 }
 @media (max-width: 1199px) {
 .reference-news dl dd ul {
-width: -moz-max-content;
+width: -webkit-max-content;
 width: max-content;
 }
 }
@@ -3440,7 +3440,7 @@ margin: -12px -12px 0;
 }
 @media (max-width: 1199px) {
 .reference-media dl dd ul {
-width: -moz-max-content;
+width: -webkit-max-content;
 width: max-content;
 }
 }
