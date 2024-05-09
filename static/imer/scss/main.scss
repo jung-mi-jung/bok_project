@@ -328,7 +328,7 @@
 .section {
 	height: auto;
 	@include breakpoint($lg){
-		min-height: 1080px;
+		// min-height: 1080px;
 		height: 100vh;
 	}	
 	h2 {
@@ -822,15 +822,15 @@
 	}
 
 
-	.gnb-stiky #section1, 
-	.gnb-stiky #section2, 
-	.gnb-stiky #section3,
-	.gnb-stiky #section4,
-	.gnb-stiky #section5,
-	.gnb-stiky #section6 {
-		height: 100vh;
-		padding: 74px 0 0px;
-	}
+	// .gnb-stiky #section1, 
+	// .gnb-stiky #section2, 
+	// .gnb-stiky #section3,
+	// .gnb-stiky #section4,
+	// .gnb-stiky #section5,
+	// .gnb-stiky #section6 {
+	// 	height: 100vh;
+	// 	padding: 74px 0 0px;
+	// }
 }
 
 

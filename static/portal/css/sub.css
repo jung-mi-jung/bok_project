@@ -11330,13 +11330,17 @@ overflow-x: hidden;
 }
 .modal {
 position: fixed;
+display: flex !important;
 top: 0;
 left: 0;
 right: 0;
 bottom: 0;
 z-index: 1100;
-display: none;
+display: none !important;
 overflow: hidden;
+}
+.modal.fade.in {
+display: flex !important;
 }
 .modal.fade.in::before {
 content: "";

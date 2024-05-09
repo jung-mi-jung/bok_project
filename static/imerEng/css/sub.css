@@ -2634,7 +2634,7 @@ background: url(/static/portal/img/common/arr01_on.png) 50% no-repeat;
 
 .count-total {
 color: #1A1A1A;
-font-size: 0.9375rem;
+font-size: 1rem !important;
 margin-top: 15px;
 line-height: 0.8rem;
 display: flex;
@@ -2917,8 +2917,8 @@ margin-right: 5px;
 }
 @media (max-width: 1199px) {
 .bd-view .dataInfoSet .depart::before {
-width: 16px;
-height: 16px;
+transform: scale(0.8);
+transform-origin: left;
 }
 }
 .bd-view .dataInfoSet .type2 {
@@ -3568,8 +3568,8 @@ margin-right: 5px;
 }
 @media (max-width: 1199px) {
 .bd-blog .dataInfoSet .depart::before {
-width: 16px;
-height: 16px;
+transform: scale(0.8);
+transform-origin: left;
 }
 }
 .bd-blog .dataInfoSet .dataInfo {
@@ -4233,15 +4233,19 @@ padding-left: 20px;
 padding-left: 40px;
 }
 }
-.paginationSet {
+.pagination-set {
 clear: both;
-text-align: center;
-margin-top: 60px;
+padding-top: 60px;
 }
 @media (max-width: 749px) {
-.paginationSet {
-margin-top: 20px;
+.pagination-set {
+padding-top: 20px;
+padding-bottom: 40px;
 }
+}
+
+.paginationSet {
+text-align: center;
 }
 
 .pagination {
@@ -5300,7 +5304,7 @@ z-index: 1;
 content: "";
 display: inline-block;
 background-color: #e2e2e2;
-width: calc(100% - 45px);
+width: calc(100% - 80px);
 height: 1px;
 position: absolute;
 top: 50%;
@@ -6852,6 +6856,7 @@ color: #3B63C4;
 /* 프로필 상세 팝업 */
 .profilePop > div {
 position: relative;
+width: 100%;
 height: 100%;
 transform: translateX(200%);
 transition: transform 0.4s;
@@ -8449,6 +8454,7 @@ color: #1a1a1a;
 
 .datepicker {
 z-index: 10000 !important;
+min-width: 240px !important;
 }
 .datepicker table {
 font-size: 15px;
@@ -8631,12 +8637,17 @@ overflow-x: hidden;
 }
 .modal {
 position: fixed;
+display: flex !important;
 top: 0;
 left: 0;
 right: 0;
 bottom: 0;
 z-index: 1100;
-display: none;
+display: none !important;
+overflow: hidden;
+}
+.modal.fade.in {
+display: flex !important;
 }
 .modal.fade.in::before {
 content: "";
@@ -9786,4 +9797,4 @@ background-color: #3B63C4;
 .userType .auth .col #ipinLoginBtn strong {
 background-color: #39A0FF;
 }
-/*# sourceMappingURL=../maps/sub.css.map */
+/*# sourceMappingURL=../external/staticimerEng/maps/sub.css.map */

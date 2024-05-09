@@ -412,7 +412,6 @@ height: auto;
 }
 @media (min-width: 1200px) {
 .section {
-min-height: 1080px;
 height: 100vh;
 }
 }
@@ -975,15 +974,6 @@ box-shadow: none;
 #section6 section {
 padding-top: calc((100vh - 1274px) / 2 + 194px);
 }
-.gnb-stiky #section1,
-.gnb-stiky #section2,
-.gnb-stiky #section3,
-.gnb-stiky #section4,
-.gnb-stiky #section5,
-.gnb-stiky #section6 {
-height: 100vh;
-padding: 74px 0 0px;
-}
 }
 #footer {
 margin-top: 0;
@@ -997,4 +987,4 @@ width: 0%;
 width: 100%;
 }
 }
-/*# sourceMappingURL=../maps/main.css.map */
+/*# sourceMappingURL=../external/staticimer/maps/main.css.map */

@@ -391,6 +391,7 @@
 .profilePop {
 	> div {
 		position: relative;
+		width: 100%;
 		height: 100%;
 		transform: translateX(200%);
 		transition: transform 0.4s ;

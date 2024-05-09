@@ -186,7 +186,8 @@
 			ul {
 				display: none;
 				position: absolute;
-				top: -203px;
+				// top: -203px;
+				bottom: 35px;
 				left: 0;
 				z-index: 9;
 				width: 100%;
@@ -194,11 +195,11 @@
 				border-radius: 8px;
 				border: 1px solid #E5E5E5;
 				background-color: #fff;
-				@include breakpoint($sm){
-					left: 0;
-					// width: calc(100% - 32px);
-					top: 35px;
-				}
+				// @include breakpoint($sm){
+				// 	left: 0;
+				// 	// width: calc(100% - 32px);
+				// 	top: 35px;
+				// }
 				a {
 					display: block;
 					padding: 1px 0;

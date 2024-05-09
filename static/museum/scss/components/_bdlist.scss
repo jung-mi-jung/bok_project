@@ -16,9 +16,15 @@
 		margin-bottom: 0;
 	}
 }
+
+// 게시물 카운트
 .count-total {
 	color: $black;
-	font-size: rem(15);
+	font-size: rem(16) !important;
+	margin-top: 15px;
+	line-height: 0.8rem;
+	display: flex;
+	font-size: 14px;
 	&::before {
 		content: "";
 		display: inline-block;
@@ -27,6 +33,13 @@
 		background-color: $black;
 		border-radius: 50%;
 		margin: 5px 8px 0 0;
+	}
+	em {
+		color: #5772e8;
+		font-weight: 600;
+		font-style: normal;
+		display: inline-block;
+		margin-left: 4px;
 	}
 	strong {
 		font-weight: 600;
@@ -426,20 +439,5 @@
 	}
 	.nodata {
 		text-align: center;
-	}
-}
-
-// 게시물 카운트
-.count-total {
-	margin-top: 15px;
-	line-height: 0.8rem;
-	display: flex;
-	font-size: 14px;
-	em {
-		color: #5772e8;
-		font-weight: 600;
-		font-style: normal;
-		display: inline-block;
-		margin-left: 4px;
 	}
 }
