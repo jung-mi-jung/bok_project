@@ -64,6 +64,15 @@ p.bu-dot {
 	> li {
 		@include bu-dot;
 	}
+	&.type2 {
+		@include breakpoint($lg){
+			display: flex;
+			flex-wrap: wrap;
+			> li {
+				width: 50%;
+			}
+		}
+	}
 }
 .bu-dot2 {
 	position: relative;

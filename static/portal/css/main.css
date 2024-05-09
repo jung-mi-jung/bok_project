@@ -949,17 +949,46 @@ color: #fff;
 position: static;
 color: #fff;
 text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
-font-size: 1.6875rem;
 font-weight: 300;
 }
 .section1-visual .swiper-pagination-current {
-color: #39A0FF;
+font-size: 1.25rem;
 font-weight: 700;
-font-size: 2.25rem;
+color: rgb(255, 255, 255);
+}
+.section1-visual .swiper-pagination-total {
+font-size: 1.125rem;
+margin-left: 82px;
 }
 .section1-visual .swiper-pagination span {
 display: inline-block;
 padding: 0 10px;
+}
+.section1-visual .autoplay-progress {
+position: absolute;
+top: 50%;
+left: 82px;
+width: 82px;
+height: 4px;
+transform: translateY(-50%);
+background: rgba(255, 255, 255, 0.6);
+}
+@media (max-width: 749px) {
+.section1-visual .autoplay-progress {
+left: 98px;
+}
+}
+.section1-visual .autoplay-progress .progress {
+display: block;
+width: 0px;
+height: 4px;
+background: #39A0FF;
+}
+.section1-visual .autoplay-progress .progress.active {
+animation: 6s progress linear;
+}
+.section1-visual .autoplay-progress .progress.first {
+animation: 5s progress linear;
 }
 
 .s1-right-set {
@@ -2254,6 +2283,14 @@ transform: translateY(-10px);
 100% {
 opacity: 1;
 transform: translateY(0);
+}
+}
+@keyframes progress {
+0% {
+width: 0%;
+}
+100% {
+width: 100%;
 }
 }
 /*# sourceMappingURL=../maps/main.css.map */

@@ -116,6 +116,9 @@
 				}
 			}
 		}
+		&.type2 {
+			position: static;
+		}
 		.date {
 			&::before {
 				content: "";

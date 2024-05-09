@@ -164,6 +164,14 @@
 			.date {
 				color: #767676;
 			}
+			.ico-reply-ing {
+				color: $red;
+				margin-left: 20px;
+			}
+			.ico-reply-end {
+				color: $color-point;
+				margin-left: 20px;
+			}
 			&:hover {
 				background-color: #F2F6FA;				
 				&::before {
@@ -572,6 +580,14 @@
 						background: url(/static/eng/img/ico/ico-hits.png) no-repeat;
 						margin-right: 5px;
 					}
+				}
+				.ico-reply-ing {
+					color: $red;
+					margin-left: 20px;
+				}
+				.ico-reply-end {
+					color: $color-point;
+					margin-left: 20px;
 				}
 			}			
 		}

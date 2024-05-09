@@ -13,9 +13,9 @@ $(function () {
 		// Optional parameters
 		// direction: 'vertical',
 		loop: true,
-		speed: 1500,
+		speed: 2000,
 		autoplay: {
-			delay: 10000, // 시간 설정
+			delay: 5000, // 시간 설정
 			disableOnInteraction: false, // false-스와이프 후 자동 재생
 			loop: true, //무한반복 할지말지,
 		},
@@ -28,16 +28,25 @@ $(function () {
 		creativeEffect: {
 			prev: {
 				shadow: true,
-				origin: "left center",
-				translate: ["-5%", 0, -200],
-				rotate: [0, 100, 0],
+				translate: ["-20%", 0, -1],
 			},
 			next: {
-				origin: "right center",
-				translate: ["5%", 0, -200],
-				rotate: [0, -100, 0],
+				translate: ["100%", 0, 0],
 			},
 		},
+		// creativeEffect: {
+		// 	prev: {
+		// 		shadow: true,
+		// 		origin: "left center",
+		// 		translate: ["-5%", 0, -200],
+		// 		rotate: [0, 100, 0],
+		// 	},
+		// 	next: {
+		// 		origin: "right center",
+		// 		translate: ["5%", 0, -200],
+		// 		rotate: [0, -100, 0],
+		// 	},
+		// },
 		grabCursor: true,		
 		//effect: "creative",
 		/*effect: "fade",
@@ -60,8 +69,17 @@ $(function () {
 			prevEl: '.section1-visual__swiper-button-prev',
 		},
 		pagination: {
-			el: '.section1-visual .swiper-pagination',
+			el: '.pagination_fraction',
 			type: "fraction",
+			formatFractionCurrent: function (number) {
+				return ('0' + number).slice(-2);
+			},
+			formatFractionTotal: function (number) {
+				return ('0' + number).slice(-2);
+			},
+			renderFraction: function (currentClass, totalClass) {
+				return '<span class="' + currentClass + '"></span>' + '<span class="' + totalClass + '"></span>';
+			}
 		},
 		/*pagination: {   // 페이저 버튼 사용자 설정
 			el: '.section1-visual-paging',  // 페이저 버튼을 담을 태그 설정
@@ -82,15 +100,35 @@ $(function () {
 			slideLabelMessage: '총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.',
 		},
 	});
+	//메인 비쥬얼 영역 progress 추가 설정
+	section1Visual.on('slideChange',function(){
+
+		if ( $(".section1-visual").hasClass("current-stop") ) {
+			return $(".progress").removeClass('active first');
+			
+		}
+		$(".progress").removeClass('active first');
+		console.log($(".progress").offset());
+		
+		$(".progress").addClass('active');
+	});
 
 
+	//자동 재생 멈춤
 	$('.section1-visual__swiper-button-stop').on('click', function () {
+		$(this).parents(".swiper").addClass("current-stop");
 		$(this).hide().next().show().focus()
 		section1Visual.autoplay.stop();
+
+		$(".section1-visual .autoplay-progress .progress").removeClass("active first");
 	});
+	//자동 재생 플레이
 	$('.section1-visual__swiper-button-play').on('click', function () {
+		$(this).parents(".swiper").removeClass("current-stop");
 		$(this).hide().prev().show().focus()
 		section1Visual.autoplay.start();
+
+		$(".section1-visual .autoplay-progress .progress").addClass("active");
 	});
 	$('.section1-visual .swiper-slide').on('mouseover', function(){
 		section1Visual.autoplay.stop();

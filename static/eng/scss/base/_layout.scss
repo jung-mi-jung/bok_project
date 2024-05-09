@@ -225,6 +225,7 @@ body.gnbOver {
 										font-weight: 300;
 										border-radius: 4px;
 										padding: 4px;
+										line-height: initial;
 										&.mypg {
 											background-color: $color-point;
 											&::before {
@@ -1655,6 +1656,9 @@ body.gnbOver {
 		border-radius: 50px;
 		background-color: #fff;
 		padding: 15px 15px;
+		.twitter-typeahead {
+			width: 100%;
+		}
 		.search_keyword {
 			border: 0;
 			width: calc(100% - 70px);

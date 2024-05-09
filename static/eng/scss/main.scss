@@ -411,16 +411,44 @@
 		color: #fff;
 		//color: rgba(255, 255, 255, 0.8);
 		text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
-		font-size: rem(27);
+		//font-size: rem(27);
 		font-weight: 300;
 		&-current {
-			color: #39A0FF;
+			font-size: rem(20);
 			font-weight: 700;
-			font-size: rem(36);
+			color: rgba(255, 255, 255, 1);
+		}
+		&-total {
+			font-size: rem(18);
+			margin-left: 82px;
 		}
 		span {
 			display: inline-block;
 			padding: 0 10px;
+		}
+	}
+	.autoplay-progress {
+		position: absolute;
+		top: 50%;
+		left: calc(78px + 4px);
+		width: 82px;
+		height: 4px;
+		transform: translateY(-50%);
+		background: rgba(255,255,255,0.6);
+		@include breakpoint($sm) { 
+			left: calc(78px + 20px);
+		}
+		.progress {
+			display: block;
+			width: 0px;
+			height: 4px;
+			background: #39A0FF;
+			&.active {
+				animation: 6s progress linear;
+			}
+			&.first {
+				animation: 5s progress linear;
+			}
 		}
 	}
 }
@@ -1427,5 +1455,15 @@
 	100% {
 		opacity: 1;
 		transform: translateY(0)
+	}
+}
+
+//비주얼
+@keyframes progress {
+	0% {
+		width: 0%;
+	}
+	100% {
+		width: 100%;
 	}
 }

@@ -79,10 +79,49 @@
 						}
 					}
 				}
+				//gnb 개별 위치 지정
 				&.menu01 {
 					.depth2 {
-						ul {
-							
+						height: 320px;
+						//margin-left: -12%;
+						//width: calc(100% - 376px - 12%);
+						> ul {
+							position: relative;
+							> li {
+								position: absolute;
+								&:nth-child(1) {
+									top: 0;
+									left: 0;
+								}
+								&:nth-child(2) {
+									top: 53px;
+									left: 0;
+								}
+								&:nth-child(3) {
+									top: 168px;
+									left: 0;
+								}
+								&:nth-child(4) {
+									top: 220px;
+									left: 0;
+								}
+								&:nth-child(5) {
+									top: 0;
+									left: 20%;
+								}
+								&:nth-child(6) {
+									top: 0;
+									left: 40%;
+								}
+								&:nth-child(7) {
+									top: 0;
+									left: 60%;
+								}
+								&:nth-child(8) {
+									top: 34px;
+									left: 80%;
+								}
+							}	
 						}
 					}
 				}

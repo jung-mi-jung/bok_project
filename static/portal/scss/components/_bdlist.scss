@@ -164,6 +164,14 @@
 			.date {
 				color: #767676;
 			}
+			.ico-reply-ing {
+				color: $red;
+				margin-left: 20px;
+			}
+			.ico-reply-end {
+				color: $color-point;
+				margin-left: 20px;
+			}
 			&:hover {
 				background-color: #F2F6FA;				
 				&::before {
@@ -574,6 +582,10 @@
 					}
 				}
 				.ico-reply-ing {
+					color: $red;
+					margin-left: 20px;
+				}
+				.ico-reply-end {
 					color: $color-point;
 					margin-left: 20px;
 				}

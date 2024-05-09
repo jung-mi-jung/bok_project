@@ -112,6 +112,15 @@ background-color: #4D4D4D;
 border-radius: 50%;
 content: "";
 }
+@media (min-width: 1200px) {
+.bu-dot.type2 {
+display: flex;
+flex-wrap: wrap;
+}
+.bu-dot.type2 > li {
+width: 50%;
+}
+}
 
 .bu-dot2 {
 position: relative;
@@ -1968,6 +1977,14 @@ display: inline-block;
 .bd-line > ul > li .date {
 color: #767676;
 }
+.bd-line > ul > li .ico-reply-ing {
+color: #C81720;
+margin-left: 20px;
+}
+.bd-line > ul > li .ico-reply-end {
+color: #005596;
+margin-left: 20px;
+}
 .bd-line > ul > li:hover {
 background-color: #F2F6FA;
 }
@@ -2277,6 +2294,10 @@ background: url(/static/portal/img/ico/ico-hits.png) no-repeat;
 margin-right: 5px;
 }
 .bdLine > ul > li .dataInfo .ico-reply-ing {
+color: #C81720;
+margin-left: 20px;
+}
+.bdLine > ul > li .dataInfo .ico-reply-end {
 color: #005596;
 margin-left: 20px;
 }
@@ -2434,6 +2455,9 @@ right: 0;
 .bd-view .dataInfoSet .dataInfo .ass::after {
 display: none;
 }
+}
+.bd-view .dataInfoSet .dataInfo.type2 {
+position: static;
 }
 .bd-view .dataInfoSet .dataInfo .date::before {
 content: "";
@@ -2881,6 +2905,9 @@ right: 0;
 .bd-blog .dataInfoSet .dataInfo .ass::after {
 display: none;
 }
+}
+.bd-blog .dataInfoSet .dataInfo.type2 {
+position: static;
 }
 .bd-blog .dataInfoSet .dataInfo .date::before {
 content: "";
@@ -3427,7 +3454,7 @@ position: relative;
 width: 1140px;
 max-width: 100%;
 margin: 30px auto;
-padding-bottom: 40px;
+padding-top: 50px;
 }
 .card-photo .photo-ctrl button {
 position: absolute;
@@ -3474,7 +3501,7 @@ transform: rotate(0);
 }
 .card-photo .photo-ctrl .swiper-pagination {
 position: absolute;
-bottom: 0;
+top: 0;
 left: 0;
 width: 100%;
 text-align: center;

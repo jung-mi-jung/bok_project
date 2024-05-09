@@ -878,16 +878,20 @@
 						</div>
 					</a>
 					<div class="section1-visual__ctrl">
-						<button type=button class="section1-visual__swiper-button-prev"></button>
+						<button type="button" class="section1-visual__swiper-button-prev" aria-label="이전 비주얼"></button>
 						<div>
-							<div class="swiper-pagination"></div>
+							<!--<div class="swiper-pagination"></div>-->
+							<div class="swiper-pagination pagination_fraction"></div>
+							<div class="autoplay-progress pagination_progress">
+								<span class="progress first"></span>
+							</div>
 						</div>
-						<button type=button class="section1-visual__swiper-button-next"></button>
+						<button type=button class="section1-visual__swiper-button-next" aria-label="다음 비주얼"></button>
 						<button type=button class="section1-visual__swiper-button-stop">
-							<span class="sr-only">슬라이드 일시정지</span>
+							<span class="sr-only">비주얼 일시정지</span>
 						</button>	
 						<button type=button class="section1-visual__swiper-button-play" style="display: none;">
-							<span class="sr-only">슬라이드 재생</span>
+							<span class="sr-only">비주얼 재생</span>
 						</button>					
 					</div>
 				</div>
