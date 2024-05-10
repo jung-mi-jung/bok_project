@@ -12971,6 +12971,7 @@ padding: 15px 0;
 display: block;
 }
 .sub-main .notice-set .notice ul li span.title {
+width: 100%;
 color: #222;
 font-size: 1.125rem;
 font-weight: 500;

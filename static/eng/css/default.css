@@ -2029,7 +2029,7 @@ text-rendering: optimizeLegibility;
 font-feature-settings: "liga";
 -webkit-font-feature-settings: "liga";
 color: #005596;
-font-size: 36px;
+font-size: 39px;
 }
 @media (max-width: 1199px) {
 #header .toggle-set .all-nav-toggle {

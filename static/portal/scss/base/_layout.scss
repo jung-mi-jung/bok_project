@@ -264,7 +264,7 @@ body.gnbOver {
 			&::before {
 				@include font-ico-outline('\e5d2');
 				color: $color-point;
-				font-size: 36px;
+				font-size: 39px;
 			}
 			@include breakpoint($smd){
 				// display: none;

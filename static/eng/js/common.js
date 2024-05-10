@@ -185,9 +185,7 @@ $(function () {
 	//var gnb3depth = $("#gnb .depth3 > ul > li > a")
 	gnb1depth.on('mouseover focusin', function (e) {
 		if (tshActive == false) {
-			//$(this).parent().parent().addClass('active').parent().siblings().find('>a').removeClass('active');
 			$(this).addClass('on').parent().siblings().find('>a').removeClass('on');
-			//안씀 $(".gnb_bg").show();
 			$("body").addClass("gnbOver");
 			return false;
 		}

@@ -25,6 +25,13 @@ package.json
 static/imer/maps/default.css.map
 static/imer/maps/main.css.map
 static/imer/maps/sub.css.map
+static/imer/maps/tsh.css.map
+static/imerEng/maps/default.css.map
+static/imerEng/maps/main.css.map
+static/imerEng/maps/sub.css.map
+static/imerEng/maps/tsh.css.map
+
+
 .gitignore
 
 

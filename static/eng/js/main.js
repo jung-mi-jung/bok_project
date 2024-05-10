@@ -1,9 +1,9 @@
 $(function () {
 	//header 오버시
-	$('#header, #gnb').on('mouseover focusin', function () {
+	$('#header, #gnb a').on('mouseover focusin', function () {
 		$('#header').addClass('over');
 	});
-	$('#header, #gnb').on('mouseleave', function () {
+	$('#header, #gnb a').on('mouseleave', function () {
 		$('#header').removeClass('over');
 	});
 });
