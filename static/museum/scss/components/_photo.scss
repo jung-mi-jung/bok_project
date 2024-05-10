@@ -251,6 +251,7 @@
 	width: 1140px;
 	max-width: 100%;
 	margin: 107px auto 50px;
+	padding-top: 44px;
 	// padding-bottom: 40px;
 	@include breakpoint($smd) {
 		margin: 24px auto 50px;
@@ -310,7 +311,8 @@
 		}
 		.swiper-pagination {
 			position: absolute;
-			bottom: -40px;
+			top: 0;
+			bottom: initial;
 			left: 0;
 			width: 100%;
 			text-align: center;

@@ -964,7 +964,6 @@ border-top: 1px solid #E5E5E5;
 @media (min-width: 1200px) {
 .gnb-stiky .navigation {
 width: 100%;
-position: -webkit-sticky;
 position: sticky;
 border-bottom: 1px solid #E5E5E5;
 top: -2px;
@@ -1273,7 +1272,6 @@ margin-bottom: 30px;
 }
 @media (min-width: 1200px) {
 .lnb-nav {
-position: -webkit-sticky;
 position: sticky;
 top: 48px;
 float: left;
@@ -1385,6 +1383,9 @@ display: inline-flex;
 align-items: center;
 position: relative;
 }
+label + label {
+margin-left: 20px;
+}
 
 input[type=checkbox] {
 opacity: 0;
@@ -1479,7 +1480,7 @@ border: 1px solid #BFBFBF;
 border-radius: 50%;
 background-color: #FAFAFA;
 position: absolute;
-top: 2px;
+top: 10px;
 left: -1px;
 }
 input[type=radio]:checked + i {
@@ -1492,6 +1493,9 @@ width: 6px;
 height: 6px;
 border: 7px solid #3B63C4;
 border-radius: 50%;
+position: absolute;
+top: 0;
+left: 0;
 }
 
 input[type=number],
@@ -4185,6 +4189,7 @@ position: relative;
 width: 1140px;
 max-width: 100%;
 margin: 107px auto 50px;
+padding-top: 44px;
 }
 @media (max-width: 1199px) {
 .card-photo {
@@ -4242,7 +4247,8 @@ transform: rotate(0);
 }
 .card-photo .photo-ctrl .swiper-pagination {
 position: absolute;
-bottom: -40px;
+top: 0;
+bottom: initial;
 left: 0;
 width: 100%;
 text-align: center;
@@ -5189,7 +5195,6 @@ justify-content: center;
 
 .sh-db {
 margin-bottom: 40px;
-position: -webkit-sticky;
 position: sticky;
 top: 48px;
 }
@@ -6786,7 +6791,6 @@ margin-bottom: 30px;
 }
 }
 .content-row .cont-nav ul {
-position: -webkit-sticky;
 position: sticky;
 top: 60px;
 }
@@ -9844,4 +9848,4 @@ background-color: #3B63C4;
 .userType .auth .col #ipinLoginBtn strong {
 background-color: #39A0FF;
 }
-/*# sourceMappingURL=../maps/sub.css.map */
+/*# sourceMappingURL=../external/staticmuseum/maps/sub.css.map */

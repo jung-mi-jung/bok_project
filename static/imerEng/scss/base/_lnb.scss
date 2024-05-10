@@ -220,7 +220,7 @@
 					position: absolute;
 					top: 60px;
 					left: -1px;
-					min-width: 200px;
+					min-width: 240px;
 					z-index: 9;
 					width: calc(100% + 2px);
 					background-color: #fff;
@@ -237,9 +237,9 @@
 						li {
 							margin: 10px 0;
 							a {
+								display: inline-flex;
 								color: #666;
-								display: block;
-								line-height: 1.3;
+								line-height: 1.25;
 								&:hover {
 									text-decoration: underline;
 								}	

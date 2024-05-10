@@ -3877,7 +3877,7 @@ margin: 0 -12px;
 }
 @media (max-width: 1199px) {
 .reference-news dl dd ul {
-width: -webkit-max-content;
+width: -moz-max-content;
 width: max-content;
 }
 }
@@ -4010,7 +4010,7 @@ margin: -12px -12px 0;
 }
 @media (max-width: 1199px) {
 .reference-media dl dd ul {
-width: -webkit-max-content;
+width: -moz-max-content;
 width: max-content;
 }
 }
@@ -4267,28 +4267,26 @@ display: none;
 display: block;
 position: absolute;
 width: 60px;
-top: 12px;
-left: 6px;
+top: -1px;
+left: -1px;
 z-index: 9;
 }
 .page-toolbar .sns-wrap.active .sns-wrap__set {
 display: flex;
-width: 48px;
+width: 62px;
 align-items: center;
 flex-direction: column;
-border-radius: 30px;
-border: 1px solid #666;
+border-radius: 8px;
+border: 2px solid #1a1a1a;
 background-color: #fff;
-padding: 10px 0;
+padding: 20px 10px;
+gap: 16px 0;
 }
 .page-toolbar .sns-wrap.active .sns-wrap__set button {
 display: flex;
 align-items: center;
 justify-content: center;
 margin: 0 auto;
-}
-.page-toolbar .sns-wrap.active .sns-wrap__set button + button {
-margin-top: 7px;
 }
 .page-toolbar .sns-wrap.active .sns-wrap__set button::before {
 content: "";
@@ -4299,7 +4297,7 @@ background-position: 50%;
 background-repeat: no-repeat;
 }
 .page-toolbar .sns-wrap.active .sns-wrap__set button.close {
-height: 30px;
+height: 24px;
 }
 .page-toolbar .sns-wrap.active .sns-wrap__set button.close::before {
 content: "\e5cd";
@@ -4318,7 +4316,9 @@ text-rendering: optimizeLegibility;
 -moz-osx-font-smoothing: grayscale;
 font-feature-settings: "liga";
 -webkit-font-feature-settings: "liga";
-font-size: 26px;
+width: 24px;
+height: 24px;
+font-size: 24px;
 }
 .page-toolbar .page-print {
 width: 60px;
@@ -5540,4 +5540,4 @@ font-style: normal;
 img {
 max-width: 100%;
 }
-/*# sourceMappingURL=../maps/default.css.map */
+/*# sourceMappingURL=../external/staticmuseum/maps/default.css.map */

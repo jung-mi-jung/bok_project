@@ -541,6 +541,10 @@ $tsh-m-height : 32px;
 				}
 			}			
 		}
+		.label-list {
+			display: flex;
+			flex-direction: column;
+		}
 		.search-main {
 			@include breakpoint($lg){
 				width: calc(100% - 240px - 36px - 36px);
@@ -670,6 +674,7 @@ $tsh-m-height : 32px;
 		}
 	}
 	mark {
-		background-color: #FFE100;
+		background-color: transparent !important;
+		color: #449ee3;
 	}
 }
