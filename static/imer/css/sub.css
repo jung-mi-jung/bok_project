@@ -1084,6 +1084,7 @@ border-top: 1px solid #E5E5E5;
 @media (min-width: 1200px) {
 .gnb-stiky .navigation {
 width: 100%;
+position: -webkit-sticky;
 position: sticky;
 border-bottom: 1px solid #E5E5E5;
 top: -2px;
@@ -1392,6 +1393,7 @@ margin-bottom: 30px;
 }
 @media (min-width: 1200px) {
 .lnb-nav {
+position: -webkit-sticky;
 position: sticky;
 top: 48px;
 float: left;
@@ -7267,6 +7269,7 @@ margin-bottom: 30px;
 }
 }
 .content-row .cont-nav ul {
+position: -webkit-sticky;
 position: sticky;
 top: 48px;
 }
@@ -9769,4 +9772,4 @@ background-color: #3B63C4;
 .userType .auth .col #ipinLoginBtn strong {
 background-color: #39A0FF;
 }
-/*# sourceMappingURL=../external/staticimer/maps/sub.css.map */
+/*# sourceMappingURL=../maps/sub.css.map */
