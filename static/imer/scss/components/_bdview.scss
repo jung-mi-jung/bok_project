@@ -249,8 +249,10 @@
 			background: url(/static/portal/img/ico/ico-depart.png) no-repeat;
 			margin-right: 5px;
 			@include breakpoint($smd){
-				width: 16px;
-				height: 16px;
+				// width: 16px;
+				// height: 16px;
+				transform: scale(0.80);
+				transform-origin: left;
 			}
 		}
 	}

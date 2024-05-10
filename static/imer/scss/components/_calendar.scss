@@ -381,7 +381,8 @@
 			font-size: rem(15);
 			font-weight: 400;
 			border-radius: 4px;
-			background: #3B63C4;
+			border: 1px solid #3B63C4;
+			color: #3B63C4;
 			&.rsrvtn-done {
 				background: #808080;
 				button {

@@ -182,22 +182,30 @@
 			cursor: not-allowed;
 		}
 	}
-	
 }
-// .tab-list2 {
-// 	position: relative;
-// 	margin-top: 20px;
-// 	a {
-// 		padding: 8px;
-// 		min-width: 228px;
-// 		width: auto;
-// 		min-height: 40px;
-// 		box-sizing: border-box;
-// 		@include breakpoint($sm) {
-// 			min-width: 128px;
-// 		}
-// 	}
-// }
+
+
+
+/* 임시 */
+.tab-list {
+	border-bottom: 0 !important;
+	a.swiper-slide {
+		border-bottom: 1px solid #89A1DC !important;
+	}
+	.swiper-wrapper {
+		padding-bottom: 10px !important; 
+		height: auto !important;
+	}
+	.swiper-pagination-progressbar{
+		top: initial !important;
+		bottom: 0 !important;
+		.swiper-pagination-progressbar-fill {
+			background-color: red !important;
+		}
+	}
+}
+// 끝
+
 .tab-content {
 
 	.tab-pannel {

@@ -248,6 +248,12 @@
 			height: 20px;
 			background: url(/static/portal/img/ico/ico-depart.png) no-repeat;
 			margin-right: 5px;
+			@include breakpoint($smd){
+				// width: 16px;
+				// height: 16px;
+				transform: scale(0.80);
+				transform-origin: left;
+			}
 		}
 	}
 }
@@ -346,8 +352,9 @@
 /* 동영상, 이미지 등 콘텐츠 상세페이지 */
 .media-view {
 	.subject {
-		@include breakpoint($sm){
-			margin-top: -50px;
+		@include breakpoint($smd){
+			padding-top: 0 !important; 
+			margin-top: -10px !important;
 		}
 	}
 	.poster-row {

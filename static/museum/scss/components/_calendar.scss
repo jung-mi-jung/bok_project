@@ -381,10 +381,13 @@
 			font-size: rem(15);
 			font-weight: 400;
 			border-radius: 4px;
-			background: #3B63C4;
+			// background: #3B63C4;
+			border: 1px solid #3B63C4;
 			&.rsrvtn-done {
 				background: #808080;
+				border: 0;
 				button {
+					color: #fff;
 					cursor: not-allowed;
 				}
 			}
@@ -392,8 +395,13 @@
 				display: none;
 			}
 			button {
-				padding:4px 2px;
-				color: #fff;
+				padding: 2px 2px;
+				color: #3B63C4;
+				@include breakpoint($lg) {
+					&:hover {
+						text-decoration: underline;
+					}
+				}
 			}
 		}
 	}

@@ -1,5 +1,5 @@
 .fc1 {
-	color: #118DB4;
+	color: #005596;
 	font-weight: 500;
 }
 
@@ -812,6 +812,10 @@
 			}
 			i {
 				margin-right: 6px;
+				&::before {
+					@include font-ico-outline('\e89e');
+					font-size: 22px;
+				}	
 			}
 		}
 	}
@@ -837,8 +841,8 @@
 		// aspect-ratio: 1440/400;
 		p {
 			position: relative;
-			font-size: rem(42);
-			color: #fff;
+			font-size: rem(42) !important;
+			color: #fff; 
 			font-weight: 300;
 			line-height: 130%;
 			z-index: 1;
@@ -904,7 +908,7 @@
 		.person {
 			padding: 0 60px;
 			p {
-				font-size: rem(36);
+				font-size: rem(36) !important;
 			}
 		}
 	}
@@ -921,8 +925,8 @@
 		width: 100%;
 		.person {
 			padding: 0 20px;
-			p{
-				font-size: rem(20);
+			p {
+				font-size: rem(16) !important;
 				&::before {
 					top: -22px;
 					left: -16px;
@@ -1144,6 +1148,12 @@
 				//font-size: rem(18);
 				font-weight: 400;
 				border-radius: 6px;
+				i {
+					&::before {
+						@include font-ico-outline('\f01f');
+						font-size: 22px;
+					}
+				}
 			}
 		}
 		span {

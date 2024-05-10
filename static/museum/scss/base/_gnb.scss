@@ -50,7 +50,8 @@
 								box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 							}
 							&::before {
-								left: -50%;
+								// left: -50%;
+								left: calc(-50% - 45px);
 								width: 100000px;
 								z-index: -1;
 							}
@@ -111,12 +112,17 @@
 				width: 100%;
 				z-index: 99;								
 				> ul {
-					width: 100%;
+					width: calc(100% + 15%);
 					display: flex;
 					flex-wrap: wrap;
 					flex-direction: row;
-					padding-left: 12%;
+					//padding-left: 12%;
 					margin: 15px 0;
+					margin-left: -15%;
+					@include breakpoint($xl) {
+						margin-left: -8%;
+						width: calc(100% + 8%);
+					}
 					> li {
 						flex-basis: calc(100% / 5);
 						padding: 15px 0;
@@ -148,11 +154,12 @@
 						background-repeat: no-repeat;
 						background-position: 50%;
 						background-size: cover;
+						border-radius: 8px;
 					}
 					.txt {
 						width: 100%;
 						@include ellipsis;
-						color: #fff;
+						color: #4D4D4D;
 						margin-top: 8px;
 						text-align: center;
 					}

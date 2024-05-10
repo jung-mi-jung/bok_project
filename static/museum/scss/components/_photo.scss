@@ -250,8 +250,11 @@
 	position: relative;
 	width: 1140px;
 	max-width: 100%;
-	margin: 50px auto;
+	margin: 107px auto 50px;
 	// padding-bottom: 40px;
+	@include breakpoint($smd) {
+		margin: 24px auto 50px;
+	}
 	.photo-ctrl {
 		button {
 			position: absolute;
@@ -261,6 +264,7 @@
 			width: 80px;
 			height: 80px;
 			margin-top: -40px;
+			background-color: #fff;
 			&::before {
 				content: "";
 				display: inline-block;

@@ -85,7 +85,7 @@ html {
 	}
 }
 body {
-	overflow-x: hidden;
+	overflow-x: hidden !important;
 	color: $body-font-color;
 	line-height: 1.5;
 	font-family: $font-set;
@@ -96,10 +96,9 @@ body {
 		word-break: keep-all;
 	}
 	&.ovh, 
-	&.modal-open  {
-		// position: relative;
-		overflow: hidden;
-		// height: 100vh;
+	&.modal-open,
+	&.popupOpened {
+		overflow: hidden !important;  
 	}
 }
 

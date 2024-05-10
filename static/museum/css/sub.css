@@ -964,6 +964,7 @@ border-top: 1px solid #E5E5E5;
 @media (min-width: 1200px) {
 .gnb-stiky .navigation {
 width: 100%;
+position: -webkit-sticky;
 position: sticky;
 border-bottom: 1px solid #E5E5E5;
 top: -2px;
@@ -1272,6 +1273,7 @@ margin-bottom: 30px;
 }
 @media (min-width: 1200px) {
 .lnb-nav {
+position: -webkit-sticky;
 position: sticky;
 top: 48px;
 float: left;
@@ -2130,7 +2132,11 @@ margin-bottom: 0;
 
 .count-total {
 color: #1A1A1A;
-font-size: 0.9375rem;
+font-size: 1rem !important;
+margin-top: 15px;
+line-height: 0.8rem;
+display: flex;
+font-size: 14px;
 }
 .count-total::before {
 content: "";
@@ -2140,6 +2146,13 @@ height: 3px;
 background-color: #1A1A1A;
 border-radius: 50%;
 margin: 5px 8px 0 0;
+}
+.count-total em {
+color: #5772e8;
+font-weight: 600;
+font-style: normal;
+display: inline-block;
+margin-left: 4px;
 }
 .count-total strong {
 font-weight: 600;
@@ -2600,20 +2613,6 @@ width: 8%;
 text-align: center;
 }
 
-.count-total {
-margin-top: 15px;
-line-height: 0.8rem;
-display: flex;
-font-size: 14px;
-}
-.count-total em {
-color: #5772e8;
-font-weight: 600;
-font-style: normal;
-display: inline-block;
-margin-left: 4px;
-}
-
 .req-infor {
 text-align: right;
 font-size: 14px;
@@ -2846,6 +2845,12 @@ height: 20px;
 background: url(/static/portal/img/ico/ico-depart.png) no-repeat;
 margin-right: 5px;
 }
+@media (max-width: 1199px) {
+.bd-view .dataInfoSet .depart::before {
+transform: scale(0.8);
+transform-origin: left;
+}
+}
 .bd-view .dataInfoSet .type2 {
 margin-top: -16px;
 }
@@ -2901,9 +2906,10 @@ display: none;
 }
 
 /* 동영상, 이미지 등 콘텐츠 상세페이지 */
-@media (max-width: 749px) {
+@media (max-width: 1199px) {
 .media-view .subject {
-margin-top: -50px;
+padding-top: 0 !important;
+margin-top: -10px !important;
 }
 }
 @media (max-width: 749px) {
@@ -3611,6 +3617,12 @@ height: 20px;
 background: url(/static/portal/img/ico/ico-depart.png) no-repeat;
 margin-right: 5px;
 }
+@media (max-width: 1199px) {
+.bd-blog .dataInfoSet .depart::before {
+transform: scale(0.8);
+transform-origin: left;
+}
+}
 .bd-blog .dataInfoSet .dataInfo {
 top: -56px;
 }
@@ -4172,7 +4184,12 @@ word-break: break-all;
 position: relative;
 width: 1140px;
 max-width: 100%;
-margin: 50px auto;
+margin: 107px auto 50px;
+}
+@media (max-width: 1199px) {
+.card-photo {
+margin: 24px auto 50px;
+}
 }
 .card-photo .photo-ctrl button {
 position: absolute;
@@ -4182,6 +4199,7 @@ border-radius: 50%;
 width: 80px;
 height: 80px;
 margin-top: -40px;
+background-color: #fff;
 }
 .card-photo .photo-ctrl button::before {
 content: "";
@@ -4575,15 +4593,19 @@ padding-left: 20px;
 padding-left: 40px;
 }
 }
-.paginationSet {
+.pagination-set {
 clear: both;
-text-align: center;
-margin-top: 60px;
+padding-top: 60px;
 }
 @media (max-width: 749px) {
-.paginationSet {
-margin-top: 20px;
+.pagination-set {
+padding-top: 20px;
+padding-bottom: 40px;
 }
+}
+
+.paginationSet {
+text-align: center;
 }
 
 .pagination {
@@ -4957,6 +4979,25 @@ opacity: 0.6;
 cursor: not-allowed;
 }
 
+/* 임시 */
+.tab-list {
+border-bottom: 0 !important;
+}
+.tab-list a.swiper-slide {
+border-bottom: 1px solid #89A1DC !important;
+}
+.tab-list .swiper-wrapper {
+padding-bottom: 10px !important;
+height: auto !important;
+}
+.tab-list .swiper-pagination-progressbar {
+top: initial !important;
+bottom: 0 !important;
+}
+.tab-list .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+background-color: red !important;
+}
+
 .tab-content .tab-pannel {
 display: none;
 }
@@ -5148,6 +5189,7 @@ justify-content: center;
 
 .sh-db {
 margin-bottom: 40px;
+position: -webkit-sticky;
 position: sticky;
 top: 48px;
 }
@@ -6701,7 +6743,7 @@ background-image: url(/static/portal/img/ico/icon-zip.svg);
 }
 
 .fc1 {
-color: #118DB4;
+color: #005596;
 font-weight: 500;
 }
 
@@ -6744,6 +6786,7 @@ margin-bottom: 30px;
 }
 }
 .content-row .cont-nav ul {
+position: -webkit-sticky;
 position: sticky;
 top: 60px;
 }
@@ -7452,6 +7495,24 @@ text-align: left;
 .info_icon .ti-new-window .fz12 i {
 margin-right: 6px;
 }
+.info_icon .ti-new-window .fz12 i::before {
+content: "\e89e";
+font-family: "Material Icons Outlined";
+font-weight: normal;
+font-style: normal;
+display: inline-block;
+line-height: 1;
+vertical-align: text-bottom;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+font-feature-settings: "liga";
+font-size: 22px;
+}
 .info_icon .row {
 text-align: center;
 }
@@ -7472,7 +7533,7 @@ height: 100%;
 }
 .intro_museum .person p {
 position: relative;
-font-size: 2.625rem;
+font-size: 2.625rem !important;
 color: #fff;
 font-weight: 300;
 line-height: 130%;
@@ -7534,7 +7595,7 @@ opacity: 0.3;
 padding: 0 60px;
 }
 .intro_museum .person p {
-font-size: 2.25rem;
+font-size: 2.25rem !important;
 }
 .introTxt p strong {
 font-size: 1.5rem;
@@ -7552,7 +7613,7 @@ width: 100%;
 padding: 0 20px;
 }
 .intro_museum .person p {
-font-size: 1.25rem;
+font-size: 1rem !important;
 }
 .intro_museum .person p::before {
 top: -22px;
@@ -7746,6 +7807,24 @@ gap: 0 8px;
 background: #005596;
 font-weight: 400;
 border-radius: 6px;
+}
+.muIntro1 .muEx .btnSet button i::before {
+content: "\f01f";
+font-family: "Material Icons Outlined";
+font-weight: normal;
+font-style: normal;
+display: inline-block;
+line-height: 1;
+vertical-align: text-bottom;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+font-feature-settings: "liga";
+font-size: 22px;
 }
 .muIntro1 .muEx span {
 display: block;
@@ -8646,13 +8725,17 @@ overflow-x: hidden;
 }
 .modal {
 position: fixed;
+display: flex !important;
 top: 0;
 left: 0;
 right: 0;
 bottom: 0;
 z-index: 1100;
-display: none;
+display: none !important;
 overflow: hidden;
+}
+.modal.fade.in {
+display: flex !important;
 }
 .modal.fade.in::before {
 content: "";
@@ -9180,20 +9263,27 @@ margin: 0;
 font-size: 0.9375rem;
 font-weight: 400;
 border-radius: 4px;
-background: #3B63C4;
+border: 1px solid #3B63C4;
 }
 .calendarWrap .date-list li.rsrvtn-done {
 background: #808080;
+border: 0;
 }
 .calendarWrap .date-list li.rsrvtn-done button {
+color: #fff;
 cursor: not-allowed;
 }
 .calendarWrap .date-list li::before {
 display: none;
 }
 .calendarWrap .date-list li button {
-padding: 4px 2px;
-color: #fff;
+padding: 2px 2px;
+color: #3B63C4;
+}
+@media (min-width: 1200px) {
+.calendarWrap .date-list li button:hover {
+text-decoration: underline;
+}
 }
 
 .calendarWrap > .help2,

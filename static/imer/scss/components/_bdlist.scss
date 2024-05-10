@@ -384,7 +384,7 @@
 // 게시물 카운트
 .count-total {
 	color: $black;
-	font-size: rem(15);
+	font-size: rem(16) !important;
 	margin-top: 15px;
 	line-height: 0.8rem;
 	display: flex;

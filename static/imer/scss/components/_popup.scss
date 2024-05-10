@@ -70,18 +70,16 @@ body > .popwrap {
 
 .modal {
     position: fixed;
+	display: flex !important;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     z-index: 1100;
-    display: none;
-    // overflow: hidden !important;
-	// @include breakpoint($sm) { 
-	// 	width: 100vw;
-	// 	height: 100vh;
-	// }
+	display: none !important;
+    overflow: hidden;
 	&.fade.in {
+		display: flex !important;
 		&::before {
 			content: "";
 			display: block;

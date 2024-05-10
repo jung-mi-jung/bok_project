@@ -99,23 +99,12 @@ function scrollDiectionCheck(e) {
 }
 $('#wrap').on('wheel', function (event) {
     // 휠 제외 조건
-    //if ($(event.target).hasClass('.gnb-sub-nav')) 		{return}
-    //if ($(event.target).parents('.gnb-sub-nav').length)	{return}
+    // if ($(event.target).hasClass('total-menu')) return;
+    // if ($(event.target).parents('.total-menu').length) return;
 
-    if ($(event.target).hasClass('total-menu')) return;
-    if ($(event.target).parents('.total-menu').length) return;
+    if ($("body").hasClass('popupOpened')) return;
+    if ($("body").hasClass('modal-open')) return;
 
-    // if ($(event.target).parents('.total-nav').length) return;
-    // if ($(event.target).hasClass('total-nav')) return;
-
-    // if ($(event.target).parents('.fsite').length) return;
-    // if ($(event.target).parents('.listy').length) return;
-    // if ($(event.target).parents('.gnb-sub-nav').length) return;
-
-    // if ($(event.target).parents('.section1-ad__all__list').length) return;
-    // if ($(event.target).hasClass('section1-ad__all__list')) return;
-
-    // if ($(event.target).hasClass('gnb-sub-nav')) return;
     if (!ismobile && $(window).height() > 900) {
         event.preventDefault();
 

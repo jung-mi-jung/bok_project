@@ -11,16 +11,17 @@ $(function () {
 			disableOnInteraction: false,
 		},
 		grabCursor: true,
-		effect: "creative",
-		creativeEffect: {
-			prev: {
-				shadow: true,
-				translate: ["-20%", 0, -1],
-			},
-			next: {
-				translate: ["100%", 0, 0],
-			},
-		},
+		loop: true,
+		// effect: "creative",
+		// creativeEffect: {
+		// 	prev: {
+		// 		shadow: true,
+		// 		translate: ["-20%", 0, -1],
+		// 	},
+		// 	next: {
+		// 		translate: ["100%", 0, 0],
+		// 	},
+		// },
 		navigation: {
 			nextEl: '.section1-visual__swiper-button-next',
 			prevEl: '.section1-visual__swiper-button-prev',
@@ -79,33 +80,35 @@ $(function () {
 	//메인 박물관소식 영역 swiper 설정
 	var slideLength = $(".section2-img .swiper-slide").length;
 	var section2Img = new Swiper('.section2-img', {
-		slidesPerView: "auto",
-		//loop: true,
-		// loopedSlides: 1,
-		spaceBetween: 30,
 		loopAdditionalSlide: 1,
 		watchSlidesProgress: true,
 		slideToClickedSlide: true,
 		speed: 1000,
 		resizeObserver: true,
-		// autoplay: {
-		// 	delay: 4000,
-		// 	disableOnInteraction: false,
+		centeredSlides: true,
+		slidesPerView: "auto",
+		// on: {
+		// 	slideChange: function(){
+		// 		//마지막 인덱스가 active 됐을때
+		// 		//console.log( this.activeIndex )
+
+		// 		if ( (this.activeIndex + 1) == slideLength) {
+		// 			$(".section2-img .swiper-slide").eq(slideLength - 1).css({ "margin-left" : -90});
+		// 		}
+		// 		else {
+		// 			$(".section2-img .swiper-slide").eq(slideLength - 1).css({ "margin-left" : 0});
+		// 		}
+		// 	}
 		// },
-		on: {
-			slideChange: function(){
-				//마지막 인덱스가 active 됐을때
-				if ( (this.activeIndex + 1) == slideLength) {
-					$(".section2-img .swiper-slide").eq(this.activeIndex + 1).css({ "margin-left" : 30});
-				}
-				//alert();
-			}
-		},
 		breakpoints: {
 			360: {
+				slidesPerView: "auto",
 				centeredSlides: true,
+				spaceBetween: 30,
+
 			},
-			750: {
+			1200: {
+				slidesPerView: 1,
 				centeredSlides: false,
 			}
 		}
@@ -113,18 +116,12 @@ $(function () {
 
 	var section2Txt = new Swiper('.section2-txt', {
 		slidesPerView: 1,
-		//loop: true,
-		// loopedSlides: 1,
 		loopAdditionalSlide: 1,
 		watchSlidesProgress: true,
 		effect: "fade",
 		speed: 1000,
 		touchRatio: 0,
 		resizeObserver: true,
-		// autoplay: {
-		// 	delay: 4000,
-		// 	disableOnInteraction: false,
-		// },
 		navigation: {
 			prevEl: '.section2-prev',
 			nextEl: '.section2-next',

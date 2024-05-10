@@ -532,42 +532,46 @@ body.gnbOver {
 /* 전체메뉴 */
 .total-nav {
 	position: fixed;
+	position: fixed;
+	align-items: center;
+	justify-content: center;
 	top: 0;
 	left: 0;
-	right: 0;
-	bottom: 0;
+	// right: 0;
+	// bottom: 0;
+	padding: 0 10px;
 	width: 100%;
 	min-height: 100vh;
-	background: #fff;
+	background: rgba(0,0,0,0.7);
 	z-index: 100;
-	overflow: auto !important;
+	// overflow: auto !important;
 	display: none;
-	&::before {
-		display: none;
+	&.in::before {
+		display: none !important;
 	}
-	&.fade.in {
-		&::before {
-			background: none !important;
-		}
+	.modal-dialog {
+		overflow: hidden;
+		max-width: 1600px;
+		max-height: calc(100vh - 160px);
 	}
 	.modal-dialog,
 	.modal-content {
 		width: 100%;
-		min-width: 100vh;
-		min-height: 100vh;
-		height: auto;
+		// min-width: 100vh;
+		// min-height: 100vh;
+		height: 100%;
 		background-color: #fff;
 		border: 0;
 		border-radius: 0;
 	}
-	.container {
-		max-width: 1680px !important;   
-		margin: 0 auto;
-		padding: 0 10px !important;
-	}
+	// .container {
+	// 	max-width: 1680px !important;   
+	// 	margin: 0 auto;
+	// 	padding: 0 10px !important;
+	// }
 	.modal-header {
 		background: #F6F6F6;
-		padding: 40px 0;
+		padding: 24px 38px;
 		border-radius: 0;
 		.modal-title {
 			display: flex;
@@ -664,7 +668,9 @@ body.gnbOver {
 		}
 	}
 	.modal-body {
-		padding: 50px 0;
+		height: calc(100% - 100px);
+		padding: 44px 48px;
+		overflow-y: auto;
 		.container {
 			max-width: 1680px;
 			align-items: stretch !important;
@@ -681,7 +687,7 @@ body.gnbOver {
 		.dp1 {
 			flex: 1;
 			> li {
-				font-size: rem(32);
+				font-size: rem(28);
 				font-weight: 500;
 				
 				> a {
@@ -786,68 +792,18 @@ body.gnbOver {
 			
 		}
 	}
-
-	// display: none;
-	// @include breakpoint($lg){
-	// 	&.active {
-	// 		display: block;
-	// 		position: absolute;
-	// 		top: 0;
-	// 		left: 0;
-	// 		width: 100%;
-	// 		z-index: 99;
-	// 		background-color: rgba(0, 0, 0, 0.6);
-	// 		section {
-	// 			display: flex;
-	// 			justify-content: center;
-	// 			align-items: center;
-	// 			height: 100vh;
-	// 			> div { //임시
-	// 				position: relative;
-	// 				padding: 30px;
-	// 				background-color: #fff;
-	// 				.nav {
-	// 					> ul {
-	// 						display: flex;
-	// 						flex-wrap: wrap;
-	// 						flex-direction: row;
-	// 						width: 1000px;
-	// 						max-width: 100%;
-	// 						margin: 0 auto;
-	// 						> li {
-	// 							width: calc(100% / 5);
-	// 						}
-	// 						strong {
-	// 							display: none;
-	// 						}
-	// 					}
-	// 					.depth4 {
-	// 						display: none;
-	// 					}
-	// 				}
-	// 			}
-	// 		}
-	// 		button {
-	// 			position: absolute;
-	// 			top: 0;
-	// 			right: -40px;
-	// 			&::before {
-	// 				color: #fff;
-	// 				font-size: 30px;
-	// 			}
-	// 		}
-	// 	}
-	// }
-	// .e {
-	// 	display: none;
-	// }
 }
-.total-nav.active {
-	display: block !important;
-	opacity: 1 !important;
+// .total-nav.active {
+// 	display: block !important;
+// 	opacity: 1 !important;
+// }
+.total-nav.in {
+	display: flex !important;
+	padding: 0 10px !important;
 }
 @include breakpoint($smd) {
 	.total-nav {
+		padding: 0 10px;
 		// overflow: auto !important;
 		.modal-dialog,
 		.modal-content {
@@ -883,6 +839,9 @@ body.gnbOver {
 			.modal-title {
 				font-size: rem(24);
 			}
+		}
+		.modal-body {
+			height: calc(100% - 150px);
 		}
 		.container {
 			flex-direction: column;
@@ -942,7 +901,8 @@ body.gnbOver {
 					&::before {
 						content: "";
 						position: absolute;
-						top: 4px;
+						top: 50%;
+						transform: translateY(-50%);
 						right: -25px;
 						display: inline-block;
 						width: 20px;
