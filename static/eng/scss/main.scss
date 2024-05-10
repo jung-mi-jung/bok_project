@@ -838,7 +838,6 @@
 					box-shadow:none
 				}
 				@include breakpoint($sm){
-					background-color: #fff;
 					margin-top: 0;
 					padding: 16px;
 					margin: 0 10px !important;

@@ -11,6 +11,10 @@ static/portal/maps/default.css.map
 static/portal/maps/main.css.map
 static/portal/maps/sub.css.map
 static/portal/maps/tsh.css.map
+static/eng/maps/default.css.map
+static/eng/maps/main.css.map
+static/eng/maps/sub.css.map
+static/eng/maps/tsh.css.map
 gulpfile.js
 package-lock.json
 .browserslistrc

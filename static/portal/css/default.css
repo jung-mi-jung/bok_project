@@ -3334,7 +3334,7 @@ margin: 0 -12px;
 }
 @media (max-width: 1199px) {
 .reference-news dl dd ul {
-width: -webkit-max-content;
+width: -moz-max-content;
 width: max-content;
 }
 }
@@ -3455,7 +3455,7 @@ margin: -12px -12px 0;
 }
 @media (max-width: 1199px) {
 .reference-media dl dd ul {
-width: -webkit-max-content;
+width: -moz-max-content;
 width: max-content;
 }
 }
@@ -3584,6 +3584,7 @@ font-feature-settings: "liga";
 font-size: 30px;
 color: #005596;
 }
+.search_wrap .search_wrap_input .tt-menu,
 .search_wrap .search_wrap_input .dqAuto {
 position: absolute;
 top: 74px;
@@ -3597,18 +3598,22 @@ background-color: #fff;
 margin: 0 30px;
 width: calc(100% - 60px);
 }
+.search_wrap .search_wrap_input .tt-menu .autoList,
 .search_wrap .search_wrap_input .dqAuto .autoList {
 max-height: 180px;
 overflow-y: auto;
 }
+.search_wrap .search_wrap_input .tt-menu .autoList li a,
 .search_wrap .search_wrap_input .dqAuto .autoList li a {
 font-size: 16px;
 display: block;
 padding: 3px 8px;
 }
+.search_wrap .search_wrap_input .tt-menu .autoList li a:hover,
 .search_wrap .search_wrap_input .dqAuto .autoList li a:hover {
 background-color: #EBF3F7;
 }
+.search_wrap .search_wrap_input .tt-menu .bottom,
 .search_wrap .search_wrap_input .dqAuto .bottom {
 display: flex;
 justify-content: right;
@@ -3616,10 +3621,12 @@ margin-top: 15px;
 background-color: #FAFAFA;
 padding: 8px;
 }
+.search_wrap .search_wrap_input .tt-menu .bottom .btnClose,
 .search_wrap .search_wrap_input .dqAuto .bottom .btnClose {
 font-size: 14px;
 color: #6D6E72;
 }
+.search_wrap .search_wrap_input .tt-menu .bottom .btnClose::before,
 .search_wrap .search_wrap_input .dqAuto .bottom .btnClose::before {
 content: "\e5c9";
 font-family: "Material Icons";
@@ -3667,6 +3674,9 @@ font-size: 40px;
 color: #000E33;
 }
 
+.content {
+margin-bottom: 30px;
+}
 .content p {
 margin-bottom: 12px;
 }
@@ -3894,46 +3904,183 @@ height: 3px;
 .gnb > ul > li.menu01 .depth2 {
 height: 320px;
 }
-.gnb > ul > li.menu01 .depth2 > ul {
-position: relative;
-}
 .gnb > ul > li.menu01 .depth2 > ul > li {
 position: absolute;
 }
 .gnb > ul > li.menu01 .depth2 > ul > li:nth-child(1) {
 top: 0;
-left: 0;
+left: 12%;
 }
 .gnb > ul > li.menu01 .depth2 > ul > li:nth-child(2) {
 top: 53px;
-left: 0;
+left: 12%;
 }
 .gnb > ul > li.menu01 .depth2 > ul > li:nth-child(3) {
 top: 168px;
-left: 0;
+left: 12%;
 }
 .gnb > ul > li.menu01 .depth2 > ul > li:nth-child(4) {
 top: 220px;
-left: 0;
+left: 12%;
 }
 .gnb > ul > li.menu01 .depth2 > ul > li:nth-child(5) {
 top: 0;
-left: 20%;
+left: 29.6%;
 }
 .gnb > ul > li.menu01 .depth2 > ul > li:nth-child(6) {
 top: 0;
-left: 40%;
+left: 47.2%;
 }
 .gnb > ul > li.menu01 .depth2 > ul > li:nth-child(7) {
 top: 0;
-left: 60%;
+left: 64.8%;
 }
 .gnb > ul > li.menu01 .depth2 > ul > li:nth-child(8) {
 top: 34px;
-left: 80%;
+right: 0;
 }
 .gnb > ul > li.menu02 .depth2 {
-background-color: #fff;
+height: 485px;
+}
+.gnb > ul > li.menu02 .depth2 > ul > li:nth-child(1) { /* 통화정책 */
+top: 0;
+left: 12%;
+}
+.gnb > ul > li.menu02 .depth2 > ul > li:nth-child(2) { /* 금융안정 */
+top: 200px;
+left: 12%;
+}
+.gnb > ul > li.menu02 .depth2 > ul > li:nth-child(3) { /* 기후변화대응 */
+top: 0;
+left: 29.6%;
+}
+.gnb > ul > li.menu02 .depth2 > ul > li:nth-child(4) { /* 화폐 */
+top: 120px;
+left: 29.6%;
+}
+.gnb > ul > li.menu02 .depth2 > ul > li:nth-child(5) { /* 지급결제 */
+top: 0;
+left: 47.2%;
+}
+.gnb > ul > li.menu02 .depth2 > ul > li:nth-child(6) { /* CBDC */
+top: 200px;
+left: 47.2%;
+}
+.gnb > ul > li.menu02 .depth2 > ul > li:nth-child(7) { /* 국고증권 */
+top: 255px;
+left: 64.8%;
+}
+.gnb > ul > li.menu02 .depth2 > ul > li:nth-child(8) { /* 외환 */
+top: 0;
+left: 64.8%;
+}
+.gnb > ul > li.menu02 .depth2 > ul > li:nth-child(9) { /* 국제협력 */
+top: 254px;
+left: 47.2%;
+}
+.gnb > ul > li.menu02 .depth2 > ul > li:nth-child(10) { /* 경제통계 */
+top: 0;
+right: 0;
+}
+.gnb > ul > li.menu02 .depth2 > ul > li:nth-child(11) { /* 경제교육 */
+top: 250px;
+right: 0;
+}
+.gnb > ul > li.menu03 .depth2 {
+height: 545px;
+}
+.gnb > ul > li.menu03 .depth2 > ul > li:nth-child(1) {
+top: 0;
+left: 12%;
+}
+.gnb > ul > li.menu03 .depth2 > ul > li:nth-child(2) {
+top: 168px;
+left: 12%;
+}
+.gnb > ul > li.menu03 .depth2 > ul > li:nth-child(3) {
+top: 220px;
+left: 12%;
+}
+.gnb > ul > li.menu03 .depth2 > ul > li:nth-child(4) {
+top: 340px;
+left: 12%;
+}
+.gnb > ul > li.menu03 .depth2 > ul > li:nth-child(5) {
+top: 0;
+left: 29.6%;
+}
+.gnb > ul > li.menu03 .depth2 > ul > li:nth-child(6) {
+top: 0;
+left: 47.2%;
+}
+.gnb > ul > li.menu03 .depth2 > ul > li:nth-child(7) {
+top: 0;
+left: 64.8%;
+}
+.gnb > ul > li.menu03 .depth2 > ul > li:nth-child(8) {
+top: 230px;
+left: 64.8%;
+}
+.gnb > ul > li.menu03 .depth2 > ul > li:nth-child(9) {
+top: 0;
+right: 0;
+}
+.gnb > ul > li.menu04 .depth2 {
+height: 315px;
+}
+.gnb > ul > li.menu04 .depth2 > ul > li {
+width: 20%;
+}
+.gnb > ul > li.menu04 .depth2 > ul > li:nth-child(1) {
+top: 0;
+left: 12%;
+}
+.gnb > ul > li.menu04 .depth2 > ul > li:nth-child(2) {
+top: 0;
+left: 29.6%;
+}
+.gnb > ul > li.menu04 .depth2 > ul > li:nth-child(3) {
+top: 0;
+left: 47.2%;
+}
+.gnb > ul > li.menu04 .depth2 > ul > li:nth-child(4) {
+top: 0;
+left: 64.8%;
+}
+.gnb > ul > li.menu05 .depth2 {
+height: 315px;
+}
+.gnb > ul > li.menu05 .depth2 > ul > li:nth-child(1) {
+top: 0;
+left: 12%;
+}
+.gnb > ul > li.menu05 .depth2 > ul > li:nth-child(2) {
+top: 50px;
+left: 12%;
+}
+.gnb > ul > li.menu05 .depth2 > ul > li:nth-child(3) {
+top: 190px;
+left: 12%;
+}
+.gnb > ul > li.menu05 .depth2 > ul > li:nth-child(4) {
+top: 0;
+left: 29.6%;
+}
+.gnb > ul > li.menu05 .depth2 > ul > li:nth-child(5) {
+top: 0;
+left: 47.2%;
+}
+.gnb > ul > li.menu05 .depth2 > ul > li:nth-child(6) {
+top: 146px;
+left: 47.2%;
+}
+.gnb > ul > li.menu05 .depth2 > ul > li:nth-child(7) {
+top: 0;
+left: 64.8%;
+}
+.gnb > ul > li.menu05 .depth2 > ul > li:nth-child(8) {
+top: 0;
+right: 0;
 }
 .gnb > ul .depth2 {
 display: none;
@@ -3945,6 +4092,7 @@ z-index: 99;
 border-top: 1px solid #E6E6E6;
 }
 .gnb > ul .depth2 > ul {
+position: relative;
 width: 100%;
 width: calc(100% - 376px);
 display: flex;
@@ -3954,7 +4102,8 @@ padding-left: 12%;
 margin: 15px 0;
 }
 .gnb > ul .depth2 > ul > li {
-flex-basis: 20%;
+position: absolute;
+width: 17.6%;
 padding: 15px 0;
 }
 .gnb > ul .depth2 > ul > li > a {

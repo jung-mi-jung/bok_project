@@ -452,7 +452,7 @@
 	.dataInfoSet {
 		@include dataInfoSet();
 		.dataInfo {
-			top: -56px;
+			top: -139px;
 		}
 	}
 	.dbdata {
@@ -644,6 +644,7 @@
 }
 
 .pdf-cont {
+	margin-top: 30px;
 	iframe {
 		width: 100%;
 		height: 700px;

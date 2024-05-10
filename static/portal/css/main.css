@@ -1405,7 +1405,6 @@ box-shadow: none;
 }
 @media (max-width: 749px) {
 #section2 .swiper .swiper-wrapper .swiper-slide-active {
-background-color: #fff;
 margin-top: 0;
 padding: 16px;
 margin: 0 10px !important;

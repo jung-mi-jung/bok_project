@@ -79,47 +79,49 @@
 						}
 					}
 				}
+				// 1번째 left: 12%;
+				// 2번재 left: 29.6%;
+				// 3번째 left: 47.2%;
+				// 4번재 left: 64.8%;
+				// 5번째 right: 0;
 				//gnb 개별 위치 지정
 				&.menu01 {
 					.depth2 {
 						height: 320px;
-						//margin-left: -12%;
-						//width: calc(100% - 376px - 12%);
 						> ul {
-							position: relative;
 							> li {
 								position: absolute;
 								&:nth-child(1) {
 									top: 0;
-									left: 0;
+									left: 12%;
 								}
 								&:nth-child(2) {
 									top: 53px;
-									left: 0;
+									left: 12%;
 								}
 								&:nth-child(3) {
 									top: 168px;
-									left: 0;
+									left: 12%;
 								}
 								&:nth-child(4) {
 									top: 220px;
-									left: 0;
+									left: 12%;
 								}
 								&:nth-child(5) {
 									top: 0;
-									left: 20%;
+									left: 29.6%;
 								}
 								&:nth-child(6) {
 									top: 0;
-									left: 40%;
+									left: 47.2%;
 								}
 								&:nth-child(7) {
 									top: 0;
-									left: 60%;
+									left: 64.8%;
 								}
 								&:nth-child(8) {
 									top: 34px;
-									left: 80%;
+									right: 0;
 								}
 							}	
 						}
@@ -127,58 +129,171 @@
 				}
 				&.menu02 {
 					.depth2 {
-						//display: block;
-						background-color: #fff;
+						height: 485px; 
 						> ul {
 							> li {
-								&:nth-child(1) {}
-								&:nth-child(2) {}
-								&:nth-child(3) {}
-								&:nth-child(4) {}
-								&:nth-child(5) {}
-							}							
+								//width: calc(17.6%);
+								&:nth-child(1) { /* 통화정책 */
+									top: 0;
+									left: 12%;
+								}
+								&:nth-child(2) { /* 금융안정 */
+									top: 200px;
+									left: 12%;
+								}
+								&:nth-child(3) { /* 기후변화대응 */
+									top: 0;
+									left: 29.6%;
+								}
+								&:nth-child(4) { /* 화폐 */
+									top: 120px;
+									left: 29.6%;
+								}
+								&:nth-child(5) { /* 지급결제 */
+									top: 0;
+									left: 47.2%;
+								}
+								&:nth-child(6) { /* CBDC */
+									top: 200px;
+									left: 47.2%;
+								}
+								&:nth-child(7) { /* 국고증권 */
+									top: 255px;
+									left: 64.8%;
+								}
+								&:nth-child(8) { /* 외환 */
+									top: 0;
+									left: 64.8%;
+								}
+								&:nth-child(9) { /* 국제협력 */
+									top: 254px;
+									left: 47.2%;
+								}
+								&:nth-child(10) { /* 경제통계 */
+									top: 0;
+									right: 0;
+								}
+								&:nth-child(11) { /* 경제교육 */
+									top: 250px;
+									right: 0;
+								}
+							}
 						}
 					}
-				}
+				}				
 				&.menu03 {
 					.depth2 {
-						ul {}
+						height: 545px;
+						> ul {
+							> li {
+								&:nth-child(1) {	//뉴스 및 의사록
+									top: 0;
+									left: 12%;
+								}
+								&:nth-child(2) {	//공지사항
+									top: 168px;
+									left: 12%;
+								}
+								&:nth-child(3) {	//연설 및 강연
+									top: 220px;
+									left: 12%;
+								}
+								&:nth-child(4) {	//블로그
+									top: 340px;
+									left: 12%;
+								}
+								&:nth-child(5) {	//간행물
+									top: 0;
+									left: 29.6%;
+								}
+								&:nth-child(6) {	//조사연구
+									top: 0;
+									left: 47.2%;
+								}
+								&:nth-child(7) {	//지역연구자료
+									top: 0;
+									left: 64.8%;
+								}
+								&:nth-child(8) {	//국외사무소자료
+									top: 230px;
+									left: 64.8%;								
+								}
+								&:nth-child(9) {	//업무별 정보
+									top: 0;
+									right: 0;
+								}
+							}
+						}
 					}
 				}
 				&.menu04 {
 					.depth2 {
-						ul {}
+						height: 315px;
+						> ul {
+							> li {
+								width: 20%;
+								&:nth-child(1) {
+									top: 0;
+									left: 12%;
+								}
+								&:nth-child(2) {
+									top: 0;
+									left: 29.6%;
+								}
+								&:nth-child(3) {
+									top: 0;
+									left: 47.2%;
+								}
+								&:nth-child(4) {
+									top: 0;
+									left: 64.8%;
+								}
+							}							
+						}
 					}
 				}
 				&.menu05 {
 					.depth2 {
-						ul {}
+						height: 315px;
+						> ul {
+							> li {
+								&:nth-child(1) {	// 서비스 소개
+									top: 0;
+									left: 12%;
+								}
+								&:nth-child(2) {	// 주요행사
+									top: 50px;
+									left: 12%;
+								}
+								&:nth-child(3) {	// 뉴스레터
+									top: 190px;
+									left: 12%;
+								}
+								&:nth-child(4) {	// 경제교육
+									top: 0;
+									left: 29.6%;
+								}
+								&:nth-child(5) {	// 화폐교환 및 주화수급
+									top: 0;
+									left: 47.2%;
+								}
+								&:nth-child(6) {	//화폐박물관
+									top: 146px;
+									left: 47.2%;
+								}
+								&:nth-child(7) {	//외환거래 심사
+									top: 0;
+									left: 64.8%;
+								}
+								&:nth-child(8) {	//민원
+									top: 0;
+									right: 0;
+								}
+							}							
+						}
 					}
 				}
-				// &.menu01 {
-				// 	.depth2 {
-				// 		> ul {
-				// 			flex-wrap: inherit;
-				// 			> li {
-				// 				flex-basis: calc(100% / 6);
-				// 			}
-				// 		}
-				// 	}
-				// }
-				// &.menu02 {
-				// 	> ul {
-				// 		width: calc(100% - 240px - 50px);
-				// 	}
-				// }
 			}
-			// > li:nth-child(2) {	//테스트중
-			// 	.depth2 {
-			// 		display: flex;
-			// 		justify-content: space-between;
-			// 		background-color: #fff;
-			// 		grid-template-columns: auto 376px;
-			// 	}
-			// }
 			.depth2 {
 				display: none;
 				position: absolute;
@@ -189,6 +304,7 @@
 				z-index: 99;	
 				border-top: 1px solid #E6E6E6;
 				> ul {
+					position: relative;
 					width: 100%;
 					width: calc(100% - 376px);
 					display: flex;
@@ -200,7 +316,9 @@
 					// grid-template-columns: repeat(auto-fill, minmax(20%, auto));
 					// grid-auto-flow: dense;
 					> li {
-						flex-basis: calc(100% / 5);
+						position: absolute;  //개별 위치 지정용
+						//flex-basis: calc(100% / 5);
+						width: calc((100% - 12%) / 5);
 						padding: 15px 0;
 						> a {
 							display: inline-block;

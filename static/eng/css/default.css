@@ -3319,7 +3319,7 @@ margin: 0 -12px;
 }
 @media (max-width: 1199px) {
 .reference-news dl dd ul {
-width: -webkit-max-content;
+width: -moz-max-content;
 width: max-content;
 }
 }
@@ -3440,7 +3440,7 @@ margin: -12px -12px 0;
 }
 @media (max-width: 1199px) {
 .reference-media dl dd ul {
-width: -webkit-max-content;
+width: -moz-max-content;
 width: max-content;
 }
 }
@@ -3569,6 +3569,7 @@ font-feature-settings: "liga";
 font-size: 30px;
 color: #005596;
 }
+.search_wrap .search_wrap_input .tt-menu,
 .search_wrap .search_wrap_input .dqAuto {
 position: absolute;
 top: 74px;
@@ -3582,18 +3583,22 @@ background-color: #fff;
 margin: 0 30px;
 width: calc(100% - 60px);
 }
+.search_wrap .search_wrap_input .tt-menu .autoList,
 .search_wrap .search_wrap_input .dqAuto .autoList {
 max-height: 180px;
 overflow-y: auto;
 }
+.search_wrap .search_wrap_input .tt-menu .autoList li a,
 .search_wrap .search_wrap_input .dqAuto .autoList li a {
 font-size: 16px;
 display: block;
 padding: 3px 8px;
 }
+.search_wrap .search_wrap_input .tt-menu .autoList li a:hover,
 .search_wrap .search_wrap_input .dqAuto .autoList li a:hover {
 background-color: #EBF3F7;
 }
+.search_wrap .search_wrap_input .tt-menu .bottom,
 .search_wrap .search_wrap_input .dqAuto .bottom {
 display: flex;
 justify-content: right;
@@ -3601,10 +3606,12 @@ margin-top: 15px;
 background-color: #FAFAFA;
 padding: 8px;
 }
+.search_wrap .search_wrap_input .tt-menu .bottom .btnClose,
 .search_wrap .search_wrap_input .dqAuto .bottom .btnClose {
 font-size: 14px;
 color: #6D6E72;
 }
+.search_wrap .search_wrap_input .tt-menu .bottom .btnClose::before,
 .search_wrap .search_wrap_input .dqAuto .bottom .btnClose::before {
 content: "\e5c9";
 font-family: "Material Icons";
@@ -3652,6 +3659,9 @@ font-size: 40px;
 color: #000E33;
 }
 
+.content {
+margin-bottom: 30px;
+}
 .content p {
 margin-bottom: 12px;
 }

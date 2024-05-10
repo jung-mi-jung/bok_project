@@ -3183,18 +3183,7 @@ p.subject {
 					display: block;
 				}
 				&:hover {
-					border-color: $color-point;
-					&::before {
-						content: "";
-						display: block;
-						width: calc(100% - 2px);
-						height: calc(100% - 2px);
-						border: 2px solid $color-point;
-						position: absolute;
-						top: -1px;
-						left: -1px;
-						border-radius: 16px;
-					}
+					border-color: $color-point;					
 				}
 				.img {				
 					width: 150px;

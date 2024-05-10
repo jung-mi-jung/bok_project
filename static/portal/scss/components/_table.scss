@@ -24,6 +24,16 @@ table {
 	&.table_line {  //임시? 삭제?
 		border-top: 2px solid #182252;
 	}
+	&.single {
+		thead {
+			th {
+				border-radius: 8px !important;
+			}
+		}
+		td:first-child {
+			border-right: none !important;
+		}
+	}
 	table {
 		width: 100%;
 		table-layout: fixed;
