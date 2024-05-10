@@ -37,10 +37,6 @@ if (window.innerWidth < 1200) {
 		$(".total-nav").removeClass("m-total-nav");
 	}
 }
-else {
-	ismobile = false;
-	$("body").removeClass("mobile");
-}
 
 //리사이즈
 $(window).resize(function () {
@@ -624,7 +620,7 @@ $(function() {
 	var article = $('.faqList dt>button');
 	article.each(function(index, el) {``
 		$(this).click(function(event) {
-			if ($(this).parent().hasClass('open')) {f
+			if ($(this).parent().hasClass('open')) {
 				$(this).parent().removeClass('open').next().hide();
 				$(this).attr('title', '답변 열기')
 			} else {

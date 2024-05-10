@@ -640,6 +640,10 @@ outline-offset: 2px;
 outline-style: dashed;
 }
 }
+.tsh-wrap .tsh-main .label-list {
+display: flex;
+flex-direction: column;
+}
 @media (min-width: 1200px) {
 .tsh-wrap .tsh-main .search-main {
 width: calc(100% - 240px - 36px - 36px);
@@ -807,6 +811,7 @@ font-size: 14px;
 text-decoration: underline;
 }
 .tsh-wrap mark {
-background-color: #FFE100;
+background-color: transparent !important;
+color: #449ee3;
 }
 /*# sourceMappingURL=../maps/tsh.css.map */

@@ -8,13 +8,24 @@ $(function () {
 	var bannerList = new Swiper(".section1-visual", {
 		slidesPerView: 1,	// 보여지는 슬라이드 갯수
 		spaceBetween: 0,	// 마진값
-		loop: true,	// 슬라이드 반복 여부
+		//loop: true,	// 슬라이드 반복 여부
 		// loopSlides: linkNum.length,
 		effect: 'true', //슬라이드 이미지가 쌓이는 느낌
+		watchOverflow: true,
 		autoplay : {  // 자동 슬라이드 설정 , 비 활성화 시 false
 			delay : 5000,  //시간 설정
 			disableOnInteraction : false,
 		},
+		on : {
+			init: function(){
+				if( this.slides.length == 1 ) {
+					$(".swiper-pagination, .section1__swiper-button-stop").css({ display: "none"});
+				} 
+				else {
+					$(".swiper-pagination, .section1__swiper-button-stop").css({ display: "flex"});
+				}
+			}
+		}
 	});
 
 	var bannerlink = new Swiper(".s1-bottom-set .swiper-container", {
@@ -39,7 +50,7 @@ $(function () {
 		},
 		direction: 'vertical',
 		centerSlides: true,
-		loop: true,	// 슬라이드 반복 여부
+		//loop: true,	// 슬라이드 반복 여부
 	})
 
 	bannerList.controller.control = bannerlink;

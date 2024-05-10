@@ -23,6 +23,9 @@ label {
 	display: inline-flex;
 	align-items: center;
 	position: relative;
+	& + label {
+		margin-left: 20px;
+	}
 }
 //input[type='radio'],
 input[type='checkbox'] {
@@ -99,7 +102,8 @@ input[type='radio'] {
 		border-radius: 50%;
 		background-color: #FAFAFA;
 		position: absolute;
-			top: 2px;
+			// top: 2px;
+			top: 10px;
 			left: -1px;
 	}
 	&:checked + i {
@@ -112,6 +116,9 @@ input[type='radio'] {
 			height: 6px;
 			border: 7px solid #3B63C4;
 			border-radius: 50%;
+			position: absolute;
+			top: 0;
+			left: 0;
 			
 		}
 	}
