@@ -2457,7 +2457,27 @@ p.subject {
 		em {
 			font-weight: 600;
 		}
-	}		
+	}
+	&.img {
+		@include breakpoint($lg){
+			display: flex;
+			align-self: start;
+			justify-content: space-between;
+			text-align: left;
+		}
+		p.btn {
+			@include breakpoint($lg){
+				width: 359px;
+			}
+			margin-bottom: 0;
+			@include breakpoint($smd){
+				margin-top: 20px;
+			}
+			img {
+				vertical-align: middle;
+			}
+		}	
+	}	
 }
 
 //민원이용안내

@@ -399,6 +399,19 @@ $(function () {
 		_href = encodeURIComponent($(this).attr('href').split('searchWrd=')[1])
 		$(this).attr('href', $(this).attr('href').split('searchWrd=')[0] + 'searchWrd=' + _href)
 	})
+
+
+	//다중 첨부파일일대 열고 접기
+	var dowButton = $(".down-set .down-button button");
+	dowButton.attr("title", "첨부파일 목록 열기");
+	dowButton.click(function(e){
+		$(this).parent().toggleClass("active");
+		if ($(this).parent().hasClass('active')){
+			dowButton.attr("title", "첨부파일 목록 닫기");
+		} else {
+			dowButton.attr("title", "첨부파일 목록 열기");
+		}
+	})
 });
 
 // 게시판 반응형
@@ -887,7 +900,13 @@ $(function () {
 		$(".label-list").removeClass("active");
 	})
 	
-
+	//lnb-nav 펼치기, 접기
+	$(".lnb-nav .mobile__nav__open").on("click", function(){
+		$(".lnb-nav").addClass("active");
+	})
+	$(".lnb-nav .mobile__nav__close").on("click", function(){
+		$(".lnb-nav").removeClass("active");
+	})
 });
 
 

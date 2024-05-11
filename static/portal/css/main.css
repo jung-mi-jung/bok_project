@@ -1631,6 +1631,7 @@ overflow: hidden;
 }
 }
 #section3 .media .swiper-slide .img {
+position: relative;
 display: block;
 padding-top: 60%;
 background-size: cover;
@@ -1648,6 +1649,24 @@ text-align: center;
 }
 #section3 .media .swiper-slide .txt {
 display: none;
+}
+#section3 .media .swiper-slide [class^=i-] {
+position: absolute;
+display: inline-block;
+bottom: -9px;
+left: 0;
+width: 36px;
+height: 36px;
+background-size: 36px;
+}
+#section3 .media .swiper-slide .i-facebook {
+background: url(/static/portal/img/ico/ico-facebook.svg);
+}
+#section3 .media .swiper-slide .i-youtube {
+background: url(/static/portal/img/ico/ico-youtube.svg);
+}
+#section3 .media .swiper-slide .i-instagram {
+background: url(/static/portal/img/ico/ico-instagram.svg);
 }
 
 .ctrl2 button {

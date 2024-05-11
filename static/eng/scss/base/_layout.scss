@@ -71,8 +71,8 @@ body.gnbOver {
 		margin: 0 auto;
 		padding: 0 10px;
 		@include breakpoint($smd){
-			padding-left: 48px;
-			padding-right: 48px;
+			padding-left: 10px;
+			padding-right: 10px;
 		}
 	}	
 	.globalHeader {	
@@ -274,42 +274,22 @@ body.gnbOver {
 				right: 60px;
 				width: 60px;
 				height: 60px;
+				margin: 0;
 			}
 		}
 		> .search {
-			position: absolute;
-			top: 0;
-			right: 0;
 			width: 48px;
 			height: 48px;
 			border-radius: 50%;
 			z-index: 9;
-			//background-color: #fff;
+			background-color: $color-point;
 			&::before  {
 				@include font-ico-outline("\e8b6");
-				color: $point;
-				font-size: rem(40);
-				@include breakpoint($smd){
-					font-size: rem(32);
-				}
+				color: #fff;
+				font-size: rem(24);
 			}
 			&:focus {
 				@include focus;
-			}
-			@include breakpoint($lg){
-				position: static;
-				width: 48px;
-				height: 48px;
-				border-radius: 50%;
-				background-color: $color-point;
-				// width: $header-height;
-				// height: $header-height;
-				// background-color: #3B63C4;
-				// top: -42px;
-				&::before {
-					color: #fff;
-					font-size: rem(24);
-				}
 			}
 		}	
 	}
@@ -517,15 +497,18 @@ body.gnbOver {
 		.sh-db + .content {
 			float: right;
 			//border-left: 1px solid $bd-color;
-			padding-left: 36px;
+			padding-left: 35px;
 		}
 		.lnb-nav + .content {
-			//width: per(1405px, $pc-wide);
-			width: per(1165px, $pc-wide);
+			//width: per(1165px, $pc-wide);
+			position: relative;
+			width: calc(100% - 240px - 35px);
 		}
 		.sh-db + .content {
 			//width: per(1441px, $pc-wide);
-			width: per(1200px, $pc-wide);
+			position: relative;
+			//width: per(1200px, $pc-wide);
+			width: calc(100% - 204px - 35px);
 		}
 	}	
 }

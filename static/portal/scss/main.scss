@@ -984,7 +984,7 @@
 			}
 			& + a {
 				margin-left: 8px;
-			}							
+			}			
 		}			
 	}
 	.tab_list {
@@ -992,7 +992,7 @@
 		&.tab01 {
 			display: block;
 		}
-	}
+	}	
 	[class^=tab0] .swiper-slide {
 		.img {
 			position: relative;
@@ -1060,6 +1060,7 @@
 				}
 			}
 			.img {
+				position: relative;
 				display: block;
 				padding-top: 60%;
 				background-size: cover;
@@ -1077,6 +1078,24 @@
 			}
 			.txt {
 				display: none;
+			}
+			[class^=i-] {
+				position: absolute;
+				display: inline-block;
+				bottom: -9px;
+				left: 0;
+				width: 36px;
+				height: 36px;
+				background-size: 36px;
+			}
+			.i-facebook {
+				background: url(/static/portal/img/ico/ico-facebook.svg);
+			}
+			.i-youtube{
+				background: url(/static/portal/img/ico/ico-youtube.svg);
+			}
+			.i-instagram {
+				background: url(/static/portal/img/ico/ico-instagram.svg);
 			}
 		}
 	}

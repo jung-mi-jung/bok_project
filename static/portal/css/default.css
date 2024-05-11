@@ -1796,8 +1796,8 @@ padding: 0 10px;
 }
 @media (max-width: 1199px) {
 #header .container {
-padding-left: 48px;
-padding-right: 48px;
+padding-left: 10px;
+padding-right: 10px;
 }
 }
 #header .globalHeader {
@@ -2035,16 +2035,15 @@ top: 0;
 right: 60px;
 width: 60px;
 height: 60px;
+margin: 0;
 }
 }
 #header .toggle-set > .search {
-position: absolute;
-top: 0;
-right: 0;
 width: 48px;
 height: 48px;
 border-radius: 50%;
 z-index: 9;
+background-color: #005596;
 }
 #header .toggle-set > .search::before {
 content: "\e8b6";
@@ -2063,31 +2062,13 @@ text-rendering: optimizeLegibility;
 -moz-osx-font-smoothing: grayscale;
 font-feature-settings: "liga";
 -webkit-font-feature-settings: "liga";
-color: #131547;
-font-size: 2.5rem;
-}
-@media (max-width: 1199px) {
-#header .toggle-set > .search::before {
-font-size: 2rem;
-}
+color: #fff;
+font-size: 1.5rem;
 }
 #header .toggle-set > .search:focus {
 outline-color: #fff;
 outline-style: dashed;
 outline-offset: -1PX;
-}
-@media (min-width: 1200px) {
-#header .toggle-set > .search {
-position: static;
-width: 48px;
-height: 48px;
-border-radius: 50%;
-background-color: #005596;
-}
-#header .toggle-set > .search::before {
-color: #fff;
-font-size: 1.5rem;
-}
 }
 
 .bd-body .hgroup {
@@ -2310,13 +2291,15 @@ padding: 0 10px;
 #main-container .lnb-nav + .content,
 #main-container .sh-db + .content {
 float: right;
-padding-left: 36px;
+padding-left: 35px;
 }
 #main-container .lnb-nav + .content {
-width: 80.9027777778%;
+position: relative;
+width: calc(100% - 240px - 35px);
 }
 #main-container .sh-db + .content {
-width: 83.3333333333%;
+position: relative;
+width: calc(100% - 204px - 35px);
 }
 }
 

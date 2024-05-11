@@ -543,7 +543,8 @@
 			overflow: hidden;
 			margin-top: 40px;
 			box-shadow: 24px 24px 24px 0 rgba(60, 60, 60, 0.2);
-			.ctrl {				
+			.ctrl {	
+				height: 1px;			
 				.s {
 					position: absolute;
 					bottom: 20px;
@@ -638,6 +639,11 @@
 					background-position: 50%;
 					background-size: cover;
 					background-repeat: no-repeat;
+				}
+				a {
+					&:focus {
+						outline-offset: 2px;
+					}
 				}
 			}
 		}
@@ -882,21 +888,21 @@
 //동영상
 .index-main-video {
 	position: relative;	
-	&::before {
-		content: "";
-		display: inline-block;
-		background: linear-gradient(180deg, rgba(224,234,249,1) 0%, rgba(224,234,249,1) 50%, rgba(177,193,231,0.9906337535014006) 100%);
-		position: absolute;
-		left: 0;
-		top: 420px;
-		bottom: 0;
-		width: 100%;
-		min-height: 400px;
-		z-index: -1;
-		@include breakpoint($sm){
-			display: none;
-		}
-	}
+	// &::before {
+	// 	content: "";
+	// 	display: inline-block;
+	// 	background: linear-gradient(180deg, rgba(224,234,249,1) 0%, rgba(224,234,249,1) 50%, rgba(177,193,231,0.9906337535014006) 100%);
+	// 	position: absolute;
+	// 	left: 0;
+	// 	top: 420px;
+	// 	bottom: 0;
+	// 	width: 100%;
+	// 	min-height: 400px;
+	// 	z-index: -1;
+	// 	@include breakpoint($sm){
+	// 		display: none;
+	// 	}
+	// }
 	.video {
 		display: block;
 		overflow: hidden;

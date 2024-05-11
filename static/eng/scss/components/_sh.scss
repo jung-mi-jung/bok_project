@@ -5,8 +5,9 @@
 		position: relative;
 		display: block;
 		float: left;
-		width: per(204px + 35px, $pc-wide);
-		padding-right: 36px;
+		//width: per(204px + 35px, $pc-wide);
+		width: calc(204px + 35px);
+		padding-right: 35px;
 		background-color: #fff;
 		height: auto;
 		margin-bottom: 0;
@@ -17,7 +18,7 @@
 			background-color: #d9d9d9;
 			position: absolute;
 			top: 0;
-			right: -2px;
+			right: -1px;
 			width: 1px;
 			height: 100%;
 		}

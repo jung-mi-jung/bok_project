@@ -32,6 +32,12 @@ $(function () {
 			init: function (v) {
 				var item = $('.sub-main')
 				item.find('.swiper-slide-active').attr('tabindex',0).siblings().attr('tabindex',-1)
+				if( this.slides.length == 1 ) {
+					$(".swiper-pagination, .sub-main .sub-visual-stop").css({ display: "none"});
+				} 
+				else {
+					$(".swiper-pagination, .sub-main .sub-visual-stop").css({ display: "inline-block"});
+				}
 			},
 			slideChangeTransitionEnd:function(){
 				var item = $('.sub-main')
