@@ -891,7 +891,7 @@ $(function () {
 		}
 	});*/
 
-	$(".check-ctrl").click(function(){
+	$(".mobile-check-ctrl").click(function(){
 		$(this).toggleClass("active");
 		$(this).next().toggleClass("active");
 	})

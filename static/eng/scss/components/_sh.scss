@@ -14,7 +14,6 @@
 		&::after {
 			content: "";
 			display: inline-block;
-			//border-right: 1px solid #d9d9d9;
 			background-color: #d9d9d9;
 			position: absolute;
 			top: 0;
@@ -24,18 +23,6 @@
 		}
 		& + .content {
 			border-left: 1px solid #d9d9d9;
-			// &::after {
-			// 	content: "";
-			// 	display: inline-block;
-			// 	background-color: #d9d9d9;
-			// 	position: absolute;
-			// 	top: 0;
-			// 	left:per(240px, $pc-wide);
-			// 	//right: -1px;
-			// 	width: 1px;
-			// 	//height: 100%;
-			// 	height: calc(100% - 120px);
-			// }
 		}
 	}
 	.db-search {
@@ -161,9 +148,9 @@
 	.check-list {
 		position: relative;
 		@include breakpoint($smd){
-			h3 {
-				display: none;
-			}
+			// h3 {
+			// 	display: none;
+			// }
 		}
 		.label-list {
 			display: flex;
@@ -232,9 +219,7 @@
 		}
 		@include breakpoint($smd){ 
 			.label-list {
-				display: none;
-				border: 1px solid #d9d9d9;
-				padding: 4px;
+				//display: none;
 				flex-direction: row;
 				&.active {
 					display: flex;
@@ -340,45 +325,19 @@
 								}
 							}
 						}
-						/*&.bu {
-							&::before {
-								@include font-ico-outline('\e5cc');
-								font-size: 22px;
-								color: #1A1A1A;
-								margin-right: 3px;
-								border: none;
-								background-color: transparent;
-							}
-							&::after {
-								border: 1px solid #3B63C4;
-								background-color: #3B63C4;
-							}
-							&.active {
-								&::before {
-									transform: rotate(90deg);
-									margin-bottom: 4px;
-								}
-								&::after {
-									display: none;
-								}
-							}
-						}
-						&[disabled=disabled] {
-							cursor: default;
-						}*/
 					}
 					.depth4 {
 						//display: none;
 						position: relative;
 						&::before {
 							content: "";
-									display: inline-block;
-									width: 20px;
-									height: 1px;
-									background-color: #E6E6E6;
-									position: absolute;
-									bottom: 13px;
-									left: 13px;
+							display: inline-block;
+							width: 20px;
+							height: 1px;
+							background-color: #E6E6E6;
+							position: absolute;
+							bottom: 13px;
+							left: 13px;
 						}
 						input[type=radio],
 						input[type=radio] + i {
@@ -524,6 +483,27 @@
 				transform: rotate(180deg);
 			}
 		}
+	}
+	@include breakpoint($smd){
+		.sh-db-box {
+			border: 1px solid #E6E6E6;
+			padding: 16px;
+			.check-list {
+				h3 {
+					&:first-child {
+						margin-top: 0 !important;
+					}
+				}
+				.label-list {
+					display: flex;
+					flex-wrap: wrap;
+					margin-bottom: 15px;
+					label {
+						width: 50%;
+					}
+				}
+			}
+		}		
 	}
 	.Keyword {
 		@include breakpoint($smd){

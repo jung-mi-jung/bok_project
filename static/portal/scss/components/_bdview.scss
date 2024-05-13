@@ -555,16 +555,25 @@
 .view-table {  //청소년 경제강좌(신청)
 	border-top: none;
 	font-size: rem(16);
+	border-width: 0 1px;
 	table {
 		th {			
 			color: #fff !important;
 			background-color: #233B76 !important;
 			padding: 10px 0;
 		}
+		thead {
+			th {
+				&:first-child,
+				&:last-child {
+					border-radius: 0;
+				}
+			}
+		}
 		tbody {
 			th {
 				color: $black !important;
-				background-color: #FAFAFA;
+				background-color: #FAFAFA !important;
 			}
 		}
 	}

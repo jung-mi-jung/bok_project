@@ -41,9 +41,12 @@
 	.sub-_visual {
 		border-top: 1px solid #E6E6E6;
 		@include breakpoint($smd){
+			display: flex;
+			align-items: center;
 			background-color: #CBDEF6;
 			text-align: center;
 			height: 100px;
+			line-height: 1.3;
 		}
 		@include breakpoint($lg){
 			height: 216px;
@@ -75,7 +78,7 @@
 			width: $pc-wide;
 			max-width: 100%;
 			margin: 0 auto;
-			padding-top: 20px;
+			//padding-top: 20px;
 			@include breakpoint($lg){
 				padding-top: 90px;
 			}
@@ -83,7 +86,7 @@
 				color: $black;
 				font-weight: 500;
 				font-size: rem(48);
-				@include breakpoint($sm){
+				@include breakpoint($smd){
 					font-size: rem(24);
 					text-align: center;
 				}
@@ -153,7 +156,7 @@
 				}
 				&.home {
 					color: #6D6E72;
-					padding: 0 16px;
+					padding: 0 20px;
 					@include breakpoint($smd){
 						padding: 0;
 					}
@@ -172,7 +175,7 @@
 							margin-right: 6px;
 							margin-bottom: -2px;
 							@include breakpoint($smd){
-								margin-top: 13px;
+								margin-right: 0;
 							}
 						}
 						@include breakpoint($smd){
@@ -181,14 +184,11 @@
 							width: 44px;
 							height: 44px;
 							line-height: 44px;	
-							text-align: center;		
+							justify-content: center;	
 						}
 					}
-					@include breakpoint($lg){
-						padding: 0 26px;
-					}
 					@include breakpoint($smd){
-						width: 36px;
+						width: 44px;
 						text-align: center;
 						span {
 							display: none;
@@ -196,26 +196,32 @@
 					}
 					@include breakpoint($sm){
 						display: block;
-					}						
+					}
 				}
 				&:last-child > span,
 				> a {
+					position: relative;
 					color: #6D6E72;
-					display: block;	
-					padding: 0 10px;
+					display: flex;	
+					align-items: center;
+					font-size: 14px;
+					padding: 0 36px 0 10px;
+					height: 100%;
+					line-height: 1.2;
 					@include breakpoint($lg){
-						min-width: 144px;
-						padding: 0 26px;
+						padding: 0 50px 0 20px;
+						font-size: 16px;
 					}
 					&::after {
+						position: absolute;
+						top: 50%;
+						right: 20px;
+						margin-top: -10px;
 						@include font-ico-outline('\e5c6');
 						color: #6D6E72;
 						font-size: 22px;
-						margin-left: 10px;
-						float: right;
-						margin-top: 19px;
 						@include breakpoint($smd){
-							margin-top: 13px;
+							right: 10px;
 						}
 					}
 				}
@@ -396,7 +402,7 @@
 		background-color: #fff;
 		box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.15);
 		border: 1px solid #1C1B1F;
-		border-radius: 0 8px 8px 0;
+		border-radius: 0 0 8px 0;
 		padding: 15px;
 		font-size: 14px;
 		transition: all .5s;
@@ -405,35 +411,33 @@
 			top: -1px;
 			right: -40px;
 			z-index: -1;
-			button {				
-				width: 50px;
+			button {		
+				display: inline-block;
+				width: 40px;
 				height: 40px;
+				line-height: 40px;
 				border: 1px solid $black;
-				border-radius: 4px;
-				background-color: #fff;				
+				border-radius: 0 4px 4px 0;
+				background-color: #fff;
+				border-width: 1px 1px 1px 0;
 				&::before {
-					width: 40px;
-					right: -40px;
-					border-width: 1px 1px 1px 0;
-					z-index: -1;
-					margin-left: 10px;
 					font-size: 20px;
 					color: $black;
+					margin-top: 7px;
 				}
 			}
 			.mobile__nav__open {
-				//display: none;
 				&::before {
 					@include font-ico-outline('\e0ee');
-					font-size: 20px;
+					font-size: 24px;
 				}
 			}
-			.mobile__nav__close {	
-				display: none;			
+			.mobile__nav__close {
+				display: none;
 				&::before {
 					@include font-ico-outline('\e5cd');	
 				}
-			}			
+			}
 		}
 		&.active {
 			left: 0;

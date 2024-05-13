@@ -129,32 +129,25 @@ p.bu-dot {
 	h2 {		
 		color: #333;
 		font-size: rem(36);
-		//font-weight: 300;
 		font-weight: 500;
 		margin-bottom: 55px;
 		& + h3 {
 			margin-top: 22px;
 		}
+		@include breakpoint($smd){
+			font-size: rem(22);
+			text-align: center;
+		}
 	}
 	h3 {
 		clear: both;
-		//color: #131547;
 		color: #26447D;
 		font-size: rem(28);
 		font-weight: 500;
 		margin: 70px 0 16px;
-		//margin: 25px 0 16px;
-		// &::before {
-		// 	content: "";
-		// 	display: inline-block;
-		// 	vertical-align: middle;
-		// 	width: 8px;
-		// 	height: 24px;
-		// 	background-color: #3B63C4;
-		// 	border-radius: 30px;
-		// 	margin-right: 10px;
-		// 	margin-bottom: 4px;
-		// }
+		a {
+			color: #26447D;
+		}
 		&.h3 {
 			margin: 40px 0 16px;
 			@include h-caption();

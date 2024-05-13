@@ -755,7 +755,7 @@ padding-top: 30px;
 }
 @media (max-width: 749px) {
 .section h2 {
-font-size: 2.125rem !important;
+font-size: 1.875rem !important;
 margin-bottom: 20px !important;
 padding-top: 30px;
 }
@@ -1168,6 +1168,7 @@ background: #F2F6FA;
 background-size: auto;
 overflow: hidden;
 }
+@media (min-width: 1200px) {
 #section2::before {
 content: "";
 display: inline-block;
@@ -1181,6 +1182,7 @@ margin-right: 76px;
 background-image: url(/static/eng/img/main/bg_section2.png);
 background-repeat: no-repeat;
 background-position: 0 0;
+}
 }
 #section2 .set {
 padding: 100px 0;
@@ -1630,7 +1632,6 @@ overflow: hidden;
 #section3 .board-list1 .swiper-wrapper .swiper-slide {
 position: relative;
 padding: 16px 16px 48px;
-height: 561px;
 overflow: hidden;
 /* 기능 삭제 */
 }

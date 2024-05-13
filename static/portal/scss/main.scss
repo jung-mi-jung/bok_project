@@ -245,7 +245,7 @@
 			padding-top: 30px;
 		}
 		@include breakpoint($sm){
-			font-size: rem(34) !important;
+			font-size: rem(30) !important;
 			margin-bottom: 20px !important;
 			padding-top: 30px;
 		}
@@ -608,20 +608,22 @@
 	background: #F2F6FA;
 	background-size: auto;
 	overflow: hidden;
-	&::before {
-		content: "";
-		display: inline-block;
-		background-color: #DEE7F7;
-		width: 800px;
-		height: 300%;
-		position: absolute;
-		top: 0;
-		right: 50%;
-		margin-right: 76px;
-		background-image: url(/static/portal/img/main/bg_section2.png);
-		background-repeat: no-repeat;
-		background-position: 0 0;
-	}
+	@include breakpoint($lg){
+		&::before {
+			content: "";
+			display: inline-block;
+			background-color: #DEE7F7;
+			width: 800px;
+			height: 300%;
+			position: absolute;
+			top: 0;
+			right: 50%;
+			margin-right: 76px;
+			background-image: url(/static/portal/img/main/bg_section2.png);
+			background-repeat: no-repeat;
+			background-position: 0 0;
+		}
+	}	
 	.set {
 		padding: 100px 0;
 		@include breakpoint($sm){
@@ -754,15 +756,7 @@
 			.swiper-slide-prev a{margin-left:360px;}
 			.swiper-slide-active+*+.swiper-slide a { margin-left: -360px; }
 			.swiper-slide-active+*+*+.swiper-slide a { margin-left: -720px; }
-			a {				
-				// width: 25% !important;
-				// padding: 16px;
-				// background-color: #fff;
-				// border-radius: 16px;
-				// box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.15);
-				// @include breakpoint($sm){
-				// 	width: 100% !important;
-				// }
+			a {
 				span {				
 					&.img {
 						padding-top: 60%;
@@ -1254,7 +1248,7 @@
 			.swiper-slide {
 				position: relative;
 				padding: 16px 16px 48px;
-				height: 561px;
+				//height: 561px;
 				overflow: hidden;
 				@include breakpoint($smd){
 					padding: 16px 16px 70px;
