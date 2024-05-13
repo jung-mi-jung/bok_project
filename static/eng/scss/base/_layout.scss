@@ -519,42 +519,49 @@ body.gnbOver {
 /* 전체메뉴 */
 .total-nav {
 	position: fixed;
+	align-items: center;
+	justify-content: center;
 	top: 0;
 	left: 0;
-	right: 0;
-	bottom: 0;
+	// right: 0;
+	// bottom: 0;
 	width: 100%;
 	min-height: 100vh;
-	background: #fff;
+	background: rgba(0,0,0,0.7);
 	z-index: 100;
-	overflow: auto !important;
+	// overflow: auto !important;
 	display: none;
-	&::before {
-		display: none;
-	}
-	&.fade.in {
+	&.in {
 		&::before {
 			background: none !important;
+		}
+	}
+	.modal-dialog {
+		overflow: hidden;
+		max-width: 1600px;
+		max-height: calc(100vh - 160px);
+		@include breakpoint($sm) {
+			max-height: calc(100vh - 40px);
 		}
 	}
 	.modal-dialog,
 	.modal-content {
 		width: 100%;
-		min-width: 100vh;
-		min-height: 100vh;
-		height: auto;
+		// min-width: 100vh;
+		// min-height: 100vh;
+		height: 100%;
 		background-color: #fff;
 		border: 0;
 		border-radius: 0;
 	}
-	.container {
-		max-width: 1680px !important;   
-		margin: 0 auto;
-		padding: 0 10px !important;
-	}
+	// .container {
+	// 	max-width: 1680px !important;   
+	// 	margin: 0 auto;
+	// 	padding: 0 10px !important;
+	// }
 	.modal-header {
 		background: #F6F6F6;
-		padding: 40px 0;
+		padding: 24px 38px;
 		border-radius: 0;
 		.modal-title {
 			display: flex;

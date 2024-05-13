@@ -540,6 +540,9 @@ body.gnbOver {
 		overflow: hidden;
 		max-width: 1600px;
 		max-height: calc(100vh - 160px);
+		@include breakpoint($sm) {
+			max-height: calc(100vh - 40px);
+		}
 	}
 	.modal-dialog,
 	.modal-content {
