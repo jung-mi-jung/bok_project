@@ -2568,9 +2568,9 @@ color: #4D4D4D;
 font-weight: 400;
 }
 
-.total-nav.active {
-display: block !important;
-opacity: 1 !important;
+.total-nav.in {
+display: flex !important;
+padding: 0 10px !important;
 }
 
 @media (max-width: 1199px) {

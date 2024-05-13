@@ -549,21 +549,22 @@
 .sub-btn {
 	margin-top: 40px;
 	a {
-		text-align: center;
-		display: block;
+		// text-align: center;
+		display: flex;
+		align-items: center;
 		padding: 9px;
 		color: #fff;
 		background-color: $point;
 		border-radius: 8px;
-		&::before {
-			content: "";
-			display: inline-block;
-			vertical-align: middle;
-			width: 32px;
-			height: 32px;
-			background: url(/static/eng/img/ico/ico-calender-2x.png);
-			margin-right: 8px;
-		}
+		// &::before {
+		// 	content: "";
+		// 	display: inline-block;
+		// 	vertical-align: middle;
+		// 	width: 32px;
+		// 	height: 32px;
+		// 	background: url(/static/eng/img/ico/ico-calender-2x.png);
+		// 	margin-right: 8px;
+		// }
 		&::after {
 			@include font-ico-outline('\e315');
 			font-size: 18px;
