@@ -53,7 +53,7 @@
 			background-color: #CBDEF4;
 			background-repeat: no-repeat;
 			background-position: 50%;
-			background-image: url(/static/portal/img/sub/sub_visual_bg1.png);
+			//background-image: url(/static/portal/img/sub/sub_visual_bg1.png);
 			&.menu_200716 {
 				background-image: url(/static/portal/img/sub/sub_visual_bg1.png);
 			}
@@ -61,18 +61,20 @@
 				background-image: url(/static/portal/img/sub/sub_visual_bg2.png);
 			}
 			&.menu_201150 {
-				background-image: url(/static/portal/img/sub/sub_visual_bg1.png);
+				background-image: url(/static/portal/img/sub/sub_visual_bg3.png);
 			}
 			&.menu_201151 {
-				background-image: url(/static/portal/img/sub/sub_visual_bg1.png);
+				background-image: url(/static/portal/img/sub/sub_visual_bg4.png);
 			}
-
 			&.menu_201152 {
-				background-image: url(/static/portal/img/sub/sub_visual_bg1.png);
+				background-image: url(/static/portal/img/sub/sub_visual_bg5.png);
 			}
 			&.menu_200227 { //이용안내
-				background-image: url(/static/portal/img/sub/sub_visual_bg1.png);
+				background-image: url(/static/portal/img/sub/sub_visual_bg6.png);
 			}
+			// &.55 {
+			// 	background-image: url(/static/portal/img/sub/sub_visual_bg_blog.png);
+			// }
 		}	
 		div {
 			width: $pc-wide;

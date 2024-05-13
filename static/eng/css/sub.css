@@ -632,7 +632,6 @@ height: 216px;
 background-color: #CBDEF4;
 background-repeat: no-repeat;
 background-position: 50%;
-background-image: url(/static/eng/img/sub/sub_visual_bg1.png);
 }
 .navigation .sub-_visual.menu_400079 {
 background-image: url(/static/eng/img/sub/sub_visual_bg1.png);
@@ -641,10 +640,10 @@ background-image: url(/static/eng/img/sub/sub_visual_bg1.png);
 background-image: url(/static/eng/img/sub/sub_visual_bg2.png);
 }
 .navigation .sub-_visual.menu_400007 {
-background-image: url(/static/eng/img/sub/sub_visual_bg1.png);
+background-image: url(/static/eng/img/sub/sub_visual_bg3.png);
 }
 .navigation .sub-_visual.menu_400087 {
-background-image: url(/static/eng/img/sub/sub_visual_bg1.png);
+background-image: url(/static/eng/img/sub/sub_visual_bg4.png);
 }
 }
 .navigation .sub-_visual div {
@@ -858,7 +857,7 @@ top: 44px;
 }
 }
 .navigation nav > ul > li .depth2 ul {
-min-width: -webkit-max-content;
+min-width: -moz-max-content;
 min-width: max-content;
 background-color: #fff;
 padding: 10px 15px;
@@ -1847,7 +1846,6 @@ margin: 5px 8px 0 0;
 }
 .count-total strong {
 font-weight: 600;
-text-decoration: underline;
 }
 
 .title .ti-announcement {
@@ -6825,7 +6823,6 @@ height: 1px;
 position: absolute;
 top: calc(50% - 6px);
 right: -310px;
-transform: translateY(-50%);
 background: #3B63C4;
 }
 .org-lv1 .org-dp1 {
@@ -6965,10 +6962,9 @@ display: block;
 position: absolute;
 bottom: 0;
 left: 50%;
-transform: translateX(-50%);
 width: 1px;
 height: 224px;
-background-color: #1454FF;
+background-color: #3B63C4;
 }
 .org-lv1 .org-name + ul .org-dp1 > ul::after {
 content: "";
@@ -6978,7 +6974,7 @@ top: -165px;
 right: -364px;
 width: 437px;
 height: 1px;
-background-color: #1454FF;
+background-color: #3B63C4;
 }
 .org-lv1 .org-name + ul .org-dp1:nth-of-type(2) > ul {
 left: -332px;
@@ -7015,7 +7011,6 @@ display: block;
 position: absolute;
 bottom: 15px;
 left: 50%;
-transform: translateX(-50%);
 width: 1px;
 height: 180px;
 background-color: #3B63C4;
@@ -7045,7 +7040,6 @@ display: block;
 position: absolute;
 top: -230px;
 left: 50%;
-transform: translateX(-50%);
 width: 1px;
 height: 200px;
 background-color: #0038CC;
@@ -10107,7 +10101,6 @@ margin-bottom: 30px;
 }
 }
 .content-row .cont-nav ul {
-position: -webkit-sticky;
 position: sticky;
 top: 60px;
 }
