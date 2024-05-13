@@ -5057,21 +5057,12 @@ height: auto;
 margin-top: 40px;
 }
 .sub-btn a {
-text-align: center;
-display: block;
+display: flex;
+align-items: center;
 padding: 9px;
 color: #fff;
 background-color: #131547;
 border-radius: 8px;
-}
-.sub-btn a::before {
-content: "";
-display: inline-block;
-vertical-align: middle;
-width: 32px;
-height: 32px;
-background: url(/static/eng/img/ico/ico-calender-2x.png);
-margin-right: 8px;
 }
 .sub-btn a::after {
 content: "\e315";
@@ -12373,13 +12364,17 @@ overflow-x: hidden;
 }
 .modal {
 position: fixed;
+display: flex !important;
 top: 0;
 left: 0;
 right: 0;
 bottom: 0;
 z-index: 1100;
-display: none;
+display: none !important;
 overflow: hidden;
+}
+.modal.fade.in {
+display: flex !important;
 }
 .modal.fade.in::before {
 content: "";

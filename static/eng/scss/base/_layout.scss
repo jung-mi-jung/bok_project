@@ -824,9 +824,13 @@ body.gnbOver {
 	// 	display: none;
 	// }
 }
-.total-nav.active {
-	display: block !important;
-	opacity: 1 !important;
+// .total-nav.active {
+// 	display: block !important;
+// 	opacity: 1 !important;
+// }
+.total-nav.in {
+	display: flex !important;
+	padding: 0 10px !important;
 }
 @include breakpoint($smd) {
 	.total-nav {
