@@ -675,11 +675,19 @@ body.gnbOver {
 		.dp1 {
 			flex: 1;
 			> li {
-				font-size: rem(32);
+				font-size: rem(28);
 				font-weight: 500;
-				
 				> a {
 					color: #333333;
+					@include breakpoint($sm) {
+						display: none;
+					}
+				}
+				> a.m-dp1 {
+					display: none;
+					@include breakpoint($sm) {
+						display: inline-block;
+					}
 				}
 			}
 		}
