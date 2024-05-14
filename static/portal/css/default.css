@@ -3902,7 +3902,7 @@ display: none;
 .gnb > ul {
 display: flex;
 max-width: 100%;
-width: 767px;
+width: 900px;
 display: flex;
 flex-direction: row;
 justify-content: space-between;
@@ -4225,7 +4225,7 @@ text-decoration: underline;
 
 @media (min-width: 1200px) and (max-width: 1500px) {
 .gnb > ul {
-width: 620px;
+width: 840px;
 }
 .gnb > ul > li > a {
 font-size: 1.25rem;

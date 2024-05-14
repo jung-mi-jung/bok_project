@@ -9520,10 +9520,6 @@ display: block;
 color: #fff;
 font-size: 1.125rem;
 background-color: rgba(0, 0, 0, 0.5);
-overflow: hidden;
-white-space: nowrap;
-text-overflow: ellipsis;
-display: inline-block;
 }
 .histroy2 .his-con .his-txt {
 position: relative;

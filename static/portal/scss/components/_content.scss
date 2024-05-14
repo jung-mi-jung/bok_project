@@ -2461,7 +2461,7 @@ p.subject {
 	&.img {
 		@include breakpoint($lg){
 			display: flex;
-			align-self: start;
+			align-self: center;
 			justify-content: space-between;
 			text-align: left;
 		}
@@ -2956,7 +2956,7 @@ p.subject {
 				color: #fff;
 				font-size: rem(18);
 				background-color: rgba(0, 0, 0, 0.5);
-				@include ellipsis();
+				//@include ellipsis();
 			}
 		}
 		.his-txt {

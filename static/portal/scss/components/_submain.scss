@@ -38,6 +38,7 @@
 }
 
 .sub-main {
+	margin: 0;
 	& + #footer {
 		margin-top: 0;
 	}
@@ -58,10 +59,18 @@
 		padding: 30px 0 ;
 	}
 	.container {
+		margin-left: 0;
+		margin-right: 0;
+		padding: 0 10px;
 		@include breakpoint($lg){
 			display: flex;
-			justify-content: space-between;
-		}		
+			justify-content: space-between;					
+		}	
+		@include breakpoint(min-width 1480px) {
+			padding: 0;
+			margin-left: auto;
+			margin-right: auto;
+		}	
 		.map_img {
 			position: relative;
 			display: flex;
@@ -683,18 +692,18 @@
 								color: $color-point;
 								text-decoration: underline;
 							}
-							// &::before {
-							// 	content: "";
-							// 	display: inline-block;
-							// 	width: 1px;
-							// 	height: 18px;
-							// 	margin-top: -9px;
-							// 	background: #CACCD8;
-							// 	position: absolute;
-							// 	top: 50%;
-							// 	right: 0;
-							// 	margin-left: -50%;
-							// }
+							&::before {
+								content: "";
+								display: inline-block;
+								width: 1px;
+								height: 18px;
+								margin-top: -9px;
+								background: #CACCD8;
+								position: absolute;
+								top: 50%;
+								right: 50%;
+								margin-left: -50%;
+							}
 						}
 						& + li {
 							
@@ -996,10 +1005,12 @@
 	p {
 		color: #666;
 		line-height: 1.4;
+		text-align: left;
 		&.title {
 			color: $black;			
 			font-size: rem(48);
 			font-weight: 300;
+			text-align: center;
 			margin-bottom: 15px;
 			@include breakpoint($sm){
 				text-align: center;

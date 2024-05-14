@@ -2983,7 +2983,7 @@ p.subject {
 				color: #fff;
 				font-size: rem(18);
 				background-color: rgba(0, 0, 0, 0.5);
-				@include ellipsis();
+				//@include ellipsis();
 			}
 		}
 		.his-txt {

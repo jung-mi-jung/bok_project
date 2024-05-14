@@ -8,7 +8,7 @@
 		@include breakpoint($lg){
 			display: flex;
 			max-width: 100%;
-			width: 767px;
+			width: 900px;
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
@@ -399,7 +399,7 @@
 
 @include breakpoint($lg 1500px){
 	.gnb > ul {
-		width: 620px;
+		width: 840px;
 		> li > a {
 			font-size: rem(20);
 		}

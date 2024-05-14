@@ -9182,7 +9182,7 @@ font-weight: 600;
 @media (min-width: 1200px) {
 .info-txt2.img {
 display: flex;
-align-self: start;
+align-self: center;
 justify-content: space-between;
 text-align: left;
 }
@@ -9703,10 +9703,6 @@ display: block;
 color: #fff;
 font-size: 1.125rem;
 background-color: rgba(0, 0, 0, 0.5);
-overflow: hidden;
-white-space: nowrap;
-text-overflow: ellipsis;
-display: inline-block;
 }
 .histroy2 .his-con .his-txt {
 position: relative;
@@ -12479,6 +12475,9 @@ font-size: 24px;
 margin-right: 3px;
 }
 
+.sub-main {
+margin: 0;
+}
 .sub-main + #footer {
 margin-top: 0;
 }
@@ -12502,10 +12501,22 @@ background-repeat: no-repeat;
 padding: 30px 0;
 }
 }
+.sub-main-zone .container {
+margin-left: 0;
+margin-right: 0;
+padding: 0 10px;
+}
 @media (min-width: 1200px) {
 .sub-main-zone .container {
 display: flex;
 justify-content: space-between;
+}
+}
+@media (min-width: 1480px) {
+.sub-main-zone .container {
+padding: 0;
+margin-left: auto;
+margin-right: auto;
 }
 }
 .sub-main-zone .container .map_img {
@@ -13169,6 +13180,18 @@ font-size: 1.125rem;
 color: #005596;
 text-decoration: underline;
 }
+.sub-main .zone_main .section2 .go_link ul li a::before {
+content: "";
+display: inline-block;
+width: 1px;
+height: 18px;
+margin-top: -9px;
+background: #CACCD8;
+position: absolute;
+top: 50%;
+right: 50%;
+margin-left: -50%;
+}
 .sub-main .zone_main .section2 h2 {
 font-size: 3rem !important;
 margin-bottom: 30px !important;
@@ -13523,11 +13546,13 @@ text-align: left;
 .index-box p {
 color: #666;
 line-height: 1.4;
+text-align: left;
 }
 .index-box p.title {
 color: #000E33;
 font-size: 3rem;
 font-weight: 300;
+text-align: center;
 margin-bottom: 15px;
 }
 @media (max-width: 749px) {
