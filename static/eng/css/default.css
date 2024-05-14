@@ -2472,11 +2472,24 @@ background: #FFE100;
 flex: 1;
 }
 .total-nav .modal-body .dp1 > li {
-font-size: 2rem;
+font-size: 1.75rem;
 font-weight: 500;
 }
 .total-nav .modal-body .dp1 > li > a {
 color: #333333;
+}
+@media (max-width: 749px) {
+.total-nav .modal-body .dp1 > li > a {
+display: none;
+}
+}
+.total-nav .modal-body .dp1 > li > a.m-dp1 {
+display: none;
+}
+@media (max-width: 749px) {
+.total-nav .modal-body .dp1 > li > a.m-dp1 {
+display: inline-block;
+}
 }
 .total-nav .modal-body .dp2 {
 margin-top: 24px;
