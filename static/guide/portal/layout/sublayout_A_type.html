@@ -99,7 +99,16 @@ $(function () {
 
 <div class="sh-db">
 	<div class="db-search">
-		<p class="t">총 <strong>1590</strong>건</p>
+		<!-- <p class="t">총 <strong>1590</strong>건</p> -->
+		<div>
+			<select class="w100p" name="searchCnd" id="" title="구분 선택">
+				<option value="1">전체</option>
+				<option value="2">제목</option>
+				<option value="3">내용</option>
+				<option value="4">저자</option>
+				<option value="5">키워드</option>
+			</select>
+		</div>
 		<div class="search-box">
 			<span class="keyword">
 				<input type="text" title="검색어" placeholder="검색어를 입력하세요">
@@ -113,9 +122,13 @@ $(function () {
 
 	<h2 class="sr-only">메뉴 선택 검색</h2>
 
+	<!-- 모바일용 -->
+	<button type="button" class="mobile_btn">유형 및 세부유형 선택</button>
+	<!-- //모바일용 -->
+
 	<!-- 유형 -->
 	<div class="check-list">
-		<h2 class="sr-only">뉴스 및 자료 유형 검색</h2>
+		<h2 class="sr-only">뉴스 및 자료 유형 검색</h2>		
 		<h3>유형</h3>
 		<button type="button" class="check-ctrl">유형 선택</button>
 		<div class="label-list">

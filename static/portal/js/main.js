@@ -284,8 +284,6 @@ function slider(){
 				// 	disableOnInteraction: false,
 				// },
 				navigation: {
-					//nextEl: $('.slider-' + index).find('.media-next'),
-					//prevEl: $('.slider-' + index).find('.media-prev'),
 					nextEl: '.media-next',
 					prevEl: '.media-prev',
 				},

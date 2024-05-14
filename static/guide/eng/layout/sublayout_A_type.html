@@ -113,192 +113,191 @@ $(function () {
 
 	<h2 class="sr-only">메뉴 선택 검색</h2>
 
-	<!-- 유형 -->
-	<div class="check-list">
-		<h2 class="sr-only">뉴스 및 자료 유형 검색</h2>
-		<h3>유형</h3>
-		<button type="button" class="check-ctrl">유형 선택</button>
-		<div class="label-list">
-			<label>
-				<input type="checkbox" name="" id="m-01">
-				<i></i>
-				<span>뉴스 및 의사록</span>
-			</label>
-			<label>
-				<input type="checkbox" name="" id="m-02">
-				<i></i>
-				<span>공지사항</span>
-			</label>
-			<label>
-				<input type="checkbox" name="" id="m-03">
-				<i></i>
-				<span>주요행사</span>
-			</label>
-			<label>
-				<input type="checkbox" name="" id="m-04">
-				<i></i>
-				<span>한은소식</span>
-			</label>
-			<label>
-				<input type="checkbox" name="" id="m-05">
-				<i></i>
-				<span>간행물</span>
-			</label>
-			<label>
-				<input type="checkbox" name="" id="m-06">
-				<i></i>
-				<span>연구자료</span>
-			</label>
-			<label>
-				<input type="checkbox" name="" id="m-07">
-				<i></i>
-				<span>지역연구 자료</span>
-			</label>
-			<label>
-				<input type="checkbox" name="" id="m-08">
-				<i></i>
-				<span>국외 사무소 자료</span>
-			</label>
-		</div>
-	</div>
-	<!-- //유형 -->
+	<!-- 모바일용 -->
+	<button type="button" class="mobile-check-ctrl">유형 및 세부유형 선택</button>
+	<!-- //모바일용 -->
 
-	<!-- 세부유형 -->
-	<div class="check-list details"> <!-- style="display: none;"-->
-		<h3>세부유형</h3>
-		<button type="button" class="check-ctrl">분류 선택</button>
+	<div class="sh-db-box">
+		<!-- 유형 -->
+		<div class="check-list">
+			<h2 class="sr-only">뉴스 및 자료 유형 검색</h2>
+			<h3>유형</h3>
+			<button type="button" class="check-ctrl">유형 선택</button>
+			<div class="label-list">
+				<label>
+					<input type="checkbox" name="" id="m-01">
+					<i></i>
+					<span>뉴스 및 의사록</span>
+				</label>
+				<label>
+					<input type="checkbox" name="" id="m-02">
+					<i></i>
+					<span>공지사항</span>
+				</label>
+				<label>
+					<input type="checkbox" name="" id="m-03">
+					<i></i>
+					<span>주요행사</span>
+				</label>
+				<label>
+					<input type="checkbox" name="" id="m-04">
+					<i></i>
+					<span>한은소식</span>
+				</label>
+				<label>
+					<input type="checkbox" name="" id="m-05">
+					<i></i>
+					<span>간행물</span>
+				</label>
+				<label>
+					<input type="checkbox" name="" id="m-06">
+					<i></i>
+					<span>연구자료</span>
+				</label>
+				<label>
+					<input type="checkbox" name="" id="m-07">
+					<i></i>
+					<span>지역연구 자료</span>
+				</label>
+				<label>
+					<input type="checkbox" name="" id="m-08">
+					<i></i>
+					<span>국외 사무소 자료</span>
+				</label>
+			</div>
+		</div>
+		<!-- //유형 -->
+		<!-- 세부유형 -->
+		<div class="check-list details"> <!-- style="display: none;"-->
+			<h3>세부유형</h3>
+			<button type="button" class="check-ctrl">분류 선택</button>
 		
-		<div class="details-list">
-			<!-- 뉴스 및 의사록 -->
-			<h4 class="sr-only">뉴스 및 의사록</h4>
-			<div class="m-01">
-				<ul>
-					<li>
-						<button>보도자료</button>
-					</li>
-					<li>
-						<button>주간보도계획</button>
-					</li>
-					<li>
-						<button>언론보도해명자료</button>
-					</li>
-					<li>
-						<button>금융통화위원회 의사록</button>
-					</li>
-					<li>
-						<button>금융통화위원회 의결사항</button>
-					</li>
-				</ul>
-				<button type="button" class="btn-view">전체보기</button>
+			<div class="details-list">
+				<!-- 뉴스 및 의사록 -->
+				<h4 class="sr-only">뉴스 및 의사록</h4>
+				<div class="m-01">
+					<ul>
+						<li>
+							<button>보도자료</button>
+						</li>
+						<li>
+							<button>주간보도계획</button>
+						</li>
+						<li>
+							<button>언론보도해명자료</button>
+						</li>
+						<li>
+							<button>금융통화위원회 의사록</button>
+						</li>
+						<li>
+							<button>금융통화위원회 의결사항</button>
+						</li>
+					</ul>
+					<button type="button" class="btn-view">전체보기</button>
+				</div>
+				<!-- //뉴스 및 의사록 -->
+				<!-- 공지사항 -->
+				<h4 class="sr-only">공지사항</h4>
+				<div class="m-02">
+					<ul>
+						<li>
+							<button>보도자료</button>
+						</li>
+					</ul>
+					<button type="button" class="btn-view">전체보기</button>
+				</div>
+				<!-- //공지사항 -->
+				<!-- 주요행사 -->
+				<h4 class="sr-only">주요행사</h4>
+				<div class="m-03">
+					<ul>
+						<li>
+							<button>주요행사</button>
+						</li>
+					</ul>
+					<button type="button" class="btn-view">전체보기</button>
+				</div>
+				<!-- //주요행사 -->
+				<!-- 한은소식 -->
+				<h4 class="sr-only">한은소식</h4>
+				<div class="m-04">
+					<ul>
+						<li>
+							<button>한은소식</button>
+						</li>
+					</ul>
+					<button type="button" class="btn-view">전체보기</button>
+				</div>
+				<!-- //한은소식 -->
+				<!-- 간행물 -->
+				<h4 class="sr-only">간행물</h4>
+				<div class="m-05">
+					<ul>
+						<li>
+							<button>BOK이슈노트</button>
+						</li>
+						<li>
+							<button>BOK경제연구</button>
+						</li>
+						<li>
+							<button>해외경제포커스</button>
+						</li>
+						<li>
+							<button>연차보고서</button>
+						</li>
+						<li>
+							<button>통화신용정책보고서</button>
+						</li>
+						<li>
+							<button>금융안정보고서</button>
+						</li>
+						<li>
+							<button>경제전망보고서</button>
+						</li>
+						<li>
+							<button>지역경제보고서</button>
+						</li>
+						<li>
+							<button>지급결제보고서</button>
+						</li>
+						<li>
+							<button>정기간행물</button>
+						</li>
+						<li>
+							<button>단행본</button>
+						</li>
+					</ul>
+					<button type="button" class="btn-view">전체보기</button>
+				</div>
+				<!-- //간행물 -->
+				<!-- 연구자료 -->
+				<h4 class="sr-only">연구자료</h4>
+				<div class="m-06">
+					<ul>
+						<li>
+							<button>통화정책</button>
+						</li>
+						<li>
+							<button>금융안정</button>
+						</li>
+						<li>
+							<button>지급결제</button>
+						</li>
+						<li>
+							<button>통계</button>
+						</li>
+						<li>
+							<button>북한경제 등</button>
+						</li>
+					</ul>
+					<button type="button" class="btn-view">전체보기</button>
+				</div>
+				<!-- //연구자료 -->
+		
 			</div>
-			<!-- //뉴스 및 의사록 -->
-
-			<!-- 공지사항 -->
-			<h4 class="sr-only">공지사항</h4>
-			<div class="m-02">
-				<ul>
-					<li>
-						<button>보도자료</button>
-					</li>
-				</ul>
-				<button type="button" class="btn-view">전체보기</button>
-			</div>
-			<!-- //공지사항 -->
-
-			<!-- 주요행사 -->
-			<h4 class="sr-only">주요행사</h4>
-			<div class="m-03">
-				<ul>
-					<li>
-						<button>주요행사</button>
-					</li>
-				</ul>
-				<button type="button" class="btn-view">전체보기</button>
-			</div>
-			<!-- //주요행사 -->
-
-			<!-- 한은소식 -->
-			<h4 class="sr-only">한은소식</h4>
-			<div class="m-04">
-				<ul>
-					<li>
-						<button>한은소식</button>
-					</li>
-				</ul>
-				<button type="button" class="btn-view">전체보기</button>
-			</div>
-			<!-- //한은소식 -->
-
-			<!-- 간행물 -->
-			<h4 class="sr-only">간행물</h4>
-			<div class="m-05">
-				<ul>
-					<li>
-						<button>BOK이슈노트</button>
-					</li>
-					<li>
-						<button>BOK경제연구</button>
-					</li>
-					<li>
-						<button>해외경제포커스</button>
-					</li>
-					<li>
-						<button>연차보고서</button>
-					</li>
-					<li>
-						<button>통화신용정책보고서</button>
-					</li>
-					<li>
-						<button>금융안정보고서</button>
-					</li>
-					<li>
-						<button>경제전망보고서</button>
-					</li>
-					<li>
-						<button>지역경제보고서</button>
-					</li>
-					<li>
-						<button>지급결제보고서</button>
-					</li>
-					<li>
-						<button>정기간행물</button>
-					</li>
-					<li>
-						<button>단행본</button>
-					</li>
-				</ul>
-				<button type="button" class="btn-view">전체보기</button>
-			</div>
-			<!-- //간행물 -->
-
-			<!-- 연구자료 -->
-			<h4 class="sr-only">연구자료</h4>
-			<div class="m-06">
-				<ul>
-					<li>
-						<button>통화정책</button>
-					</li>
-					<li>
-						<button>금융안정</button>
-					</li>
-					<li>
-						<button>지급결제</button>
-					</li>
-					<li>
-						<button>통계</button>
-					</li>
-					<li>
-						<button>북한경제 등</button>
-					</li>
-				</ul>
-				<button type="button" class="btn-view">전체보기</button>
-			</div>
-			<!-- //연구자료 -->
-			
 		</div>
-
+		<!-- //세부유형 -->
 	</div>
-	<!-- //세부유형 -->
 
 	<!-- 키워드 -->
 	<div class="Keyword">
