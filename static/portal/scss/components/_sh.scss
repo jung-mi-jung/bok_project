@@ -100,7 +100,7 @@
 					&::before {
 						vertical-align: sub;
 						font-size: 20px;
-						margin-right: 5px;
+						//margin-right: 5px;
 						@include breakpoint($smd){
 							font-size: 25px;
 						}

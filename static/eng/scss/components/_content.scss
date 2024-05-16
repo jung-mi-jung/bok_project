@@ -143,13 +143,17 @@ p.subject {
 		}
 	}
 	.img{
-		width: 28%;  //32
+		//width: 28%;  //32
+		width: 35%;
 		float:left;
 		border:5px solid rgba(19, 21, 71, 0.5);
 		padding:2.5%;
 		background:#f4f5f7;
 		margin-right: 3%;
 		vertical-align:middle;
+		img {
+			width: 100%;
+		}
 		@include breakpoint($sm) {
 			width:100%;
 			text-align:center;
@@ -211,7 +215,8 @@ p.subject {
 		}
 	}
 	.table{
-		width: calc(100% - 28% - 3%);
+		//width: calc(100% - 28% - 3%);
+		width: calc(100% - 35% - 3%);
 		float:left;
 		clear:none;
 		margin-top:0;
@@ -223,6 +228,9 @@ p.subject {
 		}
 		th{
 			font-weight:bold;
+		}
+		&.table-view {
+			margin-top: -15px;
 		}
 	}
 }

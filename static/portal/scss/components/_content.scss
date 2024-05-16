@@ -143,13 +143,17 @@ p.subject {
 		}
 	}
 	.img{
-		width: 28%;  //32
+		//width: 28%;  //32
+		width: 35%;
 		float:left;
 		border:5px solid rgba(19, 21, 71, 0.5);
 		padding:2.5%;
 		background:#f4f5f7;
 		margin-right: 3%;
 		vertical-align:middle;
+		img {
+			width: 100%;
+		}
 		@include breakpoint($sm) {
 			width:100%;
 			text-align:center;
@@ -185,6 +189,11 @@ p.subject {
 				width:100%;
 			}
 		}
+		&.imgType4{
+			img {
+				width: 45%;
+			}
+		}
 		p{
 			vertical-align:middle;
 			background:#fff;
@@ -211,7 +220,8 @@ p.subject {
 		}
 	}
 	.table{
-		width: calc(100% - 28% - 3%);
+		//width: calc(100% - 28% - 3%);
+		width: calc(100% - 35% - 3%);
 		float:left;
 		clear:none;
 		margin-top:0;
@@ -223,6 +233,9 @@ p.subject {
 		}
 		th{
 			font-weight:bold;
+		}
+		&.table-view {
+			margin-top: -15px;
 		}
 	}
 }
@@ -363,7 +376,7 @@ p.subject {
 				position: absolute;
 				top: calc(50% + 22px);
 				right: -339px;
-				//transform: translateY(-50%);
+				transform: translateY(-50%);
 				background: #3B63C4;
 			}
 		}
@@ -514,10 +527,10 @@ p.subject {
 							position: absolute;
 							bottom: 0;
 							left: 50%;
-							//transform: translateX(-50%);
+							transform: translateX(-50%);
 							width: 1px;
 							height: calc(162px + 48px);
-							background-color: #3B63C4;
+							background-color: #1454FF;
 						}
 						&::after {
 							content: "";
@@ -529,7 +542,7 @@ p.subject {
 							right: -380px;
 							width: 453px;
 							height: 1px;
-							background-color: #3B63C4;
+							background-color: #1454FF;
 						}
 					}
 					&:nth-of-type(2) {
@@ -601,7 +614,7 @@ p.subject {
 					position: absolute;
 					bottom: 0;
 					left: 50%;
-					//transform: translateX(-50%);
+					transform: translateX(-50%);
 					width: 1px;
 					height: 180px;
 					background-color: #3B63C4;
@@ -626,7 +639,7 @@ p.subject {
 			position: absolute;
 			top: -230px;
 			left: 50%;
-			//transform: translateX(-50%);
+			transform: translateX(-50%);
 			width: 1px;
 			height: 200px;
 			background-color: #0038CC;
@@ -2384,7 +2397,23 @@ p.subject {
 				margin-left: -25px;
 				background: url(/static/portal/img/ico/ico-txt_warning.png);
 			}
-		}			
+		}	
+		&.ico2 {	//신청 완료
+			padding-top: 66px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			&::before {
+				content: "";
+				display: inline-block;
+				width: 42px;
+				height: 48px;				
+				position: absolute;
+				top: 0;
+				left: 50%;
+				margin-left: -25px;
+				background: url(/static/portal/img/ico/ico-end.png) 50% no-repeat;
+			}
+		}		
 		em {
 			font-weight: 600;
 		}
@@ -2461,7 +2490,7 @@ p.subject {
 	&.img {
 		@include breakpoint($lg){
 			display: flex;
-			align-self: center;
+			align-items: center;
 			justify-content: space-between;
 			text-align: left;
 		}
@@ -3568,6 +3597,25 @@ p.subject {
 					}
 				}
 			}
+		}
+	}
+}
+
+//보유예시
+.img-example {
+	display: flex;
+	justify-content: space-between;
+	p {
+		width: 48%;
+		@include breakpoint(min-width 1480px) {
+			width: auto;
+		}		
+	}
+	@include breakpoint($sm){
+		display: block;
+		text-align: center;		
+		p {
+			width: 100%;
 		}
 	}
 }

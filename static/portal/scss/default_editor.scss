@@ -1,0 +1,66 @@
+@import url(/static/jslibrary/bootstrap/css/bootstrap.css);
+@import '../../commons/scss/common.scss';
+@import '../../commons/scss/breakpoint'; //반응형 플러그인
+@import 'base/variables'; //환경 설정
+@import 'base/color'; // colors
+
+@import 'base/util'; //mixins
+@import 'mixins/layerfixed'; //mixins
+
+
+#dbdata, [contenteditable="true"]{
+    & * {
+        line-height: 1.5;
+        letter-spacing: -1px;
+        word-break: keep-all;
+        font-weight: 400;
+    }
+    hr{
+        border-top-color:#666;
+    }
+	.template-box-img{
+		img{
+			max-width: 100%;
+		}
+	}
+}
+
+.col{float: left;width: 100%;}
+.row .col{padding: 15px;}
+.no-padding{margin-left:0;margin-right: 0}
+.no-padding>.col{padding:0;}
+.padding-type>.col{padding: 0 15px;}
+
+@mixin gridGen($columns, $size: ''){
+	@for $i from 1 through $columns {
+		$width : calc(100% / $columns * $i);
+		@if($size == 'desktop'){
+			.l#{$i}{ width: $width; }
+			.l-offset-#{$i}{ margin-left: $width; }
+		} 
+		@else if($size == 'tablet'){
+			.m#{$i}{ width: $width; }
+			.m-offset-#{$i}{ margin-left: $width; }
+		} 
+		@else if($size == 'mobile'){
+			.s#{$i}{ width: $width; }
+			.s-offset-#{$i}{ margin-left: $width; }
+		} 
+		@else if($size == 'smobile'){
+			.x#{$i}{ width: $width; }
+			.x-offset-#{$i}{ margin-left: $width; }
+		} 
+	}
+}
+
+@include gridGen(12, 'mobile');
+
+@include breakpoint($md) {
+	@include gridGen(12, 'tablet');
+}
+@media (max-width: 600px){
+	@include gridGen(12, 'smobile');
+}
+@media (min-width: 1030px){
+	@include gridGen(12, 'desktop');
+}

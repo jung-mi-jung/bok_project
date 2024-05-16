@@ -25,7 +25,7 @@ body.gnbOver {
 		top: 0;
 		left: 0;
 		z-index: 999;
-		background-color: rgba(0, 0, 0, 0.7);
+		background-color: rgba(0, 0, 0, 0.5);
 		width: 100%;
 		height: 100%;
 	}
@@ -306,7 +306,7 @@ body.gnbOver {
 	.navigation {
 		.sub-_visual {
 			div {
-				padding-top: 48px;
+				padding-top: 44px;
 				h1 {
 					font-weight: 600;
 				}
@@ -318,12 +318,16 @@ body.gnbOver {
 	}
 	.bd-view {		
 		@include breakpoint($lg){
-			margin-top: -156px;
+			//margin-top: -156px;
+			margin-top: -165px;
 		}
 		.subject {
-			width: 100%;
-			@include ellipsis();
+			//width: 100%;
+			width: calc(100% - 312px);
+			//@include ellipsis();
 			margin-bottom: 0 !important;
+			height: 80px;
+			overflow: hidden;
 		}
 		.dataInfoSet .keyword a {
 			background-color: #fff;
@@ -518,6 +522,7 @@ body.gnbOver {
 
 /* 전체메뉴 */
 .total-nav {
+	position: fixed;
 	position: fixed;
 	align-items: center;
 	justify-content: center;
@@ -1800,6 +1805,7 @@ span.help3 {
 	width: 100%;
 	height: 600px;
 	background: #fff;
+	text-align: center;
 	@include breakpoint($sm) {
 		height: 400px;
 	}

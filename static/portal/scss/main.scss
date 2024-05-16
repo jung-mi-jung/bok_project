@@ -280,6 +280,7 @@
 			animation-iteration-count: 10;
 			-webkit-animation: visual-bg 3s cubic-bezier(0.45, 0.05, 0.55, 0.95) 1;
 			animation: visual-bg 3s cubic-bezier(0.45, 0.05, 0.55, 0.95) 1;
+			opacity: 1 !important;
 			.s1-t1 {
 				-webkit-animation: visual-txt1 2s cubic-bezier(0.45, 0.05, 0.55, 0.95) 1;
 				animation: visual-txt1 2s cubic-bezier(0.45, 0.05, 0.55, 0.95) 1;
@@ -315,7 +316,7 @@
 			font-style: normal;
 			font-weight: 700;
 			line-height: normal;
-			text-transform: uppercase;
+			//text-transform: uppercase;
 			@include breakpoint($sm){
 				font-size: rem(38);
 			}
@@ -327,7 +328,7 @@
 			font-style: normal;
 			font-weight: 500;
 			line-height: normal;
-			text-transform: uppercase;
+			//text-transform: uppercase;
 			@include breakpoint($sm){
 				font-size: rem(20);
 				margin-top: 15px;

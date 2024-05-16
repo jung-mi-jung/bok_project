@@ -21,7 +21,7 @@ table {
 			display: none !important;
 		}
 	}
-	&.table_line {  //임시? 삭제?
+	&.table_line {
 		border-top: 2px solid #182252;
 	}
 	&.single {
@@ -130,6 +130,32 @@ table {
 		}
 		td {
 			padding: 12px 15px;
+		}
+	}
+	&.table-t2 {
+		thead {
+			tr {
+				th {
+					&:last-child {
+						border-radius: 0 8px 0 0;
+					}
+				}
+				& + tr {
+					th {
+						border-radius: 0;
+						&:last-child {
+							border-radius: 0 0 8px;
+						}
+						&.line-l, 
+						&.th1b {
+							border-left: 1px solid #BDBCBC;
+						}
+						&.line-t {
+							border-top: 1px solid #BDBCBC;
+						}
+					}
+				}
+			}
 		}
 	}
 	&.m {

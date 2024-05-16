@@ -59,9 +59,9 @@
 		padding: 30px 0 ;
 	}
 	.container {
+		padding: 0 10px;
 		margin-left: 0;
 		margin-right: 0;
-		padding: 0 10px;
 		@include breakpoint($lg){
 			display: flex;
 			justify-content: space-between;					
@@ -69,7 +69,7 @@
 		@include breakpoint(min-width 1480px) {
 			padding: 0;
 			margin-left: auto;
-			margin-right: auto;
+			margin-right: auto;	
 		}	
 		.map_img {
 			position: relative;
@@ -692,18 +692,18 @@
 								color: $color-point;
 								text-decoration: underline;
 							}
-							&::before {
-								content: "";
-								display: inline-block;
-								width: 1px;
-								height: 18px;
-								margin-top: -9px;
-								background: #CACCD8;
-								position: absolute;
-								top: 50%;
-								right: 50%;
-								margin-left: -50%;
-							}
+							// &::before {
+							// 	content: "";
+							// 	display: inline-block;
+							// 	width: 1px;
+							// 	height: 18px;
+							// 	margin-top: -9px;
+							// 	background: #CACCD8;
+							// 	position: absolute;
+							// 	top: 50%;
+							// 	right: 0;
+							// 	margin-left: -50%;
+							// }
 						}
 						& + li {
 							
@@ -996,11 +996,31 @@
 }
 //통화정책
 .index-box {
+	position: relative;
 	text-align: center;
 	margin: 50px 0 80px;
+	padding: 40px 5% 45px;
+	border: 1px solid #dce2f1;
+	border-width: 1px 0;
 	@include breakpoint($sm){
 		margin: 20px 0 20px;
 		text-align: left;
+	}
+	h2 {
+		@include hide();
+		position: absolute;
+		top: -15px;
+		left: 0;
+		width: 100%;
+		#main-container & {
+			color: #3b63c4;
+			font-size: 18px;
+		}
+		span {
+			display: inline-block;
+			padding: 0 30px;
+			background-color: #fff;			
+		}
 	}
 	p {
 		color: #666;
@@ -1008,10 +1028,10 @@
 		text-align: left;
 		&.title {
 			color: $black;			
-			font-size: rem(48);
+			font-size: rem(32);
 			font-weight: 300;
-			text-align: center;
-			margin-bottom: 15px;
+			//text-align: center;
+			margin-bottom: 15px;			
 			@include breakpoint($sm){
 				text-align: center;
 				font-size: rem(34);
@@ -1217,7 +1237,7 @@
 		}
 		a {
 			width: calc(50% - 20px);
-			padding: 17px 20px;
+			padding: 13px 20px;
 			display: block;
 			color: #fff;
 			border-radius: 8px;
@@ -1252,6 +1272,9 @@
 //화폐
 .index-main-img {
 	margin-top: 30px;
+	img {
+		border-radius: 16px;
+	}
 }
 .index-menu3 {
 	ul {
@@ -1950,6 +1973,41 @@
 			}
 		}
 	}
+	&.type2 {
+		ul {
+			li {
+				width: 50%;
+				@include breakpoint($sm){
+					width: 100%;
+				}
+				a {
+					@include breakpoint($lg){
+						height: 300px;
+					}
+					&.ico3_01 {
+						&::before {
+							background-image: url(/static/portal/img/submain/ico_10_01.png);
+						}
+					}
+					&.ico3_02 {
+						&::before {
+							background-image: url(/static/portal/img/submain/ico_10_02.png);
+						}
+					}
+					&.ico3_03 {
+						&::before {
+							background-image: url(/static/portal/img/submain/ico_10_03.png);
+						}
+					}
+					&.ico3_04 {
+						&::before {
+							background-image: url(/static/portal/img/submain/ico_10_04.png);
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 //국제협력
@@ -2021,18 +2079,26 @@
 	display: flex;
 	justify-content: space-between;
 	margin-top: 60px;
+	background-color: #F2F6FA;	
+	padding: 32px 0;
 	@include breakpoint($sm){
 		display: block;
 		margin-top: 30px;
 	}
 	.s {
-		padding: 32px;
-		border: 1px solid #E6E6E6;
+		width: 50%;
+		padding: 0 32px;
 		@include breakpoint($sm){
+			width: 100%;
 			padding: 20px;
 		}
 		.img {
+			overflow: hidden;
+			width: 100%;
 			border-radius: 8px;
+			img {
+				width: 100%;
+			}			
 		}
 		.txt {
 			text-align: center;
@@ -2040,11 +2106,14 @@
 			font-weight: 500;
 			font-size: rem(20);
 			margin: 15px 0 0;
-		}
-		@include breakpoint($sm){
-			& + .s {
-				margin-top: 10px;
+		}		
+		& + .s {
+			@include breakpoint($lg){
+				border-left: 1px solid #DCE2F1;
 			}
+			@include breakpoint($sm){
+				margin-top: 10px;
+			}			
 		}
 	}	
 }

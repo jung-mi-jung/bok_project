@@ -398,6 +398,11 @@ font-size: 1em;
 padding: 9px 15px;
 font-weight: 500;
 }
+.bgn .popupWrap h2 {
+margin: 20px 0 10px;
+font-weight: 400;
+font-size: 1.5rem;
+}
 
 .popupWrap .popupBody {
 margin: 20px;
@@ -788,6 +793,7 @@ height: 550px;
 animation: visual-bg 3s ease-out 1;
 animation-iteration-count: 10;
 animation: visual-bg 3s cubic-bezier(0.45, 0.05, 0.55, 0.95) 1;
+opacity: 1 !important;
 }
 .section1-visual .swiper-slide.swiper-slide-active .s1-t1 {
 animation: visual-txt1 2s cubic-bezier(0.45, 0.05, 0.55, 0.95) 1;
@@ -819,7 +825,6 @@ font-size: 4rem;
 font-style: normal;
 font-weight: 700;
 line-height: normal;
-text-transform: uppercase;
 }
 @media (max-width: 749px) {
 .section1-visual .swiper-slide .s1-t1 {
@@ -833,7 +838,6 @@ font-size: 1.75rem;
 font-style: normal;
 font-weight: 500;
 line-height: normal;
-text-transform: uppercase;
 }
 @media (max-width: 749px) {
 .section1-visual .swiper-slide .s1-t2 {

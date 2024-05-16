@@ -376,6 +376,11 @@
 			padding-top: 0;
 		}
 	}	
+	.dbdata {
+		@include breakpoint($lg){
+			padding: 30px 10%;
+		}
+	}
 }
 
 .videoSet {

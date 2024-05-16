@@ -1516,6 +1516,13 @@ margin: 70px 0 16px;
 #main-container h3 a {
 color: #26447D;
 }
+#main-container h3 a.b-go {
+color: #fff;
+font-weight: 400;
+background-color: #222;
+padding: 3px 5px 3px 10px;
+vertical-align: middle;
+}
 #main-container h3.h3 {
 margin: 40px 0 16px;
 color: #005596;
@@ -1758,7 +1765,7 @@ position: fixed;
 top: 0;
 left: 0;
 z-index: 999;
-background-color: rgba(0, 0, 0, 0.7);
+background-color: rgba(0, 0, 0, 0.5);
 width: 100%;
 height: 100%;
 }
@@ -2093,7 +2100,7 @@ outline-offset: -1PX;
 font-size: 1.25rem;
 }
 .bd-body .navigation .sub-_visual div {
-padding-top: 48px;
+padding-top: 44px;
 }
 .bd-body .navigation .sub-_visual div h1 {
 font-weight: 600;
@@ -2103,16 +2110,14 @@ color: #000E33;
 }
 @media (min-width: 1200px) {
 .bd-body .bd-view {
-margin-top: -156px;
+margin-top: -165px;
 }
 }
 .bd-body .bd-view .subject {
-width: 100%;
-overflow: hidden;
-white-space: nowrap;
-text-overflow: ellipsis;
-display: inline-block;
+width: calc(100% - 312px);
 margin-bottom: 0 !important;
+height: 80px;
+overflow: hidden;
 }
 .bd-body .bd-view .dataInfoSet .keyword a {
 background-color: #fff;
@@ -2323,6 +2328,7 @@ width: calc(100% - 204px - 35px);
 
 /* 전체메뉴 */
 .total-nav {
+position: fixed;
 position: fixed;
 align-items: center;
 justify-content: center;
@@ -3338,7 +3344,7 @@ margin: 0 -12px;
 }
 @media (max-width: 1199px) {
 .reference-news dl dd ul {
-width: -webkit-max-content;
+width: -moz-max-content;
 width: max-content;
 }
 }
@@ -3459,7 +3465,7 @@ margin: -12px -12px 0;
 }
 @media (max-width: 1199px) {
 .reference-media dl dd ul {
-width: -webkit-max-content;
+width: -moz-max-content;
 width: max-content;
 }
 }
@@ -3840,6 +3846,7 @@ z-index: 4;
 width: 100%;
 height: 600px;
 background: #fff;
+text-align: center;
 }
 @media (max-width: 749px) {
 .loading {
@@ -4184,6 +4191,7 @@ height: 1px;
 background-repeat: no-repeat;
 background-position: 50%;
 background-size: cover;
+border-radius: 8px;
 }
 .gnb > ul .depth2 .e .txt {
 width: 100%;

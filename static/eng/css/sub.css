@@ -857,7 +857,7 @@ top: 44px;
 }
 }
 .navigation nav > ul > li .depth2 ul {
-min-width: -webkit-max-content;
+min-width: -moz-max-content;
 min-width: max-content;
 background-color: #fff;
 padding: 10px 15px;
@@ -2739,6 +2739,11 @@ border-right: none;
 }
 .bd-view .view + .dbdata {
 padding-top: 0;
+}
+@media (min-width: 1200px) {
+.bd-view .dbdata {
+padding: 30px 10%;
+}
 }
 
 .videoSet {
@@ -6502,13 +6507,16 @@ max-width: 100%;
 max-width: 120px;
 }
 .coinimgtxt .img {
-width: 28%;
+width: 35%;
 float: left;
 border: 5px solid rgba(19, 21, 71, 0.5);
 padding: 2.5%;
 background: #f4f5f7;
 margin-right: 3%;
 vertical-align: middle;
+}
+.coinimgtxt .img img {
+width: 100%;
 }
 @media (max-width: 749px) {
 .coinimgtxt .img {
@@ -6574,7 +6582,7 @@ padding: 10px;
 width: 100%;
 }
 .coinimgtxt .table {
-width: 69%;
+width: 62%;
 float: left;
 clear: none;
 margin-top: 0;
@@ -6589,6 +6597,9 @@ width: 100%;
 }
 .coinimgtxt .table th {
 font-weight: bold;
+}
+.coinimgtxt .table.table-view {
+margin-top: -15px;
 }
 
 .dlbox {
@@ -10088,7 +10099,6 @@ margin-bottom: 30px;
 }
 }
 .content-row .cont-nav ul {
-position: -webkit-sticky;
 position: sticky;
 top: 60px;
 }

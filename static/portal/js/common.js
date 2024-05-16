@@ -783,6 +783,10 @@ $(function() {
 	});
 
 
+	//lnb
+	$(".lnb-nav > ul > li > ul").prev().addClass("bu");
+
+
 	//.table thead 없을 경우 처리 (디자인 처리)
 	// $(".table")
 	// 	.not("thead")

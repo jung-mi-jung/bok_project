@@ -54,27 +54,26 @@
 			background-repeat: no-repeat;
 			background-position: 50%;
 			//background-image: url(/static/portal/img/sub/sub_visual_bg1.png);
-			&.menu_200716 {
+			&.menu_200176,
+			&.menu_200812 {
 				background-image: url(/static/portal/img/sub/sub_visual_bg1.png);
 			}
 			&.menu_201149 {
 				background-image: url(/static/portal/img/sub/sub_visual_bg2.png);
 			}
 			&.menu_201150 {
-				background-image: url(/static/portal/img/sub/sub_visual_bg3.png);
+				background-image: url(/static/portal/img/sub/sub_visual_bg6.png);
 			}
 			&.menu_201151 {
 				background-image: url(/static/portal/img/sub/sub_visual_bg4.png);
 			}
+
 			&.menu_201152 {
 				background-image: url(/static/portal/img/sub/sub_visual_bg5.png);
 			}
 			&.menu_200227 { //이용안내
-				background-image: url(/static/portal/img/sub/sub_visual_bg6.png);
+				background-image: url(/static/portal/img/sub/sub_visual_bg1.png);
 			}
-			// &.55 {
-			// 	background-image: url(/static/portal/img/sub/sub_visual_bg_blog.png);
-			// }
 		}	
 		div {
 			width: $pc-wide;
@@ -88,6 +87,7 @@
 				color: $black;
 				font-weight: 500;
 				font-size: rem(48);
+				line-height: 1.2;
 				@include breakpoint($smd){
 					font-size: rem(24);
 					text-align: center;
@@ -345,9 +345,20 @@
 	> ul {
 		> li {
 			> a {
+				position: relative;
 				display: block;
-				padding: 6px 0;
+				padding: 6px 26px 6px 0;
 				color: #333;
+				&.bu {
+					position: relative;
+					&::after {
+						@include font-ico-outline('\e5cf');
+						font-size: 18px;
+						position: absolute;
+						top: 13px;
+						right: 0;
+					}
+				}
 			}
 			&.on {
 				> a {
@@ -356,7 +367,6 @@
 					&::after {
 						@include font-ico-outline('\e5df');
 						font-size: 18px;
-						float: right;
 						color: #1C1B1F;
 					}
 				}
@@ -364,14 +374,25 @@
 			> ul {
 				li {
 					a {
+						position: relative;
 						display: block;
-						padding: 4px 14px;
+						padding: 4px 24px 4px 14px;
 						color: #666;
 						font-size: rem(14);
+						&[target=_blank] {
+							&::after {
+								top: 7px;
+							}
+						}
+						&.inbu {			
+							&::after {
+								content: "";
+								top: 10px;
+							}
+						}
 					}
 					&.on {
 						a {
-							position: relative;
 							color: #0040CC;
 							font-weight: 500;
 							background-color: #F2F6FA;
@@ -387,6 +408,27 @@
 						}
 					}
 				}
+			}
+		}
+		[target=_blank] {
+			&::after {
+				position: absolute;
+				top: 9px;
+				right: 0;
+				@include font-ico-outline(' \e89e');
+				font-size: 18px;
+			}
+		}
+		.inbu {			
+			&::after {
+				content: "" !important;
+				display: inline-block;
+				position: absolute;
+				top: 13px;
+				right: 3px;				
+				width: 11px;
+				height: 11px;
+				background: url(/static/portal/img/ico/arrow_outward.png) 50% no-repeat;
 			}
 		}
 	}
