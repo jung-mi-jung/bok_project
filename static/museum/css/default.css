@@ -4420,11 +4420,13 @@ margin-top: -30px;
 #main-container .sh-db + .content {
 float: right;
 padding-left: 36px;
-padding-top: 30px;
 margin-bottom: 40px;
 }
 #main-container .lnb-nav + .content {
-width: calc(100% - 240px);
+width: calc(100% - 275px);
+}
+#main-container .sh-db + .content {
+width: calc(100% - 275px);
 }
 }
 

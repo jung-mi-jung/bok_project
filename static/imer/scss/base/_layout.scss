@@ -805,16 +805,16 @@
 			float: right;
 			border-left: 1px solid $bd-color;
 			padding-left: 36px;
-			padding-top: 30px;
+			// padding-top: 10px;
 			margin-bottom: 40px;
 		}
 		.lnb-nav + .content {
 			// width: per(1405px, $pc-wide);
-			width: calc(100% - 240px);
+			width: calc(100% - 275px);
 		}
 		.sh-db + .content {
 			// width: per(1441px, $pc-wide);
-			width: calc(100% - 240px);
+			width: calc(100% - 275px);
 		}
 	}
 }
@@ -1881,6 +1881,7 @@
 				color: #005596;
 			}			
 		}
+		.tt-menu,
 		.dqAuto {
 			position: absolute;
 			top: 74px;
@@ -1937,10 +1938,6 @@
 		}
 	}
 }
-
-
-
-
 
 #main-container,
 .content {	

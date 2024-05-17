@@ -308,6 +308,9 @@ padding: 15px 20px;
 font-size: 16px;
 border: 1px solid #E8EBED;
 }
+.tsh-wrap .tsh .input-set .keyword-set .keyword .twitter-typeahead .tt-menu .tt-suggestion:hover {
+cursor: pointer;
+}
 .tsh-wrap .tsh .input-set .keyword-set .search {
 width: 66px;
 height: 56px;
