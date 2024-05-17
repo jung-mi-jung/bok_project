@@ -1767,6 +1767,9 @@ height: 40px;
 line-height: 40px;
 vertical-align: middle;
 }
+.table-view [class^=b-].xs {
+height: 24px;
+}
 .table-view label {
 display: inline-block;
 }
@@ -6535,10 +6538,12 @@ border: 0;
 .coinimgtxt .img.imgType2 .s {
 display: inline-block;
 margin-bottom: 20px;
+width: 90%;
 }
 @media (max-width: 749px) {
 .coinimgtxt .img.imgType2 .s {
 margin-bottom: 0;
+width: auto;
 }
 }
 .coinimgtxt .img.imgType2 .s strong {
@@ -6557,6 +6562,9 @@ border: 0;
 .coinimgtxt .img.imgType3 img {
 width: 100%;
 }
+.coinimgtxt .img.imgType4 img {
+width: 45%;
+}
 .coinimgtxt .img p {
 vertical-align: middle;
 background: #fff;
@@ -6564,7 +6572,7 @@ text-align: center;
 width: 100%;
 text-align: center;
 height: 227px;
-width: 300px;
+width: 332px;
 display: table-cell;
 border: 1px solid #b5b5b5;
 border-width: 1px;
@@ -7846,6 +7854,7 @@ display: inline-block;
 text-align: center;
 vertical-align: middle;
 line-height: 1.15;
+font-size: 14px;
 }
 
 .imgMapLink {

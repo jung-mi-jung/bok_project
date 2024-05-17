@@ -228,6 +228,9 @@ table {
 		height: 40px;
 		line-height: 40px;
 		vertical-align: middle;
+		&.xs {
+			height: 24px;
+		}
 	}
 	label {
 		display: inline-block;
