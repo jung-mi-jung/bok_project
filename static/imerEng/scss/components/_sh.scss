@@ -1,17 +1,10 @@
 //자료 검색형
 .sh-db {
 	padding-top: 30px;
-	margin-bottom: 30px;
-	position: sticky;
-	top: 60px;
+	margin-bottom: 40px;
 	background: #fff;
 	z-index: 9;
 	padding-bottom: 10px;
-	// &.sticky {
-	// 	position: sticky;
-	// 	top: 78px;
-	// 	padding-top: 0;
-	// }
 	@include breakpoint($lg){
 		//position: relative;
 		display: block;
@@ -82,9 +75,6 @@
 					flex-basis: calc(100% - 86px);
 					flex-grow: 1;
 				}
-				@include breakpoint($sm) {
-					max-width: calc(100% - 86px);
-				}
 				input {
 					width: 100%;
 					height: 40px;
@@ -147,7 +137,7 @@
 							color: #3B63C4;
 							@include font-ico("\f053");
 							@include breakpoint($smd){
-								color: #fff
+								color: #fff;
 							}
 						}
 					}
@@ -160,13 +150,44 @@
 			}
 		}
 	}
+	.mobile-check-ctrl {
+		@include breakpoint($lg){
+			display: none;
+		}
+		position: relative;
+		width: 100%;
+		display: block;
+		text-align: left;
+		border: 1px solid #E6E6E6;
+		padding: 7px 10px;
+		margin-bottom: 4px;
+		@include breakpoint($smd){
+			padding: 7px 15px;
+		}
+		&::before {
+			@include font-ico-outline('\e5c5');
+			font-size: 24px;
+			position: absolute;
+			top: 50%;
+			right: 10px;
+			color: $point;
+			margin-top: -12px;
+			transition: all .2s
+		}		
+		&.active {
+			background-color: #FAFAFA;
+			&::before {
+				transform: rotate(-180deg);
+			}
+		}  
+	}	
 	.check-list {
 		position: relative;
-		@include breakpoint($smd){
-			h3 {
-				display: none;
-			}
-		}
+		// @include breakpoint($smd){
+		// 	h3 {
+		// 		display: none;
+		// 	}
+		// }
 		.label-list {
 			display: flex;
 			flex-wrap: wrap;
@@ -184,6 +205,12 @@
 				}
 				&:checked {
 					& + i {
+						&::after {
+							left: 4px;
+							@include breakpoint($smd) {
+								left: 2px;
+							}
+						}
 						& + span {
 							position: relative;
 							color: $point;
@@ -205,41 +232,41 @@
 				}
 			}
 		}
-		.check-ctrl {			
-			@include breakpoint($lg){
-				display: none;
-			}
-			position: relative;
-			width: 100%;
-			height: 40px;
-			display: block;
-			text-align: left;
-			border: 1px solid #d9d9d9;
-			padding: 7px 10px;
-			@include breakpoint($smd){
-				padding: 7px 15px;
-				border-radius: 5px;
-			}
-			&::before {
-				@include font-ico-outline('\e5c5');
-				font-size: 24px;
-				position: absolute;
-				top: 5px;
-				right: 10px;
-				color: $point;
-				transition: all .2s
-			}		
-			&.active {
-				&::before {
-					transform: rotate(-180deg);
-				}
-			}  
-		}
+		// .check-ctrl {			
+		// 	@include breakpoint($lg){
+		// 		display: none;
+		// 	}
+		// 	position: relative;
+		// 	width: 100%;
+		// 	height: 40px;
+		// 	display: block;
+		// 	text-align: left;
+		// 	border: 1px solid #d9d9d9;
+		// 	padding: 7px 10px;
+		// 	@include breakpoint($smd){
+		// 		padding: 7px 15px;
+		// 		border-radius: 5px;
+		// 	}
+		// 	&::before {
+		// 		@include font-ico-outline('\e5c5');
+		// 		font-size: 24px;
+		// 		position: absolute;
+		// 		top: 5px;
+		// 		right: 10px;
+		// 		color: $point;
+		// 		transition: all .2s
+		// 	}		
+		// 	&.active {
+		// 		&::before {
+		// 			transform: rotate(-180deg);
+		// 		}
+		// 	}  
+		// }
 		@include breakpoint($smd){ 
 			.label-list {
-				display: none;
-				border: 1px solid #d9d9d9;
-				padding: 4px;
+				// display: none;
+				// border: 1px solid #d9d9d9;
+				// padding: 4px;
 				flex-direction: row;
 				&.active {
 					display: flex;
@@ -256,7 +283,7 @@
 					// width: 50%;
 					// padding: 0 4px;
 					input[type=checkbox] + i {
-						margin-left: -15px;
+						margin-left: -20px;
 					}
 				}
 			}
@@ -266,23 +293,13 @@
 				}
 			}
 		}
-		&.details {
-			display: none;  //임시 주석
-		}
+		// &.details {
+		// 	display: none;  //임시 주석
+		// }
 	}
 	.details-list {
-		@include breakpoint($smd){
-			position: absolute;
-			top: 36px;
-			left: 0;
-			width: 100%;
-			border: 1px solid #d9d9d9;
-			z-index: 9;
-			background-color: #fff;
-			padding: 4px;
-		}
-		[class^=m-0] {
-			display: none;
+		.depth3 {  //[class^=m-0]
+			//display: none;
 			&.on {
 				display: block;
 			}
@@ -291,9 +308,29 @@
 					display: block;
 				}		
 				> li {
+					position: relative;
 					//display: none;  //임시 주석
-					margin: 7px 0;
-					
+					margin: 7px 0 14px;
+					&::before {
+						content: "";
+						display: inline-block;
+						width: 1px;
+						height: calc(100% - 35px);
+						background-color: #E6E6E6;
+						position: absolute;
+						top: 22px;
+						left: 12px;
+					}		
+					input[type=radio]:checked + i{
+						&:before {
+							width: 10px;
+							height: 10px;
+							margin-top: -1px;
+						}
+						& + span {
+							text-decoration: none;
+						}
+					}	
 					> button {
 						position: relative;
 						display: flex;
@@ -306,97 +343,141 @@
 							vertical-align: middle;
 							width: 22px;
 							height: 22px;
-							border: 1px solid #E5E5E5;
-							border-radius: 3px;
+							border: 1px solid #BFBFBF;
+							border-radius: 50%;
 							background-color: #FAFAFA;
-							margin-right: 5px;
+							margin-right: 10px;
 							margin-bottom: 3px;
 						}
 						&.active {
 							&::before {
-								border: 1px solid #3B63C4;
-								background-color: #3B63C4;
-							}
-							&::after {
-								@include font-ico-outline("\e5ca");
-								font-size: 16px;
-								position: absolute;
-								top: 5px;
-								left: 3px;
-								color: #fff;
-							}
-						}
-						&.bu {
-							&::before {
-								@include font-ico-outline('\e5cc');
-								font-size: 22px;
-								color: #1A1A1A;
-								margin-right: 3px;
-								border: none;
+								width: 8px;
+								height: 8px;
+								border: 8px solid #3B63C4;
 								background-color: transparent;
 							}
-							&::after {
-								border: 1px solid #3B63C4;
-								background-color: #3B63C4;
-							}
-							&.active {
-								&::before {
-									transform: rotate(90deg);
-									margin-bottom: 4px;
-								}
-								&::after {
-									display: none;
+							& + .depth4 {
+								&.on {
+									display: block;
 								}
 							}
-						}
-						&[disabled=disabled] {
-							cursor: default;
 						}
 					}
-					ul.sub-m {
-						padding-left: 22px;
-						> li {
-							margin: 4px 0;
-							button {
-								display: flex;
-								text-align: left;
+					.depth4 {
+						//display: none;
+						position: relative;
+						&::before {
+							content: "";
+							display: inline-block;
+							width: 20px;
+							height: 1px;
+							background-color: #E6E6E6;
+							position: absolute;
+							bottom: 13px;
+							left: 13px;
+						}
+						input[type=radio],
+						input[type=radio] + i {
+							width: 20px;
+							height: 20px;
+
+						}
+						input[type=radio] + i::before {
+							width: 6px;
+							height: 6px;
+							margin-top: -1px;
+						}
+						ul.sub-m {
+							margin: 7px 0 20px;
+							padding-left: 22px;
+							li {
 								position: relative;
+								margin: 4px 0;
 								&::before {
 									content: "";
 									display: inline-block;
-									vertical-align: middle;
-									width: 18px;
-									height: 18px;
-									border: 1px solid #E5E5E5;
-									border-radius: 3px;
-									background-color: #FAFAFA;
-									margin-right: 5px;
-									margin-bottom: 2px;
+									width: 12px;
+									height: 1px;
+									background-color: #E6E6E6;
+									position: absolute;
+									top: 10px;
+									left: -11px;
 								}
-								&.active {
+								button {
+									display: flex;
+									text-align: left;
+									position: relative;
 									&::before {
-										border: 1px solid #3B63C4;
-										background-color: #3B63C4;
+										content: "";
+										display: inline-block;
+										vertical-align: middle;
+										width: 18px;
+										height: 18px;
+										border: 1px solid #BFBFBF;
+										border-radius: 50%;
+										background-color: #FAFAFA;
+										margin-right: 7px;
+										margin-bottom: 2px;
 									}
-									&::after {
-										@include font-ico-outline("\e5ca");
-										font-size: 14px;
-										position: absolute;
-										top: 5px;
-										left: 2px;
-										color: #fff;
+									&.active {
+										&::before {
+											border: 1px solid #3B63C4;
+											background-color: #3B63C4;
+										}
+										&::after {
+											content: "";
+											display: inline-block;
+											// @include font-ico-outline("\e5ca");
+											// font-size: 14px;
+											position: absolute;
+											top: 6px;
+											left: 6px;
+											width: 8px;
+											height: 8px;
+											background: #fff;
+											border-radius: 50%;
+										}
 									}
-								}
-							}
-							ul {
-								li {
-									margin: 2px 0;
 								}
 							}
 						}
+					}					
+					.depth5 {
+						position: relative;
+						padding-left: 21px;
+						margin-bottom: 14px;
+						&::before {
+							content: "";
+							display: inline-block;
+							width: 1px;
+							height: calc(100% - 5px);
+							background-color: #E6E6E6;
+							position: absolute;
+							top: -8px;
+							left: 10px;
+						}
+						ul {
+							li {
+								margin: 2px 0;
+								button {
+									&::before {
+										margin-right: 9px !important;
+									}
+								}
+							}
+						}						
 					}
 				}
 			}
+		}
+	}
+	.details {
+		h3 {
+			#content & {
+				&::before {
+					width: calc(100% - 70px);
+				}
+			}			
 		}
 	}
 	h3 {
@@ -415,7 +496,7 @@
 				content: "";
 				display: inline-block;
 				background-color: #e2e2e2;
-				width: calc(100% - 80px);
+				width: calc(100% - 68px);
 				height: 1px;
 				position: absolute;
 				top: 50%;
@@ -443,6 +524,27 @@
 				transform: rotate(180deg);
 			}
 		}
+	}
+	@include breakpoint($smd){
+		.sh-db-box {
+			border: 1px solid #E6E6E6;
+			padding: 16px;
+			.check-list {
+				h3 {
+					&:first-child {
+						margin-top: 0 !important;
+					}
+				}
+				.label-list {
+					display: flex;
+					flex-wrap: wrap;
+					margin-bottom: 15px;
+					label {
+						width: 50%;
+					}
+				}
+			}
+		}		
 	}
 	.Keyword {
 		@include breakpoint($smd){
@@ -476,6 +578,33 @@
 					margin-right: 2px;
 				 }
 			}
+		}
+	}
+}
+
+.sub-btn {
+	margin-top: 40px;
+	a {
+		text-align: center;
+		display: block;
+		padding: 9px;
+		color: #fff;
+		background-color: $point;
+		border-radius: 8px;
+		&::before {
+			content: "";
+			display: inline-block;
+			vertical-align: middle;
+			width: 32px;
+			height: 32px;
+			background: url(/static/portal/img/ico/ico-calender-2x.png);
+			margin-right: 8px;
+		}
+		&::after {
+			@include font-ico-outline('\e315');
+			font-size: 18px;
+			color: #fff;
+			margin-left: 10px;
 		}
 	}
 }
@@ -548,6 +677,7 @@
 	@include select-set();
 	.submit {
 		width: 44px;
+		height: 40px;
 		background-color: #3B63C4;
 		border-radius: $sh-bd-radius;
 		&::before {
@@ -557,11 +687,22 @@
 			margin-bottom: 2px;
 		}
 	}	
-	.date-set input {
-		border: 1px solid #D9D9D9 !important;
+	.date-set {
 		height: 40px !important;
+		// @include breakpoint($sm) {
+		// 	width: 100%;
+		// }
+		input {
+			border: 1px solid #D9D9D9 !important;
+			height: 40px !important;
+			@include breakpoint($smd) {
+				min-width: 140px;
+				// width: auto !important;
+			}
+		}
 	}
 }
+
 
 /* 검색 필드*/
 .sh {
@@ -605,9 +746,8 @@
 			select {
 				width: 150px;
 				border-radius: 5px 0 0 5px;
-				padding: 4px 20px 4px 20px !important;
+				padding: 4px 40px 4px 20px !important;
 				background-position: calc(100% - 15px) 50%;
-				font-size: rem(15);
 				@include breakpoint($mdw){
 					width: 120px;
 				}
@@ -1097,8 +1237,8 @@
 		margin: 0 0 5px 0 !important;
 	}
 	@include breakpoint($mdw) {
-		// flex-basis: 250px;
-		width: 250px;
+		flex-basis: 300px;
+		// width: 250px;
 		flex-shrink: 0;
 	}
 	@include breakpoint($lg) {
@@ -1149,7 +1289,7 @@ input.sdate,
 input.edate {
 	background: #fff url(/static/museum/img/ico/ico-date.png) calc(100% - 10px) center no-repeat;
 	border-radius: 4px;
-	padding: 0 30px 0 16px;
+	padding: 0 30px 0 20px;
 	@include breakpoint($smd){
 		padding: 0 20px 0 10px;
 		// background-position: calc(100% - 15px) center;

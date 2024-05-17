@@ -29,7 +29,7 @@
 			background-image: url(/static/imer/img/visual/sub_visual_bg1.png);
 			background-position: 50%;
 			&.menu_500214 {
-			background-image: url(/static/imer/img/visual/bg_500214.png);
+				background-image: url(/static/imer/img/visual/bg_500214.png);
 			}		
 			&.menu_500216 {
 				background-image: url(/static/imer/img/visual/bg_500216.png);
@@ -176,11 +176,12 @@
 				}
 				&.home {
 					// color: #000;
+					display: flex;
+    				align-items: center;
 					color: #6D6E72;
-					padding: 0 16px;
-					@include breakpoint($lg){
-						padding: 0 26px;
-					}
+					// @include breakpoint($lg){
+					// 	padding: 0 20px;
+					// }
 					@include breakpoint($smd){
 						width: 36px;
 						height: 36px;
@@ -189,27 +190,37 @@
 							display: none;
 						}
 					}
-					&::before {
-						content: "";
-						display: inline-block;
-						width: 18px;
-						height: 18px;
-						background: url(/static/portal/img/ico/ico-home.svg) 50% no-repeat;
-						//@include font-ico('\e88a');
-						//vertical-align: bottom;
-						//font-size: 26px;
-						//color: $point;
-						margin-right: 6px;
-						margin-bottom: -2px;
-						@include breakpoint($smd){
-							position: absolute;
-							top: 0;
-							left: 0;
-							z-index: 9;
-							text-align: center;
+					> a {
+						padding: 0 20px;
+						@include breakpoint($smd) {
 							width: 36px;
-							height: 100%;
-							margin-right: 0;
+							height: 36px;
+						}
+						&::before {
+							content: "";
+							display: inline-block;
+							width: 18px;
+							height: 18px;
+							background: url(/static/portal/img/ico/ico-home.svg) 50% no-repeat;
+							//@include font-ico('\e88a');
+							//vertical-align: bottom;
+							//font-size: 26px;
+							//color: $point;
+							margin-right: 6px;
+							margin-bottom: -2px;
+							@include breakpoint($smd){
+								position: absolute;
+								top: 0;
+								left: 0;
+								z-index: 9;
+								text-align: center;
+								width: 36px;
+								height: 100%;
+								margin-right: 0;
+							}
+						}
+						&::after {
+							display: none !important; 
 						}
 					}	
 				}

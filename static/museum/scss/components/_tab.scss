@@ -182,10 +182,13 @@
 			cursor: not-allowed;
 		}
 	}
+	.swiper-pagination-progressbar {
+		background-color: #e5e5e5;
+		&-fill {
+			background: #39A0FF !important;
+		}	
+	}
 }
-
-
-
 /* 임시 */
 .tab-list {
 	border-bottom: 0 !important;
@@ -196,18 +199,20 @@
 		padding-bottom: 10px !important; 
 		height: auto !important;
 	}
-	.swiper-pagination-progressbar{
+	.swiper-scrollbar{
+		width: 100% !important;
+		left: 0 !important;
 		top: initial !important;
 		bottom: 0 !important;
-		.swiper-pagination-progressbar-fill {
-			background-color: red !important;
-		}
+		background-color: #f0f0f0;
+		&-drag {
+			background: #26447D !important;
+		}	
 	}
 }
 // 끝
 
 .tab-content {
-
 	.tab-pannel {
 		display: none;
 		&.on {

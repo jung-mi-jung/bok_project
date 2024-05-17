@@ -128,7 +128,7 @@ $(function () {
 
 	// nav stiky
 	function goToScroll() {
-		var h = 96;
+		var h = 120;
 		if ($(window).scrollTop() > h) {
 			$('body').addClass('gnb-stiky');
 		} else {
@@ -159,15 +159,19 @@ $(function () {
 			$(this).addClass('on').parent().siblings().find('>a').removeClass('on');
 
 			$("#header.family.main").addClass("active");
+			$("body").addClass("gnbOver");
+
 			return false;
 		}
 	});
 	$('#gnb > ul > li').on('mouseleave', function () {
 		$('#gnb > ul > li > a').removeClass('on');
 		$("#header.family.main").removeClass("active");
+		$("body").removeClass("gnbOver");
 	});
 	$('#gnb .depth2>ul a:last').on('focusout', function (e) {
 		gnb1depth.removeClass('on');
+		$("body").removeClass("gnbOver");
 	});
 
 	$("#gnb .depth3 > ul > li > a.bu").click(function(){
@@ -331,6 +335,18 @@ $(function () {
 	$('.linkencode area').each(function (e) {
 		_href = encodeURIComponent($(this).attr('href').split('searchWrd=')[1])
 		$(this).attr('href', $(this).attr('href').split('searchWrd=')[0] + 'searchWrd=' + _href)
+	})
+
+	//다중 첨부파일일대 열고 접기
+	var dowButton = $(".down-set .down-button button");
+	dowButton.attr("title", "첨부파일 목록 열기");
+	dowButton.click(function(e){
+		$(this).parent().toggleClass("active");
+		if ($(this).parent().hasClass('active')){
+			dowButton.attr("title", "첨부파일 목록 닫기");
+		} else {
+			dowButton.attr("title", "첨부파일 목록 열기");
+		}
 	})
 });
 
@@ -643,9 +659,13 @@ var section2Txt = new Swiper('.tab-list .swiper', {
 	observer: true, // 슬라이드 변경 관찰 활성화
 	observeParents: true, // 부모 요소의 변경도 관찰
 	preventClicksPropagation: true,
-	pagination: {
-		el: ".swiper-pagination",
-		type: "progressbar",
+	// pagination: {
+	// 	el: ".swiper-pagination",
+	// 	type: "progressbar",
+	// },
+	scrollbar: {
+		el: ".swiper-scrollbar",
+		hide: false,
 	},
 	navigation: {
 		nextEl: ".swiper-tab-next",

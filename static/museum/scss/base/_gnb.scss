@@ -14,7 +14,7 @@
 			width: 100%;
 			display: flex;
 			justify-content: center;
-			gap: 0 50px;
+			// gap: 0 10px;
 			> li {
 				// flex: 1;
 				> a {
@@ -23,6 +23,7 @@
 					white-space:nowrap;
 					width: 100%;
 					// color: #fff;
+					padding: 0 25px;
 					color: #1a1a1a;
 					text-align: center;
 					height: 72px;
@@ -31,6 +32,9 @@
 					font-weight: 500;
 					// padding: 0 .75em;
 					&.on {
+						span {
+							color: #005596;
+						}
 						& + .depth2 {
 							display: flex;
 							justify-content: space-between;
@@ -50,18 +54,12 @@
 								box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 							}
 							&::before {
-								// left: -50%;
-								left: calc(-50% - 45px);
-								width: 100000px;
+								left: -50%;
+								//left: calc(-50% - 10000px);
+								width: 1000%;
+								transform: translateX(-50%);
 								z-index: -1;
 							}
-							/*&::after {
-								right: 0;
-								width: 10000px;
-								//right: -50%;
-								//right: calc(-50% + 10px);
-								border: 1px solid blue;
-							}*/
 						}
 					}
 				}
@@ -112,17 +110,17 @@
 				width: 100%;
 				z-index: 99;								
 				> ul {
-					width: calc(100% + 15%);
+					width: calc(100% + 8%);
 					display: flex;
 					flex-wrap: wrap;
 					flex-direction: row;
 					//padding-left: 12%;
 					margin: 15px 0;
-					margin-left: -15%;
-					@include breakpoint($xl) {
-						margin-left: -8%;
-						width: calc(100% + 8%);
-					}
+					margin-left: -8%;
+					// @include breakpoint($xl) {
+					// 	margin-left: -8%;
+					// 	width: calc(100% + 8%);
+					// }
 					> li {
 						flex-basis: calc(100% / 5);
 						padding: 15px 0;
@@ -244,7 +242,7 @@
 		&::before {
 			@include font-ico-outline('\e5d2');
 			color: #005596;
-			font-size: 36px;
+			font-size: 39px;
 		}
 		@include breakpoint($smd){
 			//display: none;

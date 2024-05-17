@@ -75,11 +75,14 @@
 #section1 {
 	position: relative;
 	height: 100vh;
+	@include breakpoint($smd) {
+		height: auto;
+	}
 }
 .section1-visual {
 	width: 100vw;
 	height: 100vh;
-	@include breakpoint($sm) {
+	@include breakpoint($smd) {
 		height: auto;
 	}
 	.swiper-slide {
@@ -89,8 +92,8 @@
 		background-size: cover;
 		background-attachment: fixed;
 		background-position: center center;
-		@include breakpoint($sm) {
-			min-height: 760px;
+		@include breakpoint($smd) {
+			min-height: 675px;
 			height: auto;
 		}
 		&::before {
@@ -114,6 +117,9 @@
 			box-sizing: border-box;
 			@include breakpoint($xl) {
 				padding: 0 50px;
+			}
+			@include breakpoint($smd) {
+				margin: -150px auto 0;
 			}
 			@include breakpoint($sm) {
 				margin: -300px auto 0;
@@ -166,8 +172,11 @@
 		@include breakpoint($xl) {
 			padding: 0 50px;
 		}
-		@include breakpoint($sm) {
-			top: 44%;		
+		@include breakpoint($smd) {
+			top: 56%;
+		}
+ 		@include breakpoint($sm) {
+			top: 46%;		
 		}
 		
 
@@ -234,12 +243,17 @@
 	.autoplay-progress {
 		position: absolute;
 		top: 50%;
-		left: calc(78px + 50px);
 		width: 82px;
 		height: 4px;
 		transform: translateY(-50%);
 		background: rgba(255,255,255,0.6);
-		@include breakpoint($sm) { 
+		@include breakpoint($lg) {
+			left: calc(78px + 22px);
+		}
+		@include breakpoint($xl) {
+			left: calc(78px + 50px);
+		}
+		@include breakpoint($smd) { 
 			left: calc(78px + 20px);
 		}
 		.progress {
@@ -262,10 +276,10 @@
 	position: absolute;
 	left: 50%;
 	bottom: 0;
-	padding: 16px 0;
+	padding: 16px 20px;
 	width: 100%;
 	max-width: 1680px;
-	padding: 16px 50px;
+	padding: 16px 20px;
 	transform: translateX(-50%);
 	box-sizing: border-box;
 	border-top: 1px solid rgba(255, 255, 255, 0.30);
@@ -275,8 +289,11 @@
 	flex-wrap: wrap;
 	z-index: 2;
 	gap: 20px 0;
-	@include breakpoint($sm) {
+	@include breakpoint($lg) {
 		padding: 16px 20px;
+	}
+	@include breakpoint($xl) {
+		padding: 16px 50px;
 	}
 	.museum-info {
 		gap: 0 36px;
@@ -767,125 +784,6 @@
 		}
 	}
 }
-
-
-
-
-// .section2-exhibit {
-// 	width: calc(100% - 480px - 7.14286%);
-// 	.section2-bg {
-// 		position: relative;
-// 		padding: 72px 0 84px 120px; 
-// 		box-sizing: border-box;
-// 		// position: relative;
-// 		&::before {
-// 			content: "";
-// 			display: block;
-// 			position: absolute;
-// 			top: 0;
-// 			left: 0;
-// 			width: 100vw;
-// 			height: 100%;
-// 			right: 0;
-// 			z-index: 1;
-// 			background: #2F4F9D;
-// 			border-radius: 16px 0 0 16px;
-// 		}
-// 	}
-// 	.section2-swiper {
-// 		overflow: visible;
-// 		.swiper-slide {
-// 			.slide-txt {
-// 				// width: 0;
-// 				font-size: rem(24);
-// 				color: #fff;
-// 				margin-right: 30px;
-// 				transform: translateX(-480px);
-// 				opacity: 0;
-// 				transition: transform 1s, opacity .4s;
-// 				display: none;
-// 				.current {
-// 					display: inline-block;
-// 					padding: 4px 12px;
-// 					margin-bottom: 8px;
-// 					font-size: rem(16);
-// 					border-radius: 99px;
-// 					line-height: 1;
-// 					background: #fff;
-// 					color: #3B63C4;
-// 				}
-// 				p {
-// 					font-size: rem(24);
-// 					font-weight: 500;
-// 					color: #fff;
-// 					margin-bottom: 32px;
-// 				}
-// 				li {
-// 					font-size: rem(16);
-// 					font-weight: 300;
-// 					color: #fff;
-// 					&:first-of-type {
-// 						margin-bottom: 8px;
-// 					}
-// 					i {
-// 						margin-right: 8px;
-// 					}
-// 				}
-// 			}
-// 			.slide-img {
-// 				width: 330px;
-// 				height: 440px;
-// 				transform: scale(0.636363) translateY(0);
-// 				transform-origin: top;
-// 				opacity: 0.6;
-// 			}
-// 			.pdf-down {
-// 				transform: translateY(-150px);
-// 				// margin-top: 12px;
-// 				text-align: right;
-// 				display: none;
-// 				a {
-// 					position: relative;
-// 					font-size: rem(16);
-// 					font-weight: 300;
-// 					color: #fff;
-// 					i {
-// 						margin-right: 8px;
-// 					}
-// 					&::before {
-// 						content: "";
-// 						display: inline-block;
-// 						position: absolute;
-// 						width: 100%;
-// 						height: 2px;
-// 						bottom: -8px;
-// 						background: #fff;
-// 					}
-// 				}
-// 			}
-// 		}
-// 		.swiper-slide-active {
-// 			.slide-txt {
-// 				display: block;
-// 				width: 480px;
-// 				transform: translateX(0);
-// 				opacity: 1;
-// 			}
-// 			.slide-img {
-// 				transform: scale(1) translateY(-150px);
-// 				opacity: 1;
-// 			}
-// 			.pdf-down  {
-// 				display: block;
-// 			}
-// 		}
-// 	}
-// }
-
-
-
-
-
 
 @keyframes progress {
 	0% {

@@ -512,6 +512,9 @@
 		overflow: hidden;
 		max-width: 1600px;
 		max-height: calc(100vh - 160px);
+		@include breakpoint($sm) {
+			max-height: calc(100vh - 40px);
+		}
 	}
 	.modal-dialog,
 	.modal-content {
@@ -1752,16 +1755,14 @@
 			float: right;
 			// border-left: 1px solid $bd-color;
 			padding-left: 36px;
-			padding-top: 30px;
+			// padding-top: 10px;
 			margin-bottom: 40px;
 		}
 		.lnb-nav + .content {
-			// width: per(1405px, $pc-wide);
-			width: calc(100% - 240px);
-			
+			width: calc(100% - 275px);
 		}
 		.sh-db + .content {
-			// width: per(1441px, $pc-wide);
+			width: calc(100% - 275px);
 		}
 	}
 }
@@ -1942,7 +1943,7 @@ main {
 	color: $red;
 	margin-top: 10px;
 	margin-bottom: 5px !important;
-	font-size: rem(16);
+	font-size: rem(16) !important;
 	&::before {
 		@include font-ico-outline('\e88e');
 		font-size: rem(18);
@@ -1953,7 +1954,7 @@ main {
 	color: #4D4D4D;
 	margin-top: 10px;
 	margin-bottom: 5px !important;
-	font-size: rem(16);
+	font-size: rem(16) !important;
 	&::before {
 		@include font-ico-outline('\e88e');
 		font-size: rem(18);

@@ -857,7 +857,7 @@ top: 44px;
 }
 }
 .navigation nav > ul > li .depth2 ul {
-min-width: -moz-max-content;
+min-width: -webkit-max-content;
 min-width: max-content;
 background-color: #fff;
 padding: 10px 15px;
@@ -10108,6 +10108,7 @@ margin-bottom: 30px;
 }
 }
 .content-row .cont-nav ul {
+position: -webkit-sticky;
 position: sticky;
 top: 60px;
 }
