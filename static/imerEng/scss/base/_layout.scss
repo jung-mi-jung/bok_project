@@ -33,7 +33,7 @@
 	display: flex;
 	flex-direction: column;
 	@include breakpoint($smd){
-		border-bottom: 1px solid #d9d9d9;	
+		//border-bottom: 1px solid #d9d9d9;	
 		box-sizing: border-box;
 	}	
 	.container {
@@ -470,43 +470,7 @@
 	}
 }
 
-// 전체메뉴 모바일
-.total-nav {
-	&.m-total-nav {
-		.dp1 {
-			> li {
-				&.on {
-					> a > span {
-						&::before {
-							background: url(/static/portal/img/ico/ico-dropdown-up.png);
-						}
-					}
-					.dp2 {
-						display: block;
-					}
-				}
-				> a > span {
-					position: relative;
-					&::before {
-						content: "";
-						position: absolute;
-						top: 50%;
-						transform: translateY(-50%);
-						right: -25px;
-						display: inline-block;
-						width: 20px;
-						height: 20px;
-						margin-left: 8px;
-						background: url(/static/portal/img/ico/ico-dropdown-down.png);
-					}
-				}
-			}
-			.dp2 {
-				display: none;
-			}
-		}
-	}
-}
+
 
 //게시판일 경우 비주얼 영역 예외처리
 .bd-body {
@@ -826,6 +790,9 @@
 		overflow: hidden;
 		max-width: 1600px;
 		max-height: calc(100vh - 160px);
+		@include breakpoint($sm) {
+			max-height: calc(100vh - 40px);
+		}
 	}
 	.modal-dialog,
 	.modal-content {
@@ -1195,6 +1162,45 @@
 		
 	}
 }
+
+// 전체메뉴 모바일
+.total-nav {
+	&.m-total-nav {
+		.dp1 {
+			> li {
+				&.on {
+					> a > span {
+						&::before {
+							background: url(/static/portal/img/ico/ico-dropdown-up.png);
+						}
+					}
+					.dp2 {
+						display: block;
+					}
+				}
+				> a > span {
+					position: relative;
+					&::before {
+						content: "";
+						position: absolute;
+						top: 50%;
+						transform: translateY(-50%);
+						right: -25px;
+						display: inline-block;
+						width: 20px;
+						height: 20px;
+						margin-left: 8px;
+						background: url(/static/portal/img/ico/ico-dropdown-down.png);
+					}
+				}
+			}
+			.dp2 {
+				display: none;
+			}
+		}
+	}
+}
+
 
 
 .goTop {
@@ -2050,7 +2056,7 @@
 	color: $red;
 	margin-top: 10px;
 	margin-bottom: 5px !important;
-	font-size: rem(16);
+	font-size: rem(16) !important;
 	&::before {
 		@include font-ico-outline('\e88e');
 		font-size: rem(18);
@@ -2061,7 +2067,7 @@
 	color: #4D4D4D;
 	margin-top: 10px;
 	margin-bottom: 5px !important;
-	font-size: rem(16);
+	font-size: rem(16) !important;
 	&::before {
 		@include font-ico-outline('\e88e');
 		font-size: rem(18);

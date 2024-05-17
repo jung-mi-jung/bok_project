@@ -317,7 +317,7 @@
 			// 	height: auto;
 			// }
 			span {
-				display: inline-block;
+				display: block;
 				padding: 0;
 				font-size: rem(14);
 				color: #3B63C4;
@@ -389,14 +389,26 @@
 				button {
 					color: #fff;
 					cursor: not-allowed;
+					@include breakpoint($lg) {
+						&:hover {
+							text-decoration: none;
+						}
+					}
+					span {
+						color: #fff;
+					}
 				}
 			}
 			&::before {
 				display: none;
 			}
 			button {
+				font-size: rem(13);
 				padding: 2px 2px;
 				color: #3B63C4;
+				span {
+					display: block;
+				}
 				@include breakpoint($lg) {
 					&:hover {
 						text-decoration: underline;
@@ -406,6 +418,7 @@
 		}
 	}
 }
+
 .calendarWrap > .help2,
 .calendarWrap > .help3 {
 	margin-top: 5px;

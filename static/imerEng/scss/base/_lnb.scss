@@ -19,36 +19,30 @@
 		}
 	}
 	.sub-_visual {
+		border-top: 1px solid #E6E6E6;
 		background-image: none;
 		background: #fff;
 		@include breakpoint($lg){
 			height: 216px;
-			border-top: 1px solid #E6E6E6;
 			background-color: #CBDEF4;
-			background-image: url(/static/imer/img/visual/sub_visual_bg1.png);
 			background-repeat: no-repeat;
+			background-image: url(/static/imer/img/visual/sub_visual_bg1.png);
 			background-position: 50%;
-			&.menu_500214,
 			&.menu_600089 {
-				background-image: url(/static/imer/img/visual/bg_500214.png);
+			background-image: url(/static/imer/img/visual/bg_500214.png);
 			}		
-			&.menu_500216,
-			&.menu_600093{
+			&.menu_600093 {
 				background-image: url(/static/imer/img/visual/bg_500216.png);
 			}		
-			&.menu_500536,
 			&.menu_600381 {
 				background-image: url(/static/imer/img/visual/bg_500536.png);
 			}	
-			&.menu_500045,
 			&.menu_600092 {
 				background-image: url(/static/imer/img/visual/bg_500045.png);
 			}	
-			&.menu_500218,
 			&.menu_600090 {
 				background-image: url(/static/imer/img/visual/bg_500218.png);
 			}	
-			&.menu_500831,
 			&.menu_600288 {
 				background-image: url(/static/imer/img/visual/bg_500831.png);
 			}	
@@ -114,6 +108,10 @@
 			}
 		}
 	}
+	// @include breakpoint($sm){
+	// 	height: 36px;
+	// 	line-height: 36px;
+	// }
 	nav {
 		height: 60px;
 		line-height: 60px;		
@@ -178,11 +176,12 @@
 				}
 				&.home {
 					// color: #000;
+					display: flex;
+    				align-items: center;
 					color: #6D6E72;
-					padding: 0 16px;
-					@include breakpoint($lg){
-						padding: 0 26px;
-					}
+					// @include breakpoint($lg){
+					// 	padding: 0 20px;
+					// }
 					@include breakpoint($smd){
 						width: 36px;
 						height: 36px;
@@ -191,27 +190,37 @@
 							display: none;
 						}
 					}
-					&::before {
-						content: "";
-						display: inline-block;
-						width: 18px;
-						height: 18px;
-						background: url(/static/portal/img/ico/ico-home.svg) 50% no-repeat;
-						//@include font-ico('\e88a');
-						//vertical-align: bottom;
-						//font-size: 26px;
-						//color: $point;
-						margin-right: 6px;
-						margin-bottom: -2px;
-						@include breakpoint($smd){
-							position: absolute;
-							top: 0;
-							left: 0;
-							z-index: 9;
-							text-align: center;
+					> a {
+						padding: 0 20px;
+						@include breakpoint($smd) {
 							width: 36px;
-							height: 100%;
-							margin-right: 0;
+							height: 36px;
+						}
+						&::before {
+							content: "";
+							display: inline-block;
+							width: 18px;
+							height: 18px;
+							background: url(/static/portal/img/ico/ico-home.svg) 50% no-repeat;
+							//@include font-ico('\e88a');
+							//vertical-align: bottom;
+							//font-size: 26px;
+							//color: $point;
+							margin-right: 6px;
+							margin-bottom: -2px;
+							@include breakpoint($smd){
+								position: absolute;
+								top: 0;
+								left: 0;
+								z-index: 9;
+								text-align: center;
+								width: 36px;
+								height: 100%;
+								margin-right: 0;
+							}
+						}
+						&::after {
+							display: none !important; 
 						}
 					}	
 				}
@@ -220,7 +229,7 @@
 					position: absolute;
 					top: 60px;
 					left: -1px;
-					min-width: 240px;
+					min-width: 200px;
 					z-index: 9;
 					width: calc(100% + 2px);
 					background-color: #fff;
@@ -237,9 +246,9 @@
 						li {
 							margin: 10px 0;
 							a {
-								display: inline-flex;
 								color: #666;
-								line-height: 1.25;
+								display: block;
+								line-height: 1.3;
 								&:hover {
 									text-decoration: underline;
 								}	
@@ -267,6 +276,7 @@
 }
 
 @include breakpoint($sm) {
+
 	.navigation nav > ul > li {
 		display: none;
 		&.home,
@@ -279,13 +289,11 @@
 /* 상세페이지 비쥬얼 */
 body.bd-body .sub-_visual {
 	@include breakpoint($lg) {
-		background-image: url(/static/imerEng/img/visual/view_500216.png) !important;
-		// &.menu_500216,
-		// &.menu_600093 {
+		background-image: url(/static/imer/img/visual/view_500216.png) !important;
+		// &.menu_500216 {
 		// 	background-image: url(/static/imer/img/visual/view_500216.png);
 		// }
-		// &.menu_500831,
-		// &.menu_600288  {
+		// &.menu_500831 {
 		// 	background-image: url(/static/imer/img/visual/view_500831.png);
 		// }
 	}
@@ -302,7 +310,7 @@ body.bd-body .sub-_visual {
 		position: sticky;
 		top: 48px;
 		float: left;
-		width: 240px;
+		width: 275px;
 		height: auto;
 		padding-top: 30px;
 		padding-right: 36px;

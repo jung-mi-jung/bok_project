@@ -512,6 +512,9 @@
 		overflow: hidden;
 		max-width: 1600px;
 		max-height: calc(100vh - 160px);
+		@include breakpoint($sm) {
+			max-height: calc(100vh - 40px);
+		}
 	}
 	.modal-dialog,
 	.modal-content {
@@ -1942,7 +1945,7 @@ main {
 	color: $red;
 	margin-top: 10px;
 	margin-bottom: 5px !important;
-	font-size: rem(16);
+	font-size: rem(16) !important;
 	&::before {
 		@include font-ico-outline('\e88e');
 		font-size: rem(18);
@@ -1953,7 +1956,7 @@ main {
 	color: #4D4D4D;
 	margin-top: 10px;
 	margin-bottom: 5px !important;
-	font-size: rem(16);
+	font-size: rem(16) !important;
 	&::before {
 		@include font-ico-outline('\e88e');
 		font-size: rem(18);

@@ -132,7 +132,7 @@ $(function () {
 	//nav stiky
 	function goToScroll() {
 		// 주 메뉴
-		var h = 96;
+		var h = 120;
 		if ($(window).scrollTop() > h) {
 			$('body').addClass('gnb-stiky');
 			//$(".lnb-nav, .sh-db").addClass('sticky');
@@ -335,6 +335,18 @@ $(function () {
 	$('.linkencode area').each(function (e) {
 		_href = encodeURIComponent($(this).attr('href').split('searchWrd=')[1])
 		$(this).attr('href', $(this).attr('href').split('searchWrd=')[0] + 'searchWrd=' + _href)
+	})
+
+	//다중 첨부파일일대 열고 접기
+	var dowButton = $(".down-set .down-button button");
+	dowButton.attr("title", "첨부파일 목록 열기");
+	dowButton.click(function(e){
+		$(this).parent().toggleClass("active");
+		if ($(this).parent().hasClass('active')){
+			dowButton.attr("title", "첨부파일 목록 닫기");
+		} else {
+			dowButton.attr("title", "첨부파일 목록 열기");
+		}
 	})
 });
 

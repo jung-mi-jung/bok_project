@@ -14,7 +14,12 @@
 			top: -2px;
 			z-index: 10;
 			.sub-_visual {
-				display: none;
+				// display: none;
+				opacity: 0;
+				height: 0;
+				* {
+					display: none;
+				}
 			}
 		}
 	}
@@ -24,6 +29,7 @@
 		background: #fff;
 		@include breakpoint($lg){
 			height: 216px;
+			opacity: 1;
 			background-color: #CBDEF4;
 			background-repeat: no-repeat;
 			background-position: 50%;
@@ -172,11 +178,9 @@
 				}
 				&.home {
 					// color: #000;
+					display: flex;
+    				align-items: center;
 					color: #6D6E72;
-					padding: 0 16px;
-					@include breakpoint($lg){
-						padding: 0 26px;
-					}
 					@include breakpoint($smd){
 						width: 36px;
 						height: 36px;
@@ -185,32 +189,38 @@
 							display: none;
 						}
 					}
-					&::before {
-						content: "";
-						display: inline-block;
-						width: 18px;
-						height: 18px;
-						background: url(/static/portal/img/ico/ico-home.svg) 50% no-repeat;
-						//@include font-ico('\e88a');
-						//vertical-align: bottom;
-						//font-size: 26px;
-						//color: $point;
-						margin-right: 6px;
-						margin-bottom: -2px;
-						@include breakpoint($smd){
-							position: absolute;
-							top: 0;
-							left: 0;
-							z-index: 9;
-							text-align: center;
+					> a {
+						padding: 0 20px;
+						@include breakpoint($smd) {
 							width: 36px;
-							height: 100%;
-							margin-right: 0;
+							height: 36px;
 						}
-						// @include breakpoint($sm){
-						// 	top: 0;
-						// 	height: 48px;
-						// }
+						&::before {
+							content: "";
+							display: inline-block;
+							width: 18px;
+							height: 18px;
+							background: url(/static/portal/img/ico/ico-home.svg) 50% no-repeat;
+							//@include font-ico('\e88a');
+							//vertical-align: bottom;
+							//font-size: 26px;
+							//color: $point;
+							margin-right: 6px;
+							margin-bottom: -2px;
+							@include breakpoint($smd){
+								position: absolute;
+								top: 0;
+								left: 0;
+								z-index: 9;
+								text-align: center;
+								width: 36px;
+								height: 100%;
+								margin-right: 0;
+							}
+						}
+						&::after {
+							display: none !important; 
+						}
 					}	
 				}
 				.depth2 {
