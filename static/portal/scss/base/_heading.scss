@@ -137,7 +137,7 @@ p.bu-dot {
 		@include breakpoint($smd){
 			font-size: rem(22);
 			text-align: center;
-		}
+		}		
 	}
 	h3 {
 		clear: both;
@@ -145,6 +145,10 @@ p.bu-dot {
 		font-size: rem(28);
 		font-weight: 500;
 		margin: 70px 0 16px;
+		@include breakpoint($sm){
+			font-size: rem(18);
+			margin: 40px 0 16px;
+		}
 		a {
 			color: #26447D;
 			&.b-go {

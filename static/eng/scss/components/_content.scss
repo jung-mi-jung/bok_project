@@ -2485,6 +2485,9 @@ p.subject {
 	border-radius: 16px;
 	padding: 40px 24px;
 	margin-bottom: 30px;
+	@include breakpoint($sm){
+		padding: 20px;
+	}
 	.tit {
 		position: relative;
 		color: #333;
@@ -2492,6 +2495,9 @@ p.subject {
 		font-size: rem(26);
 		line-height: 1.4;
 		margin-bottom: 0;
+		@include breakpoint($sm){
+			font-size: rem(20);
+		}
 		&.ico1 {
 			padding-top: 76px;
 			margin-top: 10px;

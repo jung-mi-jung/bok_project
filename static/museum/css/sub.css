@@ -964,7 +964,6 @@ border-top: 1px solid #E5E5E5;
 @media (min-width: 1200px) {
 .gnb-stiky .navigation {
 width: 100%;
-position: -webkit-sticky;
 position: sticky;
 border-bottom: 1px solid #E5E5E5;
 top: -2px;
@@ -1286,7 +1285,6 @@ margin-bottom: 30px;
 }
 @media (min-width: 1200px) {
 .lnb-nav {
-position: -webkit-sticky;
 position: sticky;
 top: 48px;
 float: left;
@@ -5327,7 +5325,6 @@ justify-content: center;
 
 .sh-db {
 margin-bottom: 40px;
-position: -webkit-sticky;
 position: sticky;
 top: 48px;
 }
@@ -6924,7 +6921,6 @@ margin-bottom: 30px;
 }
 }
 .content-row .cont-nav ul {
-position: -webkit-sticky;
 position: sticky;
 top: 60px;
 }

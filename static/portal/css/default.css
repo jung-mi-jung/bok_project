@@ -1513,6 +1513,12 @@ font-size: 1.75rem;
 font-weight: 500;
 margin: 70px 0 16px;
 }
+@media (max-width: 749px) {
+#main-container h3 {
+font-size: 1.125rem;
+margin: 40px 0 16px;
+}
+}
 #main-container h3 a {
 color: #26447D;
 }
@@ -3344,7 +3350,7 @@ margin: 0 -12px;
 }
 @media (max-width: 1199px) {
 .reference-news dl dd ul {
-width: -webkit-max-content;
+width: -moz-max-content;
 width: max-content;
 }
 }
@@ -3465,7 +3471,7 @@ margin: -12px -12px 0;
 }
 @media (max-width: 1199px) {
 .reference-media dl dd ul {
-width: -webkit-max-content;
+width: -moz-max-content;
 width: max-content;
 }
 }

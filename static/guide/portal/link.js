@@ -365,6 +365,8 @@ $(function () {
 		'201325',
 
 		'201697',
+		'201320',
+		'200201',
 
 		//200670 외환거래 질의 신청하기 링크  https://voc.bok.or.kr/erms/qna/agreeConfirm.action?qnaMngBean.category=NODE0000000130&menuNaviId=2272
 		
