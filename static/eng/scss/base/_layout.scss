@@ -658,13 +658,15 @@ body.gnbOver {
 		}
 	}
 	.modal-body {
-		padding: 50px 0;
+		height: calc(100% - 100px);
+		padding: 44px 0;
+		overflow-y: auto;
 		.container {
 			max-width: 1680px;
 			align-items: stretch !important;
 			justify-content: flex-start !important;
 			flex-wrap: wrap;
-			gap: 0 30px;
+			gap: 0 16px;
 		}
 		.highlight {
 			display: inline-block;
