@@ -168,8 +168,10 @@ p.subject {
 			.s {
 				display:inline-block;
 				margin-bottom:20px;
+				width: 90%;
 				@include breakpoint($sm) {
 					margin-bottom:0;
+					width: auto;
 				}
 				strong{
 					display:block;
@@ -189,6 +191,11 @@ p.subject {
 				width:100%;
 			}
 		}
+		&.imgType4{
+			img {
+				width: 45%;
+			}
+		}
 		p{
 			vertical-align:middle;
 			background:#fff;
@@ -196,7 +203,7 @@ p.subject {
 			width:100%;
 			text-align:center;
 			height:227px;
-			width:300px;
+			width: 332px;
 			display:table-cell;
 			border:1px solid #b5b5b5;
 			border-width: 1px;
@@ -1504,6 +1511,7 @@ p.subject {
 		text-align:center;
 		vertical-align:middle;
 		line-height:1.15;
+		font-size: 14px;
 	}
 }
 .imgMapLink{
@@ -2477,6 +2485,9 @@ p.subject {
 	border-radius: 16px;
 	padding: 40px 24px;
 	margin-bottom: 30px;
+	@include breakpoint($sm){
+		padding: 20px;
+	}
 	.tit {
 		position: relative;
 		color: #333;
@@ -2484,6 +2495,9 @@ p.subject {
 		font-size: rem(26);
 		line-height: 1.4;
 		margin-bottom: 0;
+		@include breakpoint($sm){
+			font-size: rem(20);
+		}
 		&.ico1 {
 			padding-top: 76px;
 			margin-top: 10px;

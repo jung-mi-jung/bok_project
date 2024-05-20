@@ -1507,6 +1507,12 @@ font-size: 1.75rem;
 font-weight: 500;
 margin: 70px 0 16px;
 }
+@media (max-width: 749px) {
+#main-container h3 {
+font-size: 1.125rem;
+margin: 40px 0 16px;
+}
+}
 #main-container h3 a {
 color: #26447D;
 }
@@ -3826,6 +3832,7 @@ z-index: 4;
 width: 100%;
 height: 600px;
 background: #fff;
+text-align: center;
 }
 @media (max-width: 749px) {
 .loading {

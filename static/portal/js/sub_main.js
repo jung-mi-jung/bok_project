@@ -1,6 +1,6 @@
 //비주얼
 $(function () {
-	const popup = new Swiper('.sub-main .swiper', {
+	const popup = new Swiper('.sub-main .section-visual .swiper', {
 		init: false,
 		//freeMode: true,
 		// Optional parameters

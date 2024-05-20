@@ -459,6 +459,7 @@
 		}
 	}
 	.zone_main {
+		border-top: 1px solid #E6E6E6;
 		.section_bg {
 			margin-bottom: 56px;
 			padding-top: 30px;
@@ -819,7 +820,7 @@
 			position: relative;			
 			width: 100%;
 			@include breakpoint($lg){
-				width: calc(33.3% - 79px);
+				width: calc(33.3% - 30px);
 			}		
 			h2 {
 				color: $black;

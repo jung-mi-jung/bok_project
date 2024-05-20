@@ -13,7 +13,7 @@ $(function () {
 		// Optional parameters
 		// direction: 'vertical',
 		loop: true,
-		speed: 2000,
+		speed: 1000,
 		autoplay: {
 			delay: 5000, // 시간 설정
 			disableOnInteraction: false, // false-스와이프 후 자동 재생
