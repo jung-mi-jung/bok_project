@@ -2220,6 +2220,9 @@ display: inline-block;
 }
 .bd-line > ul > li .date {
 color: #767676;
+position: absolute;
+top: 50%;
+right: 0;
 }
 .bd-line > ul > li .ico-reply-ing {
 color: #C81720;
