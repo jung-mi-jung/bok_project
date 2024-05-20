@@ -2462,14 +2462,16 @@ font-size: 26px;
 color: #222;
 }
 .total-nav .modal-body {
-padding: 50px 0;
+height: calc(100% - 100px);
+padding: 44px 0;
+overflow-y: auto;
 }
 .total-nav .modal-body .container {
 max-width: 1680px;
 align-items: stretch !important;
 justify-content: flex-start !important;
 flex-wrap: wrap;
-gap: 0 30px;
+gap: 0 16px;
 }
 .total-nav .modal-body .highlight {
 display: inline-block;
