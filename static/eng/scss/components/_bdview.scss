@@ -94,16 +94,18 @@
 	//margin: 10px 0 18px;
 	margin-bottom: 18px;
 	.dataInfo {
-		position: absolute;
-		top: -44px;
-		right: 0;
-		display: flex;
 		color: #666;
-		@include breakpoint($sm){
-			right: auto;
-			left: 0;
-			width: 100%;
+		@include breakpoint($lg) {
+			position: absolute;
+			top: -44px;
+			right: 0;
+			display: flex;
 		}
+		// @include breakpoint($sm){
+		// 	right: auto;
+		// 	left: 0;
+		// 	width: 100%;
+		// }
 		.ass {
 			color: #3B63C4;
 			font-weight: 500;
@@ -241,14 +243,16 @@
 			}			
 		}
 	}
-	.dataInfoSet {
-		height: 55px;
+	.dataInfoSet {		
 		@include dataInfoSet();
-		align-items: flex-end;
-		margin-top: -18px;
-		margin-bottom: 60px;
-		.type2 {
-			margin-top: -21px;
+		@include breakpoint($lg){
+			height: 55px;			
+			align-items: flex-end;
+			margin-top: -18px;
+			margin-bottom: 60px;
+			.type2 {
+				margin-top: -21px;
+			}
 		}
 	}
 	.down-set {	//다중 첨부파일				

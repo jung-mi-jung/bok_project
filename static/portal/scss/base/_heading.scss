@@ -137,7 +137,7 @@ p.bu-dot {
 		@include breakpoint($smd){
 			font-size: rem(22);
 			text-align: center;
-		}		
+		}
 	}
 	h3 {
 		clear: both;
@@ -318,4 +318,32 @@ li {
 		width: 20px;
 		height: 20px;
 	}	
+}
+
+
+.bu-dot3 {
+	> li {
+		position: relative;
+		padding-left: 20px;
+		margin-bottom: 6px;
+		&::before {
+			content: "";
+			display: inline-block;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			background: #3E7CC8;
+			position: absolute;
+			top: 7px;
+			left: 0;
+		}
+		em {
+			font-weight: 500;
+			color: $black;
+		}
+		ul {
+			font-size: 16px;
+			margin-top: 4px;
+		}
+	}
 }

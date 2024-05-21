@@ -315,7 +315,7 @@
 			font-style: normal;
 			font-weight: 700;
 			line-height: normal;
-			text-transform: uppercase;
+			//text-transform: uppercase;
 			@include breakpoint($sm){
 				font-size: rem(38);
 			}
@@ -327,7 +327,7 @@
 			font-style: normal;
 			font-weight: 500;
 			line-height: normal;
-			text-transform: uppercase;
+			//text-transform: uppercase;
 			@include breakpoint($sm){
 				font-size: rem(20);
 				margin-top: 15px;

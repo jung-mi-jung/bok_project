@@ -238,7 +238,20 @@
 			border: 1px solid #808080;
 			border-radius: 50%;
 		}
-	}	
+	}
+	//내용안에 테이블
+	table {
+		&.table {
+			background-color: #fff;
+			width: 100% !important;
+			th, td {
+				border: 1px solid $bd-color;
+			}
+			th {
+				background-color: #FAFAFA;
+			}
+		}
+	}
 }
 
 @include breakpoint($sm) {

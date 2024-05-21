@@ -189,7 +189,7 @@ p.subject {
 				width:100%;
 			}
 		}
-		&.imgType4{
+		&.imgType4 {
 			img {
 				width: 45%;
 			}
@@ -219,7 +219,7 @@ p.subject {
 			width: 100%;
 		}
 	}
-	.table{
+	.table{		
 		//width: calc(100% - 28% - 3%);
 		width: calc(100% - 35% - 3%);
 		float:left;
@@ -237,7 +237,7 @@ p.subject {
 		&.table-view {
 			margin-top: -15px;
 		}
-	}
+	}	
 }
 .dlbox {
 	background:#E5E5E5;overflow:hidden;clear:both;display:table;width:100%;
@@ -3627,11 +3627,6 @@ p.subject {
 	}
 }
 
-
-
-
-//추가 부분만 내부망에 적용할것
-
 //국외사무소
 
 .orgInforsData {
@@ -3688,33 +3683,6 @@ p.subject {
 	}
 	&.ico2 {
 		background: url(/static/portal/img/ico/ico-con2.png) 0 0 no-repeat;
-	}
-}
-
-.bu-dot3 {
-	> li {
-		position: relative;
-		padding-left: 20px;
-		margin-bottom: 6px;
-		&::before {
-			content: "";
-			display: inline-block;
-			width: 10px;
-			height: 10px;
-			border-radius: 50%;
-			background: #3E7CC8;
-			position: absolute;
-			top: 7px;
-			left: 0;
-		}
-		em {
-			font-weight: 500;
-			color: $black;
-		}
-		ul {
-			font-size: 16px;
-			margin-top: 4px;
-		}
 	}
 }
 

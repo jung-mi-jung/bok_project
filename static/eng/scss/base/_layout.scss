@@ -307,7 +307,9 @@ body.gnbOver {
 	.navigation {
 		.sub-_visual {
 			div {
-				padding-top: 48px;
+				@include breakpoint($lg){
+					padding-top: 44px;
+				}
 				h1 {
 					font-weight: 600;
 				}
@@ -322,9 +324,15 @@ body.gnbOver {
 			margin-top: -156px;
 		}
 		.subject {
-			width: 100%;
-			@include ellipsis();
-			margin-bottom: 0 !important;
+			@include breakpoint($lg){
+				width: calc(100% - 312px);
+				height: 80px;
+				overflow: hidden;
+			}
+			margin-bottom: 0 !important;			
+			@include breakpoint($sm){
+				width: 100%;
+			}
 		}
 		.dataInfoSet .keyword a {
 			background-color: #fff;
@@ -658,15 +666,13 @@ body.gnbOver {
 		}
 	}
 	.modal-body {
-		height: calc(100% - 100px);
-		padding: 44px 0;
-		overflow-y: auto;
+		padding: 50px 0;
 		.container {
 			max-width: 1680px;
 			align-items: stretch !important;
 			justify-content: flex-start !important;
 			flex-wrap: wrap;
-			gap: 0 16px;
+			gap: 0 30px;
 		}
 		.highlight {
 			display: inline-block;

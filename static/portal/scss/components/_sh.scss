@@ -220,6 +220,9 @@
 				}
 			}
 		}		
+		.check-ctrl  {
+			display: none;  //미작업으로 일단 none 처리
+		}
 		@include breakpoint($smd){ 			
 			.label-list {
 				//display: none;
@@ -245,6 +248,7 @@
 			}
 			&.details {
 				.check-ctrl  {
+					display: none;  //미작업으로 
 					margin-top: 5px;
 				}				
 			}

@@ -21,7 +21,7 @@ table {
 			display: none !important;
 		}
 	}
-	&.table_line {
+	&.table_line {  //임시? 삭제?
 		border-top: 2px solid #182252;
 	}
 	&.single {
@@ -136,6 +136,9 @@ table {
 		thead {
 			tr {
 				th {
+					&:first-child {
+						border-radius: 8px 0 0;
+					}
 					&:last-child {
 						border-radius: 0 8px 0 0;
 					}
@@ -143,16 +146,21 @@ table {
 				& + tr {
 					th {
 						border-radius: 0;
+						border-top: 1px solid #BDBCBC;
+						&:first-child {
+							border-radius: 0 0 0 8px;
+						}
 						&:last-child {
 							border-radius: 0 0 8px;
 						}
-						&.line-l, 
+						&.line-l,
 						&.th1b {
+							border-radius: 0;
 							border-left: 1px solid #BDBCBC;
 						}
-						&.line-t {
-							border-top: 1px solid #BDBCBC;
-						}
+						// &.line-t {
+						// 	border-top: 1px solid #BDBCBC;
+						// }
 					}
 				}
 			}

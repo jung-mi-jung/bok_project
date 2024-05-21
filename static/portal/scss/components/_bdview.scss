@@ -89,21 +89,24 @@
 
 
 @mixin dataInfoSet {	
-	display: flex;
-	justify-content: space-between;
-	//margin: 10px 0 18px;
-	margin-bottom: 18px;
-	.dataInfo {
-		position: absolute;
-		top: -44px;
-		right: 0;
+	@include breakpoint($lg) {
 		display: flex;
+		justify-content: space-between;
+		margin-bottom: 18px;
+	}
+	.dataInfo {
 		color: #666;
-		@include breakpoint($sm){
-			right: auto;
-			left: 0;
-			width: 100%;
-		}
+		@include breakpoint($lg) {
+			position: absolute;
+			top: -44px;
+			right: 0;			
+			display: flex;
+		}		
+		// @include breakpoint($sm){
+		// 	right: auto;
+		// 	left: 0;
+		// 	width: 100%;
+		// }
 		.ass {
 			color: #3B63C4;
 			font-weight: 500;
@@ -236,15 +239,17 @@
 			padding-top: 22px;
 		}
 	}
-	.dataInfoSet {
-		height: 55px;
+	.dataInfoSet {		
 		@include dataInfoSet();
-		align-items: flex-end;
-		margin-top: -18px;
-		margin-bottom: 60px;
-		.type2 {
-			margin-top: -21px;
-		}
+		@include breakpoint($lg){
+			height: 55px;			
+			align-items: flex-end;
+			margin-top: -18px;
+			margin-bottom: 60px;
+			.type2 {
+				margin-top: -21px;
+			}
+		}		
 	}
 	.down-set {	//다중 첨부파일		
 		margin-bottom: 20px;		
@@ -336,6 +341,9 @@
 				}
 			}
 		}
+		& + .view {
+			margin-top: -20px;
+		}
 	}
 	.down {
 		//border-top: 2px solid #000;
@@ -368,6 +376,23 @@
 		border-top: none;
 		border-left: none;
 		border-right: none;
+		dt {
+			border-right: none;
+			background-color: transparent;
+			padding: 0 10px;
+		}
+		dd {
+			position: relative;
+			&::before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 30%;
+				width: 1px;
+				height: 42%;
+				background: #E8EBED;
+			}			
+		}
 		& + .dbdata {
 			padding-top: 0;
 		}

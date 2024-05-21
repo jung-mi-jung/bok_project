@@ -455,7 +455,7 @@
 				content: "";
 				display: inline-block;
 				background-color: #e2e2e2;
-				width: calc(100% - 45px);
+				width: calc(100% - 75px);
 				height: 1px;
 				position: absolute;
 				top: 50%;
@@ -512,7 +512,7 @@
 		h3 {
 			#content & {
 				&::before {
-					width: calc(100% - 55px);
+					width: calc(100% - 74px);
 				}
 			}			
 		}

@@ -191,9 +191,12 @@ p.subject {
 				width:100%;
 			}
 		}
-		&.imgType4{
+		&.imgType4 {
 			img {
 				width: 45%;
+				@include breakpoint($sm) {
+					width: auto;
+				}
 			}
 		}
 		p{

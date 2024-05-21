@@ -306,7 +306,9 @@ body.gnbOver {
 	.navigation {
 		.sub-_visual {
 			div {
-				padding-top: 44px;
+				@include breakpoint($lg){
+					padding-top: 44px;
+				}		
 				h1 {
 					font-weight: 600;
 				}
@@ -318,16 +320,18 @@ body.gnbOver {
 	}
 	.bd-view {		
 		@include breakpoint($lg){
-			//margin-top: -156px;
 			margin-top: -165px;
 		}
 		.subject {
-			//width: 100%;
-			width: calc(100% - 312px);
-			//@include ellipsis();
-			margin-bottom: 0 !important;
-			height: 80px;
-			overflow: hidden;
+			@include breakpoint($lg){
+				width: calc(100% - 312px);
+				height: 80px;
+				overflow: hidden;
+			}
+			margin-bottom: 0 !important;			
+			@include breakpoint($sm){
+				width: 100%;
+			}
 		}
 		.dataInfoSet .keyword a {
 			background-color: #fff;

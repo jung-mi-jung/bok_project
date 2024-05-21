@@ -163,10 +163,6 @@
 			}
 			.date {
 				color: #767676;
-
-				position: absolute;
-				top: 50%;
-				right: 0;
 			}
 			.ico-reply-ing {
 				color: $red;
@@ -425,85 +421,85 @@
 	}
 }
 
-// (법규)
-/*.bdLine {
-	clear: both;
-	> ul{
-		border-top: 2px solid #222;
-		> li {
-			border-bottom:1px solid #ddd; 
-			padding:10px 0;
-			&.nofile{
-				text-align:center;
-			}
-			.col {
-				padding:0 10px;
-				min-height:27px;
-				&.descinfo>div span {
-					line-height:20px; 
-					text-indent:-22px;
-					padding-left:22px;
-					&.txts{
-						text-indent:0;
-						padding-left:0; 
-						margin-right:15px;font-weight:600;
-						color:#757575;
-					}
-				}
-			}
-		}	
-	}
-	.row {
-		.row {
-			margin-left: 0;
-			margin-right: 0;
-			margin-top: 10px;
-			display: block;
-			float: left;
-			width: 100%;
-		}
-	}
-	.fileLink1 {
-		text-align: right;
-		.fileType {
-			margin-right: 15px;
-			font-size: 16px;
-			&:before {
-				@include font-ico-outline('\e0ee'); //e032
-				margin-right: 5px;
-				font-size: 19px;
-			}
-		}
-		.fileView:before {
-			@include font-ico-outline('\e8b6');
-			margin-right: 3px;
-			font-size: 19px;
-		}
-	}
-	&.type4{
-		>ul>li{
-			min-height:90px;
-			@include breakpoint($sm){
-				min-height: auto;
-			}
-			&.style{
-				.row{
-					padding-top:25px;
-				}
-			}
-		}
-		.serviceL{
-			text-align:right;
-		}
-	}
+// (법규) 충돌 삭제
+// .bdLine {
+// 	clear: both;
+// 	> ul{
+// 		border-top: 2px solid #222;
+// 		> li {
+// 			border-bottom:1px solid #ddd; 
+// 			padding:10px 0;
+// 			&.nofile{
+// 				text-align:center;
+// 			}
+// 			.col {
+// 				padding:0 10px;
+// 				min-height:27px;
+// 				&.descinfo>div span {
+// 					line-height:20px; 
+// 					text-indent:-22px;
+// 					padding-left:22px;
+// 					&.txts{
+// 						text-indent:0;
+// 						padding-left:0; 
+// 						margin-right:15px;font-weight:600;
+// 						color:#757575;
+// 					}
+// 				}
+// 			}
+// 		}	
+// 	}
+// 	.row {
+// 		.row {
+// 			margin-left: 0;
+// 			margin-right: 0;
+// 			margin-top: 10px;
+// 			display: block;
+// 			float: left;
+// 			width: 100%;
+// 		}
+// 	}
+// 	.fileLink1 {
+// 		text-align: right;
+// 		.fileType {
+// 			margin-right: 15px;
+// 			font-size: 16px;
+// 			&:before {
+// 				@include font-ico-outline('\e0ee'); //e032
+// 				margin-right: 5px;
+// 				font-size: 19px;
+// 			}
+// 		}
+// 		.fileView:before {
+// 			@include font-ico-outline('\e8b6');
+// 			margin-right: 3px;
+// 			font-size: 19px;
+// 		}
+// 	}
+// 	&.type4{
+// 		>ul>li{
+// 			min-height:90px;
+// 			@include breakpoint($sm){
+// 				min-height: auto;
+// 			}
+// 			&.style{
+// 				.row{
+// 					padding-top:25px;
+// 				}
+// 			}
+// 		}
+// 		.serviceL{
+// 			text-align:right;
+// 		}
+// 	}
 
-	.dataInfo1 .fs_date {
-		color: #000;
-		margin-left: 5px;
-		display: inline-block;
-		font-weight: bold;
-	}
-}*/
+// 	.dataInfo1 .fs_date {
+// 		color: #000;
+// 		margin-left: 5px;
+// 		display: inline-block;
+// 		font-weight: bold;
+// 	}
+// }
 
 // 게시물 카운트
 .count-total {

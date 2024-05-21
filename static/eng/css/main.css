@@ -828,7 +828,6 @@ font-size: 4rem;
 font-style: normal;
 font-weight: 700;
 line-height: normal;
-text-transform: uppercase;
 }
 @media (max-width: 749px) {
 .section1-visual .swiper-slide .s1-t1 {
@@ -842,7 +841,6 @@ font-size: 1.75rem;
 font-style: normal;
 font-weight: 500;
 line-height: normal;
-text-transform: uppercase;
 }
 @media (max-width: 749px) {
 .section1-visual .swiper-slide .s1-t2 {
