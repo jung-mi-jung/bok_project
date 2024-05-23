@@ -875,3 +875,736 @@ mark {
 .tooltip.bottom .tooltip-arrow {top: 0;left: 50%;margin-left: -5px;border-width: 0 5px 5px;border-bottom-color: $color-point; }
 .tooltip.bottom-left .tooltip-arrow {top: 0;right: 5px;margin-top: -5px;border-width: 0 5px 5px;border-bottom-color: $color-point; }
 .tooltip.bottom-right .tooltip-arrow {top: 0;left: 5px;margin-top: -5px;border-width: 0 5px 5px;border-bottom-color: $color-point; }
+
+.docSliderBody{
+	.main-container{
+		margin-top:0;
+	}
+	#content{
+		margin-top:0;
+		max-width: 100%;
+	}
+	#main-container{
+		width: 100%;
+	}
+}
+
+/* 기후변화 */
+.dimmed-open{
+    .dimmed{
+        display:block;
+    }
+}
+.dimmed{
+    display: none;
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+.climateChange{
+	&:before{
+		content:'';
+		position:absolute;
+		left:0;
+		top:0;
+		width: 100%;
+		height: 100%;
+		background:url(/static/portal/img/submain/bg_climateChange.jpg) no-repeat center top;
+	}
+	.video{
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translate(-50%, 0);
+		height: 1080px;
+	}
+	.content{
+        position: relative;
+        width: 100%;
+        .section{
+            position:relative;
+            max-width: 1440px;
+            margin: 0 auto;
+			//height: calc(100vh - 300px);
+            > span {
+                display: block;
+            }
+            > *{
+                transform: translateY(40px);
+                opacity: 0;
+                &.scroll-reveal-active:nth-child(1){
+                    animation: 1s slideUp .2s both
+                }
+                &.scroll-reveal-active:nth-child(2){
+                    animation: 1s slideUp .6s both
+                }
+                &.scroll-reveal-active:nth-child(3){
+                    animation: 1s slideUp 1s both
+                }
+            }
+        }
+    }
+    .sub-slogan{
+        padding:200px 0 640px;
+        text-align: center;
+		height: calc(100vh - 207px) !important;
+        .sub-title {
+            font-size: 72px;
+            font-weight: 700;
+            color: #fff;
+            text-shadow: 8px 8px 16px rgba(0,0,0,0.55);
+        }
+        .sub-text {
+            font-size: 32px;
+            color: #fff;
+            text-shadow: 8px 8px 16px rgba(0, 0, 0, 0.55);
+            margin-top: 48px;
+            display:inline-block;
+            line-height: 2;
+            font-weight: 500;
+            .center {
+                display:block;
+                .bold{
+                    font-weight: 700;
+                }
+            }
+            .right{
+                font-size: 20px;
+                float:right;
+            }
+        }
+		&:after{
+			content: "";
+			height: 297px;
+			background: url(/static/portal/img/submain/bg_climateChange2.png) no-repeat center top;
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			bottom: 0;
+			width: 1920px;
+		}
+    }
+    .sub-hover{
+        z-index:1;
+        text-align: center;
+		padding-bottom: 383px;
+        .title{
+            color: #1A1A1A;
+            text-align: center;
+			font-size: 64px;
+    		font-weight: 700
+        }
+        .hover-link{
+            max-width: 1440px;
+            margin:0 auto;
+			padding-top:98px;
+            ul{
+                position:relative;
+                padding-top: 52px;
+                display:flex;
+                justify-content: center;
+                margin:0 -12px;
+                &:before{
+                    content:'';
+                    width: 100%;
+                    height: 1px;
+                    background: linear-gradient(90deg, rgba(231, 225, 222, 0.00) 0%, #333 50%, rgba(233, 226, 223, 0.00) 100%);
+                    position:absolute;
+                    left:0;
+                    top: 62px;
+                }
+                li{
+                    margin: 0 12px;
+                    width: 220px;
+                    position:relative;
+                    .link{
+                        padding-top: 76px;
+                        position:relative;
+                        display: block;
+                        & > span{
+                            display:block;
+                            font-size: 32px;
+                            font-weight: 700;
+                        }
+                        .txt2{
+                            font-size: 24px;
+                            font-weight: 500;
+                            line-height: 125%;
+                            margin-top: 16px;
+							min-height: 60px
+                        }
+                        &:before{
+                            border-radius: 50%;
+                            background:#000;
+                            position:absolute;
+                            left:50%;
+                            top:0;
+                            transform: translateX(-50%);
+                            content:'';
+                            box-sizing: border-box;
+                            width: 20px;
+                            height: 20px;
+                        }
+						&.active{
+							&:before{
+                                margin-top: -4px;
+                                width: 28px;
+                                height: 28px;
+                                border: 8px solid #109226;
+                                background:transparent;
+                            }
+                            &:after{
+                                content:'';
+                                width: 26px;
+                                height: 28px;
+                                background: url(/static/portal/img/submain/bg_climateChange_active.png) 
+								no-repeat center center;
+                                position: absolute;
+                                left: 50%;
+                                top: 0;
+                                transform: translate(50%, -100%);
+                            }
+							& ~ .layer-popover{
+								display:inline-block;
+							}
+						}
+						&.off{
+							opacity: 0.6;
+							& > span{
+								font-size: 24px;
+							}
+							.txt2{
+								font-size: 18px;
+							}
+						}
+                    }
+                }
+            }
+        }
+        .layer-popover{
+            padding: 44px 48px !important;
+            text-align: left;
+            display: none;
+            background: #fff;
+            position: absolute;
+            left: 50%;
+            top: 100%;
+            transform: translate(-50%, 20px);
+            box-shadow: 8px 8px 16px 0px rgba(0, 0, 0, 0.25);
+            .title{
+                color: #333;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 150%; 
+            }
+            .desc{
+                width: 413px;
+                display: block;
+                margin-top: 16px;
+                font-size: 24px;
+                word-break: break-all;
+                a{
+                    color:  #005596;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+    .sub-bank{
+		padding: 160px 0;
+        .title{
+            color: #fff;
+            font-size: 56px;
+			font-weight: 700;
+			line-height: 1.25;
+        }
+        .desc{
+			max-width: 540px;
+            margin-top: 64px;
+            span{
+                display: block;
+                color: #FFF;
+            }
+            .txt1{
+                font-size: 32px;
+                font-weight: 700;
+				line-height: 1.25;
+				em{
+					color:#56EF71;
+				}
+            }
+            .txt2{
+                margin-top: 40px;
+                font-size: 18px;
+                font-weight: 500;
+				word-break: break-all;
+            }
+        }
+        .more{
+			display: inline-block;
+            margin-top: 96px;
+            border-bottom: 1px solid #fff;
+            color:#fff;
+			opacity: 0.6;
+        }
+		&:after{
+			content: "";
+			position: absolute;
+			right: -120px;
+			top: 355px;
+			background: url(/static/portal/img/submain/bg_climateChange_section3.png) no-repeat center center;
+			width: 942px;
+			height: 514px;
+			animation: 1s slideUp 1.6s both;
+		}
+    }
+    .sub-agenda{
+        padding: 132px 0 ;
+        .title{
+            span{
+                display:block;
+                color:#fff;
+                font-weight: 700;
+                font-size: 36px;
+            }
+            .txt2{
+                font-size: 56px;
+                i{
+                    font-weight: 300;
+                }
+            }
+        }
+		.half{
+			display:flex;
+			margin-top: 56px;
+		}
+        .imgs{
+            min-width: fit-content;
+        }
+        .link{
+			margin-left: 170px;
+            ul{
+				display: flex;
+				flex-flow: column;
+				justify-content: space-around;
+				height: 100%;
+                li{
+					position:relative;
+					a:hover > .more  {
+						width: 65px;
+						transition-delay: 0.1s;
+						&:before{
+							width: 20px;
+							transition-delay: 0.3s;
+							background-color: #0BFD7A;
+						}
+					}
+                }
+            }
+            .txt1{
+				display:block;
+                color: #0ec965;
+                font-size: 24px;
+                font-weight: 700;
+            }
+            .txt2{
+				display:block;
+                padding: 18px 0 0;
+                color:#fff;
+                font-size: 18px;
+                font-weight: 500;
+				word-break: break-all;
+            }
+            .more{
+				width: 0;
+				display: block;
+				height: 2px;
+				position: relative;
+				transition: all 0.2s;
+				font-size:0;
+				background-color: #0BFD7A;
+				position:absolute;
+				left:calc(100% - 65px);
+				top:16px;
+				&:before{
+					content: "";
+					display: block;
+					height: 2px;
+					position: absolute;
+					top: 0;
+					right: 0;
+					transition: all 0.2s;
+					width: 0;
+					transform: rotate(40deg);
+					background-color: #0BFD7A;
+					transform-origin: right bottom;
+				}
+            }
+        }
+    }
+    .sub-org{
+        max-width: 1440px;
+        margin: 0 auto;;
+        padding: 132px 0 ;
+        .title{
+            color: #fff;
+			font-size: 56px;
+    		font-weight: 700
+        }
+        .list_year{
+            margin-top: 88px;
+            display:flex;
+            border-top: 1px solid rgba(255, 255, 255, 0.30);
+            li{
+                padding-top: 48px;
+                text-shadow: 8px 8px 16px #000;
+                position: relative;
+                flex:1;
+				margin: 0 24px;
+                &:before{
+                    content:'';
+                    width: 15px;
+                    height: 15px;
+                    background: #d9d9d9;
+                    position:absolute;
+                    left:0;
+                    top:-7px;;
+                    border-radius: 50%;
+                }
+                span{
+                    display:block;
+                }
+                .year{
+                    color: #0BFD7A;
+                    font-size: 40px;
+                    font-weight: 700;
+                    line-height: 150%;
+                    i{
+                        font-weight: 300;
+                        color:#fff;
+                        display: inline-block;
+                        margin-left: 24px;
+                    }
+                }
+                .desc{
+                    margin-top: 20px;
+                    color: #FFF;
+                    font-size: 18px;
+                    font-weight: 500;
+                    line-height: 150%;
+                    i{
+                        color: #56EF71;
+                    }
+                    .bold{
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+        .imgs{
+            margin-top: 50px;
+            padding: 46px;
+			border-radius: 16px;
+			background: rgba(38, 202, 153, 0.50);
+			backdrop-filter: blur(6px);
+            text-align:center;
+        }
+    }
+    .sub-roaddmap{
+        padding: 132px 0;
+		display:flex;
+        .title{
+            color: #1A1A1A;
+			font-size: 32px;
+    		font-weight: 700;
+			em{
+				font-size: 56px;
+			}
+        }
+        table{
+			border-collapse: separate;
+    		border-spacing: 8px;
+        }
+        th, td{
+            position:relative;
+            padding: 8px;
+            color:#fff;
+			border-radius: 8px;
+            &.center{
+                text-align: center;
+            }
+        }
+		th{
+			background: rgba(35, 92, 103, 0.90);
+		}
+        td{
+            background: rgba(52, 138, 112,0.8);
+			&.center{
+				background: linear-gradient(0deg, #267C7C 0%, #267C7C 100%), linear-gradient(147deg, #26886B -27.4%, #1B6B5D 121.3%);
+			}
+        }
+    }
+    .sub-news{
+        padding: 132px 0 194px;
+        .inner{
+            position:relative;
+            padding: 48px 56px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 64px 32px -24px rgba(0, 0, 0, 0.60);
+            background:url(/static/portal/img/submain/bg_climateChange_news.png) no-repeat center center;
+            min-height: 400px;
+            .title{
+                color: #fff;
+                font-size: 48px;
+            }
+            .more{
+                position:absolute;
+                right:56px;
+                top: 48px;
+                width:48px;
+                height:48px;
+                border-radius: 50%;
+                border: 1px solid #fff;
+                &:before, &:after{
+                    content:'';
+                    background:#fff;
+                    width: 13px;
+                    height: 2px;
+                    position:absolute;
+                    left:50%;
+                    top:50%;
+                    transform: translate(-50%,-50%);
+                }
+                &:after{
+                    transform: translate(-50%,-50%) rotate(90deg);
+                }
+            }
+            .lists{
+                margin: 64px -32px 0;
+                display:flex;
+                li{
+                    padding: 0 32px;
+                    flex:1;
+                    width: 25%;
+                    .category{
+                        float: left;
+                        color: #0BFD7A;
+                        font-size: 16px;
+                        font-weight: 700;
+                    }
+                    .date{
+                        float: right;
+                        color: #fff;
+                        font-size: 16px;
+                        font-weight: 500;
+                    }
+                    .desc{
+                        clear: both;
+                        display:block;
+                        margin-top: 32px;
+                        color: #fff;
+                        font-size: 18px;
+                        font-weight: 500;
+                        word-break: break-all;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// .docSlider{
+// 	overflow: hidden;
+//     width: 100vw;
+//     height: 100vh;
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+// 	&-inner {
+// 		width: inherit;
+// 		height: inherit;
+// 		position: fixed;
+// 		top: 0;
+// 		left: 0;
+// 	}
+// 	&-page {
+// 		height: inherit;
+// 		width: inherit;
+// 		overflow: auto;
+// 		position: absolute;
+// 		overflow-scrolling: touch;
+// 		outline: 0;
+// 	}
+// 	&-pager {
+// 		position: fixed;
+// 		z-index: 100;
+// 		top: 50%;
+// 		left: 30px;
+// 		transform: translateY(-50%)
+// 	}
+// 	&-button {
+// 		height: 12px;
+// 		width: 12px;
+// 		border-radius: 50%;
+// 		cursor: pointer;
+// 		display: block;
+// 		margin: 15px 0;
+// 		background-color: #fff;
+// 		appearance: none;
+// 		border: none;
+// 		box-sizing: border-box;
+// 		position: relative;
+// 		transition: all .5s;
+// 		&.selected {
+// 			background-color: #119891;
+// 			&:after {
+// 				opacity: 1;
+// 				width: 20px;
+// 				height: 20px;
+// 			}
+// 		}
+// 		&:active {
+// 			outline: 0;
+// 		}
+// 	}
+// }
+
+
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(60%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.img-cont{
+	&.left{
+		.imgs{
+			margin-right: 24px;
+		}
+	}
+	&.right{
+		flex-flow: row-reverse;
+		.imgs{
+			margin-left: 24px;
+		}
+	}
+	&.left, &.right{
+		display:flex;
+		@include breakpoint($smd){
+			display:block;
+			.imgs{
+				margin:0;
+			}
+		}
+	}
+	&.fit{
+		.imgs{
+			min-width: fit-content;
+		}
+	}
+	.imgs{
+		min-width: 400px;
+		@include breakpoint($smd){
+			text-align: center;
+		}
+	}
+	h4{
+		padding: 16px 0 24px;
+    	margin: 0 !important;
+	}
+	p{
+		margin-bottom:0;
+		word-break: break-all;
+		& ~ .related-report{
+			margin-top: 32px;
+		}
+		& ~ .btns{
+			margin-top: 16px;
+		}
+	}
+	& ~ .img-cont{
+		margin-top: 48px;
+	}
+	& ~ .table{
+		margin-top: 40px;
+	}
+	table td{
+		padding: 16px;
+		word-break: keep-all;
+		strong{
+			color: $black;
+		}
+	}
+	.refer {
+		display: block;
+		position: relative;
+		margin-top: 16px;
+		color: #2F4F9D;
+		font-size: 14px;
+	}
+	.img-list{
+		margin-top: 24px;
+		padding:24px;
+		background:#fafafa;
+		.item{
+			display:flex;
+			@include breakpoint($smd){
+				flex-flow: column;
+				& ~ .item{
+					margin-top: 24px;
+				}
+			}
+			& ~ .item{
+				margin-top: 24px;
+			}
+			img{
+				max-width: 200px;
+				margin-right: 24px;
+			}
+			.bu-dot{
+				padding-top: 8px;
+			}
+		}
+	}
+}
+
+.related-report{
+	.title{
+		padding-left: 24px;
+		background: url(/static/portal/img/ico/ico_report.png) no-repeat left center;
+		color: #1a1a1a;
+		font-size: 16px;
+		font-weight: 500;
+		& ~ .lists{
+			margin-top: 4px;
+		}
+	}
+	.lists{
+		padding: 8px 12px;
+		border-radius: 4px;
+		background: #fafafa;
+		a{
+			font-size: 16px;
+			color:#4D4D4D;	
+			text-decoration: underline;
+		}
+		ol{
+			list-style-type: decimal;
+			margin-left: initial;
+			padding-left: 24px;
+		}
+	}
+}
+
