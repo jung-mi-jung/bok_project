@@ -16685,4 +16685,667 @@ margin-top: -5px;
 border-width: 0 5px 5px;
 border-bottom-color: #005596;
 }
+
+.docSliderBody .main-container {
+margin-top: 0;
+}
+.docSliderBody #content {
+margin-top: 0;
+max-width: 100%;
+}
+.docSliderBody #main-container {
+width: 100%;
+}
+
+/* 기후변화 */
+.dimmed-open .dimmed {
+display: block;
+}
+
+.dimmed {
+display: none;
+background: rgba(0, 0, 0, 0.7);
+position: fixed;
+width: 100%;
+z-index: 1;
+top: 0;
+left: 0;
+height: 100%;
+}
+
+.climateChange:before {
+content: "";
+position: absolute;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background: url(/static/portal/img/submain/bg_climateChange.jpg) no-repeat center top;
+}
+.climateChange .video {
+position: absolute;
+top: 0;
+left: 50%;
+transform: translate(-50%, 0);
+height: 1080px;
+}
+.climateChange .content {
+position: relative;
+width: 100%;
+}
+.climateChange .content .section {
+position: relative;
+max-width: 1440px;
+margin: 0 auto;
+}
+.climateChange .content .section > span {
+display: block;
+}
+.climateChange .content .section > * {
+transform: translateY(40px);
+opacity: 0;
+}
+.climateChange .content .section > *.scroll-reveal-active:nth-child(1) {
+animation: 1s slideUp 0.2s both;
+}
+.climateChange .content .section > *.scroll-reveal-active:nth-child(2) {
+animation: 1s slideUp 0.6s both;
+}
+.climateChange .content .section > *.scroll-reveal-active:nth-child(3) {
+animation: 1s slideUp 1s both;
+}
+.climateChange .sub-slogan {
+padding: 200px 0 640px;
+text-align: center;
+height: calc(100vh - 207px) !important;
+}
+.climateChange .sub-slogan .sub-title {
+font-size: 72px;
+font-weight: 700;
+color: #fff;
+text-shadow: 8px 8px 16px rgba(0, 0, 0, 0.55);
+}
+.climateChange .sub-slogan .sub-text {
+font-size: 32px;
+color: #fff;
+text-shadow: 8px 8px 16px rgba(0, 0, 0, 0.55);
+margin-top: 48px;
+display: inline-block;
+line-height: 2;
+font-weight: 500;
+}
+.climateChange .sub-slogan .sub-text .center {
+display: block;
+}
+.climateChange .sub-slogan .sub-text .center .bold {
+font-weight: 700;
+}
+.climateChange .sub-slogan .sub-text .right {
+font-size: 20px;
+float: right;
+}
+.climateChange .sub-slogan:after {
+content: "";
+height: 297px;
+background: url(/static/portal/img/submain/bg_climateChange2.png) no-repeat center top;
+position: absolute;
+left: 50%;
+transform: translateX(-50%);
+bottom: 0;
+width: 1920px;
+}
+.climateChange .sub-hover {
+z-index: 1;
+text-align: center;
+padding-bottom: 383px;
+}
+.climateChange .sub-hover .title {
+color: #1A1A1A;
+text-align: center;
+font-size: 64px;
+font-weight: 700;
+}
+.climateChange .sub-hover .hover-link {
+max-width: 1440px;
+margin: 0 auto;
+padding-top: 98px;
+}
+.climateChange .sub-hover .hover-link ul {
+position: relative;
+padding-top: 52px;
+display: flex;
+justify-content: center;
+margin: 0 -12px;
+}
+.climateChange .sub-hover .hover-link ul:before {
+content: "";
+width: 100%;
+height: 1px;
+background: linear-gradient(90deg, rgba(231, 225, 222, 0) 0%, #333 50%, rgba(233, 226, 223, 0) 100%);
+position: absolute;
+left: 0;
+top: 62px;
+}
+.climateChange .sub-hover .hover-link ul li {
+margin: 0 12px;
+width: 220px;
+position: relative;
+}
+.climateChange .sub-hover .hover-link ul li .link {
+padding-top: 76px;
+position: relative;
+display: block;
+}
+.climateChange .sub-hover .hover-link ul li .link > span {
+display: block;
+font-size: 32px;
+font-weight: 700;
+}
+.climateChange .sub-hover .hover-link ul li .link .txt2 {
+font-size: 24px;
+font-weight: 500;
+line-height: 125%;
+margin-top: 16px;
+min-height: 60px;
+}
+.climateChange .sub-hover .hover-link ul li .link:before {
+border-radius: 50%;
+background: #000;
+position: absolute;
+left: 50%;
+top: 0;
+transform: translateX(-50%);
+content: "";
+box-sizing: border-box;
+width: 20px;
+height: 20px;
+}
+.climateChange .sub-hover .hover-link ul li .link.active:before {
+margin-top: -4px;
+width: 28px;
+height: 28px;
+border: 8px solid #109226;
+background: transparent;
+}
+.climateChange .sub-hover .hover-link ul li .link.active:after {
+content: "";
+width: 26px;
+height: 28px;
+background: url(/static/portal/img/submain/bg_climateChange_active.png) no-repeat center center;
+position: absolute;
+left: 50%;
+top: 0;
+transform: translate(50%, -100%);
+}
+.climateChange .sub-hover .hover-link ul li .link.active ~ .layer-popover {
+display: inline-block;
+}
+.climateChange .sub-hover .hover-link ul li .link.off {
+opacity: 0.6;
+}
+.climateChange .sub-hover .hover-link ul li .link.off > span {
+font-size: 24px;
+}
+.climateChange .sub-hover .hover-link ul li .link.off .txt2 {
+font-size: 18px;
+}
+.climateChange .sub-hover .layer-popover {
+padding: 44px 48px !important;
+text-align: left;
+display: none;
+background: #fff;
+position: absolute;
+left: 50%;
+top: 100%;
+transform: translate(-50%, 20px);
+box-shadow: 8px 8px 16px 0px rgba(0, 0, 0, 0.25);
+}
+.climateChange .sub-hover .layer-popover .title {
+color: #333;
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+line-height: 150%;
+}
+.climateChange .sub-hover .layer-popover .desc {
+width: 413px;
+display: block;
+margin-top: 16px;
+font-size: 24px;
+word-break: break-all;
+}
+.climateChange .sub-hover .layer-popover .desc a {
+color: #005596;
+font-weight: 500;
+}
+.climateChange .sub-bank {
+padding: 160px 0;
+}
+.climateChange .sub-bank .title {
+color: #fff;
+font-size: 56px;
+font-weight: 700;
+line-height: 1.25;
+}
+.climateChange .sub-bank .desc {
+max-width: 540px;
+margin-top: 64px;
+}
+.climateChange .sub-bank .desc span {
+display: block;
+color: #FFF;
+}
+.climateChange .sub-bank .desc .txt1 {
+font-size: 32px;
+font-weight: 700;
+line-height: 1.25;
+}
+.climateChange .sub-bank .desc .txt1 em {
+color: #56EF71;
+}
+.climateChange .sub-bank .desc .txt2 {
+margin-top: 40px;
+font-size: 18px;
+font-weight: 500;
+word-break: break-all;
+}
+.climateChange .sub-bank .more {
+display: inline-block;
+margin-top: 96px;
+border-bottom: 1px solid #fff;
+color: #fff;
+opacity: 0.6;
+}
+.climateChange .sub-bank:after {
+content: "";
+position: absolute;
+right: -120px;
+top: 355px;
+background: url(/static/portal/img/submain/bg_climateChange_section3.png) no-repeat center center;
+width: 942px;
+height: 514px;
+animation: 1s slideUp 1.6s both;
+}
+.climateChange .sub-agenda {
+padding: 132px 0;
+}
+.climateChange .sub-agenda .title span {
+display: block;
+color: #fff;
+font-weight: 700;
+font-size: 36px;
+}
+.climateChange .sub-agenda .title .txt2 {
+font-size: 56px;
+}
+.climateChange .sub-agenda .title .txt2 i {
+font-weight: 300;
+}
+.climateChange .sub-agenda .half {
+display: flex;
+margin-top: 56px;
+}
+.climateChange .sub-agenda .imgs {
+min-width: -moz-fit-content;
+min-width: fit-content;
+}
+.climateChange .sub-agenda .link {
+margin-left: 170px;
+}
+.climateChange .sub-agenda .link ul {
+display: flex;
+flex-flow: column;
+justify-content: space-around;
+height: 100%;
+}
+.climateChange .sub-agenda .link ul li {
+position: relative;
+}
+.climateChange .sub-agenda .link ul li a:hover > .more {
+width: 65px;
+transition-delay: 0.1s;
+}
+.climateChange .sub-agenda .link ul li a:hover > .more:before {
+width: 20px;
+transition-delay: 0.3s;
+background-color: #0BFD7A;
+}
+.climateChange .sub-agenda .link .txt1 {
+display: block;
+color: #0ec965;
+font-size: 24px;
+font-weight: 700;
+}
+.climateChange .sub-agenda .link .txt2 {
+display: block;
+padding: 18px 0 0;
+color: #fff;
+font-size: 18px;
+font-weight: 500;
+word-break: break-all;
+}
+.climateChange .sub-agenda .link .more {
+width: 0;
+display: block;
+height: 2px;
+position: relative;
+transition: all 0.2s;
+font-size: 0;
+background-color: #0BFD7A;
+position: absolute;
+left: calc(100% - 65px);
+top: 16px;
+}
+.climateChange .sub-agenda .link .more:before {
+content: "";
+display: block;
+height: 2px;
+position: absolute;
+top: 0;
+right: 0;
+transition: all 0.2s;
+width: 0;
+transform: rotate(40deg);
+background-color: #0BFD7A;
+transform-origin: right bottom;
+}
+.climateChange .sub-org {
+max-width: 1440px;
+margin: 0 auto;
+padding: 132px 0;
+}
+.climateChange .sub-org .title {
+color: #fff;
+font-size: 56px;
+font-weight: 700;
+}
+.climateChange .sub-org .list_year {
+margin-top: 88px;
+display: flex;
+border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+.climateChange .sub-org .list_year li {
+padding-top: 48px;
+text-shadow: 8px 8px 16px #000;
+position: relative;
+flex: 1;
+margin: 0 24px;
+}
+.climateChange .sub-org .list_year li:before {
+content: "";
+width: 15px;
+height: 15px;
+background: #d9d9d9;
+position: absolute;
+left: 0;
+top: -7px;
+border-radius: 50%;
+}
+.climateChange .sub-org .list_year li span {
+display: block;
+}
+.climateChange .sub-org .list_year li .year {
+color: #0BFD7A;
+font-size: 40px;
+font-weight: 700;
+line-height: 150%;
+}
+.climateChange .sub-org .list_year li .year i {
+font-weight: 300;
+color: #fff;
+display: inline-block;
+margin-left: 24px;
+}
+.climateChange .sub-org .list_year li .desc {
+margin-top: 20px;
+color: #FFF;
+font-size: 18px;
+font-weight: 500;
+line-height: 150%;
+}
+.climateChange .sub-org .list_year li .desc i {
+color: #56EF71;
+}
+.climateChange .sub-org .list_year li .desc .bold {
+font-weight: 700;
+}
+.climateChange .sub-org .imgs {
+margin-top: 50px;
+padding: 46px;
+border-radius: 16px;
+background: rgba(38, 202, 153, 0.5);
+-webkit-backdrop-filter: blur(6px);
+		backdrop-filter: blur(6px);
+text-align: center;
+}
+.climateChange .sub-roaddmap {
+padding: 132px 0;
+display: flex;
+}
+.climateChange .sub-roaddmap .title {
+color: #1A1A1A;
+font-size: 32px;
+font-weight: 700;
+}
+.climateChange .sub-roaddmap .title em {
+font-size: 56px;
+}
+.climateChange .sub-roaddmap table {
+border-collapse: separate;
+border-spacing: 8px;
+}
+.climateChange .sub-roaddmap th, .climateChange .sub-roaddmap td {
+position: relative;
+padding: 8px;
+color: #fff;
+border-radius: 8px;
+}
+.climateChange .sub-roaddmap th.center, .climateChange .sub-roaddmap td.center {
+text-align: center;
+}
+.climateChange .sub-roaddmap th {
+background: rgba(35, 92, 103, 0.9);
+}
+.climateChange .sub-roaddmap td {
+background: rgba(52, 138, 112, 0.8);
+}
+.climateChange .sub-roaddmap td.center {
+background: linear-gradient(0deg, #267C7C 0%, #267C7C 100%), linear-gradient(147deg, #26886B -27.4%, #1B6B5D 121.3%);
+}
+.climateChange .sub-news {
+padding: 132px 0 194px;
+}
+.climateChange .sub-news .inner {
+position: relative;
+padding: 48px 56px;
+border-radius: 8px;
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 64px 32px -24px rgba(0, 0, 0, 0.6);
+background: url(/static/portal/img/submain/bg_climateChange_news.png) no-repeat center center;
+min-height: 400px;
+}
+.climateChange .sub-news .inner .title {
+color: #fff;
+font-size: 48px;
+}
+.climateChange .sub-news .inner .more {
+position: absolute;
+right: 56px;
+top: 48px;
+width: 48px;
+height: 48px;
+border-radius: 50%;
+border: 1px solid #fff;
+}
+.climateChange .sub-news .inner .more:before, .climateChange .sub-news .inner .more:after {
+content: "";
+background: #fff;
+width: 13px;
+height: 2px;
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+}
+.climateChange .sub-news .inner .more:after {
+transform: translate(-50%, -50%) rotate(90deg);
+}
+.climateChange .sub-news .inner .lists {
+margin: 64px -32px 0;
+display: flex;
+}
+.climateChange .sub-news .inner .lists li {
+padding: 0 32px;
+flex: 1;
+width: 25%;
+}
+.climateChange .sub-news .inner .lists li .category {
+float: left;
+color: #0BFD7A;
+font-size: 16px;
+font-weight: 700;
+}
+.climateChange .sub-news .inner .lists li .date {
+float: right;
+color: #fff;
+font-size: 16px;
+font-weight: 500;
+}
+.climateChange .sub-news .inner .lists li .desc {
+clear: both;
+display: block;
+margin-top: 32px;
+color: #fff;
+font-size: 18px;
+font-weight: 500;
+word-break: break-all;
+}
+
+@keyframes slideUp {
+0% {
+transform: translateY(60%);
+opacity: 0;
+}
+100% {
+transform: translateY(0);
+opacity: 1;
+}
+}
+.img-cont.left .imgs {
+margin-right: 24px;
+}
+.img-cont.right {
+flex-flow: row-reverse;
+}
+.img-cont.right .imgs {
+margin-left: 24px;
+}
+.img-cont.left, .img-cont.right {
+display: flex;
+}
+@media (max-width: 1199px) {
+.img-cont.left, .img-cont.right {
+display: block;
+}
+.img-cont.left .imgs, .img-cont.right .imgs {
+margin: 0;
+}
+}
+.img-cont.fit .imgs {
+min-width: -moz-fit-content;
+min-width: fit-content;
+}
+.img-cont .imgs {
+min-width: 400px;
+}
+@media (max-width: 1199px) {
+.img-cont .imgs {
+text-align: center;
+}
+}
+.img-cont h4 {
+padding: 16px 0 24px;
+margin: 0 !important;
+}
+.img-cont p {
+margin-bottom: 0;
+word-break: break-all;
+}
+.img-cont p ~ .related-report {
+margin-top: 32px;
+}
+.img-cont p ~ .btns {
+margin-top: 16px;
+}
+.img-cont ~ .img-cont {
+margin-top: 48px;
+}
+.img-cont ~ .table {
+margin-top: 40px;
+}
+.img-cont table td {
+padding: 16px;
+word-break: keep-all;
+}
+.img-cont table td strong {
+color: #000E33;
+}
+.img-cont .refer {
+display: block;
+position: relative;
+margin-top: 16px;
+color: #2F4F9D;
+font-size: 14px;
+}
+.img-cont .img-list {
+margin-top: 24px;
+padding: 24px;
+background: #fafafa;
+}
+.img-cont .img-list .item {
+display: flex;
+}
+@media (max-width: 1199px) {
+.img-cont .img-list .item {
+flex-flow: column;
+}
+.img-cont .img-list .item ~ .item {
+margin-top: 24px;
+}
+}
+.img-cont .img-list .item ~ .item {
+margin-top: 24px;
+}
+.img-cont .img-list .item img {
+max-width: 200px;
+margin-right: 24px;
+}
+.img-cont .img-list .item .bu-dot {
+padding-top: 8px;
+}
+
+.related-report .title {
+padding-left: 24px;
+background: url(/static/portal/img/ico/ico_report.png) no-repeat left center;
+color: #1a1a1a;
+font-size: 16px;
+font-weight: 500;
+}
+.related-report .title ~ .lists {
+margin-top: 4px;
+}
+.related-report .lists {
+padding: 8px 12px;
+border-radius: 4px;
+background: #fafafa;
+}
+.related-report .lists a {
+font-size: 16px;
+color: #4D4D4D;
+text-decoration: underline;
+}
+.related-report .lists ol {
+list-style-type: decimal;
+margin-left: initial;
+padding-left: 24px;
+}
 /*# sourceMappingURL=../maps/sub.css.map */
