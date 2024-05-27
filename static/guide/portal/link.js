@@ -375,8 +375,12 @@ $(function () {
 		'201260',
 		'201261',
 
-		//200670 외환거래 질의 신청하기 링크  https://voc.bok.or.kr/erms/qna/agreeConfirm.action?qnaMngBean.category=NODE0000000130&menuNaviId=2272
-		
+	
+		//201172  5.24 수정
+		//201171  권민수 추가
+		//200371 상단 동영상 추가
+
+
     ]
     link.forEach(element => {
         let _s = element.split('/')

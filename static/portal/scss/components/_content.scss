@@ -1417,7 +1417,9 @@ p.subject {
 
 //화폐 > 위조방지장치
 .moneyW{
-	overflow:hidden;margin:3% 0;
+	clear: both;
+	overflow:hidden;
+	margin:3% 0;
 	.moneyImg{
 		position:relative;
 		margin:1% 4%;

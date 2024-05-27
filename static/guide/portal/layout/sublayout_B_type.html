@@ -851,4 +851,59 @@
 		</li>
 	</ul>
 
+
+
+	<div class="">
+
+
+  <div class="button-container">
+    <button>Button 1</button>
+    <button>Button 2</button>
+    <button>Button 3</button>
+    <button>Button 4</button>
+    <button>Button 5</button>
+  </div>
+
+
+		<style>
+			.button-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.button-container button {
+  border: none;
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+}
+		</style>
+
+
+<script>
+// Get the container and buttons
+const container = document.querySelector('.button-container');
+const buttons = container.querySelectorAll('button');
+
+// Calculate the padding value
+const paddingValue = (container.offsetWidth - buttons[0].offsetWidth * buttons.length) / (buttons.length - 1) / 2;
+
+// Apply padding to buttons
+buttons.forEach((button, index) => {
+  if (index === 0) {
+    button.style.paddingRight = paddingValue + 'px';
+  } else if (index === buttons.length - 1) {
+    button.style.paddingLeft = paddingValue + 'px';
+  } else {
+    button.style.padding = `0 ${paddingValue}px`;
+  }
+});
+</script>
+
+
+
+
+	</div>
+
 </div>
