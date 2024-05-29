@@ -787,6 +787,10 @@ $(function() {
 	$(".lnb-nav > ul > li > ul").prev().addClass("bu");
 
 
+	//기존 소스 (게시물)
+	$(".scrollX").attr("tabindex", "0");
+
+
 	//.table thead 없을 경우 처리 (디자인 처리)
 	// $(".table")
 	// 	.not("thead")

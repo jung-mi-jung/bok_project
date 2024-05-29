@@ -175,6 +175,39 @@
 			}
 		}
 	}
+	.bu {
+		padding-left: 0;
+		li {
+			&::marker {
+				content: "";
+				display: none;
+			}
+		}
+		
+	}
+	h2 {
+		margin: 30px 0 10px !important;
+		font-size: rem(25) !important;
+	}
+	.table {
+		width: 100%;
+		&.scrollX {
+			overflow-x: auto;
+			width: 100%;
+			&.table-xg table {
+				min-width: 1400px;
+			}
+		}
+	}
+	[class^=b-].b-go {
+		color: #fff;
+	}
+	.linkBox {
+		padding: 0;
+		ul {
+			padding-left: 0;
+		}
+	}
 }
 
 .view {

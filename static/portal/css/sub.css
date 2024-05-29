@@ -11171,6 +11171,45 @@ position: absolute;
 top: -6px;
 left: 0;
 }
+.dbdata .bu,
+.dbData .bu {
+padding-left: 0;
+}
+.dbdata .bu li::marker,
+.dbData .bu li::marker {
+content: "";
+display: none;
+}
+.dbdata h2,
+.dbData h2 {
+margin: 30px 0 10px !important;
+font-size: 1.5625rem !important;
+}
+.dbdata .table,
+.dbData .table {
+width: 100%;
+}
+.dbdata .table.scrollX,
+.dbData .table.scrollX {
+overflow-x: auto;
+width: 100%;
+}
+.dbdata .table.scrollX.table-xg table,
+.dbData .table.scrollX.table-xg table {
+min-width: 1400px;
+}
+.dbdata [class^=b-].b-go,
+.dbData [class^=b-].b-go {
+color: #fff;
+}
+.dbdata .linkBox,
+.dbData .linkBox {
+padding: 0;
+}
+.dbdata .linkBox ul,
+.dbData .linkBox ul {
+padding-left: 0;
+}
 
 .view .dbData {
 min-height: 250px;

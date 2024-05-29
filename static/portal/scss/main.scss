@@ -265,8 +265,11 @@
 	height: 100%;
 	.swiper-slide {
 		position: relative;
+		//background-size: contain;
 		background-size: cover;
-		//background-attachment: fixed;
+		background-position: 50% 0;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
 		@include breakpoint($mdw){
 			height: 600px;
 		}
