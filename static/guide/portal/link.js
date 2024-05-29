@@ -382,6 +382,12 @@ $(function () {
 		//200371 상단 동영상 추가
 
 
+
+
+		//05.29추가? 지역본부
+		'200899',
+
+
     ]
     link.forEach(element => {
         let _s = element.split('/')
