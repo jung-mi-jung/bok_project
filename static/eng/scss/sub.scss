@@ -373,6 +373,17 @@ mark {
 }
 
 .depart-wrap {
+	position: relative;
+	.depart-go {
+		position: absolute;
+		top: 30px;
+		right: 0;
+		@include breakpoint($sm){
+			margin: 20px 0 30px;
+			position: static;
+			text-align: center;
+		}
+	}
 	h2 {
 		text-align: center;
 		position: relative;

@@ -11,6 +11,9 @@
 		list-style-type: inherit;
 		padding-left: 40px;
 	}
+	li {
+		list-style-type: none;
+	}
 	ol {
 		list-style-type: decimal;
 		margin-left: initial;
@@ -23,6 +26,12 @@
 	a {
 		color: $point;
 		text-decoration: underline;
+	}
+	.table {
+		th, td {
+			border: 1px solid $bd-color;
+			padding: 5px 10px;
+		}
 	}
 
 	//내용 템플릿
@@ -175,6 +184,37 @@
 			}
 		}
 	}
+	.bu {
+		padding-left: 0;
+		li {
+			&::marker {
+				content: "";
+				display: none;
+			}
+		}
+	}
+	.h2 {
+		margin: 30px 0 10px !important;
+		font-size: rem(25) !important;
+	}
+	.table {
+		width: 100%;
+		&.scrollX {
+			overflow-x: auto;
+			&.table-xg table {
+				min-width: 1400px;
+			}
+		}
+	}
+	[class^=b-].b-go {
+		color: #fff;
+	}
+	.linkBox {
+		padding: 0;
+		ul {
+			padding-left: 0;
+		}
+	}
 }
 
 .view {
@@ -193,6 +233,7 @@
 	width: 960px;
 	margin: 0 auto;
 	border-bottom: 0;
+	padding: 0 !important;
 	.view {
 		border-top: 2px solid #222;
 		font-size: rem(16);
@@ -212,6 +253,7 @@
 		}
 		dl {
 			dt {
+				width: 16%;
 				background-color: transparent;
 				border-right: 0;
 			}

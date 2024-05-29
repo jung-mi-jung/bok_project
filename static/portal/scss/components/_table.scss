@@ -116,10 +116,18 @@ table {
 		}
 	}
 	&.type2 {
-		font-size: rem(18);
-		border-top: 2px solid #182252;
+		font-size: rem(18);		
+		@include breakpoint($smd){
+			border-top: 2px solid #182252;
+		}
 		th {
 			padding: 14px 0;
+			@include breakpoint($smd){
+				padding: 8px 0 !important;				
+				&:first-child {
+					border-right: 0 !important;
+				}
+			}
 		}
 		tbody {
 			th {
@@ -314,9 +322,19 @@ table {
 }
 
 
-.pcWin {
-	border: 0px solid #dedede ;
 
+
+.pcWin {
+	border-top: 2px solid #333 ;
+	// td {
+	// 	letter-spacing: -0.5px;
+	// }
+	#bottomDiv {
+		width: 783px;
+		height: 20px;
+		overflow-x: scroll;
+		overflow-y: hidden;
+	}
 	.main_table {
 		border         	: 1px solid $bd-color;
 		border-collapse	: collapse;
@@ -328,68 +346,71 @@ table {
 	}
 	  
 	.main_table td {
-	border           	: 1px solid $bd-color;  
-	overflow 			: hidden;
-	font-size			: 11pt; 
-	border-right		: none;
-	border-top		: none;
-	width				: 120px; 
-	height			: 100px;
+		border           	: 1px solid $bd-color;  
+		overflow 			: hidden;
+		font-size			: 11pt; 
+		border-right		: none;
+		border-top		: none;
+		width				: 120px; 
+		height			: 130px;
+		padding: 0 18px;
 	}
 	.main_table td.textOverDefault {
-	white-space:normal;
-	text-overflow:clip;
+		white-space:normal;
+		text-overflow:clip;
 	}
 	.head_table {
-	border           	: 1px solid $bd-color;
-	background-color	: #627fa4;
-	border-collapse	: collapse;
-	text-align       	: center;
-	color 			: white;
-	font-weight		: 600;
-	table-layout     	: fixed;
-	border-spacing	: 0;
+		border           	: 1px solid $bd-color;
+		background-color	: #F2F6FA;
+		border-collapse	: collapse;
+		text-align       	: center;
+		color 			: $black;
+		font-weight		: 600;
+		table-layout     	: fixed;
+		border-spacing	: 0;
 	}
 	
 	.left_table {
-	border           	: 0 solid $bd-color;
-	width				: 140px;
+		border           	: 0 solid $bd-color;
+		width				: 140px;
 
-	table-layout     	: fixed;
-	border-spacing	: 0;
-	border-right		: none;
-	border-top		: none;
-	/*  margin			: -1px; */
+		table-layout     	: fixed;
+		border-spacing	: 0;
+		border-right		: none;
+		border-top		: none;
+		/*  margin			: -1px; */
 	}
 	  
 	.left_table td {
-	border           	: 1px solid $bd-color;   
-	border-collapse	: collapse; 
-	border-right		: none;
-	border-top		: none;
-	text-align       	: center;
-	table-layout     	: fixed;
-	/*   font-size			: 10pt; */
-	font-weight		: bold; 
+		border           	: 1px solid $bd-color;   
+		border-collapse	: collapse; 
+		border-right		: none;
+		border-top		: none;
+		text-align       	: center;
+		table-layout     	: fixed;
+		/*   font-size			: 10pt; */
+		font-weight		: 400; 
+		background-color: #fafafa;
 	}	  
 	.head_table th {
-	border           	: 1px solid $bd-color;    
-	border-collapse	: collapse;
-	width				: 120px; 
-	height			: 70px;
-	text-align       	: center;
-	table-layout     	: fixed;  
+		border           	: 1px solid $bd-color;    
+		border-collapse	: collapse;
+		width				: 120px; 
+		height			: 70px;
+		text-align       	: center;
+		table-layout     	: fixed;  
+		font-weight: 400;
 	}	
 	.headDivKey {
-	border           	: 1px solid $bd-color; 
-	background-color	: #627fa4;
-	border-collapse	: collapse; 
-	text-align       	: center;
-	color 			: white; 
-	font-weight		: bold;
-	table-layout     	: fixed;
-	border-spacing	: 0px;
-	margin			: -1px;
+		border           	: 1px solid $bd-color; 
+		background-color	: #F2F6FA;
+		border-collapse	: collapse; 
+		text-align       	: center;
+		color 			: $black; 
+		font-weight		: 400;
+		table-layout     	: fixed;
+		border-spacing	: 0px;
+		margin			: -1px;
 	}
 	#rockLeftDiv{ 
 		width:140px;
@@ -397,11 +418,11 @@ table {
 		overflow-x:hidden;
 		border:1px;
 		margin:-1px;
-			border-collapse	: collapse; 
+		border-collapse	: collapse; 
 	}
 	#rockLeftDiv td{ 
 		width:140px;
-		height:100px;
+		height:130px;
 	
 	}	
 	.headDivKey td{

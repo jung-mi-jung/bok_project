@@ -19,7 +19,7 @@ input[type='checkbox'] {
 }
 
 label {
-	display: flex;
+	//display: flex;
 	position: relative;
 }
 //input[type='radio'],
@@ -308,34 +308,60 @@ input {
 	flex-grow: 1;
 	flex-shrink: 0;
 	width: 800px;
+	max-width: 100%;
 	align-items: center;
 	margin: 0 -4px;
+	@include breakpoint($sm){
+		margin: 0;
+		flex-wrap: wrap;
+		justify-content: space-between;		
+	}
 	> * {
 		margin: 0 4px;
 	}
 	input { 
-		width: calc(50% - 140px); 
+		width: calc(50% - 20px); 
+		@include breakpoint($sm){
+			width: calc(50% - 16px);
+		}
 	}
 	select {
 		width: 140px;
+		@include breakpoint($sm){
+			width: 100%;
+			margin-top: 5px;
+		}
 	}
 }
 .tel-set {
-	display: flex;
+	display: flex;	
 	flex-basis: 0;
 	flex-grow: 1;
 	flex-shrink: 0;
 	width: 500px;
 	align-items: center;
 	margin: 0 -4px;
+	@include breakpoint($sm){
+		margin: 0;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		width: 100%;
+	}
 	> * {
 		margin: 0 4px;
 	}
 	select {
 		width: 100px;
+		@include breakpoint($sm){
+			width: 100%;
+			margin-bottom: 5px;
+		}
 	}
 	input {
 		width: calc(50% - 110px);
+		@include breakpoint($sm){
+			width: calc(50% - 16px);
+		}
 	}
 }
 .postSet {
@@ -353,9 +379,9 @@ input {
 .view {
 	dd {
 		label {
-			margin-left: 15px;
-			&:first-child {
-				margin-left: 0;
+			margin-right: 15px;
+			&:last-child {
+				margin-right: 0;
 			}
 		}
 		input[type=checkbox] {

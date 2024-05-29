@@ -1,0 +1,1065 @@
+@charset "UTF-8";
+/* 한국은행 연차보고서 */
+.container.annual-report-container {
+width: calc(100% - 20px);
+}
+.container.annual-report-container div + h2 {
+margin-top: 70px;
+}
+.container.annual-report-container h2 {
+font-weight: 700;
+}
+.container.annual-report-container sup {
+vertical-align: super;
+font-size: initial;
+}
+.container.annual-report-container p {
+font-size: 1.125rem;
+}
+.container.annual-report-container #main-container h2 {
+color: #000E33;
+}
+.container.annual-report-container #main-container h3 {
+color: #26447D;
+}
+.container.annual-report-container #main-container h3 a {
+color: #26447D;
+}
+.container.annual-report-container #main-container h5 {
+padding-left: 0;
+}
+.container.annual-report-container #main-container h5::before {
+display: none;
+}
+@media (max-width: 749px) {
+.container.annual-report-container {
+width: 100%;
+}
+}
+
+.tooltip-btn {
+display: inline-block;
+position: relative;
+}
+.tooltip-btn.active::before {
+content: "";
+position: absolute;
+bottom: -19px;
+right: -5px;
+z-index: 10;
+width: 28px;
+height: 19px;
+background: url(../img/template/img_bubble_arrow@2x.png) 0 0 no-repeat;
+background-size: 28px 19px;
+}
+.tooltip-btn:hover {
+text-decoration: underline;
+text-underline-offset: 4px;
+}
+
+.annual-report-tooltip {
+display: none;
+position: absolute;
+top: 0;
+z-index: 450;
+width: 360px;
+height: auto;
+padding: 24px;
+border-radius: 8px;
+background-color: #143D66;
+box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.1);
+}
+.annual-report-tooltip .tooltip-body {
+font-size: 16px;
+color: #FFFFFF;
+}
+.annual-report-tooltip .tooltip-body p {
+margin-bottom: 0;
+}
+.annual-report-tooltip .tooltip-body a {
+font-size: 16px;
+color: #FFFFFF !important;
+text-decoration: underline;
+text-underline-offset: 2px;
+}
+.annual-report-tooltip .bul-list li {
+position: relative;
+padding-left: 15px;
+}
+.annual-report-tooltip .bul-list li::before {
+content: "";
+position: absolute;
+top: 12px;
+left: 0;
+width: 4px;
+height: 1px;
+background: #FFFFFF;
+}
+.annual-report-tooltip .btn-close-tooltip {
+position: absolute;
+right: 7px;
+top: 6px;
+width: 20px;
+height: 20px;
+}
+.annual-report-tooltip .btn-close-tooltip::before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 20px;
+height: 20px;
+background: url(../img/template/ico_bubble_close@2x.png) 0 0 no-repeat;
+background-size: 20px 20px;
+}
+@media (max-width: 400px) {
+.annual-report-tooltip {
+width: 300px;
+width: calc(100vw - 40px);
+}
+}
+
+.highcharts-legend-item > span {
+overflow: visible !important;
+}
+
+.annual-report-container .summary-area {
+position: relative;
+width: 100%;
+height: 348px;
+margin-top: -36px;
+background-color: #E6EEF5;
+}
+.annual-report-container .summary-area::before {
+content: "";
+position: absolute;
+top: 0;
+left: -3000px;
+width: 3000px;
+height: 100%;
+background-color: #E6EEF5;
+}
+.annual-report-container .summary-area::after {
+content: "";
+position: absolute;
+top: 0;
+right: -3000px;
+width: 3000px;
+height: 100%;
+background-color: #E6EEF5;
+}
+.annual-report-container .summary-area .summary-list {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 48px;
+width: 100%;
+height: 100%;
+}
+.annual-report-container .summary-area .summary-list li {
+position: relative;
+width: 304px;
+height: 252px;
+padding-top: 144px;
+font-size: 1.125rem;
+color: #1A1A1A;
+text-align: center;
+}
+.annual-report-container .summary-area .summary-list li::before {
+content: "";
+position: absolute;
+top: 0;
+left: calc(50% - 66px);
+width: 132px;
+height: 120px;
+}
+.annual-report-container .summary-area .summary-list li:nth-child(1)::before {
+background: url(../img/template/img_summary1@2x.png) 0 0 no-repeat;
+background-size: 100%;
+}
+.annual-report-container .summary-area .summary-list li:nth-child(2)::before {
+background: url(../img/template/img_summary2@2x.png) 0 0 no-repeat;
+background-size: 100%;
+}
+.annual-report-container .summary-area .summary-list li:nth-child(3)::before {
+background: url(../img/template/img_summary3@2x.png) 0 0 no-repeat;
+background-size: 100%;
+}
+.annual-report-container .summary-area .summary-list li:nth-child(4)::before {
+background: url(../img/template/img_summary4@2x.png) 0 0 no-repeat;
+background-size: 100%;
+}
+@media (max-width: 1199px) {
+.annual-report-container .summary-area {
+width: 100%;
+height: auto;
+padding: 20px;
+}
+.annual-report-container .summary-area::before {
+left: -20px;
+width: 20px;
+}
+.annual-report-container .summary-area::after {
+right: -20px;
+width: 20px;
+}
+.annual-report-container .summary-area .summary-list {
+flex-wrap: wrap;
+gap: 24px;
+}
+.annual-report-container .summary-area .summary-list li {
+width: calc(50% - 12px);
+}
+}
+@media (max-width: 749px) {
+.annual-report-container .summary-area .summary-list {
+flex-wrap: wrap;
+gap: 24px;
+}
+.annual-report-container .summary-area .summary-list li {
+width: 100%;
+height: auto;
+}
+}
+.annual-report-container .introduction-area {
+margin-top: 64px;
+}
+.annual-report-container .introduction-area .introduction-img-area {
+float: right;
+}
+.annual-report-container .introduction-area .introduction-img-area img {
+display: block;
+margin: 0 0 12px 24px;
+border-radius: 16px;
+overflow: hidden;
+}
+.annual-report-container .introduction-area p {
+word-wrap: break-word;
+}
+.annual-report-container .introduction-area strong {
+font-size: 1.25rem;
+}
+@media (max-width: 1199px) {
+.annual-report-container .introduction-area .introduction-img-area img {
+margin: 0 0 12px 16px;
+}
+}
+@media (max-width: 749px) {
+.annual-report-container .introduction-area .introduction-img-area {
+float: left;
+width: 100%;
+}
+.annual-report-container .introduction-area .introduction-img-area img {
+width: 100%;
+max-width: 397px;
+margin: 0 auto 16px;
+border-radius: 8px;
+}
+}
+.annual-report-container .annual-report-wrap {
+display: flex;
+align-items: flex-start;
+gap: 64px;
+position: relative;
+width: 100%;
+height: 100%;
+margin-top: 64px;
+}
+.annual-report-container #annual-report-sidebar {
+min-width: 240px;
+width: 240px;
+}
+.annual-report-container #annual-report-sidebar.fixed {
+position: fixed;
+top: 20px;
+left: auto;
+}
+.annual-report-container #annual-report-sidebar .sidebar-toggle {
+display: none;
+}
+.annual-report-container #annual-report-sidebar .snb-list {
+width: 240px;
+border-top: 1px solid #000000;
+background: #FFFFFF;
+font-size: 1.125rem;
+font-weight: 500;
+}
+.annual-report-container #annual-report-sidebar .snb-list > li + li {
+border-top: 1px solid #EAECF5;
+}
+.annual-report-container #annual-report-sidebar .snb-list > li > a {
+display: block;
+padding: 16px 0;
+color: #6D6E72;
+}
+.annual-report-container #annual-report-sidebar .snb-list > li > a .num {
+display: inline-block;
+margin-right: 4px;
+}
+.annual-report-container #annual-report-sidebar .snb-list > li.collapse > a {
+position: relative;
+display: block;
+padding-right: 20px;
+}
+.annual-report-container #annual-report-sidebar .snb-list > li.collapse > a:before {
+content: "";
+position: absolute;
+right: 0;
+top: calc(50% - 10px);
+width: 20px;
+height: 20px;
+background: url(../img/template/ico_arrow_down@2x.png) 0 0 no-repeat;
+background-size: 20px 20px;
+transition-duration: 0.3s;
+}
+.annual-report-container #annual-report-sidebar .snb-list > li.collapse.on > a:before {
+background: url(../img/template/ico_arrow_up@2x.png) 0 0 no-repeat;
+background-size: 20px 20px;
+}
+.annual-report-container #annual-report-sidebar .snb-list > li.on > a {
+font-weight: 600;
+color: #3D3E40;
+}
+.annual-report-container #annual-report-sidebar .snb-list > li > ul {
+display: none;
+padding: 0 0 0 4px;
+font-size: 1rem;
+margin-bottom: 16px;
+overflow: hidden;
+}
+.annual-report-container #annual-report-sidebar .snb-list > li > ul > li:first-child > a {
+padding: 0 0 4px 24px;
+}
+.annual-report-container #annual-report-sidebar .snb-list > li > ul > li:last-child > a {
+padding: 4px 0 0 24px;
+}
+.annual-report-container #annual-report-sidebar .snb-list > li > ul > li > a {
+display: flex;
+align-items: flex-start;
+gap: 4px;
+padding: 4px 0 4px 24px;
+color: #6D6E72;
+}
+.annual-report-container #annual-report-sidebar .snb-list > li > ul > li > a:focus {
+outline-offset: -1px;
+}
+.annual-report-container #annual-report-sidebar .snb-list > li > ul > li.on > a {
+font-weight: 600;
+color: #3D3E40;
+}
+.annual-report-container #annual-report-sidebar .snb-list > li > ul > li.collapse > a {
+position: relative;
+}
+.annual-report-container #annual-report-sidebar .snb-list > li > ul > li.collapse > a:before {
+content: "";
+position: absolute;
+left: 0;
+top: calc(50% - 10px);
+width: 20px;
+height: 20px;
+background: url(../img/template/ico_chevron_right@2x.png) 0 0 no-repeat;
+background-size: 20px 20px;
+transition-duration: 0.3s;
+}
+.annual-report-container #annual-report-sidebar .snb-list > li > ul > li.collapse.on > a:before {
+background: url(../img/template/ico_expand_more@2x.png) 0 0 no-repeat;
+background-size: 20px 20px;
+}
+.annual-report-container #annual-report-sidebar .snb-list > li > ul > li.collapse:first-child > a:before {
+top: calc(50% - 12px);
+}
+.annual-report-container #annual-report-sidebar .snb-list > li > ul > li.collapse:last-child > a:before {
+top: calc(50% - 8px);
+}
+.annual-report-container #annual-report-sidebar .snb-list > li > ul ul {
+display: none;
+padding: 8px 0 8px 44px;
+}
+.annual-report-container #annual-report-sidebar .snb-list > li > ul ul > li {
+font-size: 0.875rem;
+}
+.annual-report-container #annual-report-sidebar .snb-list > li > ul ul > li:first-child > a {
+padding: 0 0 4px;
+}
+.annual-report-container #annual-report-sidebar .snb-list > li > ul ul > li:last-child > a {
+padding: 4px 0 0;
+}
+.annual-report-container #annual-report-sidebar .snb-list > li > ul ul > li > a {
+display: flex;
+align-items: flex-start;
+gap: 4px;
+padding: 4px 0;
+color: #6D6E72;
+}
+.annual-report-container #annual-report-sidebar .snb-list > li > ul ul > li > a:focus {
+outline-offset: -1px;
+}
+.annual-report-container #annual-report-sidebar .snb-list > li > ul ul > li.on > a {
+color: #004275;
+}
+.annual-report-container #annual-report-sidebar .snb-list > li > ul ul > li.on > a .text {
+text-decoration: underline;
+text-underline-offset: 2px;
+}
+@media (max-width: 1199px) {
+.annual-report-container #annual-report-sidebar {
+position: fixed;
+top: 96px;
+left: 0;
+z-index: 100;
+min-width: 240px;
+width: 240px;
+}
+.annual-report-container #annual-report-sidebar.fixed {
+top: 96px;
+left: 0;
+}
+.annual-report-container #annual-report-sidebar.hide {
+left: -216px;
+}
+.annual-report-container #annual-report-sidebar.hide .snb-list {
+box-shadow: none;
+}
+.annual-report-container #annual-report-sidebar .sidebar-toggle {
+display: block;
+position: absolute;
+right: 0;
+width: 24px;
+height: 40px;
+background: #143D66;
+border-top-right-radius: 4px;
+border-bottom-right-radius: 4px;
+}
+.annual-report-container #annual-report-sidebar .sidebar-toggle .toggle-btn {
+width: 24px;
+height: 40px;
+background: url(../img/template/ico_toggle_close@2x.png) center center no-repeat;
+background-size: 13.5px 13.5px;
+}
+.annual-report-container #annual-report-sidebar .sidebar-toggle .toggle-btn.close {
+width: 24px;
+height: 40px;
+background: url(../img/template/ico_chevron_right_white@2x.png) center center no-repeat;
+background-size: 20px 20px;
+}
+.annual-report-container #annual-report-sidebar .snb-list {
+width: 216px;
+border: 1px solid #143D66;
+border-left: 0;
+border-bottom-right-radius: 4px;
+box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.15);
+padding: 0 10px;
+}
+.annual-report-container #annual-report-sidebar .snb-list > li > a {
+padding: 12px 0;
+}
+.annual-report-container #annual-report-sidebar .snb-list > li > ul {
+padding: 0 0 0 3px;
+margin-bottom: 11px;
+}
+.annual-report-container #annual-report-sidebar .snb-list > li > ul ul {
+padding: 3px 1px 3px 33px;
+}
+}
+@media (max-width: 749px) {
+.annual-report-container #annual-report-sidebar {
+min-width: 200px;
+width: 200px;
+}
+.annual-report-container #annual-report-sidebar.hide {
+left: -176px;
+}
+.annual-report-container #annual-report-sidebar .snb-list {
+width: 176px;
+padding: 0 8px;
+}
+.annual-report-container #annual-report-sidebar .snb-list > li > a {
+height: 39px;
+padding: 8px 0;
+font-size: 13px;
+line-height: 23px;
+}
+.annual-report-container #annual-report-sidebar .snb-list > li > ul > li > a {
+padding: 3px 0 3px 18px !important;
+font-size: 12px;
+}
+.annual-report-container #annual-report-sidebar .snb-list > li > ul > li:last-child a {
+padding: 3px 0 0 18px;
+}
+.annual-report-container #annual-report-sidebar .snb-list > li > ul > li ul li a {
+font-size: 11px;
+}
+.annual-report-container #annual-report-sidebar .snb-list > li > ul > li.collapse > a {
+padding: 3px 0 3px 18px;
+}
+.annual-report-container #annual-report-sidebar .snb-list > li > ul > li.collapse > a:before {
+top: calc(50% - 7px);
+width: 14px;
+height: 14px;
+background: url(../img/template/ico_chevron_right@2x.png) 0 0 no-repeat;
+background-size: 14px 14px;
+}
+.annual-report-container #annual-report-sidebar .snb-list > li > ul > li.collapse.on > a:before {
+background: url(../img/template/ico_expand_more@2x.png) 0 0 no-repeat;
+background-size: 14px 14px;
+}
+.annual-report-container #annual-report-sidebar .snb-list > li > ul > li.collapse:first-child > a:before {
+top: calc(50% - 7px);
+}
+.annual-report-container #annual-report-sidebar .snb-list > li > ul > li.collapse:last-child > a:before {
+top: calc(50% - 7px);
+}
+.annual-report-container #annual-report-sidebar .snb-list > li.collapse > a:before {
+top: calc(50% - 7px);
+width: 14px;
+height: 14px;
+background: url(../img/template/ico_arrow_down@2x.png) 0 0 no-repeat;
+background-size: 14px 14px;
+}
+.annual-report-container #annual-report-sidebar .snb-list > li.collapse.on > a:before {
+background: url(../img/template/ico_arrow_up@2x.png) 0 0 no-repeat;
+background-size: 14px 14px;
+}
+}
+.annual-report-container .annual-report-area {
+flex: 1;
+max-width: 1136px;
+width: calc(100% - 304px);
+height: auto;
+float: right;
+}
+.annual-report-container .annual-report-area.responsive {
+margin-left: 304px;
+}
+.annual-report-container .annual-report-area a {
+color: #4D4D4D;
+}
+.annual-report-container .annual-report-area .flex-area {
+display: flex;
+gap: 10px;
+}
+.annual-report-container .annual-report-area .flex-area .infographic {
+width: 100%;
+}
+.annual-report-container .annual-report-area .flex-area .infographic .infographic-inner {
+width: 100%;
+padding: 0 24px;
+}
+@media (max-width: 1199px) {
+.annual-report-container .annual-report-area .flex-area {
+flex-direction: column;
+}
+.annual-report-container .annual-report-area .flex-area .infographic:first-child {
+margin-bottom: 0;
+}
+.annual-report-container .annual-report-area .flex-area .infographic:last-child {
+margin-top: 0;
+}
+.annual-report-container .annual-report-area .flex-area .infographic .infographic-inner {
+width: calc(100% - 80px);
+margin: 0 auto;
+padding: 0;
+}
+}
+.annual-report-container .annual-report-area .infographic {
+margin: 40px 0;
+padding: 24px 0 33px;
+background: rgba(109, 110, 114, 0.1);
+}
+.annual-report-container .annual-report-area .infographic .infographic-inner {
+width: 835px;
+margin: 0 auto;
+}
+@media (max-width: 1199px) {
+.annual-report-container .annual-report-area .infographic .infographic-inner {
+width: calc(100% - 80px);
+margin: 0 auto;
+}
+}
+@media (max-width: 749px) {
+.annual-report-container .annual-report-area .infographic .infographic-inner {
+width: calc(100% - 40px);
+}
+}
+.annual-report-container .annual-report-area .infographic figcaption {
+display: flex;
+align-items: flex-end;
+justify-content: space-between;
+gap: 10px;
+margin-bottom: 16px;
+font-size: 1rem;
+}
+.annual-report-container .annual-report-area .infographic figcaption span:last-child {
+flex: 0 0 auto;
+font-size: 0.875rem;
+text-align: right;
+}
+@media (max-width: 749px) {
+.annual-report-container .annual-report-area .infographic figcaption {
+flex-direction: column;
+align-items: flex-start;
+gap: 2px;
+}
+.annual-report-container .annual-report-area .infographic figcaption span:last-child {
+min-width: auto;
+text-align: left;
+}
+}
+.annual-report-container .annual-report-area .infographic .con-area .chart {
+height: 100%;
+background: #FFFFFF;
+padding: 10px 18px;
+border-radius: 8px;
+}
+.annual-report-container .annual-report-area .infographic .con-area .chart + .chart {
+margin-top: 16px;
+}
+.annual-report-container .annual-report-area .infographic .con-area .iframe-area {
+position: relative;
+width: 100%;
+height: 0;
+padding-bottom: 56.25%;
+border-radius: 16px;
+overflow: hidden;
+}
+@media (max-width: 749px) {
+.annual-report-container .annual-report-area .infographic .con-area .iframe-area {
+border-radius: 8px;
+}
+}
+.annual-report-container .annual-report-area .infographic .con-area iframe {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+display: block;
+}
+.annual-report-container .annual-report-area .infographic .con-area .info-area {
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin-top: 20px;
+}
+@media (max-width: 749px) {
+.annual-report-container .annual-report-area .infographic .con-area .info-area {
+flex-direction: column;
+align-items: flex-start;
+gap: 8px;
+}
+}
+.annual-report-container .annual-report-area .infographic .con-area .guide-text {
+position: relative;
+margin: 0;
+padding-left: 32px;
+font-size: 1rem;
+color: #4D4D4D;
+}
+.annual-report-container .annual-report-area .infographic .con-area .guide-text::before {
+content: "";
+position: absolute;
+top: calc(50% - 12px);
+left: 0;
+width: 24px;
+height: 24px;
+background: url(../img/template/ico_info@2x.png) 0 0 no-repeat;
+background-size: 24px 24px;
+}
+.annual-report-container .annual-report-area .infographic .con-area .script-btn {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+height: 32px;
+padding: 6px 12px;
+border-radius: 4px;
+background: #000E33;
+font-size: 1rem;
+color: #FFFFFF;
+}
+.annual-report-container .annual-report-area .infographic .con-area .script-btn img {
+height: 20px;
+}
+.annual-report-container .annual-report-area .infographic .con-area .script-btn:focus {
+outline-offset: 3px;
+}
+.annual-report-container .annual-report-area .infographic .con-area .script-area {
+width: 100%;
+max-height: 330px;
+margin-top: 16px;
+padding: 16px;
+border: 1px solid #C7D0DE;
+border-radius: 8px;
+background: #FFFFFF;
+transition: max-height 0.5s ease;
+}
+.annual-report-container .annual-report-area .infographic .con-area .script-area.hidden {
+max-height: 0;
+}
+.annual-report-container .annual-report-area .infographic .con-area .script-area .scroll-inner {
+height: 298px;
+padding-right: 10px;
+overflow-y: auto;
+}
+.annual-report-container .annual-report-area .infographic .con-area .script-area .scroll-inner::-webkit-scrollbar {
+-webkit-appearance: none;
+}
+.annual-report-container .annual-report-area .infographic .con-area .script-area .scroll-inner::-webkit-scrollbar:vertical {
+width: 8px;
+}
+.annual-report-container .annual-report-area .infographic .con-area .script-area .scroll-inner::-webkit-scrollbar:horizontal {
+height: 12px;
+}
+.annual-report-container .annual-report-area .infographic .con-area .script-area .scroll-inner::-webkit-scrollbar-thumb {
+border-radius: 99px;
+background-color: #6D6E72;
+}
+.annual-report-container .annual-report-area .infographic .con-area .script-area .scroll-inner::-webkit-scrollbar-track {
+border-radius: 99px;
+background-color: #E5E5E5;
+}
+.annual-report-container .annual-report-area .infographic .con-area .script-area p {
+margin: 0;
+font-size: 1rem;
+color: #4D4D4D;
+}
+@media (max-width: 749px) {
+.annual-report-container .annual-report-area .infographic .con-area .chart {
+padding: 10px 10px 5px;
+}
+}
+.annual-report-container .annual-report-area .infographic a {
+color: #000000;
+}
+.annual-report-container .annual-report-area .infographic.double .infographic-inner {
+width: calc(100% - 48px);
+}
+.annual-report-container .annual-report-area .infographic.double .con-area {
+display: flex;
+align-items: center;
+gap: 16px;
+}
+.annual-report-container .annual-report-area .infographic.double .con-area .chart {
+width: calc(50% - 8px);
+}
+@media (max-width: 749px) {
+.annual-report-container .annual-report-area .infographic.double .con-area {
+flex-direction: column;
+}
+.annual-report-container .annual-report-area .infographic.double .con-area .chart {
+width: 100%;
+}
+}
+.annual-report-container .annual-report-area .infographic.video, .annual-report-container .annual-report-area .infographic.image {
+padding: 24px 0 33px;
+}
+.annual-report-container .annual-report-area .infographic.video .infographic-inner, .annual-report-container .annual-report-area .infographic.image .infographic-inner {
+width: 584px;
+}
+@media (max-width: 749px) {
+.annual-report-container .annual-report-area .infographic.video .infographic-inner, .annual-report-container .annual-report-area .infographic.image .infographic-inner {
+width: calc(100% - 40px);
+}
+}
+.annual-report-container .annual-report-area .infographic.video.double .infographic-inner {
+width: calc(100% - 48px);
+}
+.annual-report-container .annual-report-area .infographic.video.double .video-container {
+display: flex;
+align-items: center;
+gap: 16px;
+}
+@media (max-width: 749px) {
+.annual-report-container .annual-report-area .infographic.video.double .video-container {
+flex-direction: column;
+}
+}
+.annual-report-container .annual-report-area .infographic.image img {
+display: block;
+width: 100%;
+border-radius: 8px;
+overflow: hidden;
+}
+.annual-report-container .annual-report-area .infographic.image.double .infographic-inner {
+width: calc(100% - 48px);
+}
+.annual-report-container .annual-report-area .infographic.image.double .con-area {
+display: flex;
+align-items: center;
+gap: 16px;
+}
+.annual-report-container .annual-report-area .infographic.image.double .con-area img {
+width: calc(50% - 8px);
+}
+@media (max-width: 749px) {
+.annual-report-container .annual-report-area .infographic.image.double .con-area {
+flex-direction: column;
+}
+.annual-report-container .annual-report-area .infographic.image.double .con-area img {
+width: 100%;
+}
+}
+.annual-report-container .annual-report-area .infographic .video-container .video-link-btn {
+position: relative;
+display: block;
+margin: 0 auto;
+border-radius: 16px;
+overflow: hidden;
+}
+.annual-report-container .annual-report-area .infographic .video-container .video-link-btn::before {
+content: "";
+position: absolute;
+top: calc(50% - 50px);
+left: calc(50% - 50px);
+z-index: 10;
+width: 100px;
+height: 100px;
+background: url(../img/template/ico_play_circle.png) 0 0 no-repeat;
+background-size: 100px 100px;
+}
+.annual-report-container .annual-report-area .infographic .video-container .video-link-btn:focus {
+outline-offset: 4px;
+}
+.annual-report-container .annual-report-area .infographic .video-container img {
+display: block;
+width: 100%;
+}
+@media (max-width: 749px) {
+.annual-report-container .annual-report-area .infographic .video-container .video-link-btn {
+border-radius: 8px;
+}
+.annual-report-container .annual-report-area .infographic .video-container .video-link-btn::before {
+top: calc(50% - 30px);
+left: calc(50% - 30px);
+width: 60px;
+height: 60px;
+background-size: 60px 60px;
+}
+}
+.annual-report-container .annual-report-area .infographic .sup {
+font-size: 0.75rem !important;
+}
+.annual-report-container .annual-report-area .infographic a:hover {
+text-decoration: underline;
+text-underline-offset: 2px;
+}
+.annual-report-container .annual-report-area .infographic .con-area.bank-of-korea-building-img img:first-child {
+width: calc(64% - 8px);
+}
+.annual-report-container .annual-report-area .infographic .con-area.bank-of-korea-building-img img:last-child {
+width: calc(36% - 8px);
+}
+@media (max-width: 749px) {
+.annual-report-container .annual-report-area .infographic .con-area.bank-of-korea-building-img img:first-child, .annual-report-container .annual-report-area .infographic .con-area.bank-of-korea-building-img img:last-child {
+width: 100%;
+}
+}
+@media (max-width: 1199px) {
+.annual-report-container .annual-report-area {
+width: 100%;
+max-width: 100%;
+}
+.annual-report-container .annual-report-area.responsive {
+margin-left: 0;
+}
+}
+.annual-report-container .table {
+margin: 40px 0;
+border-top: 0;
+}
+.annual-report-container .table .table-info {
+display: flex;
+align-items: flex-start;
+justify-content: space-between;
+width: calc(100% - 20px);
+margin: 0 auto 5px;
+font-size: 1rem;
+}
+.annual-report-container .table .table-info span:last-child {
+display: inline-flex;
+flex-direction: column;
+align-items: flex-end;
+font-size: 0.875rem;
+}
+.annual-report-container .table .table-info .sup {
+font-size: 0.75rem;
+color: #3E7CC8;
+}
+@media (max-width: 749px) {
+.annual-report-container .table .table-info {
+flex-direction: column;
+align-items: flex-start;
+}
+.annual-report-container .table .table-info span:last-child {
+align-items: flex-start;
+}
+}
+.annual-report-container .table table {
+border-top: 2px solid #17294D;
+}
+.annual-report-container .table table thead tr:not(:first-child) th {
+border-bottom: none;
+}
+.annual-report-container .table table thead tr:not(:first-child) th:first-child {
+border-right: 1px solid #BDBCBC;
+}
+.annual-report-container .table table thead th[colspan] {
+border-bottom: 1px solid #BDBCBC;
+}
+.annual-report-container .table table thead th[rowspan]:not(:first-child) {
+border-left: 1px solid #BDBCBC;
+}
+.annual-report-container .table table tbody tr:last-child th, .annual-report-container .table table tbody tr:last-child td {
+border-bottom: 1px solid #17294D;
+}
+.annual-report-container .table table tbody th[rowspan] + th {
+border-right: 1px solid #000000;
+border-bottom: 1px solid #E5E5E5;
+}
+.annual-report-container .table table tbody th[rowspan].has-next-th {
+border-right: 1px solid #E5E5E5;
+}
+.annual-report-container .table table tbody th[rowspan].division-line {
+border-bottom: 1px solid #BDBCBC;
+}
+.annual-report-container .table table tbody th[rowspan].black-line {
+border-bottom: 1px solid #17294D;
+}
+.annual-report-container .table table tbody td:first-child {
+border-left: 0;
+}
+.annual-report-container .table table th {
+padding: 14px;
+background-color: #EBF3F7;
+border: 0;
+border-right: 1px solid #BDBCBC;
+font-size: 1rem;
+font-weight: 400;
+color: #1A1A1A;
+}
+.annual-report-container .table table th:nth-child(1) {
+border-right: 1px solid #000000;
+}
+.annual-report-container .table table th.line-default {
+border-bottom: 0 !important;
+border-right: 1px solid #BDBCBC;
+}
+.annual-report-container .table table th a {
+color: #1A1A1A;
+}
+.annual-report-container .table table td {
+min-height: 55px;
+padding: 7px 14px;
+background-color: #fff;
+font-size: 1rem;
+color: #4D4D4D;
+}
+.annual-report-container .table table td.black-line {
+border-bottom: 1px solid #17294D;
+}
+.annual-report-container .table table tr th:first-child {
+border-bottom: 1px solid #E5E5E5;
+}
+.annual-report-container .table table tr th:last-child {
+border-right: 0;
+}
+.annual-report-container .table table tr td {
+border: 1px solid #E5E5E5;
+}
+.annual-report-container .table table tr td:last-child {
+border-right: 0;
+}
+.annual-report-container .table table tr td[rowspan]:nth-child(2) {
+border-left: 0;
+}
+.annual-report-container .table table tr.division-line th, .annual-report-container .table table tr.division-line td {
+border-bottom: 1px solid #BDBCBC;
+}
+.annual-report-container .table table tr.division-line th[rowspan] + th {
+border-bottom: 1px solid #E5E5E5;
+}
+.annual-report-container .table table tr.division-line th[rowspan] + th + td {
+border-bottom: 1px solid #E5E5E5;
+}
+.annual-report-container .table table tr.division-line th[rowspan] + th + td + td {
+border-bottom: 1px solid #E5E5E5;
+}
+.annual-report-container .table table tr.dashed-line th, .annual-report-container .table table tr.dashed-line td {
+border-bottom: 1px dashed #BDBCBC !important;
+}
+.annual-report-container .table table tr.dashed-line + tr th, .annual-report-container .table table tr.dashed-line + tr td {
+border-top: 0;
+}
+.annual-report-container .table.table-scroll {
+margin-left: -10px;
+margin-right: -10px;
+}
+.annual-report-container .table.table-scroll .scroll-container {
+overflow-x: auto;
+overflow-y: hidden;
+padding-left: 10px;
+padding-right: 10px;
+}
+.annual-report-container .table sup {
+font-size: 0.875rem;
+color: #1A1A1A;
+}
+.annual-report-container .table .sup {
+color: #3E7CC8;
+}
+.annual-report-container .table strong {
+font-weight: 600;
+}
+.annual-report-container .text-center {
+text-align: center;
+}
+.annual-report-container .text-underline {
+text-decoration: underline;
+text-underline-offset: 2px;
+}
+.annual-report-container .sup {
+color: #3E7CC8;
+}
+.annual-report-container p .sup {
+font-size: 0.75rem;
+}
+.annual-report-container h5 .sup {
+font-size: 0.875rem;
+}
+.annual-report-container figcaption .sup {
+font-size: 0.75rem;
+}
+.annual-report-container .d-down-xs {
+display: none;
+}
+@media (max-width: 749px) {
+.annual-report-container .d-down-xs {
+display: block;
+}
+}
+.annual-report-container .qrcode-area {
+display: flex;
+align-items: center;
+justify-content: flex-start;
+flex-wrap: wrap;
+gap: 20px;
+padding: 24px;
+background: rgba(109, 110, 114, 0.1);
+font-size: 1.125rem;
+}
+.annual-report-container .qrcode-area li {
+flex: 0 1 auto;
+text-align: center;
+}
+.annual-report-container .qrcode-area a:hover {
+text-decoration: underline;
+text-underline-offset: 3px;
+}
+@media (max-width: 1199px) {
+.annual-report-container .qrcode-area {
+flex-wrap: wrap;
+}
+.annual-report-container .qrcode-area li {
+text-align: left;
+}
+}
+/*# sourceMappingURL=../maps/template.css.map */

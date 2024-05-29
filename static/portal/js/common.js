@@ -184,21 +184,6 @@ $(function () {
 	});
 	$('.gnb_bg').height($('.gnb .depth2').height());  //gnb_bg 높이 구하기
 */
-	// gnb stiky
-	function goToScroll() {
-		// 주 메뉴
-		var h = 60;  //96
-		if ($(window).scrollTop() > h) {
-			$('body').addClass('gnb-stiky');
-		} else {
-			$('body').removeClass('gnb-stiky');
-		}
-	}
-	$(window).on('scroll', function () {
-		goToScroll();
-	});
-	goToScroll();
-
 
 	//전체메뉴 보기
 	$(".all-nav-toggle").click(function (e){
@@ -412,6 +397,9 @@ $(function () {
 			dowButton.attr("title", "첨부파일 목록 열기");
 		}
 	})
+
+	//bdLine 첨부파일 있는 경우 처리
+	$(".bdLine .fileLink").parents().find(".bdLine").addClass("type3");
 });
 
 // 게시판 반응형
@@ -584,60 +572,38 @@ $(function () {
 
 $(function() {
 
-		// gnb stiky
-		function goToScroll() {
-			// 주 메뉴
-			var h = 146; //96
-			if ($(window).scrollTop() > h) {
-				$('body').addClass('gnb-stiky');
-			} else {
-				$('body').removeClass('gnb-stiky');
-			}
-		}
-		$(window).on('scroll', function () {
-			goToScroll();
-		});
-		goToScroll();
-
-
-	//navigation  고정용 page-toolbar
-	// var toolbarhtml = $('.hgroup .page-toolbar').clone()
-	// $(".top-page-toolbar").html(toolbarhtml.clone())
-
-
-	/*Variables for chache $ chaining*/
 	var $root = $("html, body");
 	var $window = $(window);
 
-	var fixNav = 60;
-	var amountScrolled = 1200; //129
+	var fixMenu = 60;	//146
+	var amountScrolled = 146;
 	var backBtn = $(".goTop");
-	
-/*
 	$window.on("scroll", function () {
-		//gnbFixed 		//fixLogo
-		if ($window.scrollTop() > fixNav) {
-			$("body").addClass("nav-stiky");
+	   //gnbFixed 		//fixLogo
+	   if ($window.scrollTop() > fixMenu) {
+		   $(".navigation .container").addClass("nav-stiky");
 
-		}else{
-			if($("body").hasClass("nav-stiky")){
-				$("body").addClass("nav-stiky");
-			}
-			$("body").removeClass("nav-stiky");
-		}
-		if ($window.scrollTop() > amountScrolled) {
-				backBtn.fadeIn("slow");
-		} else {
-				backBtn.fadeOut("slow");
-		}
+	   }else{
+		   if($(".navigation .container").hasClass("nav-stiky")){
+			   $(".navigation .container").addClass("fixMenuOff");
+		   }
+		   $(".navigation .container").removeClass("nav-stiky");
+	   }
+	   if ($window.scrollTop() > amountScrolled) {
+			backBtn.fadeIn("slow");
+	   } else {
+			backBtn.fadeOut("slow");
+	   }
 	});
-*/
+
+	
 	backBtn.on("click", function () {
-		$root.animate({
+		   $root.animate({
 				scrollTop: 0
-		}, 700);
-		return false;
+		   }, 700);
+		   return false;
 	});
+
 
 	//로그인후
 	var userInfoOp = $(".userInfoOpener");
@@ -798,7 +764,7 @@ $(function() {
 	// 	.each(function () {
 	// 		$(this).addClass("table_line");
 	// 	});
-
+	
 		
 
 
@@ -915,6 +881,11 @@ $(function () {
 	$(".lnb-nav .mobile__nav__close").on("click", function(){
 		$(".lnb-nav").removeClass("active");
 	})
+
+
+	//프린트 표지용 코딩
+	var pagTitle = $(".nav-menu > li:last-child > a").text()
+	$(".pag-title").text(pagTitle)
 });
 
 
@@ -997,6 +968,12 @@ $(function () {
 
 	});
 
+	
+	//키워드 없을때 숨김처리
+	var keywordLength = $(".bd-view_wrap .dataInfoSet .keyword dd").length;
+	if(keywordLength < 1) {
+		$(".bd-view_wrap .dataInfoSet .keyword").addClass("noKeyword");
+	}
 
 	//첨부파일
 	var filesOv = $(".fileGroupSet>a");

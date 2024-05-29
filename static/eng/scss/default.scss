@@ -78,6 +78,9 @@
 a {
 	color: $link-color;
 }
+html, body {
+	height: 100%;
+}
 html {
 	font-size: $html-font-size;
 	@include breakpoint($sm){

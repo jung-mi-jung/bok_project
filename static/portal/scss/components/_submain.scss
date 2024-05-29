@@ -39,9 +39,9 @@
 
 .sub-main {
 	margin: 0;
-	& + #footer {
-		margin-top: 0;
-	}
+	// & + #footer {
+	// 	margin-top: 0;
+	// }
 	#main-container {
 		width: 100%;
 	}
@@ -668,15 +668,12 @@
 				ul {		
 					display: flex;
 					justify-content: space-between;
-					//flex-wrap: wrap;			
 					padding: 0;
-					flex-basis: 0;
+					//flex-wrap: wrap;
 					@include breakpoint($sm){
 						justify-content: flex-start;
 					}
 					li {
-						//width: 100%;
-						//border: 1px solid #eee; //임시용
 						@include breakpoint($sm){
 							width: 33.3%;
 						}
@@ -684,30 +681,37 @@
 							position: relative;
 							text-align: center;
 							display: block;
-							color: $point;
-							font-weight: 500;
+							color: #4D4D4D;
+							font-weight: 400;
 							text-align: center;
 							font-size: rem(18);
 							letter-spacing: -1.2px;
 							white-space: nowrap;
+							&::after {
+								content: "";
+								display: inline-block;
+								width: 1px;
+								height: 16px;
+								background-color: #B1C1E7;
+								position: absolute;
+								top: 50%;
+								right: 0;
+								margin-top: -8px;
+								// @include font-ico("\e315");
+								// font-size: 20px;
+								// vertical-align: text-top;
+								// color: #bdbcbc;
+							}
 							&:hover {
-								color: $color-point;
-								text-decoration: underline;
+								font-weight: 500;
+								color: #005596;
+								//text-decoration: underline;
 							}
 						}
-						& + li {
-							// position: relative;						
-							// &::before {
-							// 	content: "";
-							// 	display: inline-block;
-							// 	vertical-align: middle;
-							// 	width: 1px;
-							// 	height: 18px;
-							// 	background: #E5E5E5;
-							// 	position: absolute;
-							// 	top: 7px;
-							// 	left: 0;
-							// }
+						&:last-child {
+							a:after {
+								display: none;
+							}
 						}
 					}
 				}
@@ -933,6 +937,9 @@
 			display: flex;
 			justify-content: space-between;
 			padding: 18px 0 0;
+			@include breakpoint($sm){
+				display: block;
+			}
 			.btn_view {
 				padding: 4px 14px 4px 38px;
 				display: inline-block;
@@ -953,6 +960,9 @@
 		max-width: 100%;
 		margin: -20px auto 0;
 		padding-bottom: 60px;
+		@include breakpoint($sm){
+			margin: 10px auto 0;
+		}
 		&.active {
 			display: block;
 		}
@@ -982,7 +992,8 @@
 			padding: 15px;
 			border-radius: 8px;
 			max-height: 330px;
-			overflow-y: auto;			
+			overflow-y: auto;	
+			border: 1px solid $bd-color;		
 			&.active {
 				display: block;
 			}
@@ -2222,6 +2233,7 @@
 		padding: 20px 15px;
 	}
 	.notice {
+		position: relative;
 		@include breakpoint($lg){
 			width: calc(50% - 30px);
 		}
@@ -2272,6 +2284,9 @@
 			& + .notice {
 				margin-top: 30px;
 			}
+		}
+		.more {
+			@include more();
 		}
 	}	
 }

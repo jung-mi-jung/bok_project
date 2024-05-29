@@ -7,7 +7,7 @@
 	.page-toolbar,
 	.page-print,
 	.location,
-	#footerSet {
+	#footerSet  {
 		display: none !important;
 	}
 	html {
@@ -54,7 +54,7 @@
 			max-height: 100% !important;
 		}
 	}
-	* {
+	*, .map, button {
 		-webkit-print-color-adjust: exact !important; /*Chrome, Safari */
 		color-adjust: exact !important; /*Firefox*/
 	}
@@ -90,10 +90,84 @@
 		overflow-y: hidden;
 		height: auto !important;
 	}
+
+
+	#wrap {
+		padding-top: 0;
+	}
+	.sh-db, 
+	.admin-set,
+	.my_memo, 
+	.goTop {
+		display: none;
+	}
+	#main-container .sh-db + .content {
+		width: 100%;
+		padding-left: 0;
+		border-left: none;
+	}
+
+	.scrollX {
+		overflow: hidden;
+	}
 }
 
-.popup {
-	
+//프린트용 표지
+#print-cover {
+	text-align: center;
+	height: 100vh;
+	.title {
+		font-size: 18px;
+		.board & {
+			font-size: rem(36);
+			font-weight: 600;
+			padding-top: 20%;
+			margin-bottom: 30px;
+			@media print {
+				padding-top: 30%;
+			}
+		}
+	}
+	.menu {
+		font-size: rem(36);
+		font-weight: 600;
+		padding-top: 20%;
+		margin-bottom: 30px;
+		@media print {
+			padding-top: 30%;
+		}
+		.board & {
+			font-size: 18px;
+			font-weight: 400;
+			padding-top: 0;
+			margin-bottom: 0;
+		}
+	}
+}
+.page-break {
+	page-break-after: always;
+}
+
+#print-body {
+	.lnb-nav,
+	.admin-set,
+	.my_memo,
+	.goTop {
+		display: none;
+	}
+	#btn_print a {color: #666; border: 1px solid #666;display: inline-block;padding: 0 15px;height: 35px;line-height: 35px;}
+	.b-print::before {content: "";display: inline-block;vertical-align: middle; width: 25px;height: 25px;background: url(/static/portal/img/ico/ico-print.svg) 50% no-repeat;background-size: 25px;margin-right: 5px;margin-bottom: 2px;}
+
+	#main-container .lnb-nav + .content {
+		padding-left: 0;
+		width: 100%;
+		&::after {
+			display: none;
+		}
+	}
+}
+
+.popup {	
 	.page-print {
 		background-color: #eee;
 		padding: 10px 0;

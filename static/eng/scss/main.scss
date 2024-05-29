@@ -10,14 +10,13 @@
 @import 'components/popup';//팝업
 
 #content {
-	margin-top: 0;
+	margin-top: 0 !important;
 }
 #wrap {
 	padding-top: 0;
 }
 #header {
 	position: fixed;
-	//background: #00000099;
 	background-color: rgba(0, 14, 51, 0.7);
 	backdrop-filter: blur(4px);
 	border-bottom: none !important;
@@ -52,9 +51,9 @@
 	.logo a {
 		background: url(/static/eng/img/main/logo.png) 50% no-repeat;
 	}
-	&.over {
-		background-color: #fff;
+	&.over {		
 		@include breakpoint($lg){
+			background-color: #fff;
 			.logo a {
 				background: url(/static/eng/img/common/logo.png) 50% no-repeat;
 			}
@@ -268,10 +267,10 @@
 		background-size: cover;
 		//background-attachment: fixed;
 		@include breakpoint($mdw){
-			height: 600px;
+			height: 700px;
 		}
 		@include breakpoint($sm){
-			height: 550px;
+			height: 600px;
 		}
 		&.swiper-slide-active {
 			-webkit-animation: visual-bg 3s ease-out 1;
@@ -302,22 +301,28 @@
 		.s1-txt-set {
 			position: absolute;
 			bottom: 129px;
-			left: 121px;
+			padding-left: 121px;
+			width: 100%;
+			max-width: 1680px;
 			text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
-			@include breakpoint($sm){
+			@include breakpoint($smd){
 				left: 10px;
 				width: calc(100% - 20px);
+				padding-left: 0;
 			}
 		}
 		.s1-t1 {
 			color: #fff;
-			font-size: rem(64);
+			font-size: rem(56);
 			font-style: normal;
 			font-weight: 700;
 			line-height: normal;
 			//text-transform: uppercase;
+			@include breakpoint($mdw){
+				font-size: rem(40);
+			}
 			@include breakpoint($sm){
-				font-size: rem(38);
+				font-size: rem(30);
 			}
 		}
 		.s1-t2 {
@@ -351,11 +356,15 @@
 		position: absolute;
 		left: 112px;
 		//top: 529px + 40;
-		bottom: 350px;
+		bottom: 420px;
 		z-index: 100;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
+		@include breakpoint($mdw){
+			left: 10px;
+			bottom: 340px;
+		}
 		@include breakpoint($sm){
 			display: none;
 		}
@@ -756,9 +765,33 @@
 					box-shadow:none
 				}
 			}
-			.swiper-slide-prev a{margin-left:360px;}
-			.swiper-slide-active+*+.swiper-slide a { margin-left: -360px; }
-			.swiper-slide-active+*+*+.swiper-slide a { margin-left: -720px; }
+			.swiper-slide-prev a {
+				margin-left: 360px;
+				@include breakpoint($mdw) {
+					margin-left: 180px;
+				}
+				@include breakpoint($sm) {
+					margin-left: 0;
+				}
+			}
+			.swiper-slide-active+*+.swiper-slide a {
+				margin-left: -360px; 
+				@include breakpoint($mdw) {
+					margin-left: 0;
+				}
+				@include breakpoint($sm) {
+					margin-left: 0;
+				}
+			}
+			.swiper-slide-active+*+*+.swiper-slide a {
+				margin-left: -720px;
+				@include breakpoint($mdw) {
+					margin-left: 0;
+				}
+				@include breakpoint($sm) {
+					margin-left: 0;
+				}
+			}
 			a {
 				@include breakpoint($sm){
 					width: 100% !important;
@@ -1024,12 +1057,42 @@
 	}
 }
 
+@mixin board-bottom {
+	opacity: 1;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 0 96px;
+	display: block;
+	z-index: 9;					
+	background-color: #3B63C4;
+	border-radius: 0 0 16px 16px;		
+	.i-view {
+		position: relative;
+		width: 100%;
+		//width: calc(50% - 2px);
+		display: inline-block;
+		vertical-align: middle;
+		height: 60px;
+		line-height: 60px;
+		text-align: center;
+		&::after {
+			@include font-ico('\e8ff');
+			font-size: 25px;
+			color: #fff;
+		}
+	}
+}
+
 #section3,
 #section4 {	
 	h2 {
-		margin-bottom: 60px !important;
+		//margin-bottom: 60px !important;
+		margin-bottom: 2% !important;
 		@include breakpoint($sm){
-			margin-bottom: 00px !important;}
+			margin-bottom: 0 !important;
+		}
 	}
 	.set {
 		position: relative;
@@ -1054,59 +1117,10 @@
 					padding: 16px 16px 70px;
 				}
 				@include breakpoint($sm){
-					padding: 16px;
+					//padding: 16px;
 				}
 				.bottom {
-					//display: none !important; /* 기능 삭제 */
-					opacity: 1;
-					position: absolute;
-					bottom: 0;
-					left: 0;
-					width: 100%;
-					padding: 0 96px;
-					display: block;
-					z-index: 9;					
-					background-color: #3B63C4;
-					border-radius: 0 0 16px 16px;	
-					a {
-						position: relative;
-						width: 100%;
-						//width: calc(50% - 2px);
-						display: inline-block;
-						vertical-align: middle;
-						height: 60px;
-						line-height: 60px;
-						text-align: center;
-						&.i-view {
-							&::after {
-								@include font-ico('\e8ff');
-								font-size: 25px;
-								color: #fff;
-							}
-						}
-						&.i-download {
-							&::after {
-								content: "";
-								display: inline-block;
-								vertical-align: middle;
-								width: 24px;
-								height: 24px;
-								background-image: url(/static/eng/img/main/file_save.png);
-							}
-							&::before {
-								content: "";
-								display: inline-block;
-								vertical-align: middle;
-								width: 1px;
-								height: 23px;
-								background-color: rgba(255, 255, 255, 0.2);
-								position: absolute;
-								top: 50%;
-								left: -1px;
-								margin-top: -11px;
-							}
-						}
-					}
+					@include board-bottom();
 				}
 				/* 기능 삭제 */
 				@include breakpoint($lg){
@@ -1167,7 +1181,7 @@
 				@include breakpoint($sm){
 					span {
 						&.txt {
-							height: 84px;
+							height: 99px;
 						}
 					}
 				}						
@@ -1196,6 +1210,42 @@
 							color: #666;
 							margin-right: 5px;
 						}
+					}
+				}
+				.bottom {
+					@include board-bottom();
+				}
+				//추가
+				@include breakpoint($lg){
+					&:hover,
+					&.hover {
+						padding: 16px 16px 80px;
+						.bottom {
+							opacity: 1;
+						}
+						.img-set {
+							.img {
+								padding-top: 63.8%;
+								background-position: 50%;
+								transition: all .5s;
+							}
+						}
+						span {
+							&.txt {
+								@include line-clamp(7);
+								height: 170px;
+							}
+						}
+					}	
+					span {
+						&.txt {
+							@include line-clamp(5);
+							height: 120px;
+							transition: all .5s;
+						}
+					}
+					.bottom {
+						opacity: 0;	
 					}
 				}
 			}
@@ -1370,8 +1420,9 @@
 	#section3 section,
 	#section4 section,
 	#section5 section {
-		padding-top: calc((100vh - (1080px + 194px)) / 2 + 194px);
-		//padding-top: calc((100vh - (778px + 75px)) / 2 + 75px);
+		//padding-top: calc((100vh - (1080px + 194px)) / 2 + 194px);
+		//padding-top: calc((100vh - (778px + 70px)) / 2 + 70px);
+		padding-top: calc((100vh - (778px + 70px)) / 2);
 	}
 
 

@@ -143,7 +143,7 @@ $('#wrap').on('wheel', function (event) {
         if (inMotion === false) {
             clearTimeout(whellTimer);
             inMotion = true
-            console.log("🚀 ~ file: mainsection.js:124 ~ inMotion:", inMotion)
+            //console.log("🚀 ~ file: mainsection.js:124 ~ inMotion:", inMotion)
             whellTimer = setTimeout(function () {
                 mainSectionMoveing(event.originalEvent.deltaY > 0 ? 'down' : 'up');
             }, 150);
@@ -152,7 +152,7 @@ $('#wrap').on('wheel', function (event) {
     }
 });
 $(window).on('keyup', function (e) {
-    console.log(e)
+    //console.log(e)
     e.preventDefault();
     // debugger
     if (!ismobile && $(window).height() > 900) {

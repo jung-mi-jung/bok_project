@@ -197,6 +197,15 @@ $btn: "[class^=b-]";
 			margin-bottom: 3px;
 		}		
 	}
+	&.b-prev {
+		background-color: $color-point;
+		&::before {
+			@include font-ico-outline('\e5e0');
+			margin-right: 15px;
+			margin-bottom: 6px;
+			font-size: 16px;
+		}		
+	}
 }
 .view + .btnSet {
 	[class^=b-] {

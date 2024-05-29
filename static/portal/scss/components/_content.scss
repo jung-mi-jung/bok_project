@@ -1042,7 +1042,14 @@ p.subject {
 		}
 	}
 }
-
+.depart-wrap {
+	.dept-set {
+		padding: 32px 32px 32px 170px;
+		background: #F8F8F8 url(/static/portal/img/ico/ico-org.png) 32px 50% no-repeat;
+		border-radius: 16px;
+		min-height: 120px;
+	}
+}
 
 
 //청탁·이해충돌 방지제도 신고
@@ -1418,8 +1425,7 @@ p.subject {
 //화폐 > 위조방지장치
 .moneyW{
 	clear: both;
-	overflow:hidden;
-	margin:3% 0;
+	overflow:hidden;margin:3% 0;
 	.moneyImg{
 		position:relative;
 		margin:1% 4%;
@@ -2420,6 +2426,30 @@ p.subject {
 		em {
 			font-weight: 600;
 		}
+		.linkType {
+			position: relative;
+			&::after {
+				content: "";
+				display: inline-block;
+				vertical-align: middle;
+				width: 20px;
+				height: 20px;
+				background: url(/static/portal/img/ico/arrow_outward.png) 50% no-repeat;
+				margin-left: 4px;
+				margin-bottom: 8px;
+			}
+			&::before {
+				content: "";
+				display: inline-block;
+				width: 100%;
+				height: 1px;
+				position: absolute;
+				bottom: 3px;
+				left: 0;
+				z-index: 9;
+				background-color: #333;
+			}
+		}
 	}
 	.info-link {
 		margin-top: 40px;
@@ -3374,9 +3404,19 @@ p.subject {
 		display: flex;
 		flex-wrap: wrap;
 		margin: 0 -20px;
+		@include breakpoint($sm){
+			margin: 0 -10px;
+		}
 		li {
 			width: 25%;
 			padding: 20px;
+			@include breakpoint($mdw){
+				width: 33.3%;
+			}
+			@include breakpoint($sm){
+				width: 50%;
+				padding: 10px;
+			}
 			a {				
 				text-align: center;
 				color: #4D4D4D;
@@ -3738,16 +3778,45 @@ p.subject {
 					margin-left: 40px;
 				}
 			}
-		}		
+		}				
 	}
 	.pa2 {
+		@include breakpoint($lg){
+			display: flex;
+			justify-content: space-between;
+		}
 		p {
 			width: 100%;
-			display: flex;
+			//display: flex;
 		}		
-		.inpStyle {
-			width: calc(100% - 100px);
-		}
+		.keyword-set {
+			display: flex;
+			justify-content: space-between;
+			width: calc(100% - 56px);	
+			background-color: #fff;
+			.inpStyle {
+				width: calc(100% - 56px);
+				padding: 0 2px;
+				input {
+					width: 100%;
+				}
+			}
+			.search {
+				text-align: center;
+				width: 56px;
+				background-color: #fff;
+				@include breakpoint($lg){
+					height: 56px;
+					line-height: 56px;
+				}
+				&::before {					
+					@include font-ico-outline("\e8b6");
+					font-size: 26px;
+					color: #222;
+					margin-top: 6px;
+				}
+			}
+		}		
 	}
 }
 .tabType {
@@ -3947,12 +4016,9 @@ p.subject {
 		ul {
 			display: flex;
 			justify-content: space-between;
-			flex-grow: 1;
-			@include breakpoint($smd){
-				flex-wrap: wrap;
-			}
+			flex-wrap: wrap;
 			li {
-				width: 100%;
+				width: 25%;
 				padding-left: 0;
 				@include breakpoint($mdw){
 					width: 33.3%;
@@ -4044,6 +4110,55 @@ p.subject {
 					color: #4D4D4D;
 					text-decoration: underline;
 				}
+			}
+		}
+	}
+}
+
+.select-list {
+	display: flex;
+	flex-wrap: wrap;
+	.list {
+		display: flex;
+		& + .list {
+			
+			margin-left: 20px;
+			@include breakpoint($sm){
+				//margin-left: 0;
+				margin: 3px 0 3px 0;
+			}
+		}
+		@include breakpoint($sm){
+			width: calc(100% - 50px);
+			
+		}
+	}	
+	.btn {
+		margin-left: 5px;
+	}
+}
+
+.vido-round {
+	text-align: center;
+	margin-bottom: 30px;
+	p {
+		display: inline-block;
+		border-radius: 8px;
+		border: 1px solid $bd-color;
+		padding: 10px;
+		img {
+			vertical-align: middle;			
+			@include breakpoint($lg){
+				min-width: 600px;
+			}
+		}
+		.txt {
+			display: block;
+			padding-top: 10px;
+			&::after {
+				@include font-ico-outline('\e89e');
+				margin: 0 0 5px 5px;
+				font-size: 18px;
 			}
 		}
 	}

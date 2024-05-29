@@ -118,7 +118,7 @@ p.subject {
 			text-align:center;
 			&.img2 {
 				img{
-					max-width:120px;
+					//max-width:120px;
 				}
 			}
 			&.imgType {
@@ -1284,9 +1284,11 @@ p.subject {
 
 //CBDC
 .cbdc-top {
+	overflow: hidden;
 	padding: 38px 0;
 	position: relative;
 	text-align: center;
+	margin-bottom: 70px;
 	&::before {
 		content: "";
 		display: inline-block;
@@ -1459,6 +1461,7 @@ p.subject {
 
 //화폐 > 위조방지장치
 .moneyW{
+	clear: both;
 	overflow:hidden;margin:3% 0;
 	.moneyImg{
 		position:relative;
@@ -3624,12 +3627,67 @@ p.subject {
 	}
 }
 
-// .Values_bg {
-// 	position: relative;
-// 	background-color: #0063A5;
-// 	overflow: hidden;
-// 	display: block;
-// 	img {
-// 		float: right;
-// 	}
-// }
+//보유예시 400029
+.img-example {
+	display: flex;
+	justify-content: space-between;
+	p {
+		width: 48%;
+		@include breakpoint(min-width 1480px) {
+			width: auto;
+		}		
+	}
+	@include breakpoint($sm){
+		display: block;
+		text-align: center;		
+		p {
+			width: 100%;
+		}
+	}
+}
+
+
+.histroy3 {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	.his-con {		
+		width: 50%;
+		padding: 16px 0;
+		@include breakpoint($sm){
+			display: block;
+		}		
+		.his-img {
+			position: relative;
+			margin-right: 40px;
+			overflow: hidden;
+			border-radius: 8px;
+			@include breakpoint($lg){
+				//width: 344px;
+			}
+			@include breakpoint($sm){
+				width: 100%;
+				margin-bottom: 20px;
+			}			
+			.img {
+				display: block;
+				padding-top: 70.2%;
+				background-position: 50%;
+				background-size: cover;
+			}
+			.txt {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				text-align: center;
+				padding: 10px;
+				display: block;
+				color: #fff;
+				font-size: rem(18);
+				background-color: rgba(0, 0, 0, 0.5);
+				//@include ellipsis();
+			}
+		}
+	}
+}

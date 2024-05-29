@@ -91,21 +91,24 @@
 @mixin dataInfoSet {	
 	display: flex;
 	justify-content: space-between;
-	//margin: 10px 0 18px;
-	margin-bottom: 18px;
+	margin: 0 0 50px;
+	min-height: 54px;
+	@include breakpoint($smd) {
+		flex-direction: column;
+		min-height: 0;
+	}
 	.dataInfo {
+		position: absolute;
+		top: -34px;
+		right: 0;
+		display: flex;
 		color: #666;
 		@include breakpoint($lg) {
 			position: absolute;
 			top: -44px;
-			right: 0;
+			right: 0;			
 			display: flex;
 		}
-		// @include breakpoint($sm){
-		// 	right: auto;
-		// 	left: 0;
-		// 	width: 100%;
-		// }
 		.ass {
 			color: #3B63C4;
 			font-weight: 500;
@@ -186,13 +189,25 @@
 				border: 1px solid $color-point;
 			}
 		}
-		@include breakpoint($sm){
-			& + dl {
-				position: absolute;
-				top: -5px;
-				left: 0;
-				font-size: 12px;
-			}
+	}
+	.type2 {
+		display: flex;
+		align-items: flex-start;
+		gap: 0 20px;
+	}
+	.type3 {
+		display: flex;
+		align-items: center;
+		gap: 0 20px;
+		@include breakpoint($sm) {
+			flex-wrap: wrap;
+		}
+		dd {
+			display: flex;
+			align-items: center;
+		}
+		i {
+			margin-right: 5px;
 		}
 	}
 	.user {
@@ -242,16 +257,29 @@
 				padding-top: 90px;
 			}			
 		}
+		& + .down {
+			margin-top: 107px;
+			@include breakpoint($smd) {
+				margin-top: 14px;
+			}
+		}
+		& + .card-photo {
+			@include breakpoint($lg){
+				margin-top: 80px;
+			}
+		}
 	}
-	.dataInfoSet {		
+	.dataInfoSet {
 		@include dataInfoSet();
-		@include breakpoint($lg){
-			height: 55px;			
-			align-items: flex-end;
-			margin-top: -18px;
-			margin-bottom: 60px;
-			.type2 {
-				margin-top: -21px;
+		align-items: flex-end;
+		.type2 {
+			margin-top: -16px;
+			flex-direction: column;
+			dt + dd {
+				//margin-top: 4px;
+			}
+			@include breakpoint($smd){
+				margin-top: -4px;
 			}
 		}
 	}
@@ -321,28 +349,31 @@
 		}
 		.down {			
 			display: none;
-			border: 0;
-			padding: 0;
-			background: #FAFAFA;
-			border-radius: 0 0 8px 8px;
-			padding: 16px;
-			a {
-				position: relative;
-				padding-left: 20px;
-				&::before {
-					content: '';
-					position: absolute;
-					top: 10px;
-					left: 6px;
-					width: 4px;
-					height: 4px;
-					background-color: #4D4D4D;
-					border-radius: 50%;
-				}
-				&::before {
-					text-decoration: underline;
-				}
-			}
+			// border: 0;
+			// padding: 0;
+			// background: #FAFAFA;
+			// border-radius: 0 0 8px 8px;
+			// padding: 16px;
+			// a {
+			// 	position: relative;
+			// 	padding-left: 20px;
+			// 	&::before {
+			// 		content: '';
+			// 		position: absolute;
+			// 		top: 10px;
+			// 		left: 6px;
+			// 		width: 4px;
+			// 		height: 4px;
+			// 		background-color: #4D4D4D;
+			// 		border-radius: 50%;
+			// 	}
+			// 	&::before {
+			// 		text-decoration: underline;
+			// 	}
+			// }
+		}
+		& + .view {
+			margin-top: -20px;
 		}
 	}
 	.down {		
@@ -351,7 +382,7 @@
 		background-color: #FAFAFA;
 		padding: 10px 14px;
 		border-bottom: 1px solid #E5E5E5;
-		border-radius: 8px;
+		border-radius: 0 0 8px 8px;
 		&.type2 { //연관검색어 없는 경우
 			margin-top: 50px;
 		}
@@ -359,16 +390,66 @@
 			display: flex;
 			justify-content: space-between;
 		}
+		ul {
+			width: 100%;
+			li {
+				display: flex;
+				justify-content: space-between;
+				border-bottom: 1px solid #E6E6E6;
+				&:last-child {
+					border-bottom: none;
+				}
+			}
+		}
 		a {
 			color: $black;
-			&::before {
-				content: "";
-				display: inline-block;
-				vertical-align: middle;
-				width: 15px;
-				height: 19px;
-				background: url(/static/eng/img/ico/ico-down.png) no-repeat;
-				margin-right: 5px;
+			display: inline-block;
+			padding: 6px 0;
+			font-size: 16px;
+			&:hover {
+				text-decoration: underline;
+			}
+			&.file {
+				&::before {
+					content: "";
+					display: inline-block;
+					vertical-align: middle;
+					width: 15px;
+					height: 19px;
+					background: url(/static/portal/img/ico/ico-down.png) no-repeat;
+					margin-right: 5px;
+				}
+				&:hover {
+					text-decoration: none;
+				}
+				& + .viewer {
+					position: relative;
+					margin-left: 10px;
+					padding-left: 12px;
+					&::after {
+						content: "";
+						display: inline-block;
+						vertical-align: middle;
+						width: 1px;
+						height: 20px;
+						background-color: #a6a6a6;
+						position: absolute;
+						top: 50%;
+						left: 0;
+						margin-top: -10px;
+					}
+				}
+			}
+			&.viewer {
+				&::before {
+					@include font-ico-outline('\e666');
+					color: $black;
+					font-size: 19px;
+					margin-right: 4px;
+				}
+				&:hover {
+					text-decoration: none;
+				}
 			}
 		}
 	}	
@@ -376,6 +457,23 @@
 		border-top: none;
 		border-left: none;
 		border-right: none;
+		dt {
+			border-right: none;
+			background-color: transparent;
+			padding: 0 10px;
+		}
+		dd {
+			position: relative;
+			&::before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 30%;
+				width: 1px;
+				height: 42%;
+				background: #E8EBED;
+			}			
+		}
 		& + .dbdata {
 			padding-top: 0;
 		}

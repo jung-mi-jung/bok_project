@@ -78,6 +78,9 @@
 a {
 	color: $link-color;
 }
+html, body {
+	height: 100%;
+}
 html {
 	font-size: $html-font-size;
 	@include breakpoint($sm){
@@ -123,7 +126,9 @@ i {
 img {
 	max-width: 100%;
 }
-
+.fb {
+	font-weight: 500 !important;
+}
 
 
 .col{float: left;width: 100%;}

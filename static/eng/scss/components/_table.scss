@@ -108,9 +108,17 @@ table {
 	}
 	&.type2 {
 		font-size: rem(18);
-		border-top: 2px solid #182252;
+		@include breakpoint($smd){
+			border-top: 2px solid #182252;
+		}
 		th {
 			padding: 14px 0;
+			@include breakpoint($smd){
+				padding: 8px 0 !important;				
+				&:first-child {
+					border-right: 0 !important;
+				}
+			}
 		}
 		tbody {
 			th {

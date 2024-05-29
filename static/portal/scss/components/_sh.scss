@@ -1,6 +1,9 @@
 //자료 검색형
 .sh-db {
 	margin-bottom: 40px;
+	label {
+		display: flex;
+	}
 	@include breakpoint($lg){
 		position: relative;
 		display: block;
@@ -175,14 +178,40 @@
 				transform: rotate(-180deg);
 			}
 		}  
-	}	
+	}
+	@include breakpoint($smd){
+		.check-wrap {
+			display: none;			
+			&.active {
+				display: block;
+				padding: 0 10px 10px;
+				border: 1px solid $bd-color;
+				background-color: #fff;			
+				label {
+					width: 50%;
+					// flex-basis: 50%;
+					// width: 50%;
+					// padding: 0 4px;
+					input[type=checkbox] + i {
+						margin-left: -15px;
+					}
+				}
+			}
+			.check-list {
+				.label-list {
+					flex-direction: row;
+				}
+				&.details {
+					display: block;
+					label {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
 	.check-list {
 		position: relative;
-		@include breakpoint($smd){
-			// h3 {
-			// 	display: none;
-			// }
-		}
 		.label-list {
 			display: flex;
 			flex-wrap: wrap;
@@ -219,55 +248,9 @@
 					}
 				}
 			}
-		}		
-		.check-ctrl  {
-			display: none;  //미작업으로 일단 none 처리
-		}
-		@include breakpoint($smd){ 			
-			.label-list {
-				//display: none;
-				flex-direction: row;
-				&.active {
-					display: flex;
-					position: absolute;
-					top: 36px;
-					left: 0;
-					width: 100%;
-					z-index: 9;
-					background-color: #fff;
-				}
-				label {
-					width: 100%;
-					// flex-basis: 50%;
-					// width: 50%;
-					// padding: 0 4px;
-					input[type=checkbox] + i {
-						margin-left: -15px;
-					}
-				}
-			}
-			&.details {
-				.check-ctrl  {
-					display: none;  //미작업으로 
-					margin-top: 5px;
-				}				
-			}
-		}
-		&.details {
-			//display: none;  //임시 주석
 		}
 	}	
 	.details-list {
-		@include breakpoint($smd){
-			// position: absolute;
-			// top: 36px;
-			// left: 0;
-			// width: 100%;
-			// border: 1px solid #d9d9d9;
-			// z-index: 9;
-			// background-color: #fff;
-			// padding: 4px;
-		}
 		.depth3 {  //[class^=m-0]
 			//display: none;
 			&.on {
@@ -279,18 +262,36 @@
 				}		
 				> li {
 					position: relative;
-					//display: none;  //임시 주석
-					margin: 7px 0 14px;
+					//display: none;
+					padding: 7px 0 10px;
 					&::before {
 						content: "";
 						display: inline-block;
 						width: 1px;
-						height: calc(100% - 35px);
+						height: 100%;
 						background-color: #E6E6E6;
 						position: absolute;
-						top: 22px;
+						top: -11px;
 						left: 12px;
-					}		
+					}
+					&:first-child  {
+						&::before {
+							top: 10px;
+						}
+						+ &:last-child {
+							&::before {
+								display: none;
+							}
+						}
+					}
+					&:last-child {
+						&::before {
+							height: 45px;
+						}
+					}
+					input[type=radio] + i + span {
+						width: calc(100% - 34px);
+					}
 					input[type=radio]:checked + i{
 						&:before {
 							width: 10px;
@@ -299,6 +300,7 @@
 						}
 						& + span {
 							text-decoration: none;
+							margin-right: 0;
 						}
 					}	
 					> button {
@@ -334,9 +336,8 @@
 						}
 					}
 					.depth4 {
-						//display: none;
 						position: relative;
-						&::before {
+						/*&::before {
 							content: "";
 							display: inline-block;
 							width: 20px;
@@ -345,7 +346,7 @@
 							position: absolute;
 							bottom: 13px;
 							left: 13px;
-						}
+						}*/
 						input[type=radio],
 						input[type=radio] + i {
 							width: 20px;
@@ -358,7 +359,7 @@
 							margin-top: -1px;
 						}
 						ul.sub-m {
-							margin: 7px 0 20px;
+							margin: 7px 0 0;
 							padding-left: 22px;
 							li {
 								position: relative;
@@ -831,6 +832,11 @@
 					@include breakpoint($sm){
 						padding: 5px 15px;
 						height: 40px;
+					}
+					&:hover,
+					&:focus {
+						position: relative;
+						z-index: 1;
 					}
 				}
 			}		

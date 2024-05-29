@@ -62,14 +62,92 @@
 	background-position-y: -3px;
 }
 
+@mixin dataInfo {
+	position: absolute;
+	top: 14px;
+	right: 10px;
+	@include breakpoint($sm){
+		position: static;
+	}		
+	span {
+		display: inline-block;
+		& + span {
+			position: relative;
+			padding-left: 14px;
+			margin-left: 12px;
+			&::after {
+				content: "";
+				display: inline-block;
+				vertical-align: middle;
+				width: 1px;
+				height: 14px;
+				background-color: #bdbcbc;
+				position: absolute;
+				top: 50%;
+				left: 0;
+				margin-top: -7px;
+			}
+		}
+	}
+	.depart {
+		&::before {
+			content: "";
+			display: inline-block;
+			vertical-align: middle;
+			width: 20px;
+			height: 20px;
+			background: url(/static/portal/img/ico/ico-depart.png) no-repeat;
+			margin-right: 5px;
+			@include breakpoint($sm){
+				background-size: auto 14px;
+			}
+		}
+	}
+	.date {
+		color: #767676;
+		&::before {
+			content: "";
+			display: inline-block;
+			vertical-align: middle;
+			width: 16px;
+			height: 16px;
+			background: url(/static/portal/img/ico/ico-date.png) no-repeat;
+			margin-right: 5px;
+			@include breakpoint($sm){
+				background-size: auto 14px;
+			}
+		}
+	}
+	.hits {
+		color: #767676;
+		min-width: 86px;
+		text-align: center;
+		&::before {
+			content: "";
+			display: inline-block;
+			vertical-align: middle;
+			width: 14px;
+			height: 16px;
+			background: url(/static/portal/img/ico/ico-hits.png) no-repeat;
+			margin-right: 5px;
+			@include breakpoint($sm){
+				background-size: auto 14px;
+			}
+		}
+	}
+}
+
 .bd-line {
 	clear: both;
+	.dataInfo {
+		@include dataInfo();
+	}	
 	> ul {		
 		> li {
 			position: relative;
 			padding: 15px 15px 10px 15px;
 			border-bottom: 1px solid #D9D9D9;
-			min-height: 113px;
+			min-height: 92px;
 			@include breakpoint($sm){
 				padding: 15px 8px 10px;
 			}
@@ -99,16 +177,17 @@
 					display: block;
 				}
 				.title {
-					width: calc(100% - 250px);
+					//width: calc(100% - 150px);
+					width: 100%;
 					@include ellipsis;
 					color: #222;
 					font-size: rem(20);
 					@include breakpoint($sm){
 						font-size: rem(16);
-						width: 100%;
-						margin-bottom: 8px;
-						@include line-clamp(3);
-						white-space: inherit;
+						//width: 100%;
+						//margin-bottom: 8px;
+						// @include line-clamp(3);
+						// white-space: inherit;
 					}
 				}
 				.btns {
@@ -160,9 +239,6 @@
 						}
 					}
 				}
-			}
-			.date {
-				color: #767676;
 			}
 			.ico-reply-ing {
 				color: $red;
@@ -522,10 +598,13 @@
 
 //기존 게시판
 .bdLine {
+	.dataInfo {
+		@include dataInfo();
+	}
 	> ul {
 		> li {	
 			position: relative;			
-			border-bottom: 1px solid #D9D9D9;
+			border-bottom: 1px solid #D9D9D9;			
 			> .row {
 				padding: 15px 15px 10px 15px;
 			}
@@ -553,34 +632,34 @@
 				}
 			}
 			.dataInfo {
-				margin-top: 20px;
+				//margin-top: 20px;
 				span {
 					display: inline-block;
 				}
-				.date {
-					color: #767676;
-					&::before {
-						content: "";
-						display: inline-block;
-						vertical-align: middle;
-						width: 16px;
-						height: 16px;
-						background: url(/static/portal/img/ico/ico-date.png) no-repeat;
-						margin-right: 5px;
-					}
-				}
-				.hits {
-					margin-left: 20px;
-					&::before {
-						content: "";
-						display: inline-block;
-						vertical-align: middle;
-						width: 14px;
-						height: 16px;
-						background: url(/static/portal/img/ico/ico-hits.png) no-repeat;
-						margin-right: 5px;
-					}
-				}
+				// .date {
+				// 	color: #767676;
+				// 	&::before {
+				// 		content: "";
+				// 		display: inline-block;
+				// 		vertical-align: middle;
+				// 		width: 16px;
+				// 		height: 16px;
+				// 		background: url(/static/portal/img/ico/ico-date.png) no-repeat;
+				// 		margin-right: 5px;
+				// 	}
+				// }
+				// .hits {
+				// 	margin-left: 20px;
+				// 	&::before {
+				// 		content: "";
+				// 		display: inline-block;
+				// 		vertical-align: middle;
+				// 		width: 14px;
+				// 		height: 16px;
+				// 		background: url(/static/portal/img/ico/ico-hits.png) no-repeat;
+				// 		margin-right: 5px;
+				// 	}
+				// }
 				.ico-reply-ing {
 					color: $red;
 					margin-left: 20px;
@@ -649,5 +728,38 @@
 				}
 			}
 		}			
+	}
+	&.type2 {
+		> ul {
+			> li {
+				min-height: 92px;
+				padding: 14px 0;
+				.row {
+					padding: 0 15px;
+				}
+				.dataInfo {
+					top: 50%;
+					margin-top: -13px;
+				}
+			}
+		}
+		&.type3 { //첨부파일 있는경우 (class는 스크립트 처리)
+			> ul {
+				> li {
+					min-height: 92px;
+					.fileLink {
+						top: auto;
+						bottom: 15px;
+						@include breakpoint($sm){
+							bottom: 10px;
+						}
+					}
+					.dataInfo {
+						top: 15px;
+						margin-top: 0;
+					}
+				}
+			}
+		}
 	}	
 }

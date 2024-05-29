@@ -6,6 +6,22 @@ $(function () {
 	$('#header, #gnb a').on('mouseleave', function () {
 		$('#header').removeClass('over');
 	});
+
+	var $window = $(window);
+	// gnb stiky
+	function goToScroll() {
+		// 주 메뉴
+		var h = 147;
+		if ($(window).scrollTop() > h) {
+			$('body').addClass('gnb-stiky');
+		} else {
+			$('body').removeClass('gnb-stiky');
+		}
+	}
+	$(window).on('scroll', function () {
+		goToScroll();
+	});
+	goToScroll();
 });
 
 $(function () {
@@ -34,35 +50,6 @@ $(function () {
 				translate: ["100%", 0, 0],
 			},
 		},
-		// creativeEffect: {
-		// 	prev: {
-		// 		shadow: true,
-		// 		origin: "left center",
-		// 		translate: ["-5%", 0, -200],
-		// 		rotate: [0, 100, 0],
-		// 	},
-		// 	next: {
-		// 		origin: "right center",
-		// 		translate: ["5%", 0, -200],
-		// 		rotate: [0, -100, 0],
-		// 	},
-		// },
-		grabCursor: true,		
-		//effect: "creative",
-		/*effect: "fade",
-		fadeEffect: { 
-			crossFade: true 
-		},
-		creativeEffect: {
-			prev: {
-				shadow: true,
-				translate: ["-20%", 0, -1],
-			},
-			next: {
-				translate: ["100%", 0, 0],
-			},
-		},*/
-
 		// Navigation arrows
 		navigation: {
 			nextEl: '.section1-visual__swiper-button-next',
@@ -100,6 +87,7 @@ $(function () {
 			slideLabelMessage: '총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.',
 		},
 	});
+	section1Visual.init();//초기화
 	//메인 비쥬얼 영역 progress 추가 설정
 	section1Visual.on('slideChange',function(){
 
@@ -108,7 +96,7 @@ $(function () {
 			
 		}
 		$(".progress").removeClass('active first');
-		console.log($(".progress").offset());
+		//console.log($(".progress").offset());
 		
 		$(".progress").addClass('active');
 	});
@@ -151,23 +139,23 @@ $(function () {
         // centeredSlides: true,
         spaceBetween: 30,
         loopAdditionalSlides: 1,
-        // breakpoints: {
-        //     // window 넓이 640px ~ 767px
-        //     320: {
-        //         slidesPerView: 1,
-        //         spaceBetween: 10,
-        //     },
-        //     // window 넓이 768px ~ 1023px
-        //     768: {
-        //         slidesPerView: 2.5,
-        //         spaceBetween: 30,
-        //     },
-        //     // window 넓이 1024px ~
-        //     1024: {
-        //         slidesPerView: 'auto',
-        //         spaceBetween: 30,
-        //     },
-        // },
+        breakpoints: {
+            // window 넓이 640px ~ 767px
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+            },
+            // window 넓이 768px ~ 1023px
+            768: {
+                slidesPerView: 'auto',
+                spaceBetween: 30,
+            },
+            // window 넓이 1024px ~
+            1200: {
+                slidesPerView: 'auto',
+                spaceBetween: 30,
+            },
+        },
         navigation: {
             prevEl: '.issue-prev',
             nextEl: '.issue-next',
@@ -357,10 +345,11 @@ $(function () {
 
 
 	//웹접근성 포커스
-	$(".board-list1 .swiper-slide").on('mouseover focusin', function (e) {
+	var boardHover = $(".board-list1 .swiper-slide, .board-list2 .swiper-slide");
+	boardHover.on('mouseover focusin', function (e) {
 		$(this).addClass("hover").siblings().removeClass("hover");
 	});
-	$(".board-list1 .swiper-slide").on('mouseleave', function (e) {
+	boardHover.on('mouseleave', function (e) {
 		$(this).removeClass("hover");
 	});
 });

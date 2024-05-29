@@ -94,35 +94,39 @@ $(function () {
 		$(".video-etc .btn_view").show();
 		$(".video-etc .btn_view").focus();
 	});
+
 });
 
+
 $(document).ready(function() {
-	const container = $('.go_link');
-	const buttons = container.find('a');
-	let paddingPercentage = 2; // 초기 패딩 비율 (예시로 5%로 설정)
-  
-	// 패딩 비율을 업데이트하는 함수
+	const container = $(".go_link");
+	const buttons = container.find("a");
+	let paddingPercentage = 2.4; //패딩 비율(예시로 설정)
+
+	
 	function updatePadding() {
-	  // 컨테이너의 너비를 기준으로 패딩 값을 계산
-	  const paddingValue = container.width() * paddingPercentage / 100;
-  
-	  // 각 버튼에 패딩 적용
-	  buttons.each(function(index) {
-		if (index === 0) {
-		  $(this).css('padding-right', paddingValue + 'px');
-		} else if (index === buttons.length - 1) {
-		  $(this).css('padding-left', paddingValue + 'px');
-		} else {
-		  $(this).css('padding', '0 ' + paddingValue + 'px');
-		}
-	  });
+		const paddingValue = container.width() * paddingPercentage / 100;
+		
+		buttons.each(function(index) {
+			if (index === 0) {
+				$(this).css('padding-right', paddingValue + 'px');
+			} else if (index === buttons.length - 1) {
+				$(this).css('padding-left', paddingValue + 'px');
+			} else {
+				$(this).css('padding-left', '0' + paddingValue + 'px');
+				$(this).css('padding-right', '0' + paddingValue + 'px');
+			}
+		});
 	}
-  
-	// 창 크기 변경 시 패딩 업데이트
-	$(window).resize(function() {
-	  updatePadding();
+	//창 크기 변경시 패딩 업데이트
+	$(window).resize(function(){
+		updatePadding();
 	});
-  
-	// 초기 패딩 설정
+
+	//초기 패딩 설정
 	updatePadding();
-  });
+
+
+	
+
+});

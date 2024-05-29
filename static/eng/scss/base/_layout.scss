@@ -173,7 +173,7 @@ body.gnbOver {
 								display: none;
 								width: 280px;
 								position: absolute;
-								top: 37px;
+								top: 52px;
 								left: -100%;
 								margin-left: -80px;
 								border: 1px solid #3B63C4;
@@ -303,13 +303,14 @@ body.gnbOver {
 	.hgroup {
 		//@include hide();
 		font-size: rem(20);
+		h1 {
+			line-height: 1.2;
+		}
 	}
 	.navigation {
 		.sub-_visual {
 			div {
-				@include breakpoint($lg){
-					padding-top: 44px;
-				}
+				padding: 30px 10px 0; 
 				h1 {
 					font-weight: 600;
 				}
@@ -318,20 +319,23 @@ body.gnbOver {
 	}
 	#main-container h2 {
 		color: $black;
+		line-height: 1;
 	}
 	.bd-view {		
 		@include breakpoint($lg){
-			margin-top: -156px;
+			margin-top: -148px;
 		}
 		.subject {
-			@include breakpoint($lg){
-				width: calc(100% - 312px);
-				height: 80px;
-				overflow: hidden;
-			}
-			margin-bottom: 0 !important;			
-			@include breakpoint($sm){
-				width: 100%;
+			width: 100%;
+			height: 82px;
+			@include line-clamp(2);
+			margin-bottom: 0 !important;
+			font-size: rem(32) !important;
+			& + .down-set {
+				margin-top: 107px;
+				@include breakpoint($smd) {
+					margin-top: 14px;
+				}
 			}
 		}
 		.dataInfoSet .keyword a {
@@ -339,6 +343,94 @@ body.gnbOver {
 		}
 	}
 }
+@include breakpoint($smd) {
+	.bd-body {
+		.navigation {
+			border-bottom: 0;
+			.sub-_visual {
+				// width: calc(100% - 20px);
+				min-height: 96px;
+				padding: 16px;
+				margin: 0 auto;
+				background-color: #CBDEF4;
+				display: flex;
+				align-items: center;
+				div {
+					padding: 0; 
+					h1 {
+						text-align: center;
+						line-height: 1.5;		
+					}
+				}
+			}
+		}
+		.bd-view {
+			.subject {
+				height: auto;
+				font-size: rem(20) !important;
+				overflow:visible;
+				text-overflow: initial;
+				display: block;
+				-webkit-line-clamp: initial;
+				-webkit-box-orient: initial;
+				margin-bottom: 0 !important;
+				margin-top: 54px !important;
+				padding-top: 16px;
+				border-top: 1px solid #e5e5e5;
+				& + .dataInfoSet {
+					display: flex;
+					align-items: flex-start;
+					margin: 16px 0;
+					.dataInfo {
+						top: -38px;
+						font-size: rem(14);
+					}
+					.keyword {
+						position: relative;
+						order: 3;
+						width: 100%;
+						margin-top: 16px;
+						padding: 16px 6px;
+						background: #fafafa;
+						&::before {
+							content: "";
+							display: block;
+							position: absolute;
+							top: 0;
+							left: -10px;
+							width: 10px;
+							height: 100%;
+							background: #fafafa;
+						}
+						&::after {
+							content: "";
+							display: block;
+							position: absolute;
+							top: 0;
+							right: -10px;
+							width: 10px;
+							height: 100%;
+							background: #fafafa;
+						}
+						&.noKeyword {
+							padding: 0;
+							background: #fff;
+							&::before,
+							&::after {
+								display: none;
+							}
+						}
+					}
+					.type2 {
+						order: 2;
+						font-size: rem(14);
+					}
+				}
+			}
+		}
+	}
+}
+
 
 // 일반형 게시판 상세 페이지일 경우
 .bd-view_wrap {
@@ -376,6 +468,9 @@ body.gnbOver {
 	}
 	.hgroup { //기존 소스 삭제
 		display: none;
+	}
+	&.bd-view_wrap {
+		margin-top: 0;
 	}
 }
 
@@ -580,21 +675,21 @@ body.gnbOver {
 		.totalnav-logo {
 			display: flex;
 			position: relative;
-			width: 160px;
-			height: 52px;
-			background: url(/static/eng/img/common/logo-totalNav.png) center center no-repeat;
+			width: 208px;
+			height: 60px;
+			background: url(/static/eng/img/common/logo.png) 50% no-repeat;
 			margin-right: 24px;
-			&::before {
-				content: "";
-				position: absolute;
-				display: block;
-				width: 1px;
-				height: 36px;
-				background: $color-point;
-				top: 50%;
-				right: -24px;
-				transform: translateY(-50%);
-			}
+			// &::before {
+			// 	content: "";
+			// 	position: absolute;
+			// 	display: block;
+			// 	width: 1px;
+			// 	height: 36px;
+			// 	background: $color-point;
+			// 	top: 50%;
+			// 	right: -24px;
+			// 	transform: translateY(-50%);
+			// }
 		}
 		.close {
 			position: absolute;
@@ -666,7 +761,9 @@ body.gnbOver {
 		}
 	}
 	.modal-body {
-		padding: 50px 0;
+		height: calc(100% - 100px);
+		padding: 44px 48px;
+		overflow-y: auto;
 		.container {
 			max-width: 1680px;
 			align-items: stretch !important;
@@ -683,7 +780,7 @@ body.gnbOver {
 		.dp1 {
 			flex: 1;
 			> li {
-				font-size: rem(28);
+				font-size: 26px;
 				font-weight: 500;
 				> a {
 					color: #333333;
@@ -700,9 +797,9 @@ body.gnbOver {
 			}
 		}
 		.dp2 {
-			margin-top: 24px;
+			margin-top: 16px;
 			> li {
-				font-size: rem(20);
+				font-size: 18px;
 				padding: 6px 0;
 				> a {
 					color: #26447D;
@@ -713,7 +810,7 @@ body.gnbOver {
 			margin-top: 6px;
 			> li {
 				position: relative;
-				font-size: rem(18);
+				font-size: 16px;
 				padding: 4px 0 4px 4px;
 				&::before {
 					content: "";
@@ -770,7 +867,7 @@ body.gnbOver {
 			display: none;
 			> li {
 				position: relative;
-				font-size: rem(16);
+				font-size: 14px;
 				padding: 4px 0 4px 16px;
 				&::before {
 					content: "- ";
@@ -886,7 +983,7 @@ body.gnbOver {
 				background-size: contain;
 			}
 			.modal-title {
-				font-size: rem(24);
+				font-size: 24px;
 			}
 		}
 		.container {
@@ -910,17 +1007,20 @@ body.gnbOver {
 				grid-template-columns: repeat(1, 1fr);
 			}
 			.dp1 > li{
-				font-size: rem(24);
+				font-size: 24px;
 			}
 			.dp2 {
 				margin-top: 10px;
 				margin-bottom: 40px;
 				> li {
-					font-size: rem(20);
+					font-size: 20px;
 				}
 			}
 			.dp3 > li {
-				font-size: rem(18);
+				font-size: 18px;
+			}
+			.dp4 > li {
+				font-size: 16px;
 			}
 		}
 		
@@ -992,7 +1092,9 @@ body.gnbOver {
 .admin-set {	
 	clear: both;
 	width: 100%;
-	padding-top: 60px;
+	max-width: 1440px;
+	margin: 0 auto;
+	padding: 60px 0;
 	@include breakpoint($smd){
 		padding-top: 20px;
 	}
@@ -1003,6 +1105,8 @@ body.gnbOver {
 		border: 1px solid #BFBFBF;
 		@include breakpoint($smd){
 			display: block;
+			text-align: center;
+			padding-bottom: 10px;
 		}
 		.title {
 			text-align: center;
@@ -1029,11 +1133,11 @@ body.gnbOver {
 				height: 22px;
 				background: url(/static/eng/img/common/ico_edit_square.png) 50% no-repeat;
 				margin-right: 8px;
-				margin-bottom: 1px;
-				@include breakpoint($sm){
+				@include breakpoint($smd){
 					width: 15px;
 					height: 15px;
 					background-size: 15px;
+					margin-bottom: 5px;
 				}
 			}
 		}
@@ -1041,12 +1145,14 @@ body.gnbOver {
 			display: flex;
 			align-items: center;
 			padding: 20px 30px;
+			text-align: left;
 			@include breakpoint($smd){
 				display: block;
-				padding: 10px 3px;
+				padding: 10px 0 0;
+				margin-bottom: 5px;
 			}
 			label {
-				@include breakpoint($sm){
+				@include breakpoint($smd){
 					&:first-child {
 						margin-left: 14px;
 					}
@@ -1070,8 +1176,8 @@ body.gnbOver {
 			}
 			@include breakpoint($smd){
 				label {
-					width: 100%;
 					margin: 3px 0;
+					width: 100%;
 				}
 			}
 		}
@@ -1672,7 +1778,8 @@ body.gnbOver {
 		}
 		.search_keyword {
 			border: 0;
-			width: calc(100% - 70px);
+			width: 100%;
+			//width: calc(100% - 70px);
 			height: 40px;
 			padding: 0 15px;
 			&:focus {
@@ -1691,16 +1798,21 @@ body.gnbOver {
 		.tt-menu,
 		.dqAuto {
 			position: absolute;
-			top: 74px;
-			left: 0;
+			// top: 74px;
+			// left: 0;
+			top: calc(100% + 18px) !important;
+			left: 50% !important;
+			transform: translateX(-50%);
 			z-index: 1;
 			border: 1px solid #BDBCBC;
 			border-width: 0 1px 1px;
 			border-radius: 0 0 8px 8px;
 			padding: 15px;
 			background-color: #fff;
-			margin: 0 30px;
-			width: calc(100% - 60px);
+			//margin: 0 30px;
+			//width: calc(100% - 60px);
+			margin-top: 1px;
+			width: 100%;			
 			.autoList {
 				max-height: 180px;
 				overflow-y: auto;
@@ -1732,6 +1844,15 @@ body.gnbOver {
 					}
 				}
 			}
+			.tt-suggestion {
+				cursor: pointer !important;
+				&:hover {
+					background-color: #ebf3eb !important;
+				}
+			}
+			.tt-highlight {
+				color: #005596 !important;
+			}
 		}
 	}
 	.search_close {
@@ -1747,7 +1868,10 @@ body.gnbOver {
 }
 
 .content {
-	margin-bottom: 30px;
+	@include breakpoint($lg){
+		min-height: 560px;
+	}
+	//margin-bottom: 30px;
 	p {
 		margin-bottom: 12px;
 	}	
