@@ -388,6 +388,12 @@ $(function () {
 		'200899',
 
 
+		//5.31 수정
+		//200843, 200970
+
+
+
+
     ]
     link.forEach(element => {
         let _s = element.split('/')

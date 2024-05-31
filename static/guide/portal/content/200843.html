@@ -1,14 +1,10 @@
 <h2>화폐전시실</h2>
 
-
-
-<!-- <link rel="stylesheet" href="/static/jslibrary/videojs/video-js.css">
-<script src="/static/jslibrary/videojs/video.js"></script>
-<script src="/static/jslibrary/videojs/flash/videojs-flash.min.js"></script>
-<script src="/static/jslibrary/videojs/videojs-contrib-hls.min.js"></script>
-<script src="/static/jslibrary/videojs/Youtube.min.js"></script> -->
-
-
+<link href="https://www.bok.or.kr/static/jslibrary/videojs/video-js.css" rel="stylesheet">
+<script src="https://www.bok.or.kr/static/jslibrary/videojs/video.js"></script>
+<script src="https://www.bok.or.kr/static/jslibrary/videojs/flash/videojs-flash.min.js"></script>
+<script src="https://www.bok.or.kr/static/jslibrary/videojs/videojs-contrib-hls.min.js"></script>
+<script src="https://www.bok.or.kr/static/jslibrary/videojs/Youtube.min.js"></script>
 
 <div class="ico-box ico1">
 	<p>한국은행 대구경북본부의 화폐전시실은 우리나라 화폐가 시대별로 전시되어 있는 &ldquo;우리화폐전시실&rdquo;과 세계 화폐가 테마별로 구분 정리되어 있는 &ldquo;세계화폐전시실&rdquo;으로 구성되어 있으며 2,300여점의 다양한 전시물이 전시되어 있습니다.</p>
@@ -28,25 +24,25 @@
 	<div class="serList">
 		<ul>
 			<li>
-				<a href="javascript:void(0)" title="하단에 영상 보기">
+				<a href="javascript:void(0)" title="하단에 영상 보기" id="video_1">
 					<span class="img" style="background-image: url('/static/portal/img/sub/zone/img_200843_01.jpg');"></span>
 					<span class="txt">대구경북본부 화폐전시실 소개</span>
 				</a>
 			</li>
 			<li>
-				<a href="javascript:void(0)" title="하단에 영상 보기">
+				<a href="javascript:void(0)" title="하단에 영상 보기" id="video_2">
 					<span class="img" style="background-image: url('/static/portal/img/sub/zone/img_200843_02.jpg');"></span>
 					<span class="txt">대구경북본부 화폐전시실 랜선투어 1(최초의 한국은행권)</span>
 				</a>
 			</li>
 			<li>
-				<a href="javascript:void(0)" title="하단에 영상 보기">
+				<a href="javascript:void(0)" title="하단에 영상 보기" id="video_3">
 					<span class="img" style="background-image: url('/static/portal/img/sub/zone/img_200843_03.jpg');"></span>
-					<span class="txt"> 대구경북본부 화폐전시실 랜선투어 2 (최단명 은행권)</span>
+					<span class="txt">대구경북본부 화폐전시실 랜선투어 2 (최단명 은행권)</span>
 				</a>
 			</li>
 			<li>
-				<a href="javascript:void(0)" title="하단에 영상 보기">
+				<a href="javascript:void(0)" title="하단에 영상 보기" id="video_4">
 					<span class="img" style="background-image: url('/static/portal/img/sub/zone/img_200843_04.jpg');"></span>
 					<span class="txt">대구경북본부 화폐전시실 랜선투어 3 (최초의 기념주화와 기념지폐)</span>
 				</a>
@@ -54,13 +50,23 @@
 		</ul>
 	</div>
 
-	<div class="">
-		<div class="con">
+	<div class="con_video">
+		<div class="con video_1">
 
-			<div class="videoSet">		
+			<h4>대구경북본부 화폐전시실 소개</h4>
+			<div class="videoSet pt10">		
 				<div class="video mb20 video1">
-					<video id="bokPlayer1" class="video-js vjs-4-3 vjs-default-skin" controls="controls" poster=""></video>
+					<video id="bokPlayer1" class="video-js vjs-4-3 vjs-default-skin" controls="controls" poster="https://nwww.bok.or.kr/crosseditor/attachs/images/000012/dk_sum.jpg"></video>
 				</div>
+				
+				<!-- <div class="subtitle">
+					<h3>자막</h3>
+					<button type="button" title="자막 접기" class="active"></button>
+					<div class="con scrollY">
+						자막 넣는곳
+					</div>
+				</div> -->
+
 				<script>
 					var player, play_type;
 					var options = {hls:{withCredentials:false}}
@@ -93,22 +99,27 @@
 						return _fileExt;
 					}
 				</script> 
-				<div class="subtitle">
-					<h3>자막</h3>
-					<button type="button" title="자막 접기" class="active"></button>
-					<div class="con scrollY">
-						자막..............
-					</div>
-				</div>
+			
+				
 			</div>	
 		</div>
 
-		<div class="con">
+		<div class="con video_2">
 
-			<div class="videoSet">		
+			<h4>대구경북본부 화폐전시실 랜선투어 1(최초의 한국은행권)</h4>
+			<div class="videoSet pt10">		
 				<div class="video mb20 video2">
-					<video id="bokPlayer2" class="video-js vjs-4-3 vjs-default-skin" controls="controls" poster=""></video>
+					<video id="bokPlayer2" class="video-js vjs-4-3 vjs-default-skin" controls="controls" poster="https://nwww.bok.or.kr/crosseditor/attachs/images/000016/1.jpg"></video>
 				</div>
+
+				<!-- <div class="subtitle">
+					<h3>자막</h3>
+					<button type="button" title="자막 접기" class="active"></button>
+					<div class="con scrollY">
+						자막 넣는곳
+					</div>
+				</div> -->
+				
 				<script>
 					var player, play_type;
 					var options = {hls:{withCredentials:false}}
@@ -140,22 +151,133 @@
 						var _fileExt = filename.substring(_lastDot, _fileLen).toLowerCase();
 						return _fileExt;
 					}
-				</script> 
-				<div class="subtitle">
+				</script>				
+				
+			</div>	
+		</div>
+
+
+		<div class="con video_3">
+
+			<h4>대구경북본부 화폐전시실 랜선투어 2 (최단명 은행권)</h4>
+			<div class="videoSet pt10">		
+				<div class="video mb20 video3">
+					<video id="bokPlayer3" class="video-js vjs-4-3 vjs-default-skin" controls="controls" poster="https://nwww.bok.or.kr/crosseditor/attachs/images/000016/2.jpg"></video>
+				</div>
+
+				<!-- <div class="subtitle">
 					<h3>자막</h3>
 					<button type="button" title="자막 접기" class="active"></button>
 					<div class="con scrollY">
-						자막..............
+						자막 넣는곳
 					</div>
-				</div>
+				</div> -->
+				
+				<script>
+					var player, play_type;
+					var options = {hls:{withCredentials:false}}
+					var play_src = '/movie.mp4'
+					var play_src = 'https://media.bok.or.kr/vod/_definst_/mp4:lib/2021/06/CID20210609171213229_w.mp4/playlist.m3u8'
+					var opt = 'video3';
+					var fileExt = getExtensionOfFilename(play_src);
+					if(fileExt == ".mp4"){
+						play_type = "video/mp4";
+					}else{
+						play_type = "application/x-mpegURL";	
+					}
+					
+					player = videojs('bokPlayer3',{muted:true,autoplay: false,flash:options, html5:options});
+					player.muted()
+					player.ready(function(){
+						player.muted()
+						//player.play()
+						this.src({
+							src:play_src,
+							type:play_type
+						});
+						//$('.vjs-big-play-button').trigger('click')
+					});
+					
+					function getExtensionOfFilename(filename){
+						var _fileLen = filename.length;
+						var _lastDot = filename.lastIndexOf('.');
+						var _fileExt = filename.substring(_lastDot, _fileLen).toLowerCase();
+						return _fileExt;
+					}
+				</script>
+		
 			</div>	
 		</div>
+
+		<div class="con video_4">
+
+			<h4>대구경북본부 화폐전시실 랜선투어 3 (최초의 기념주화와 기념지폐)</h4>
+			<div class="videoSet pt10">		
+				<div class="video mb20 video4">
+					<video id="bokPlayer4" class="video-js vjs-4-3 vjs-default-skin" controls="controls" poster="https://nwww.bok.or.kr/crosseditor/attachs/images/000016/3.jpg"></video>
+				</div>
+
+				<!-- <div class="subtitle">
+					<h3>자막</h3>
+					<button type="button" title="자막 접기" class="active"></button>
+					<div class="con scrollY">
+						자막 넣는곳
+					</div>
+				</div> -->
+				
+				<script>
+					var player, play_type;
+					var options = {hls:{withCredentials:false}}
+					var play_src = '/movie.mp4'
+					var play_src = 'https://media.bok.or.kr/vod/_definst_/mp4:lib/2021/06/CID20210609171257791_w.mp4/playlist.m3u8'
+					var opt = 'video3';
+					var fileExt = getExtensionOfFilename(play_src);
+					if(fileExt == ".mp4"){
+						play_type = "video/mp4";
+					}else{
+						play_type = "application/x-mpegURL";	
+					}
+					
+					player = videojs('bokPlayer4',{muted:true,autoplay: false,flash:options, html5:options});
+					player.muted()
+					player.ready(function(){
+						player.muted()
+						//player.play()
+						this.src({
+							src:play_src,
+							type:play_type
+						});
+						//$('.vjs-big-play-button').trigger('click')
+					});
+					
+					function getExtensionOfFilename(filename){
+						var _fileLen = filename.length;
+						var _lastDot = filename.lastIndexOf('.');
+						var _fileExt = filename.substring(_lastDot, _fileLen).toLowerCase();
+						return _fileExt;
+					}
+				</script>		
+			</div>
+		</div>
 	</div>
+
+	<script>
+
+	$(function(){
+		$(".con_video .con").hide();
+		$('.serList a').each(function(index) {
+			$(".serList a#video_"+index).click(function(){
+				$(".con_video .con.video_"+index).show().siblings().hide();
+			})
+		})
+
+		//마지막 버튼 안되는 현상 보완 (마지막꺼 따로 추가됨)
+		$(".serList a#video_4").click(function(){
+			$(".con_video .con.video_4").show().siblings().hide();
+		})
+		
+	})
+
+	</script>
+
 </div>
-
-<link href="https://www.bok.or.kr/static/jslibrary/videojs/video-js.css" rel="stylesheet">
-<script src="https://www.bok.or.kr/static/jslibrary/videojs/video.js"></script>
-<script src="https://www.bok.or.kr/static/jslibrary/videojs/flash/videojs-flash.min.js"></script>
-<script src="https://www.bok.or.kr/static/jslibrary/videojs/videojs-contrib-hls.min.js"></script>
-<script src="https://www.bok.or.kr/static/jslibrary/videojs/Youtube.min.js"></script>
-

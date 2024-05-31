@@ -48,6 +48,18 @@
 						<a href="https://apply.bok.or.kr" target="_blank" title="새창열림">채용</a>
 					</li>
 				</ul>
+				<div class="g-info">
+					<div class="global">
+						<ul>
+							<li>
+								<a href="">본인인증</a>
+							</li>
+							<li>
+								<a href="/eng/main/main.do" target="_blank" title="새창열림">English</a>
+							</li>
+						</ul>
+					</div>					
+				</div>
 			</div>
 		</div>
 		<div class="container">
@@ -75,145 +87,127 @@
 						<a href=""><span>주요서비스</span></a>
 					</li>
 				</ul>
-				<!-- //gnb -->
-				<button type="button" class="all-nav-toggle" title="전체 메뉴 열기"></button>
 			</nav>
-			<nav class="mobileGnb" id="mobileGnb">
-				<button type="button" class="m-all-nav-toggle" title="전체 메뉴 열기"></button>
-				<div class="mobileGnb__set">
-					<div class="top">
-						<span>MENU</span>
-						<button type="button" class="mobileGnb-close" title="전체 메뉴 닫기"></button>
-					</div>
-					<div class="mobileGnb__nav"></div>
-				</div>
-			</nav>
-	
-			<div class="g-info">
-				<div class="global">
-					<ul>
-						<li>
-							<a href="">본인인증</a>
-						</li>
-						<li>
-							<a href="/eng/main/main.do" target="_blank" title="새창열림">English</a>
-						</li>
-					</ul>
-				</div>
+			<!-- //gnb -->
+			<div class="toggle-set">
+				<button type="button" class="all-nav-toggle" data-toggle="modal" data-target="#totalMenu" title="전체 메뉴 열기"></button>
 				<button type="button" class="search" title="검색레이어 열기"></button>
 				<div class="search_wrap">
 					<form action="/">
 						검색 레이어 영역
 					</form>
 				</div>
-			</div>
+			</div>			
 		</div>
+
 		<!-- 전체메뉴 -->
-		<div class="total-nav">
-			<section>
-				<div>
-					<h2 class="total-nav-title">전체 메뉴</h2>
-					<div class="nav"></div>
-					<button type="button" class="ico-close"></button>
-				</div>
-			</section>
-		</div>
+		<!-- <div class="modal fade total-nav" id="totalMenu" tabindex="-1" role="dialog">
+			
+		</div> -->
 		<!-- //전체메뉴 -->
+		
 	</header>	
 	<!-- //header -->
 
 	<!-- navigation -->
 	<div class="navigation">
 		<nav class="container">
-			<ul>
-				<li class="home"><span>Home</span></li>
-				<li>
-					<a href="" title="하위메뉴 열기">뉴스 및 자료</a>
-					<div class="depth2">
-						<ul>
-							<li>
-								<a href="">BOK이슈노트</a>
-							</li>
-							<li>
-								<a href="">BOK경제연구</a>
-							</li>
-							<li>
-								<a href="">해외경제포커스</a>
-							</li>
-							<li class="on">
-								<a href="">연차보고서</a>
-							</li>
-							<li>
-								<a href="">통화신용정책보고서</a>
-							</li>
-							<li>
-								<a href="">금융안정보고서</a>
-							</li>
-							<li>
-								<a href="">경제전망보고서</a>
-							</li>
-							<li>
-								<a href="">지역경제보고서</a>
-							</li>
-							<li>
-								<a href="">지급결제보고서</a>
-							</li>
-							<li>
-								<a href="">정기간행물</a>
-							</li>
-							<li>
-								<a href="">단행본</a>
-							</li>
-						</ul>
-					</div>
-				</li>
-				<li>
-					<a href="" title="하위메뉴 열기">뉴스 및 의사록</a>
-					<div class="depth2">
-						<ul>
-							<li>
-								<a href="">보도자료</a>
-							</li>
-							<li>
-								<a href="">주간보도계획</a>
-							</li>
-							<li>
-								<a href="">언론보도해명자료</a>
-							</li>
-							<li>
-								<a href="">금융통화위원회 의사록</a>
-							</li>
-							<li>
-								<a href="">금융통화위원회 의결사항</a>
-							</li>
-						</ul>
-					</div>
-				</li>
-				<li>
-					<a href="">보도자료</a>
-				</li>
-			</ul>
-			<div class="top-page-toolbar">
-				<div class="page-toolbar">
-					<button type="button" class="sns-toggle" aria-label="SNS 공유"></button>
-					<div class="sns-wrap">
-						<div class="sns-wrap__set">
-							<button type="button" data-type="close" class="close" aria-label="SNS 공유 닫기"></button>
-							<button type="button" data-type="youtube" class="ico-youtube" aria-label="유튜브 공유 새창열림"></button>
-							<button type="button" data-type="instagram" class="ico-instagram" aria-label="인스타그램 공유 새창열림"></button>
-							<button type="button" data-type="facebook" class="ico-facebook" aria-label="페이스북 공유 새창열림"></button>
-							<button type="button" data-type="twitter" class="ico-twitter" aria-label="트위터 공유 새창열림"></button>
+			<div>
+				<ul class="nav-menu">
+					<li class="home"><a href="">Home</a></li>
+					<li>
+						<a href="" title="하위메뉴 열기">뉴스 및 자료</a>
+						<div class="depth2">
+							<ul>
+								<li>
+									<a href="">BOK이슈노트</a>
+								</li>
+								<li>
+									<a href="">BOK경제연구</a>
+								</li>
+								<li>
+									<a href="">해외경제포커스</a>
+								</li>
+								<li class="on">
+									<a href="">연차보고서</a>
+								</li>
+								<li>
+									<a href="">통화신용정책보고서</a>
+								</li>
+								<li>
+									<a href="">금융안정보고서</a>
+								</li>
+								<li>
+									<a href="">경제전망보고서</a>
+								</li>
+								<li>
+									<a href="">지역경제보고서</a>
+								</li>
+								<li>
+									<a href="">지급결제보고서</a>
+								</li>
+								<li>
+									<a href="">정기간행물</a>
+								</li>
+								<li>
+									<a href="">단행본</a>
+								</li>
+							</ul>
 						</div>
+					</li>
+					<li>
+						<a href="" title="하위메뉴 열기">뉴스 및 의사록</a>
+						<div class="depth2">
+							<ul>
+								<li>
+									<a href="">보도자료</a>
+								</li>
+								<li>
+									<a href="">주간보도계획</a>
+								</li>
+								<li>
+									<a href="">언론보도해명자료</a>
+								</li>
+								<li>
+									<a href="">금융통화위원회 의사록</a>
+								</li>
+								<li>
+									<a href="">금융통화위원회 의결사항</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="">보도자료</a>
+					</li>
+				</ul>
+				<div class="top-page-toolbar">
+					<div class="page-toolbar">
+						<button type="button" class="sns-toggle" aria-label="SNS 공유"></button>
+						<div class="sns-wrap">
+							<div class="sns-wrap__set">
+								<button type="button" data-type="close" class="close" aria-label="SNS 공유 닫기"></button>
+								<button type="button" data-type="youtube" class="ico-youtube" aria-label="유튜브 공유 새창열림"></button>
+								<button type="button" data-type="instagram" class="ico-instagram" aria-label="인스타그램 공유 새창열림"></button>
+								<button type="button" data-type="facebook" class="ico-facebook" aria-label="페이스북 공유 새창열림"></button>
+								<button type="button" data-type="twitter" class="ico-twitter" aria-label="트위터 공유 새창열림"></button>
+							</div>
+						</div>
+						<a href="/static/view/forPrint.html" data-size="1200, 700, yes" target="_blank" title="새창열림" class="page-print b-pop">
+							<span class="sr-only">프린트</span>
+						</a>
+						<a href="/static/guide/portal/popup/rss_popup.html" data-size="800, 500, yes" class="page-rss b-pop" target="_blank" title="새창열림">
+							<span class="sr-only">rss 한국은행</span>
+						</a>
 					</div>
-					<a href="/static/view/forPrint.html" data-size="1200, 700, yes" target="_blank" title="새창열림" class="page-print b-pop">
-						<span class="sr-only">프린트</span>
-					</a>
-					<a href="/static/guide/portal/popup/rss_popup.html" data-size="800, 500, yes" class="page-rss b-pop" target="_blank" title="새창열림">
-						<span class="sr-only">rss 한국은행</span>
-					</a>
 				</div>
 			</div>
 		</nav>
+		<div class="sub-_visual">
+			<div class="hgroup">
+				<h1>뉴스 및 의사록</h1>
+			</div>
+		</div>
 	</div>
 	<!-- //navigation -->
 
@@ -287,15 +281,11 @@
 
 <h2>화폐전시실</h2>
 
-
-
-<!-- <link rel="stylesheet" href="/static/jslibrary/videojs/video-js.css">
-<script src="/static/jslibrary/videojs/video.js"></script>
-<script src="/static/jslibrary/videojs/flash/videojs-flash.min.js"></script>
-<script src="/static/jslibrary/videojs/videojs-contrib-hls.min.js"></script>
-<script src="/static/jslibrary/videojs/Youtube.min.js"></script> -->
-
-
+<link href="https://www.bok.or.kr/static/jslibrary/videojs/video-js.css" rel="stylesheet">
+<script src="https://www.bok.or.kr/static/jslibrary/videojs/video.js"></script>
+<script src="https://www.bok.or.kr/static/jslibrary/videojs/flash/videojs-flash.min.js"></script>
+<script src="https://www.bok.or.kr/static/jslibrary/videojs/videojs-contrib-hls.min.js"></script>
+<script src="https://www.bok.or.kr/static/jslibrary/videojs/Youtube.min.js"></script>
 
 <div class="ico-box ico1">
 	<p>한국은행 대구경북본부의 화폐전시실은 우리나라 화폐가 시대별로 전시되어 있는 &ldquo;우리화폐전시실&rdquo;과 세계 화폐가 테마별로 구분 정리되어 있는 &ldquo;세계화폐전시실&rdquo;으로 구성되어 있으며 2,300여점의 다양한 전시물이 전시되어 있습니다.</p>
@@ -315,25 +305,25 @@
 	<div class="serList">
 		<ul>
 			<li>
-				<a href="javascript:void(0)" title="하단에 영상 보기">
+				<a href="javascript:void(0)" title="하단에 영상 보기" id="video_1">
 					<span class="img" style="background-image: url('/static/portal/img/sub/zone/img_200843_01.jpg');"></span>
 					<span class="txt">대구경북본부 화폐전시실 소개</span>
 				</a>
 			</li>
 			<li>
-				<a href="javascript:void(0)" title="하단에 영상 보기">
+				<a href="javascript:void(0)" title="하단에 영상 보기" id="video_2">
 					<span class="img" style="background-image: url('/static/portal/img/sub/zone/img_200843_02.jpg');"></span>
 					<span class="txt">대구경북본부 화폐전시실 랜선투어 1(최초의 한국은행권)</span>
 				</a>
 			</li>
 			<li>
-				<a href="javascript:void(0)" title="하단에 영상 보기">
+				<a href="javascript:void(0)" title="하단에 영상 보기" id="video_3">
 					<span class="img" style="background-image: url('/static/portal/img/sub/zone/img_200843_03.jpg');"></span>
-					<span class="txt"> 대구경북본부 화폐전시실 랜선투어 2 (최단명 은행권)</span>
+					<span class="txt">대구경북본부 화폐전시실 랜선투어 2 (최단명 은행권)</span>
 				</a>
 			</li>
 			<li>
-				<a href="javascript:void(0)" title="하단에 영상 보기">
+				<a href="javascript:void(0)" title="하단에 영상 보기" id="video_4">
 					<span class="img" style="background-image: url('/static/portal/img/sub/zone/img_200843_04.jpg');"></span>
 					<span class="txt">대구경북본부 화폐전시실 랜선투어 3 (최초의 기념주화와 기념지폐)</span>
 				</a>
@@ -341,13 +331,23 @@
 		</ul>
 	</div>
 
-	<div class="">
-		<div class="con">
+	<div class="con_video">
+		<div class="con video_1">
 
-			<div class="videoSet">		
+			<h4>대구경북본부 화폐전시실 소개</h4>
+			<div class="videoSet pt10">		
 				<div class="video mb20 video1">
-					<video id="bokPlayer1" class="video-js vjs-4-3 vjs-default-skin" controls="controls" poster=""></video>
+					<video id="bokPlayer1" class="video-js vjs-4-3 vjs-default-skin" controls="controls" poster="https://nwww.bok.or.kr/crosseditor/attachs/images/000012/dk_sum.jpg"></video>
 				</div>
+				
+				<!-- <div class="subtitle">
+					<h3>자막</h3>
+					<button type="button" title="자막 접기" class="active"></button>
+					<div class="con scrollY">
+						자막 넣는곳
+					</div>
+				</div> -->
+
 				<script>
 					var player, play_type;
 					var options = {hls:{withCredentials:false}}
@@ -380,22 +380,27 @@
 						return _fileExt;
 					}
 				</script> 
-				<div class="subtitle">
-					<h3>자막</h3>
-					<button type="button" title="자막 접기" class="active"></button>
-					<div class="con scrollY">
-						자막..............
-					</div>
-				</div>
+			
+				
 			</div>	
 		</div>
 
-		<div class="con">
+		<div class="con video_2">
 
-			<div class="videoSet">		
+			<h4>대구경북본부 화폐전시실 랜선투어 1(최초의 한국은행권)</h4>
+			<div class="videoSet pt10">		
 				<div class="video mb20 video2">
-					<video id="bokPlayer2" class="video-js vjs-4-3 vjs-default-skin" controls="controls" poster=""></video>
+					<video id="bokPlayer2" class="video-js vjs-4-3 vjs-default-skin" controls="controls" poster="https://nwww.bok.or.kr/crosseditor/attachs/images/000016/1.jpg"></video>
 				</div>
+
+				<!-- <div class="subtitle">
+					<h3>자막</h3>
+					<button type="button" title="자막 접기" class="active"></button>
+					<div class="con scrollY">
+						자막 넣는곳
+					</div>
+				</div> -->
+				
 				<script>
 					var player, play_type;
 					var options = {hls:{withCredentials:false}}
@@ -427,31 +432,215 @@
 						var _fileExt = filename.substring(_lastDot, _fileLen).toLowerCase();
 						return _fileExt;
 					}
-				</script> 
-				<div class="subtitle">
+				</script>				
+				
+			</div>	
+		</div>
+
+
+		<div class="con video_3">
+
+			<h4>대구경북본부 화폐전시실 랜선투어 2 (최단명 은행권)</h4>
+			<div class="videoSet pt10">		
+				<div class="video mb20 video3">
+					<video id="bokPlayer3" class="video-js vjs-4-3 vjs-default-skin" controls="controls" poster="https://nwww.bok.or.kr/crosseditor/attachs/images/000016/2.jpg"></video>
+				</div>
+
+				<!-- <div class="subtitle">
 					<h3>자막</h3>
 					<button type="button" title="자막 접기" class="active"></button>
 					<div class="con scrollY">
-						자막..............
+						자막 넣는곳
 					</div>
-				</div>
+				</div> -->
+				
+				<script>
+					var player, play_type;
+					var options = {hls:{withCredentials:false}}
+					var play_src = '/movie.mp4'
+					var play_src = 'https://media.bok.or.kr/vod/_definst_/mp4:lib/2021/06/CID20210609171213229_w.mp4/playlist.m3u8'
+					var opt = 'video3';
+					var fileExt = getExtensionOfFilename(play_src);
+					if(fileExt == ".mp4"){
+						play_type = "video/mp4";
+					}else{
+						play_type = "application/x-mpegURL";	
+					}
+					
+					player = videojs('bokPlayer3',{muted:true,autoplay: false,flash:options, html5:options});
+					player.muted()
+					player.ready(function(){
+						player.muted()
+						//player.play()
+						this.src({
+							src:play_src,
+							type:play_type
+						});
+						//$('.vjs-big-play-button').trigger('click')
+					});
+					
+					function getExtensionOfFilename(filename){
+						var _fileLen = filename.length;
+						var _lastDot = filename.lastIndexOf('.');
+						var _fileExt = filename.substring(_lastDot, _fileLen).toLowerCase();
+						return _fileExt;
+					}
+				</script>
+		
 			</div>	
+		</div>
+
+		<div class="con video_4">
+
+			<h4>대구경북본부 화폐전시실 랜선투어 3 (최초의 기념주화와 기념지폐)</h4>
+			<div class="videoSet pt10">		
+				<div class="video mb20 video4">
+					<video id="bokPlayer4" class="video-js vjs-4-3 vjs-default-skin" controls="controls" poster="https://nwww.bok.or.kr/crosseditor/attachs/images/000016/3.jpg"></video>
+				</div>
+
+				<!-- <div class="subtitle">
+					<h3>자막</h3>
+					<button type="button" title="자막 접기" class="active"></button>
+					<div class="con scrollY">
+						자막 넣는곳
+					</div>
+				</div> -->
+				
+				<script>
+					var player, play_type;
+					var options = {hls:{withCredentials:false}}
+					var play_src = '/movie.mp4'
+					var play_src = 'https://media.bok.or.kr/vod/_definst_/mp4:lib/2021/06/CID20210609171257791_w.mp4/playlist.m3u8'
+					var opt = 'video3';
+					var fileExt = getExtensionOfFilename(play_src);
+					if(fileExt == ".mp4"){
+						play_type = "video/mp4";
+					}else{
+						play_type = "application/x-mpegURL";	
+					}
+					
+					player = videojs('bokPlayer4',{muted:true,autoplay: false,flash:options, html5:options});
+					player.muted()
+					player.ready(function(){
+						player.muted()
+						//player.play()
+						this.src({
+							src:play_src,
+							type:play_type
+						});
+						//$('.vjs-big-play-button').trigger('click')
+					});
+					
+					function getExtensionOfFilename(filename){
+						var _fileLen = filename.length;
+						var _lastDot = filename.lastIndexOf('.');
+						var _fileExt = filename.substring(_lastDot, _fileLen).toLowerCase();
+						return _fileExt;
+					}
+				</script>		
+			</div>
+		</div>
+	</div>
+
+	<script>
+
+	$(function(){
+		$(".con_video .con").hide();
+		$('.serList a').each(function(index) {
+			$(".serList a#video_"+index).click(function(){
+				$(".con_video .con.video_"+index).show().siblings().hide();
+			})
+		})
+
+		//마지막 버튼 안되는 현상 보완 (마지막꺼 따로 추가됨)
+		$(".serList a#video_4").click(function(){
+			$(".con_video .con.video_4").show().siblings().hide();
+		})
+		
+	})
+
+	</script>
+
+</div>
+			
+
+
+			
+			
+			</div>
+		</main>			
+	</div>
+	<!-- //content -->
+
+</div>
+
+<footer id="footer">
+<div class="container">
+	<div class="f_l">
+		<nav class="footer-nav">
+			<ul>
+				<li>
+					<a href="">자작권보호</a>
+				</li>
+				<li class="point">
+					<a href="">개인정보처리방침</a>
+				</li>
+				<li>
+					<a href="">이메일무단수집거부</a>
+				</li>
+				<li>
+					<a href="">홈페이지이용안내</a>
+				</li>
+				<li>
+					<a href="">관련사이트</a>
+				</li>
+			</ul>
+		</nav>
+		<div class="footer-bottom">
+			<address>04531 서울특별시 중구 남대문로 39 (남대문로3가)<br class="mobile">
+			대표전화 : 02-759-4114</address>
+			<p class="copyright">Copyright(c) Bank of Korea. All rights reserved.</p>
+		</div>
+	</div>
+	<div class="f_r">
+		<div class="site_go">
+			<button type="button" title="fmaily site 열기">fmaily site</button>
+			<ul>
+				<li>
+					<a href="/imer/main/main.do" target="_blank" title="새창열림">경제연구원</a>
+				</li>
+				<li>
+					<a href="/museum/main/main.do" target="_blank" title="새창열림">화폐박물관</a>
+				</li>
+				<li>
+					<a href="">지역본부</a>
+				</li>
+				<li>
+					<a href="https://ecos.bok.or.kr" target="_blank" title="새창열림">경제시스템(ecos)</a>
+				</li>
+				<li>
+					<a href="https://snapshot.bok.or.kr" target="_blank" title="새창열림">금융·경제스냅샷</a>
+				</li>
+				<li>
+					<a href="https://dl.bok.or.kr" target="_blank" title="새창열림">전자도서관</a>
+				</li>
+				<li>
+					<a href="https://apply.bok.or.kr" target="_blank" title="새창열림">채용</a>
+				</li>
+			</ul>
+		</div>
+		<div class="f_sns">
+			<a href="https://www.youtube.com/thebankofkoreakr" target="_blank" title="새창열림" class="sns-youtube"><span class="sr-only">한국은행 Youtube 바로가기 (https://www.youtube.com/thebankofkoreakr)</span></a>
+			<a href="https://www.instagram.com/thebankofkorea" target="_blank" title="새창열림" class="sns-instagram"><span class="sr-only">한국은행 인스타그램  바로가기 (https://www.instagram.com/thebankofkorea)</span></a>
+			<a href="https://www.facebook.com/bankofkoreahub" target="_blank" title="새창열림" class="sns-facebook"><span class="sr-only">한국은행 Facebook 바로가기 (https://www.facebook.com/bankofkoreahub)</span></a>
+			<a href="https://www.twitter.com/bok_hub" target="_blank" title="새창열림" class="sns-twitter"><span class="sr-only">한국은행 Twitter 바로가기 (https://www.twitter.com/bok_hub)</span></a>
+		</div>
+		<div class="f_banner">
+			<a href="" title="새창열림"><img src="/static/portal/img/common/mark.png" alt="(사)한국장애인단체총연합회 한국웹접근성인증평가원 웹 접근성 우수사이트 인증마크(WA인증마크)"></a>
 		</div>
 	</div>
 </div>
-
-<link href="https://www.bok.or.kr/static/jslibrary/videojs/video-js.css" rel="stylesheet">
-<script src="https://www.bok.or.kr/static/jslibrary/videojs/video.js"></script>
-<script src="https://www.bok.or.kr/static/jslibrary/videojs/flash/videojs-flash.min.js"></script>
-<script src="https://www.bok.or.kr/static/jslibrary/videojs/videojs-contrib-hls.min.js"></script>
-<script src="https://www.bok.or.kr/static/jslibrary/videojs/Youtube.min.js"></script>
-
-
-
-
-
-</div>
-
+</footer>
 <script src="/static/jslibrary/swiper@8/swiper-bundle.min.js"></script>
 <script src="/static/portal/js/common.js"></script>
 </body>
