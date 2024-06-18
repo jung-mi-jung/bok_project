@@ -392,6 +392,9 @@ $(function () {
 		//200843, 200970
 
 
+		//200496  유튜브 링크  https://www.youtube.com/playlist?list=PL80z1RKB1KmzaSH3eFaiGWPM2w1oIgjLp
+
+
 
 
     ]

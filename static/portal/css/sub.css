@@ -1248,8 +1248,8 @@ display: inline-block;
 position: absolute;
 top: 13px;
 right: 3px;
-width: 11px;
-height: 11px;
+width: 14px;
+height: 14px;
 background: url(/static/portal/img/ico/arrow_outward.png) 50% no-repeat;
 }
 @media (min-width: 1200px) {
@@ -13738,7 +13738,7 @@ margin-left: auto;
 margin-right: auto;
 }
 }
-.sub-main-zone .container .map_img {
+.sub-main-zone .container .map_img > div {
 position: relative;
 display: flex;
 justify-content: flex-start;

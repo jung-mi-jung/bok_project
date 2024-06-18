@@ -72,10 +72,15 @@
 			margin-right: auto;	
 		}	
 		.map_img {
-			position: relative;
-			display: flex;
-			justify-content: flex-start;
+			// position: relative;
+			// display: flex;
+			// justify-content: flex-start;
 			//align-items: top;
+			> div {
+				position: relative;
+				display: flex;
+				justify-content: flex-start;
+			}
 			@include breakpoint($lg){
 				width: calc(100% - 35.6%);
 			}
