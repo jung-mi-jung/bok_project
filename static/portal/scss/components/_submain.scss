@@ -202,19 +202,19 @@
 					.it {
 						&.active {
 							.item {
-								stroke: $color-point;
-								fill: $color-point;
+								stroke: #005596;
+								fill: #005596;
 								-webkit-box-shadow: 0 4px 4px #000;
 										box-shadow: 0 4px 4px #000;
 								-webkit-filter: url(#shadow);
 										filter: url(#shadow);
 							}
-							circle {
-								fill: #FF327C;
-								stroke: rgba(255, 50, 124, 0.3);
-								stroke-width: 15;
-								filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.25));
-							}
+							// circle {
+							// 	fill: #FF327C;
+							// 	stroke: rgba(255, 50, 124, 0.3);
+							// 	stroke-width: 15;
+							// 	filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.25));
+							// }
 						}
 					}
 					.svg-map {

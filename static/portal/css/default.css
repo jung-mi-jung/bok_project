@@ -1906,8 +1906,9 @@ vertical-align: middle;
 #header .logo a {
 display: block;
 background: url(/static/portal/img/main/logo.png) 50% no-repeat;
-width: 127px;
-height: 60px;
+width: 128px;
+height: 42px;
+background-size: 128px 42px;
 }
 @media (max-width: 749px) {
 #header .logo a {
