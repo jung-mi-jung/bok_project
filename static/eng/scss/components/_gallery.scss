@@ -67,6 +67,10 @@
 						transform: rotate(180deg);
 					}
 				}
+				@include breakpoint ($smd){
+					left: 0%;
+					transform: scale(0.8);
+				}
 			}
 			&.next {
 				right: 8%;
@@ -80,6 +84,10 @@
 					&::before {
 						transform: rotate(0);
 					}
+				}
+				@include breakpoint ($smd){
+					right: 0%;
+					transform: scale(0.8);
 				}
 			}
 		}

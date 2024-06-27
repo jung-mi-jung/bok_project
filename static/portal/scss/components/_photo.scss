@@ -28,6 +28,7 @@
 						padding-top: 56.4%;
 						border: 1px solid #E5E5E5;
 						border-radius: 8px 8px 0 0;
+						background-image: url(/static/portal/img/common/multi_default@2x.png);
 						.v-ico {
 							&::before {
 								content: "";
@@ -102,12 +103,18 @@
 					}					
 				}		
 				.title {
-					@include ellipsis;
+					//@include ellipsis;
+					@include line-clamp(2);
+					height: 60px;
 					width: 100%;
 					font-size: rem(18);
 					font-weight: 400;
 					margin: 10px 0 0;
 					padding: 0 10px;
+					@include breakpoint($sm){
+						height: auto;
+						max-height: 60px;
+					}
 				}
 				.date {
 					color: #666;
@@ -156,6 +163,7 @@
 			width: 80px;
 			height: 80px;
 			margin-top: -40px;
+			z-index: 100;
 			&::before {
 				content: "";
 				display: inline-block;
@@ -166,7 +174,8 @@
 			&.next {
 				border: 1px solid $point;
 				border-radius: 50%;
-				&::before {
+				background-color: rgba(255, 255, 255, 0.6);
+				&::before {					
 					background: url(/static/portal/img/common/ctrl-btn-off.png) 50% no-repeat;
 				}
 				&:hover {

@@ -1,5 +1,6 @@
 /* 연차보고서 */
-
+$("#annual-report-sidebar").addClass("hide"); //초기값
+ 
 // 목차
 function snbSetting() {
   $(".snb-list ul").each(function () {
@@ -25,6 +26,10 @@ $(document).ready(function () {
 
     $(document).on("click", ".snb-list > li > a", function (e) {
       var $clickedLi = $(this).closest("li");
+
+      if ($clickedLi.hasClass("single-menu")) {
+        $clickedLi.addClass("on");
+      }
 
       if ($clickedLi.hasClass("link-pdf")) {
         $clickedLi.siblings("li").find("ul").css("display", "none");
@@ -264,21 +269,96 @@ $(document).ready(function () {
   // 목차 클릭 시 해당 타이틀로 이동
   $(".scroll-link").click(function (event) {
     event.preventDefault();
+    isScrolling = true;
 
     var target = $(this.hash);
     $("html, body")
       .stop()
       .animate(
         {
-          scrollTop: target.offset().top - 14,
+          scrollTop: target.offset().top,
         },
         800,
         function () {
           target.attr("tabindex", "-1");
           target.focus();
+          isScrolling = false;
         }
       );
   });
+
+  let isScrolling = false;
+  const $sections = $(".annual-report-area div[id]").filter(function () {
+    const id = $(this).attr("id");
+    return $(this).hasClass("annual-report-section");
+  });
+  const $menuLinks = $(".snb-list a.scroll-link");
+
+  function activateMenuLink() {
+    // 스크롤 애니메이션 진행 중일 때 함수 실행 중지
+    if (isScrolling) return;
+
+    let currentSectionIndex = $sections.length;
+
+    while (
+      --currentSectionIndex &&
+      $(window).scrollTop() + 200 <
+        $sections.eq(currentSectionIndex).offset().top
+    ) {}
+
+    $menuLinks.removeClass("show");
+
+    const showId = $sections.eq(currentSectionIndex).attr("id");
+    const $showLink = $(`.snb-list a[href="#${showId}"]`);
+    if ($showLink.length) {
+      $showLink.addClass("show");
+
+      $showLink
+        .parents(".snb-list")
+        .find("li.collapse")
+        .find("ul")
+        .css("display", "none");
+      $showLink
+        .parents(".snb-list")
+        .find("li.collapse")
+        .find("ul")
+        .siblings("a")
+        .attr("aria-expanded", "false");
+      $showLink.parent("li").parent("ul").css("display", "block");
+      $showLink
+        .parent("li")
+        .parent("ul")
+        .siblings("a")
+        .attr("aria-expanded", "true");
+      $showLink
+        .parent("li")
+        .parent("ul")
+        .parent("li")
+        .parent("ul")
+        .css("display", "block");
+      $showLink
+        .parent("li")
+        .parent("ul")
+        .parent("li")
+        .parent("ul")
+        .siblings("a")
+        .attr("aria-expanded", "true");
+
+      $showLink.parents(".snb-list").find("li").removeClass("on");
+      $showLink.parent("li").addClass("on");
+      $showLink.parent("li").parent("ul").parent("li.collapse").addClass("on");
+      $showLink
+        .parent("li")
+        .parent("ul")
+        .parent("li.collapse")
+        .parent("ul")
+        .parent("li.collapse")
+        .addClass("on");
+    }
+    // console.log("현재 섹션 ID:", showId);
+  }
+
+  $(window).on("scroll", activateMenuLink);
 
   // 목차 스크롤 시 상단 고정
   $(window).on("scroll resize", function () {

@@ -61,6 +61,15 @@ table {
 			// 		}
 			// 	}
 			// }
+			tr ~ tr{
+				th{
+					border-top: 1px solid #BDBCBC;
+					&:first-child{
+						border-radius: 0;
+						border-left: 1px solid #BDBCBC;
+					}
+				}
+			}
 		}
 		tbody {
 			th {
@@ -84,6 +93,9 @@ table {
 						border-right: 1px solid $bd-color !important;
 					}
 				}
+				td:last-child {
+					border-right: 0 !important;
+				}
 			}
 			td, th {
 				border-bottom: 1px solid #E6E6E6;
@@ -91,6 +103,9 @@ table {
 					text-decoration: none;
 					border-right: 1px solid #E6E6E6;
 				}
+			}
+			td[rowspan]{
+				border-right: 1px solid #E6E6E6;
 			}
 		}
 		td {
@@ -103,7 +118,7 @@ table {
 			}
 			& + td {
 				border-left: 1px solid #E6E6E6;
-			}
+			}			
 			&.title {
 				text-align: left;
 				a {
@@ -201,6 +216,28 @@ table {
 	}
 	ul {
 		text-align: left;
+	}
+	td[data-html]:hover {
+		font-weight: 500;
+		color: $color-point;
+		text-decoration: underline;
+	}
+	&.tbody_th_left tbody th.NamoSE_border_show{
+		text-align: left;
+	}
+	@include breakpoint($sm){
+		#tableId {	//통화정책방향	
+			tr {
+				position: relative;
+				.fileGroupSet {
+					position: static;
+					.fileGoupBox {
+						right: 50%;
+						margin-right: -146px;
+					}
+				}
+			}	
+		}
 	}
 }
 .td {

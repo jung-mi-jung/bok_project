@@ -1,6 +1,8 @@
 // ios chrome 100vh 버그
 var vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty("--vh", vh + 'px');
+var naviLegnth = $(".navigation nav > div > ul > li").length;
+
 $(function () {
 	$(window).trigger("orientationchange");
 });
@@ -28,9 +30,18 @@ if (window.innerWidth < 1200) {
 
 	if( window.innerWidth < 750 ) {
 		$(".total-nav").addClass("m-total-nav");
+		if ( naviLegnth > 3 ) {
+			$(".navigation nav > div > ul > li").not(".home").css({"display": "none"});
+			$(".navigation nav > div > ul > li").eq(naviLegnth-1).css({"display": "flex"});
+			$(".navigation nav > div > ul > li").eq(naviLegnth-2).css({"display": "flex"});
+		}
+		else {
+			$(".navigation nav > div > ul > li").css({"display": "flex"});
+		}
 	}
 	else {
 		$(".total-nav").removeClass("m-total-nav");
+		$(".navigation nav > div > ul > li").css({"display": "flex"});
 	}
 }
 else {
@@ -45,9 +56,19 @@ $(window).resize(function () {
 
 		if( window.innerWidth < 750 ) {
 			$(".total-nav").addClass("m-total-nav");
+
+			if ( naviLegnth > 3 ) {
+				$(".navigation nav > div > ul > li").not(".home").css({"display": "none"});
+				$(".navigation nav > div > ul > li").eq(naviLegnth-1).css({"display": "flex"});
+				$(".navigation nav > div > ul > li").eq(naviLegnth-2).css({"display": "flex"});
+			}
+			else {
+				$(".navigation nav > div > ul > li").css({"display": "flex"});
+			}
 		}
 		else {
 			$(".total-nav").removeClass("m-total-nav");
+			$(".navigation nav > div > ul > li").css({"display": "flex"});
 		}
 	}
 	else {
@@ -129,22 +150,6 @@ $(function () {
 		event.preventDefault();
 	});
 
-	//nav stiky
-	function goToScroll() {
-		// 주 메뉴
-		var h = 120;
-		if ($(window).scrollTop() > h) {
-			$('body').addClass('gnb-stiky');
-			//$(".lnb-nav, .sh-db").addClass('sticky');
-		} else {
-			$('body').removeClass('gnb-stiky');
-			//$(".lnb-nav, .sh-db").remo`veClass('sticky');
-		}
-	}
-	$(window).on('scroll', function () {
-		goToScroll();
-	});
-	goToScroll();
 
 	//gnb
 	//pc 메뉴
@@ -196,10 +201,10 @@ $(function () {
 			daysMin: ['일', '월', '화', '수', '목', '금', '토'],
 			months: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
 			monthsShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-			today: '오늘',
-			clear: '삭제',
+			today: 'today',
+			clear: 'del',
 			format: 'yyyy-mm-dd',
-			titleFormat: 'yyyy년mm월',
+			titleFormat: 'yyyy-mm',
 			weekStart: 0,
 		};
 	}
@@ -236,8 +241,8 @@ $(function () {
 				todayHighlight: true,
 				autoclose: true,
 				templates: {
-					leftArrow: '<i class=datepicker-prev role=img aria-label=이전></i>',
-					rightArrow: '<i class=datepicker-next role=img aria-label=다음></i>'
+					leftArrow: '<i class=datepicker-prev role=img aria-label="prev"></i>',
+					rightArrow: '<i class=datepicker-next role=img aria-label="next"></i>'
 				}
 			})
 			.attr('placeholder', '')
@@ -248,8 +253,8 @@ $(function () {
 				todayHighlight: true,
 				autoclose: true,
 				templates: {
-					leftArrow: '<i class=datepicker-prev role=img aria-label=이전></i>',
-					rightArrow: '<i class=datepicker-next role=img aria-label=다음></i>'
+					leftArrow: '<i class=datepicker-prev role=img aria-label="prev"</i>',
+					rightArrow: '<i class=datepicker-next role=img aria-label="next"></i>'
 				},
 				startView: 2,
 				minViewMode: 1
@@ -257,13 +262,13 @@ $(function () {
 			.attr('placeholder', '')
 			.attr('autocomplete', 'off')
 	}
-	$('input.sdate').attr('title', '검색기간 시작일 연도 - 월 - 일');
-	$('input.edate').attr('title', '검색기간 종료일 연도 - 월 - 일');
-	$('input.month').attr('title', '검색기간 연도 - 월');
-	$('input.smonth').attr('title', '검색기간 시작월 연도 - 월');
-	$('input.emonth').attr('title', '검색기간 종료월 연도 - 월');
+	$('input.sdate').attr('title', 'YYYY-MM-DD');
+	$('input.edate').attr('title', 'YYYY-MM-DD');
+	$('input.month').attr('title', 'YYYY-MM');
+	$('input.smonth').attr('title', 'YYYY-MM');
+	$('input.emonth').attr('title', 'YYYY-MM');
 	$('input.date').each(function () {
-		var title = $(this).attr('title') + ' 연도 - 월 - 일'
+		var title = $(this).attr('title') + ' YYYY-MM-DD'
 		$(this).attr('title', title)
 	});
 	// 달력
@@ -482,21 +487,49 @@ $(function () {
 });
 
 $(function() {
-	/*Variables for chache $ chaining*/
 	var $root = $("html, body");
 	var $window = $(window);
-	// var fixNav = 94;
-	// var amountScrolled = 120;
-	// var headerHeihgt = $("#header").innerHeight();
+
+	var fixMenu = 60;	//146
+	var amountScrolled = 146;
 	var backBtn = $(".goTop");
 
+	//초기값
+	if ($window.scrollTop() > fixMenu && !$("body").hasClass("gnbOver") ) {
+		$(".navigation .container").addClass("nav-stiky");
+	}
+	else {
+		if($(".navigation .container").hasClass("nav-stiky")){
+			$(".navigation .container").addClass("fixMenuOff");
+		}
+		$(".navigation .container").removeClass("nav-stiky");
+	}
+
 	$window.on("scroll", function () {
-		//맨 하단일 때
-		if( $window.scrollTop() + $window.innerHeight() >= $("body").prop("scrollHeight") - 60) {
-			backBtn.fadeIn();
+	   //gnbFixed 		//fixLogo
+		if ($window.scrollTop() > fixMenu && !$("body").hasClass("gnbOver") ) {
+			$(".navigation .container").addClass("nav-stiky");
 		}
 		else {
-			backBtn.fadeOut();
+			if($(".navigation .container").hasClass("nav-stiky")){
+				$(".navigation .container").addClass("fixMenuOff");
+			}
+			$(".navigation .container").removeClass("nav-stiky");
+		}
+ 
+		if( $window.scrollTop() > fixMenu ) {
+			 $("body #header.family").not(".main").show();
+			 //$("body.mobile #header.family").not(".main").hide();
+		}
+		else {
+			 //$("body.mobile #header.family").not(".main").show();
+		}
+
+
+		if ($window.scrollTop() > amountScrolled) {
+				backBtn.fadeIn("slow");
+		} else {
+				backBtn.fadeOut("slow");
 		}
 	});
 
@@ -609,11 +642,13 @@ $(function() {
 		$(".search_wrap").addClass("active");
 		$(".search_wrap .search_wrap_input .search_keyword") .focus();
 		$("body").addClass("gnbOver");
+		$("#header.family").css("position", "fixed");
 	})
 	$(".search_wrap .search_close").click(function(){
 		$(".search_wrap").removeClass("active");
 		$(".g-info .search, .toggle-set .search").focus();
 		$("body").removeClass("gnbOver");
+		$("#header.family").css("position", "relative");
 	})
 
 	//첨부파일
@@ -655,16 +690,9 @@ $(function() {
 // 탭메뉴 swiper
 var section2Txt = new Swiper('.tab-list .swiper', {
 	slidesPerView: "auto",
-	// slidesPerView: 4,
-	//autoHeight: true,
+	watchSlidesProgress: true,
 	freeMode: true,
-	observer: true, // 슬라이드 변경 관찰 활성화
-	observeParents: true, // 부모 요소의 변경도 관찰
-	preventClicksPropagation: true,
-	navigation: {
-		nextEl: ".swiper-tab-next",
-        prevEl: ".swiper-tab-prev",
-	},
+	a11y: false,
 });
 
 // 상설전시 swiper
@@ -731,11 +759,14 @@ $(function () {
 
 
 // *** 자료형 검색 sh-db ***
+
+
+
 $(function () {
 
 	// *** 모바일용 ***
 
-	// body 클릭시 레이어 닫기
+	// body 클릭시 레이어 닫기	
 	$(document).click(function(e){
 		if (!$(e.target).is('.select-set > button')) {
 			$('.select-set > button').removeClass("on");
@@ -747,13 +778,21 @@ $(function () {
 		}
 	});*/
 
-	$(".check-ctrl").click(function(){
+	$(".mobile-check-ctrl").click(function(){
 		$(this).toggleClass("active");
 		$(this).next().toggleClass("active");
 	})
 
 	$(".check-list.details").click(function(){
 		$(".label-list").removeClass("active");
+	})
+	
+	//lnb-nav 펼치기, 접기
+	$(".lnb-nav .mobile__nav__open").on("click", function(){
+		$(".lnb-nav").addClass("active");
+	})
+	$(".lnb-nav .mobile__nav__close").on("click", function(){
+		$(".lnb-nav").removeClass("active");
 	})
 });
 
@@ -845,6 +884,13 @@ $(function () {
 		$(".cont-nav ul li").eq(imgmapInx).trigger("click");
 
 	});
+
+	//키워드 없을때 숨김처리
+	var keywordLength = $(".bd-view_wrap .dataInfoSet .keyword dd").length;
+	if(keywordLength < 1) {
+		$(".bd-view_wrap .dataInfoSet .keyword").addClass("noKeyword");
+	}
+
 
 	//첨부파일
 	var filesOv = $(".fileGroupSet>a");

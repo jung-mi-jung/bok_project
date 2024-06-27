@@ -91,22 +91,18 @@
 @mixin dataInfoSet {	
 	display: flex;
 	justify-content: space-between;
-	margin: 10px 0 42px;
+	margin: 20px 0 50px;
+	min-height: 30px;
+	@include breakpoint($smd) {
+		flex-direction: column;
+		min-height: 0;
+	}
 	.dataInfo {
 		position: absolute;
 		top: -34px;
 		right: 0;
 		display: flex;
 		color: #666;
-		@include breakpoint($smd){
-			right: auto;
-			left: 16px;
-			//top: -34px;
-			top: -16px;
-			width: 100%;
-			font-size: rem(14);
-			order: 1;
-		}
 		.ass {
 			color: #3B63C4;
 			font-weight: 500;
@@ -154,7 +150,8 @@
 				vertical-align: middle;
 				width: 1px;
 				height: 16px;
-				background-color: #D9D9D9;
+				background-color: #005596;
+				opacity: 0.3;
 				margin: 0 16px;
 				@include breakpoint($sm){
 					height: 12px;
@@ -173,6 +170,7 @@
 		a {
 			display: inline-block;
 			padding: 1px 11px;
+			margin-bottom: 4px;
 			color: #666;
 			font-size: rem(14);
 			border-radius: 30px;
@@ -180,24 +178,7 @@
 			&:hover {
 				color: #fff;
 				background-color: #3B63C4;
-				border: 1px solid #3B63C4;
-			}
-		}
-		@include breakpoint($smd){
-			order: 3;
-			margin-top: 30px;
-			& + dl {
-				position: absolute;
-				display: flex;
-				align-items: center;
-				gap: 0 8px;
-				top: 6px;
-				left: 16px;
-				order: 2;
-				flex-direction: column;
-				align-items: flex-start;
-				margin-top: 0;
-				font-size: rem(12);
+				border: 1px solid #3B63C4;flex-wrap: wrap;
 			}
 		}
 	}
@@ -284,13 +265,14 @@
 		}
 	}
 	.dataInfoSet {
-		min-height: 55px;
+		// min-height: 55px;
 		@include dataInfoSet();
 		// min-height: 25px;
 		align-items: flex-end;
 		.type2 {
 			//margin-top: -24px;
 			margin-top: -16px;
+			flex-direction: column;
 			dt + dd {
 				margin-top: 4px;
 			}
@@ -369,27 +351,11 @@
 		}
 		.down {			
 			display: none;
-			border: 0;
-			padding: 0;
-			background: #FAFAFA;
-			border-radius: 0 0 8px 8px;
-			padding: 16px;
-			a {
-				position: relative;
-				padding-left: 20px;
-				&::before {
-					content: '';
-					position: absolute;
-					top: 10px;
-					left: 6px;
-					width: 4px;
-					height: 4px;
-					background-color: #4D4D4D;
-					border-radius: 50%;
-				}
-				&::before {
-					text-decoration: underline;
-				}
+		}
+		& + .view {
+			margin-top: -20px;
+			@include breakpoint($smd) {
+				margin-top: 0;
 			}
 		}
 	}
@@ -399,7 +365,7 @@
 		padding: 10px 14px;
 		margin-bottom: 30px;
 		border-bottom: 1px solid #E5E5E5;
-		border-radius: 8px;
+		border-radius: 0 0 8px 8px;
 		&.type2 { //연관검색어 없는 경우
 			margin-top: 50px;
 		}
@@ -407,45 +373,148 @@
 			display: flex;
 			justify-content: space-between;
 		}
+		ul {
+			width: 100%;
+			li {
+				display: flex;
+				// flex-wrap: wrap;
+				justify-content: space-between;
+				border-bottom: 1px solid #E6E6E6;
+				@include breakpoint($sm) {
+					align-items: flex-start;
+				}
+				&:last-child {
+					border-bottom: none;
+				}
+			}
+		}
 		a {
-			position: relative;
 			color: $black;
+			display: inline-block;
+			padding: 6px 0;
+			font-size: 16px;
 			&:hover {
-				&::after {
-					@include breakpoint($lg) {
-						display: block;
+				text-decoration: underline;
+			}
+			&.file {
+				&::before {
+					content: "";
+					display: inline-block;
+					vertical-align: middle;
+					width: 15px;
+					height: 19px;
+					background: url(/static/portal/img/ico/ico-down.png) no-repeat;
+					margin-right: 5px;
+				}
+				&:hover {
+					text-decoration: none;
+				}
+				& + .viewer {
+					position: relative;
+					margin-left: 10px;
+					padding-left: 12px;
+					&::after {
+						content: "";
+						display: inline-block;
+						vertical-align: middle;
+						width: 1px;
+						height: 20px;
+						background-color: #a6a6a6;
+						position: absolute;
+						top: 50%;
+						left: 0;
+						margin-top: -10px;
 					}
 				}
 			}
-
+			&.viewer {
+				&::before {
+					@include font-ico-outline('\e666');
+					color: $black;
+					font-size: 19px;
+					margin-right: 4px;
+				}
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	.view {
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		> dl {
+			@include breakpoint($sm) {
+				margin: 4px 0;
+			}
+		}
+		dt {
+			border-right: none;
+			background-color: transparent;
+			padding: 2px 10px;
+			@include breakpoint($sm) {
+				font-size: rem(16);
+			}
+		}
+		dd {
+			position: relative;
+			color: #1a1a1a;
+			@include breakpoint($sm) {
+				font-size: rem(16);
+			}
 			&::before {
 				content: "";
-				display: inline-block;
-				vertical-align: middle;
-				width: 15px;
-				height: 19px;
-				background: url(/static/portal/img/ico/ico-down.png) no-repeat;
-				margin-right: 5px;
-			}
-			&::after {
-				content: "";
-				width: 100%;
-				height: 1px;
-				background-color: #1A1A1A;
 				position: absolute;
-				bottom: -2px;
-				display: none;
+				left: 0;
+				top: 30%;
+				width: 1px;
+				height: 42%;
+				background: #E8EBED;
+				@include breakpoint($sm) {
+					display: none;
+				}
+			}			
+		}
+		& + .dbdata {
+			padding-top: 0;
+			@include breakpoint($sm) {
+				padding: 0 10px;
 			}
+		}
+	}
+	.dbdata {
+		@include breakpoint($lg){
+			padding: 30px 10%;
 		}
 	}		
 }
+
+
+.bd-view .file-set {
+	@include breakpoint($sm) {
+		display: flex;
+		gap: 0 8px;
+		margin-left: 8px;
+		a {
+			span {
+				display: none;
+			}
+			&.file + .viewer {
+				margin-left: 0;
+			}
+		}
+	}
+}
+
+
 /* 동영상, 이미지 등 콘텐츠 상세페이지 */
 .media-view {
 	.subject {
-		@include breakpoint($smd){
-			padding-top: 0 !important; 
-			margin-top: -10px !important;
-		}
+		// @include breakpoint($smd){
+		// 	padding-top: 0 !important; 
+		// 	margin-top: -10px !important;
+		// }
 	}
 	.poster-row {
 		@include breakpoint($sm) {
@@ -562,16 +631,11 @@
 
 
 .down {		
-	a {
+	> a,
+	ul > li > a {
 		position: relative;
+		display: flex;
 		color: $black;
-		&:hover {
-			&::after {
-				@include breakpoint($lg) {
-					display: block;
-				}
-			}
-		}
 		&::before {
 			content: "";
 			display: inline-block;
@@ -580,15 +644,10 @@
 			height: 19px;
 			background: url(/static/portal/img/ico/ico-down.png) no-repeat;
 			margin-right: 5px;
-		}
-		&::after {
-			content: "";
-			width: 100%;
-			height: 1px;
-			background-color: #1A1A1A;
-			position: absolute;
-			bottom: -2px;
-			display: none;
+
+			@include breakpoint($sm) {
+				display: none;
+			}
 		}
 	}
 }	
@@ -598,6 +657,9 @@
 	width: 1280px;
 	max-width: 100%;
 	margin: 78px auto 0;
+	@include breakpoint($smd) {
+		margin: 0 auto;
+	}
 	.video {
 		.vjs-icon-placeholder:before {
 			font-size: 24px;
@@ -762,6 +824,7 @@
 		}
 	}
 }
+
 .summary {			
 	position: relative;
 	color: #4D4D4D;
@@ -820,8 +883,6 @@
 	}		
 }
 
-
-
 .scrollY {
 	overflow-y: auto;
 	overflow-x: hidden;
@@ -854,131 +915,7 @@
 
 }
 
-
-.bd-blog {
-	position: relative;
-	.img-box {
-		margin: 20px 0 30px;
-		.img {
-			padding-top: 21.4%;
-		}
-	}
-	.subject {
-		color: $black;
-		font-weight: 400;
-		font-size: rem(32) !important;
-	}
-	.dataInfoSet {
-		@include dataInfoSet();
-		.dataInfo {
-			top: -56px;
-		}
-	}
-	.dbdata {
-		margin-top: 30px;
-		border-top: 2px solid #000;
-	}
-	
-}
-
-
-
-
-
-/* 아직 아래 안씀 */
-// .reg {
-// 	@include dl-table;
-// 	> dl {
-// 		> dt {
-// 			height: 70px;
-// 			padding: 0 10px 0 30px;
-// 			@include breakpoint($sm){
-// 				height: auto;
-// 				padding: 6px 0 0 10px;
-// 			}
-// 		}
-// 		> dd {
-// 			@include breakpoint($sm){
-// 				padding: 6px 10px;
-// 			}
-// 		}
-// 	}
-// 	.b-add {
-// 		min-width: 40px;
-// 		height: 40px;
-// 		background: url(/static/aieth/img/ico/b-add.png);
-// 	}
-// 	.b-del {
-// 		min-width: 40px;
-// 		height: 40px;
-// 		background: url(/static/aieth/img/ico/b-del.png);
-// 	}
-// 	.txt {
-// 		margin-bottom: 10px;
-// 	}
-// }
-
-//파일 첨부, 삭제 set
-// .file_box {
-// 	display: flex;
-// 	justify-content: space-between;
-// 	width: 100%;
-// 	.input-file {
-// 		display: flex;
-// 		justify-content: space-between;
-// 		width: calc(100% - 45px);
-// 		label.b-file {
-// 			display: inline-block;
-// 			height: 40px;
-// 			line-height: 40px;
-// 			position: relative;
-// 			padding: 0 20px;
-// 			border-radius: 5px;
-// 			background-color: #000;
-// 			color: #fff;
-// 			&::before {
-// 				content: "";
-// 				display: inline-block;
-// 				width: 13px;
-// 				height: 16px;
-// 				background: url(/static/aieth/img/ico/ico-file.png);
-// 				margin-right: 4px;
-// 			}			
-// 		}
-// 	}
-// 	.input-file input[type='text'] {
-// 		width: calc(100% - 125px);
-// 		background-color: #fff;
-// 	}
-// 	.input-file input[type='file'] {
-// 		opacity: 0;
-// 		position: absolute;
-// 		left: 0;
-// 		z-index: -1;
-// 		min-width: 0;
-// 		width: 120px;
-// 		height: 40px;
-// 		padding: 13px 15px;
-// 		&:focus {
-// 			opacity: 1;
-// 			outline: 1px dashed #000;
-// 			outline-offset: 1px
-// 		}
-// 	}
-// 	button {
-// 		&:focus {
-// 			outline: 1px dashed #000;
-// 			outline-offset: 1px
-// 		}
-// 	}
-// 	& + .file_box {
-// 		margin-top: 10px;
-// 	}
-// }
-
-
-
-
+/* old code */
 .view {
 	clear: both;
 	font-size: rem(18);
@@ -1024,7 +961,9 @@
 	// 	margin-right:10px;
 	// }
 	.subject{ 
-		font-size:24px;padding:10px 12px 1px 20px;margin:0 !important;
+		font-size:24px;
+		padding:10px 12px 1px 20px;
+		margin:0 !important;
 		&:before{
 			content:"" !important; display:none  !important;
 		}
@@ -1082,7 +1021,7 @@
 				.hits{
 					&:before{
 						@include font-ico-outline('\e54b');
-						font-size: px;
+						//font-size: px;
 						margin-right:5px;
 					}
 				}
@@ -1090,7 +1029,10 @@
 		}
 		>.l,
 		>dt{			
-			width:13%;max-width:120px;vertical-align:middle; text-align:left; position:relative; border-left:1px solid $bd-color; padding-left:20px;
+			width:20%;
+			max-width:120px;
+			vertical-align:middle; 
+			text-align:left; position:relative; border-left:1px solid $bd-color; padding-left:20px;
 			&:first-child{
 				border-left:none;
 			}
@@ -1155,140 +1097,27 @@
 		max-width: 100px;
 	}
 }
-// .view.edu-info {
-// 	border-top: 0;
-// 	dl {
-// 		font-size: rem(16);
-// 	}
-// }
-// .view.type2 {
-// 	>dl{
-// 		display:table;
-// 		width:100%;
-// 		border-collapse:collapse;
-// 		table-layout:fixed;
-// 		>*,
-// 		>dt,
-// 		>dd{
-// 			display:table-cell;
-// 			padding: 15px 0;
-// 			vertical-align:top;
-// 			border-top:1px solid $bd-color;
-// 			vertical-align:middle;
-// 			font-size: rem(16);
-// 			line-height: 1.4;
-// 			&::after {
-// 				display: none;
-// 			}
-// 			.fr{
-// 				.date{
-// 					margin-right:15px;
-// 					&:before{
-// 						@include font-ico-outline('\e855');
-// 						font-size: 20px;
-// 						background: none;margin-right:5px;
-// 					}
-// 				}
-// 				.hits{
-// 					&:before{
-// 						@include font-ico-outline('\e54b');
-// 						font-size: px;
-// 						margin-right:5px;
-// 					}
-// 				}
-// 			}
-// 		}
-// 		>.l,
-// 		>dt{		
-// 			width: 14%;
-// 			max-width: 120px;			
-// 			text-align: center;
-// 			border-right: 1px solid $bd-color;
-// 			background-color: #F2F6FA;
-// 			@include breakpoint($sm){
-// 				width:80px;
-// 			}
-// 		}
-// 		>.r,
-// 		>dd{ 
-// 			position:relative;
-// 			padding-left: 16px;
-// 			padding-right: 16px;
-// 			@include breakpoint($sm){
-// 				padding-right: 0;
-// 				padding-left: 8px;
-// 			}
-// 			&.pos-s{
-// 				position:static;
-// 			}
-// 			label {
-// 				margin-right:20px;
-// 			}
-// 			p+p{
-// 				margin-top:5px;
-// 			}
-// 			input.date,
-// 			input.sdate,
-// 			input.edate {
-// 				max-width: 150px;
-// 				border: 1px solid #D9D9D9;
-// 				line-height: 20px;
-// 				height: 32px;
-// 				@include breakpoint($sm) {
-// 					max-width: 130px;
-// 				}
-// 			}
-// 			.date-set {
-// 				justify-content: flex-start;
-// 			}
-// 			.select {
-// 				@include breakpoint($sm) {
-// 					width: 100%;
-// 					max-width: 220px;
-// 				}
-// 			}
-			
-// 		}
-// 		&:first-child>*{
-// 			border-top:none;
-// 		}
-// 	}
-// 	i {
-// 		display: inline-block;
-// 		&.fa-refresh {
-// 			&::before {
-// 				@include font-ico-outline("\f053");
-// 				font-size: 20px;
-// 			}
-// 		}
-// 		&.fa-volume-up {
-// 			&::before {
-// 				@include font-ico-outline("\e050");
-// 				font-size: 20px;
-// 			}
-// 		}
-// 	}
-// 	.b {
-// 		margin-bottom: 10px;
-// 	}	
-// }
+
 @include breakpoint($sm) {
 	.view > dl {
 		display: block;
 		border-collapse:inherit;
    		table-layout: inherit;
+		margin: 4px 0;
 		dt {
 			display: block;
 			width: 100%;
 			max-width: none;
-			padding-left: 0;
-			padding: 8px 0;
+			padding: 4px 10px;
+			font-size: rem(16);
 		}
 		dd {
 			display: block;
 			width: 100%;
 			max-width: none;
-			padding: 8px 0;
+			padding: 2px 10px;
+			color: #1a1a1a;
+			font-size: rem(16);
 			&::after {
 				display: none;
 			}

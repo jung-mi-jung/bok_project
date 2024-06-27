@@ -12,11 +12,16 @@
     padding: 20px;
 }
 .boxTop{
-	border: 7px solid #005596;
-	padding:0 12px;
-	position:relative;
-	margin-bottom:20px; 
-	clear:both; 
+	// border: 7px solid #005596;
+	// padding:0 12px;
+	// position:relative;
+	// margin-bottom:20px; 
+	// clear:both; 
+	text-align: center;
+    background-color: #F2F6FA;
+    border-radius: 16px;
+    padding: 40px 24px;
+    margin-bottom: 30px;
 }
 .boxTopArea{
 	p{margin:0}
@@ -26,18 +31,12 @@
 .boxTop>p{
 	line-height:1.6;
 	color:#005596;
-	font-size: rem(20);
+	font-size: rem(20) !important;;
 	text-align:center;
-	background:#fff;
-	margin:-7px 0 !important;
 	font-weight: 500;
-	padding:10px;
-	& + p {
-		margin: -16px 0 -7px !important;
-	}
 	@include breakpoint($sm) {
-		padding: 6px;
-		margin: -8px 0 -7px !important;
+		font-size: rem(18) !important;
+		line-height:1.4;
 	}
 	.point{
 		text-decoration:underline;color:#1f497d !important;
@@ -149,6 +148,10 @@
 .box2{
 	background: #FAFAFA; 
 	padding:20px;margin-bottom:20px;clear:both;
+	@include breakpoint($sm) {
+		width: 100%;
+	}
+
 	&.type1{position:relative;padding:10px 20px;
 		.topCenter{position:absolute; top:50%;}
 		.rightBtn{text-align:right; right:20px;margin-top:-25px;}
@@ -214,27 +217,44 @@
     margin-bottom: 20px;
 	border: 2px solid #dee0e6;
     background: none;
-	@include breakpoint($sm) {
+	@include breakpoint($smd) {
 		flex-direction: column;
 		align-items: flex-start;
+		gap: 8px 0;
 	}
 	dl {
-		// width: 70%;
-		// margin: 0 auto;
-	}
-	.bullet2{
-		margin: 15px 0 4px 0;
-		font-size: rem(16);
-		&::before {
-			content: "◆";
-			display: inline-block;
-			color: #3656A3;
-			font-size: 10px;
-			vertical-align: top;
-			padding: 5px 7px 0 0;
+		display: flex;
+		align-items: center;
+		dt, dd {
+			margin: 0; 
+			font-size: rem(18);
+			@include breakpoint($smd) {
+				font-size: rem(16);
+			}
 		}
-	}
-	li {
-		font-size: rem(15);
+		dt {
+			position: relative;
+			padding-left: 15px;
+			font-weight: 400;
+			&::before {
+				content: "";
+				display: inline-block;
+				position: absolute;
+				left: 0;
+				top: 10px;
+				width: 5px;
+				height: 5px;
+				background-color: #1a1a1a;
+				border-radius: 50%;
+			}
+		}
+		dd {
+			padding-left: 20px;
+			font-weight: 500;
+			color: #1a1a1a;
+			@include breakpoint($smd) {
+				padding-left: 10px;
+			}
+		}
 	}
 }

@@ -23,7 +23,7 @@
 					white-space:nowrap;
 					width: 100%;
 					// color: #fff;
-					padding: 0 25px;
+					padding: 0 40px;
 					color: #1a1a1a;
 					text-align: center;
 					height: 72px;
@@ -31,13 +31,28 @@
 					font-size: rem(24);
 					font-weight: 500;
 					// padding: 0 .75em;
-					&.on {
+					&.on,
+					&:hover {
 						span {
-							color: #005596;
+							display: inline-block;
+							position: relative;
+							height: 60px;
+							color: #1a1a1a;
+							&::before {
+								content: "";
+								display: block;
+								position: absolute;
+								bottom: 0;
+								left: 0;
+								background-color: #2373b0;
+								width: 100%;
+								height: 3px;
+							}
 						}
 						& + .depth2 {
 							display: flex;
-							justify-content: space-between;
+							// justify-content: space-between;
+							justify-content: center;
 							//background-color: rgba(19, 21, 71, 0.95); 변경전
 							background-color: #fff;
 							&::before,
@@ -63,8 +78,6 @@
 						}
 					}
 				}
-				&:hover,
-				&.on,
 				&.active {
 					> a {
 						color: #005596;
@@ -83,6 +96,12 @@
 								height: 3px;
 							}
 						}
+						&.on,
+						&:hover {
+							span {
+								color: #005596;
+							}
+						}
 					}
 				}
 				&.menu01 {
@@ -90,14 +109,14 @@
 						> ul {
 							flex-wrap: inherit;
 							> li {
-								flex-basis: calc(100% / 6);
+								//flex-basis: calc(100% / 6);
 							}
 						}
 					}
 				}
 				&.menu02 {
 					> ul {
-						width: calc(100% - 240px - 50px);
+						//width: calc(100% - 240px - 50px);
 					}
 				}
 			}
@@ -107,22 +126,24 @@
 				//top: 60px;
 				top: 72px;
 				left: 0;
-				width: 100%;
-				z-index: 99;								
+				width: 100vw;
+				max-width: 1824px;
+				left: 50%;
+				transform: translateX(calc(-50% - 120px));
+				z-index: 99;
 				> ul {
-					width: calc(100% + 8%);
+					width: 100%;
 					display: flex;
 					flex-wrap: wrap;
 					flex-direction: row;
-					//padding-left: 12%;
 					margin: 15px 0;
-					margin-left: -8%;
-					// @include breakpoint($xl) {
-					// 	margin-left: -8%;
-					// 	width: calc(100% + 8%);
-					// }
+					max-width: 960px;
+					justify-content: space-evenly;
+					//margin-left: 60px;
+					// border: 1px solid red;
 					> li {
-						flex-basis: calc(100% / 5);
+						//flex-basis: calc(100% / 5);
+						//flex: 1;
 						padding: 15px 0;
 						> a {
 							display: inline-block;
@@ -212,18 +233,37 @@
 			margin-top: -24px;
 			gap: 0 16px;
 		}
-		@include breakpoint($sm) {
-			margin-top: -18px;
+		// @include breakpoint($sm) {
+		// 	margin-top: -18px;
+		// }
+		.m-g-info {
+			@include breakpoint($lg) {
+				display: none;
+			}
+			@include breakpoint($sm) {
+				display: none;
+			}
+			.global ul {
+				display: flex;
+				gap: 0 4px;
+				a {
+					color: #005596;
+					font-size: rem(14);
+					font-weight: 500;
+					padding: 0 8px;
+
+				}
+			}
 		}
 		> .search {
 			width: 48px;
 			height: 48px;
 			background: #005596;
 			border-radius: 50%;
-			@include breakpoint($sm) {
-				width: 36px;
-				height: 36px;
-			}
+			// @include breakpoint($sm) {
+			// 	width: 36px;
+			// 	height: 36px;
+			// }
 		}
 	}
 	button.all-nav-toggle {
@@ -233,16 +273,16 @@
 		// }
 		width: 48px;
 		height: 48px;
-		@include breakpoint($smd) {
-			width: 36px;
-			height: 36px;
-		}
+		// @include breakpoint($smd) {
+		// 	width: 36px;
+		// 	height: 36px;
+		// }
 	}
 	.all-nav-toggle {
 		&::before {
 			@include font-ico-outline('\e5d2');
 			color: #005596;
-			font-size: 39px;
+			font-size: 48px;
 		}
 		@include breakpoint($smd){
 			//display: none;
@@ -267,118 +307,3 @@
 		}
 	}
 }
-// .mobileGnb {
-// 	@include breakpoint($lg){
-// 		display: none;
-// 	}
-// 	.m-all-nav-toggle {
-// 		position: absolute;
-// 		top: 0;
-// 		right: 60px;
-// 		width: $m-header-height;
-// 		height: $m-header-height;
-// 		&::before {
-// 			@include font-ico-outline('\e5d2');
-// 			color: #fff;
-// 			font-size: 32px;
-// 		}
-// 	}
-// 	&__set {
-// 		display: none;
-// 		.mobileGnb-close {
-// 			position: absolute;
-// 			top: 0;
-// 			right: 0;
-// 			// width: $m-header-height;
-// 			width: $m-header-height;
-// 			height: $m-header-height;
-// 			line-height: $m-header-height;
-// 			&::before {
-// 				@include font-ico('\e5cd');
-// 				font-size: 34px;
-// 				color: #fff;
-// 				margin-top: 12px;
-// 			}
-// 		}
-// 		&.active {
-// 			position: fixed;
-// 			top: 0;
-// 			left: 0;
-// 			display: block;
-// 			width: 100%;
-// 			height: 100vh;
-// 			background-color: $point;
-// 			z-index: 99;
-// 			.top {
-// 				height: $m-header-height;
-// 				line-height: $m-header-height;
-// 				span {
-// 					font-size: 20px;
-// 					display: block;
-// 					padding-left: 10px;
-// 				}
-// 			}
-// 		}
-// 	}	
-// 	&__nav {
-// 		position: relative;
-// 		> ul {
-// 			width: 140px;
-// 			> li {
-// 				> a {
-// 					display: block;
-// 					color: #fff;
-// 					padding: 16px 24px;
-// 					font-size: rem(18);
-// 					border-bottom: 1px solid #233B76;
-// 				}
-// 				.depth2 {
-// 					display: none;
-// 					.e {
-// 						display: none;
-// 					}
-// 				}
-// 				&.active {
-// 					> a {
-// 						color: $point;
-// 						background-color: #fff;
-// 						border-bottom: none;
-// 					}
-// 					.depth2 {
-// 						display: block;
-// 						position: absolute;
-// 						top: 0;
-// 						right: 0;
-// 						width: calc(100% - 140px);
-// 						height: calc(100vh - 60px);
-// 						overflow-y: auto;
-// 						z-index: 9;
-// 						padding: 24px;
-// 						background-color: #fff;
-// 						> ul {
-// 							> li {
-// 								margin-bottom: 15px;
-// 								> a {
-// 									display: block;
-// 									font-weight: 500;
-// 									color: $point;
-// 									padding: 2px 0;
-// 								}
-// 							}
-// 						}
-// 					}
-// 					.depth3 {
-// 						> ul {
-// 							li {
-// 								a {
-// 									color: #666;
-// 									font-size: rem(14);
-// 								}
-// 							}
-// 						}
-// 					}
-// 				}
-// 			}
-// 		}
-// 	}
-// }

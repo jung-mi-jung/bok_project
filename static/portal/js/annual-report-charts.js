@@ -43,8 +43,8 @@ import {
   data2_3_2,
 } from "./annual-report-charts-data.js";
 
-// 차트 내 툴팁 위치 지정 및 클릭 이벤트
 $(document).ready(function () {
+  // 차트 내 툴팁 위치 지정 및 클릭 이벤트
   function updateTooltipPosition(btn, tooltip) {
     var btnOffset = btn.offset();
     var btnWidth = btn.outerWidth();
@@ -115,9 +115,22 @@ $(document).ready(function () {
       btn.focus();
     }
   });
+
+  // 툴팁 키보드 포커싱 제어
+  $(".highcharts-a11y-proxy-group").hide();
 });
 
 // chart 공통 옵션 적용
+Highcharts.setOptions({
+  lang: {
+    printChart: "차트 인쇄",
+    downloadPNG: "PNG 이미지 다운로드",
+    downloadJPEG: "JPEG 이미지 다운로드",
+    downloadSVG: "SVG 이미지 다운로드",
+    downloadCSV: "CSV 다운로드",
+    downloadXLS: "XLS 다운로드",
+  },
+});
 var chartOptions = {
   chart: {
     marginRight: 5,
@@ -125,6 +138,15 @@ var chartOptions = {
       fontFamily:
         '"Spoqa Han Sans Neo", "AppleGothic", "맑은 고딕", "돋움", "dotum", Helvetica, Arial, sans-serif',
       color: "#000000",
+    },
+  },
+  accessibility: {
+    enabled: true, // 접근성 기능 활성화
+    keyboardNavigation: {
+      enabled: true, // 키보드 내비게이션 활성화
+    },
+    screenReaderSection: {
+      beforeChartFormat: "<h5>{chartTitle}</h5><div>{typeDescription}</div>",
     },
   },
   responsive: {
@@ -208,7 +230,34 @@ var chartOptions = {
       },
     },
   },
+  exporting: {
+    chartOptions: {
+      chart: {
+        style: {
+          fontFamily:
+            '"Spoqa Han Sans Neo", "AppleGothic", "맑은 고딕", "돋움", "dotum", Helvetica, Arial, sans-serif',
+        },
+      },
+    },
+    buttons: {
+      contextButton: {
+        align: "right",
+        verticalAlign: "top",
+        x: 6,
+        menuItems: [
+          "printChart",
+          "downloadPNG",
+          "downloadJPEG",
+          "downloadSVG",
+          "downloadCSV",
+          "downloadXLS",
+        ],
+      },
+    },
+    enabled: true,
+  },
 };
+
 // Data 많을 경우 적용
 function getData(dates, data, isRange) {
   const arr = [];
@@ -814,7 +863,7 @@ Highcharts.chart(
       title: {
         text: "(%, %p)",
         y: -152,
-        x: 13,
+        x: 12,
       },
       tickInterval: 2,
       gridLineDashStyle: "Dash",
@@ -838,17 +887,17 @@ Highcharts.chart(
     series: [
       {
         name: "민간",
-        data: [2.0, 2.2, 2.6, 2.8, 3.2, 2.1, -4.8, 3.6, 4.1, 1.8],
+        data: [1.5, 1.7, 2.0, 2.1, 2.4, 1.6, -3.6, 2.6, 3.0, 1.3],
         tooltip: {
-          valueSuffix: "%",
+          valueSuffix: "%p",
         },
         color: "#009B82",
       },
       {
         name: "정부",
-        data: [4.3, 3.8, 4.4, 3.9, 5.3, 6.4, 5.1, 5.5, 4.0, 1.3],
+        data: [1.0, 0.9, 1.0, 0.9, 1.3, 1.6, 1.3, 1.5, 1.1, 0.4],
         tooltip: {
-          valueSuffix: "%",
+          valueSuffix: "%p",
         },
         color: "#FFB937",
       },
@@ -872,7 +921,7 @@ Highcharts.chart(
   Highcharts.merge(chartOptions, {
     chart: {
       type: "column",
-      marginLeft: 38,
+      marginLeft: 33,
       marginTop: 78,
     },
     responsive: {
@@ -930,11 +979,9 @@ Highcharts.chart(
       title: {
         text: "(%, %p)",
         y: -152,
-        x: 13,
+        x: 11,
       },
       tickInterval: 5,
-      min: -10,
-      max: 35,
       gridLineDashStyle: "Dash",
       plotLines: [
         {
@@ -956,25 +1003,25 @@ Highcharts.chart(
     series: [
       {
         name: "건설투자",
-        data: [1.4, 6.9, 10.0, 7.3, -4.6, -1.7, 1.5, -1.6, -2.8, 1.3],
+        data: [0.7, 3.4, 5.0, 3.7, -2.3, -0.8, 0.8, -0.8, -1.3, 0.6],
         tooltip: {
-          valueSuffix: "%",
+          valueSuffix: "%p",
         },
         color: "#009B82",
       },
       {
         name: "설비투자",
-        data: [5.1, 5.1, 2.6, 16.5, -2.3, -6.6, 7.2, 9.3, -0.9, 0.5],
+        data: [1.5, 1.5, 0.8, 4.7, -0.7, -2.0, 2.1, 2.8, -0.3, 0.2],
         tooltip: {
-          valueSuffix: "%",
+          valueSuffix: "%p",
         },
         color: "#FFB937",
       },
       {
         name: "지식재산생산물투자",
-        data: [4.5, 2.0, 4.0, 6.5, 4.4, 3.1, 3.4, 6.1, 5.0, 1.6],
+        data: [0.9, 0.4, 0.8, 1.3, 0.9, 0.6, 0.8, 1.3, 1.1, 0.4],
         tooltip: {
-          valueSuffix: "%",
+          valueSuffix: "%p",
         },
         color: "#C8C8C8",
       },
@@ -1381,7 +1428,7 @@ Highcharts.chart(
       },
       {
         name: "임시근로자",
-        data: [-14.1, -5.6, -31.3, 15.2, 4.3 - 6.1],
+        data: [-14.1, -5.6, -31.3, 15.2, 4.3, -6.1],
         tooltip: {
           valueSuffix: "만 명",
         },
@@ -1714,6 +1761,7 @@ Highcharts.chart(
           style: {
             color: "#000000",
             fontSize: "0.875rem",
+            zIndex: 10,
           },
         },
         tickPositions: [-4, -2, 0, 2, 4, 6, 8],
@@ -4652,23 +4700,13 @@ Highcharts.chart(
         "23.11",
         "23.12",
       ],
+      tickPositioner: function () {
+        return [0, 24, 48, 72, 96, 120, 144, 168, 192];
+      },
       labels: {
         formatter: function () {
-          const value = this.value;
-          const parts = value.split(".");
-          let yearPart = parseInt(parts[0], 10);
-          const monthPart = parts[1];
-
-          const formattedYear = yearPart < 10 ? "0" + yearPart : yearPart;
-
-          if (
-            monthPart === "01" ||
-            (yearPart % 2 === 1 && monthPart === "07")
-          ) {
-            return "20" + formattedYear;
-          } else {
-            return "";
-          }
+          var year = this.value;
+          return "20" + year.toString().split(".")[0];
         },
       },
       lineColor: "#D3D3D3",
@@ -5336,18 +5374,18 @@ Highcharts.chart(
         "2018",
         "2019",
         "2020",
-        "2021.01",
-        "2021.02",
-        "2021.03",
-        "2021.04",
-        "2022.01",
-        "2022.02",
-        "2022.03",
-        "2022.04",
-        "2023.01",
-        "2023.02",
-        "2023.03",
-        "2023.04",
+        "2021.1/4",
+        "2021.2/4",
+        "2021.3/4",
+        "2021.4/4",
+        "2022.1/4",
+        "2022.2/4",
+        "2022.3/4",
+        "2022.4/4",
+        "2023.1/4",
+        "2023.2/4",
+        "2023.3/4",
+        "2023.4/4",
       ],
       labels: {
         formatter: function () {
@@ -5355,9 +5393,9 @@ Highcharts.chart(
             "2012",
             "2015",
             "2018",
-            "2021.01",
-            "2022.01",
-            "2023.01",
+            "2021.1/4",
+            "2022.1/4",
+            "2023.1/4",
           ];
           if (allowedLabels.indexOf(this.value) !== -1) {
             return this.value;
@@ -5694,7 +5732,7 @@ Highcharts.chart(
     },
     series: [
       {
-        name: '<a href="#" class="tooltip-btn" id="tooltip-chart-btn15">총자산순이익률(좌축)<sup class="sup">1)</sup></a>',
+        name: '<a href="#" class="tooltip-btn" id="tooltip-chart-btn15">총자산순이익률<sup class="sup">1)</sup></a>',
         data: [
           0.52, 0.51, 0.51, 0.42, 0.56, 0.53, 0.47, 0.36, 0.64, 0.56, 0.57,
           0.45, 0.77, 0.71, 0.66, 0.56, 0.74, 0.73, 0.72, 0.6, 0.62, 0.67, 0.68,
@@ -5707,7 +5745,7 @@ Highcharts.chart(
         color: "#23B4E1",
       },
       {
-        name: '<a href="#" class="tooltip-btn" id="tooltip-chart-btn16">순이자마진(좌축)<sup class="sup">2)</sup></a>',
+        name: '<a href="#" class="tooltip-btn" id="tooltip-chart-btn16">순이자마진<sup class="sup">2)</sup></a>',
         type: "line",
         yAxis: 0,
         data: [
@@ -5722,7 +5760,7 @@ Highcharts.chart(
         color: "#D2915A",
       },
       {
-        name: '<a href="#" class="tooltip-btn" id="tooltip-chart-btn17">고정이하여신비율(우축)<sup class="sup">1)</sup></a>',
+        name: '<a href="#" class="tooltip-btn" id="tooltip-chart-btn17">고정이하여신비율<sup class="sup">1)</sup></a>',
         type: "line",
         yAxis: 0,
         data: [
@@ -5746,108 +5784,238 @@ Highcharts.chart(
   Highcharts.merge(chartOptions, {
     chart: {
       type: "column",
-      marginLeft: 40,
+      marginLeft: 30,
       marginTop: 78,
-    },
-    responsive: {
-      rules: [
-        {
-          condition: {
-            maxWidth: 400,
-          },
-          chartOptions: {
-            legend: {
-              y: -15,
-            },
-            yAxis: {
-              title: {
-                y: -138,
-              },
-            },
-          },
-        },
-      ],
+      marginRight: 42,
     },
     xAxis: {
       categories: [
-        "은행",
-        "상호금융",
-        "여신전문",
-        "저축은행",
-        "생명보험",
-        "증권",
+        "은행(좌축)",
+        "상호금융(좌축)",
+        "여신전문(좌축)",
+        "저축은행(좌축)",
+        "생명보험(우축)",
+        "증권(우축)",
       ],
       lineColor: "#D3D3D3",
     },
-    yAxis: {
-      title: {
-        text: "(%)",
-        y: -154,
-        x: 13,
-      },
-      tickPositions: [0, 160, 320, 480, 640, 800],
-      gridLineDashStyle: "Dash",
-      plotLines: [
-        {
-          color: "#000000",
-          width: 1,
-          value: 0,
-          zIndex: 5,
+    yAxis: [
+      {
+        title: {
+          text: "(%)",
+          rotation: 0,
+          y: -154,
+          x: 24,
+          style: {
+            color: "#000000",
+            fontSize: "0.875rem",
+          },
         },
-        // {
-        //   color: "#000000",
-        //   width: 2,
-        //   value: 12,
-        //   dashStyle: "ShortDash",
-        //   zIndex: 5,
-        // },
-      ],
-    },
+        labels: {
+          formatter: function () {
+            return this.value.toLocaleString();
+          },
+        },
+        tickPositions: [0, 5, 10, 15, 20, 25],
+        opposite: false,
+        gridLineWidth: 0,
+        plotLines: [
+          {
+            color: "#000000",
+            width: 1,
+            value: 0,
+            zIndex: 5,
+          },
+        ],
+      },
+      {
+        title: {
+          text: "(%)",
+          rotation: 0,
+          y: -154,
+          x: -21,
+          style: {
+            color: "#000000",
+            fontSize: "0.875rem",
+          },
+        },
+        labels: {
+          formatter: function () {
+            return this.value.toLocaleString();
+          },
+        },
+        tickPositions: [0, 160, 320, 480, 640, 800],
+        opposite: true,
+        gridLineWidth: 0,
+      },
+    ],
     plotOptions: {
       column: {
         borderRadius: "25%",
+        borderWidth: 0,
       },
     },
     series: [
       {
         name: "22.4/4",
-        data: [551.2, 267.1, 570.4, 420.8, 206.4, 706.0],
+        data: [551.2, 267.1, 570.4, 420.8],
+        yAxis: 0,
         color: "#23B4E1",
         tooltip: {
           valueSuffix: "%",
         },
       },
       {
+        name: "22.4/4",
+        data: [null, null, null, null, 206.4, 706.0],
+        yAxis: 1,
+        color: "#23B4E1",
+        tooltip: {
+          valueSuffix: "%",
+        },
+        showInLegend: false,
+      },
+      {
         name: "23.1/4",
-        data: [585.2, 251.0, 585.9, 435.8, 219.3, 719.6],
+        data: [18.3, 7.8, 18.3, 13.6],
+        yAxis: 0,
         color: "#FFB937",
         tooltip: {
           valueSuffix: "%",
         },
       },
       {
+        name: "23.1/4",
+        data: [null, null, null, null, 219.3, 719.6],
+        yAxis: 1,
+        color: "#FFB937",
+        tooltip: {
+          valueSuffix: "%",
+        },
+        showInLegend: false,
+      },
+      {
         name: "23.2/4",
-        data: [580.8, 258.1, 589.0, 452.7, 224.3, 730.5],
+        data: [18.1, 8.1, 18.4, 14.1],
+        yAxis: 0,
         color: "#82AAAA",
         tooltip: {
           valueSuffix: "%",
         },
       },
       {
+        name: "23.2/4",
+        data: [null, null, null, null, 224.3, 730.5],
+        yAxis: 1,
+        color: "#82AAAA",
+        tooltip: {
+          valueSuffix: "%",
+        },
+        showInLegend: false,
+      },
+      {
         name: "23.3/4",
-        data: [574.5, 263.0, 589.3, 452.5, 224.5, 740.9],
+        data: [18.0, 8.2, 18.4, 14.1],
+        yAxis: 0,
         color: "#BEA078",
         tooltip: {
           valueSuffix: "%",
         },
       },
       {
+        name: "23.3/4",
+        data: [null, null, null, null, 224.5, 740.9],
+        yAxis: 1,
+        color: "#BEA078",
+        tooltip: {
+          valueSuffix: "%",
+        },
+        showInLegend: false,
+      },
+      {
         name: "23.4/4",
-        data: [null, 267.2, 598.6, 464.1, null, 736.4],
+        data: [null, 8.4, 18.7, 14.5],
+        yAxis: 0,
         color: "#C8C8C8",
         tooltip: {
           valueSuffix: "%",
         },
+      },
+      {
+        name: "23.4/4",
+        data: [null, null, null, null, null, 736.4],
+        yAxis: 1,
+        color: "#C8C8C8",
+        tooltip: {
+          valueSuffix: "%",
+        },
+        showInLegend: false,
+      },
+    ],
+    annotations: [
+      {
+        labelOptions: {
+          allowOverlap: true,
+          align: "left",
+          verticalAlign: "middle",
+          y: 0,
+        },
+        labels: [
+          {
+            point: {
+              xAxis: 0,
+              yAxis: 0,
+              x: 0,
+              y: 10.5,
+            },
+            text: "10.5%",
+          },
+          {
+            point: {
+              xAxis: 0,
+              yAxis: 0,
+              x: 1,
+              y: 5.0,
+            },
+            text: "5.0%",
+          },
+          {
+            point: {
+              xAxis: 0,
+              yAxis: 0,
+              x: 2,
+              y: 8.0,
+            },
+            text: "8.0%",
+          },
+          {
+            point: {
+              xAxis: 0,
+              yAxis: 0,
+              x: 3,
+              y: 8.0,
+            },
+            text: "8.0%",
+          },
+          {
+            point: {
+              xAxis: 0,
+              yAxis: 0,
+              x: 4,
+              y: 3.125,
+            },
+            text: "100.0%",
+          },
+          {
+            point: {
+              xAxis: 0,
+              yAxis: 0,
+              x: 5,
+              y: 3.125,
+            },
+            text: "100.0 %",
+          },
+        ],
       },
     ],
   })
@@ -7153,6 +7321,8 @@ Highcharts.chart(
             color: "#000000",
             textOutline: "none",
           },
+          allowOverlap: true,
+          y: -3,
         },
       },
       {
@@ -7171,6 +7341,8 @@ Highcharts.chart(
             color: "#000000",
             textOutline: "none",
           },
+          allowOverlap: true,
+          y: 3,
         },
       },
     ],

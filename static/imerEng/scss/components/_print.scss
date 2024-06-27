@@ -46,7 +46,7 @@
 			box-shadow: none;
 			width: 100%;
 			max-width: 100%;
-			transform: 0;
+			//transform: translate(0);
 		}
 		&__body {
 			overflow: inherit;
@@ -60,7 +60,7 @@
 	}
 	html, 
 	body{
-		size: A4;
+		//size: A4;
 		//margin: 30mm 45mm 30mm 45mm; /* margin: auto auto; 로 자동 여백 설정도 가능 */
 	}
 	

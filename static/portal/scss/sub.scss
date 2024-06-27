@@ -60,8 +60,11 @@
 
 @import url('/static/jslibrary/bootstrap-datepicker-1.9.0-dist/css/bootstrap-datepicker3.standalone.css');
 
-
-
+@include breakpoint($lg){
+	body {
+		overflow-y: scroll;
+	}
+}
 .pdf {
 	overflow-x: hidden;overflow-y: auto;width: 100%;height: 200px;
 }
@@ -126,6 +129,9 @@
 	border: 1px solid #E6E6E6;	
 	padding: 32px 0 0;
 	background-color: #FAFAFA;
+	@include breakpoint($sm){
+		padding: 15px 0 0;
+	}
 	h4 {
 		color: $color-point;
 		font-size: rem(20) !important;
@@ -133,6 +139,9 @@
 		margin-top: 25px;
 		margin-bottom: 8px;
 		padding: 0 32px;
+		@include breakpoint($sm){
+			padding: 0 15px;
+		}
 		&:first-child {
 			margin-top: 0;
 		}
@@ -167,6 +176,9 @@
 		//max-height: 500px;
 		//overflow-y: auto;
 		//overflow-x: hidden;
+		@include breakpoint($sm){
+			padding: 0 15px 15px;
+		}
 		p {
 			&:last-child {
 				margin-bottom: 0;
@@ -187,15 +199,17 @@
 	.agreeTxt {
 		border-top: 1px solid #E6E6E6;
 		display: flex;
-		font-size: rem(18);
+		font-size: rem(16);
 		color: $point;
 		padding: 30px 40px;
 		background-color: #fff;
 		@include breakpoint($lg){
+			font-size: rem(18);
 			justify-content: space-between;
 		}
 		@include breakpoint($sm){
 			display: block;
+			padding: 10px 15px;
 		}
 		span {
 			display: inline-block;
@@ -443,7 +457,7 @@ h3 + .h-group  {
 		margin-bottom: 0;
 		&.addtxt {
 			@include breakpoint($sm){
-				margin-top: -26px;
+				//margin-top: -26px;
 			}
 		}
 	}
@@ -457,6 +471,28 @@ h3 + .h-group  {
 		@include breakpoint($sm){
 			display: block;
 		}		
+	}
+	@include breakpoint($sm){
+		display: block;
+		h3 + p, 
+		h4 + p,
+		.h-caption + p {
+			clear: both;
+			width: 100%;
+		}
+	}
+	.more {
+		display: inline-block;
+		vertical-align: middle;
+		width: 36px;
+		height: 36px;
+		&::before {
+			content: "";
+			display: inline-block;
+			width: 36px;
+			height: 36px;
+			background: url(/static/portal/img/submain/more.png);
+		}
 	}
 }
 
@@ -494,8 +530,20 @@ mark {
 	background-color: #FFE100 !important;
 }
 
+
 .depart-wrap {
 	position: relative;
+	.dept-set {
+		padding: 32px 32px 32px 170px;
+		background: #F8F8F8 url(/static/portal/img/ico/ico-org.png) 32px 50% no-repeat;
+		border-radius: 16px;
+		min-height: 120px;
+		@include breakpoint($sm){
+			padding: 85px 20px 20px;
+			background-position: 50% 20px;
+			background-size: auto 55px;
+		}
+	}
 	.depart-go {
 		position: absolute;
 		top: 30px;
@@ -513,6 +561,9 @@ mark {
 		font-weight: 100 !important;
 		@include breakpoint($lg){
 			font-size: rem(64) !important;
+		}
+		@include breakpoint($sm){
+			font-size: rem(30) !important;
 		}
 		&::before {
 			content: "";
@@ -644,6 +695,15 @@ mark {
 	background-color: #F2F6FA;
 	border-radius: 8px;
 	padding: 24px;
+	@include breakpoint($sm){
+		padding: 10px;
+		label {
+			display: inline-block;
+			& + label {
+				margin-left: 0 !important;
+			}
+		}
+	}
 	.sh1 {
 		display: flex;
 		justify-content: center;
@@ -651,6 +711,7 @@ mark {
 		font-size: rem(18);
 		@include breakpoint($sm){
 			display: block;
+			text-align: left;
 		}
 		label + label {
 			margin-left: 50px;
@@ -694,6 +755,9 @@ mark {
 				border: 1px solid #BFBFBF;
 				height: 32px;
 				border-radius: 4px;
+				@include breakpoint($sm){
+					width: 100%;
+				}
 			}
 			.bu {
 				display: inline-block;
@@ -890,17 +954,41 @@ mark {
 .tooltip.bottom-right .tooltip-arrow {top: 0;left: 5px;margin-top: -5px;border-width: 0 5px 5px;border-bottom-color: $color-point; }
 
 
-
 .docSliderBody{
 	.main-container{
 		margin-top:0;
 	}
 	#content{
-		margin-top:0;
+		margin:0;
 		max-width: 100%;
 	}
 	#main-container{
 		width: 100%;
+		padding:0;
+		.content{
+			position:relative;
+			margin:0;
+		}
+	}
+	&#print-body{
+		padding:0;
+		.climateChange{
+			padding: 0 20px;
+			.content{
+				.section{
+					> *{
+						transform: translateY(0);
+						opacity: 1;
+						&.scroll-reveal-active{
+							animation: none;
+						}
+					}
+				}
+				video{
+					display: none;
+				}
+			}
+		}
 	}
 }
 
@@ -920,17 +1008,14 @@ mark {
     left: 0;
     height: 100%;
 }
-@include breakpoint($lg){
-	.docSlider-slide{
-		max-height: 1100px;
-		overflow: hidden;
-	}
-}
+// @include breakpoint($lg){
+// 	.docSlider-slide{
+// 		max-height: 1100px;
+// 		overflow: hidden;
+// 	}
+// }
 .climateChange{
-	
-	@include breakpoint($smd){
-		overflow: hidden;
-	}
+	overflow: hidden;
 	&:before{
 		content:'';
 		position:absolute;
@@ -1002,12 +1087,12 @@ mark {
         }
 		&:after{
 			content: "";
-			height: 297px;
-			background: url(/static/portal/img/submain/bg_climateChange2.png) no-repeat center top;
+			height: 1080px;
+			background: url(/static/portal/img/submain/bg_climateChange2.png) no-repeat center bottom;
 			position: absolute;
 			left: 50%;
 			transform: translateX(-50%);
-			bottom: 0;
+			top: 0;
 			width: 1920px;
 		}
 		@include breakpoint($smd){
@@ -1026,9 +1111,9 @@ mark {
 					margin-top: 10px;
 				}
 			}
-			&:after{
-				display: none;
-			}
+			// &:after{
+			// 	display: none;
+			// }
 		}
     }
     .sub-hover{
@@ -1138,6 +1223,7 @@ mark {
             top: 100%;
             transform: translate(-50%, 20px);
             box-shadow: 8px 8px 16px 0px rgba(0, 0, 0, 0.25);
+			z-index:10;
             .title{
                 color: #333;
                 font-size: 32px;
@@ -1151,11 +1237,24 @@ mark {
                 margin-top: 16px;
                 font-size: 24px;
                 word-break: break-all;
-                a{
-                    color:  #005596;
-                    font-weight: 500;
-                }
+				a, em{
+					font-weight: 500;
+				}
             }
+			a, em{
+				color:  #005596;
+			}
+			@include breakpoint($smd){
+				padding: 20px !important;
+				width: 300px;
+				.title{
+					font-size: 22px;
+				}
+				.desc{
+					width: 100%;
+					font-size: 18px;
+				}
+			}
         }
 		@include breakpoint($smd){
 			padding: 80px 16px 240px;
@@ -1211,7 +1310,8 @@ mark {
 									width: 18px;
 									height: 20px;
 									background-size: 100%;
-									
+									left: 4px;
+									top: 8px;
 								}
 							}
 						}
@@ -1224,7 +1324,7 @@ mark {
 		}
     }
     .sub-bank{
-		padding: 160px 0;
+		padding: 130px 0;
 		position:relative;
 		@include breakpoint($smd){
 			width:100%;
@@ -1259,7 +1359,7 @@ mark {
 			max-width: 540px;
             margin-top: 64px;
 			position:relative;
-			z-index: 1;
+			z-index: 9;
 			animation-delay: 3s;
             span{
                 display: block;
@@ -1296,31 +1396,29 @@ mark {
 			@include breakpoint($smd){
 				margin-top: 56px;
 				font-size: 13px;
+				opacity: 0.9;
 			}
         }
 		&:after{
 			content: "";
 			position: absolute;
 			right: -120px;
-			top: 355px;
+			bottom: 0;
 			background: url(/static/portal/img/submain/bg_climateChange_section3.png) no-repeat center center;
 			width: 942px;
 			height: 514px;
 			animation: 1s slideUp 1.6s both;
 			z-index:1;
-			@include breakpoint($smd){
+			@include breakpoint($sm){
 				width:100%;
 				height: 257px;
 				right:0;
-				bottom:0;
-				top:auto;
-				background: url(/static/portal/img/submain/bg_climateChange_section3_m.png) no-repeat center center;
-				background-size: 100%;
+				background-size: auto 100%;
 			}
 		}
     }
     .sub-agenda{
-        padding: 160px 0 ;
+        padding: 150px 0 ;
 		@include breakpoint($smd){
 			padding: 80px 16px;
 			text-align: center;
@@ -1354,10 +1452,11 @@ mark {
 			}
 		}
         .imgs{
-            min-width: fit-content;
+            flex:1;
         }
         .link{
 			margin-left: 170px;
+			flex:1;
 			@include breakpoint($smd){
 				margin:56px 0 0;
 			}
@@ -1368,13 +1467,16 @@ mark {
 				height: 100%;
                 li{
 					position:relative;
-					a:hover > .more  {
-						width: 65px;
-						transition-delay: 0.1s;
-						&:before{
-							width: 20px;
-							transition-delay: 0.3s;
-						}
+					// a:hover > .more  {
+					// 	width: 65px;
+					// 	transition-delay: 0.1s;
+					// 	&:before{
+					// 		width: 20px;
+					// 		transition-delay: 0.3s;
+					// 	}
+					// }
+					& ~ li{
+						margin-top: 24px;
 					}
 					@for $i from 1 to 5{
 						&:nth-child(#{$i}){
@@ -1425,7 +1527,7 @@ mark {
 				}
             }
             .more{
-				width: 0;
+				width: 16px;
 				display: block;
 				height: 2px;
 				position: relative;
@@ -1433,27 +1535,24 @@ mark {
 				font-size:0;
 				background-color: #0BFD7A;
 				position:absolute;
-				left:calc(100% - 65px);
+				right:0;
 				top:16px;
+				border-radius: 2px;
 				&:before{
 					content: "";
 					display: block;
-					height: 2px;
+					height: 16px;
 					position: absolute;
-					top: 0;
-					right: 0;
+					top: -7px;
+					right: 7px;
 					transition: all 0.2s;
-					width: 0;
-					transform: rotate(40deg);
+					width: 2px;
 					background-color: #0BFD7A;
 					transform-origin: right bottom;
+					border-radius: 2px;
 				}
 				@include breakpoint($smd){
-					top: 12px;
-					height: 1px;
-					&:before{
-						height: 1px;
-					}	
+					top: 10px;	
 				}
             }
         }
@@ -1461,7 +1560,7 @@ mark {
     .sub-org{
         max-width: 1440px;
         margin: 0 auto;;
-        padding: 160px 0 ;
+        padding: 130px 0 ;
 		@include breakpoint($smd){
 			padding: 80px 16px;
 		}
@@ -1525,14 +1624,13 @@ mark {
                 }
                 .year{
                     color: #0BFD7A;
-                    font-size: 40px;
+                    font-size: 32px;
                     font-weight: 700;
                     line-height: 150%;
                     i{
                         font-weight: 300;
-                        color:#fff;
                         display: inline-block;
-                        margin-left: 24px;
+                        margin-left: 8px;
                     }
 					@include breakpoint($smd){
 						font-size: 18px;
@@ -1574,6 +1672,12 @@ mark {
 			img{
 				width: 100%;
 				margin: 0 auto;
+			}
+			@include breakpoint($smd){
+				text-align: center;
+				img{
+					width: auto;
+				}
 			}
 			> ul{
 				width: 100%;
@@ -1829,7 +1933,7 @@ mark {
         }
     }
     .sub-roaddmap{
-        padding: 160px 0;
+        padding: 130px 0;
 		display:flex;
 		@include breakpoint($smd){
 			display:block;
@@ -1879,6 +1983,7 @@ mark {
 			font-size: 20px;
 			padding: 8px; 
 			font-weight: 500;
+			text-align: center;
 			@include breakpoint($smd){
 				font-size: 14px;
 				padding: 4px;
@@ -1930,7 +2035,7 @@ mark {
         }
     }
     .sub-news{
-        padding: 160px 0 194px;
+        padding: 130px 0;
 		@include breakpoint($smd){
 			padding: 80px 16px;
 		}
@@ -1942,7 +2047,7 @@ mark {
             background:url(/static/portal/img/submain/bg_climateChange_news.png) no-repeat center center;
             min-height: 400px;
 			@include breakpoint($smd){
-				padding: 48px;
+				padding: 36px;
 				background-size: auto 100%;
 			}
             .title{
@@ -1978,6 +2083,8 @@ mark {
 				@include breakpoint($smd){
 					width: 40px;
 					height: 40px;
+					right: 36px;
+					top: 38px;
 				}
             }
             .lists{
@@ -1998,6 +2105,7 @@ mark {
                         color: #0BFD7A;
                         font-size: 16px;
                         font-weight: 700;
+						border:0 none;
                     }
                     .date{
                         float: right;
@@ -2009,10 +2117,12 @@ mark {
                         clear: both;
                         display:block;
                         margin-top: 32px;
-                        color: #fff;
-                        font-size: 18px;
-                        font-weight: 500;
-                        word-break: break-all;
+                        a{
+							color: #fff;
+							font-size: 18px;
+							font-weight: 500;
+							word-break: break-all;
+						}
                     }
 					@include breakpoint($smd){
 						width: 100%;
@@ -2025,8 +2135,10 @@ mark {
 							font-size:10px;
 						}
 						.desc{
-							font-size: 12px;
 							margin-top: 16px;
+							a{
+								font-size: 12px;
+							}
 						}
 						& ~ li{
 							margin-top: 32px;
@@ -2138,6 +2250,7 @@ mark {
 		min-width: 400px;
 		@include breakpoint($smd){
 			text-align: center;
+			min-width: auto;
 		}
 	}
 	h4{
@@ -2227,3 +2340,9 @@ mark {
 		}
 	}
 }
+
+
+//연차 보고서 추가 수정
+// .highcharts-legend {
+// 	position: static !important;
+// }

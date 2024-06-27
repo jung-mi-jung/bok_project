@@ -104,6 +104,10 @@
 		font-weight: 700;
 		margin: 40px 0 48px;
 		line-height: 1.2;
+		@include breakpoint($sm) {
+			font-size: rem(22);
+    		margin: 16px 0 24px;
+		}
 		& + h3 {
 			margin-top: -20px;
 		}
@@ -118,17 +122,10 @@
 		font-size: rem(28);
 		font-weight: 500;
 		margin: 40px 0 32px;
-		// &::before {
-		// 	content: "";
-		// 	display: inline-block;
-		// 	vertical-align: middle;
-		// 	width: 8px;
-		// 	height: 24px;
-		// 	background-color: #3B63C4;
-		// 	border-radius: 30px;
-		// 	margin-right: 10px;
-		// 	margin-bottom: 4px;
-		// }
+		@include breakpoint($sm) {
+			font-size: rem(18);
+    		margin: 8px 0 16px;
+		}
 		&.h3 {
 			margin: 40px 0 16px;
 			@include h-caption();

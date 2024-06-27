@@ -31,7 +31,24 @@
 					font-weight: 500;
 					padding: 0 45px;
 					//padding: 0 11%;
+					&:hover,
 					&.on {
+						span {
+							display: inline-block;
+							position: relative;
+							height: 60px;
+							color: $black;
+							&::before {
+								content: "";
+								display: block;
+								position: absolute;
+								bottom: -13px;
+								left: 0;
+								background-color: #2373b0;
+								width: 100%;
+								height: 3px;
+							}
+						}
 						& + .depth2 {
 							display: flex;
 							justify-content: space-between;
@@ -51,15 +68,15 @@
 								box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 							}
 							&::before {
-								left: -50%;
-								width: 100000px;
+								left: 50%;
+								width: 100vw;
+								transform: translateX(-50%);
+								//width: 100000px;
 								z-index: -1;
 							}
 						}
 					}
 				}
-				&:hover,
-				&.on,
 				&.active {
 					> a {
 						color: $color-point;
@@ -78,6 +95,12 @@
 								height: 3px;
 							}
 						}
+						&.on,
+						&:hover {
+							span {
+								color: $color-point;
+							}
+						}
 					}
 				}
 			}
@@ -86,6 +109,7 @@
 				position: absolute;
 				//top: 60px;
 				top: 96px;
+				//height: 0;
 				left: 0;
 				width: 100%;
 				z-index: 99;	
@@ -98,8 +122,9 @@
 					padding: 0 8%;
 					//padding-left: 12%;
 					margin: 15px 0;
+					gap: 0 15px;
 					> li {
-						flex-basis: calc(100% / 5);
+						flex-basis: calc(100% / 5 - 15px);
 						padding: 15px 0;
 						> a {
 							display: inline-block;
@@ -176,6 +201,27 @@
 			}
 		}
 	}	
+}
+.m-g-info {
+	margin-right: 68px;
+	@include breakpoint($lg) {
+		display: none;
+	}
+	@include breakpoint($sm) {
+		display: none;
+	}
+	.global ul {
+		display: flex;
+		gap: 0 4px;
+		a {
+			//color: #fff;
+			color: #005596;
+			font-size: rem(14);
+			font-weight: 500;
+			padding: 0 8px;
+
+		}
+	}
 }
 
 @include breakpoint($lg 1500px){

@@ -6,6 +6,9 @@
 		font-weight: 300;
 		text-align: center;
 		margin-bottom: 15px;
+		@include breakpoint ($sm) {
+			font-size: rem(32);
+		}
 		strong {
 			color: #1a1a1a;
 			font-weight: 600;

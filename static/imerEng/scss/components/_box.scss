@@ -12,11 +12,16 @@
     padding: 20px;
 }
 .boxTop{
-	border: 7px solid #3B63C4;
-	padding:0 12px;
-	position:relative;
-	margin-bottom:20px; 
-	clear:both; 
+	// border: 7px solid #3B63C4;
+	// padding:0 12px;
+	// position:relative;
+	// margin-bottom:20px; 
+	// clear:both; 
+	text-align: center;
+    background-color: #F2F6FA;
+    border-radius: 16px;
+    padding: 40px 24px;
+    margin-bottom: 30px;
 }
 .boxTopArea{
 	p{margin:0}
@@ -25,13 +30,13 @@
 .boxTopArea, 
 .boxTop>p{
 	line-height:1.6;
-	color:#3B63C4;
-	font-size: rem(20);
+	color:#005596;
+	font-size: rem(20) !important;
 	text-align:center;
-	background:#fff;
-	margin:-7px 0 !important;
+	// background:#fff;
+	// margin:-7px 0 !important;
 	font-weight: 500;
-	padding:10px;
+	// padding:10px;
 	& + p {
 		margin: -16px 0 -7px !important;
 	}

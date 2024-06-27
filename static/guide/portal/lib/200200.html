@@ -1,0 +1,150 @@
+<!-- 법규 정보 - 법령 검색 -->
+
+<!-- 
+	/portal/singl/law/listSearch.do?menuNo=200200 
+	기존 코딩 그대로 
+-->
+
+<div class="boxType2 oh">
+	<p class="tit">현행 법규를 분류별 구조로 나타내며, 선택한 법규에 대해서</p>
+	<ol class="numListStyle type">
+		<li><span>1</span> 분류별 검색</li>
+		<li><span>2</span> 관련 하위보기</li>
+		<li><span>3</span> 전문보기 등의 기능을 제공합니다.</li>
+	</ol>
+	<div class="schType" id="tab">
+		<form name="schFrom" method="post" action="">
+			<div class="pa1">
+				<p>
+					<label for="schLawId">분류</label>
+					<span>
+						<select name="schLawId" id="schLawId" class="inpStyle">
+							<option value="">전체</option>		
+							<option value="91000">금융기본법령</option>						
+						</select>
+					</span>
+				</p>
+				<p>
+					<label for="searchCnd">검색영역</label>
+					<span>
+						<select name="searchCnd" id="searchCnd" class="inpStyle">
+							<option value="1">법규명</option>
+							<option value="2">법규내용</option>
+						</select>
+					</span>
+				</p>
+			</div>
+			<div class="pa2">
+				<p>
+					<label for="searchKwd">검색어</label>
+					<span class="inpStyle"><span><input type="text" name="searchKwd" id="searchKwd" value="" class="inpStyle_t"></span></span>
+					<span class="schStyle"><a href="javascript:document.schFrom.submit();"><span class="hidden">검색</span></a></span>
+				</p>
+			</div>
+		</form>
+	</div>
+</div>
+
+<div class="lawTab">
+	<ul class="lawTab_d1">
+		<li class="active">
+			<a href="">금융기본법령</a>
+		</li>
+		<li>
+			<a href="">경영</a>
+		</li>
+		<li>
+			<a href="">관리</a>
+		</li>
+		<li>
+			<a href="">통화정책</a>
+		</li>
+		<li>
+			<a href="">금융안정</a>
+		</li>
+		<li>
+			<a href="">외환·국제</a>
+		</li>
+		<li>
+			<a href="">현업</a>
+		</li>
+		<li>
+			<a href="">통계</a>
+		</li>
+		<li>
+			<a href="">감사</a>
+		</li>
+	</ul>
+	<div class="lawTab_d2">
+		<div>
+			<h3 class="hidden">현업</h3>
+			<ul>
+				<li class="active">
+					<a href="">발권·출납</a>
+				</li>
+				<li>
+					<a href="">국고금 취급</a>
+				</li>
+				<li>
+					<a href="">국채</a>
+				</li>
+				<li>
+					<a href="">수입인지</a>
+				</li>
+				<li>
+					<a href="">정부유가증권</a>
+				</li>
+				<li>
+					<a href="">기금관리</a>
+				</li>
+
+				<li>
+					<a href="">수입인지</a>
+				</li>
+				<li>
+					<a href="">정부유가증권</a>
+				</li>
+				<li>
+					<a href="">기금관리</a>
+				</li>
+				<li>
+					<a href="">수입인지</a>
+				</li>
+				<li>
+					<a href="">정부유가증권</a>
+				</li>
+				<li>
+					<a href="">기금관리</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<h3 id="locationNm">현업 > 발권·출납</h3>
+<div class="bdLine type4">
+	<ul>
+		<li>
+			<div class="row">
+				<span class="col m12">
+					<a href=""><span class="title">발권규정</span></a>
+				</span>
+				<div class="row">
+					<div class="col l4 m4 s12 dataInfo1 tal">
+						<span>개정일
+							<span class="fs_date">2024-02-08</span>
+						</span>
+					</div>
+					<div class="col l8 m8 s12 fileLink1">		
+						<a href="" title="첨부파일있음"><span class="fileType">전문</span></a>
+						<a href="" title="첨부파일있음"><span class="fileType">개정요지</span></a>
+						<a href="" title="첨부파일있음"><span class="fileType">신구대비</span></a>
+						<a href="javascript:void(0);" onclick="listHistPopBtn('82010')" title="연혁 새창"><span class="fileView">연혁</span></a>
+					</div>
+				</div>				
+			</div>
+		</li>
+	</ul>
+</div>
+
+<div class="paginationSet">페이징</div>

@@ -1,13 +1,14 @@
 /* 한국은행 연차보고서 */
 
 .container.annual-report-container {
+	// .reference {
+	// 	margin-top: 270px;
+	// }
 	// 임시
 	width: calc(100% - 20px);
 
-	div {
-		&+h2 {
-			margin-top: 70px;
-		}
+	.annual-report-section {
+		border: 1px solid transparent;
 	}
 
 	h2 {
@@ -21,6 +22,29 @@
 
 	p {
 		font-size: 1.125rem;
+	}
+
+	@media (min-width: 1200px) {
+		.content { //추가
+			padding-bottom: 30px;
+			//min-height: 800px;
+		}
+	}
+
+	.content-indent {
+		padding-left: 52px;
+
+		p {
+			margin-bottom: 0;
+		}
+
+		.table {
+			margin-top: 0;
+		}
+
+		@media (max-width : 749px) {
+			padding-left: 32px;
+		}
 	}
 
 	#main-container {
@@ -326,8 +350,12 @@
 
 		&.fixed {
 			position: fixed;
-			top: 20px; 
+			@media (min-width: 1200px) {
+				position: sticky;  //pc
+			}
+			top: 60px; 
 			left: auto;
+			z-index: 999;
 		}
 
 		.sidebar-toggle {
@@ -419,7 +447,7 @@
 							display: flex;
 							align-items: flex-start;
 							gap: 4px;
-							padding: 4px 0 4px 24px;
+							padding: 4px 0 4px 23px;
 							color: #6D6E72;
 
 							&:focus {
@@ -527,7 +555,8 @@
 	
 		@media (max-width: 1199px) {
 			position: fixed;
-			top: 96px;
+			// top: 96px;
+			top: 154px;
 			left: 0;
 			z-index: 100;
 			min-width: 240px;
@@ -707,16 +736,22 @@
 	.annual-report-area {
 		flex: 1;
 		max-width: 1136px;
-		width: calc(100% - 304px);
+		//width: calc(100% - 304px);
 		height: auto;
 		float: right;
 
 		&.responsive {
-			margin-left: 304px;
+			//margin-left: 304px;
 		}
 		
 		a {
 			color: #4D4D4D;
+		}
+
+		.annual-report-section {
+			&.last-section {
+				margin-bottom: 70px;
+			}
 		}
 
 		.flex-area {
@@ -755,7 +790,12 @@
 		.infographic {
 			margin: 40px 0;
 			padding: 24px 0 33px;
-			background: rgba(109, 110, 114, 0.1);					
+			background: rgba(109, 110, 114, 0.1);
+			border-radius: 16px;
+			
+			&:last-child {
+				margin-bottom: 0;
+			}
 
 			.infographic-inner {
 				width: 835px;
@@ -909,12 +949,13 @@
 					&::-webkit-scrollbar {
 						-webkit-appearance: none;
 					}					
-					&::-webkit-scrollbar:vertical {
+					//&::-webkit-scrollbar:vertical {
+					/*&\-webkit\-scrollbar\vertical {
 						width: 8px;
 					}						
-					&::-webkit-scrollbar:horizontal {
+					&\-webkit\-scrollbar\horizontal {
 						height: 12px;
-					}						
+					}*/				
 					&::-webkit-scrollbar-thumb {
 						border-radius: 99px;
 						background-color: #6D6E72;
@@ -941,7 +982,7 @@
 
 			a {
 				color: #000000;
-			}				
+			}
 
 			&.double {
 				.infographic-inner {
@@ -1335,9 +1376,20 @@
 		text-align: center;
 	}
 
+	.text-left {
+		text-align: left;
+	}
+
 	.text-underline {
 		text-decoration: underline;
 		text-underline-offset: 2px;
+	}
+
+	.indent-16 {
+		text-indent: 16px;
+	}
+	.indent-30 {
+		text-indent: 30px;
 	}
 
 	.sup {
@@ -1399,5 +1451,41 @@
 				text-align: left;
 			}
 		}
+	}
+}
+
+
+/* 추가 수정사항 */
+@media screen and (max-width: 750px) {
+	svg.highcharts-root {
+		//min-height: 600px !important;
+		height: auto !important;
+	}
+	.highcharts-container {
+		//height: 600px !important;
+	}
+	.highcharts-legend-item {
+		> span {
+			font-size: 12px !important;
+		}
+	}
+	.highcharts-axis-title {
+		font-size: 12px !important;
+	}
+	.highcharts-axis-labels {
+		> * {
+			font-size: 12px !important;
+		}
+	}
+	.highcharts-axis-labels {
+		span {
+			font-size: 12px !important;
+		}
+	}
+	
+	.annual-report-container .annual-report-area .infographic .sup,
+	.container.annual-report-container sup {
+		font-size: 12px !important;
+		vertical-align: middle;
 	}
 }

@@ -86,7 +86,11 @@
 
 				</div>
 			</div>
-			<span class="date">2023. 11. 22</span>
+			<span class="dataInfo">
+				<span class="depart"><span class="sr-only">담당부서</span>${result.deptNm}<c:if test="${not empty result.optn1}">(${result.optn1})</c:if></span>
+				<span class="hits"><span class="sr-only">조회수</span>${result.inqireCo}</span>
+				<span class="date"><span class="sr-only">등록일</span>${result.registDt}</span>
+			</span>
 		</li>
 		<li>
 			<span class="i">

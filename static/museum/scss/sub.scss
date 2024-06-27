@@ -73,6 +73,9 @@
 	}
 	&.ai-center {
 		align-items: center;
+		@include breakpoint($sm) {
+			flex-wrap: wrap;
+		}
 	}
 	&.ai-end {
 		align-items: end;
@@ -111,7 +114,7 @@
 		font-size: rem(18) !important;
 		font-weight: 500 !important;
 		margin-top: 25px;
-		margin-bottom: 8px;
+		margin-bottom: 8px !important;
 		&:first-child {
 			margin-top: 0;
 		}
@@ -147,6 +150,9 @@
 			gap: 0 15px;
 			@include breakpoint($lg){
 				margin-left: 20px;
+			}
+			@include breakpoint($sm){
+				margin-top: 8px;
 			}
 		}
 	}
@@ -333,6 +339,7 @@ mark {
 	background-color: #F2F6FA;
 	border-radius: 8px;
 	padding: 24px;
+	width: 100%;
 	.sh1 {
 		display: flex;
 		justify-content: center;
@@ -437,6 +444,7 @@ mark {
 		justify-content: center;
 		@include breakpoint($sm){
 			display: block;
+			margin-top: 16px;
 		}
 		.col {
 			border: 1px solid #BFBFBF;

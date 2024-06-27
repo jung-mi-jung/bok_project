@@ -25,9 +25,15 @@
 		margin: 4px 0 ;
 		color: #1A1A1A;
 		font-size: rem(18);
+		@include breakpoint($sm) {
+			font-size: rem(16);
+		}
 	}
 	p.fc1 {
 		font-size: rem(18);
+		@include breakpoint($sm) {
+			font-size: rem(16);
+		}
 	}
 }
 
@@ -102,7 +108,7 @@
 				flex: none;
 				padding: 8px;
 				// min-width: 190px;
-				min-width: 25%;
+				//min-width: 25%;
 				width: auto;
 				min-height: 40px;
 				box-sizing: border-box;
@@ -170,9 +176,9 @@
 
 /* 상설전시 상세*/
 .exhbt {
-	.tab-list .swiper a.swiper-slide {
-		flex: none;
-	}
+	// .tab-list .swiper a.swiper-slide {
+	// 	flex: none;
+	// }
 	&-tit {
 		text-align: center;
 		font-size: rem(28) !important;
@@ -196,6 +202,9 @@
 		// }
 		.imgSet {
 			position: relative;
+			@include breakpoint($sm) {
+				transform: scale(1.5);
+			}
 			> img {
 				width: 100%;
 				//margin-left: 7%;
@@ -245,7 +254,7 @@
 		left: 32px;
 		flex-direction: column;
 		gap: 8px 0;
-		z-index: 2;
+		z-index: 1;
 		> a {
 			display: flex;
 			align-items: center;
@@ -349,6 +358,7 @@
 			margin-bottom: 60px;
 			@include breakpoint($sm) {
 				margin-bottom: 30px;
+				font-size: rem(30) !important;
 			}
 			.mark {
 				position: relative;
@@ -662,72 +672,6 @@
 .info_icon {
 	> div {
 		position: relative;
-		// padding-left: 77px;
-		// @include breakpoint($sm) {
-		// 	padding-left: 0;
-		// }
-		// > i {
-		// 	position: absolute;
-		// 	display: inline-block;
-		// 	top: 0;
-		// 	left: 0;
-		// 	width: 60px;
-		// 	height: 60px;
-		// 	font-size: 30px;
-		// 	background-color: #f2f3f7;
-		// 	border-radius: 50px;
-		// 	color: #5b79b9;
-		// 	text-align: center;
-		// 	vertical-align: top;
-		// 	// margin-top: 20px;
-		// 	background-size: cover;
-		// 	@include breakpoint($sm) {
-		// 		display: none;
-		// 	}
-		// 	&::before {
-		// 		content: "";
-		// 		display: block;
-		// 		position: absolute;
-		// 		left: 50%;
-		// 		top: 50%;
-		// 		transform: translate(-50%, -50%);
-		// 		width: 30px;
-		// 		height: 30px;
-		// 		font-size: 30px;
-		// 		line-height: 60px;
-		// 		background-size: cover;
-		// 		color: #5b79b9;
-
-		// 	}
-		// }
-		// .ti-layout-slider-alt {
-		// 	&::before {
-		// 		background-image: url(/static/museum/img/layout-slider-alt.svg);
-		// 		background-position: center center;
-		// 		background-repeat: no-repeat;
-		// 	}
-		// }
-		// .ti-info-alt{
-		// 	&::before {
-		// 		background-image: url(/static/museum/img/info-alt.svg);
-		// 		background-position: center center;
-		// 		background-repeat: no-repeat;
-		// 	}
-		// }
-		// .ti-blackboard {
-		// 	&::before {
-		// 		background-image: url(/static/museum/img/blackboard.svg);
-		// 		background-position: center center;
-		// 		background-repeat: no-repeat;
-		// 	}
-		// }
-		// .ti-bookmark-alt {
-		// 	&::before {
-		// 		background-image: url(/static/museum/img/bookmark-alt.svg);
-		// 		background-position: center center;
-		// 		background-repeat: no-repeat;
-		// 	}
-		// }
 	}
 	h3 {
 		margin-top: 0 !important;
@@ -740,6 +684,9 @@
 			margin: 8px 0;
 			font-size: rem(18);
 			color: #333;
+			@include breakpoint($sm) {
+				font-size: rem(16);
+			}
 			&::before {
 				content: "";
 				display: inline-block;
@@ -1080,6 +1027,9 @@
 		padding: 30px;
 		margin-bottom: 80px;
 		background-color: gainsboro;
+		@include breakpoint($sm) {
+			margin-bottom: 40px;
+		}
 		> div {
 			&:first-of-type {
 				width: 56%;
@@ -1223,4 +1173,5 @@
 	aspect-ratio: 1340/400;
 	background: url(/static/museum/img/visualImg.png) no-repeat center center;
 	background-size: contain;
+    margin-bottom: 30px;
 }

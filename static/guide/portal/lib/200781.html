@@ -5,7 +5,7 @@
 	<div class="t-line info-btn">
 		
 		<ul class="bu-dot">
-			<li>한국은행법 <a href="" class="b-go">바로가기</a></li>
+			<li>한국은행법 <a href="http://www.law.go.kr/%EB%B2%95%EB%A0%B9/%ED%95%9C%EA%B5%AD%EC%9D%80%ED%96%89%EB%B2%95" class="b-go" target="_blank" title="새창열림">바로가기</a></li>
 			<li>
 				한국은행법 주요 개정내용
 				<a href="" class="b-download">한글 다운로드</a>
@@ -98,7 +98,7 @@
 					</li>
 					<li class="swiper-slide">
 						<span class="img" style="background-image: url('/static/portal/img/sub/img_200781_0302.png');"></span>
-						<span class="txt">한국은행법 제1차 개정(1962.5)</span>
+						<span class="txt">전직 총재들의 한국은행법 개정관련 성명서 발표(1997.11)</span>
 					</li>
 					<li class="swiper-slide">
 						<span class="img" style="background-image: url('/static/portal/img/sub/img_200781_0303.png');"></span>
@@ -175,33 +175,9 @@
 </div>
 
 <script>
-	$(function () {
-		$(".his-img").each(function(index){
-			const swiper = new Swiper('.his-img' + index + '> .thum-box', {
-				init: false,
-				freeMode: true,
-				slidesPerView : '1',
-				scrollbar: {
-					hide:true
-				},
-				a11y:{
-					enabled:true,
-				},
-				pagination: {
-					el: ".his-img" + index + "> .page",
-					clickable: true,
-					type : 'bullets',
-					renderBullet : function (index, className) {
-						return '<a href="#" class="' + className + '"> <span class="sr-only">' + (index + 1) + '번째 썸네일</span></a>'
-					},
-				},
-				observer: true,
-				observeParents: true,			
-			});
-			swiper.init();//초기화	
-		});
-	
-		const swiper2 = new Swiper('.his-img5 .thum-box', {
+$(function () {
+	$(".his-img").each(function(index){
+		const swiper = new Swiper('.his-img' + index + '> .thum-box', {
 			init: false,
 			freeMode: true,
 			slidesPerView : '1',
@@ -212,7 +188,7 @@
 				enabled:true,
 			},
 			pagination: {
-				el: ".his-img5 .page",
+				el: ".his-img" + index + "> .page",
 				clickable: true,
 				type : 'bullets',
 				renderBullet : function (index, className) {
@@ -222,6 +198,30 @@
 			observer: true,
 			observeParents: true,			
 		});
-		swiper2.init();//초기화	
+		swiper.init();//초기화	
 	});
-	</script>
+
+	const swiper2 = new Swiper('.his-img5 .thum-box', {
+		init: false,
+		freeMode: true,
+		slidesPerView : '1',
+		scrollbar: {
+			hide:true
+		},
+		a11y:{
+			enabled:true,
+		},
+		pagination: {
+			el: ".his-img5 .page",
+			clickable: true,
+			type : 'bullets',
+			renderBullet : function (index, className) {
+				return '<a href="#" class="' + className + '"> <span class="sr-only">' + (index + 1) + '번째 썸네일</span></a>'
+			},
+		},
+		observer: true,
+		observeParents: true,			
+	});
+	swiper2.init();//초기화	
+});
+</script>

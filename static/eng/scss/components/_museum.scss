@@ -363,6 +363,19 @@
 	}
 	.tabsub {
 		margin-bottom: 60px;
+		@include breakpoint($smd){
+			max-width: 100%;
+			overflow-x: auto;
+			ul{
+				flex-flow: nowrap;
+				li{
+					width: 100%;
+					margin-top: 0;
+					min-width: 200px;
+					padding: 0 10px;
+				}
+			}
+		}
 	}
 	h2 {
 		margin-bottom: 40px !important;
@@ -694,8 +707,9 @@
 .map_way {
 	position: relative;
 	background-color: #F2F6FA;
-	margin-top: 50px;
-	padding: 40px 0;
+	margin: 50px -20px 0;
+	padding: 40px 20px;
+	overflow: hidden;
 	@include breakpoint($lg){
 		display: flex;
 		justify-content: space-between;
@@ -760,10 +774,10 @@
 		li {
 			width: calc(25% - 24px);
 			@include breakpoint($smd) { 
-				width: calc(33.33% - 13.33px);
-			}
-			@include breakpoint($sm) {
 				width: calc(50% - 10px);
+			}
+			@include breakpoint(max-width 430px) {
+				width: 100%;
 			}
 		}
 		a {
@@ -788,6 +802,8 @@
 				width: 100%;
 				height: 100%;
 				background-size: contain;
+				background-repeat: no-repeat;
+				background-position: 50%;
 			}
 		}
 		.imgDesc {
@@ -874,6 +890,7 @@
 					padding: 0 24px;
 					border-right: 1px solid #E5E5E5;
 					color: #808080;
+					white-space: nowrap;
 					@include breakpoint($sm) {
 						border-right: 0;
 					}
@@ -902,18 +919,11 @@
 					@include breakpoint($sm){
 						// display: block;
 						padding: 0;
+						flex-wrap: wrap;
 					}
 					label {
-						@include breakpoint($sm){
-							&:first-child {
-								margin-left: 8px;
-							}
-						}
 						& + label {
 							margin-left: 14px;
-							@include breakpoint($sm) {
-								margin-left: 4px;
-							}
 						}
 					}
 					input[type=radio] {	
@@ -934,9 +944,21 @@
 						}
 					}
 					@include breakpoint($smd){
+						flex-wrap: wrap;
 						label {
+							margin: 3px 7px;
+							white-space: nowrap;
+							& + label{
+								margin-left: 7px;
+							}
+						}
+					}
+					@include breakpoint($sm){
+						label{
 							width: 100%;
-							margin: 3px 0;
+							label{
+								margin-left: 7px;
+							}
 						}
 					}
 				}

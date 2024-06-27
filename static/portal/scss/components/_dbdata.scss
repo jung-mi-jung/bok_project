@@ -1,5 +1,6 @@
 .dbdata, 
 .dbData {
+	clear: both;
 	min-height: 250px;
 	padding: 32px 0;
 	word-break: break-all;
@@ -31,6 +32,7 @@
 		th, td {
 			border: 1px solid $bd-color;
 			padding: 5px 10px;
+			border-radius: 0 !important;	// 06.03
 		}
 	}
 
@@ -215,6 +217,9 @@
 			padding-left: 0;
 		}
 	}
+	pre {
+		font-family: $font-set;
+	}
 }
 
 .view {
@@ -280,4 +285,24 @@
 		text-indent: -22px;
 		word-break: keep-all;
 	}
+	.dataInfoSet {
+		@include breakpoint($lg) {
+			flex-flow: row-reverse;
+		}
+		@include breakpoint($md) {
+			flex-flow: row-reverse;
+		}
+		@include breakpoint($sm) {
+			flex-flow: column-reverse;
+		}
+		.dataInfo{
+			position:relative;
+			right: auto;
+			top:auto;
+		}
+	}
+}
+
+hr { // 06.03
+	border: 0;
 }

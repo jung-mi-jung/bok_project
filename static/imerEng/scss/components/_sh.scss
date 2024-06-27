@@ -1,6 +1,5 @@
 //자료 검색형
 .sh-db {
-	padding-top: 30px;
 	margin-bottom: 40px;
 	background: #fff;
 	z-index: 9;
@@ -11,6 +10,7 @@
 		float: left;
 		// width: per(204px + 35px, $pc-wide);
 		width: 240px;
+		padding-top: 30px;
 		padding-right: 36px;
 		background-color: #fff;
 		height: auto;
@@ -205,12 +205,6 @@
 				}
 				&:checked {
 					& + i {
-						&::after {
-							left: 4px;
-							@include breakpoint($smd) {
-								left: 2px;
-							}
-						}
 						& + span {
 							position: relative;
 							color: $point;
@@ -227,46 +221,15 @@
 								cursor: default;
 							}
 						}
-						//cursor: default;
 					}
 				}
 			}
+		}		
+		.check-ctrl  {
+			display: none;  //미작업으로 일단 none 처리
 		}
-		// .check-ctrl {			
-		// 	@include breakpoint($lg){
-		// 		display: none;
-		// 	}
-		// 	position: relative;
-		// 	width: 100%;
-		// 	height: 40px;
-		// 	display: block;
-		// 	text-align: left;
-		// 	border: 1px solid #d9d9d9;
-		// 	padding: 7px 10px;
-		// 	@include breakpoint($smd){
-		// 		padding: 7px 15px;
-		// 		border-radius: 5px;
-		// 	}
-		// 	&::before {
-		// 		@include font-ico-outline('\e5c5');
-		// 		font-size: 24px;
-		// 		position: absolute;
-		// 		top: 5px;
-		// 		right: 10px;
-		// 		color: $point;
-		// 		transition: all .2s
-		// 	}		
-		// 	&.active {
-		// 		&::before {
-		// 			transform: rotate(-180deg);
-		// 		}
-		// 	}  
-		// }
 		@include breakpoint($smd){ 
 			.label-list {
-				// display: none;
-				// border: 1px solid #d9d9d9;
-				// padding: 4px;
 				flex-direction: row;
 				&.active {
 					display: flex;
@@ -283,19 +246,26 @@
 					// width: 50%;
 					// padding: 0 4px;
 					input[type=checkbox] + i {
+						position: relative;
 						margin-left: -20px;
+						&::after {
+							left: 50%;
+							top: 50%;
+							transform: translate(-50%, -50%);
+						}
 					}
 				}
 			}
 			&.details {
 				.check-ctrl  {
+					display: none;  //미작업으로 
 					margin-top: 5px;
-				}
+				}				
 			}
 		}
-		// &.details {
-		// 	display: none;  //임시 주석
-		// }
+		&.details {
+			//display: none;  //임시 주석
+		}
 	}
 	.details-list {
 		.depth3 {  //[class^=m-0]
@@ -569,10 +539,10 @@
 				border: 1px solid #C2C2C2;
 				border-radius: 30px;
 				padding: 2px 7px;
+				cursor: pointer;
 				&:hover {
 					color: #fff;
 					background-color: #3B63C4;
-					order: 1px solid #3B63C4;
 				}
 				 + span {
 					margin-right: 2px;
@@ -673,6 +643,9 @@
 	}
 	> * {
 		margin: 0 2px;
+		@include breakpoint($sm) {
+			margin: 2px 0;
+		}
 	}
 	@include select-set();
 	.submit {
@@ -699,8 +672,31 @@
 				min-width: 140px;
 				// width: auto !important;
 			}
+			@include breakpoint($sm) {
+				min-width: 0;
+				width: 126px !important;
+				padding: 0 16px 0 10px;
+				font-size: 14px;
+			}
 		}
 	}
+	.select-set {
+		select {
+			@include breakpoint($sm) {
+				width: 110px !important;
+				padding: 4px 20px 4px 10px !important;
+				font-size: rem(14);
+			}
+		}
+		&:last-of-type {
+			select {
+				@include breakpoint($sm) {
+					width: 60px !important;
+				}
+			}
+		}
+	}
+
 }
 
 
@@ -713,17 +709,18 @@
 	margin-bottom: 25px;
 	background-color: #F2F6FA;
 	padding: 45px 20px;
-	font-size: rem(18);
+	// font-size: rem(18);
 	@include breakpoint($smd){
-		font-size: 13px;
 		padding: 14px;
 	}
 	@include breakpoint($sm){
+		font-size: 14px;
 		display: block;
 	}
 	.select-box {
 		display: flex;
 		@include breakpoint($sm){
+			margin: 8px 0 0 0 !important;
 			.keyword-set {
 				margin-top: 0 !important;
 			}
@@ -866,9 +863,6 @@
 			align-items: center;
 			background-color: #fff;
 			border-radius: 4px;
-			@include breakpoint($mdw){
-
-			}
 			@include breakpoint($sm){
 				flex-basis: calc(100% - 100px - 2px);
 			}
@@ -897,6 +891,26 @@
 					@include font-ico-outline('\e8b6');
 					font-size: 26px;
 					color: #222;
+				}
+			}
+			& + .b-reset {
+				padding: 0 20px;
+				color: #fff;
+				background-color: #3B63C4;
+				@include breakpoint($sm) {
+					padding: 0;
+					min-width: 40px;
+					height: 40px;
+					span {
+						display: none;
+					}
+				}
+				&::before {
+					color: #fff;
+					content: "\f053";
+					font-family: "Material Icons";
+					font-size: 22px;
+					margin-right: 4px;
 				}
 			}
 		}
@@ -1234,10 +1248,12 @@
 	@include breakpoint($sm){
 		display: flex;
 		align-items: center;
-		margin: 0 0 5px 0 !important;
+		//margin: 0 0 5px 0 !important;
+		
 	}
 	@include breakpoint($mdw) {
-		flex-basis: 300px;
+		//flex-basis: 300px;
+		max-width: 300px;
 		// width: 250px;
 		flex-shrink: 0;
 	}
@@ -1245,7 +1261,8 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		flex-basis: 344px;
+		// flex-basis: 344px;
+		max-width: 344px;
 		flex-grow: 0;
 	}
 	.date,

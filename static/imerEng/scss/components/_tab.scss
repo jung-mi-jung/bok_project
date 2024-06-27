@@ -145,7 +145,7 @@
 			border-right: 1px solid #2373B0;
 			text-align: center;
 			box-sizing: border-box;
-			cursor: grab;
+			// cursor: grab;
 			@include breakpoint($smd) {
 				font-size: rem(14);
 			}
@@ -184,6 +184,13 @@
 	}
 	
 }
+
+// #content > .tab-list,
+// .content > .tab-list {
+// 	@include breakpoint($smd) {
+// 		margin-top: 30px;
+// 	}
+// }
 
 .tab-content {
 	.tab-pannel {

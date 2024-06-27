@@ -1,6 +1,9 @@
 // ios chrome 100vh 버그 
 var vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty("--vh", vh + 'px');
+var naviLegnth = $(".navigation nav > div > ul > li").length;
+
+
 $(function () {
 	$(window).trigger("orientationchange");
 });
@@ -32,10 +35,19 @@ if (window.innerWidth < 1200) {
 	
 	if( window.innerWidth < 750 ) {
 		$(".total-nav").addClass("m-total-nav");
+		if ( naviLegnth > 3 ) {
+			$(".navigation nav > div > ul > li").not(".home").css({"display": "none"});
+			$(".navigation nav > div > ul > li").eq(naviLegnth-1).css({"display": "flex"});
+			$(".navigation nav > div > ul > li").eq(naviLegnth-2).css({"display": "flex"});
+		}
+		else {
+			$(".navigation nav > div > ul > li").css({"display": "flex"});
+		}
 		
 	} 
 	else {
 		$(".total-nav").removeClass("m-total-nav");
+		$(".navigation nav > div > ul > li").css({"display": "flex"});
 	}
 }
 else {
@@ -54,9 +66,18 @@ $(window).resize(function () {
 		
 		if( window.innerWidth < 750 ) {
 			$(".total-nav").addClass("m-total-nav");
+			if ( naviLegnth > 3 ) {
+				$(".navigation nav > div > ul > li").not(".home").css({"display": "none"});
+				$(".navigation nav > div > ul > li").eq(naviLegnth-1).css({"display": "flex"});
+				$(".navigation nav > div > ul > li").eq(naviLegnth-2).css({"display": "flex"});
+			}
+			else {
+				$(".navigation nav > div > ul > li").css({"display": "flex"});
+			}
 		} 
 		else {
 			$(".total-nav").removeClass("m-total-nav");
+			$(".navigation nav > div > ul > li").css({"display": "flex"});
 		}
 	} 
 	else {
@@ -168,8 +189,15 @@ $(".total-nav .dp3 .dropdown").on("click", function() {
 $(function () {
 	//skip
 	$('.skip a[href="#content"]').click(function(event) {
-		$('.page-toolbar button').focus();
+		//$('.page-toolbar button').focus();
+		$("#skipContent a:first").focus(); //메인
+		$(".navigation h1").attr("tabindex", "0") //서브
+		$(".navigation h1").focus();
 		event.preventDefault();
+	});
+
+	$(".navigation h1").on('focusout', function(event) {
+		$(this).removeAttr("tabindex")
 	});
 
 /*
@@ -607,10 +635,11 @@ $(function() {
 
 	//로그인후
 	var userInfoOp = $(".userInfoOpener");
-	$(userInfoOp).on("mouseenter keyup", function(){
-		$(".userInfoOpBx").addClass("on");
+
+	$(userInfoOp).on("click", function(){
+		$(".userInfoOpBx").toggleClass("on");
 	});
-	$(".userInfoOpBxSet").on("mouseleave blur", function(){
+	$(".userInfoOpBx").on("mouseleave blur", function(){
 		$(".userInfoOpBx").removeClass("on");
 	});
 	$(".userInfoOpBx .logout").on("focusout", function(){
@@ -636,9 +665,13 @@ $(function() {
 		}
 	});
 
-	$(document).click(function(e){
+	
+	$(document).click(function(e){		
 		if (!$(e.target).is('.navigation a.bu')) {
 			$('.navigation .depth2.active').removeClass('active');
+		}
+		if (!$(e.target).is('.site_go button')) {
+			$('.site_go button + ul.active').removeClass('active');
 		}
 	});
 
@@ -650,6 +683,7 @@ $(function() {
 	$(".sns-wrap .close").click(function(){
 		$(".sns-wrap").removeClass("active");	
 		$(".sns-wrap__set").slideUp();	
+		$(".sns-toggle").focus();
 	});
 
 	//클릭시 레이어 닫기
@@ -757,17 +791,6 @@ $(function() {
 	$(".scrollX").attr("tabindex", "0");
 
 
-	//.table thead 없을 경우 처리 (디자인 처리)
-	// $(".table")
-	// 	.not("thead")
-		
-	// 	.each(function () {
-	// 		$(this).addClass("table_line");
-	// 	});
-	
-		
-
-
 /*
 	// focus this position // 	ul>li>a[data-rel^='prettyPhoto']
 	$("[data-rel^='prettyPhoto']").each(function(n){
@@ -800,6 +823,7 @@ $(function () {
 
 	$(".my_memo .btn").click(function(){
 		$(this).next().addClass("active");
+		$(".my_memo .swiper .top .close").focus();
 	});
 	$(".my_memo .close").click(function(){
 		$(".my_memo .swiper.active").removeClass("active");
@@ -854,16 +878,13 @@ $(function () {
 	// *** 모바일용 ***
 
 	// body 클릭시 레이어 닫기	
+	/*
 	$(document).click(function(e){
 		if (!$(e.target).is('.select-set > button')) {
 			$('.select-set > button').removeClass("on");
 		}
 	});
-	/*$(document).click(function(e){
-		if (!$(e.target).is('.check-ctrl')) {
-			$(".check-ctrl").removeClass("active");
-		}
-	});*/
+	*/
 
 	$(".mobile-check-ctrl").click(function(){
 		$(this).toggleClass("active");

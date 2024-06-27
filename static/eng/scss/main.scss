@@ -9,6 +9,11 @@
 //@import 'base/heading';//해딩스타일
 @import 'components/popup';//팝업
 
+@include breakpoint($lg){
+	body {
+		overflow: hidden;
+	}
+}
 #content {
 	margin-top: 0 !important;
 }
@@ -150,6 +155,10 @@
 	}
 }
 
+#header .globalHeader .container ul a,
+.m-g-info .global ul a {
+	color: #fff;
+}
 
 .gnb {
 	> ul {
@@ -196,6 +205,9 @@
 			background-color: rgba(255, 255, 255, 0.6);
 		}
 		&.active {
+			transition: none;
+			animation: pulse-white 2s infinite;
+			border-radius: 50%;
 			i {
 				@include circle(10px);
 				background-color: #fff;
@@ -216,6 +228,7 @@
 				background-color: rgba(59, 99, 196, 0.6);
 			}
 			&.active {
+				animation: pulse-blue 2s infinite;
 				i {
 					background-color: rgba(59, 99, 196, 1);
 					&::before {
@@ -227,6 +240,44 @@
 		}
 	}
 }
+
+
+@keyframes pulse-white {
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+	}
+	
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+	}
+	
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+	}
+}
+
+@keyframes pulse-blue {
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(59, 99, 196, 0.7);
+	}
+	
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(59, 99, 196, 0);
+	}
+	
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(59, 99, 196, 0);
+	}
+}
+
+
+
 
 .section {
 	@include breakpoint($lg){
@@ -254,31 +305,79 @@
 		max-width: 100%;
 		margin: 0 auto;
 		padding: 0 120px;
-		@include breakpoint($smd){
+		@include breakpoint($mdw){
 			padding: 0 40px;
+		}
+		@include breakpoint($sm){
+			padding: 0 20px;
 		}
 	}
 }
 
 .section1-visual {
 	height: 100%;
+	@include breakpoint($lg){
+		a {
+			&:focus {
+				position: relative;
+				&::before {
+					content: "";
+					display: block;
+					width: 100%;
+					height: calc(100% - 146px);
+					outline: 2px dotted #000;
+					outline-offset: -2px;
+					position: absolute;
+					top: 146px;
+					left: 0;
+					z-index: 9;
+				}
+			}
+		}
+	}
+	@include breakpoint($mdw){
+		height: 700px;
+	}
+	@include breakpoint($sm){
+		height: 600px;
+	}
 	.swiper-slide {
 		position: relative;
-		background-size: cover;
-		//background-attachment: fixed;
+		.img-visual {
+			display: block;
+			background-size: cover;
+			//background-size: auto 100%;
+			//background-size: auto 100%;
+			background-position: 50% 0; 
+			//background-repeat: no-repeat;
+			transition: all 1s;
+			transform: scale(1.1) !important;
+			overflow: hidden;
+			height: 100%;
+		}
 		@include breakpoint($mdw){
-			height: 700px;
+			.img-visual {
+				height: 700px;
+			}
 		}
 		@include breakpoint($sm){
-			height: 600px;
+			.img-visual {
+				height: 600px;
+			}
 		}
 		&.swiper-slide-active {
-			-webkit-animation: visual-bg 3s ease-out 1;
-			animation: visual-bg 3s ease-out 1;
-			-webkit-animation-iteration-count: 10;
-			animation-iteration-count: 10;
-			-webkit-animation: visual-bg 3s cubic-bezier(0.45, 0.05, 0.55, 0.95) 1;
-			animation: visual-bg 3s cubic-bezier(0.45, 0.05, 0.55, 0.95) 1;
+			.img-visual {
+				transform: scale(1) !important;
+				//transition: transform 4s;
+				transition: 3.5s;
+				opacity: 1;
+			}
+			//-webkit-animation: visual-bg 3s ease-out 1;
+			//animation: visual-bg 3s ease-out 1;
+			//-webkit-animation-iteration-count: 10;
+			//animation-iteration-count: 10;
+			//-webkit-animation: visual-bg 3s cubic-bezier(0.45, 0.05, 0.55, 0.95) 1;
+			//animation: visual-bg 3s cubic-bezier(0.45, 0.05, 0.55, 0.95) 1;
 			.s1-t1 {
 				-webkit-animation: visual-txt1 2s cubic-bezier(0.45, 0.05, 0.55, 0.95) 1;
 				animation: visual-txt1 2s cubic-bezier(0.45, 0.05, 0.55, 0.95) 1;
@@ -453,10 +552,10 @@
 			height: 4px;
 			background: #39A0FF;
 			&.active {
-				animation: 6s progress linear;
+				animation: 10s progress linear;
 			}
 			&.first {
-				animation: 5s progress linear;
+				animation: 10s progress linear;
 			}
 		}
 	}
@@ -465,7 +564,8 @@
 	position: absolute;
 	right: 0;
 	bottom: 0;
-	width: 600px;
+	//width: 600px;
+	width: 480px;
 	max-width: 100%;
 	height: 113px;
 	background: rgba(0, 0, 0, 0.70);
@@ -474,10 +574,8 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	@include breakpoint($sm){
-	}
 	a {
-		width: calc(100% / 3);
+		width: calc(100% / 2);
 		position: relative;
 		padding: 20px 24px;
 		color: #fff;
@@ -505,7 +603,7 @@
 				height: 65px;
 				margin-top: -32px;
 			}
-		}		
+		}
 	}
 	strong {
 		display: block;
@@ -615,7 +713,7 @@
 	background-size: cover;
 }
 
-#section2 {		
+#section2 {
 	position: relative;		
 	background: #F2F6FA;
 	background-size: auto;
@@ -639,7 +737,7 @@
 	.set {
 		padding: 100px 0;
 		@include breakpoint($sm){
-			padding: 50px 0;
+			padding: 0 0 50px;
 		}
 	}
 	h2 {
@@ -651,6 +749,9 @@
 	.swiper {
 		overflow: visible;
 		margin-left: -6%;
+		@include breakpoint($sm){
+			margin-left: 0;
+		}
 		.ctrl-set {
 			.swiper-pagination {
 				display: inline-block;
@@ -679,11 +780,20 @@
 				position: absolute;
 				top: -100px;
 				right: 0;
+				@include breakpoint($sm){
+					position: static;
+				}
 				button {
 					width: 48px;
 					height: 48px;
 					line-height: 48px;
 					vertical-align: middle;
+					@include breakpoint($sm){
+						position: absolute;
+						top: 50%;
+						margin-top: -24px;
+						z-index: 9;
+					}
 					&::before {
 						content: "";
 						display: inline-block;
@@ -706,6 +816,9 @@
 						}
 					}
 					&.prev {
+						@include breakpoint($sm){
+							left: 0;
+						}
 						&:hover {
 							&::before {
 								transform: rotate(180deg);
@@ -714,6 +827,9 @@
 					}
 					&.next {
 						margin-left: 20px;	//정지, 시작 버튼 없을 경우
+						@include breakpoint($sm){
+							right: 0;
+						}
 						&::before {
 							transform: rotate(180deg);
 						}
@@ -836,7 +952,6 @@
 						}
 					}
 					&.txt {
-						//line-height: 1.3;
 						@include line-clamp(3);
 						height: 66px;
 						color: #666;
@@ -870,7 +985,7 @@
 				@include breakpoint($sm){
 					margin-top: 0;
 					padding: 16px;
-					margin: 0 10px !important;
+					margin: 0 30px !important;
 				}
 				.img {
 					//width: 560px;
@@ -899,7 +1014,7 @@
 						text-align: center;
 						margin-bottom: 22px;
 						@include breakpoint($sm){
-							height: 52px;
+							height: 43px;
 							font-size: 16px;
 						}
 					}
@@ -908,7 +1023,7 @@
 						color: #4D4D4D;
 						font-size: rem(18);	
 						@include breakpoint($sm){
-							height: 68px;
+							height: 82px;
 							font-size: rem(16);
 						}					
 					}
@@ -945,6 +1060,15 @@
 			border-radius: 50%;
 			background: url(/static/eng/img/main/ctrl-off.png) 50% no-repeat;			
 		}
+		@include breakpoint($sm){
+			width: 40px;
+			height: 40px;
+			margin-top: -20px;
+			&::before {
+				width: 40px;
+				height: 40px;
+			}
+		}
 		&:hover {
 			&::before {
 				background: $point url(/static/eng/img/main/ctrl-on.png) 50% no-repeat;
@@ -959,6 +1083,9 @@
 				z-index: 9;
 				background-color: rgba(255, 255, 255, 0.6);
 				border-radius: 50%;
+			}
+			@include breakpoint($sm){
+				left: -16px;
 			}
 			&:hover {
 				&::before {
@@ -975,6 +1102,9 @@
 				background-color: rgba(255, 255, 255, 0.6);
 				border-radius: 50%;
 			}
+			@include breakpoint($sm){
+				right: -16px;
+			}
 			&::before {
 				transform: rotate(180deg);
 			}
@@ -988,7 +1118,10 @@
 }
 
 @mixin board-list {
-	padding: 50px 0;		
+	padding: 50px 0;
+	@include breakpoint($sm){
+		padding: 30px 0;
+	}
 	.more {
 		position: absolute;
 		top: 0;
@@ -1007,10 +1140,82 @@
 	}
 	.swiper-wrapper {
 		.swiper-slide {
+			position: relative;
 			border-radius: 16px;
 			padding: 16px;
 			background-color: #fff;
 			box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.20);
+			overflow: hidden;
+			@include breakpoint($smd){
+				padding: 16px 16px 70px;
+			}
+			span {
+				&.date {
+					margin-top: 35px;
+					color: #666;
+					font-size: rem(14);
+					@include breakpoint($sm){
+						margin-top: 15px;
+					}
+				}
+			}
+			@include breakpoint($lg){
+				.bottom {
+					opacity: 0;
+				}
+				&:hover,
+				&.hover {
+					padding: 16px 16px 80px;
+					.bottom {
+						opacity: 1;
+					}
+					.img-set {
+						.img {
+							padding-top: 63.8%;
+							background-position: 50%;
+							transition: all .5s;
+							@include breakpoint($smd){
+								padding-top: 63.8%;  //(기능 살림) 기능 삭제 전
+								padding-top: 100%;
+								background-position: 50%;
+							}
+						}
+					}
+					span {
+						&.txt {
+							@include line-clamp(6);
+							height: 146px;
+							@include breakpoint($smd){
+								@include line-clamp(4);
+								height: 100px;
+							}
+						}
+					}
+				}	
+				span {
+					&.txt {
+						@include line-clamp(5);
+						height: 120px;
+						transition: all .5s;
+					}
+				}
+				.bottom {
+					opacity: 0;
+					@include breakpoint($smd){
+						opacity: 1;
+					}
+				}
+			}
+			@include breakpoint($sm){
+				span {
+					&.txt {
+						height: 99px;
+					}
+				}
+			}
+			.bottom {
+				@include board-bottom();
+			}
 			.img-set {
 				position: relative;
 				display: block;
@@ -1019,6 +1224,9 @@
 					background-size: cover;
 					padding-top: 100%;
 					border-radius: 16px 16px 0 16px;
+					@include breakpoint($sm){
+						padding-top: 70%;
+					}
 				}
 				.p {
 					color: #3B63C4;
@@ -1040,7 +1248,9 @@
 					font-size: rem(18);
 					font-weight: 500;
 					text-align: center;
-					@include ellipsis;
+					//@include ellipsis;
+					@include line-clamp(2);
+					height: 60px;
 				}
 				&.txt {
 					padding: 0 16px;
@@ -1049,8 +1259,8 @@
 					font-size: 16px;
 					//@include line-clamp(2);
 					//height: 48px;
-					@include line-clamp(5);
-					height: 120px;
+					@include line-clamp(4);
+					height: 97px;
 				}
 			}
 		}
@@ -1058,7 +1268,7 @@
 }
 
 @mixin board-bottom {
-	opacity: 1;
+	//opacity: 1;
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -1106,155 +1316,22 @@
 	background: url(/static/eng/img/main/bg_section4.png) 50% 0 no-repeat;
 	background-size: cover;	
 	.board-list1 {
-		@include board-list();
-		.swiper-wrapper {
-			.swiper-slide {
-				position: relative;
-				padding: 16px 16px 48px;
-				//height: 561px;
-				overflow: hidden;
-				@include breakpoint($smd){
-					padding: 16px 16px 70px;
-				}
-				@include breakpoint($sm){
-					//padding: 16px;
-				}
-				.bottom {
-					@include board-bottom();
-				}
-				/* 기능 삭제 */
-				@include breakpoint($lg){
-					&:hover,
-					&.hover {
-						.img-set {
-							.img {
-								padding-top: 63.8%;
-								background-position: 50%;
-								transition: all .5s;
-							}
-						}
-						span {
-							&.txt {
-								@include line-clamp(8);
-								height: 194px;
-							}
-						}
-					}	
-					span {
-						&.txt {
-							@include line-clamp(5);
-							height: 120px;
-
-							transition: all .5s;
-						}
-					}
-					.bottom {
-						opacity: 0;					
-						
-					}
-					&:hover,
-					&.hover {
-						padding: 16px 16px 90px;
-						.bottom {
-							opacity: 1;
-						}
-					}
-				}
-				@include breakpoint($smd){
-					.img-set {
-						.img {
-							padding-top: 63.8%;  //기능 삭제 전
-							padding-top: 100%;
-							background-position: 50%;
-						}
-					}
-					span {
-						&.txt {
-							@include line-clamp(4);
-							height: 100px;
-						}
-					}
-					.bottom {
-						opacity: 1;  //삭제
-					}					
-				}
-				@include breakpoint($sm){
-					span {
-						&.txt {
-							height: 99px;
-						}
-					}
-				}						
-			}
-		}
+		@include board-list();		
 	}
 }
 #section4 {
 	background: url(/static/eng/img/main/bg_section5.png) 50% 0 no-repeat;
 	background-size: cover;	
 	.board-list2 {		
-		@include board-list();
-		.swiper-wrapper {
-			.swiper-slide {
-				span {
-					&.txt {
-						
-					}
-					&.date {
-						margin-top: 35px;
-						color: #666;
-						font-size: rem(14);
-						&::before {
-							@include font-ico-outline('\e8b5');
-							font-size: 20px;
-							color: #666;
-							margin-right: 5px;
-						}
-					}
-				}
-				.bottom {
-					@include board-bottom();
-				}
-				//추가
-				@include breakpoint($lg){
-					&:hover,
-					&.hover {
-						padding: 16px 16px 80px;
-						.bottom {
-							opacity: 1;
-						}
-						.img-set {
-							.img {
-								padding-top: 63.8%;
-								background-position: 50%;
-								transition: all .5s;
-							}
-						}
-						span {
-							&.txt {
-								@include line-clamp(7);
-								height: 170px;
-							}
-						}
-					}	
-					span {
-						&.txt {
-							@include line-clamp(5);
-							height: 120px;
-							transition: all .5s;
-						}
-					}
-					.bottom {
-						opacity: 0;	
-					}
-				}
-			}
-		}		
+		@include board-list();				
 	}
 }
 #section5 {
 	background: url(/static/eng/img/main/bg_section6.png) 50% 0 no-repeat;
 	background-size: cover;
+	@include breakpoint($smd){
+		padding-bottom: 35px;
+	}
 	.set {
 		display: flex;
 		justify-content: space-between;
@@ -1291,21 +1368,35 @@
 					justify-content: space-between;
 					align-items: center;
 					padding: 19px 0;
+					@include breakpoint($sm){
+						padding: 10px 0;
+						flex-wrap: wrap;
+					}
 					.t {
 						width: 120px;
 						color: #3B63C4;
 						font-size: rem(16);
+						@include breakpoint($sm){
+							width: 100%;
+						}
 					}
 					.title {
 						width: calc(100% - 120px - 100px);
 						font-size: rem(18);
 						@include ellipsis;
+						@include breakpoint($sm){
+							width: 100%;
+						}
 					}
 					.date {
 						width: 100px;
 						color: #666;
 						font-size: rem(14);
 						text-align: right;
+						@include breakpoint($sm){
+							width: 100%;
+							text-align: left;
+						}
 					}
 				}
 			}
@@ -1331,12 +1422,19 @@
 		position: relative;
 		@include breakpoint($sm){
 			margin-top: 50px;
+			padding-bottom: 50px;
 		}
 		.ctrl {
 			display: flex;
 			position: absolute;
 			top: 5px;
 			right: 0;
+			background-color: rgba(255, 255, 255, 0.3);
+			border-radius: 30px;
+			padding: 5px;
+			@include breakpoint($sm) {
+				background-color: rgba(255, 255, 255, 0.7);
+			}
 			button {
 				width: 20px;
 				height: 30px;
@@ -1393,19 +1491,31 @@
 		.popup {
 			border-radius: 16px;
 		}
-		.swiper-wrapper {			
-			a {					
+		.swiper-wrapper {
+			a {
 				.img {
 					display: block;
 					height: 1px;
-					padding-top: 61.4%;
-					background-size: cover;
+					padding-top: 64.5%;
+					background-size: contain;
 					background-position: 50%;
-					background-repeat: no-repeat;					
+					background-repeat: no-repeat;
 				}
 				&:focus {
-					outline-width: 2px;
-					outline-color: #fff;
+					position: relative;
+					&::before {
+						content: "";
+						display: block;
+						outline: 1px solid #fff000;
+						border-radius: 16px;
+						outline-offset: -2px;
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						z-index: 1;
+					}
 				}
 			}
 		}
@@ -1440,6 +1550,9 @@
 #footer {
 	margin-top: 0;
 }
+
+
+
 
 
 @-webkit-keyframes visual-bg {
@@ -1513,4 +1626,124 @@
 	100% {
 		width: 100%;
 	}
+}
+
+.section_0,
+body:not(.gnb-stiky) {
+	.mouseWrap{
+		.mouseTxt{
+			color: #fff;
+		}
+		.mouse{
+			&:before{
+				border-color: #fff;
+			}
+			&:after{
+				background-color: #fff;
+			}
+		}
+	}	
+}
+
+.section_1 body.gnb-stiky,
+.section_2 body.gnb-stiky,
+.section_3 body.gnb-stiky,
+.section_4 body.gnb-stiky,
+.section_5 body.gnb-stiky{
+	.mouseWrap{
+		.mouseTxt{
+			color: #131547;
+		}
+		.mouse{
+			&:before{
+				border-color: #131547;
+			}
+			&:after{
+				background-color: #131547;
+			}
+		}
+	}	
+}
+
+.section_4 {
+	.mouseWrap {
+		opacity: 0;
+	}
+}
+
+.mouseWrap{
+	position: fixed;
+	left: 50%;
+	bottom: 10px;
+	transform: translateX(-50%);
+	z-index: 100;
+	opacity: 1;
+	transition: 0.5s;
+	@include breakpoint($smd) {
+		display: none;
+	}
+	.mouseTxt {
+		margin-top: 12px;
+		letter-spacing: 2px;
+		text-indent: 2px;
+		color: #fff;
+		font-size: 14px;
+	}
+	.mouse {
+		position: relative;
+		width: 28px;
+		height: 42px;
+		border-radius: 100px;
+		background-size: 100% 200%;
+		animation: nudgeMouse 5s ease-out infinite;
+		margin: 0 auto;
+		&:before,
+		&:after {
+			content: "";
+			position: absolute;
+			top: 0; right: 0; bottom: 0; left: 0;
+			margin: auto;
+		}
+		&:before {
+			width: 28px - 6px;
+			height: 42px - 6px;
+			border-radius: 100px;
+			border: 3px solid #fff;
+		}
+		&:after {
+			background-color: #fff;
+			width: 6px;
+			height: 6px;
+			border-radius: 100%;
+			animation: trackBallSlide 5s linear infinite;
+		}
+	}
+}
+
+@keyframes trackBallSlide {
+	0% { opacity: 1; transform: scale(1) translateY(-12px);}
+	6% { opacity: 1; transform: scale(0.9) translateY(3px);}
+	14% { opacity: 0; transform: scale(0.4) translateY(12px*2); }
+	15%, 19% { opacity: 0; transform: scale(0.4) translateY(-12px); }
+	28%, 29.99% { opacity: 1; transform: scale(1) translateY(-12px); }
+	30% { opacity: 1; transform: scale(1) translateY(-12px); }
+	36% { opacity: 1;transform: scale(0.9) translateY(3px);}
+	44% { opacity: 0; transform: scale(0.4) translateY(12px*2); }
+	45%, 49% { opacity: 0; transform: scale(0.4) translateY(-12px); }
+	58%, 59.99% { opacity: 1; transform: scale(1) translateY(-12px); }
+	60% { opacity: 1; transform: scale(1) translateY(-12px); }
+	66% { opacity: 1;transform: scale(0.9) translateY(3px);}
+	74% { opacity: 0; transform: scale(0.4) translateY(12px*2); }
+	75%, 79% { opacity: 0; transform: scale(0.4) translateY(-12px); }
+	88%, 100% { opacity: 1; transform: scale(1) translateY(-12px); }
+}
+
+@keyframes nudgeMouse {
+	0% { transform: translateY(0); }
+	20% { transform: translateY(8px); }
+	30% { transform: translateY(0); }
+	50% { transform: translateY(8px); }
+	60% { transform: translateY(0); }
+	80% { transform: translateY(8px); }
+	90% { transform: translateY(0); }
 }

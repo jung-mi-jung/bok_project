@@ -48,6 +48,18 @@
 						<a href="https://apply.bok.or.kr" target="_blank" title="새창열림">채용</a>
 					</li>
 				</ul>
+				<div class="g-info">
+					<div class="global">
+						<ul>
+							<li>
+								<a href="">본인인증</a>
+							</li>
+							<li>
+								<a href="/eng/main/main.do" target="_blank" title="새창열림">English</a>
+							</li>
+						</ul>
+					</div>					
+				</div>
 			</div>
 		</div>
 		<div class="container">
@@ -75,145 +87,127 @@
 						<a href=""><span>주요서비스</span></a>
 					</li>
 				</ul>
-				<!-- //gnb -->
-				<button type="button" class="all-nav-toggle" title="전체 메뉴 열기"></button>
 			</nav>
-			<nav class="mobileGnb" id="mobileGnb">
-				<button type="button" class="m-all-nav-toggle" title="전체 메뉴 열기"></button>
-				<div class="mobileGnb__set">
-					<div class="top">
-						<span>MENU</span>
-						<button type="button" class="mobileGnb-close" title="전체 메뉴 닫기"></button>
-					</div>
-					<div class="mobileGnb__nav"></div>
-				</div>
-			</nav>
-	
-			<div class="g-info">
-				<div class="global">
-					<ul>
-						<li>
-							<a href="">본인인증</a>
-						</li>
-						<li>
-							<a href="/eng/main/main.do" target="_blank" title="새창열림">English</a>
-						</li>
-					</ul>
-				</div>
+			<!-- //gnb -->
+			<div class="toggle-set">
+				<button type="button" class="all-nav-toggle" data-toggle="modal" data-target="#totalMenu" title="전체 메뉴 열기"></button>
 				<button type="button" class="search" title="검색레이어 열기"></button>
 				<div class="search_wrap">
 					<form action="/">
 						검색 레이어 영역
 					</form>
 				</div>
-			</div>
+			</div>			
 		</div>
+
 		<!-- 전체메뉴 -->
-		<div class="total-nav">
-			<section>
-				<div>
-					<h2 class="total-nav-title">전체 메뉴</h2>
-					<div class="nav"></div>
-					<button type="button" class="ico-close"></button>
-				</div>
-			</section>
-		</div>
+		<!-- <div class="modal fade total-nav" id="totalMenu" tabindex="-1" role="dialog">
+			
+		</div> -->
 		<!-- //전체메뉴 -->
+		
 	</header>	
 	<!-- //header -->
 
 	<!-- navigation -->
 	<div class="navigation">
 		<nav class="container">
-			<ul>
-				<li class="home"><span>Home</span></li>
-				<li>
-					<a href="" title="하위메뉴 열기">뉴스 및 자료</a>
-					<div class="depth2">
-						<ul>
-							<li>
-								<a href="">BOK이슈노트</a>
-							</li>
-							<li>
-								<a href="">BOK경제연구</a>
-							</li>
-							<li>
-								<a href="">해외경제포커스</a>
-							</li>
-							<li class="on">
-								<a href="">연차보고서</a>
-							</li>
-							<li>
-								<a href="">통화신용정책보고서</a>
-							</li>
-							<li>
-								<a href="">금융안정보고서</a>
-							</li>
-							<li>
-								<a href="">경제전망보고서</a>
-							</li>
-							<li>
-								<a href="">지역경제보고서</a>
-							</li>
-							<li>
-								<a href="">지급결제보고서</a>
-							</li>
-							<li>
-								<a href="">정기간행물</a>
-							</li>
-							<li>
-								<a href="">단행본</a>
-							</li>
-						</ul>
-					</div>
-				</li>
-				<li>
-					<a href="" title="하위메뉴 열기">뉴스 및 의사록</a>
-					<div class="depth2">
-						<ul>
-							<li>
-								<a href="">보도자료</a>
-							</li>
-							<li>
-								<a href="">주간보도계획</a>
-							</li>
-							<li>
-								<a href="">언론보도해명자료</a>
-							</li>
-							<li>
-								<a href="">금융통화위원회 의사록</a>
-							</li>
-							<li>
-								<a href="">금융통화위원회 의결사항</a>
-							</li>
-						</ul>
-					</div>
-				</li>
-				<li>
-					<a href="">보도자료</a>
-				</li>
-			</ul>
-			<div class="top-page-toolbar">
-				<div class="page-toolbar">
-					<button type="button" class="sns-toggle" aria-label="SNS 공유"></button>
-					<div class="sns-wrap">
-						<div class="sns-wrap__set">
-							<button type="button" data-type="close" class="close" aria-label="SNS 공유 닫기"></button>
-							<button type="button" data-type="youtube" class="ico-youtube" aria-label="유튜브 공유 새창열림"></button>
-							<button type="button" data-type="instagram" class="ico-instagram" aria-label="인스타그램 공유 새창열림"></button>
-							<button type="button" data-type="facebook" class="ico-facebook" aria-label="페이스북 공유 새창열림"></button>
-							<button type="button" data-type="twitter" class="ico-twitter" aria-label="트위터 공유 새창열림"></button>
+			<div>
+				<ul class="nav-menu">
+					<li class="home"><a href="">Home</a></li>
+					<li>
+						<a href="" title="하위메뉴 열기">뉴스 및 자료</a>
+						<div class="depth2">
+							<ul>
+								<li>
+									<a href="">BOK이슈노트</a>
+								</li>
+								<li>
+									<a href="">BOK경제연구</a>
+								</li>
+								<li>
+									<a href="">해외경제포커스</a>
+								</li>
+								<li class="on">
+									<a href="">연차보고서</a>
+								</li>
+								<li>
+									<a href="">통화신용정책보고서</a>
+								</li>
+								<li>
+									<a href="">금융안정보고서</a>
+								</li>
+								<li>
+									<a href="">경제전망보고서</a>
+								</li>
+								<li>
+									<a href="">지역경제보고서</a>
+								</li>
+								<li>
+									<a href="">지급결제보고서</a>
+								</li>
+								<li>
+									<a href="">정기간행물</a>
+								</li>
+								<li>
+									<a href="">단행본</a>
+								</li>
+							</ul>
 						</div>
+					</li>
+					<li>
+						<a href="" title="하위메뉴 열기">뉴스 및 의사록</a>
+						<div class="depth2">
+							<ul>
+								<li>
+									<a href="">보도자료</a>
+								</li>
+								<li>
+									<a href="">주간보도계획</a>
+								</li>
+								<li>
+									<a href="">언론보도해명자료</a>
+								</li>
+								<li>
+									<a href="">금융통화위원회 의사록</a>
+								</li>
+								<li>
+									<a href="">금융통화위원회 의결사항</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="">보도자료</a>
+					</li>
+				</ul>
+				<div class="top-page-toolbar">
+					<div class="page-toolbar">
+						<button type="button" class="sns-toggle" aria-label="SNS 공유"></button>
+						<div class="sns-wrap">
+							<div class="sns-wrap__set">
+								<button type="button" data-type="close" class="close" aria-label="SNS 공유 닫기"></button>
+								<button type="button" data-type="youtube" class="ico-youtube" aria-label="유튜브 공유 새창열림"></button>
+								<button type="button" data-type="instagram" class="ico-instagram" aria-label="인스타그램 공유 새창열림"></button>
+								<button type="button" data-type="facebook" class="ico-facebook" aria-label="페이스북 공유 새창열림"></button>
+								<button type="button" data-type="twitter" class="ico-twitter" aria-label="트위터 공유 새창열림"></button>
+							</div>
+						</div>
+						<a href="/static/view/forPrint.html" data-size="1200, 700, yes" target="_blank" title="새창열림" class="page-print b-pop">
+							<span class="sr-only">프린트</span>
+						</a>
+						<a href="/static/guide/portal/popup/rss_popup.html" data-size="800, 500, yes" class="page-rss b-pop" target="_blank" title="새창열림">
+							<span class="sr-only">rss 한국은행</span>
+						</a>
 					</div>
-					<a href="/static/view/forPrint.html" data-size="1200, 700, yes" target="_blank" title="새창열림" class="page-print b-pop">
-						<span class="sr-only">프린트</span>
-					</a>
-					<a href="/static/guide/portal/popup/rss_popup.html" data-size="800, 500, yes" class="page-rss b-pop" target="_blank" title="새창열림">
-						<span class="sr-only">rss 한국은행</span>
-					</a>
 				</div>
 			</div>
 		</nav>
+		<div class="sub-_visual">
+			<div class="hgroup">
+				<h1>뉴스 및 의사록</h1>
+			</div>
+		</div>
 	</div>
 	<!-- //navigation -->
 
@@ -290,15 +284,92 @@
 
 <p><strong class="fc1">금융중개지원대출</strong>은 <strong class="fc1">금융통화위원회</strong>가 금융경제상황과 중소기업 및 지역 금융동향 등을 감안하여 정한 한도 범위 내에서 은행의 <strong class="fc1">중소기업대출 실적</strong> 등에 따라 한국은행의 <strong class="fc1">저리자금</strong>을 지원하는 제도이다.</p>
 <p>금융중개지원대출의 한도는 통화동향과 중소기업 및 지역 금융동향 등을 감안하여 금융통화위원회가 필요시 수시 조정하고 있으며 <strong class="fc1">한국은행 총재</strong>는 동 한도 내에서<strong> </strong>배정하여 운용하고 있다. <strong class="fc1">금융중개지원대출 금리</strong>는 은행의 중소기업대출 취급유인을 제고하기 위하여 일반적으로 기준금리보다 낮은 수준을 적용하고 있으며 <strong class="fc1">대출만기</strong>는 1개월 단위로 운용되고 있다.</p>
-<h4 class="h-caption">금융중개지원대출 한도 및 금리</h4>
+<h4 class="h-caption">금융중개지원대출 한도 및 금리<sup>1)</sup></h4>
 <div class="img-box-round">
 	<p><img src="/static/portal/img/cts/attachs/img_200711.png" alt="" style="width: 800px;"></p>
 </div>
 
+<ol class="fnote"> 
+	<li><span class="title">주 : <sup title="각주 1)의 대한 설명">1) </sup></span><span class="desc">음영은 프로그램별로 대출금리가 상이하였던 시기의 상·하한 구간을 의미</span></li> 
+</ol>			
 
+
+			
+			
+			</div>
+		</main>			
+	</div>
+	<!-- //content -->
 
 </div>
 
+<footer id="footer">
+<div class="container">
+	<div class="f_l">
+		<nav class="footer-nav">
+			<ul>
+				<li>
+					<a href="">자작권보호</a>
+				</li>
+				<li class="point">
+					<a href="">개인정보처리방침</a>
+				</li>
+				<li>
+					<a href="">이메일무단수집거부</a>
+				</li>
+				<li>
+					<a href="">홈페이지이용안내</a>
+				</li>
+				<li>
+					<a href="">관련사이트</a>
+				</li>
+			</ul>
+		</nav>
+		<div class="footer-bottom">
+			<address>04531 서울특별시 중구 남대문로 39 (남대문로3가)<br class="mobile">
+			대표전화 : 02-759-4114</address>
+			<p class="copyright">Copyright(c) Bank of Korea. All rights reserved.</p>
+		</div>
+	</div>
+	<div class="f_r">
+		<div class="site_go">
+			<button type="button" title="fmaily site 열기">fmaily site</button>
+			<ul>
+				<li>
+					<a href="/imer/main/main.do" target="_blank" title="새창열림">경제연구원</a>
+				</li>
+				<li>
+					<a href="/museum/main/main.do" target="_blank" title="새창열림">화폐박물관</a>
+				</li>
+				<li>
+					<a href="">지역본부</a>
+				</li>
+				<li>
+					<a href="https://ecos.bok.or.kr" target="_blank" title="새창열림">경제시스템(ecos)</a>
+				</li>
+				<li>
+					<a href="https://snapshot.bok.or.kr" target="_blank" title="새창열림">금융·경제스냅샷</a>
+				</li>
+				<li>
+					<a href="https://dl.bok.or.kr" target="_blank" title="새창열림">전자도서관</a>
+				</li>
+				<li>
+					<a href="https://apply.bok.or.kr" target="_blank" title="새창열림">채용</a>
+				</li>
+			</ul>
+		</div>
+		<div class="f_sns">
+			<a href="https://www.youtube.com/thebankofkoreakr" target="_blank" title="새창열림" class="sns-youtube"><span class="sr-only">한국은행 Youtube 바로가기 (https://www.youtube.com/thebankofkoreakr)</span></a>
+			<a href="https://www.instagram.com/thebankofkorea" target="_blank" title="새창열림" class="sns-instagram"><span class="sr-only">한국은행 인스타그램  바로가기 (https://www.instagram.com/thebankofkorea)</span></a>
+			<a href="https://www.facebook.com/bankofkoreahub" target="_blank" title="새창열림" class="sns-facebook"><span class="sr-only">한국은행 Facebook 바로가기 (https://www.facebook.com/bankofkoreahub)</span></a>
+			<a href="https://www.twitter.com/bok_hub" target="_blank" title="새창열림" class="sns-twitter"><span class="sr-only">한국은행 Twitter 바로가기 (https://www.twitter.com/bok_hub)</span></a>
+		</div>
+		<div class="f_banner">
+			<a href="" title="새창열림"><img src="/static/portal/img/common/mark.png" alt="(사)한국장애인단체총연합회 한국웹접근성인증평가원 웹 접근성 우수사이트 인증마크(WA인증마크)"></a>
+		</div>
+	</div>
+</div>
+</footer>
 <script src="/static/jslibrary/swiper@8/swiper-bundle.min.js"></script>
 <script src="/static/portal/js/common.js"></script>
 </body>

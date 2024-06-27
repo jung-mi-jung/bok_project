@@ -43,7 +43,7 @@ $btn: "[class^=b-]";
 		font-size: rem(18);
 		@include breakpoint($md) {
 			min-width: 112px;
-		}		
+		}
 	}
 	&.xs {
 		min-width: 0;
@@ -303,6 +303,22 @@ li {
 		& + [class^=b-] {
 			margin-left: 7px;
 		}
+	}
+	@include breakpoint($sm){
+		.fl {
+			width: 100%;
+			margin-bottom: 5px;
+		}
+	}
+	@include breakpoint(max-width 560px) {
+		&.c.mt40{
+			.a-link,
+			.a-link2 {
+				display:block;
+				margin: 2px 0;
+			}
+		}
+		
 	}
 }
 .input-xs {  //청소년경제강좌 - 신청폼

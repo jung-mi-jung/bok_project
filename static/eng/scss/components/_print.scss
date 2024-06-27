@@ -2,6 +2,7 @@
 	@page {
 		size: auto; // 프린트 사이즈
 		margin: 10mm; // 프린트 여백
+		size: A4;
 	}
 	#header,
 	.page-toolbar,
@@ -46,7 +47,7 @@
 			box-shadow: none;
 			width: 100%;
 			max-width: 100%;
-			transform: 0;
+			//transform: 0;
 		}
 		&__body {
 			overflow: inherit;
@@ -54,14 +55,15 @@
 			max-height: 100% !important;
 		}
 	}
-	*, .map {
+	*, .map, button {
 		-webkit-print-color-adjust: exact !important; /*Chrome, Safari */
 		color-adjust: exact !important; /*Firefox*/
 	}
-	html, 
-	body{
-		size: A4;
-		//margin: 30mm 45mm 30mm 45mm; /* margin: auto auto; 로 자동 여백 설정도 가능 */
+	.view > dl > dt {
+		background-color: #EBF3F7 !important;
+	}
+	#main-container .h-caption::before {
+		background-image: url(/static/portal/img/ico/ico-caption.png) !important;
 	}
 	
 	table {

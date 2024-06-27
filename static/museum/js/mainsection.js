@@ -1,5 +1,5 @@
 // 휠 컨트롤
-var mainSection = $('#wrap,#section2,#footer');
+var mainSection = $('#wrap, #section2, #footer');
 var whellTimer;
 var timer;
 var lastScrollTop = 0;
@@ -21,7 +21,8 @@ $(window).resize(function () {
     }
 });
 var mainSectionMoveing = function (direction) {
-    console.log("🚀 ~ file: mainsection.js:22 ~ mainSectionMoveing ~ mainSectionMoveing:", mainSectionMoveing)
+    //console.log("🚀 ~ file: mainsection.js:22 ~ mainSectionMoveing ~ mainSectionMoveing:", mainSectionMoveing)
+
     mainSection.each(function (index) {
         if ($(this).offset().top > $(window).scrollTop() && Utils.isElementInView($(this), 50)) {
             currentMainSection = index;
@@ -41,7 +42,7 @@ var mainSectionMoveing = function (direction) {
                     duration: 650,
                     complete: function () {
                         inMotion = false
-                        console.log('?')
+                        //console.log('?')
                     },
                 }
             );
@@ -73,14 +74,14 @@ var resizeDone = function () {
     }
     sectionNavSetup()
 };
-// function sectionNavSetup() {
-//     if (currentMainSection > 0) {
-//         // $('#section2 .section2-set .section2-set__list .item').addClass('animated');
-//         $('.section-nav').addClass('section-nav--color')
-//     } else {
-//         $('.section-nav').removeClass('section-nav--color')
-//     }
-// }
+function sectionNavSetup() {
+    if (currentMainSection > 0) {
+        // $('#section2 .section2-set .section2-set__list .item').addClass('animated');
+        $('.section-nav').addClass('section-nav--color')
+    } else {
+        $('.section-nav').removeClass('section-nav--color')
+    }
+}
 function scrollDiectionCheck(e) {
     var st = window.pageYOffset || document.documentElement.scrollTop;
     // if(Math.abs(lastScrollTop - st) <= 5)
@@ -98,6 +99,7 @@ function scrollDiectionCheck(e) {
     timer = setTimeout(resizeDone, delta);
 }
 $('#wrap').on('wheel', function (event) {
+
     // 휠 제외 조건
     // if ($(event.target).hasClass('total-menu')) return;
     // if ($(event.target).parents('.total-menu').length) return;
@@ -105,85 +107,102 @@ $('#wrap').on('wheel', function (event) {
     if ($("body").hasClass('popupOpened')) return;
     if ($("body").hasClass('modal-open')) return;
 
-    if (!ismobile && $(window).height() > 900) {
-        event.preventDefault();
+    if (!ismobile && $(window).height() > 700) {
+        //event.preventDefault();
 
         if (inMotion === false) {
             clearTimeout(whellTimer);
             inMotion = true
-            console.log("🚀 ~ file: mainsection.js:124 ~ inMotion:", inMotion)
+            //console.log("🚀 ~ file: mainsection.js:124 ~ inMotion:", inMotion)
             whellTimer = setTimeout(function () {
                 mainSectionMoveing(event.originalEvent.deltaY > 0 ? 'down' : 'up');
-            }, 150);
+            }, 0);
         }
     } else {
     }
 });
+$(window).on('keyup', function (e) {
+    //console.log(e)
+    e.preventDefault();
+    // debugger
+    if (!ismobile && $(window).height() > 700) {
+        if (inMotion === false) {
+            clearTimeout(whellTimer);
+            inMotion = true
+            whellTimer = setTimeout(function () {
+                if (e.keyCode === 38)
+                    mainSectionMoveing('up');
+                if (e.keyCode === 40)
+                    mainSectionMoveing('down');
+            }, 150);
+        }
+    }
+});
+$(function () {
+    // 섹션 네비게이션 휠처리
+    var prevHtmlClassName = null;
 
+    $(window).on('scroll', function (event) {
+        scrollDiectionCheck(event);
+        var sectionNavItemIndex;
+        mainSection.each(function (index, element) {
+            if (Utils.isElementInView($(this), 50)) {
+                sectionNavItemIndex = index;
+            }
+        });
+        $('.section-nav a').removeClass('active').removeAttr('title').eq(sectionNavItemIndex).addClass('active').attr('title', '선택 됨');
+        cname = 'section_' + sectionNavItemIndex;
+        if ($('html').hasClass(cname) == false) {
+            if (prevHtmlClassName != null) {
+                $('html').removeClass(prevHtmlClassName);
+            }
+            $('html').addClass(cname);
+            prevHtmlClassName = 'section_' + sectionNavItemIndex;
+        }
+        if (Utils.isElementInView('#footer', 99)) {
+            $('body').addClass('custom-nav--stiky');
+        } else {
+            $('body').removeClass('custom-nav--stiky');
+        }
+        // console.log(currentMainSection)
 
+    });
+    //섹션 메뉴 이동
+    var _sectionTarget
+    $('.section-nav a').each(function (index) {
+        $(this).on('click', function (event) {
+            event.preventDefault();
+            _sectionTarget = $(this).attr('href')
+            inMotion = true
+            $('html, body')
+                .stop()
+                .animate(
+                    { scrollTop: mainSection.eq(index).offset().top },
+                    {
+                        duration: 650,
+                        complete: function () {
+                            $(_sectionTarget).focus();
+                            inMotion = false
+                        },
+                    }
+                );
+        });
+    });
 
-// $(function () {
-//     // 섹션 네비게이션 휠처리
-//     var prevHtmlClassName = null;
-//     $(window).on('scroll', function (event) {
-//         scrollDiectionCheck(event);
-//         var sectionNavItemIndex;
-//         mainSection.each(function (index, element) {
-//             if (Utils.isElementInView($(this), 50)) {
-//                 sectionNavItemIndex = index;
-//             }
-//         });
-//         $('.section-nav a').removeClass('active').removeAttr('title').eq(sectionNavItemIndex).addClass('active').attr('title', '선택 됨');
-//         cname = 'section_' + sectionNavItemIndex;
-//         if ($('html').hasClass(cname) == false) {
-//             if (prevHtmlClassName != null) {
-//                 $('html').removeClass(prevHtmlClassName);
-//             }
-//             $('html').addClass(cname);
-//             prevHtmlClassName = 'section_' + sectionNavItemIndex;
-//         }
-//         if (Utils.isElementInView('#footer', 99)) {
-//             $('body').addClass('custom-nav--stiky');
-//         } else {
-//             $('body').removeClass('custom-nav--stiky');
-//         }
-//         // console.log(currentMainSection)
+    // 페이지 새로고침 처리
+    setTimeout(function () {
+                // mainSection.each(function (index, element) {
+        //     if ($(this).offset().top >= $(window).scrollTop() && Utils.isElementInView($(this), 50)) {
+        //         currentMainSection = index;
+        //     }
+        // });
+        if (currentMainSection == 1) {
+            // 특정 섹션이 보일때 처리
+            // $('#section2 .section2-set .section2-set__list .item').addClass('animated');
+        }
+    }, 1000);
+});
 
-//     });
-//     // 섹션 메뉴 이동
-//     var _sectionTarget
-//     $('.section-nav a').each(function (index) {
-//         $(this).on('click', function (event) {
-//             event.preventDefault();
-//             _sectionTarget = $(this).attr('href')
-//             inMotion = true
-//             $('html, body')
-//                 .stop()
-//                 .animate(
-//                     { scrollTop: mainSection.eq(index).offset().top },
-//                     {
-//                         duration: 650,
-//                         complete: function () {
-//                             $(_sectionTarget).focus();
-//                             inMotion = false
-//                         },
-//                     }
-//                 );
-//         });
-//     });
-//     // 페이지 새로고침 처리
-//     setTimeout(function () {
-//         // mainSection.each(function (index, element) {
-//         //     if ($(this).offset().top >= $(window).scrollTop() && Utils.isElementInView($(this), 50)) {
-//         //         currentMainSection = index;
-//         //     }
-//         // });
-//         if (currentMainSection == 1) {
-//             // 특정 섹션이 보일때 처리
-//             // $('#section2 .section2-set .section2-set__list .item').addClass('animated');
-//         }
-//     }, 1000);
-// });
 
 $(function () {
     // 페이지 새로고침 처리
@@ -193,24 +212,35 @@ $(function () {
                 currentMainSection = index;
             }
         });
-        //sectionNavSetup()
+        sectionNavSetup()
     }, 1000);
+
+    window.addEventListener('scroll', function() {
+		const sections = document.querySelectorAll('.section');
+		const scrollPosition = window.pageYOffset;
+	
+		sections.forEach((section, index) => {
+			const parallaxElement = section.querySelector('section');
+			const rate = index * 0.5 + 0.5; // 각 섹션에 다른 속도 적용
+			parallaxElement.style.transform = `translateY(${scrollPosition * rate}px)`;
+		});
+	});
 });
 
-// stiky 키보드 접근성
-// $('.section2 button:first').on('focus', function () {
-//     $('html, body')
-//         .stop()
-//         .animate({ scrollTop: mainSection.eq(1).offset().top }, 650);
-// });
-// $('.section3 a:first').on('focus', function () {
-//     $('html, body')
-//         .stop()
-//         .animate({ scrollTop: mainSection.eq(2).offset().top }, 650);
-// });
-// $('.section4 a:first').on('focus', function () {
-//     $('html, body')
-//         .stop()
-//         .animate({ scrollTop: mainSection.eq(3).offset().top }, 650);
-// });
+//stiky 키보드 접근성
+$('.section2 button:first').on('focus', function () {
+    $('html, body')
+        .stop()
+        .animate({ scrollTop: mainSection.eq(1).offset().top }, 650);
+});
+$('.section3 a:first').on('focus', function () {
+    $('html, body')
+        .stop()
+        .animate({ scrollTop: mainSection.eq(2).offset().top }, 650);
+});
+$('.section4 a:first').on('focus', function () {
+    $('html, body')
+        .stop()
+        .animate({ scrollTop: mainSection.eq(3).offset().top }, 650);
+});
 

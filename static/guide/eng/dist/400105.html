@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>서브명 | Bank of Korea</title>
+	<link type="text/css" rel="stylesheet" href="/static/eng/css/sub.css">
+	<script src="/static/jslibrary/jquery-3.5.1.min.js"></script>
+	<script src="/static/jslibrary/jquery.cookie.js"></script>
+	<script src="/static/jslibrary/bootstrap/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="/static/jslibrary/swiper@8/swiper-bundle.min.css">
+	<script src="/static/jslibrary/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js"></script>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta property="og:type"			content="website">
+	<meta property="og:title"			content="${title}">
+	<meta property="og:description"		content="${title}">
+</head>
+<body>
+<div class="skip">
+	<a href="#content">Skip to content</a>
+</div>
+<div id="wrap">
+	<div class="gnb_bg"></div>
+	<!-- header -->
+	<header id="header">
+		<div class="globalHeader">
+			<div class="container">
+				<ul>
+					<li>
+						<a href="/imerEng/main/main.do" target="_blank" title="새창열림">Economic Research Institute</a>
+					</li>
+				</ul>
+				<div class="g-info">
+					<div class="global">
+						<ul>
+							<li>
+								<a href="/portal/main/main.do" target="_blank" title="새창열림">KOREAN</a>
+							</li>
+						</ul>
+					</div>					
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<h1 class="logo">
+				<a href="">
+					<span class="sr-only">Bank of Korea</span>
+				</a>
+			</h1>
+			<!-- gnb -->
+			<nav class="gnb" id="gnb">
+				<ul>
+					<li class="menu01">
+						<a href=""><span>About BOK</span></a>
+					</li>
+					<li class="menu02 active">
+						<a href=""><span>Topics</span></a>
+					</li>
+					<li class="menu03">
+						<a href=""><span>News&Publications</span></a>
+					</li>
+					<li class="menu04">
+						<a href=""><span>Money Museum</span></a>
+					</li>
+				</ul>
+			</nav>
+			<!-- //gnb -->
+			<div class="toggle-set">
+				<button type="button" class="all-nav-toggle" data-toggle="modal" data-target="#totalMenu" title="Open Total Menu"></button>
+				<button type="button" class="search" title="Open Search Layer"></button>
+				<div class="search_wrap">
+					<form action="">
+						<div class="search_wrap_input">
+							<input type="text" class="search_keyword" name="query" id="queryTop" placeholder="검색어를 입력해 주세요." autocomplete="off" maxlength="50">
+							<div class="dqAuto" tabindex="0" style="display: none;">
+								<ul class="autoList">
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+									<li>
+										<a href=""><font style="color:#005596">환</font>율</a>
+									</li>
+								</ul>
+								<div class="bottom">
+									<a href="javascript:void(0);" id="topSrchClose" class="btnClose">자동완성 닫기</a>
+								</div>
+							</div>	
+							<button type="button" class="btn_search search" aria-label="검색"></button>
+						</div>
+						<button type="button" class="search_close" aria-label="검색 닫기"></button>
+					</form>
+				</div>
+			</div>			
+		</div>
+
+		<!-- 전체메뉴 -->
+		<div class="modal fade total-nav" id="totalMenu" tabindex="-1" role="dialog">
+			<div class="lpop modal-dialog" role="document">
+				<div class="set modal-content">
+					<div class="modal-header">
+						<div class="container">
+							<button type="button" class="close" data-dismiss="modal"><i class="ti-close"></i><span class="sr-only">레이어 창닫기</span></button>
+							<h1 class="modal-title" id="modal-label1">
+								<span class="totalnav-logo"></span>전체메뉴
+							</h1>
+							<form>
+								<fieldset>
+									<legend class="sr-only">전체메뉴 검색</legend>
+									<div class="keyword-set">
+										<span class="keyword"><input type="text" title="검색어"></span>
+										<button type="button" class="search" onclick="" aria-label="검색"></button>
+									</div>
+								</fieldset>
+							</form>
+						</div>
+					</div>
+					<div class="modal-body">
+						<div class="container">
+							<ul class="dp1">
+								<li>
+									<a href=""><span>한국은행</span></a>
+									<a href="javascropt:void(0)" class="m-dp1"><span>한국은행</span></a>
+									<ul class="dp2">
+										<li>
+											<a href="">개요</a>
+										</li>
+										<li>
+											<a href="">설립목적 및 역사</a>
+										</li>
+										<li>
+											<a href="">금융통화위원회</a>
+										</li>
+										<li>
+											<a href="">조직도</a>
+										</li>
+										<li>
+											<a href="">운영 및 법규</a>
+											<ul class="dp3">
+												<li>
+													<a href="">전략 및 조직가치</a>
+												</li>
+												<li>
+													<a href="">경영정보</a>
+												</li>
+												<li>
+													<a href="">계약정보</a>
+												</li> 
+												<li>
+													<a href="">윤리경영</a>
+												</li>
+												<li>
+													<a href="">법규정보</a>
+												</li>
+												<li>
+													<a href="">사회공헌</a>
+												</li>
+												<li>
+													<a href="">채용</a>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href="">오시는 길</a>
+										</li>
+										<li>
+											<a href="">지역본부(종합)</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<ul class="dp1">
+								<li>
+									<a href=""><span>정책 및 업무</span></a>
+									<a href="javascropt:void(0)" class="m-dp1"><span>정책 및 업무</span></a>
+								</li>
+							</ul>
+							<ul class="dp1">
+								<li>
+									<a href=""><span>뉴스 및 자료</span></a>
+									<a href="javascropt:void(0)" class="m-dp1"><span>뉴스 및 자료</span></a>
+									<ul class="dp2">
+										<li>
+											<a href="">개요</a>
+										</li>
+										<li>
+											<a href="">설립목적 및 역사</a>
+										</li>
+										<li>
+											<a href="">금융통화위원회</a>
+										</li>
+										<li>
+											<a href="">조직도</a>
+										</li>
+										<li>
+											<a href="">운영 및 법규</a>
+											<ul class="dp3">
+												<li class="dropdown">
+													<a href="javascript:void(0)" title="하위메뉴 열기">
+														<span><span class="highlight">전략</span> 및 조직가치</span>
+														<i class="ico-arrow"></i>
+													</a>
+													<ul class="dp4">
+														<li>
+															<a href="">
+																<span><span class="highlight">전략</span></span>
+															</a>
+														</li>
+														<li>
+															<a href=""><span>조직가치</span></a>
+														</li>
+														<li>
+															<a href=""><span>운영리스트 관리</span></a>
+														</li>
+														<li>
+															<a href=""><span>CI소개</span></a>
+														</li>
+													</ul>
+												</li>
+												<li>
+													<a href=""><span>경영정보</span></a>
+												</li>
+												<li>
+													<a href=""><span>계약정보</span></a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<ul class="dp1">
+								<li>
+									<a href=""><span>멀티콘텐츠</span></a>
+									<a href="javascropt:void(0)" class="m-dp1"><span>멀티콘텐츠</span></a>
+								</li>
+							</ul>
+							<ul class="dp1">
+								<li>
+									<a href=""><span>주요서비스</span></a>
+									<a href="javascropt:void(0)" class="m-dp1"><span>주요서비스</span></a>
+									<ul class="dp2">
+										<li>
+											<a href="">개요</a>
+										</li>
+										<li>
+											<a href="">설립목적 및 역사</a>
+										</li>
+										<li>
+											<a href="">금융통화위원회</a>
+										</li>
+										<li>
+											<a href="">조직도</a>
+										</li>
+										<li>
+											<a href="">운영 및 법규</a>
+											<ul class="dp3">
+												<li class="dropdown">
+													<a href="javascript:void(0)" title="하위메뉴 열기">
+														<span><span class="highlight">전략</span> 및 조직가치</span>
+														<i class="ico-arrow"></i>
+													</a>
+													<ul class="dp4">
+														<li>
+															<a href="">
+																<span><span class="highlight">전략</span></span>
+															</a>
+														</li>
+														<li>
+															<a href=""><span>조직가치</span></a>
+														</li>
+														<li>
+															<a href=""><span>운영리스트 관리</span></a>
+														</li>
+														<li>
+															<a href=""><span>CI소개</span></a>
+														</li>
+													</ul>
+												</li>
+												<li>
+													<a href=""><span>경영정보</span></a>
+												</li>
+												<li>
+													<a href=""><span>계약정보</span></a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //전체메뉴 -->
+		
+	</header>	
+	<!-- //header -->
+
+	<!-- navigation -->
+	<div class="navigation">
+		<nav class="container">
+			<div>
+				<ul class="nav-menu">
+					<li class="home"><span>Home</span></li>
+					<li>
+						<a href="" title="하위메뉴 열기">News&Publications</a>
+						<div class="depth2">
+							<ul>
+								<li>
+									<a href="">About BOK</a>
+								</li>
+								<li>
+									<a href="">Topics</a>
+								</li>
+								<li class="on">
+									<a href="">News&Publications</a>
+								</li>
+								<li>
+									<a href="">Money Museum</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="" title="하위메뉴 열기">news</a>
+						<div class="depth2">
+							<ul>
+								<li class="on">
+									<a href="">news</a>
+								</li>
+								<li>
+									<a href="">Notice</a>
+								</li>
+								<li>
+									<a href="">Events</a>
+								</li>
+								<li>
+									<a href="">Speeches</a>
+								</li>
+								<li>
+									<a href="">Research</a>
+								</li>
+								<li>
+									<a href="">Periodicals</a>
+								</li>
+								<li>
+									<a href="">Books</a>
+								</li>
+								<li>
+									<a href="">documents</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="">Press Releases</a>
+					</li>
+				</ul>
+				<div class="top-page-toolbar">
+					<div class="page-toolbar">
+						<button type="button" class="sns-toggle" aria-label="SNS 공유"></button>
+						<div class="sns-wrap">
+							<div class="sns-wrap__set">
+								<button type="button" data-type="close" class="close" aria-label="SNS 공유 닫기"></button>
+								<button type="button" data-type="youtube" class="ico-youtube" aria-label="유튜브 공유 새창열림"></button>
+								<button type="button" data-type="instagram" class="ico-instagram" aria-label="인스타그램 공유 새창열림"></button>
+								<button type="button" data-type="facebook" class="ico-facebook" aria-label="페이스북 공유 새창열림"></button>
+								<button type="button" data-type="twitter" class="ico-twitter" aria-label="트위터 공유 새창열림"></button>
+							</div>
+						</div>
+						<a href="/static/view/forPrint.html" data-size="1200, 700, yes" target="_blank" title="새창열림" class="page-print b-pop">
+							<span class="sr-only">프린트</span>
+						</a>
+						<a href="/static/view/eng/popup/rss_popup.html" data-size="800, 500, yes" class="page-rss b-pop" target="_blank" title="새창열림">
+							<span class="sr-only">rss BANK OF KOREA</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<div class="sub-_visual">
+			<div class="hgroup">
+				<h1>News&Publications</h1>	
+			</div>
+		</div>
+	</div>
+	<!-- //navigation -->
+
+	<!-- content -->
+	<div class="container" id="content">
+		<main id="main-container">
+
+			<div class="lnb-nav">
+				<h1>Index</h1>
+				<ul>
+					<li class="on">
+						<a href="">Treasury Service</a>
+						<ul>
+							<li class="on">
+								<a href="">Treasury Service</a>
+							</li>
+							<li>
+								<a href="">Overview of Securities Business</a>
+							</li>
+							<li>
+								<a href="">[Appendix] Overview of Treasury Bond</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="">Overview of Securities Business</a>
+					</li>
+					<li>
+						<a href="">Securities Custody Services for overseas official institutions</a>
+					</li>
+				</ul>
+			</div>
+
+			
+			<div class="content">
+
+
+
+<h2>Promotion Organization</h2>
+<h3>Development Process</h3>
+<p>The Committee on Financial Informatization Promotion (CFIP) is a consultative body between the BOK and financial corporations, established pursuant to Article 17 of the Framework Act on Intelligent Informatization, to plan and carry out financial informatization projects. In September 1984, the Financial Computerization Committee, its precursor, was formed to oversee the national backbone computer network project for the financial sector. In 1996, following the amendment of related laws, the committee was reorganized and renamed the “Financial Informatization Steering Subcommittee.” In August 2009, it was relaunched as a self-regulated private-sector consultative mechanism and was given its current name. </p>
+
+<h3>CFIP</h3>
+<p>The CFIP, chaired by the deputy governor of the BOK, is composed of up to 40 members. The CFIP has a Secretariat and a Working Committee to support its work. The Working Committee, in turn, has four subcommittees under it: the Standardization Committee, the Safety Committee, the Financial Inclusion Committee, and the Digital Innovation Committee. As of the end of 2023, 18 banks, seven non-bank financial institutions (NBFIs), and six finance-related institutions participate in the CFIP, in addition to the BOK.</p>
+
+<p class="mt20"><img src="/static/eng/img/cts/sub8/400105.png" alt="Promotion Organization"></p>
+
+
+<!-- 기존 소스 -->
+<!-- <h2>Promotion Organization</h2>
+<h3>Development Process</h3>
+<p>As governmental recognition of the importance of financial informatiization improved steadily from the early 1980s, the financial field was selected, along with administration, education, research, national defense and social security fields, as one of the nation's key fields, which should be informationalized through establishment of its own computer network. To promote informatization in the financial field, the Committee on Financial Computerization, chaired by the governor of the Bank of Korea(hereinafter referred to as the “BOK”), was inaugurated in September 1984, under the jurisdiction of the Committee on Computer Networks Adjustment, a governmental organization.</p>
+<p>After the Act on the Promotion of Computer Networks Supply and Usage was enacted in May 1986, the Committee on Financial Computerization was renamed as the Committee on Financial Computer Networks Promotion, and its business field was expanded from the bank industry into the non-bank financial industry as well, including such areas as securities and insurance.</p>
+<p>With enactment of the Framework Act on informatization Promotion in January 1996, the official government organization overseeing informatization was changed from the Committee on Computer Networks Adjustment to the Committee on Informatization Promotion. According to Article 8 of the Act, the Committee on Informatization Promotion shall establish a working-level committee to facilitate efficient operation of the committee. It shall also establish a sectional committee for each sector in order to efficiently proceed with informatization. In line with the Article, the Committee on Financial Computer Networks Promotion was, in June 1996, renamed as the Sectional Committee on Financial Informatization Promotion.</p>
+<p>After that, with a thoroughgoing amendment of the Framework Act on Informatization Promotion, the Framework Act on National Informatization was put into force in August 2009 and the Sectional Committee on Financial Informatization Promotion was reorganized as the CFIP, a private consultative group, in November 2009.</p>
+<p>The CFIP performs the business of financial informatization including the selection of mutual business projects for the Financial Informatization Promotion(hereinafter referred to as the “FIP”), the connection the Financial Information Networks with external computer networks, the standardization of work involved in the financial informatization, etc. Administrative matters are dealt with by its Secretariat, managed by the BOK.</p>
+<h3>CFIP</h3>
+<h4>Composition and Functions </h4>
+<p>The number of the CFIP members does not exceed 30 persons including the chairman, who has the right to commission members from among participants’ executives recommended by their representatives, and from among persons of learning and experience in informatization. The CFIP chairman is currently the Deputy Governor of the BOK. Participants in the CFIP include commercial banks, specialized banks, investment dealers and brokers, insurance companies, the BOK, the Korea Credit Guarantee Fund, the Korea Technology Credit Guarantee Fund, the National Information Society Agency, the Korea Insurance Development Institute, the Korea Securities Computer Corporation, the Korea Financial Telecommunications and Clearings Institute, other institutions which the chairman deems necessary, etc. The CFIP deliberates on each of the following matters: </p>
+<ul class="bu"> 
+<li>Matters related to the selection of mutual business projects (in which two or more financial institutions are involved for FIP); </li> 
+<li>Matters related to the connection the Financial Information Networks with external computer networks and the connection the Financial Shared Networks with the Financial Information Networks; </li> 
+<li>Matters related to the standardization of work involved in the financial informatization; </li> 
+<li>Matters related to the safety countermeasures of the Financial Information Networks; </li> 
+<li>Matters related to improvement of the FIP systems; </li> 
+<li>Matters related to the enactment, amendment and discontinuance of regulations concerned with FIP; </li> 
+<li>Other matters necessary for FIP. </li> 
+</ul>
+<h4>Working Committee</h4>
+<p>The foundation purpose of the working committee for FIP is to operate the CFIP efficiently. The working committee consists of general managers of the departments in charge of FIP-related tasks, and its chairman is currently the CFIP Secretariat Director, the Director of the BOK Payment Systems Department. The working committee deliberates on each of the following matters in advance:</p>
+<ul class="bu"> 
+<li>Matters which the Secretariat Director deems it necessary to examine specially and technically, prior to deliberation on them by the CFIP; </li> 
+<li>Matters related to the expense sharing method and range; </li> 
+<li>Other matters delegated by the CFIP. </li> 
+</ul>
+<h4>Standardization Committee</h4>
+<p>The foundation purpose of the standardization committee is to efficiently promote standardization tasks related to financial informatization. The number of standardization committee members is a maximum of 15 persons including the chairman, the Deputy Director of the Secretariat, who has the right to commission committee members from among participants' staff recommended by working committee members. The standardization committee examines each of the following matters in advance:</p>
+<ul class="bu"> 
+<li>Contents of suggestions on standardization; </li> 
+<li>Tasks needing standardization, plans for standardization, etc.; </li> 
+<li>Other matters as requested by the Secretariat, related to standardization. </li> 
+</ul>
+<h4>Safety Countermeasures Committee </h4>
+<p>The foundation purpose of safety countermeasures committee is to efficiently promote the tasks related to safety countermeasures of the Financial Information Networks. The number of safety countermeasures committee members is a maximum of 15 persons including the chairman, the Deputy Director of the Secretariat, who has the right to commission members from among participants' staff recommended by members of the working committee. The safety countermeasures committee examines each of the following matters in advance: </p>
+<ul class="bu"> 
+<li>Matters related to the formulation of safety countermeasures for the Financial Information Networks; </li> 
+<li>Emergency countermeasures against computer troubles and accidents; </li> 
+<li>Other matters as requested by the Secretariat, related to safety countermeasures for the Financial Information Network. </li> 
+</ul>
+<h4>Secretariat</h4>
+<p>The Secretariat in the BOK performs affairs related to conferences and operations of the CFIP as directed by the CFIP chairman. Secretariat members consist of staff members of the BOK. The chief of the Secretariat, a minutes keeper, is currently the Director of the Payment Systems Department at the BOK. The Secretariat performs each of the following duties: </p>
+<ul class="bu"> 
+<li>Preparation of bills for referral to the committees; </li> 
+<li>Enforcement of resolutions of the committees; </li> 
+<li>Other matters related to task management by the committees. </li> 
+</ul> -->
+
+
+
+
+</div>
+
+<script src="/static/jslibrary/swiper@8/swiper-bundle.min.js"></script>
+<script src="/static/eng/js/common.js"></script>
+</body>
+</html>

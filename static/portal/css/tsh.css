@@ -32,6 +32,11 @@ color: #3B63C4;
 position: relative;
 margin-top: -36px;
 }
+@media (max-width: 749px) {
+.tsh-wrap {
+margin-top: -20px;
+}
+}
 @media (max-width: 1199px) {
 .tsh-wrap form {
 display: flex;
@@ -274,11 +279,12 @@ background-color: #CBDEF6;
 .tsh-wrap .tsh::before {
 content: "";
 display: inline-block;
-width: 20000px;
+width: 100vw;
 height: 100%;
 position: absolute;
 top: 0;
-left: -50%;
+left: 50%;
+transform: translateX(-50%);
 background-color: #CBDEF6;
 z-index: -1;
 }
@@ -395,10 +401,11 @@ border: 1px solid #E6E6E6;
 }
 .tsh-wrap .tsh .input-set .keyword-set .keyword .twitter-typeahead .tt-menu .tt-suggestion {
 cursor: pointer;
+padding: 4px 0;
 }
 @media (min-width: 1200px) {
 .tsh-wrap .tsh .input-set .keyword-set .keyword .twitter-typeahead .tt-menu .tt-suggestion:hover {
-background-color: #ebf3eb;
+background-color: #ebf3f7;
 }
 }
 .tsh-wrap .tsh .input-set .keyword-set .keyword .twitter-typeahead .tt-menu .tt-hightlight {
@@ -727,7 +734,8 @@ width: 240px;
 margin-right: 36px;
 }
 .tsh-wrap .tsh-main .search-side .label-list label {
-display: block;
+display: flex;
+align-items: flex-start;
 margin-left: 0;
 font-size: 1.125rem;
 padding: 15px 0;
@@ -951,7 +959,8 @@ margin-top: 15px;
 }
 .tsh-wrap .tsh-main .search-main .sh-list li .keyword span {
 display: inline-block;
-margin-right: 8px;
+margin-right: 4px;
+margin-bottom: 4px;
 color: #666;
 font-size: 14px;
 display: inline-block;
@@ -973,4 +982,4 @@ color: #005596;
 background-color: transparent !important;
 color: #449ee3 !important;
 }
-/*# sourceMappingURL=../maps/tsh.css.map */
+/*# sourceMappingURL=../external/staticportal/maps/tsh.css.map */

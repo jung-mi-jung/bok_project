@@ -6,13 +6,52 @@
 
 $tsh-height : 56px;
 $tsh-m-height : 32px;
+$color-point: #005596;
 
 .tsh-wrap {
 	position: relative;
-	margin-top: -36px;
-	@include breakpoint($smd){
-		margin-top: 0;
-	}	
+	margin-top: -30px;
+	// @include breakpoint($smd){
+	// 	margin-top: 0;
+	// }	
+	form {
+		@include breakpoint($smd){
+			display: flex;
+			flex-direction: column;
+		}	
+	}
+	.hgroup {
+		position: relative;
+		display: block !important;
+		background-color: #CBDEF6;
+		padding: 50px 0 8px;
+		margin-bottom: 0;
+		@include breakpoint($smd) {
+			padding: 30px 0 16px;
+		}
+		&::before {
+			content: "";
+			display: inline-block;
+			width: 100vw;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			background-color: #CBDEF6;
+			z-index: -1;
+		}
+		h1 {
+			color: #1a1a1a;
+			font-size: 32px;
+			font-weight: 600;
+			// margin-bottom: 8px;
+			@include breakpoint($smd) {
+				font-size: 24px;
+				text-align: center;
+			}
+		}
+	}
 	.best-tsh {
 		margin-bottom: 10px;
 		@include breakpoint($lg){
@@ -21,7 +60,37 @@ $tsh-m-height : 32px;
 			right: 0;
 			z-index: 9;
 			width: 280px;
-		}				
+		}	
+		@include breakpoint($smd){ 
+			position: relative;
+			background-color: #CBDEF6;
+			order: 1;
+			margin-bottom: 0;
+			padding-bottom: 10px;
+			&::before {
+				content: "";
+				display: inline-block;
+				width: 100vw;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 50%;
+				transform: translateX(-50%);
+				background-color: #CBDEF6;
+				z-index: -1;
+			}
+			&::after {
+				content: "";
+				position: absolute;
+				display: block;
+				left: 50%;
+				bottom: 0;
+				width: 100vw;
+				height: 2px;
+				transform: translateX(-50%);
+				background-color: #000e33;
+			}
+		}			
 		.best-txt {
 			display: flex;
 			justify-content: space-between;
@@ -93,6 +162,8 @@ $tsh-m-height : 32px;
 					display: block;
 					padding: 2px 0;
 					color: #4D4D4D;
+					@include ellipsis;
+					width: 100%;
 					span {
 						font-size: 14px;
 						color: #fff;
@@ -142,7 +213,7 @@ $tsh-m-height : 32px;
 			}
 			a {				
 				//line-height: 40px;
-				padding: 8px 10px;
+				padding: 8px 30px 8px 10px;
 			}
 			
 		}	
@@ -158,40 +229,44 @@ $tsh-m-height : 32px;
 			left: 0;
 			width: 100%;
 			background-color: #fff;
+			@include breakpoint($smd) {
+				top: inherit;
+			}
 			
 		}
 	}
 	.tsh {
 		position: relative;
-		padding: 50px 0;
+		padding: 0 0 50px;
 		margin-bottom: 15px;
 		background-color: #CBDEF6;
 		&::before {
 			content: "";
 			display: inline-block;
-			width: 20000px;
+			width: 100vw;
 			height: 100%;
 			position: absolute;
 			top: 0;
-			left: -50%;
+			left: 50%;
+			transform: translateX(-50%);
 			background-color: #CBDEF6;
 			z-index: -1;
-		}
-		@include breakpoint($mdw){
-			padding: 45px 20px 20px;
-		}
-		@include breakpoint($sm){
-			padding: 36px 10px 10px;
-		}
-		.hgroup {
-			display: block !important;
-			h1 {
-				color: $black;
-				font-size: rem(32);
-				font-weight: 600;
-				margin-bottom: 8px;
+			@include breakpoint($smd){ 
+				background-color: #f2f6fa;
 			}
 		}
+		// @include breakpoint($mdw){
+		// 	padding: 45px 20px 20px;
+		// }
+		@include breakpoint($smd){ 
+			padding: 8px 0 12px;
+			order: 2;
+			background-color: #f2f6fa;
+		}	
+		// @include breakpoint($sm){
+		// 	padding: 36px 10px 10px;
+		// }
+		
 		> div {
 		// width: 884px;
 		// max-width: 100%;
@@ -204,6 +279,7 @@ $tsh-m-height : 32px;
 			& + i {
 				width: 18px;
 				height: 18px;
+				// margin-left: -18px;
 			}
 		}
 		input[type=radio] {				
@@ -225,8 +301,10 @@ $tsh-m-height : 32px;
 				}
 			}
 		}
-		input[type=checkbox] {				
+		input[type=checkbox] {		
+			position: relative;		
 			& + i {
+				position: relative;
 				margin-left: -17px;
 				& + span {
 					margin-right: 10px;
@@ -240,8 +318,9 @@ $tsh-m-height : 32px;
 						color: $point;
 					}
 					&:after {
-						top: 1px;
-						left: 3px;
+						top: 50%;;
+						left: 50%;
+						transform: translate(-50%, -50%);
 					}
 				}
 			}
@@ -249,6 +328,9 @@ $tsh-m-height : 32px;
 		 .input-set {
 			position: relative;
 			display: flex;
+			@include breakpoint($smd) {
+				flex-wrap: wrap;
+			}
 			.keyword-set {
 				width: 624px;
 				height: $tsh-height;
@@ -257,9 +339,15 @@ $tsh-m-height : 32px;
 				align-items: center;
 				background-color: #fff;
 				border-radius: 4px;
-				@include breakpoint($sm){
-					max-width: calc(100% - 100px);
+				@include breakpoint($smd) {
+					order: 2;
+					width: 100%;
+					height: 48px;
+					max-width: calc(100% - 113px);
 				}
+				// @include breakpoint($sm){
+				// 	max-width: calc(100% - 100px);
+				// }
 				.keyword {
 					width: calc(100% - 66px);
 					@include breakpoint($sm){
@@ -270,9 +358,9 @@ $tsh-m-height : 32px;
 						border: 0;
 						height: $tsh-height;
 						padding: 0 24px;
-						@include breakpoint($sm){
+						@include breakpoint($smd){ 
 							padding: 5px 15px;
-							height: 40px;
+							height: 48px;
 						}
 					}
 					.twitter-typeahead {
@@ -287,8 +375,17 @@ $tsh-m-height : 32px;
 								font-size: 16px;
 								border: 1px solid $bd-color;
 							}
-							.tt-suggestion:hover {
+							.tt-suggestion {
 								cursor: pointer;
+								padding: 4px 0;
+								&:hover {
+									@include breakpoint($lg) {
+										background-color: #ebf3f7;
+									}
+								}
+							}
+							.tt-hightlight {
+								color: #005596;
 							}
 						}
 					}
@@ -309,6 +406,9 @@ $tsh-m-height : 32px;
 				}
 			}
 			.detailSearchClose {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
 				text-align: center;
 				width: 111px;
 				background: #fff;
@@ -316,37 +416,47 @@ $tsh-m-height : 32px;
 				height: $tsh-height;
 				line-height: $tsh-height;
 				margin-left: 2px;
+				color: #005596;
+				border: 1px solid #005596;
+				@include breakpoint($smd){
+					order: 2;
+					height: 48px;
+					font-size: 16px;
+				}
 				@include breakpoint($sm){
 					width: 100px;
-					line-height: 40px;
 				}
 				&::before {
 					@include font-ico-outline('\e429');
 					font-size: 20px;
 					margin-right: 6px;
-					//color: #fff;
+					color: #005596;
 				}
 				&.active {
 					line-height: 54px;
-					color: $color-point;
-					border: 1px solid $color-point;
-					@include breakpoint($sm){
-						line-height: 38px;
-					}
+					color: #fff;
+					background: #005596;
+					border: 0;
 					&::before {
-						color: $color-point;
+						color: #fff;
 					}
 				}
 			}
 			.etc {
 				margin-top: 15px;
 				padding-left: 10px;
-				// position: absolute;
-				// top: 16px;
-				// right: -156px;
 				@include breakpoint($smd){
-					// right: 0;
-					// top: -28px;
+					display: block;
+					width: 100%;
+					order: 1;
+					font-size: 14px;
+					padding-left: 0;
+					margin-top: 0;
+					margin-bottom: 8px;
+				}
+				label {
+					display: inline-flex;
+					align-items: center;
 				}
 			}
 		 }		
@@ -356,8 +466,8 @@ $tsh-m-height : 32px;
 			background-color: #fff;
 			border-radius: 4px;
 			padding: 12px 24px 32px;
-			@include breakpoint($sm){
-				padding: 0 10px 10px;
+			@include breakpoint($smd){
+				padding: 0 12px 30px;
 			}
 			&.active {
 				display: block;
@@ -377,7 +487,7 @@ $tsh-m-height : 32px;
 						width: 120px;
 						color: #808080;
 						@include breakpoint($smd){
-							margin-bottom: 3px;
+							margin-bottom: 8px;
 						}
 						&::before {
 							content: "";
@@ -402,6 +512,7 @@ $tsh-m-height : 32px;
 						width: calc(100% - 94px);
 						@include breakpoint($smd){
 							width: 100%;
+							gap: 4px 8px;
 						}
 						label {
 							margin-right: 8px;
@@ -412,23 +523,40 @@ $tsh-m-height : 32px;
 						.sh-input {
 							display: flex;
 							align-items: center;
-							@include breakpoint($smd){
+							// @include breakpoint($smd){
+							width: 100%;
+							margin-top: 5px;
+							.date-set {
 								display: flex;
-								width: 100%;
-								margin-top: 5px;
+								margin-top: 8px;
+								&::before{
+									content: "직접검색";
+									display: inline-block;
+									padding-right: 8px;
+									padding-top: 4px;
+								}
+							}
+							// }
+							@include breakpoint($sm) {
 								.date-set {
-									display: flex;
+									display: block;
+									width: 100%;
+									&::before{
+										display: block;
+										width: 100%;
+										padding-bottom: 8px;
+									}
 								}
 							}
 							label {
 								align-items: center;
 							}
 							input[type=text] {
-								width: 124px !important;
+								width: 130px !important;
 								height: 32px;
 								border: 1px solid #D9D9D9;
 								border-radius: 4px;
-								background: #fff url(/static/rmer/img/ico/ico-calender-g.png) calc(100% - 6px) center no-repeat;
+								background: #fff url(/static/portal/img/ico/ico-calender-g.png) calc(100% - 6px) center no-repeat;
 								padding: 0 30px 0 8px;
 							}
 						}
@@ -447,6 +575,10 @@ $tsh-m-height : 32px;
 					height: 32px;
 					line-height: 30px;
 					margin: 0 1px;
+					@include breakpoint($sm) {
+						min-width: 100px;
+
+					}
 					span {
 						vertical-align: middle;
 					}
@@ -488,6 +620,7 @@ $tsh-m-height : 32px;
 		position: relative;
 		display: flex;
 		justify-content: space-between;
+		order: 3;
 		@include breakpoint($lg){
 			&::before {			
 				content: "";
@@ -508,14 +641,18 @@ $tsh-m-height : 32px;
 				margin-right: 36px;
 				.label-list {
 					label {
-						display: block;
+						display: flex;
+						align-items: flex-start;
 						margin-left: 0;
 						font-size: rem(18);
 						padding: 15px 0;
 						border-bottom: 1px solid #E6E6E6;
+						input[type=checkbox] + i {
+							margin-left: -25px;
+						}
 						input[type=checkbox].checked + i::after, 
 						input[type=checkbox]:checked + i::after {
-							top: 17px;
+							top: 21px;
 						}
 					}
 				}
@@ -546,6 +683,9 @@ $tsh-m-height : 32px;
 			flex-direction: column;
 		}
 		.search-main {
+			@include breakpoint($smd) {
+				width: 100%;
+			}
 			@include breakpoint($lg){
 				width: calc(100% - 240px - 36px - 36px);
 			}			
@@ -559,6 +699,7 @@ $tsh-m-height : 32px;
 					display: block;
 				}
 				p {
+					margin-bottom: 0 !important;
 					&::before {
 						@include font-ico-outline("\e8b6");
 						font-size: 22px;
@@ -593,9 +734,17 @@ $tsh-m-height : 32px;
 							color: #fff; 
 							margin-right: 8px;
 							margin-bottom: 2px;
+							@include breakpoint($sm) {
+								margin-right: 0;
+							}
 						}
 						&:focus {
 							@include focus();
+						}
+						span {
+							@include breakpoint($sm) {
+								display: none;
+							}
 						}
 					}
 				}				
@@ -655,6 +804,9 @@ $tsh-m-height : 32px;
 						margin-top: 15px;
 						//margin: 15px 0;
 						span {
+							display: inline-block;
+							margin-right: 4px;
+							margin-bottom: 4px;
 							color: #666;
 							font-size: 14px;
 							display: inline-block;
@@ -664,10 +816,14 @@ $tsh-m-height : 32px;
 						}
 					}
 					.link {
+						display: block;
 						margin-top: 12px;
 						color: $color-point;
 						font-size: 14px;
 						text-decoration: underline;
+						a {
+							color: $color-point;
+						}
 					}
 				}
 			}
@@ -675,6 +831,6 @@ $tsh-m-height : 32px;
 	}
 	mark {
 		background-color: transparent !important;
-		color: #449ee3;
+		color: #449ee3 !important;
 	}
 }

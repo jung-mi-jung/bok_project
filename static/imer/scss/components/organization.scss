@@ -229,6 +229,7 @@
 		// width: 25%;
 		max-width: 402px;
 		box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0);
+		cursor: pointer;
 		.left {
 			margin-right: 7%;
 		}
@@ -367,11 +368,17 @@
 		align-items: center;
 		justify-content: center;
 		gap: 0 4px;
+		input {
+			width: calc(100% - 60px - 4px);
+		}
 		button {
 			height: 40px;
 			font-size: rem(16);
 			background: #131547;
 			color: #fff;
+			@include breakpoint($sm) {
+				min-width: 60px;
+			}
 		}
 	}
 	.result {

@@ -33,6 +33,9 @@
 				font-size: rem(24);
 				padding-bottom: 18px;
 			}
+			@include breakpoint($sm){
+				text-align: left;
+			}
 		}
 	}
 }
@@ -44,6 +47,7 @@
 	// }
 	#main-container {
 		width: 100%;
+		//padding: 0;
 	}
 }
 
@@ -55,13 +59,25 @@
 		background-position: 50%;
 		background-repeat: no-repeat;
 	}
+	@include breakpoint($mdw){
+		margin-left: -20px;
+		margin-right: -20px;
+	}
 	@include breakpoint($sm){
-		padding: 30px 0 ;
+		padding: 30px 0;
+		margin: 0 -10px;	
+		#areaSeCd {
+			width: 100%;	//본부선택
+			margin-bottom: 5px;
+		}		
 	}
 	.container {
 		padding: 0 10px;
 		margin-left: 0;
 		margin-right: 0;
+		@include breakpoint($mdw){
+			padding: 0 20px;
+		}
 		@include breakpoint($lg){
 			display: flex;
 			justify-content: space-between;					
@@ -71,17 +87,18 @@
 			margin-left: auto;
 			margin-right: auto;	
 		}	
-		.map_img {
-			position: relative;
-			display: flex;
-			justify-content: flex-start;
-			//align-items: top;
+		.map_img {	
 			@include breakpoint($lg){
 				width: calc(100% - 35.6%);
 			}
-			@include breakpoint($sm){
-				display: block;
-				width: 100%;
+			> div {				
+				position: relative;
+				display: flex;
+				justify-content: flex-start;
+				@include breakpoint($sm){
+					display: block;
+					width: 100%;
+				}
 			}
 			.map_info {
 				h1 {
@@ -90,21 +107,67 @@
 					color: $point;
 					line-height: 1.1;
 					margin-bottom: 40px;
+					@include breakpoint($sm) {
+						font-size: rem(30);
+					}
 					strong {
 						font-size: rem(48);
 						font-weight: 700;
 						display: block;
+						@include breakpoint($sm) {
+							font-size: rem(40);
+						}
+					}
+				}
+				.map-button-set {
+					position: relative;
+					.mobile-map-button {
+						display: none;
+						@include breakpoint($sm) {
+							display: block;
+							position: relative;
+							border: 1px solid $bd-color;
+							border-radius: 4px;
+							background-color: #fff;
+							padding: 5px 15px;
+							width: 100%;
+							text-align: left;
+							margin-bottom: 30px;
+							&::after {
+								@include font-ico-outline('\e5c5');
+								position: absolute;
+								top: 50%;
+								margin-top: -10px;
+								right: 15px;
+								font-size: 20px;
+							}
+							& + .map-list {
+								@include breakpoint($sm) {
+									display: none;	
+								}
+							}
+							&.active {
+								& + .map-list {
+									display: block;
+									position: absolute;
+									top: 38px;
+									left: 0;
+									width: 100%;
+									background-color: #fff;
+									border: 1px solid $bd-color;
+									border-radius: 4px;
+									z-index: 99;
+								}
+							}
+						}
 					}
 				}
 				.swiper-wrapper {
 					display: flex;
 					flex-wrap: wrap;
 					flex-direction: column;
-
-					//max-height: 300px;
-    margin-left: auto;
-    margin-right: auto;
-
+					margin-left: auto;
+					margin-right: auto;
 					transform: translate3d(0px, 0px, 0px) !important;
 					a.swiper-slide-active {
 						span {
@@ -119,9 +182,7 @@
 								margin-bottom: 2px;
 							}
 						}
-						
 					}
-					
 				}
 				.map-list {
 					display: flex;
@@ -138,21 +199,31 @@
 							padding: 6px 12px;
 							margin: 1px 0;
 							text-align: left;
-						}
+							@include breakpoint($sm) {
+								padding: 1px 12px;
+								font-size: 16px;
+							}
+						}						
 						&.active {
 							span {
 								color: #fff;
 								background-color: $point;
 								border-radius: 30px;
+								@include breakpoint($sm) {
+									color: $color-point;
+									background-color: transparent;
+								}
 								&::after {
 									@include font-ico-outline('\e315');
 									font-size: 18px;
 									color: #fff;
 									margin-left: 8px;
 									margin-bottom: 2px;
+									@include breakpoint($sm) {
+										display: none;
+									}
 								}
 							}
-							
 						}
 					}
 				}
@@ -181,6 +252,13 @@
 					.cls-3 {
 						stroke-width:2px;
 					}
+					/* 라인 없는 지역 */
+					.cls-3.map3,
+					.cls-3.map13,
+					.cls-3.map15 {
+						stroke-width: 0 !important;
+						fill: transparent;
+					}
 					.cls-2,
 					.cls-3,
 					.cls-4 {
@@ -193,7 +271,7 @@
 					}
 					.cls-4 {
 						stroke-width:1.64px;
-					}
+					}					
 					.it {
 						&.active {
 							.item {
@@ -203,12 +281,6 @@
 										box-shadow: 0 4px 4px #000;
 								-webkit-filter: url(#shadow);
 										filter: url(#shadow);
-							}
-							circle {
-								fill: #FF327C;
-								stroke: rgba(255, 50, 124, 0.3);
-								stroke-width: 15;
-								filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.25));
 							}
 						}
 					}
@@ -243,7 +315,7 @@
 								}
 							}
 							path {
-								position: relative;
+								//position: relative;
 								outline: none;
 								stroke-width: 2;
 								&.active {
@@ -276,8 +348,68 @@
 						-webkit-filter: url(#txtshadow);
 								filter: url(#txtshadow);
 					}
+					//인천, 목포 특정지역 추가 시작
+					.it {
+						.item.on {
+							display: none;
+						}
+						.cls-3.map3_on {
+							display: none;
+						}
+						&.active {
+							.item.on {
+								display: block;
+							}
+							.item.off {
+								stroke: #449EE3;
+								fill: #D9E5F3;
+							}
+							.cls-1 {
+								fill: #005596;
+								stroke: #005596;
+							}
+							.map3_on {
+								display: block;
+							}
+						}
+						// &.map3.active {
+						// 	a {
+						// 		position: relative;
+						// 		&::before {
+						// 			content: "";
+						// 			display: inline-block;
+						// 			width: 200px;
+						// 			height: 200px;
+						// 			background: url(/static/portal/img/submain/img_map3.png);
+						// 			position: absolute;
+						// 			top: 0;
+						// 			left: 0;
+						// 			z-index: 9;
+						// 		}
+						// 	}							
+						// }	
+					}
+					// .svg-map {
+					// 	g.item {
+					// 		position: relative;
+					// 		z-index: 1;
+					// 		&.active {
+					// 			z-index: 99;
+					// 		}
+					// 		&.map3 {
+					// 			z-index: 999;
+					// 		}
+					// 	}
+					// }
+					.cls-3.map3_on,
+					.cls-3.map9_on {
+						display: none;
+						fill: #005596;
+						stroke: #005596;
+					}	
+					//인천, 목포 특정지역 추가 끝
 				}
-				.con_set {					
+				.con_set {
 					.con {
 						display: none;
 						position: absolute;
@@ -291,7 +423,8 @@
 						box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
 						margin-top: -160px;
 						@include breakpoint($sm){
-							top: 0;
+							top: auto;
+							bottom: -6px;
 							left: 10px;
 							width: calc(100% - 20px);
 						}
@@ -357,7 +490,7 @@
 						}
 					}			
 				}
-			}
+			}			
 		}
 		.notice-set-style {
 			margin-top: 30px;
@@ -371,6 +504,10 @@
 					button {
 						color: #808080;
 						font-size: rem(20);
+						white-space: nowrap;
+						@include breakpoint($sm) {
+							font-size: rem(18) !important;
+						}
 						&[aria-selected='true'] {
 							color: $black;
 							font-size: rem(24);
@@ -387,6 +524,10 @@
 								margin: 0 10px;
 							}
 						}
+					}
+					@include breakpoint($sm) {
+						width: calc(100% - 55px);
+						overflow-x: auto;
 					}
 				}
 				ul {
@@ -453,10 +594,7 @@
 		margin-top: 0 !important;
 	}
 	.container {
-		@include breakpoint($smd){
-			padding-left: 10px;
-			padding-right: 10px;
-		}
+	
 	}
 	.zone_main {
 		border-top: 1px solid #E6E6E6;		
@@ -468,10 +606,19 @@
 			background-image: url(/static/portal/img/submain/bg_zone.png);
 			background-position: 50% 0;
 			background-repeat: no-repeat;
+			@include breakpoint($mdw){
+				margin-left: -20px;
+				margin-right: -20px;
+				padding-left: 20px;
+				padding-right: 20px;
+			}
 			@include breakpoint($sm){
-				padding-top: 20px;
-				padding-bottom: 50px;
+				//padding-top: 20px;
+				//padding-bottom: 50px;
+				padding: 20px 10px 30px;
 				margin-bottom: 30px;
+				margin-left: -10px;
+				margin-right: -10px;
 			}			
 			.container {
 				@include breakpoint($lg){
@@ -486,6 +633,9 @@
 				display: flex;
 				justify-content: space-between;
 				align-items: flex-end;
+				@include breakpoint($sm) {
+					align-items: normal; 
+				}
 				h2 {
 					margin-bottom: 0 !important;
 					> * {
@@ -500,22 +650,28 @@
 						font-weight: 500;
 						color: $point;
 						font-size: rem(36);
+						@include breakpoint($sm) {
+							font-size: rem(30);
+						}
 					}
 				}
 				.button_link {
 					position: relative;
+					@include breakpoint($sm) {
+						margin-top: 37px;
+					}
 					button {
 						text-align: left;
 						width: 222px;
 						border-radius: 4px;
 						padding: 7px 15px;
-						//padding: 5px 30px 5px 5px;
 						display: block;
 						background: #fff;
 						font-size: 16px;
 						border: 1px solid #D8E0E8;
 						@include breakpoint($sm){
-							width: 180px;
+							width: 170px;
+							padding: 5px 10px;
 						}
 						&::after {
 							color: #1C1B1F;
@@ -536,6 +692,9 @@
 						border: 1px solid #D8E0E8;
 						border-radius: 4px;
 						padding: 5px 0;
+						@include breakpoint($sm) {
+							top: 35px;
+						}
 						&.active {
 							display: block;
 						}
@@ -664,18 +823,36 @@
 				margin-bottom: 65px;
 				@include breakpoint($sm){
 					margin-bottom: 30px;
+					overflow-x: auto;
+					width: 100%; 
 				}
 				ul {		
 					display: flex;
 					justify-content: space-between;
 					padding: 0;
-					//flex-wrap: wrap;
 					@include breakpoint($sm){
-						justify-content: flex-start;
+						//justify-content: flex-start;
+						width: max-content;
 					}
 					li {
 						@include breakpoint($sm){
-							width: 33.3%;
+							& + li {
+								position: relative;
+								padding-left: 15px;
+								margin-left: 15px;
+								&::after {
+									content: "";
+									display: inline-block;
+									vertical-align: middle;
+									width: 1px;
+									height: 16px;
+									background-color: #B1C1E7;
+									position: absolute;
+									top: 50%;
+									left: 0;
+									margin-top: -8px;
+								}
+							}
 						}
 						a {
 							position: relative;
@@ -687,6 +864,9 @@
 							font-size: rem(18);
 							letter-spacing: -1.2px;
 							white-space: nowrap;
+							@include breakpoint($sm) {
+								padding: 0 !important;
+							}
 							&::after {
 								content: "";
 								display: inline-block;
@@ -697,15 +877,14 @@
 								top: 50%;
 								right: 0;
 								margin-top: -8px;
-								// @include font-ico("\e315");
-								// font-size: 20px;
-								// vertical-align: text-top;
-								// color: #bdbcbc;
+								margin-left: 10px;
+								@include breakpoint($sm) {
+									display: none;
+								}
 							}
 							&:hover {
 								font-weight: 500;
 								color: #005596;
-								//text-decoration: underline;
 							}
 						}
 						&:last-child {
@@ -774,6 +953,7 @@
 							background-color: $point;
 							@include breakpoint($sm){
 								padding: 2px;
+								font-size: 15px;
 							}
 							&::before {
 								content: "";
@@ -784,6 +964,9 @@
 								background-position: 50%;
 								background-repeat: no-repeat;
 								margin-right: 8px;
+								@include breakpoint($sm){
+									width: 100%;
+								}
 							}
 							&.ico1 {
 								&::before {
@@ -831,11 +1014,15 @@
 				font-size: rem(20) !important;
 				font-weight: 500;
 				border-bottom: 2px solid $black;
-				padding-bottom: 10px;
+				padding-bottom: 10px;	
+				text-align: left !important;			
 				margin-bottom: 0 !important;
 				@include breakpoint($lg){
 					font-size: rem(28) !important;
 					padding-bottom: 18px;
+				}
+				@include breakpoint($sm) {					
+					margin-bottom: 10px !important;
 				}
 			}
 			ul {
@@ -853,8 +1040,17 @@
 							font-size: rem(18);
 							font-weight: 500;
 							@include ellipsis();
+							@include breakpoint($sm) {
+								font-size: 16px;
+							}
 							& + .date {
 								margin-top: 6px;
+							}
+							> * {
+								display: inline-block;
+							}
+							.ti-announcement {
+								margin-right: 0;
 							}
 						}
 						&.txt {
@@ -863,7 +1059,8 @@
 							height: 48px;
 							margin-top: 6px;
 							@include breakpoint($sm){
-								height: 42px;
+								height: auto;
+								max-height: 42px;
 								font-size: 14px;
 							}
 						}
@@ -976,6 +1173,11 @@
 			top: -50px;
 			right: 0;
 			z-index: 9;
+			@include breakpoint($sm){
+				top: -40px;
+				left: 0;
+				right: auto;
+			}
 			&::before {
 				@include font-ico-outline('\e5cd');
 				font-size: 18px;
@@ -1017,6 +1219,7 @@
 	@include breakpoint($sm){
 		margin: 20px 0 20px;
 		text-align: left;
+		padding: 20px 0;
 	}
 	h2 {
 		@include hide();
@@ -1046,7 +1249,7 @@
 			margin-bottom: 15px;			
 			@include breakpoint($sm){
 				text-align: center;
-				font-size: rem(34);
+				font-size: rem(26);
 			}
 			strong {			
 				font-weight: 700;				
@@ -1058,6 +1261,14 @@
 		em {
 			color: #1A1A1A;
 			font-weight: 500;
+		}
+		&.help3 {
+			font-size: 16px;
+			[class^=b-].b-go {
+				background-color: #1A1A1A;
+				font-size: 14px;
+				padding: 3px 10px;
+			}
 		}
 	}
 }
@@ -1092,7 +1303,11 @@
 					border-radius: 50%;
 					background-position: 50%;
 					background-repeat: no-repeat;
-					//margin-right: 24px;
+					@include breakpoint($sm){
+						width: 75px;
+						height: 75px;
+						background-size: 50%;
+					}
 					&.ico1 {
 						background-image: url(/static/portal/img/submain/ico_1_1.png);
 					}
@@ -1140,7 +1355,7 @@
 				.set {
 					width: calc(100% - 124px);
 					@include breakpoint($sm){
-						width: calc(100% - 114px);
+						width: calc(100% - 90px);
 					}
 					strong {
 						display: block;
@@ -1293,7 +1508,6 @@
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
-		
 		li {
 			width: calc(25% - 30px);
 			text-align: center;
@@ -1301,8 +1515,6 @@
 				width: calc(50% - 15px);
 				margin-top: 20px;
 			}
-			
-			
 			> * {
 				display: block;
 			}
@@ -1315,6 +1527,11 @@
 				border-radius: 50%;
 				background-repeat: no-repeat;
 				background-position: 50%;
+				@include breakpoint($sm){
+					width: 100px;
+					height: 100px;
+					background-size: 50%;
+				}
 				&.ico1 {
 					background-image: url(/static/portal/img/submain/ico_3_1.png);
 				}
@@ -1353,6 +1570,9 @@
 			width: calc(50% - 12px);
 		}
 	}
+	@include breakpoint($sm){
+		margin-bottom: 50px;
+	}
 	.skip_link2 {
 		display: flex;
 		flex-wrap: wrap;
@@ -1370,6 +1590,9 @@
 				color: #143D66;
 				border-radius: 8px;
 				border: 1px solid #E6E6E6;
+				@include breakpoint($sm){
+					padding: 10px;
+				}
 				strong {
 					display: block;
 					font-size: rem(18);
@@ -1580,6 +1803,10 @@
 				border: 1px solid #C2C2C2;
 				border-radius: 6px;
 				background-color: #fff;
+				@include breakpoint($sm){
+					font-size: 16px;
+					padding: 5px 6px;
+				}
 				&[aria-selected="true"] {
 					color: #fff;
 					background-color: $color-point;
@@ -1628,7 +1855,9 @@
 							width: 100%;
 							padding-top: 56.2%;
 							margin-bottom: 10px;
-						}
+						}					
+					}
+					.media { //이미지, 미디어 분리
 						&::before {
 							content: "";
 							display: inline-block;
@@ -1705,9 +1934,6 @@
 							border-radius: 3px;
 							padding: 3px 8px;
 						}
-						.title {
-							
-						}
 					}									
 				}
 			}
@@ -1719,6 +1945,9 @@
 		}
 		@include more();
 		top: -77px;
+		@include breakpoint($sm){
+			top: -43px;
+		}
 	}
 }
 //국고채권 발행 및 환매, 경제교육
@@ -1756,6 +1985,11 @@
 					border-radius: 50%;
 					background-repeat: no-repeat;
 					background-position: 50%;
+					@include breakpoint($sm){
+						width: 100px;
+						height: 100px;
+						background-size: 50%;
+					}
 					&.ico1 {
 						background-image: url(/static/portal/img/submain/ico_5_1.png);
 					}
@@ -1803,6 +2037,7 @@
 				margin: 0 auto;
 			}
 			li {
+				width: calc(20% - 40px);
 				@include breakpoint($mdw){
 					width: calc(50% - 10px);
 				}
@@ -1822,8 +2057,13 @@
 					}
 				}
 				.txt {
-					height: 140px;
+					//height: 140px;
+					height: 196px;
 					margin-top: 16px;
+					@include breakpoint($sm){
+						height: auto;
+						padding-bottom: 30px;
+					}
 				}
 			}
 		}		
@@ -2201,7 +2441,7 @@
 					margin: 0 -2px;
 				}
 				a {
-					font-size: rem(16);
+					font-size: 16px;
 					display: inline-block;
 					color: #666;
 					border: 1px solid #C2C2C2;
@@ -2248,6 +2488,7 @@
 				a {
 					display: flex;
 					justify-content: space-between;
+					align-items: center;
 					padding: 18px 0;
 					@include breakpoint($sm){
 						padding: 10px 0;
@@ -2352,26 +2593,26 @@
 	&.type2 {
 		li {
 			width: calc(25% - 15px);
-			@include breakpoint($smd){
+			@include breakpoint($mdw){
 				width: calc(50% - 5px);
 				margin: 5px 0;
 			}
-			@include breakpoint($xs){
+			@include breakpoint($sm){
 				width: 100%;
 				margin: 5px 0;
 			}
 			a {	
 				&.ico5 {
-					background: url(/static/portal/img/submain/img_bank1.png) no-repeat;
+					background: #bee0ff url(/static/portal/img/submain/img_bank1.png) no-repeat;
 				}
 				&.ico6 {
-					background: url(/static/portal/img/submain/img_bank2.png) no-repeat;
+					background: #d2f4cf url(/static/portal/img/submain/img_bank2.png) no-repeat;
 				}
 				&.ico7 {
-					background: url(/static/portal/img/submain/img_bank3.png) no-repeat;
+					background: #ffe6fb url(/static/portal/img/submain/img_bank3.png) no-repeat;
 				}
 				&.ico8 {
-					background: url(/static/portal/img/submain/img_bank4.png) no-repeat;
+					background: #e5e8fd url(/static/portal/img/submain/img_bank4.png) no-repeat;
 				}
 			}
 		}
@@ -2476,5 +2717,20 @@
 				}
 			}
 		}
+	}
+}
+
+.map-help {
+	margin-top: 10px;
+	border: 1px solid #d0ddee;
+	border-radius: 8px;
+	padding: 10px;
+	background-color: #fff;
+	.help3 {
+		font-size: 16px;
+		margin: 0 !important;
+	}
+	@include breakpoint($lg){
+		margin-left: 190px;
 	}
 }

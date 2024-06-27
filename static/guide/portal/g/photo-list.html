@@ -267,263 +267,259 @@ function setDisplay(){    
 
 	<h2 class="sr-only">메뉴 선택 검색</h2>
 
-	<!-- 모바일용 -->
-	<button type="button" class="mobile-check-ctrl">유형 및 세부유형 선택</button>
-	<!-- //모바일용 -->
-
-	<div class="sh-db-box">
-		<!-- 유형 -->
-		<div class="check-list">
-			<h3>유형</h3>
-			<!-- 삭제 <button type="button" class="check-ctrl ">유형 선택</button> -->
-			<div class="label-list">
-				<label>
-					<input type="checkbox" name="" id="m-01">
-					<i></i>
-					<span>동영상</span>
-				</label>
-				<label>
-					<input type="checkbox" name="" id="m-02">
-					<i></i>
-					<span>카드뉴스</span>
-				</label>
-				<label>
-					<input type="checkbox" name="" id="m-03">
-					<i></i>
-					<span>웹툰</span>
-				</label>
-			</div>
+	<!-- 유형 -->
+	<div class="check-list">
+		<h3>유형</h3>
+		<button type="button" class="check-ctrl ">유형 선택</button>
+		<div class="label-list">
+			<label>
+				<input type="checkbox" name="" id="m-01">
+				<i></i>
+				<span>동영상</span>
+			</label>
+			<label>
+				<input type="checkbox" name="" id="m-02">
+				<i></i>
+				<span>카드뉴스</span>
+			</label>
+			<label>
+				<input type="checkbox" name="" id="m-03">
+				<i></i>
+				<span>웹툰</span>
+			</label>
 		</div>
-		<!-- //유형 -->
-		<div class="check-list details"> <!-- style="display: none;"-->
-			<h3>세부유형</h3>
-			<!-- 삭제 <button type="button" class="check-ctrl">분류 선택</button> -->
-			<div class="details-list">
-				<!-- 동영상 -->
-				<h4 class="sr-only">동영상</h4>
-				<div class="depth3 m-01">
-					<ul>
-						<li>
-							<label for="depth3_1">
-								<input type="radio" name="ck_depth3" id="depth3_1" onchange="setDisplay()">
-								<i></i>
-								<span>총재기자간담회</span>
-							</label>
-							<div class="depth4 depth4_1">
-								<ul class="sub-m">
-									<li>
-										<label for="depth4_1_1">
-											<input type="radio" name="depth4_1_01" id="depth4_1_1">
-											<i></i>
-											<span>통화정책</span>
-										</label>
-										<div class="depth5">
-											<ul>
-												<li>
-													<label for="">
-														<input type="radio" name="">
-														<i></i>
-														<span>뎁스5</span>
-													</label>
-												</li>
-											</ul>
-										</div>
-									</li>
-									<li>
-										<label for="depth4_1_2">
-											<input type="radio" name="depth4_1_01" id="depth4_1_2">
-											<i></i>
-											<span>뎁스4</span>
-										</label>
-									</li>
-								</ul>
-								<button type="button" class="btn-view" title="4뎁스 전체보기">전체보기</button>
-							</div>
-						</li>
-						<li>
-							<label for="depth3_2">
-								<input type="radio" name="ck_depth3" id="depth3_2" onchange="setDisplay()">
-								<i></i>
-								<span>보도자료설명회</span>
-							</label>
-							<div class="depth4 depth4_2">
-								<ul class="sub-m">
-									<li>
-										<label for="depth4_2_1">
-											<input type="radio" name="" id="depth4_2_1">
-											<i></i>
-											<span>통계</span>
-										</label>
-									</li>
-								</ul>
-							</div>
-						</li>
-						<li>
-							<label for="depth3_3">
-								<input type="radio" name="ck_depth3" id="depth3_3" onchange="setDisplay()">
-								<i></i>
-								<span>주요 행사 및 강연</span>
-							</label>
-						</li>
-						<li>
-							<label for="depth3_4">
-								<input type="radio" name="ck_depth3" id="depth3_4" onchange="setDisplay()">
-								<i></i>
-								<span>홍보기획영상</span>
-							</label>
-						</li>
-						<li>
-							<label for="depth3_5">
-								<input type="radio" name="ck_depth3" id="depth3_5" onchange="setDisplay()">
-								<i></i>
-								<span>경제교육</span>
-							</label>
-							<div class="depth4 depth4_3">
-								<ul class="sub-m">
-									<li>
-										<label for="">
-											<input type="radio" name="">
-											<i></i>
-											<span>어린이</span>
-										</label>
-									</li>
-									<li>
-										<label for="">
-											<input type="radio" name="">
-											<i></i>
-											<span>청소년</span>
-										</label>
-									</li>
-									<li>
-										<label for="">
-											<input type="radio" name="">
-											<i></i>
-											<span>교사</span>
-										</label>
-									</li>
-									<li>
-										<label for="">
-											<input type="radio" name="">
-											<i></i>
-											<span>일반인</span>
-										</label>
-									</li>
-									<li>
-										<label for="">
-											<input type="radio" name="">
-											<i></i>
-											<span>금요강좌</span>
-										</label>
-										<div class="depth5">
-											<ul>
-												<li>
-													<label for="">
-														<input type="radio" name="">
-														<i></i>
-														<span>뎁스5-1</span>
-													</label>
-												</li>
-												<li>
-													<label for="">
-														<input type="radio" name="">
-														<i></i>
-														<span>뎁스5-2</span>
-													</label>
-												</li>
-											</ul>
-										</div>
-									</li>
-								</ul>
-							</div>
-						</li>
-						<li>
-							<label for="depth3_6">
-								<input type="radio" name="ck_depth3" id="depth3_6" onchange="setDisplay()">
-								<i></i>
-								<span>공모 수상작</span>
-							</label>
-							<div class="depth4 depth4_4">
-								<ul class="sub-m">
-									<li>
-										<label for="">
-											<input type="radio" name="">
-											<i></i>
-											<span>화폐사랑 콘텐츠(동영상)</span>
-										</label>
-									</li>
-									<li>
-										<label for="">
-											<input type="radio" name="">
-											<i></i>
-											<span>통화정책 경시대회</span>
-										</label>
-									</li>
-								</ul>
-							</div>
-						</li>
-						<li>
-							<label for="depth3_7">
-								<input type="radio" name="ck_depth3" id="depth3_7" onchange="setDisplay()">
-								<i></i>
-								<span>외환신고안내</span>
-							</label>
-						</li>
-					</ul>
-					<button type="button" class="btn-view">전체보기</button>
-				</div>
-				<!-- //동영상 -->
-				<!-- 카드뉴스 -->
-				<h4 class="sr-only">카드뉴스</h4>
-				<div class="depth3 m-02">
-					<ul>
-						<li>
-							<label for="">
-								<input type="radio" name="">
-								<i></i>
-								<span>인포그래픽</span>
-							</label>
-						</li>
-						<li>
-							<label for="">
-								<input type="radio" name="">
-								<i></i>
-								<span>화폐홍보</span>
-							</label>
-						</li>
-						<li>
-							<label for="">
-								<input type="radio" name="">
-								<i></i>
-								<span>경제교육</span>
-							</label>
-						</li>
-						<li>
-							<label for="">
-								<input type="radio" name="">
-								<i></i>
-								<span>공모 수상작</span>
-							</label>
-						</li>
-					</ul>
-					<button type="button" class="btn-view">전체보기</button>
-				</div>
-				<!-- //카드뉴스 -->
-				<!-- 웹툰 -->
-				<h4 class="sr-only">웹툰</h4>
-				<div class="depth3 m-03">
-					<ul>
-						<li>
-							<label for="">
-								<input type="radio" name="">
-								<i></i>
-								<span>경제교육웹툰</span>
-							</label>
-						</li>
-					</ul>
-					<button type="button" class="btn-view">전체보기</button>
-				</div>
-				<!-- //웹툰 -->
+	</div>
+	<!-- //유형 -->
+	<div class="check-list details"> <!-- style="display: none;"-->
+		<h3>세부유형</h3>
+		<button type="button" class="check-ctrl">분류 선택</button>
+		<div class="details-list">
+			<!-- 동영상 -->
+			<h4 class="sr-only">동영상</h4>
+			<div class="depth3 m-01">
+				<ul>
+					<li>
+						<label for="depth3_1">
+							<input type="radio" name="ck_depth3" id="depth3_1" onchange="setDisplay()">
+							<i></i>
+							<span>총재기자간담회</span>
+						</label>
+						<div class="depth4 depth4_1">
+							<ul class="sub-m">
+								<li>
+									<label for="depth4_1_1">
+										<input type="radio" name="depth4_1_01" id="depth4_1_1">
+										<i></i>
+										<span>통화정책</span>
+									</label>
+									<div class="depth5">
+										<ul>
+											<li>
+												<label for="">
+													<input type="radio" name="">
+													<i></i>
+													<span>뎁스5</span>
+												</label>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<label for="depth4_1_2">
+										<input type="radio" name="depth4_1_01" id="depth4_1_2">
+										<i></i>
+										<span>뎁스4</span>
+									</label>
+								</li>
+							</ul>
+							<button type="button" class="btn-view" title="4뎁스 전체보기">전체보기</button>
+						</div>
+					</li>
+					<li>
+						<label for="depth3_2">
+							<input type="radio" name="ck_depth3" id="depth3_2" onchange="setDisplay()">
+							<i></i>
+							<span>보도자료설명회</span>
+						</label>
+						<div class="depth4 depth4_2">
+							<ul class="sub-m">
+								<li>
+									<label for="depth4_2_1">
+										<input type="radio" name="" id="depth4_2_1">
+										<i></i>
+										<span>통계</span>
+									</label>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<label for="depth3_3">
+							<input type="radio" name="ck_depth3" id="depth3_3" onchange="setDisplay()">
+							<i></i>
+							<span>주요 행사 및 강연</span>
+						</label>
+					</li>
+					<li>
+						<label for="depth3_4">
+							<input type="radio" name="ck_depth3" id="depth3_4" onchange="setDisplay()">
+							<i></i>
+							<span>홍보기획영상</span>
+						</label>
+					</li>
+					<li>
+						<label for="depth3_5">
+							<input type="radio" name="ck_depth3" id="depth3_5" onchange="setDisplay()">
+							<i></i>
+							<span>경제교육</span>
+						</label>
+						<div class="depth4 depth4_3">
+							<ul class="sub-m">
+								<li>
+									<label for="">
+										<input type="radio" name="">
+										<i></i>
+										<span>어린이</span>
+									</label>
+								</li>
+								<li>
+									<label for="">
+										<input type="radio" name="">
+										<i></i>
+										<span>청소년</span>
+									</label>
+								</li>
+								<li>
+									<label for="">
+										<input type="radio" name="">
+										<i></i>
+										<span>교사</span>
+									</label>
+								</li>
+								<li>
+									<label for="">
+										<input type="radio" name="">
+										<i></i>
+										<span>일반인</span>
+									</label>
+								</li>
+								<li>
+									<label for="">
+										<input type="radio" name="">
+										<i></i>
+										<span>금요강좌</span>
+									</label>									
+									<div class="depth5">
+										<ul>
+											<li>
+												<label for="">
+													<input type="radio" name="">
+													<i></i>
+													<span>뎁스5-1</span>
+												</label>
+											</li>
+											<li>
+												<label for="">
+													<input type="radio" name="">
+													<i></i>
+													<span>뎁스5-2</span>
+												</label>
+											</li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<label for="depth3_6">
+							<input type="radio" name="ck_depth3" id="depth3_6" onchange="setDisplay()">
+							<i></i>
+							<span>공모 수상작</span>
+						</label>
+						<div class="depth4 depth4_4">
+							<ul class="sub-m">
+								<li>
+									<label for="">
+										<input type="radio" name="">
+										<i></i>
+										<span>화폐사랑 콘텐츠(동영상)</span>
+									</label>
+								</li>
+								<li>
+									<label for="">
+										<input type="radio" name="">
+										<i></i>
+										<span>통화정책 경시대회</span>
+									</label>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<label for="depth3_7">
+							<input type="radio" name="ck_depth3" id="depth3_7" onchange="setDisplay()">
+							<i></i>
+							<span>외환신고안내</span>
+						</label>
+					</li>
+				</ul>
+				<button type="button" class="btn-view">전체보기</button>
 			</div>
+			<!-- //동영상 -->
+
+			<!-- 카드뉴스 -->
+			<h4 class="sr-only">카드뉴스</h4>
+			<div class="depth3 m-02">
+				<ul>
+					<li>
+						<label for="">
+							<input type="radio" name="">
+							<i></i>
+							<span>인포그래픽</span>
+						</label>
+					</li>
+					<li>
+						<label for="">
+							<input type="radio" name="">
+							<i></i>
+							<span>화폐홍보</span>
+						</label>
+					</li>
+					<li>
+						<label for="">
+							<input type="radio" name="">
+							<i></i>
+							<span>경제교육</span>
+						</label>
+					</li>
+					<li>
+						<label for="">
+							<input type="radio" name="">
+							<i></i>
+							<span>공모 수상작</span>
+						</label>
+					</li>
+				</ul>
+				<button type="button" class="btn-view">전체보기</button>
+			</div>
+			<!-- //카드뉴스 -->
+
+			<!-- 웹툰 -->
+			<h4 class="sr-only">웹툰</h4>
+			<div class="depth3 m-03">
+				<ul>
+					<li>
+						<label for="">
+							<input type="radio" name="">
+							<i></i>
+							<span>경제교육웹툰</span>
+						</label>
+					</li>
+				</ul>
+				<button type="button" class="btn-view">전체보기</button>
+			</div>
+			<!-- //웹툰 -->
 		</div>
 	</div>
 

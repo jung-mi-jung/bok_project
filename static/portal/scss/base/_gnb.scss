@@ -30,12 +30,7 @@
 					&.on {
 						& + .depth2 {
 							display: flex;
-							// display: grid;
-							// grid-template-columns: auto 376px;
-							// gap: 0 10px;
-							//justify-content: space-between;
-							//background-color: rgba(19, 21, 71, 0.95); 변경전
-							//background-color: #fff; 임시주석
+							transition: all 1s;	//시간 추가							
 							&::before,
 							&::after {
 								content: "";
@@ -79,20 +74,26 @@
 						}
 					}
 				}
-				//17.6
-				//2.4
-				// 1번째 left: 12%;
-				// 2번재 left: 29.6%;
-				// 3번째 left: 47.2%;
-				// 4번재 left: 64.8%;
-				// 5번째 right: 0;
-				//gnb 개별 위치 지정
+				&:hover,
+				&.on {
+					> a {
+						color: $black !important;
+						span {
+							&::before {
+								background-color: #2373b0;
+							}
+						}
+					}
+				}
+				/*			
+				gnb 개별 위치 지정
 
-				//18
-				// 1번째 left: 10%;
-				// 2번재 left: 28%;
-				// 3번째 left: 46%;
-				// 4번재 left: 64%;
+				+ 18% 씩
+				1번째칸 left: 10%;
+				2번재칸 left: 28%;
+				3번째칸 left: 46%;
+				4번재칸 left: 64%;
+				*/
 				&.menu01 {
 					.depth2 {
 						height: 380px;
@@ -137,7 +138,7 @@
 				}
 				&.menu02 {
 					.depth2 {
-						height: 485px; 
+						height: 490px;
 						> ul {
 							> li {
 								//width: calc(17.6%);
@@ -149,40 +150,40 @@
 									top: 200px;
 									left: 10%;
 								}
-								&:nth-child(3) { /* 기후변화대응 */
+								&:nth-child(3) { /* 지급결제 */
 									top: 0;
 									left: 28%;
-								}
-								&:nth-child(4) { /* 화폐 */
-									top: 120px;
-									left: 28%;
-								}
-								&:nth-child(5) { /* 지급결제 */
-									top: 0;
-									left: 46%;
-								}
-								&:nth-child(6) { /* CBDC */
+								}	
+								&:nth-child(4) { /* CBDC */
 									top: 200px;
+									left: 28%;
+								}
+								&:nth-child(5) { /* 국고증권 */
+									top: 260px;
+									left: 28%;
+								}
+								&:nth-child(6) { /* 외환 */
+									top: 0;
 									left: 46%;
 								}
-								&:nth-child(7) { /* 국고증권 */
-									top: 255px;
-									left: 64%;
+								&:nth-child(7) { /* 국제협력 */
+									top: 228px;
+									left: 46%;
 								}
-								&:nth-child(8) { /* 외환 */
+								&:nth-child(8) { /* 화폐 */
 									top: 0;
 									left: 64%;
 								}
-								&:nth-child(9) { /* 국제협력 */
-									top: 254px;
-									left: 46%;
-								}
+								&:nth-child(9) { /* 기후변화대응 */
+									top: 252px;
+									left: 64%;
+								}			
 								&:nth-child(10) { /* 경제통계 */
 									top: 0;
 									right: 0;
 								}
 								&:nth-child(11) { /* 경제교육 */
-									top: 250px;
+									top: 228px;
 									right: 0;
 								}
 							}
@@ -194,39 +195,43 @@
 						height: 545px;
 						> ul {
 							> li {
-								&:nth-child(1) {	//뉴스 및 의사록
+								&:nth-child(1) {	/* 뉴스 및 의사록 */
 									top: 0;
 									left: 10%;
 								}
-								&:nth-child(2) {	//공지사항
+								&:nth-child(2) {	/* 공지사항 */
 									top: 168px;
 									left: 10%;
 								}
-								&:nth-child(3) {	//연설 및 강연
+								&:nth-child(3) {	/* 주요행사 */
 									top: 220px;
 									left: 10%;
 								}
-								&:nth-child(4) {	//블로그
-									top: 340px;
+								&:nth-child(4) {	/* 연설 및 강연 */
+									top: 270px;
 									left: 10%;
 								}
-								&:nth-child(5) {	//간행물
+								&:nth-child(5) {	/* 블로그 */
+									top: 384px;
+									left: 10%;
+								}
+								&:nth-child(6) {	/* 간행물 */
 									top: 0;
 									left: 28%;
 								}
-								&:nth-child(6) {	//조사연구
+								&:nth-child(7) {	/* 조사연구 */
 									top: 0;
 									left: 46%;
 								}
-								&:nth-child(7) {	//지역연구자료
+								&:nth-child(8) {	/* 지역연구자료 */
 									top: 0;
 									left: 64%;
 								}
-								&:nth-child(8) {	//국외사무소자료
+								&:nth-child(9) {	/* 국외사무소자료 */
 									top: 230px;
 									left: 64%;								
 								}
-								&:nth-child(9) {	//업무별 정보
+								&:nth-child(10) {	/* 업무별 정보 */
 									top: 0;
 									right: 0;
 								}
@@ -309,6 +314,7 @@
 				top: 96px;
 				left: 0;
 				width: 100%;
+				height: 0;
 				z-index: 99;	
 				border-top: 1px solid #E6E6E6;
 				> ul {
@@ -406,7 +412,31 @@
 				}
 			}
 		}
+		@include breakpoint($sm) {
+			gap: 0 30px;
+		}
 	}	
+}
+.m-g-info {
+	margin-right: 68px;
+	@include breakpoint($lg) {
+		display: none;
+	}
+	@include breakpoint($sm) {
+		display: none;
+	}
+	.global ul {
+		display: flex;
+		gap: 0 4px;
+		a {
+			//color: #fff;
+			color: #005596;
+			font-size: rem(14);
+			font-weight: 500;
+			padding: 0 8px;
+
+		}
+	}
 }
 
 @include breakpoint($lg 1500px){

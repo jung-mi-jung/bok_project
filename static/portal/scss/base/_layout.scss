@@ -17,7 +17,10 @@
 // 	}
 // }
 
-body.gnbOver {
+body.gnbOver { 
+	// @include breakpoint($mdw){
+	// 	overflow: hidden;
+	// } 
 	&::before {
 		content: "";
 		display: inline-block;
@@ -42,7 +45,7 @@ body.gnbOver {
 		margin-left: auto;
 		margin-right: auto;
 	}
-	@include breakpoint($sm){
+	@include breakpoint($smd){
 		margin: 0;
 	}
 }
@@ -58,9 +61,9 @@ body.gnbOver {
 	display: flex;
 	flex-direction: column;
 	border-bottom: 1px solid #E6E6E6;
-	@include breakpoint($smd){
-		position: fixed;
-	}
+	// @include breakpoint($smd){
+	// 	position: fixed;
+	// }
 	.container {
 		position: relative;
 		display: flex;
@@ -76,54 +79,115 @@ body.gnbOver {
 		}
 	}	
 	.globalHeader {	
-		display: none;	
-		@include breakpoint($lg){
-			display: block;
-			.container {
+		display: block;
+		.container {
+			display: flex;
+			justify-content: space-between;
+			max-width: 1824px;
+			//max-width: 1920px;
+			border-bottom: 1px solid #E6E6E6;
+			height: 50px;
+			line-height: 50px;
+			// @include breakpoint($smd){
+			// 	padding-left: 48px;
+			// 	padding-right: 48px;
+			// }
+			@include breakpoint($smd){
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+			ul {
+				//max-width: calc(1920px - 192px);
 				display: flex;
-				justify-content: space-between;
-				max-width: 1824px;
-				//max-width: 1920px;
-				border-bottom: 1px solid #E6E6E6;
-				height: 50px;
-				line-height: 50px;
-				@include breakpoint($smd){
-					padding-left: 48px;
-					padding-right: 48px;
+				flex-direction: row;
+				flex-grow: 1;
+				//border-bottom: 1px solid rgba(255, 255, 255, 0.2);					
+				@include breakpoint($smd) {
+					display: none;
 				}
-				ul {
-					//max-width: calc(1920px - 192px);
-					display: flex;
-					flex-direction: row;
-					flex-grow: 1;
-					//border-bottom: 1px solid rgba(255, 255, 255, 0.2);					
-					li {
-						& + li {
-							&::before {
-								content: "";
-								display: inline-block;
-								vertical-align: middle;
-								width: 1px;
-								height: 14px;
-								//background-color: rgba(255, 255, 255, 0.2);
-								background-color: rgba(0, 85, 150, 0.3);
-							}
+				li {
+					& + li {
+						&::before {
+							content: "";
+							display: inline-block;
+							vertical-align: middle;
+							width: 1px;
+							height: 14px;
+							//background-color: rgba(255, 255, 255, 0.2);
+							background-color: rgba(0, 85, 150, 0.3);
 						}
 					}
-					a {
-						//color: #fff;
-						//color: #004274;
-						color: $color-point;
-						display: inline-block;
-						font-size: 15px;
-						font-weight: 500;
-						padding: 0 9px;		
+				}
+				a {
+					//color: #fff;
+					//color: #004274;
+					color: $color-point;
+					display: inline-block;
+					font-size: 15px;
+					font-weight: 500;
+					padding: 0 9px;		
+					@include breakpoint($lg) {
 						&:hover {
 							text-decoration: underline;
 						}
 					}
+					@include breakpoint($smd) {
+						font-size: 14px;
+						padding: 0 4px !important;
+					}
 				}
-			}			
+			}
+		}			
+		.m-globalHeader {
+			display: none;
+			@include breakpoint($smd) {
+				display: block;
+			}
+			button {
+				width: 156px;
+				margin: 0 0 12px; 
+				height: 30px;
+				font-size: 12px;
+				border: 1px solid #D9D9D9;
+				line-height: 20px;
+				/* height: 40px; */
+				outline: none;
+				border-radius: 5px;
+				-webkit-appearance: none;
+				padding: 4px 30px 4px 10px !important;
+				background: #fff url(/static/portal/img/common/select-arr.png) calc(100% - 10px) center no-repeat;
+				text-align: left;
+			}
+			.site_go {
+				position: relative;
+				ul.active {
+					display: block;
+					position: absolute;
+					top: 45px;
+					left: 0;
+					z-index: 9;
+					width: 100%;
+					padding: 10px;
+					border-radius: 8px;
+					border: 1px solid #E5E5E5;
+					background-color: #fff;
+					li {
+						line-height: 1.5;
+						&::before {
+							display: none;
+						}
+					}
+					a {
+						color: #666;
+						display: inline-block;
+						padding: 4px 0 !important;
+						line-height: 1.2;
+						font-weight: 400;
+						padding: 0;
+						text-align: left;
+					}
+				}
+			}
 		}
 	}
 	.logo {
@@ -132,8 +196,9 @@ body.gnbOver {
 		a {
 			display: block;
 			background: url(/static/portal/img/main/logo.png) 50% no-repeat;
-			width: 127px;
+			width: 128px;
 			height: 60px;
+			background-size: 128px 42px;
 			@include breakpoint($sm){
 				background-position: 0 50%;
 			}
@@ -142,119 +207,39 @@ body.gnbOver {
 	.g-info {
 		display: flex;
 		align-items: center;
-		.global {
+		@include breakpoint($smd) {
 			display: none;
-		}		
-		@include breakpoint($lg){
-			.global {
+		}
+		@include breakpoint($sm) {
+			display: flex;
+		}
+		.global {
+			display: flex;
+			align-items: center;
+			ul {
 				display: flex;
 				align-items: center;
-				ul {
-					display: flex;
-					align-items: center;
-					white-space: nowrap;
-					li {
-						// a {
-						// 	color: $black;
-						// }
-						//로그인후
-						.userInfoOpBxSet {
-							padding: 3px 0;
-							position: relative;
-							.userInfoOpener {
-								border-radius: 30px;
-								//background: #fff;
-								display: inline-block;
-								padding: 1px 10px;
-								//color: $point;
-								font-size: 14px;
-							}
-							.userInfoOpBx {
-								display: none;
-								width: 280px;
-								position: absolute;
-								top: 52px;
-								left: -100%;
-								margin-left: -80px;
-								border: 1px solid #3B63C4;
-								border-radius: 5px;
-								padding: 24px;
-								box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-								background-color: #fff;
-								z-index: 99;
-								&.on {
-									display: block;
-								}
-								.userInfoSnsBx {
-									display: flex;
-									//justify-content: space-between;
-									align-items: center;
-									.infoTxts {
-										margin-left: 14px;
-										line-height: 1.2;
-										strong {
-											font-weight: 500;
-										}
-									}
-									i {
-										text-align: center;
-										display: inline-block;
-										width: 64px;
-										height: 64px;
-										line-height: 64px;
-										border-radius: 50%;
-										background-color: #B1C1E7;
-										&::before {
-											@include font-ico('\e7fd');
-											font-size: 35px;
-											color: #fff;
-											margin-top: 14px;
-										}
-									}
-								}
-								.myLogoutBx {
-									margin-top: 15px;
-									display: flex;
-									justify-content: space-between;
-									a {
-										text-align: center;
-										width: calc(50% - 2px);
-										display: block;
-										color: #fff;
-										font-size: 14px;
-										font-weight: 300;
-										border-radius: 4px;
-										padding: 4px;
-										line-height: initial;
-										&.mypg {
-											background-color: $color-point;
-											&::before {
-												content: "";
-												display: inline-block;
-												vertical-align: middle;
-												width: 21px;
-												height: 20px;
-												background: url(/static/portal/img/ico/ico-person_edit.png);
-												margin-right: 4px;
-											}
-										}
-										&.logout {
-											background-color: #4D4D4D;
-											&::before {
-												@include font-ico-outline('\e9ba');
-												font-size: 18px;
-												margin-right: 4px;
-											}
-										}
-									}
-								}
-							}
+				white-space: nowrap;
+				li {
+					a {
+						padding: 0 8px;
+						&.userInfoOpener {
+							display: inline !important;
+							margin-right: -3px;
+							border-radius: 30px;
+							background: #005596;
+							display: inline-block;
+							padding: 3px 10px !important;
+							color: #fff;
+							font-size: 14px;
 						}
 					}
 				}
 			}
 		}
 	}
+
+	
 	.toggle-set {
 		display: flex;
 		align-items: center;
@@ -265,7 +250,7 @@ body.gnbOver {
 			&::before {
 				@include font-ico-outline('\e5d2');
 				color: $color-point;
-				font-size: 39px;
+				font-size: 48px;
 			}
 			@include breakpoint($smd){
 				position: absolute;
@@ -276,7 +261,7 @@ body.gnbOver {
 				margin: 0;
 				&::before {
 					color: $black;
-					font-size: 57px;
+					//font-size: 57px;
 				}
 			}
 		}
@@ -298,6 +283,140 @@ body.gnbOver {
 	}
 }
 
+#header {
+	//로그인후
+	.userInfoOpBxSet {
+		padding: 3px 0;
+		position: relative;
+		.userInfoOpener {
+			border-radius: 30px;
+			//background: #fff;
+			display: inline-block;
+			padding: 1px 10px;
+			//color: $point;
+			font-size: 14px;
+			// @include breakpoint($lg) {
+			// 	&:hover {
+			// 		& + .userInfoOpBx {
+			// 			display: block;
+			// 		}
+			// 	}
+			// }
+		}
+		.userInfoOpBx {
+			display: none;
+			width: 280px;
+			position: absolute;
+			top: 52px;
+			left: -100%;
+			margin-left: -80px;
+			border: 1px solid #3B63C4;
+			border-radius: 5px;
+			padding: 24px;
+			box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+			background-color: #fff;
+			z-index: 99;
+			&.on {
+				display: block;
+			}
+			.userInfoSnsBx {
+				display: flex;
+				//justify-content: space-between;
+				align-items: center;
+				.infoTxts {
+					margin-left: 14px;
+					line-height: 1.2;
+					strong {
+						font-weight: 500;
+					}
+				}
+				i {
+					text-align: center;
+					display: inline-block;
+					width: 64px;
+					height: 64px;
+					line-height: 64px;
+					border-radius: 50%;
+					background-color: #B1C1E7;
+					&::before {
+						@include font-ico('\e7fd');
+						font-size: 35px;
+						color: #fff;
+						margin-top: 14px;
+					}
+				}
+			}
+			.myLogoutBx {
+				margin-top: 15px;
+				display: flex;
+				justify-content: space-between;
+				a {
+					text-align: center;
+					width: calc(50% - 2px);
+					display: block;
+					color: #fff !important;
+					font-size: 14px;
+					font-weight: 300;
+					border-radius: 4px;
+					padding: 4px !important;
+					line-height: initial;
+					&.mypg {
+						background-color: $color-point;
+						&::before {
+							content: "";
+							display: inline-block;
+							vertical-align: middle;
+							width: 21px;
+							height: 20px;
+							background: url(/static/portal/img/ico/ico-person_edit.png);
+							margin-right: 4px;
+						}
+					}
+					&.logout {
+						background-color: #4D4D4D;
+						&::before {
+							@include font-ico-outline('\e9ba');
+							font-size: 18px;
+							margin-right: 4px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.m-g-info {
+		.global .userInfoOpBxSet {
+			padding: 0;
+			.userInfoOpener {
+				font-size: rem(14);
+				padding: 0 8px;
+				border-radius: 30px;
+				background: #005596;
+				display: inline-block;
+				padding: 3px 10px !important;
+				color: #fff;
+				font-size: 14px;
+			}
+			.userInfoOpBx {
+				@include breakpoint($smd) {
+					top: 42px;
+				}
+			}
+		}
+	}
+	.g-info {
+		.global .userInfoOpBxSet {
+			.userInfoOpBx {
+				@include breakpoint($sm) {
+					left: -55%;
+				}
+			}
+		}
+	}
+}
+
+
 //게시판일 경우 비주얼 영역 예외처리
 .bd-body {
 	.hgroup {
@@ -310,7 +429,7 @@ body.gnbOver {
 	.navigation {
 		.sub-_visual {
 			div {
-				padding: 30px 10px 0; 
+				padding: 30px 0 0; 
 				h1 {
 					font-weight: 600;
 				}
@@ -524,8 +643,8 @@ body.gnbOver {
 			display: block;
 			width: 48px;
 			position: absolute;
-			top: 12px;
-			left: 0;
+			top: 5px;
+			left: 6px;
 			z-index: 99;
 			.sns-wrap__set {
 				width: 48px;
@@ -585,10 +704,10 @@ body.gnbOver {
 	clear: both;
 	width: $pc-wide;
 	max-width: 100%;
-	// padding-top: 36px;
-	// padding-bottom: 50px;
-	//min-height: calc(100vh - 246px - 196px - 80px);
 	@include clearfix();	
+	@include breakpoint($mdw){
+		padding: 0 20px;
+	}
 	@include breakpoint($sm){
 		padding: 0 10px;
 	}
@@ -1017,6 +1136,10 @@ body.gnbOver {
 	bottom: 190px;
 	right: 30px;
 	z-index: 9;
+	@include breakpoint($sm){
+		bottom: 50px;
+		right: 10px;
+	}
 	a {
 		display: block;
 		width: 40px;
@@ -1158,6 +1281,7 @@ body.gnbOver {
 		color: $black;
 		dl {
 			display: flex;
+			flex-wrap: wrap;  // 06.03
 			justify-content: right;
 			@include breakpoint($smd){
 				justify-content: left;
@@ -1196,8 +1320,11 @@ body.gnbOver {
 	position: fixed;
 	bottom: 250px;  //임시 위치
 	right: 30px;
-	z-index: 9;
-	
+	z-index: 99;
+	@include breakpoint($sm){
+		bottom: 100px;
+		right: 10px;
+	}
 	.btn {
 		float: right;
 		width: 40px;
@@ -1228,12 +1355,15 @@ body.gnbOver {
 		margin-bottom: 10px;
 		h2 {
 			color: $black;
-			font-size: rem(14) !important;
+			font-size: rem(14) !important;			
 			font-weight: 400;
 			display: block;
 			padding-bottom: 10px;
 			margin-bottom: 10px !important;
 			border-bottom: 1px solid #BFBFBF;
+			@include breakpoint($smd){
+				text-align: left !important;
+			}
 		}
 		.close {
 			position: absolute;
@@ -1400,20 +1530,6 @@ body.gnbOver {
 			}
 		}
 	}
-	// .more {
-	// 	width: 100%;
-	// 	text-align: center;
-	// 	margin-top: 14px;
-	// 	a {
-	// 		color: #3B63C4;
-	// 		&::before {
-	// 			@include font-ico-outline('\e5cf');
-	// 			font-size: 20px;
-	// 			color: #3B63C4;
-	// 			margin-right: 4px;
-	// 		}
-	// 	}
-	// }
 }
 
 [class^=reference-] {
@@ -1421,6 +1537,9 @@ body.gnbOver {
 	&:first-child {
 		margin-top: 0;
 		padding-top: 0;
+		.more {
+			top: 3px;
+		}
 	}
 	& + [class^=reference-] {
 		border-top: 1px solid #DCE2F1;
@@ -1473,14 +1592,15 @@ body.gnbOver {
 					}
 				}
 				a {
-					display: block;
+					width: 100%;
+					display: inline-flex;
 					color: $black;
 					background-color: #fff;
 					border-radius: 8px;
 					padding: 15px 15px;		
 					@include breakpoint($smd){
 						padding: 8px 12px;
-						font-size: 12px;
+						font-size: 16px;
 					}			
 					i {
 						&::before {
@@ -1613,7 +1733,10 @@ body.gnbOver {
 		//border-top: 1px solid #DCE2F1;
 		@include reference();
 		margin-top: 25px;
-		padding-top: 30px;				
+		padding-top: 30px;
+		.more {
+			top: 27px;
+		}			
 		dl {
 			dt {
 				&::before {
@@ -1815,7 +1938,7 @@ body.gnbOver {
 	@include breakpoint($lg){
 		min-height: 560px;
 	}	
-	//margin-bottom: 30px;
+	margin-bottom: 30px;	//살림
 	p {
 		margin-bottom: 12px;
 	}	
@@ -1833,6 +1956,14 @@ sup {
 		font-size: 75%;
 		color: #39A0FF;
 		top: 2px;
+	}	
+	&.dot{
+		vertical-align: super;
+		font-size: 80%;
+		color: #005596;
+		font-weight: 700;
+		top: -3px;
+		left: -2px
 	}
 }
 

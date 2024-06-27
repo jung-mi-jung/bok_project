@@ -266,6 +266,7 @@ textarea {
 		-webkit-box-shadow: 0 0 5px #008fd4;
 		box-shadow: 0 0 5px #008fd4;
 		border-color: #fff;
+		transform: translateX(0);
 	}
 }
 
@@ -404,6 +405,7 @@ input {
 	gap: 20px;
 }
 
+.file_set,
 .fileSet{
 	display: flex;	
 	flex-direction: column !important;
@@ -413,7 +415,7 @@ input {
 	}
 	> .row {
 		gap: 0 4px;
-		margin-top: 4px;
+		// margin-top: 4px;
 	}
 }
 

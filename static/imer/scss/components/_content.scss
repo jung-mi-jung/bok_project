@@ -32,6 +32,9 @@
 		margin-bottom: 4px;
 		color: #1A1A1A;
 		font-size: rem(18);
+		@include breakpoint($sm) {
+			font-size: rem(16);
+		}
 	}
 }
 .top-txt {
@@ -530,6 +533,10 @@
 /* 학술지 논문목록 */
 .cont-tableList {
 	.table {
+		@include breakpoint($sm) {
+			margin-top: 0 !important;
+			margin-bottom: 30px;
+		}
 		tbody {
 			td {
 				min-height: 52px;

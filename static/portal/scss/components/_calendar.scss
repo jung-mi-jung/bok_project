@@ -56,6 +56,9 @@
 		font-weight: 300;
 		text-align: center;
 		margin-bottom: 15px;
+		@include breakpoint($sm){
+			font-size: rem(30);
+		}
 		strong {
 			color: #1a1a1a;
 			font-weight: 600;
@@ -69,6 +72,9 @@
 				@include font-ico-outline('\e314');
 				font-size: 50px;
 				margin-bottom: 6px;
+				@include breakpoint($sm){
+					margin-bottom: 0;
+				}
 			}
 		}
 		.calDateR {
@@ -76,6 +82,9 @@
 				@include font-ico-outline('\e315');
 				font-size: 50px;
 				margin-bottom: 6px;
+				@include breakpoint($sm){
+					margin-bottom: 0;
+				}
 			}
 		}
 	}
@@ -84,6 +93,9 @@
 		border: 4px solid #E6E6E6;
 		padding: 20px;
 		margin-bottom: 22px;
+		@include breakpoint($sm){
+			padding: 10px 0;
+		}
 		ul {
 			display: flex;
 			justify-content: space-around;
@@ -112,11 +124,11 @@
 					height: 48px;
 					line-height: 48px;
 					text-align: center;
-					@include breakpoint($sm){
-						width: 38px;
-						height: 38px;
-						line-height: 38px;
-					}
+					// @include breakpoint($sm){
+					// 	width: 38px;
+					// 	height: 38px;
+					// 	line-height: 38px;
+					// }
 					&:hover {
 						text-decoration: underline;
 					}
@@ -144,7 +156,7 @@
 		width: 100%;
 		margin-top: -1px;
 		@include breakpoint($sm){
-			width: 700px;
+			width: 840px;
 		}
 	}
 	th,
@@ -171,9 +183,9 @@
 		padding: 15px;
 		vertical-align: top;
 		height: 160px;
-		@include breakpoint($sm){
-			height: 109px;
-		}
+		//@include breakpoint($sm){
+		//	height: 109px;
+		//}
 		a {
 			margin-top: 12px;
 			display: block;
@@ -211,12 +223,19 @@
 				// left: 12px;
 				color: $black;
 				padding: 15px 15px 5px;
+				@include breakpoint($sm) {
+					padding: 8px 8px 2px;
+				}
 			}
 			.con {
 				color: #4D4D4D;
 				text-align: left;
 				display: block;
 				padding: 0 16px;
+				@include breakpoint($sm) {
+					padding: 0 5px;
+					letter-spacing: -0.8px;
+				}
 				span {
 					display: block;
 					position: relative;
@@ -282,8 +301,14 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	@include breakpoint($sm) {
+		display: block;
+	}
 	.reser-type {
 		display: flex;
+		@include breakpoint($sm) {
+			margin-top: 5px;
+		}
 		span {
 			display: inline-block;
 			&::before {
@@ -303,6 +328,18 @@
 				&::before {
 					background-color: #F5F5F5;
 				}
+			}
+		}
+	}
+	@include breakpoint($sm){
+		& + .tar {
+			width: 100%;
+			clear: both;
+			text-align: left !important;
+		}
+		.select-go {
+			select {
+				min-width: auto;
 			}
 		}
 	}

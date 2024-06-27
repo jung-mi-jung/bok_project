@@ -96,7 +96,7 @@ body {
 	word-break: keep-all;
 	font-weight: 400;
 	@include breakpoint($sm) {
-		word-break: keep-all;
+		word-break: break-word;
 	}
 	&.ovh, 
 	&.modal-open,

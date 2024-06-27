@@ -44,7 +44,6 @@ body > .popwrap {
 		}
 	}
 	&__header {
-		h1 {}
 		.b-close {
 			position: absolute;
 			top: 0;
@@ -63,8 +62,6 @@ body > .popwrap {
 		max-height: 300px;
 		overflow-y: auto;
 		overflow-x: hidden;
-	}
-	&__footer {
 	}
 }
 

@@ -25,105 +25,119 @@ $(function () {
 });
 
 $(function () {
-	const section1Visual = new Swiper('.section1-visual', {
-		// Optional parameters
-		// direction: 'vertical',
-		loop: true,
-		speed: 1000,
-		autoplay: {
-			delay: 5000, // 시간 설정
-			disableOnInteraction: false, // false-스와이프 후 자동 재생
-			loop: true, //무한반복 할지말지,
-		},
-		grabCursor: true,
-		//effect: "creative",
-		effect: "fade",
-		fadeEffect: { 
-			crossFade: true 
-		},
-		creativeEffect: {
-			prev: {
-				shadow: true,
-				translate: ["-20%", 0, -1],
+	
+	
+	var options = {};
+
+	if ( $(".section1-visual .swiper-slide").length == 1) {
+		options = {
+			slidesPerView: 1,	// 보여지는 슬라이드 갯수
+			watchOverflow: true,
+		}
+		$(".section1-visual__ctrl").css({display: "none"});
+	} else {
+		options = {
+			loop: false,	
+			slidesPerView : 'auto',
+			centeredSlides: true,
+			speed: 1000,
+			autoplay: {
+				delay: 10000, // 시간 설정
+				disableOnInteraction: false, // false-스와이프 후 자동 재생
+				//loop: true, //무한반복 할지말지,
 			},
-			next: {
-				translate: ["100%", 0, 0],
+			grabCursor: true,
+			//effect: "creative",
+			effect: "fade",
+			fadeEffect: { 
+				crossFade: true 
 			},
-		},
-		// Navigation arrows
-		navigation: {
-			nextEl: '.section1-visual__swiper-button-next',
-			prevEl: '.section1-visual__swiper-button-prev',
-		},
-		pagination: {
-			el: '.pagination_fraction',
-			type: "fraction",
-			formatFractionCurrent: function (number) {
-				return ('0' + number).slice(-2);
+			// Navigation arrows
+			navigation: {
+				nextEl: '.section1-visual__swiper-button-next',
+				prevEl: '.section1-visual__swiper-button-prev',
 			},
-			formatFractionTotal: function (number) {
-				return ('0' + number).slice(-2);
+			pagination: {
+				el: '.pagination_fraction',
+				type: "fraction",
+				//type: "bullets",
+				formatFractionCurrent: function (number) {
+					return ('0' + number).slice(-2);
+				},
+				formatFractionTotal: function (number) {
+					return ('0' + number).slice(-2);
+				},
+				renderFraction: function (currentClass, totalClass) {
+					return '<span class="' + currentClass + '"></span>' + '<span class="' + totalClass + '"></span>';
+				}
 			},
-			renderFraction: function (currentClass, totalClass) {
-				return '<span class="' + currentClass + '"></span>' + '<span class="' + totalClass + '"></span>';
+			a11y: { // 웹접근성 
+				enabled: true,
+				prevSlideMessage: '이전 슬라이드',
+				nextSlideMessage: '다음 슬라이드',
+				slideLabelMessage: '총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.',
+			},
+			on: {
+				init: function(){
+					$(".progress").addClass('active');
+				},
+				slideChangeTransitionStart: function(){
+					$(".progress").removeClass('first active');
+				},
+				slideChangeTransitionEnd: function(){
+					$(".progress").addClass('active');
+				}
 			}
-		},
-		/*pagination: {   // 페이저 버튼 사용자 설정
-			el: '.section1-visual-paging',  // 페이저 버튼을 담을 태그 설정
-			clickable: false,  // 버튼 클릭 여부
-			type: 'bullets', // 버튼 모양 결정 "bullets", "fraction" 
-			// renderBullet: function (index, className) {  // className이 기본값이 들어가게 필수 설정
-			//     return '<a href="#" class="' + className + '">' + (index + 1) + '</a>'
-			// },
-			renderFraction: function (currentClass, totalClass) { // type이 fraction일 때 사용
-			    return '<span class="' + currentClass + '"></span>' + '<span class="' + totalClass + '"></span>';
-			// }
-		},*/
-		// nextSlideMessage: '다음'
-		a11y: { // 웹접근성 
-			enabled: true,
-			prevSlideMessage: '이전 슬라이드',
-			nextSlideMessage: '다음 슬라이드',
-			slideLabelMessage: '총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.',
-		},
-	});
+		}
+	}
+
+	var section1Visual = new Swiper(".section1-visual", options)
+
+
+
 	section1Visual.init();//초기화
 	//메인 비쥬얼 영역 progress 추가 설정
 	section1Visual.on('slideChange',function(){
 
 		if ( $(".section1-visual").hasClass("current-stop") ) {
 			return $(".progress").removeClass('active first');
-			
 		}
-		$(".progress").removeClass('active first');
+		//$(".progress").removeClass('active first');
 		//console.log($(".progress").offset());
 		
-		$(".progress").addClass('active');
+		//$(".progress").addClass('active');
 	});
 
 
 	//자동 재생 멈춤
 	$('.section1-visual__swiper-button-stop').on('click', function () {
-		$(this).parents(".swiper").addClass("current-stop");
+		$(this).parents(".section1-visual").addClass("current-stop");
 		$(this).hide().next().show().focus()
 		section1Visual.autoplay.stop();
-
 		$(".section1-visual .autoplay-progress .progress").removeClass("active first");
 	});
 	//자동 재생 플레이
 	$('.section1-visual__swiper-button-play').on('click', function () {
-		$(this).parents(".swiper").removeClass("current-stop");
+		$(this).parents(".section1-visual").removeClass("current-stop");
 		$(this).hide().prev().show().focus()
 		section1Visual.autoplay.start();
-
 		$(".section1-visual .autoplay-progress .progress").addClass("active");
 	});
-	$('.section1-visual .swiper-slide').on('mouseover', function(){
-		section1Visual.autoplay.stop();
+
+	$('.section1-visual__swiper-button-next, section1-visual__swiper-button-prev').on('click', function () {
+		$(".section1-visual__swiper-button-play").hide().prev().show()
 	});
-	$('.section1-visual .swiper-slide').on('mouseout', function(){
-		section1Visual.autoplay.start();
-	});	
+
+	//마우스 이벤트(웹접근성 보완) - 요청으로 인하여 삭제
+	// $('.section1-visual .swiper-slide').on('mouseover', function(){
+	// 	section1Visual.autoplay.stop();
+	// 	$(".section1-visual .autoplay-progress .progress").removeClass("active first");
+	// });
+	// $('.section1-visual .swiper-slide').on('mouseout', function(){
+	// 	section1Visual.autoplay.start();
+	// 	$(".section1-visual .autoplay-progress .progress").addClass("active");
+	// });
+
 });
 
 
@@ -143,7 +157,8 @@ $(function () {
             // window 넓이 640px ~ 767px
             320: {
                 slidesPerView: 1,
-                spaceBetween: 10,
+				//spaceBetween: 10,
+                spaceBetween: 30,
             },
             // window 넓이 768px ~ 1023px
             768: {
@@ -208,6 +223,7 @@ $(function () {
 
 
 //미디어
+/*
 $(document).ready(function () {
 	slider();
 })
@@ -224,11 +240,11 @@ function slider(){
 		var winWChk = '';
 		$(window).on('load resize', function (){
 			winW = window.innerWidth;
-			if(winWChk != 'mo' && winW <= 768){ //모바일 버전으로 전환할 때
+			if(winWChk != 'mo' && winW <= 750){ //모바일 버전으로 전환할 때 769
 				sliderAct();
 				winWChk = 'mo';
 			}
-			if(winWChk != 'pc' && winW >= 769){ //PC 버전으로 전환할 때
+			if(winWChk != 'pc' && winW >= 750){ //PC 버전으로 전환할 때
 				sliderAct();
 				winWChk = 'pc';
 			}
@@ -242,7 +258,7 @@ function slider(){
 				swiper = undefined;
 			}
 			//slidesPerView 옵션 설정
-			if (winW > 768){ //PC 버전
+			if (winW > 750){ //PC 버전
 				viewNum = 3;
 			}else{ //mobile 버전
 				viewNum = 1;
@@ -286,14 +302,252 @@ function slider(){
 		}        
 	});
 }
-$(".tab-sns a").on('click', function () {
-	$(".tab-sns a").removeClass("active").removeAttr("title");
-	$(this).addClass("active").attr("title", "선택됨")
-	$(".tab_list").hide();
-	let tabid = $(this).attr("rel");
-	$("." + tabid).fadeIn();
-});
+*/
 
+
+$(function () {
+
+	$(".tab-sns a").on('click', function () {
+		$(".tab-sns a").removeClass("active").removeAttr("title");
+		$(this).addClass("active").attr("title", "선택됨")
+		$(".tab_list").hide();
+		let tabid = $(this).attr("rel");
+		$("." + tabid).fadeIn();
+	});
+
+
+	swiper1 = new Swiper(".tab01 .inner", {
+		slidesPerView: 3,
+		//initialSlide :1,
+		//slidesPerGroup: 1,
+		breakpoints: {
+			// window 넓이 640px ~ 767px
+			320: {
+			slidesPerView: 1,
+			},
+			// window 넓이 768px ~ 1023px
+			768: {
+			slidesPerView: 1,
+			},
+			// window 넓이 1024px ~
+			1024: {
+			slidesPerView: 3,
+			},
+		},
+		loop: true,
+		centeredSlides : true,
+		effect: 'coverflow',
+		coverflowEffect: {
+			rotate: 0,
+			slideShadows: false,
+			stretch: -59,
+		},
+		navigation: {
+			nextEl: '.tab01 .media-next',
+			prevEl: '.tab01 .media-prev',
+		},
+		observer: true,	//swiper를 초기화
+		observeParents: true,
+	});
+	swiper1.init();//초기화	
+
+
+	swiper2 = new Swiper(".tab02 .inner", {
+		slidesPerView: 3,
+		//initialSlide :1,
+		//slidesPerGroup: 1,
+		breakpoints: {
+			// window 넓이 640px ~ 767px
+			320: {
+			slidesPerView: 1,
+			},
+			// window 넓이 768px ~ 1023px
+			768: {
+			slidesPerView: 1,
+			},
+			// window 넓이 1024px ~
+			1024: {
+			slidesPerView: 3,
+			},
+		},
+		loop: true,
+		centeredSlides : true,
+		effect: 'coverflow',
+		coverflowEffect: {
+			rotate: 0,
+			slideShadows: false,
+			stretch: -59,
+		},
+		navigation: {
+			nextEl: '.tab02 .media-next',
+			prevEl: '.tab02 .media-prev',
+		},
+		observer: true,	//swiper를 초기화
+		observeParents: true,
+	});
+	swiper2.init();//초기화	
+
+
+	swiper3 = new Swiper(".tab03 .inner", {
+		slidesPerView: 3,
+		//initialSlide :1,
+		//slidesPerGroup: 1,
+		breakpoints: {
+			// window 넓이 640px ~ 767px
+			320: {
+			slidesPerView: 1,
+			},
+			// window 넓이 768px ~ 1023px
+			768: {
+			slidesPerView: 1,
+			},
+			// window 넓이 1024px ~
+			1024: {
+			slidesPerView: 3,
+			},
+		},
+		loop: true,
+		centeredSlides : true,
+		effect: 'coverflow',
+		coverflowEffect: {
+			rotate: 0,
+			slideShadows: false,
+			stretch: -59,
+		},
+		navigation: {
+			nextEl: '.tab03 .media-next',
+			prevEl: '.tab03 .media-prev',
+		},
+		observer: true,	//swiper를 초기화
+		observeParents: true,
+	});
+	swiper3.init();//초기화	
+
+
+/*
+	var swiper1, swiper2, swiper3;
+
+	$(".sns-facebook").on("click", function () {
+		try {
+			swiper1.destroy(); // 요거 핵심
+			swiper2.destroy();
+			swiper3.destroy();
+		} catch (error) {}
+		$(".tab01").show();
+		$(".tab02").hide();
+		$(".tab03").hide();
+		swiper1 = new Swiper(".tab01 .inner", {
+			slidesPerView: 3,
+			//initialSlide :1,
+			//slidesPerGroup: 1,
+			breakpoints: {
+				// window 넓이 640px ~ 767px
+				320: {
+				  slidesPerView: 1,
+				},
+				// window 넓이 768px ~ 1023px
+				768: {
+				  slidesPerView: 1,
+				},
+				// window 넓이 1024px ~
+				1024: {
+				  slidesPerView: 3,
+				},
+			},
+			loop: true,
+			centeredSlides : true,
+			effect: 'coverflow',
+			coverflowEffect: {
+				rotate: 0,
+				slideShadows: false,
+				stretch: -59,
+			},
+			navigation: {
+				nextEl: '.tab01 .media-next',
+				prevEl: '.tab01 .media-prev',
+			},
+			observer: true,	//swiper를 초기화
+			observeParents: true,
+		});
+		swiper1.init();//초기화	
+	});
+
+	$(".sns-youtube").on("click", function () {
+		try {
+			swiper1.destroy(); // 요거 핵심
+			swiper2.destroy();
+			swiper3.destroy();
+		} catch (error) {}
+		$(".tab01").hide();
+		$(".tab02").show();
+		$(".tab03").hide();
+		swiper2 = new Swiper(".tab02 .inner", {
+			slidesPerView: 3,
+			//initialSlide :1,
+			//slidesPerGroup: 1,
+			loop: true,
+			centeredSlides : true,
+			effect: 'coverflow',
+			coverflowEffect: {
+				rotate: 0,
+				slideShadows: false,
+				stretch: -59,
+			},
+			navigation: {
+				nextEl: '.tab02 .media-next',
+				prevEl: '.tab02 .media-prev',
+			},
+			//on: {
+			//	activeIndexChange: function () {
+			//		slideInx = this.realIndex; //현재 슬라이드 index 갱신
+			//	}
+			//},
+			observer: true,	//swiper를 초기화
+			observeParents: true,
+		});
+		swiper2.init();//초기화	
+	})
+
+	$(".sns-instagram").on("click", function () {
+		try {
+			swiper1.destroy(); // 요거 핵심
+			swiper2.destroy();
+			swiper3.destroy();
+		} catch (error) {}
+		$(".tab01").hide();
+		$(".tab02").hide();
+		$(".tab03").show();
+		swiper3 = new Swiper(".tab03 .inner", {
+			slidesPerView: 3,
+			//initialSlide :1,
+			//slidesPerGroup: 1,
+			loop: true,
+			centeredSlides : true,
+			effect: 'coverflow',
+			coverflowEffect: {
+				rotate: 0,
+				slideShadows: false,
+				stretch: -59,
+			},
+			navigation: {
+				nextEl: '.tab03 .media-next',
+				prevEl: '.tab03 .media-prev',
+			},
+			//on: {
+			//	activeIndexChange: function () {
+			//		slideInx = this.realIndex; //현재 슬라이드 index 갱신
+			//	}
+			//},
+			observer: true,	//swiper를 초기화
+			observeParents: true,
+		});
+		swiper3.init();//초기화	
+	})
+	//.trigger("click");
+
+*/
+	
+});
 
 
 //최신 보고서
@@ -408,7 +662,7 @@ $(function () {
 $(function () {
 	const popup = new Swiper('.popup', {
 		init: false,
-		freeMode: true,
+		//freeMode: true, 슬라이드 1개씩 보여질때 사용금지
 		// Optional parameters
 		loop: true,
 		loopAdditionalSlides : 1,
@@ -454,10 +708,10 @@ $(function () {
 		$(this).hide().prev().show().focus()
 		popup.autoplay.start();
 	});
-	$('.popup .swiper-slide').on('mouseover', function(){
+	$('.popup .swiper-slide').on('mouseover focusin', function(){
 		popup.autoplay.stop();
 	});
-	$('.popup .swiper-slide').on('mouseout', function(){
+	$('.popup .swiper-slide').on('mouseout focusout', function(){
 		popup.autoplay.start();
-	});	
+	});
 });

@@ -9,7 +9,10 @@
 		flex-wrap: wrap;
 	}
 	> *[class^=b-] {
-		margin: 0 6px 6px 0;
+		margin: 0 6px 0 0;
+		@include breakpoint($sm) {
+			margin: 0 6px 8px 0;
+		}
 		i {
 			display: inline-block;
 			margin-right: 8px;
@@ -52,13 +55,14 @@ $btn: "[class^=b-]";
 		line-height: 46px;
 		justify-content: center;
 		align-items: center;
-		font-size: rem(18);
+		//font-size: rem(18);
 		@include breakpoint($md) {
 			min-width: 112px;
 		}
 		@include breakpoint($sm) {
 			height: 32px;
 			line-height: 30px;
+			font-size: rem(16);
 		}
 	}
 	&.xs {
@@ -83,7 +87,36 @@ $btn: "[class^=b-]";
 	&.b-ok,
 	&.b-confirm,
 	&.b-aply {
-		background: #3B63C4;
+		background: #005596;
+	}
+	&.b-reg {
+		&::before {
+			content: "";
+			display: inline-block;
+			width: 24px;
+			height: 24px;
+			margin-right: 8px;
+			background: url(/static/museum/img/ico/ico-check-wh.png);
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: contain;
+		}
+	}
+	&.b-mod {
+		background: #fff;
+		border: 2px solid #005596;
+		color: #005596;
+		&::before {
+			content: "";
+			display: inline-block;
+			width: 24px;
+			height: 24px;
+			margin-right: 8px;
+			background: url(/static/museum/img/ico/ico-b-edit2.svg);
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: contain;
+		}
 	}
 	&.b-fileAdd {
 		background: #005596;
@@ -107,11 +140,39 @@ $btn: "[class^=b-]";
 	}
 	&.b-cancel {
 		background-color: #A6A6A6;
+		&::before {
+			content: "";
+			display: inline-block;
+			//position: absolute;
+			// left: 0;
+			// top: 0;
+			width: 24px;
+			height: 24px;
+			margin-right: 8px;
+			background: url(/static/museum/img/ico/ico-cancel-wh.png);
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: contain;
+		}
+		> i {
+			display: none;
+		}
 	}
 	&.b-del {
 		background: #fff;
 		border: 2px solid #C81720;
 		color: #C81720;
+		&::before {
+			content: "";
+			display: inline-block;
+			width: 24px;
+			height: 24px;
+			margin-right: 8px;
+			background: url(/static/museum/img/ico/ico-close-rd.png);
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: contain;
+		}
 	}	
 	&.b-fileDel {
 		background: #fff;

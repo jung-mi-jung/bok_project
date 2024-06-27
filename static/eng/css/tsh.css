@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
 font-family: "Material Icons";
 font-style: normal;
@@ -31,6 +30,11 @@ color: #3B63C4;
 .tsh-wrap {
 position: relative;
 margin-top: -36px;
+}
+@media (max-width: 749px) {
+.tsh-wrap {
+margin-top: -20px;
+}
 }
 @media (max-width: 1199px) {
 .tsh-wrap form {
@@ -79,7 +83,7 @@ margin-bottom: 10px;
 @media (min-width: 1200px) {
 .tsh-wrap .best-tsh {
 position: absolute;
-top: 60px;
+top: 54px;
 right: 0;
 z-index: 9;
 width: 280px;
@@ -119,10 +123,13 @@ background-color: #000e33;
 }
 .tsh-wrap .best-tsh .best-txt {
 display: flex;
+flex-wrap: wrap;
 justify-content: space-between;
 margin-bottom: 8px;
 }
 .tsh-wrap .best-tsh .best-txt h2 {
+width: 100%;
+padding-bottom: 8px;
 font-size: 1rem !important;
 color: #000E33;
 font-weight: 500 !important;
@@ -255,7 +262,7 @@ background-color: #fff;
 border-radius: 4px;
 position: absolute;
 z-index: 9;
-top: 30px;
+top: 70px;
 left: 0;
 width: 100%;
 background-color: #fff;
@@ -274,11 +281,12 @@ background-color: #CBDEF6;
 .tsh-wrap .tsh::before {
 content: "";
 display: inline-block;
-width: 20000px;
+width: 100vw;
 height: 100%;
 position: absolute;
 top: 0;
-left: -50%;
+left: 50%;
+transform: translateX(-50%);
 background-color: #CBDEF6;
 z-index: -1;
 }
@@ -324,6 +332,7 @@ margin-left: -17px;
 }
 .tsh-wrap .tsh input[type=checkbox] + i + span {
 margin-right: 10px;
+font-size: 16px;
 }
 .tsh-wrap .tsh input[type=checkbox]:checked + i + span {
 color: #131547;
@@ -343,7 +352,7 @@ flex-wrap: wrap;
 }
 }
 .tsh-wrap .tsh .input-set .keyword-set {
-width: 624px;
+width: 586px;
 height: 56px;
 max-width: calc(100% - 111px);
 display: flex;
@@ -357,6 +366,11 @@ order: 2;
 width: 100%;
 height: 48px;
 max-width: calc(100% - 113px);
+}
+}
+@media (max-width: 749px) {
+.tsh-wrap .tsh .input-set .keyword-set {
+max-width: calc(100% - 102px);
 }
 }
 .tsh-wrap .tsh .input-set .keyword-set .keyword {
@@ -395,10 +409,11 @@ border: 1px solid #E6E6E6;
 }
 .tsh-wrap .tsh .input-set .keyword-set .keyword .twitter-typeahead .tt-menu .tt-suggestion {
 cursor: pointer;
+padding: 4px 0;
 }
 @media (min-width: 1200px) {
 .tsh-wrap .tsh .input-set .keyword-set .keyword .twitter-typeahead .tt-menu .tt-suggestion:hover {
-background-color: #ebf3eb;
+background-color: #ebf3f7;
 }
 }
 .tsh-wrap .tsh .input-set .keyword-set .keyword .twitter-typeahead .tt-menu .tt-hightlight {
@@ -440,10 +455,11 @@ align-items: center;
 justify-content: center;
 text-align: center;
 width: 111px;
+font-size: 16px;
 background: #fff;
 border-radius: 4px;
 height: 56px;
-line-height: 56px;
+line-height: 1;
 margin-left: 2px;
 color: #005596;
 border: 1px solid #005596;
@@ -458,6 +474,7 @@ font-size: 16px;
 @media (max-width: 749px) {
 .tsh-wrap .tsh .input-set .detailSearchClose {
 width: 100px;
+font-size: 14px;
 }
 }
 .tsh-wrap .tsh .input-set .detailSearchClose::before {
@@ -477,11 +494,10 @@ text-rendering: optimizeLegibility;
 -moz-osx-font-smoothing: grayscale;
 font-feature-settings: "liga";
 font-size: 20px;
-margin-right: 6px;
+margin-left: 6px;
 color: #005596;
 }
 .tsh-wrap .tsh .input-set .detailSearchClose.active {
-line-height: 54px;
 color: #fff;
 background: #005596;
 border: 0;
@@ -537,7 +553,7 @@ display: block;
 .tsh-wrap .tsh .detail-box .view-list dl dt {
 display: flex;
 align-self: center;
-width: 120px;
+width: 140px;
 color: #808080;
 }
 @media (max-width: 1199px) {
@@ -591,7 +607,7 @@ display: flex;
 margin-top: 8px;
 }
 .tsh-wrap .tsh .detail-box .view-list dl dd .sh-input .date-set::before {
-content: "직접검색";
+content: "";
 display: inline-block;
 padding-right: 8px;
 padding-top: 4px;
@@ -611,12 +627,19 @@ padding-bottom: 8px;
 align-items: center;
 }
 .tsh-wrap .tsh .detail-box .view-list dl dd .sh-input input[type=text] {
-width: 130px !important;
+width: 140px !important;
 height: 32px;
+font-size: 16px;
 border: 1px solid #D9D9D9;
 border-radius: 4px;
 background: #fff url(/static/portal/img/ico/ico-calender-g.png) calc(100% - 6px) center no-repeat;
 padding: 0 30px 0 8px;
+}
+@media (max-width: 749px) {
+.tsh-wrap .tsh .detail-box .view-list dl dd .sh-input input[type=text] {
+width: 130px !important;
+font-size: 14px;
+}
 }
 .tsh-wrap .tsh .detail-box .tsh-btn {
 margin-top: 32px;
@@ -727,7 +750,8 @@ width: 240px;
 margin-right: 36px;
 }
 .tsh-wrap .tsh-main .search-side .label-list label {
-display: block;
+display: flex;
+align-items: flex-start;
 margin-left: 0;
 font-size: 1.125rem;
 padding: 15px 0;
@@ -951,7 +975,8 @@ margin-top: 15px;
 }
 .tsh-wrap .tsh-main .search-main .sh-list li .keyword span {
 display: inline-block;
-margin-right: 8px;
+margin-right: 4px;
+margin-bottom: 4px;
 color: #666;
 font-size: 14px;
 display: inline-block;
@@ -973,4 +998,4 @@ color: #005596;
 background-color: transparent !important;
 color: #449ee3 !important;
 }
-/*# sourceMappingURL=../maps/tsh.css.map */
+/*# sourceMappingURL=../external/staticeng/maps/tsh.css.map */

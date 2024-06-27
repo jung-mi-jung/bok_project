@@ -1,6 +1,8 @@
 // ios chrome 100vh 버그 
 var vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty("--vh", vh + 'px');
+var naviLegnth = $(".navigation nav > div > ul > li").length;
+
 $(function () {
 	$(window).trigger("orientationchange");
 });
@@ -32,10 +34,19 @@ if (window.innerWidth < 1200) {
 
 	if( window.innerWidth < 750 ) {
 		$(".total-nav").addClass("m-total-nav");
+		if ( naviLegnth > 3 ) {
+			$(".navigation nav > div > ul > li").not(".home").css({"display": "none"});
+			$(".navigation nav > div > ul > li").eq(naviLegnth-1).css({"display": "flex"});
+			$(".navigation nav > div > ul > li").eq(naviLegnth-2).css({"display": "flex"});
+		}
+		else {
+			$(".navigation nav > div > ul > li").css({"display": "flex"});
+		}
 		
 	} 
 	else {
 		$(".total-nav").removeClass("m-total-nav");
+		$(".navigation nav > div > ul > li").css({"display": "flex"});
 	}
 }
 else {
@@ -54,9 +65,18 @@ $(window).resize(function () {
 		
 		if( window.innerWidth < 750 ) {
 			$(".total-nav").addClass("m-total-nav");
+			if ( naviLegnth > 3 ) {
+				$(".navigation nav > div > ul > li").not(".home").css({"display": "none"});
+				$(".navigation nav > div > ul > li").eq(naviLegnth-1).css({"display": "flex"});
+				$(".navigation nav > div > ul > li").eq(naviLegnth-2).css({"display": "flex"});
+			}
+			else {
+				$(".navigation nav > div > ul > li").css({"display": "flex"});
+			}
 		} 
 		else {
 			$(".total-nav").removeClass("m-total-nav");
+			$(".navigation nav > div > ul > li").css({"display": "flex"});
 		}
 	} 
 	else {
@@ -296,11 +316,11 @@ $(function () {
 			.attr('placeholder', 'yy - mm')
 			.attr('autocomplete', 'off')
 	}
-	// $('input.sdate').attr('title', '검색기간 시작일 연도 - 월 - 일');
-	// $('input.edate').attr('title', '검색기간 종료일 연도 - 월 - 일');
+	$('input.sdate').attr('title', 'Search start day');
+	$('input.edate').attr('title', 'Search end day');
 	// $('input.month').attr('title', '검색기간 연도 - 월');
-	// $('input.smonth').attr('title', '검색기간 시작월 연도 - 월');
-	// $('input.emonth').attr('title', '검색기간 종료월 연도 - 월');
+	$('input.smonth').attr('title', 'Search start day');
+	$('input.emonth').attr('title', 'Search end day');
 	$('input.date').each(function () {
 		var title = $(this).attr('title') + ' yy - mm - dd'
 		$(this).attr('title', title)
@@ -310,7 +330,7 @@ $(function () {
 		$('input.sdate,input.edate,input.date')
 			.datepicker({
 				format: "yyyy-mm-dd",
-				language: "ko",
+				language: "en",
 				todayHighlight: true,
 				autoclose:true
 			})
@@ -356,11 +376,16 @@ $(function () {
 
 		$(this).addClass("on").siblings().removeClass("on");
 		$(this).find("a").addClass("on").siblings().removeClass("on");
-		$(".js-tab2").removeClass("on").find("button").html(selectedTxt)
+		$(".js-tab2").removeClass("on").find("button").html(selectedTxt + '<i class="ico-arrow-bk"></i>')
 
 		// 1200이상일때
 		if ( !$("body").hasClass("mobile") ){
-			$("html, body").animate({ scrollTop: thisScrollTop - 60}, 200);
+			if (currentScrollTop <= 60) {
+				$("html, body").animate({ scrollTop: thisScrollTop - 88}, 200);
+			}
+			else {
+				$("html, body").animate({ scrollTop: thisScrollTop - 62}, 200);
+			}
 		}
 		// 1200미만 일때
 		else {
@@ -644,6 +669,7 @@ $(function() {
 	$(".sns-wrap .close").click(function(){
 		$(".sns-wrap").removeClass("active");	
 		$(".sns-wrap__set").slideUp();	
+		$(".sns-toggle").focus();
 	});
 
 	//클릭시 레이어 닫기
@@ -743,18 +769,12 @@ $(function() {
 	});
 
 
+	//lnb
+	$(".lnb-nav > ul > li > ul").prev().addClass("bu");
 
 
-
-	//.table thead 없을 경우 처리 (디자인 처리)
-	// $(".table")
-	// 	.not("thead")
-		
-	// 	.each(function () {
-	// 		$(this).addClass("table_line");
-	// 	});
-	
-		
+	//기존 소스 (게시물)
+	$(".scrollX").attr("tabindex", "0");
 
 
 /*
@@ -789,6 +809,7 @@ $(function () {
 
 	$(".my_memo .btn").click(function(){
 		$(this).next().addClass("active");
+		$(".my_memo .swiper .top .close").focus();
 	});
 	$(".my_memo .close").click(function(){
 		$(".my_memo .swiper.active").removeClass("active");

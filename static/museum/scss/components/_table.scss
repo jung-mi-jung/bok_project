@@ -33,6 +33,9 @@ table {
 					background: #E8EBED;
 					color: $black;
 					border-right: 1px solid #BDBCBC;
+					// @include breakpoint($sm) {
+					// 	font-size: rem(15);
+					// }
 					&:first-of-type {
 						border-radius: 8px 0 0 8px;
 					}
@@ -54,6 +57,7 @@ table {
 				font-size: rem(16);
 				@include breakpoint($sm) {
 					padding: 10px 12px;
+					//font-size: rem(15);
 				}
 				// & + th {
 				// 	border-left: 1px solid $bd-color;
@@ -63,6 +67,9 @@ table {
 				th {
 					color: $black;
 					background-color: $tb-bg-color;
+					// @include breakpoint($sm) {
+					// 	font-size: rem(15);
+					// }	
 				}
 				tr {
 					&:nth-of-type(even) {
@@ -85,6 +92,7 @@ table {
 				}
 				@include breakpoint($sm) {
 					padding: 10px 12px;
+					font-size: rem(15);
 				}
 				&:last-of-type {
 					border-right: 0;

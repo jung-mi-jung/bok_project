@@ -29,11 +29,16 @@ h2 + .boxTop {
 	margin-bottom: 40px;
 }
 .boxTop{
-	border: 7px solid #3B63C4;
-	padding:0 12px;
-	position:relative;
-	margin-bottom:20px; 
-	clear:both; 
+	// border: 7px solid #3B63C4;
+	// padding:0 12px;
+	// position:relative;
+	// margin-bottom:20px; 
+	// clear:both; 
+	text-align: center;
+    background-color: #F2F6FA;
+    border-radius: 16px;
+    padding: 40px 24px;
+    margin-bottom: 30px;
 	& + h2 {
 		margin-top: 50px;
 	}
@@ -48,13 +53,13 @@ h2 + .boxTop {
 	color:#3B63C4;
 	font-size: rem(20);
 	text-align:center;
-	background:#fff;
-	margin:-7px 0 !important;
+	//background:#fff;
+	// margin:-7px 0 !important;
 	font-weight: 500;
-	padding:10px;
-	@include breakpoint($sm) {
-		padding:0;
-	}
+	// padding:10px;
+	// @include breakpoint($sm) {
+	// 	padding:0;
+	// }
 	.point{
 		text-decoration:underline;color:#1f497d !important;
 	}

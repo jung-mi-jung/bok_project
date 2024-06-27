@@ -18,31 +18,13 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		@include breakpoint($smd) {
-			align-items: flex-start;
-			margin-left: 24px;
-			margin-right: 24px;
-		}
-		@include breakpoint($sm) {
-			margin-left: 16px;
-			margin-right: 16px;
-		}
-
-		// @include breakpoint($lg){
-		// 	display: flex;
-		// 	justify-content: space-between;
-		// 	align-items: center;
-		// 	margin-left: 10px;
-		// 	margin-right: 10px;
-		// 	padding: 0;
-		// }
 		@include breakpoint(min-width 1720px) {
 			margin-left: auto;
 			margin-right: auto;
 		}
 		@include breakpoint($sm){
 			display: block;
-			padding: 50px 0 0 0;
+			padding: 50px 10px 0 10px;
 		}		
 	}	
 	.footer-nav {		
@@ -160,8 +142,8 @@
 			@include breakpoint($sm){
 				position: absolute;
 				top: 0;
-				left: 0;
-				width: 100%;
+				left: 10px;
+				width: calc(100% - 20px);
 			}
 			button {
 				text-align: left;

@@ -374,13 +374,22 @@
 				&:last-child {
 					border-bottom: none;
 				}
+				.file-set {
+					display: flex;
+				}
 			}
 		}
 		a {
 			color: $black;
 			display: inline-block;
+			vertical-align: middle;
 			padding: 6px 0;
 			font-size: 16px;
+			@include breakpoint($sm) {
+				span {
+					@include hide();
+				}
+			}
 			&:hover {
 				text-decoration: underline;
 			}
@@ -409,9 +418,8 @@
 						height: 20px;
 						background-color: #a6a6a6;
 						position: absolute;
-						top: 50%;
+						top: 9px;
 						left: 0;
-						margin-top: -10px;
 					}
 				}
 			}
@@ -618,7 +626,7 @@
 	.img-box {
 		margin: 20px 0 30px;
 		.img {
-			padding-top: 21.4%;
+			padding-top: 37.5%;  //21.4
 		}
 	}
 	.subject {
@@ -628,8 +636,12 @@
 	}
 	.dataInfoSet {
 		@include dataInfoSet();
-		.dataInfo {
-			top: -139px;
+		margin: 0 0 20px;
+		align-items: end;
+		@include breakpoint($sm){
+			min-height: 0;
+			margin-bottom:0;
+			align-items: flex-start;
 		}
 	}
 	.dbdata {
@@ -688,6 +700,12 @@
 	border-left:1px solid $bd-color;
 	border-right:1px solid $bd-color;
 	margin-bottom:30px;
+	.aply-table {
+		input[type=text] {
+			width: 100%;
+			max-width: calc(100% - 40px);
+		}
+	}
 	[class^=b-] {
 		height: 32px;
 		line-height: 32px;
@@ -776,7 +794,6 @@
 				.hits{
 					&:before{
 						@include font-ico-outline('\e54b');
-						font-size: px;
 						margin-right:5px;
 					}
 				}

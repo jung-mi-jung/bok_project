@@ -1,33 +1,52 @@
 $(function () {
 	//메인 헤더 스타일 추가
 	$("#header").addClass("main");
+	//$("#wrap").trigger("resize"); //강제 리사이징
 
 	var listNum = $(".section1-visual .swiper-slide");
 	var linkNum = $(".s1-bottom-set .swiper-slide");
+	var options = {};
 
-	var bannerList = new Swiper(".section1-visual", {
-		slidesPerView: 1,	// 보여지는 슬라이드 갯수
-		spaceBetween: 0,	// 마진값
-		//loop: true,	// 슬라이드 반복 여부
-		// loopSlides: linkNum.length,
-		effect: 'true', //슬라이드 이미지가 쌓이는 느낌
-		watchOverflow: true,
-		autoplay : {  // 자동 슬라이드 설정 , 비 활성화 시 false
-			delay : 5000,  //시간 설정
-			disableOnInteraction : false,
-		},
-		on : {
-			init: function(){
-				if( this.slides.length == 1 ) {
-					$(".swiper-pagination, .section1__swiper-button-stop").css({ display: "none"});
-				} 
-				else {
-					$(".swiper-pagination, .section1__swiper-button-stop").css({ display: "flex"});
+	if ( $(".section1-visual .swiper-slide").length == 1) {
+		options = {
+			slidesPerView: 1,	// 보여지는 슬라이드 갯수
+			spaceBetween: 0,	// 마진값
+			effect: 'true', //슬라이드 이미지가 쌓이는 느낌
+			watchOverflow: true,
+			loop: false,
+			autoplay: false,
+			on : {
+				init: function(){
+					if( this.slides.length == 1 ) {
+						$(".swiper-pagination, .section1__swiper-button-stop").css({ display: "none"});
+					} 
+					else {
+						$(".swiper-pagination, .section1__swiper-button-stop").css({ display: "flex"});
+						
+					}
 				}
 			}
 		}
-	});
+		$(".section1__ctrl").css({display: "none"});
+	} 
+	else {
+		options = {
+			slidesPerView: 1,	// 보여지는 슬라이드 갯수
+			spaceBetween: 0,	// 마진값
+			effect: 'true', //슬라이드 이미지가 쌓이는 느낌
+			watchOverflow: true,
+			loop: true,
+			initialSlides: 0,
+			autoplay : {  // 자동 슬라이드 설정 , 비 활성화 시 false
+				delay : 10000,  //시간 설정
+				disableOnInteraction : false,
+			},
+			loopedSlides: 1,
+		}
+		$(".section1__ctrl").css({display: "flex"});
+	}
 
+	var bannerList = new Swiper(".section1-visual", options)
 	var bannerlink = new Swiper(".s1-bottom-set .swiper-container", {
 		slidesPerView: 1,	// 보여지는 슬라이드 갯수
 		spaceBetween: 0,	// 마진값
@@ -50,12 +69,15 @@ $(function () {
 		},
 		direction: 'vertical',
 		centerSlides: true,
-		//loop: true,	// 슬라이드 반복 여부
+		touchRatio: 0,
+		loop: true,
+		loopedSlides: 1,
 	})
 
+	
 	bannerList.controller.control = bannerlink;
 	bannerlink.controller.control = bannerList;
-
+	//bannerList.init();
 
 	$('.section1__swiper-button-stop').on('click', function () {
 		$(this).hide().next().show().focus()
@@ -68,6 +90,25 @@ $(function () {
 		bannerList.autoplay.start();
 		bannerlink.autoplay.start();
 	});
+``
+
+
+	//스크롤 이벤트
+	function goToScroll() {
+		// 주 메뉴
+		var h = 0;
+		if ($(window).scrollTop() > h) {
+			$('body').addClass('gnb-stiky');
+		} else {
+			$('body').removeClass('gnb-stiky');
+		}
+	}
+	goToScroll();
+	
+	$(window).on('scroll', function () {
+		goToScroll();
+	});
+
 });
 
 
@@ -79,7 +120,7 @@ $(function () {
 		// Optional parameters
 		loop: false,
 		slidesPerView : '4',
-		spaceBetween : 40,
+		spaceBetween : 30,
 		breakpoints: {
 			// window 넓이 640px ~ 767px
 			320: {
@@ -94,7 +135,7 @@ $(function () {
 			// window 넓이 1024px ~
 			1024: {
 			  slidesPerView: 4,
-			  spaceBetween: 40,
+			  spaceBetween: 30,
 			},
 		},
 		navigation: {
@@ -127,7 +168,7 @@ $(function () {
 		// Optional parameters
 		loop: false,
 		slidesPerView : '4',
-		spaceBetween : 40,
+		spaceBetween : 30,
 		breakpoints: {
 			// window 넓이 640px ~ 767px
 			320: {
@@ -142,7 +183,7 @@ $(function () {
 			// window 넓이 1024px ~
 			1024: {
 			  slidesPerView: 4,
-			  spaceBetween: 40,
+			  spaceBetween: 30,
 			},
 		},
 		navigation: {

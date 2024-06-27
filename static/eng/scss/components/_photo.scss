@@ -8,6 +8,7 @@
 			width: 33.3%;
 			padding: 10px 10px 40px;
 			@include breakpoint($sm){
+				float: none;
 				width: 100%;
 				padding: 10px 10px 0;
 				& + li {
@@ -28,6 +29,7 @@
 						padding-top: 56.4%;
 						border: 1px solid #E5E5E5;
 						border-radius: 8px 8px 0 0;
+						background-image: url(/static/portal/img/common/multi_default@2x.png);
 						.v-ico {
 							&::before {
 								content: "";
@@ -114,6 +116,28 @@
 					font-size: rem(14);
 					padding: 0 10px;
 				}
+				.badge2 {
+					position: absolute;
+					top: 6px;
+					left: -6px;
+					padding: 0 6px 0 0;
+					z-index: 10;
+					width: 134px;
+					background: url(/static/commons/img/pattern/badge.png) right 0 no-repeat;
+					background-size: contain;
+					.badge{
+						display: block;
+						position: static;
+						background: #ea5a59;
+						width: 126px;
+						height: 28px;
+						line-height: 28px;
+						padding: 0;
+						text-align: center;
+						font-size: 14px;
+						color: #fff;
+					}
+				}
 			}			
 		}
 		
@@ -146,6 +170,7 @@
 			&.next {
 				border: 1px solid $point;
 				border-radius: 50%;
+				background-color: rgba(255, 255, 255, 0.6);
 				&::before {
 					background: url(/static/eng/img/common/ctrl-btn-off.png) 50% no-repeat;
 				}
@@ -199,9 +224,18 @@
 	.img {
 		display: block;
 		padding-top: 100%;		
-		background-position: 50%;
+		background-position: top;
 		background-repeat: no-repeat;
 		background-size: contain;
+	}
+	& + .audioplayer {
+		width: 960px;
+		max-width: 100%;
+		margin: 50px auto;
+		text-align: right;
+		audio {
+			width: 400px;
+		}
 	}
 }
 

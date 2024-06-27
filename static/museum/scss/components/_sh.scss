@@ -250,6 +250,7 @@
 			}
 			&.details {
 				.check-ctrl  {
+					display: none; //임시 주석
 					margin-top: 5px;
 				}
 			}
@@ -453,7 +454,7 @@
 				&:hover {
 					color: #fff;
 					background-color: #3B63C4;
-					order: 1px solid #3B63C4;
+					border: 1px solid #3B63C4;
 				}
 				 + span {
 					margin-right: 2px;
@@ -649,12 +650,12 @@
 			display: block;
 		}
 		&.short {
-			
 			.sh-input {
 				display: flex;
 			}
 			.keyword-set {
 				flex-basis: calc(100% - 100px - 2px);
+				margin-left: 2px;
 			}
 		}
 		.sh-input {
@@ -666,6 +667,9 @@
 			}
 			> * {
 				margin: 0 2px;
+				@include breakpoint($smd){
+					margin: 0 0;
+				}
 			}
 		}
 		.sh-txt {
@@ -831,8 +835,12 @@
 			gap: 0 4px;
 			select {
 				height: 48px !important;
-				padding: 4px 30px 4px 24px !important;
+				padding: 4px 20px 4px 24px !important;
 				flex: 1;
+				@include breakpoint($sm) {
+					padding: 4px 20px 4px 10px !important;
+				}
+
 			}
 		}
 		.radio-box {
@@ -1057,7 +1065,7 @@
 	@include breakpoint($sm){
 		display: flex;
 		align-items: center;
-		margin: 0 0 5px 0 !important;
+		margin: 0 0 4px 0 !important;
 	}
 	@include breakpoint($mdw) {
 		// flex-basis: 250px;

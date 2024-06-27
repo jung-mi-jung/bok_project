@@ -134,6 +134,10 @@ p.bu-dot {
 		& + h3 {
 			margin-top: 22px;
 		}
+		@include breakpoint($smd){
+			font-size: rem(22);
+			text-align: center;
+		}
 	}
 	h3 {
 		clear: both;

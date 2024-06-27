@@ -223,6 +223,9 @@
 			background-image: url(/static/portal/img/ico/#{$item}.svg);
 		}
 	}
+	&.icon-viewer{
+		background-image:url(/static/portal/img/ico/ico-preview.png);
+	}
 }
 
 

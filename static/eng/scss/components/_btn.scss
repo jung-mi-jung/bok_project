@@ -30,6 +30,9 @@ $btn: "[class^=b-]";
 	background-color: $point;
 	border-radius: 6px;
 	padding: 0 10px;
+	@include breakpoint($sm) {
+		font-size: rem(16);
+	}	
 	&:focus {
 		outline: 1px dashed #fff;
     	outline-offset: -2px;
@@ -43,6 +46,9 @@ $btn: "[class^=b-]";
 		font-size: rem(18);
 		@include breakpoint($md) {
 			min-width: 112px;
+		}	
+		@include breakpoint($sm) {
+			font-size: rem(16);
 		}		
 	}
 	&.xs {
@@ -206,6 +212,32 @@ $btn: "[class^=b-]";
 			font-size: 16px;
 		}		
 	}
+	&.b-more {
+		display: inline-flex;
+    	align-items: center;
+		background-color: $color-point;
+		&::before {
+			content: "\e145";
+			font-family: "Material Icons Outlined";
+			font-weight: normal;
+			font-style: normal;
+			display: inline-block;
+			margin-right: 4px;
+			line-height: 1;
+			vertical-align: text-bottom;
+			text-transform: none;
+			letter-spacing: normal;
+			word-wrap: normal;
+			white-space: nowrap;
+			-webkit-font-smoothing: antialiased;
+			text-rendering: optimizeLegibility;
+			-moz-osx-font-smoothing: grayscale;
+			font-feature-settings: "liga";
+			-webkit-font-feature-settings: "liga";
+			color: #fff;
+			font-size: 24px;
+		}
+	}
 }
 .view + .btnSet {
 	[class^=b-] {
@@ -292,6 +324,8 @@ li {
 	}
 }
 
+
+
 .btnSet {
 	float: none;
 	//text-align: center !important;
@@ -300,8 +334,21 @@ li {
 		font-size: rem(18);
 		min-width: 112px;
 		padding: 0 20px;
+		@include breakpoint($sm) {
+			font-size: rem(16);
+		}
 		& + [class^=b-] {
 			margin-left: 7px;
+		}
+	}
+	&.tac {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 4px 8px;
+		flex-wrap: wrap;
+		> * {
+			margin: 0 !important;
 		}
 	}
 }

@@ -3,8 +3,8 @@
 .container.annual-report-container {
 width: calc(100% - 20px);
 }
-.container.annual-report-container div + h2 {
-margin-top: 70px;
+.container.annual-report-container .annual-report-section {
+border: 1px solid transparent;
 }
 .container.annual-report-container h2 {
 font-weight: 700;
@@ -15,6 +15,25 @@ font-size: initial;
 }
 .container.annual-report-container p {
 font-size: 1.125rem;
+}
+@media (min-width: 1200px) {
+.container.annual-report-container .content {
+padding-bottom: 30px;
+}
+}
+.container.annual-report-container .content-indent {
+padding-left: 52px;
+}
+.container.annual-report-container .content-indent p {
+margin-bottom: 0;
+}
+.container.annual-report-container .content-indent .table {
+margin-top: 0;
+}
+@media (max-width: 749px) {
+.container.annual-report-container .content-indent {
+padding-left: 32px;
+}
 }
 .container.annual-report-container #main-container h2 {
 color: #000E33;
@@ -271,8 +290,14 @@ width: 240px;
 }
 .annual-report-container #annual-report-sidebar.fixed {
 position: fixed;
-top: 20px;
+top: 60px;
 left: auto;
+z-index: 999;
+}
+@media (min-width: 1200px) {
+.annual-report-container #annual-report-sidebar.fixed {
+position: sticky;
+}
 }
 .annual-report-container #annual-report-sidebar .sidebar-toggle {
 display: none;
@@ -337,7 +362,7 @@ padding: 4px 0 0 24px;
 display: flex;
 align-items: flex-start;
 gap: 4px;
-padding: 4px 0 4px 24px;
+padding: 4px 0 4px 23px;
 color: #6D6E72;
 }
 .annual-report-container #annual-report-sidebar .snb-list > li > ul > li > a:focus {
@@ -404,7 +429,7 @@ text-underline-offset: 2px;
 @media (max-width: 1199px) {
 .annual-report-container #annual-report-sidebar {
 position: fixed;
-top: 96px;
+top: 154px;
 left: 0;
 z-index: 100;
 min-width: 240px;
@@ -524,15 +549,14 @@ background-size: 14px 14px;
 .annual-report-container .annual-report-area {
 flex: 1;
 max-width: 1136px;
-width: calc(100% - 304px);
 height: auto;
 float: right;
 }
-.annual-report-container .annual-report-area.responsive {
-margin-left: 304px;
-}
 .annual-report-container .annual-report-area a {
 color: #4D4D4D;
+}
+.annual-report-container .annual-report-area .annual-report-section.last-section {
+margin-bottom: 70px;
 }
 .annual-report-container .annual-report-area .flex-area {
 display: flex;
@@ -565,6 +589,10 @@ padding: 0;
 margin: 40px 0;
 padding: 24px 0 33px;
 background: rgba(109, 110, 114, 0.1);
+border-radius: 16px;
+}
+.annual-report-container .annual-report-area .infographic:last-child {
+margin-bottom: 0;
 }
 .annual-report-container .annual-report-area .infographic .infographic-inner {
 width: 835px;
@@ -699,15 +727,15 @@ max-height: 0;
 height: 298px;
 padding-right: 10px;
 overflow-y: auto;
+/*&\-webkit\-scrollbar\vertical {
+	width: 8px;
+}						
+&\-webkit\-scrollbar\horizontal {
+	height: 12px;
+}*/
 }
 .annual-report-container .annual-report-area .infographic .con-area .script-area .scroll-inner::-webkit-scrollbar {
 -webkit-appearance: none;
-}
-.annual-report-container .annual-report-area .infographic .con-area .script-area .scroll-inner::-webkit-scrollbar:vertical {
-width: 8px;
-}
-.annual-report-container .annual-report-area .infographic .con-area .script-area .scroll-inner::-webkit-scrollbar:horizontal {
-height: 12px;
 }
 .annual-report-container .annual-report-area .infographic .con-area .script-area .scroll-inner::-webkit-scrollbar-thumb {
 border-radius: 99px;
@@ -1012,9 +1040,18 @@ font-weight: 600;
 .annual-report-container .text-center {
 text-align: center;
 }
+.annual-report-container .text-left {
+text-align: left;
+}
 .annual-report-container .text-underline {
 text-decoration: underline;
 text-underline-offset: 2px;
+}
+.annual-report-container .indent-16 {
+text-indent: 16px;
+}
+.annual-report-container .indent-30 {
+text-indent: 30px;
 }
 .annual-report-container .sup {
 color: #3E7CC8;
@@ -1062,4 +1099,28 @@ flex-wrap: wrap;
 text-align: left;
 }
 }
-/*# sourceMappingURL=../maps/template.css.map */
+
+/* 추가 수정사항 */
+@media screen and (max-width: 750px) {
+svg.highcharts-root {
+height: auto !important;
+}
+.highcharts-legend-item > span {
+font-size: 12px !important;
+}
+.highcharts-axis-title {
+font-size: 12px !important;
+}
+.highcharts-axis-labels > * {
+font-size: 12px !important;
+}
+.highcharts-axis-labels span {
+font-size: 12px !important;
+}
+.annual-report-container .annual-report-area .infographic .sup,
+.container.annual-report-container sup {
+font-size: 12px !important;
+vertical-align: middle;
+}
+}
+/*# sourceMappingURL=../external/staticportal/maps/template.css.map */

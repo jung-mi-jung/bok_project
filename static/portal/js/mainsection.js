@@ -1,6 +1,6 @@
 // 휠 컨트롤
 var mainSection = $('#wrap,#section2,#section3,#section4,#section5,#section6,#footer');
-3
+
 var whellTimer;
 var timer;
 var lastScrollTop = 0;
@@ -10,6 +10,7 @@ var mainSectionLength = mainSection.length;
 var delta = 150;
 var ismobile = false;
 var inMotion = false
+
 if (window.innerWidth < 1200) {
     ismobile = true;
 }
@@ -21,7 +22,7 @@ $(window).resize(function () {
     }
 });
 var mainSectionMoveing = function (direction) {
-    // console.log("🚀 ~ file: mainsection.js:22 ~ mainSectionMoveing ~ mainSectionMoveing:", mainSectionMoveing)
+    console.log("🚀 ~ file: mainsection.js:22 ~ mainSectionMoveing ~ mainSectionMoveing:", mainSectionMoveing)
     mainSection.each(function (index) {
         if ($(this).offset().top > $(window).scrollTop() && Utils.isElementInView($(this), 50)) {
             currentMainSection = index;
@@ -34,13 +35,12 @@ var mainSectionMoveing = function (direction) {
     }
     if (currentMainSection < mainSection.length) {
         $('html, body')
-            // .stop()
+            .stop()
             .animate(
                 { scrollTop: mainSection.eq(currentMainSection).offset().top },
                 {
                     duration: 650,
                     complete: function () {
-                        // $(_sectionTarget).focus();
                         inMotion = false
                         console.log('?')
                     },
@@ -100,53 +100,22 @@ function scrollDiectionCheck(e) {
 }
 $('#wrap').on('wheel', function (event) {
     // 휠 제외 조건
-    //if ($(event.target).hasClass('.gnb-sub-nav')) 		{return}
-    //if ($(event.target).parents('.gnb-sub-nav').length)	{return}
-    if($("body").hasClass("popupOpened")) return;
-    if($("body").hasClass("modal-open")) return;
+    // if ($(event.target).hasClass('total-menu')) return;
+    // if ($(event.target).parents('.total-menu').length) return;
 
-    if ($(event.target).hasClass('list-txt-cart') || $(event.target).parents('.list-txt-cart').length) {
-        event.preventDefault();
+    if ($("body").hasClass('popupOpened')) return;
+    if ($("body").hasClass('modal-open')) return;
 
-        if (event.originalEvent.deltaY > 0) {
-            // down
-            $('.list-txt-cart').stop().animate({ scrollLeft: 500 },);
-        } else {
-            $('.list-txt-cart').stop().animate({ scrollLeft: 0 },);
-        }
-        return null
-    }
-    if ($(event.target).hasClass('list-txt') || $(event.target).parents('.list-txt').length) {
-        event.preventDefault();
-        if (event.originalEvent.deltaY > 0) {
-            // down
-            $('.list-txt').stop().animate({ scrollLeft: 500 },);
-        } else {
-            $('.list-txt').stop().animate({ scrollLeft: 0 },);
-        }
-        return null
-    }
-    if ($(event.target).hasClass('list-txt')) return;
-    if ($(event.target).parents('.list-txt').length) return;
-    if ($(event.target).hasClass('list-txt-cart')) return;
-    if ($(event.target).parents('.list-txt-cart').length) return;
-    // if ($(event.target).parents('.total-nav').length) return;
-    // if ($(event.target).hasClass('total-nav')) return;
-    // if ($(event.target).parents('.fsite').length) return;
-    // if ($(event.target).parents('.listy').length) return;
-    // if ($(event.target).parents('.gnb-sub-nav').length) return;
-    // if ($(event.target).parents('.section1-ad__all__list').length) return;
-    // if ($(event.target).hasClass('section1-ad__all__list')) return;
-    // if ($(event.target).hasClass('gnb-sub-nav')) return;
-    if (!ismobile && $(window).height() > 900) {
-        event.preventDefault();
+    if (!ismobile && $(window).height() > 700) {
+        //event.preventDefault();
+
         if (inMotion === false) {
             clearTimeout(whellTimer);
             inMotion = true
-            //console.log("🚀 ~ file: mainsection.js:124 ~ inMotion:", inMotion)
+            console.log("🚀 ~ file: mainsection.js:124 ~ inMotion:", inMotion)
             whellTimer = setTimeout(function () {
                 mainSectionMoveing(event.originalEvent.deltaY > 0 ? 'down' : 'up');
-            }, 150);
+            }, 0);
         }
     } else {
     }
@@ -155,7 +124,7 @@ $(window).on('keyup', function (e) {
     //console.log(e)
     e.preventDefault();
     // debugger
-    if (!ismobile && $(window).height() > 900) {
+    if (!ismobile && $(window).height() > 700) {
         if (inMotion === false) {
             clearTimeout(whellTimer);
             inMotion = true
@@ -194,8 +163,9 @@ $(function () {
             $('body').removeClass('custom-nav--stiky');
         }
         // console.log(currentMainSection)
+
     });
-    // 섹션 메뉴 이동
+    //섹션 메뉴 이동
     var _sectionTarget
     $('.section-nav a').each(function (index) {
         $(this).on('click', function (event) {
@@ -203,7 +173,7 @@ $(function () {
             _sectionTarget = $(this).attr('href')
             inMotion = true
             $('html, body')
-                // .stop()
+                .stop()
                 .animate(
                     { scrollTop: mainSection.eq(index).offset().top },
                     {
@@ -216,6 +186,7 @@ $(function () {
                 );
         });
     });
+
     // 페이지 새로고침 처리
     setTimeout(function () {
         // mainSection.each(function (index, element) {
@@ -229,17 +200,40 @@ $(function () {
         }
     }, 1000);
 });
+
 $(function () {
     // 페이지 새로고침 처리
     setTimeout(function () {
+        //console.log(mainSection)
         mainSection.each(function (index, element) {
-            if ($(this).offset().top >= $(window).scrollTop() && Utils.isElementInView($(this), 50)) {
+            //if ($(this).offset().top >= $(window).scrollTop() && Utils.isElementInView($(this), 50)) {
+            if (Utils.isElementInView($(this), 50)) {
                 currentMainSection = index;
+                $('html').removeClass('section_0');
+                $('html').removeClass('section_1');
+                $('html').removeClass('section_2');
+                $('html').removeClass('section_3');
+                $('html').removeClass('section_4');
+                $('html').removeClass('section_5');
+                $('html').addClass('section_' + index);
+                $('.section-nav a').removeClass('active').removeAttr('title').eq(index).addClass('active').attr('title', '선택 됨')
             }
         });
         sectionNavSetup()
     }, 1000);
+
+    window.addEventListener('scroll', function() {
+		const sections = document.querySelectorAll('.section');
+		const scrollPosition = window.pageYOffset;
+	
+		sections.forEach((section, index) => {
+			const parallaxElement = section.querySelector('section');
+			const rate = index * 0.5 + 0.5; // 각 섹션에 다른 속도 적용
+			parallaxElement.style.transform = `translateY(${scrollPosition * rate}px)`;
+		});
+	});
 });
+
 // stiky 키보드 접근성
 $('.section2 button:first').on('focus', function () {
     $('html, body')
@@ -255,4 +249,14 @@ $('.section4 a:first').on('focus', function () {
     $('html, body')
         .stop()
         .animate({ scrollTop: mainSection.eq(3).offset().top }, 650);
+});
+$('.section5 a:first').on('focus', function () {
+    $('html, body')
+        .stop()
+        .animate({ scrollTop: mainSection.eq(4).offset().top }, 650);
+});
+$('.section6 a:first').on('focus', function () {
+    $('html, body')
+        .stop()
+        .animate({ scrollTop: mainSection.eq(5).offset().top }, 650);
 });

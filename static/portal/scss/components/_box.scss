@@ -164,6 +164,12 @@ h2 + .boxTop {
 	border: 1px solid $bd-color;
 	border-radius: 16px;
 	padding: 40px 20px;
+	p {
+		margin-bottom: 0;
+	}
+	img {
+		vertical-align: middle;
+	}
 }
 .box-round {
 	border: 4px solid $bd-color;
@@ -191,6 +197,9 @@ h2 + .boxTop {
 		font-size: rem(24);
 		font-weight: 400;
 		color: $point;
+		@include breakpoint($sm){
+			font-size: rem(20);
+		}
 		p {
 			margin-bottom: 0;
 			.mDib {
@@ -201,10 +210,17 @@ h2 + .boxTop {
 					height: 6px;
 					border-radius: 50%;
 					background: $point;
-					margin: 0 10px 6px 0;					
+					margin: 0 10px 6px 0;
+				}
+				@include breakpoint($sm){
+					display: block;
+					text-align: left;
 				}
 				& + .mDib {
 					margin-left: 60px;
+					@include breakpoint($sm){
+						margin-left: 0;
+					}
 				}
 			}
 			.fc_red {
@@ -320,4 +336,9 @@ h2 + .boxTop {
 	&.ico3 {
 		background-image: url(/static/portal/img/ico/ico-box3.png);
 	}
+	@include breakpoint($sm) {
+		background-position: 50% 20px;
+		padding: 90px 10px 10px 10px ;
+		background-size: 50px;
+	} 
 }

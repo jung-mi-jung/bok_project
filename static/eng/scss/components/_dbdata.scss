@@ -1,5 +1,6 @@
 .dbdata, 
 .dbData {
+	clear: both;
 	min-height: 250px;
 	padding: 32px 0;
 	word-break: break-all;
@@ -215,6 +216,9 @@
 			padding-left: 0;
 		}
 	}
+	pre {
+		font-family: $font-set;
+	}
 }
 
 .view {
@@ -230,7 +234,8 @@
 }
 
 .dbdata2 {
-	width: 960px;
+	width: 100%;
+	max-width: 960px;
 	margin: 0 auto;
 	border-bottom: 0;
 	padding: 0 !important;

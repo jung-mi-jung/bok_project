@@ -103,7 +103,8 @@
 
 
 /* 콘텐츠 탭메뉴 */
-.tab-list {
+.tab-list,
+.tab-list2 {
 	display: flex;
 	position: relative;
 	margin: 0 0 30px;
@@ -184,6 +185,14 @@
 	
 }
 
+// #content > .tab-list,
+// .content > .tab-list {
+// 	@include breakpoint($smd) {
+// 		margin-top: 30px;
+// 	}
+// }
+
+
 .tab-content {
 	.tab-pannel {
 		display: none;
@@ -229,6 +238,7 @@
 	display: none;
 	
 }
+
 
 /* 미술품 게시판 목록 탭메뉴 */
 .category2 {

@@ -168,6 +168,9 @@
 				}
 				.date {
 					color: #767676;
+					@include breakpoint ($sm) {
+						font-size: rem(14);
+					}
 					&::before {
 						content: "";
 						display: inline-block;
@@ -181,6 +184,9 @@
 				.hits {
 					margin-left: 20px;
 					color: #767676;
+					@include breakpoint ($sm) {
+						font-size: rem(14);
+					}
 					&::before {
 						content: "";
 						display: inline-block;
@@ -194,6 +200,9 @@
 			}
 			.date {
 				color: #767676;
+				@include breakpoint ($sm) {
+					font-size: rem(14);
+				}
 			}
 			&:hover {
 				background-color: #EBF3F7;				
@@ -277,28 +286,50 @@
 			border-radius: 4px;
 			box-sizing: border-box;
 			background: #fff;
+			@include breakpoint($sm) {
+				width: 30px;
+				font-size: rem(12);
+			}
 		}
 		.recruit {
 			color: #131547;
 			font-weight: 500;
+			@include breakpoint($sm) {
+				font-size: rem(14);
+			}
 		}
 		.firstCome {
 			color: #3B63C4;
+			@include breakpoint($sm) {
+				font-size: rem(14);
+			}
 		}
 	}
 	.list-title {
 		align-items: center;
 		justify-content: space-between;
 		gap: 0 8px;
-		margin: 8px 0; 
+		margin: 8px 0;
+		@include breakpoint($sm) {
+			position: relative;
+		} 
 		.title {
 			max-width: calc(100% - 70px - 8px); 
 			white-space: nowrap;
 			text-overflow: ellipsis;
 			overflow: hidden;
 			color: #1A1A1A;
+			@include breakpoint($sm) {
+				max-width: 100%;
+			}
 		}
 		.list-state {
+			@include breakpoint($sm) {
+				font-size: rem(14);
+				position: absolute;
+				top: -30px;
+				right: 0;
+			}
 			i {
 				display: inline-block;
 				width: 20px;
@@ -329,8 +360,11 @@
 	.alarm {
 		display: flex;
 		align-items: center;
-		gap: 0 8px;
+		gap: 0 4px;
 		color: #666666;
+		@include breakpoint($sm) {
+			font-size: rem(14);
+		}
 		i {
 			display: inline-block;
 			width: 20px;
@@ -421,8 +455,8 @@
 	th,
 	td {
 		color: $black;
-		font-size: rem(18);
-		// font-size: rem(16);
+		// font-size: rem(18);
+		font-size: rem(16);
 		font-weight: 400;
 		border: 1px solid $bd-color;
 		padding: 13px 15px;
@@ -433,9 +467,6 @@
 		&.no {
 			width: 8%;
 		}
-	}
-	td {
-		
 	}
 	.nodata {
 		text-align: center;

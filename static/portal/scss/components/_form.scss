@@ -103,6 +103,7 @@ input[type='radio'] {
 		position: absolute;
 		top: 2px;
 		left: -1px;
+		z-index: 1;
 		.admin-set & {
 			width: 20px;
 			height: 20px;
@@ -296,7 +297,7 @@ input {
 	}
 }
 
-.post-set {
+.post-set {	//???
 	input {
 		width: 800px;
 		max-width: 100%;
@@ -370,11 +371,21 @@ input {
 			margin-top: 3px;
 			input {
 				width: 40%;
+				@include breakpoint($sm){
+					width: 100%;
+					&:nth-child(2) {
+						margin-top: 3px;
+					}
+				}
 			}
 		}
 	}
+	@include breakpoint($sm){
+		#grpZip {
+			width: 85px;
+		}
+	}
 }
-
 
 .view {
 	dd {

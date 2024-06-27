@@ -75,11 +75,11 @@ p.bu-dot {
 	}
 }
 .bu-dot2 {
-	position: relative;
-	padding-left: 8px;
 	color: #666;
 	font-size: 14px;
 	li {
+		position: relative;
+		padding-left: 8px;
 		&::before {
 			position: absolute;
 			top: 9px;
@@ -130,13 +130,16 @@ p.bu-dot {
 		color: #333;
 		font-size: rem(36);
 		font-weight: 500;
-		margin-bottom: 55px;
+		margin-bottom: 55px;		
 		& + h3 {
 			margin-top: 22px;
 		}
 		@include breakpoint($smd){
 			font-size: rem(22);
 			text-align: center;
+		}
+		@include breakpoint($sm){
+			margin-bottom: 30px;
 		}
 	}
 	h3 {

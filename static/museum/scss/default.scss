@@ -78,6 +78,9 @@ body {
 	letter-spacing: -0.015rem;
 	word-break: keep-all;
 	font-weight: 400;
+	@include breakpoint($lg) {
+		overflow-y: scroll;
+	}
 	@include breakpoint($sm) {
 		word-break: keep-all;
 	}

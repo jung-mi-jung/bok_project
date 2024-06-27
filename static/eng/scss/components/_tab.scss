@@ -1,16 +1,54 @@
 .tabsub { 
 	clear:both;
-	float: left;
+	//float: left;
 	width: 100%;
 	margin-bottom: 15px;
 	&.dept3{
 		margin-bottom:5px;
+	}
+	&.wide{
+		ul{
+			@include breakpoint($smd){
+				li{
+					width: 50%;
+					margin-top: -1px;
+					&:nth-child(1), &:nth-child(2){
+						margin-top: 0;
+					}
+					&:nth-child(3){
+						border-left: 1px solid $color-point;
+					}
+					&:nth-child(1),&:nth-child(2),&:nth-child(3){
+						margin-top: -1px;
+					}
+					&:nth-child(4){
+						border-left: 0 none;
+					}
+				}
+			}
+			@include breakpoint($sm){
+				li{
+					width: 100%;
+					margin-top: -1px;
+					border-left: 1px solid $color-point;
+					&:nth-child(1){
+						margin-top: 0;
+					}
+					&:nth-child(1),&:nth-child(2),&:nth-child(3){
+						margin-top: -1px;
+					}
+				}
+			}
+		}
 	}
 	ul{ 
 		display: flex;
 		justify-content: space-between;
 		flex-grow: 1;
 		width:100%; 
+		&.row{
+			margin:0;
+		}
 		li{
 			width: 100%;
 			text-align: center;
@@ -40,6 +78,21 @@
 				color: $color-point;
 				text-align: center; 
 				padding: 8px;
+			}
+		}
+		@include breakpoint($smd){
+			flex-flow: wrap;
+			justify-content: normal;
+			li{
+				width: 33.333%;
+				margin-top: -1px;
+				&:nth-child(4),
+				&:nth-child(7){
+					border-left: 1px solid $color-point;
+				}
+				&:nth-child(1),&:nth-child(2),&:nth-child(3){
+					margin-top: 0;
+				}
 			}
 		}
 	}

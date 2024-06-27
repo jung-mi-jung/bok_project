@@ -56,6 +56,12 @@
 @import url('/static/jslibrary/bootstrap-datepicker-1.9.0-dist/css/bootstrap-datepicker3.standalone.css');
 
 
+@include breakpoint($lg){
+	body {
+		overflow-y: scroll;
+	}
+}
+
 //컨텐츠 내부 링크 클릭시 navigation 겹치는 현상 보완
 @include breakpoint($lg){
 	.gnb-stiky {
@@ -110,6 +116,10 @@
 	font-size: rem(18);
 	font-weight: 500;
 	margin-bottom: 20px;
+	h3 {
+		font-size: rem(20) !important;
+		margin-top: 15px !important;
+	}
 }
 .agreeBox {
 	clear: both;
@@ -173,17 +183,39 @@
 				margin-top: 20px;
 			}
 		}
+		> table {
+			background-color: #fff;
+			border: 0;
+			th, td {
+				padding: 10px;
+			}
+			th {
+				color: #000E33;
+				background-color: #E8EBED !important;
+				// & + th {
+				// 	border-left: 1px solid #BDBCBC;
+				// }
+			}
+			td {
+				color: #666;
+				// & + td {
+				// 	border-left: 1px solid #BDBCBC;
+				// }
+			}
+			
+		}
 	}	
 	.agreeTxt {
 		border-top: 1px solid #E6E6E6;
 		display: flex;
+		justify-content: center;
 		font-size: rem(18);
 		color: $point;
 		padding: 30px 40px;
 		background-color: #fff;
-		@include breakpoint($lg){
-			justify-content: space-between;
-		}
+		// @include breakpoint($lg){
+		// 	justify-content: space-between;
+		// }
 		@include breakpoint($sm){
 			display: block;
 		}
@@ -207,6 +239,12 @@
 	}
 	& + .agreeBox {
 		margin-top: 24px;
+	}
+}
+.agree_box {
+	margin-top: 30px;
+	h3 {
+		font-size: 20px !important;
 	}
 }
 
@@ -361,9 +399,9 @@ h3 + .h-group  {
 		}
 	}
 	&.pad {
-		margin: 50px 0;
+		margin: 50px auto;
 		@include breakpoint($lg){
-			margin: 100px 0;
+			margin: 100px auto;
 		}
 	}	
 }

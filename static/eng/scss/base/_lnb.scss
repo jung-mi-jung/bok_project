@@ -1,34 +1,34 @@
 //게시판 상세 비주얼
-.bd-body .sub-_visual {
-	@include breakpoint($lg){			
-		background-image: url(/static/eng/img/sub/sub_visual_db_bg.png) !important;
-	}
-}
+// .bd-body .sub-_visual {
+// 	@include breakpoint($lg){			
+// 		background-image: url(/static/eng/img/sub/sub_visual_db_bg.png) !important;
+// 	}
+// }
 
 
-.navigation-stiky {
-	display: none;
-	.gnb-stiky & {
-		display: block;
-		width: 100%;
-		height: 60px;
-		position: fixed;
-		top: 0;
-		z-index: 99;
-		background-color: #fff;
-		&::before {
-			content: "";
-			display: block;
-			width: 100%;
-			height: 2px;
-			background-color: $black;
-			position: absolute;
-			bottom: -1px;
-			left: 0;
-			z-index: 1;
-		}
-	}
-}
+// .navigation-stiky {
+// 	display: none;
+// 	.gnb-stiky & {
+// 		display: block;
+// 		width: 100%;
+// 		height: 60px;
+// 		position: fixed;
+// 		top: 0;
+// 		z-index: 99;
+// 		background-color: #fff;
+// 		&::before {
+// 			content: "";
+// 			display: block;
+// 			width: 100%;
+// 			height: 2px;
+// 			background-color: $black;
+// 			position: absolute;
+// 			bottom: -1px;
+// 			left: 0;
+// 			z-index: 1;
+// 		}
+// 	}
+// }
 
 //navigation
 .navigation {
@@ -37,8 +37,9 @@
 	background-color: #FCFCFC;	
 	@include breakpoint($smd){
 		background-color: transparent;
+		margin-top: 50px;
 	}	
-	@include breakpoint($lg){
+	//@include breakpoint($lg){
 		.container {
 			&.nav-stiky {
 				width: 100%;
@@ -47,8 +48,13 @@
 				height: 60px;
 				position: fixed;
 				top: 0;
-				z-index: 99;
+				z-index: 999;
 				background-color: #fff;
+				@include breakpoint($smd){
+					min-height: 44px;
+					height: auto;
+					padding: 0;
+				}
 				&::before {
 					content: "";
 					display: block;
@@ -72,9 +78,15 @@
 				margin: 0 auto;
 				height: 60px;
 				line-height: 60px;
+				@include breakpoint($smd){
+					//display: block;
+					min-height: 44px;
+					height: auto;
+					line-height: normal;
+				}
 			}
 		}		
-	}
+	//}
 	.sub-_visual {
 		border-top: 1px solid #E6E6E6;
 		@include breakpoint($smd){
@@ -98,7 +110,7 @@
 				background-image: url(/static/eng/img/sub/sub_visual_bg2.png);
 			}
 			&.menu_400007 {
-				background-image: url(/static/portal/img/sub/sub_visual_bg6.png);
+				background-image: url(/static/eng/img/sub/sub_visual_bg3.png);
 			}
 			&.menu_400009 {
 				background-image: url(/static/eng/img/sub/sub_visual_bg4.png);
@@ -115,14 +127,15 @@
 			h1 {
 				color: $black;
 				font-weight: 500;
-				font-size: rem(48);
+				font-size: 48px;
 				letter-spacing: -1.4px;
-				@include breakpoint($sm){
-					font-size: rem(24);
+				//padding: 0 10px;
+				@include breakpoint($smd){
+					font-size: 24px;
 					text-align: center;
 				}
 				.bd-body & {
-					font-size: rem(20);
+					font-size: 20px;
 				}
 			}
 		}
@@ -165,9 +178,17 @@
 			height: 60px;
 			line-height: 60px;
 		}
+		@include breakpoint($smd){
+			padding: 0;
+			min-height: 44px;
+			height: auto;
+			line-height: normal;
+		}
+
 		ul.nav-menu {
 			display: flex;
 			border-left: 1px solid #E5E5E5;
+			width: 100%;
 			> li {
 				position: relative;
 				border-right: 1px solid #E5E5E5;
@@ -175,14 +196,11 @@
 				@include breakpoint($sm){
 					display: none;
 					width: 100%;
-					&:last-child {
-					display: block;
-						border-right: none;
-					}
 				}
-				@include breakpoint($sm){
-					&:nth-child(2) {
+				&:last-child {
+					@include breakpoint($sm){
 						display: block;
+						border-right: none;
 					}
 				}
 				&.home {
@@ -237,6 +255,7 @@
 					align-items: center;
 					font-size: 14px;
 					padding: 0 36px 0 10px;
+					width: 100%;
 					height: 100%;
 					line-height: 1.2;
 					@include breakpoint($lg){
@@ -273,20 +292,22 @@
 					z-index: 99;
 					width: calc(100% + 2px);
 					background-color: #fff;
-					@include breakpoint($sm){
+					@include breakpoint($smd){
 						top: 44px;
 						left: auto;
 						right: 0;
 					}
 					ul {
 						//width: 100%;
-						min-width: max-content;
 						background-color: #fff;
 						padding: 10px 15px;
 						line-height: 1.25;
 						border: 1px solid #E5E5E5;
 						border-radius: 0 0 4px 4px;
 						box-shadow: 0 4px 2px rgba(127, 24, 24, 0.15);
+						@include breakpoint(min-width 750px){
+							min-width: max-content;
+						}
 						li {
 							a {
 								color: #666;
@@ -302,6 +323,8 @@
 							}
 							&.on {
 								a {
+									display: flex;
+									align-items: center;
 									color: $black;
 									font-weight: 600;
 									&::after {
@@ -365,7 +388,6 @@
 			}
 		}
 	}
-	@include breakpoint($smd){}
 	h1 {
 		color: #222;
 		font-size: rem(16);
@@ -454,6 +476,18 @@
 				}
 			}
 		}
+		.inbu {			
+			&::after {
+				content: "" !important;
+				display: inline-block;
+				position: absolute;
+				top: 13px;
+				right: 3px;				
+				width: 14px;
+				height: 14px;
+				background: url(/static/eng/img/ico/arrow_outward.png) 50% no-repeat;
+			}
+		}
 	}
 	.mobile__button {
 		@include breakpoint($lg){
@@ -462,7 +496,7 @@
 	}
 	@include breakpoint($smd){
 		position: fixed;
-		z-index: 1;
+		z-index: 3;
 		top: 186px;
 		left: -240px;
 		width: 240px;
